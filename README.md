@@ -9,8 +9,11 @@ Add one object to `assets/js/data.js`. Use:
 - `title`
 - `source`
 - `cuisine`
-- `meal`
+- `course`
+- `meal` (kept for compatibility)
 - `categories`
+- `ingredientCategories`
+- `timeStamp`
 - `dateAdded`
 - `ingredients`
 - `ingredientFile`
@@ -34,7 +37,8 @@ ingredients: [
 ```text
 heroImage = Recipe page Hero, 2:3
 cardImage = Recipe cards, 1:1
-stepImages = Step photos, 1:1
+stepImages = optional per-step photo arrays, 1:1
+Each step can also define `photos: []` with 1–3 image paths; when both are present, the step-level `photos` value takes priority.
 ```
 
 Photo naming:
@@ -44,6 +48,7 @@ Photo naming:
 [recipe-slug]-step-01.jpg
 [recipe-slug]-step-02.jpg
 [recipe-slug]-step-03.jpg
+For multiple photos in one step, use any clear filename convention and list them in that step's `photos` array.
 ```
 
 Store them in `images/recipes/`.
@@ -56,7 +61,7 @@ Fallback rules:
 Recipe cards use `aspect-ratio: 1 / 1; object-fit: cover`. Recipe Hero uses `aspect-ratio: 2 / 3; object-fit: cover`. Step photos use `aspect-ratio: 1 / 1; object-fit: cover`.
 
 ## Automatic classification
-A recipe is entered once in `data.js`. `source`, `cuisine`, `meal`, and `categories` drive View All, By Source, By Cuisine, By Meal, The Usuals and Search automatically. Latest Recipes sorts by `dateAdded` descending.
+A recipe is entered once in `data.js`. `source`, `course`/`meal`, `cuisine`, `ingredientCategories`, and `categories` drive View All, By Source, By Course, By Cuisine, By Ingredient, The Usuals and Search automatically. Latest Recipes sorts by `dateAdded` descending.
 
 ## Search
 Search crosses title, source, cuisine, meal, categories, description and ingredient metadata.
@@ -75,14 +80,19 @@ The production navigation remains:
 ```text
 RECIPES
     View All
-    By Cuisine
-    By Meal
     By Source
+    By Course
+    By Cuisine
+    By Ingredient
     The Usuals
 
 ABOUT
 CONTACT
 ```
+
+Source / course / cuisine / ingredient menu entries are clickable filters. Cuisine is displayed in the requested regional hierarchy.
+
+Recipe timestamps use `timeStamp`, for example `12:38 AM`, and render as `📍 12:38 AM · TORONTO`.
 No development view switcher is included in production.
 
 ## Contact

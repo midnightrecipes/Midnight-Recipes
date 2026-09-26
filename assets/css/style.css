@@ -129,7 +129,6 @@ body.scaled .overlay{position:absolute; top:76px; bottom:auto; height:820px;}
 }
 .mrstar{width:1em; height:1em; display:inline-block; color:var(--mint); flex:none;}
 .h2 .mrstar{width:.9em; height:.9em; transform:translateY(.07em);}
-.totop .mrstar{width:.92em; height:.92em; transform:translateY(.07em);}
 .btn .mrstar{width:1.15em; height:1.15em; vertical-align:-.2em; margin-right:2px;}
 .search-field .mrstar{width:24px; height:24px;}
 .viewall{display:block; text-align:right; margin-top:22px; font-size:17px;}
@@ -164,11 +163,6 @@ body.scaled .overlay{position:absolute; top:76px; bottom:auto; height:820px;}
 .about .more{margin-top:26px; text-align:right;}
 .about .more a{text-decoration:underline; text-underline-offset:3px;}
 
-.totop{text-align:center; margin-top:110px;}
-.totop a{
-  font-size:46px; color:var(--head); text-decoration:none;
-  display:inline-flex; align-items:baseline; gap:10px;
-}
 
 .section{margin-top:104px;}
 .section:first-of-type{margin-top:58px;}
@@ -378,8 +372,7 @@ body.scaled #stage,body.scaled #stagewrap{width:auto!important;transform:none!im
  .footer-actions{flex-wrap:wrap}
  .footer-actions .btn{width:100%}
  .about h3{white-space:normal;font-size:20px}
- .totop{margin-top:70px}
- .search-field input{min-width:0}
+  .search-field input{min-width:0}
 }
 @media (max-width:430px){
  .latest,.grid,.category-grid,.sources{grid-template-columns:1fr}
@@ -387,4 +380,66 @@ body.scaled #stage,body.scaled #stagewrap{width:auto!important;transform:none!im
  .logo{font-size:22px;max-width:calc(100vw - 120px);overflow:hidden;text-overflow:ellipsis}
  .h2{white-space:normal;font-size:28px}
  .rtop .photo-frame{aspect-ratio:2/3}
+}
+
+/* User-requested targeted responsive/menu refinements */
+
+/* User-requested targeted responsive/menu refinements */
+html,body{max-width:100%;overflow-x:hidden}
+.header .logo{font-weight:800}
+.panel.menu{max-height:calc(100vh - 68px);overflow-y:auto}
+.menu .lvl1{font-weight:700;letter-spacing:.04em}
+.menu .lvl2 a{padding-left:28px}
+.menu .acc{text-transform:none}
+.menu .sub.open{display:block}
+.menu .sub{padding-left:24px}
+.menu .menu-group{padding:3px 0 8px}
+.menu .menu-group-title{display:block;font-size:.88em;font-weight:700;opacity:.58;padding:7px 4px 5px}
+.menu .menu-group a{padding-left:16px}
+.step-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:16px}
+.step-photos .photo-frame{aspect-ratio:1/1;margin-top:0}
+.step-photos .ph{aspect-ratio:1/1}
+.rtop .photo-frame{aspect-ratio:2/3}
+.card .photo-frame,.category-card .photo-frame,.recipe-inner .photo-frame{aspect-ratio:1/1}
+@media (max-width:1100px){
+ .latest,.grid,.category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .sources{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .rtop{grid-template-columns:1fr 320px}
+}
+@media (max-width:720px){
+ .header{height:68px;padding:0 14px}
+ .page{padding-top:68px}
+ .panel.menu{width:min(92vw,520px)}
+ .panel{padding:30px 24px 60px}
+ .wrap{padding:0 18px}
+ .section{margin-top:70px}
+ .latest,.grid,.category-grid,.sources{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}
+ .tile p,.card .name,.category-card .name{font-size:16px}
+ .rtop,.recipe-inner{grid-template-columns:1fr;gap:28px}
+ .recipe-card{padding:24px 18px 40px;margin-top:0}
+ .rtitle{font-size:clamp(38px,12vw,58px);line-height:1.05;overflow-wrap:anywhere}
+ .meta-line{font-size:15px;gap:10px;flex-wrap:wrap}
+ .tags{font-size:15px;gap:7px 16px}
+ .facts{font-size:16px}
+ .step-head{font-size:15px;gap:12px}
+ .step p{font-size:16px}
+ .step-photos{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+ .toggle-row{flex-wrap:wrap}
+ .toggle-row button{padding:8px 16px}
+ .footer-actions{flex-wrap:wrap}
+ .footer-actions .btn{width:100%}
+ .about h3{white-space:normal;font-size:20px}
+ .search-field input{min-width:0;max-width:70vw}
+}
+@media (max-width:430px){
+ .latest,.grid,.category-grid,.sources{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 10px}
+ .header .icons{gap:10px}
+ .logo{font-size:clamp(20px,6vw,28px);max-width:calc(100vw - 120px);white-space:nowrap}
+ .h2{white-space:normal;font-size:28px}
+ .rtop .photo-frame{aspect-ratio:2/3}
+ .step-photos{gap:6px}
+ .step-photos .photo-frame{min-width:0}
+}
+@media (max-width:340px){
+ .latest,.grid,.category-grid,.sources{grid-template-columns:1fr}
 }
