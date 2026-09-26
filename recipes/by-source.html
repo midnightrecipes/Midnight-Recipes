@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>By Source — MIDNIGHT RECIPES</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <h2 class="h2" id="pageTitle">By Source</h2>
+      <div id="sourceIndex"></div>
+      <div class="chip-row" id="chipRow"></div>
+      <div class="grid" id="resultGrid"></div>
+      <p class="source-empty" id="emptyMsg" style="display:none;">No recipes here yet — check back soon.</p>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/site.js"></script>
+<script>
+  mountChrome("../");
+
+  const active = qs("src");
+  const sourceIndex = document.getElementById("sourceIndex");
+  const chipRow = document.getElementById("chipRow");
+  const grid = document.getElementById("resultGrid");
+  const emptyMsg = document.getElementById("emptyMsg");
+
+  if (!active) {
+    sourceIndex.innerHTML = `<div class="source-directory">${SOURCES.map(source => {
+      const count = RECIPES.filter(r => r.source === source).length;
+      return `<a class="source-directory-item" href="by-source.html?src=${encodeURIComponent(source)}"><span>${escapeHtml(source)}</span><span>${count} recipe${count===1?"":"s"} →</span></a>`;
+    }).join("")}</div>`;
+    document.getElementById("pageTitle").textContent = "By Source";
+  } else {
+
+  SOURCES.forEach(source => {
+    const a = document.createElement("a");
+    a.className = "chip" + (source === active ? " active" : "");
+    a.href = `by-source.html?src=${encodeURIComponent(source)}`;
+    a.textContent = source;
+    chipRow.appendChild(a);
+  });
+  document.getElementById("pageTitle").textContent = active;
+  const matches = latestFirst(RECIPES.filter(r => r.source === active));
+  if (!matches.length) emptyMsg.style.display = "block";
+  else matches.forEach(r => grid.insertAdjacentHTML("beforeend", recipeCard(r, "../")));
+  }
+</script>
+</body>
+</html>

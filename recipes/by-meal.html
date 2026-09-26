@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>By Meal — MIDNIGHT RECIPES</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <h2 class="h2" id="pageTitle">By Meal</h2>
+      <div class="chip-row" id="chipRow"></div>
+      <div class="grid" id="resultGrid"></div>
+      <p class="source-empty" id="emptyMsg" style="display:none;">No recipes here yet — check back soon.</p>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/site.js"></script>
+<script>
+  mountChrome("../");
+
+  const active = qs("meal");
+  const chipRow = document.getElementById("chipRow");
+  MEALS.forEach(meal => {
+    const a = document.createElement("a");
+    a.className = "chip" + (meal === active ? " active" : "");
+    a.href = `by-meal.html?meal=${encodeURIComponent(meal)}`;
+    a.textContent = meal;
+    chipRow.appendChild(a);
+  });
+
+  const grid = document.getElementById("resultGrid");
+  const emptyMsg = document.getElementById("emptyMsg");
+  document.getElementById("pageTitle").textContent = active ? `By Meal — ${active}` : "By Meal";
+
+  const matches = active ? latestFirst(RECIPES.filter(r => r.meal === active)) : latestFirst(RECIPES);
+  if (matches.length === 0) {
+    emptyMsg.style.display = "block";
+  } else {
+    matches.forEach(r => grid.insertAdjacentHTML("beforeend", recipeCard(r, "../")));
+  }
+</script>
+</body>
+</html>

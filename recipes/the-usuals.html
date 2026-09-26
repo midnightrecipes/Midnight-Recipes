@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Usuals — MIDNIGHT RECIPES</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <h2 class="h2">The Usuals</h2>
+      <p class="prose" style="max-width:70ch; font-size:16px; line-height:1.85;">
+        The sauces, bases, toppings and little things we keep coming back to —
+        recipes within recipes, the small parts that make everything else easier.
+      </p>
+      <div class="grid" id="usualsGrid" style="margin-top:26px;"></div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/site.js"></script>
+<script>
+  mountChrome("../");
+  const grid = document.getElementById("usualsGrid");
+  USUALS.forEach(u => {
+    grid.insertAdjacentHTML("beforeend", `
+      <a class="card" href="usual.html?slug=${u.slug}">
+        <div class="ph"></div>
+        <p class="name">${u.title}</p>
+        <p class="meta">${u.category}</p>
+      </a>`);
+  });
+</script>
+</body>
+</html>

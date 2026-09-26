@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Usuals — MIDNIGHT RECIPES</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main>
+  <div class="recipe-card" id="usualRoot">Loading&hellip;</div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/site.js"></script>
+<script>
+  mountChrome("../");
+
+  const usual = USUALS.find(u => u.slug === qs("slug"));
+  const root = document.getElementById("usualRoot");
+
+  if (!usual) {
+    root.innerHTML = "<p>We couldn't find that.</p>";
+  } else {
+    document.title = usual.title + " — MIDNIGHT RECIPES";
+
+    const ingredientsHtml = usual.ingredients.map(i =>
+      `<li>${i.amount ? `<strong>${i.amount}</strong> ` : ""}${i.name}</li>`
+    ).join("");
+
+    const methodHtml = usual.method.map(step => `<li>${step}</li>`).join("");
+
+    const foundInHtml = usual.foundIn.map(slug => {
+      const r = RECIPES.find(r => r.slug === slug);
+      return r ? `<li><a href="recipe.html?slug=${r.slug}">${r.title}</a></li>` : "";
+    }).join("");
+
+    root.innerHTML = `
+      <p class="eyebrow">The Usuals — ${usual.category}</p>
+      <h1 class="rtitle">${usual.title}</h1>
+      <p class="prose" style="font-size:16px; line-height:1.85; max-width:70ch;">${usual.tagline}<br>${usual.description}</p>
+
+      <div class="section-block">
+        <h2 class="h3">The Recipe</h2>
+        <p class="rstats">
+          <b>Makes</b>: ${usual.recipeInfo.makes} &nbsp; <b>Prep</b>: ${usual.recipeInfo.prep} &nbsp;
+          <b>Chill</b>: ${usual.recipeInfo.chill} &nbsp; <b>Bake</b>: ${usual.recipeInfo.bake}
+        </p>
+        <h3 style="font-size:13px; letter-spacing:.08em; text-transform:uppercase; opacity:.6;">Ingredients</h3>
+        <ul class="ing-list">${ingredientsHtml}</ul>
+        <h3 style="font-size:13px; letter-spacing:.08em; text-transform:uppercase; opacity:.6; margin-top:22px;">Method</h3>
+        <ol style="font-size:16px; line-height:1.85;">${methodHtml}</ol>
+      </div>
+
+      <div class="section-block">
+        <h2 class="h3">Why It's a Usual</h2>
+        <p style="font-size:16px; line-height:1.85; max-width:70ch;">${usual.why}</p>
+      </div>
+
+      <div class="section-block">
+        <h2 class="h3">Found In</h2>
+        <p style="opacity:.7; margin:0 0 8px;">Recipes that use this</p>
+        <ul class="notes-list">${foundInHtml || "<li>No recipes linked yet.</li>"}</ul>
+      </div>
+    `;
+  }
+</script>
+</body>
+</html>
