@@ -10,9 +10,9 @@ window.MIDNIGHT_RECIPES = [
     ingredients:[{amount:300,unit:'g',item:'plain skyr'},{amount:40,unit:'g',item:'sweetened condensed milk'},{group:'Optional finish'},{amount:50,unit:'ml',item:'heavy cream'},{amount:1,unit:'tsp',item:'icing sugar'}],
     stats:{prep:'20 mins',cook:'20 mins',total:'40 mins',serves:2,quest:'★★★☆☆'},
     steps:[
-      {label:'01  SLICE',clock:'12:45 AM',text:'Seal 300 g of biscuits in a bag and crush them with a rolling pin until no large pieces remain.',photos:[]},
-      {label:'02  MIX',clock:'12:52 AM',text:'Fold 40 g of sweetened condensed milk into 300 g of plain skyr until the mixture holds a ribbon.',photos:[]},
-      {label:'03  CHILL',clock:'1:10 AM',text:'Rest in the fridge for at least two hours. Overnight is better, if you can wait that long.',photos:[]}
+      {label:'01  SLICE',clock:'12:45 AM',text:'Seal 300 g of biscuits in a bag and crush them with a rolling pin until no large pieces remain.',stepPhotos:[],photos:[]},
+      {label:'02  MIX',clock:'12:52 AM',text:'Fold 40 g of sweetened condensed milk into 300 g of plain skyr until the mixture holds a ribbon.',stepPhotos:[],photos:[]},
+      {label:'03  CHILL',clock:'1:10 AM',text:'Rest in the fridge for at least two hours. Overnight is better, if you can wait that long.',stepPhotos:[],photos:[]}
     ],
     notes:[['Recreating the flavor','Plain skyr instead of cream cheese keeps the tang of the original filling, folded with condensed milk for sweetness.'],['Midnight compromises','Store-bought graham crust — it was already past midnight, no time to bake one.']],
     finePrint:{'Best eaten':'Next day, once fully chilled','Make ahead':'Yes','Storage':'Airtight container in the fridge, up to 3 days','Reheat':'N/A — served cold'},
@@ -26,8 +26,8 @@ window.MIDNIGHT_RECIPES = [
     ingredients:[{amount:4,unit:'',item:'ripe bananas'},{amount:500,unit:'ml',item:'vanilla pudding'},{amount:150,unit:'g',item:'vanilla wafers'}],
     stats:{prep:'15 mins',cook:'0 mins',total:'15 mins',serves:4,quest:'★★☆☆☆'},
     steps:[
-      {label:'01  LAYER',clock:'11:58 PM',text:'Layer wafers, sliced bananas, and pudding in a serving dish.',photos:[]},
-      {label:'02  CHILL',clock:'12:10 AM',text:'Chill until the wafers soften slightly and the pudding is cold.',photos:[]}
+      {label:'01  LAYER',clock:'11:58 PM',text:'Layer wafers, sliced bananas, and pudding in a serving dish.',stepPhotos:[],photos:[]},
+      {label:'02  CHILL',clock:'12:10 AM',text:'Chill until the wafers soften slightly and the pudding is cold.',stepPhotos:[],photos:[]}
     ],
     notes:[['Texture','The longer it rests, the softer the wafers become.']], finePrint:{'Best eaten':'Same day','Make ahead':'Yes','Storage':'Covered in the fridge, up to 2 days'}, tags:['Desserts','Baking','American'], mainIngredients:['Banana','Vanilla']
   }
