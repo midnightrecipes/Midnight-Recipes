@@ -446,3 +446,140 @@ html,body{max-width:100%;overflow-x:hidden}
 @media (max-width:720px){
   .body-copy,.about p,.step p,.notes-list li{max-width:none;width:100%;}
 }
+
+/* Recipe page spacing — preserve existing visual system */
+.recipe-card > section{
+  margin-top:56px;
+}
+.recipe-card > section:first-of-type{
+  margin-top:54px;
+}
+.recipe-card > section > .h3{
+  margin-bottom:20px;
+  line-height:1.35;
+}
+.recipe-card .body-copy{
+  line-height:2;
+}
+
+/* Ingredient File: keep each ingredient as a distinct information group */
+.recipe-card .ingredient-file{
+  padding-top:0;
+}
+.recipe-card .ingredient-file-item{
+  margin:0 0 30px;
+}
+.recipe-card .ingredient-file-item:last-child{
+  margin-bottom:0;
+}
+.recipe-card .ingredient-file-item h4{
+  margin:0 0 9px;
+  line-height:1.45;
+}
+.recipe-card .ingredient-file-item p{
+  line-height:1.9;
+}
+.recipe-card .ingredient-file-name{
+  margin-bottom:30px;
+}
+
+/* The Recipe: separate ingredients / instructions / steps without adding bulk */
+.recipe-card #the-recipe{
+  margin-top:62px;
+}
+.recipe-card #the-recipe > .recipe-inner{
+  margin-top:36px;
+}
+.recipe-card .block-title{
+  line-height:1.4;
+  margin-bottom:18px;
+}
+.recipe-card .toggle-row{
+  margin-bottom:16px;
+}
+.recipe-card .ing{
+  margin-top:24px;
+  line-height:2.35;
+}
+.recipe-card .step{
+  padding:28px 0;
+}
+.recipe-card .step-head{
+  line-height:1.45;
+}
+.recipe-card .step p{
+  margin:11px 0 0;
+  line-height:1.95;
+}
+.recipe-card .step-photos{
+  margin-top:18px;
+}
+
+/* Midnight Notes / Fine Print */
+.recipe-card .note-sub{
+  margin:0 0 17px;
+  line-height:1.7;
+}
+.recipe-card .notes-list{
+  line-height:1.95;
+}
+.recipe-card .notes-list li{
+  margin-bottom:14px;
+}
+.recipe-card .notes-list li:last-child{
+  margin-bottom:0;
+}
+.recipe-card > section:has(.notes-list),
+.recipe-card > section:has(.note-sub + .body-copy){
+  margin-top:60px;
+}
+.recipe-card > section:has(.note-sub + .body-copy) .body-copy{
+  line-height:2;
+}
+
+/* Recipe footer follows the content as a clear final group */
+.recipe-card > .recipe-footer{
+  margin-top:60px;
+  padding-top:30px;
+}
+
+@media (max-width:1100px){
+  .recipe-card > section{margin-top:50px;}
+  .recipe-card > section:first-of-type{margin-top:48px;}
+  .recipe-card #the-recipe{margin-top:56px;}
+  .recipe-card > section:has(.notes-list),
+  .recipe-card > section:has(.note-sub + .body-copy){margin-top:54px;}
+}
+
+@media (max-width:720px){
+  .recipe-card > section{margin-top:44px;}
+  .recipe-card > section:first-of-type{margin-top:42px;}
+  .recipe-card > section > .h3{margin-bottom:17px;}
+  .recipe-card .body-copy{line-height:1.9;}
+  .recipe-card .ingredient-file-item{margin-bottom:26px;}
+  .recipe-card .ingredient-file-item h4{margin-bottom:8px;}
+  .recipe-card .ingredient-file-item p{line-height:1.85;}
+  .recipe-card #the-recipe{margin-top:50px;}
+  .recipe-card #the-recipe > .recipe-inner{margin-top:30px;}
+  .recipe-card .ing{line-height:2.2;}
+  .recipe-card .step{padding:23px 0;}
+  .recipe-card .step p{line-height:1.9;}
+  .recipe-card .step-photos{margin-top:15px;}
+  .recipe-card .notes-list{line-height:1.9;}
+  .recipe-card .notes-list li{margin-bottom:12px;}
+  .recipe-card > section:has(.notes-list),
+  .recipe-card > section:has(.note-sub + .body-copy){margin-top:48px;}
+  .recipe-card > .recipe-footer{margin-top:48px;padding-top:26px;}
+}
+
+@media (max-width:430px){
+  .recipe-card > section{margin-top:40px;}
+  .recipe-card > section:first-of-type{margin-top:38px;}
+  .recipe-card #the-recipe{margin-top:46px;}
+  .recipe-card > section:has(.notes-list),
+  .recipe-card > section:has(.note-sub + .body-copy){margin-top:44px;}
+  .recipe-card .ingredient-file-item{margin-bottom:24px;}
+  .recipe-card .step{padding:21px 0;}
+  .recipe-card .step-photos{margin-top:14px;}
+  .recipe-card > .recipe-footer{margin-top:44px;}
+}
