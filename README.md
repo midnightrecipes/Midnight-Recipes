@@ -1,89 +1,112 @@
-# MIDNIGHT RECIPES — site files
+# MIDNIGHT RECIPES
 
-Plain HTML/CSS/JS site for GitHub Pages. No build step is required; `index.html` is the entry point.
+Static GitHub Pages site based on the supplied MIDNIGHT RECIPES prototype. The existing visual language, layout, colors, typography, header, menu, overlays, recipe-card treatment, Cook Mode and responsive direction are retained; the development-only view controls are removed from production.
 
-## File structure
-
-```
-index.html                     Home (By Source, then Latest Recipes)
-about.html                     About
-contact.html                   Contact
-
-recipes/
-  index.html                   View All
-  by-source.html               Source directory; click a Source for its full recipe grid
-  by-cuisine.html              Cuisine filter + full recipe grids
-  by-meal.html                 Meal filter + full recipe grids
-  the-usuals.html              The Usuals hub
-  recipe.html                  One template for every recipe (?slug=...)
-  usual.html                   One template for every Usual (?slug=...)
-  search.html                  Cross-field recipe search (?q=...)
-
-assets/
-  css/style.css                Site styling
-  js/data.js                   All recipe + Usual data
-  js/site.js                   Shared navigation, cards, search and helpers
-
-images/
-  recipes/                     Recipe photos
-```
-
-## How to add a recipe
-
-Normally you only edit `assets/js/data.js`. Add one object to `RECIPES` and give it:
+## Recipe data
+Add one object to `assets/js/data.js`. Use:
 
 - `slug`
 - `title`
-- `dateAdded`
 - `source`
 - `cuisine`
 - `meal`
-- `theUsuals` (array; leave empty when not applicable)
-- `heroImage`
-- optional `cardImage`
-- optional `stepImages` array
+- `categories`
+- `dateAdded`
 - `ingredients`
-- `instructions`
-- the other story/notes/fine-print fields used by the template
+- `ingredientFile`
+- `heroImage`
+- `cardImage`
+- `stepImages`
 
-A new recipe is automatically included in Home, Latest Recipes, View All, By Source, By Cuisine, By Meal, The Usuals (when `theUsuals` includes a matching Usual), and Search.
+`ingredients` are the ingredients actually used by the recipe. `ingredientFile` is separate supporting information about ingredients and may contain only the fields that are useful.
 
-## Photo system
-
-Each recipe can use three photo types:
-
-- **Hero:** `2:3` display ratio on the individual Recipe page.
-- **Card:** `1:1` display ratio on Home, View All, category pages, Latest Recipes, and the Recipe Card. If `cardImage` is omitted, `heroImage` is used.
-- **Step photos:** `1:1` display ratio. Add 0–3+ paths to `stepImages`; only steps with an image are shown with a photo.
-
-Recommended files:
-
-```
-images/recipes/beef-chili-hero.jpg
-images/recipes/beef-chili-card.jpg
-images/recipes/beef-chili-step-01.jpg
-images/recipes/beef-chili-step-02.jpg
-images/recipes/beef-chili-step-03.jpg
+### Ingredient structure
+```js
+ingredients: [
+  { amount: 200, unit: 'g', item: 'graham crackers' },
+  { amount: 80, unit: 'g', item: 'butter' },
+  { amount: 4, unit: '', item: 'egg yolks' },
+  { group: 'Optional finish' }
+]
 ```
 
-The CSS uses `aspect-ratio` + `object-fit: cover`; it never stretches an image. If a referenced image is missing, a placeholder remains instead of a broken image.
+## Photo System
+```text
+heroImage = Recipe page Hero, 2:3
+cardImage = Recipe cards, 1:1
+stepImages = Step photos, 1:1
+```
 
-## Categories and Search
+Photo naming:
+```text
+[recipe-slug]-hero.jpg
+[recipe-slug]-card.jpg
+[recipe-slug]-step-01.jpg
+[recipe-slug]-step-02.jpg
+[recipe-slug]-step-03.jpg
+```
 
-Each recipe is stored once. Its `source`, `cuisine`, `meal`, and `theUsuals` values determine where it appears. By Source / By Cuisine / By Meal pages show all matching recipes in the same square-card grid. Search checks recipe title, Source, Cuisine, Meal, Dish, tags, and linked Usual titles.
+Store them in `images/recipes/`.
 
-## Recipe controls
+Fallback rules:
+- Hero: `heroImage` → current placeholder if missing/unavailable.
+- Card: `cardImage` → `heroImage` → current placeholder.
+- Step: `stepImages` → show the photo; if there is no Step photo, do not show a placeholder.
 
-- **Cook Mode:** increases reading size and requests the browser's Screen Wake Lock API where supported. Browser/OS support can vary; the browser may release the lock when the page is hidden.
-- **Quantity:** ×0.5 / 1 / ×2. The original ingredient amount is kept in the data and displayed at the selected scale.
-- **Metric / Imperial:** converts common weight/volume units and temperatures to cooking-friendly rounded values. Not every unit can be converted automatically; unsupported text stays unchanged.
-- **Save Recipe:** saved locally in the visitor's browser.
-- **Print / Share:** browser-native functions.
+Recipe cards use `aspect-ratio: 1 / 1; object-fit: cover`. Recipe Hero uses `aspect-ratio: 2 / 3; object-fit: cover`. Step photos use `aspect-ratio: 1 / 1; object-fit: cover`.
 
-## Ratings and comments
+## Automatic classification
+A recipe is entered once in `data.js`. `source`, `cuisine`, `meal`, and `categories` drive View All, By Source, By Cuisine, By Meal, The Usuals and Search automatically. Latest Recipes sorts by `dateAdded` descending.
 
-The review UI allows a star-only rating, or an optional name/comment. In this static GitHub Pages version, submissions are stored in the visitor's browser with `localStorage`; they are **not shared between visitors**. To make a site-wide public review system, connect a database/backend (for example Supabase) and replace the local-storage submit/read functions with authenticated or anonymous database operations.
+## Search
+Search crosses title, source, cuisine, meal, categories, description and ingredient metadata.
+
+## Cook Mode
+Cook Mode keeps the existing large, readable presentation and requests the Screen Wake Lock API where supported. Unsupported browsers simply continue without Wake Lock; the site does not depend on the API.
+
+## Quantity scaling / units
+Ingredients use numeric `amount` + `unit` data. `×0.5`, `1`, and `×2` scale the quantity. Metric / US customary toggles convert common mass, volume and temperature units and round toward practical kitchen values.
+
+## Reviews
+The five-star review UI supports a star-only submission, optional comment and optional name. Without an external backend, reviews are stored only in the current browser's local storage and are explicitly not presented as shared/public reviews. The UI is isolated so a future Supabase or other backend can replace the storage layer without changing recipe data.
+
+## Navigation
+The production navigation remains:
+```text
+RECIPES
+    View All
+    By Cuisine
+    By Meal
+    By Source
+    The Usuals
+
+ABOUT
+CONTACT
+```
+No development view switcher is included in production.
 
 ## Contact
+`from.midnightkitchen@gmail.com` is linked with `mailto:`.
 
-`from.midnightkitchen@gmail.com` is used as the site's mailto contact address.
+## GitHub Pages
+Repository: `Midnight-Recipes`
+Expected site base:
+`https://midnightrecipes.github.io/Midnight-Recipes/`
+
+All internal links and asset paths are generated relative to the current page depth so nested pages do not depend on a domain-root `/` path.
+
+Recommended check after publishing:
+- Home
+- Recipes / View All
+- By Source / Cuisine / Meal
+- The Usuals
+- About / Contact
+- Individual Recipe
+- Search
+- Cook Mode / Wake Lock fallback
+- Quantity and unit toggles
+- Share / Print / Save
+- Review UI
+- Mobile widths and no horizontal overflow
+
+The supplied source did not include the actual external recipe-photo files or the original separate 15-file repository. Therefore this package preserves the supplied photo placeholders and will immediately use any matching files added under `images/recipes/` according to the rules above; it does not fabricate recipe photography.
