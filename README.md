@@ -120,3 +120,17 @@ Recommended check after publishing:
 - Mobile widths and no horizontal overflow
 
 The supplied source did not include the actual external recipe-photo files or the original separate 15-file repository. Therefore this package preserves the supplied photo placeholders and will immediately use any matching files added under `images/recipes/` according to the rules above; it does not fabricate recipe photography.
+
+
+## Latest targeted update
+- Menu hierarchy: RECIPES accordion with View All / By Source / By Course / By Cuisine / By Ingredient / The Usuals; ABOUT and CONTACT remain independent top-level items.
+- Source names are single-source data values, including `Grocery Store Find` and `Midnight Experiment`.
+- Cuisine groups and individual cuisines in the sidebar are generated only when matching recipes exist.
+- Ingredient filters are generated from ingredients actually present in Recipe data.
+- The Usuals is an independent collection driven by `usualsCategory`; legacy `BUILDING BLOCKS` UI is removed.
+- Recipe Source / Cuisine / Course links use the same category-filter pages as the sidebar.
+- Ingredient File hides the old `Ingredient name` placeholder.
+- Cook Mode only requests Screen Wake Lock when supported; it does not change recipe layout or enlarge steps.
+- Share / Print / Save are compact, inline actions.
+- `timeStamp`, `heroImage`, and per-step `stepPhotos` remain data-driven.
+- Back to Top and Recipe-page wave decoration are removed.
