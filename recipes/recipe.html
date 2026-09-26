@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Recipe — MIDNIGHT RECIPES</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main><div class="recipe-card" id="recipeRoot">Loading&hellip;</div></main>
+<div id="site-footer"></div>
+<script src="../assets/js/data.js"></script>
+<script src="../assets/js/site.js"></script>
+<script>
+mountChrome("../");
+const recipe = RECIPES.find(r => r.slug === qs("slug"));
+const root = document.getElementById("recipeRoot");
+
+function ingredientFileHtml(items){
+  if(!items || !items.length) return "";
+  const fields=[
+    ["origin", "Origin / Why"], ["why", "Why"], ["bestChoice", "Best choice"],
+    ["substitute", "Substitute"], ["midnightFix", "Midnight fix"], ["role", "Role"], ["flavor", "Flavor"]
+  ];
+  return items.map(item=>{
+    const legacy=Array.isArray(item.lines) ? item.lines.map(x=>`<p>${escapeHtml(x)}</p>`).join("") : "";
+    const structured=fields.filter(([key])=>item[key]).map(([key,label])=>`<p><strong>${label}:</strong> ${escapeHtml(item[key])}</p>`).join("");
+    return `<dt>${escapeHtml(item.name)}</dt><dd>${structured}${legacy}</dd>`;
+  }).join("");
+}
+function ingredientGroupsHtml(){
+  return recipe.ingredients.map((group,gidx)=>`
+    <div class="ing-group">
+      <h4>${escapeHtml(group.group)}</h4>
+      <ul class="ing-list">
+        ${group.items.map((i,iidx)=>`<li><input type="checkbox" aria-label="Mark ${escapeHtml(i.name)} complete"><span class="ingredient-amount" data-original="${escapeHtml(i.amount || "")}" data-raw="${escapeHtml(i.amount || "")}">${escapeHtml(i.amount || "")}</span><span>${escapeHtml(i.name)}</span></li>`).join("")}
+      </ul>
+    </div>`).join("");
+}
+function stepsHtml(){
+  return recipe.instructions.map((step,idx)=>{
+    const image = recipe.stepImages && recipe.stepImages[idx];
+    return `<div class="step">
+      <div class="step-head"><span>${String(idx+1).padStart(2,"0")} — ${escapeHtml(step.title)}</span><span>${escapeHtml(step.time || "")}</span></div>
+      ${step.body.map(p=>`<p class="convertible-text" data-original-text="${escapeHtml(p)}">${escapeHtml(p)}</p>`).join("")}
+      ${image ? `<div class="step-photo">${imageHtml(image, recipe.title + " — step " + (idx+1), "../")}</div>` : ""}
+      ${step.tip ? `<p class="tip">${escapeHtml(step.tip)}</p>` : ""}
+    </div>`;
+  }).join("");
+}
+if(!recipe){ root.innerHTML="<p>We couldn't find that recipe.</p>"; }
+else {
+  document.title = recipe.title + " — MIDNIGHT RECIPES";
+  const tagsHtml=(recipe.tags||[]).map(t=>`<span>${escapeHtml(t)}</span>`).join("");
+  const fileHtml=ingredientFileHtml(recipe.ingredientFile);
+  const notesHtml=(recipe.midnightNotes||[]).map(n=>`<li><strong>${escapeHtml(n.title)}:</strong> ${escapeHtml(n.text)}</li>`).join("");
+  const usualsLinkHtml=(recipe.theUsuals||[]).map(slug=>{const u=USUALS.find(x=>x.slug===slug);return u?`<p class="share-note">One of our usuals: <a href="usual.html?slug=${encodeURIComponent(u.slug)}">${escapeHtml(u.title)}</a></p>`:""}).join("");
+  root.innerHTML=`
+    <div class="rtop">
+      <div>
+        <p class="rmeta">${escapeHtml(recipe.timestamp)} &middot; ${escapeHtml(recipe.city)}</p>
+        <h1 class="rtitle">${escapeHtml(recipe.title)}</h1>
+        <div class="tags">${tagsHtml}</div>
+        <p class="facts" style="margin-top:16px;"><b>Source</b>: ${escapeHtml(recipe.source)}<br><b>Original</b>: ${escapeHtml(recipe.original)}<br><b>Cuisine</b>: ${escapeHtml(recipe.cuisine)}<br><b>Dish</b>: ${escapeHtml(recipe.dish)}</p>
+        <div class="btn-row"><button class="btn" id="jumpBtn">Jump to Recipe</button></div>
+      </div>
+      ${imageHtml(recipe.heroImage, recipe.title, "../")}
+    </div>
+    <div class="section-block"><h2 class="h3">The Story</h2>${recipe.story.map(p=>`<p>${escapeHtml(p)}</p>`).join("")}</div>
+    ${fileHtml ? `<div class="section-block"><h2 class="h3">Ingredient File</h2><dl class="ingredient-file">${fileHtml}</dl></div>` : ""}
+    <div class="section-block" id="theRecipe">
+      <h2 class="h3">The Recipe</h2>
+      <div class="recipe-inner">
+        <div>
+          ${imageHtml(cardImage(recipe), recipe.title, "../")}
+          <p class="rstats">Prep: ${escapeHtml(recipe.recipeInfo.prep)} &middot; Cook: ${escapeHtml(recipe.recipeInfo.cook)} &middot; Chill: ${escapeHtml(recipe.recipeInfo.chill)} &middot; Total: ${escapeHtml(recipe.recipeInfo.total)}<br>Serves: ${escapeHtml(recipe.recipeInfo.servings)} &middot; Pan: ${escapeHtml(recipe.recipeInfo.pan)}</p>
+          <div class="recipe-tools" aria-label="Recipe display controls"><span class="tool-label">Quantity</span><button class="btn scale-btn" data-scale="0.5">×0.5</button><button class="btn scale-btn active" data-scale="1">1</button><button class="btn scale-btn" data-scale="2">×2</button><span class="tool-label">Units</span><button class="btn unit-btn active" data-unit="metric">Metric</button><button class="btn unit-btn" data-unit="imperial">Imperial</button></div>
+          <div class="btn-row"><button class="btn" id="cookModeBtn">Cook Mode</button><button class="btn" id="shareBtn">Share Recipe</button></div>
+          <p class="share-note" id="shareNote"></p>
+          ${usualsLinkHtml}
+          ${ingredientGroupsHtml()}
+        </div>
+        <div>${stepsHtml()}</div>
+      </div>
+    </div>
+    <div class="section-block"><h2 class="h3">Midnight Notes</h2><ul class="notes-list">${notesHtml}</ul></div>
+    <div class="section-block"><h2 class="h3">The Fine Print</h2><p class="facts"><b>Best eaten</b>: ${escapeHtml(recipe.finePrint.bestEaten)}<br><b>Make ahead</b>: ${escapeHtml(recipe.finePrint.makeAhead)}<br><b>Storage</b>: ${escapeHtml(recipe.finePrint.storage)}<br><b>Freezer</b>: ${escapeHtml(recipe.finePrint.freezer)}<br><b>Reheat</b>: ${escapeHtml(recipe.finePrint.reheat)}</p></div>
+    <div class="section-block recipe-footer">
+      <p><b>Inspired by</b>: ${escapeHtml(recipe.footer.inspiredBy)}</p><p><b>Cuisine</b>: ${escapeHtml(recipe.footer.cuisine)}</p><p><b>Course</b>: ${recipe.footer.course.map(escapeHtml).join(", ")}</p><p><b>Main ingredients</b>: ${recipe.footer.mainIngredients.map(escapeHtml).join(" · ")}</p>
+      <div class="review-box"><h3 class="h3">How did you like it?</h3><div class="star-picker" id="starPicker" role="radiogroup" aria-label="Rating"></div><form class="review-form" id="reviewForm"><input id="reviewName" maxlength="80" placeholder="Name (optional)"><textarea id="reviewComment" maxlength="1000" placeholder="Comment (optional)"></textarea><button class="btn" type="submit">Submit</button></form><p class="review-note" id="reviewNote">Your rating is saved on this device. Comments are saved locally until a shared database is connected.</p></div>
+      <div class="btn-row"><button class="btn" id="printBtn">Print Recipe</button><button class="btn" id="saveBtn">Save Recipe</button></div>
+    </div>`;
+
+  document.getElementById("jumpBtn").addEventListener("click",()=>document.getElementById("theRecipe").scrollIntoView({behavior:"smooth",block:"start"}));
+
+  let wakeLock=null;
+  async function requestWakeLock(){ if("wakeLock" in navigator){try{wakeLock=await navigator.wakeLock.request("screen");}catch(e){}} }
+  async function releaseWakeLock(){ if(wakeLock){try{await wakeLock.release();}catch(e){} wakeLock=null;} }
+  document.getElementById("cookModeBtn").addEventListener("click",async e=>{const on=document.body.classList.toggle("cook-mode");e.target.textContent=on?"Exit Cook Mode":"Cook Mode";if(on) await requestWakeLock();else await releaseWakeLock();});
+  document.addEventListener("visibilitychange",()=>{if(document.visibilityState==="visible" && document.body.classList.contains("cook-mode")) requestWakeLock();});
+
+  document.getElementById("shareBtn").addEventListener("click",async()=>{const url=location.href,n=document.getElementById("shareNote");if(navigator.share){try{await navigator.share({title:recipe.title,url});}catch(e){}}else{try{await navigator.clipboard.writeText(url);n.textContent="Link copied!";setTimeout(()=>n.textContent="",2000);}catch(e){n.textContent=url;}}});
+  document.getElementById("printBtn").addEventListener("click",()=>window.print());
+  const saveKey="midnight-recipes:saved:"+recipe.slug, saveBtn=document.getElementById("saveBtn");
+  function refreshSave(){saveBtn.textContent=localStorage.getItem(saveKey)?"Saved ✓":"Save Recipe";} try{refreshSave();}catch(e){}
+  saveBtn.addEventListener("click",()=>{try{localStorage.getItem(saveKey)?localStorage.removeItem(saveKey):localStorage.setItem(saveKey,"1");refreshSave();}catch(e){}});
+
+  let quantityFactor=1; let unitSystem="metric";
+  function renderIngredientAmounts(){
+    document.querySelectorAll(".ingredient-amount").forEach(el=>{
+      const scaled=scaledAmount(el.dataset.original,quantityFactor);
+      el.textContent=unitSystem === "imperial" ? convertAmountText(scaled,"imperial") : scaled;
+    });
+  }
+  document.querySelectorAll(".scale-btn").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".scale-btn").forEach(b=>b.classList.remove("active"));btn.classList.add("active");quantityFactor=Number(btn.dataset.scale);renderIngredientAmounts();}));
+  document.querySelectorAll(".unit-btn").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".unit-btn").forEach(b=>b.classList.remove("active"));btn.classList.add("active");unitSystem=btn.dataset.unit;renderIngredientAmounts();}));
+  function renderConvertibleText(){document.querySelectorAll(".convertible-text").forEach(el=>{const original=el.dataset.originalText;el.textContent=unitSystem === "imperial" ? convertTemperature(original,"imperial") : original;});}
+  document.querySelectorAll(".unit-btn").forEach(btn=>btn.addEventListener("click",renderConvertibleText));
+
+  const ratingKey="midnight-recipes:rating:"+recipe.slug, commentKey="midnight-recipes:comments:"+recipe.slug, picker=document.getElementById("starPicker"), form=document.getElementById("reviewForm"), note=document.getElementById("reviewNote");
+  let rating=Number(localStorage.getItem(ratingKey)||0);
+  function drawStars(){picker.innerHTML="";for(let i=1;i<=5;i++){const b=document.createElement("button");b.type="button";b.textContent="☆";b.setAttribute("aria-label",i+" star");if(i<=rating){b.textContent="★";b.classList.add("selected");}b.addEventListener("click",()=>{rating=i;localStorage.setItem(ratingKey,String(i));drawStars();});picker.appendChild(b);}}
+  drawStars();
+  form.addEventListener("submit",e=>{e.preventDefault();const comment={rating,name:document.getElementById("reviewName").value.trim(),text:document.getElementById("reviewComment").value.trim(),date:new Date().toISOString()};if(!rating){note.textContent="Please choose a star rating first.";return;}let comments=[];try{comments=JSON.parse(localStorage.getItem(commentKey)||"[]");}catch(e){}comments.push(comment);localStorage.setItem(commentKey,JSON.stringify(comments));document.getElementById("reviewName").value="";document.getElementById("reviewComment").value="";note.textContent="Thanks — your rating and comment are saved on this device.";});
+}
+</script>
+</body>
+</html>

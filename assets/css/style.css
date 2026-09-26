@@ -1,0 +1,241 @@
+/* MIDNIGHT RECIPES — site stylesheet
+   Palette, fonts and overall look are carried over from the original design. */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap');
+
+:root{
+  --bg:#BCC8CC;
+  --ink:#151B1F;
+  --paper:#FFFFFF;
+  --line:rgba(21,27,31,.22);
+  --logo-font:'Cutie Queues','Snell Roundhand','Brush Script MT','Segoe Script',cursive;
+  --body-font:'Avenir Next',Avenir,'Nunito Sans','Hiragino Kaku Gothic ProN','Segoe UI',sans-serif;
+  --maxw:1240px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:var(--body-font); line-height:1.6;
+  overflow-x:hidden;
+}
+img{max-width:100%; display:block;}
+a{color:inherit;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 clamp(18px,4vw,34px);}
+
+/* ---------- Photo placeholders ----------
+   Real photos drop in at images/recipes/<slug>-hero.jpg etc. Until then,
+   these show a soft placeholder so layout/spacing stays correct. */
+.ph{
+  background:linear-gradient(135deg,#e7e2d8,#d8d2c4);
+  border-radius:2px; overflow:hidden; position:relative;
+  display:flex; align-items:center; justify-content:center;
+  color:rgba(21,27,31,.45); font-size:13px; letter-spacing:.08em; text-transform:uppercase;
+}
+.ph::after{content:"Photo";}
+.ph img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+
+/* ---------- Header / nav ---------- */
+.site-header{background:var(--paper); border-bottom:1px solid var(--line);}
+.site-header .bar{
+  max-width:var(--maxw); margin:0 auto; padding:16px clamp(18px,4vw,34px);
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+.logo{
+  font-family:var(--logo-font); font-weight:800;
+  font-size:clamp(22px,4.2vw,34px); white-space:nowrap; text-decoration:none;
+}
+nav.primary{display:flex; align-items:center; gap:clamp(12px,2vw,24px); flex-wrap:wrap;}
+nav.primary > a, nav.primary > .has-menu > button{
+  font-size:15px; letter-spacing:.03em; text-decoration:none; background:none; border:none;
+  cursor:pointer; color:var(--ink); font-family:var(--body-font); padding:4px 0;
+}
+.has-menu{position:relative;}
+.has-menu .dropdown{
+  display:none; position:absolute; top:100%; left:0; background:var(--paper);
+  border:1px solid var(--line); min-width:190px; padding:8px 0; z-index:20;
+  box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+.has-menu:hover .dropdown, .has-menu.open .dropdown{display:block;}
+.dropdown a{display:block; padding:8px 18px; font-size:14px; text-decoration:none;}
+.dropdown a:hover{background:rgba(21,27,31,.05);}
+.search-form{display:flex; align-items:center;}
+.search-form input{width:130px; max-width:100%; border:1px solid var(--line); border-radius:999px; padding:7px 12px; font:inherit; font-size:13px; background:transparent;}
+.sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;}
+.nav-toggle{display:none; background:none; border:none; font-size:26px; cursor:pointer;}
+
+@media (max-width:760px){
+  .nav-toggle{display:block;}
+  nav.primary{
+    display:none; position:absolute; left:0; right:0; top:100%; background:var(--paper);
+    border-bottom:1px solid var(--line); flex-direction:column; align-items:flex-start;
+    padding:10px clamp(18px,4vw,34px) 18px; gap:10px;
+    z-index:30;
+  }
+  nav.primary.open{display:flex;}
+  .has-menu .dropdown{position:static; border:none; box-shadow:none; padding-left:12px; display:block;}
+  .site-header .bar{position:relative;}
+}
+
+/* ---------- Section headings ---------- */
+.h2{
+  font-family:var(--logo-font); font-weight:700; letter-spacing:0;
+  font-size:clamp(22px,4vw,36px); margin:0 0 22px; color:var(--ink);
+}
+.section{padding:clamp(30px,6vw,56px) 0;}
+.eyebrow{font-size:14px; letter-spacing:.05em; opacity:.65; margin:0 0 4px;}
+
+/* ---------- Home: BY SOURCE ---------- */
+.source-block{margin-bottom:clamp(26px,4vw,40px);}
+.source-block h3{margin:0 0 12px;}
+.source-block h3 a{text-decoration:none; font-size:clamp(17px,2.6vw,21px); font-weight:700;}
+.source-block h3 a:hover{text-decoration:underline;}
+.source-empty{font-size:14px; opacity:.6; font-style:italic;}
+.source-more{font-size:14px; opacity:.7; margin-top:24px;}
+
+/* ---------- Recipe card grid (Latest / View All) ---------- */
+.grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(16px,2.4vw,28px);
+}
+@media (max-width:900px){ .grid{grid-template-columns:repeat(2,1fr);} }
+.card{text-decoration:none; color:inherit; display:block;}
+.card .ph{aspect-ratio:1/1;}
+.card .name{
+  font-family:var(--body-font); font-weight:600; font-size:18px; margin:12px 0 0;
+}
+.card .meta{font-size:13px; opacity:.6; margin:2px 0 0;}
+
+/* ---------- Filter chip row (by-source / by-cuisine / by-meal) ---------- */
+.chip-row{display:flex; flex-wrap:wrap; gap:8px; margin:0 0 30px;}
+.chip{
+  border:1px solid var(--line); border-radius:999px; padding:7px 16px; font-size:14px;
+  text-decoration:none; color:var(--ink);
+}
+.chip.active{background:var(--ink); color:var(--paper); border-color:var(--ink);}
+
+/* ---------- Recipe page ---------- */
+.recipe-card{max-width:1180px; margin:26px auto 0; background:var(--paper); padding:clamp(24px,4vw,44px);}
+.rtop{display:grid; grid-template-columns:1fr; gap:28px;}
+@media (min-width:800px){ .rtop{grid-template-columns:1fr 420px;} }
+.rtitle{font-family:var(--logo-font); font-size:clamp(30px,5vw,52px); margin:0 0 14px;}
+.rmeta{font-size:15px; opacity:.75; margin:0 0 16px;}
+.rmeta .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px;}
+.rmeta .tags span{border:1px solid var(--line); border-radius:999px; padding:3px 10px; font-size:12px;}
+.facts{font-size:16px; line-height:1.9; margin:0 0 20px;}
+.facts b{font-weight:700;}
+.btn{
+  display:inline-block; padding:11px 22px; border:1px solid var(--ink); border-radius:999px;
+  background:transparent; text-align:center; font-size:15px; cursor:pointer; text-decoration:none;
+  color:var(--ink); font-family:var(--body-font);
+}
+.btn:hover{background:rgba(21,27,31,.06);}
+.btn-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;}
+.rtop .ph{aspect-ratio:2/3; max-width:420px; width:100%; margin-left:auto;}
+
+.section-block{padding:clamp(30px,5vw,44px) 0; border-top:1px solid var(--line);}
+.section-block:first-of-type{border-top:none;}
+.h3{font-family:var(--body-font); font-weight:700; letter-spacing:.04em; font-size:22px; margin:0 0 14px;}
+
+.ingredient-file dt{font-weight:700; margin-top:14px;}
+.ingredient-file dd{margin:2px 0 0;}
+
+.recipe-inner{display:grid; grid-template-columns:1fr; gap:30px;}
+@media (min-width:800px){ .recipe-inner{grid-template-columns:400px 1fr;} }
+.recipe-inner .ph{aspect-ratio:1/1;}
+.rstats{font-size:15px; line-height:1.9; margin:14px 0;}
+.ing-list{list-style:none; margin:0; padding:0;}
+.ing-list li{padding:6px 0; border-bottom:1px dashed var(--line); font-size:15px; display:flex; gap:8px;}
+.ing-group h4{font-size:13px; letter-spacing:.08em; text-transform:uppercase; opacity:.6; margin:18px 0 6px;}
+
+.step{margin-bottom:26px;}
+.step-head{display:flex; justify-content:space-between; align-items:baseline; font-weight:700; font-size:15px; margin-bottom:6px;}
+.step p{font-size:16px; line-height:1.85; margin:0 0 8px;}
+.step .tip{font-size:14px; font-style:italic; opacity:.75;}
+
+.notes-list{list-style:none; margin:0; padding:0; font-size:16px; line-height:1.85;}
+.notes-list li{margin-bottom:10px;}
+
+.recipe-footer p{font-size:15px; line-height:1.9; margin:0 0 4px;}
+.recipe-footer a{text-decoration:underline;}
+.stars{font-size:20px; letter-spacing:.08em; margin:14px 0 6px;}
+
+.share-note{font-size:14px; opacity:.7; margin-top:4px;}
+
+/* ---------- About / Contact ---------- */
+.prose p{max-width:70ch; font-size:16px; line-height:1.85; margin:0 0 16px;}
+.prose h3{font-family:var(--body-font); font-weight:700; font-size:20px; margin:32px 0 12px;}
+
+/* Cook Mode: bigger, calmer instructions for reading at the stove */
+body.cook-mode .step p{font-size:19px;}
+body.cook-mode .step-head{font-size:17px;}
+body.cook-mode{background:#fff;}
+
+/* ---------- Footer ---------- */
+.site-footer{border-top:1px solid var(--line); margin-top:40px;}
+.site-footer .wrap{padding:26px clamp(18px,4vw,34px); font-size:14px; opacity:.75; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+.site-footer a{text-decoration:underline;}
+
+
+/* ---------- Responsive / image safety ---------- */
+html, body{max-width:100%; overflow-x:hidden;}
+img{max-width:100%; display:block;}
+.rtitle, .h2, .h3, .card .name{overflow-wrap:anywhere; word-break:normal;}
+.ph.image-missing{background:linear-gradient(135deg,#e7e2d8,#d8d2c4);}
+@media (max-width:760px){
+  .site-header .bar{align-items:center;}
+  .logo{font-size:clamp(18px,6vw,27px); letter-spacing:-.02em;}
+  nav.primary{gap:8px;}
+  .search-form{width:100%; margin-top:4px;}
+  .search-form input{width:100%;}
+  .rtop .ph{max-width:none; margin:0;}
+  .recipe-card{padding:clamp(18px,5vw,28px);}
+}
+@media (min-width:761px){
+  nav.primary .search-form{margin-left:4px;}
+}
+
+/* ---------- Quantity / unit controls ---------- */
+.recipe-tools{display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin:0 0 18px;}
+.recipe-tools .tool-label{font-size:13px; opacity:.65; margin-right:2px;}
+.scale-btn.active, .unit-btn.active{background:var(--ink); color:var(--paper);}
+.ingredient-amount{min-width:72px; display:inline-block; font-variant-numeric:tabular-nums;}
+
+/* ---------- Step photos ---------- */
+.step-photo{aspect-ratio:1/1; width:min(100%,360px); margin:14px 0; border-radius:2px; overflow:hidden;}
+.step-photo img{width:100%; height:100%; object-fit:cover;}
+
+/* ---------- Ingredient File ---------- */
+.ingredient-file{margin:0;}
+.ingredient-file dt{font-weight:700; margin-top:20px;}
+.ingredient-file dt:first-child{margin-top:0;}
+.ingredient-file dd{margin:5px 0 0; line-height:1.8;}
+.ingredient-detail{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:5px 28px;}
+.ingredient-detail p{margin:0;}
+@media (max-width:650px){.ingredient-detail{grid-template-columns:1fr;}}
+
+/* ---------- Search ---------- */
+.search-result-note{font-size:14px; opacity:.65; margin:-8px 0 28px;}
+
+/* ---------- Reviews ---------- */
+.review-box{margin-top:18px;}
+.star-picker{display:flex; gap:4px; margin:8px 0 12px;}
+.star-picker button{border:0; background:none; padding:0; cursor:pointer; font-size:30px; line-height:1; color:var(--ink); opacity:.35;}
+.star-picker button.selected{opacity:1;}
+.review-form{display:grid; gap:10px; max-width:620px;}
+.review-form input,.review-form textarea{font:inherit; border:1px solid var(--line); background:transparent; padding:10px 12px; border-radius:2px; width:100%;}
+.review-form textarea{min-height:100px; resize:vertical;}
+.review-note{font-size:13px; opacity:.65; margin-top:8px;}
+
+/* ---------- Cook Mode ---------- */
+body.cook-mode .recipe-card{max-width:1280px;}
+body.cook-mode .step p{font-size:19px; line-height:1.95;}
+body.cook-mode .step-head{font-size:17px;}
+body.cook-mode .ing-list li{font-size:17px; padding:8px 0;}
+
+
+/* ---------- Source directory ---------- */
+.source-directory{border-top:1px solid var(--line);}
+.source-directory-item{display:flex; justify-content:space-between; gap:20px; padding:17px 0; border-bottom:1px solid var(--line); text-decoration:none; color:inherit; font-size:17px;}
+.source-directory-item span:last-child{font-size:14px; opacity:.6; white-space:nowrap;}
+.source-directory-item:hover span:first-child{text-decoration:underline;}
