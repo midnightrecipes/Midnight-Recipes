@@ -1138,3 +1138,41 @@ html,body{max-width:100%;overflow-x:hidden}
   line-height:1.85;
 }
 .recipe-card .notes-list .note-body br{line-height:inherit;}
+
+
+/* v29 targeted fixes */
+/* Home recipe cards use a consistent 2:3 portrait thumbnail without changing recipe-page imagery. */
+body[data-page="home"] .card .photo-frame,
+body[data-page="home"] .category-card .photo-frame{
+  aspect-ratio:2 / 3;
+}
+
+/* Keep the practical recipe content as one transparent, fine-line box. */
+.recipe-practical-box{
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
+  border:1px solid var(--line);
+  background:transparent;
+  padding:0 28px 28px;
+  overflow:hidden;
+}
+.recipe-practical-box #ingredient-file-section,
+.recipe-practical-box #the-recipe{
+  width:100%;
+  box-sizing:border-box;
+}
+.recipe-practical-box #ingredient-file-section{
+  margin-top:0;
+}
+.recipe-practical-box #the-recipe{
+  margin-top:62px;
+}
+@media (max-width:720px){
+  .recipe-practical-box{
+    padding:0 16px 20px;
+  }
+  .recipe-practical-box #the-recipe{
+    margin-top:50px;
+  }
+}
