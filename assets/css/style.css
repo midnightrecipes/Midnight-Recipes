@@ -700,3 +700,87 @@ html,body{max-width:100%;overflow-x:hidden}
 /* Source hierarchy: source labels are bold; recipe titles remain regular and un-underlined. */
 .source-name{font-weight:700}
 .source-latest a,.source-name{text-decoration:none!important}
+
+/* Final targeted refinements — preserve the existing design. */
+@media (max-width:430px){
+  .header .logo{
+    font-size:clamp(18px,6vw,28px);
+    max-width:none;
+    min-width:0;
+    overflow:visible;
+    text-overflow:clip;
+    white-space:nowrap;
+    letter-spacing:.01em;
+  }
+}
+
+/* The guide belongs once directly below the Ingredients list, not inside Ingredient File. */
+.ingredient-file-guide{
+  margin:14px 0 0;
+  font-size:14px;
+  line-height:1.5;
+  opacity:.7;
+}
+.ingredient-file-guide a{text-decoration:none}
+.ingredient-info{
+  display:inline-block;
+  margin-left:6px;
+  text-decoration:none!important;
+  font-size:.9em;
+  line-height:1;
+}
+
+/* Keep the two ABOUT sections distinct without changing global spacing. */
+.about-recipes-section{
+  margin-top:88px!important;
+}
+@media (max-width:720px){
+  .about-recipes-section{margin-top:58px!important}
+}
+
+/* Home source labels are bold; recipe titles match the regular Latest Recipes title weight. */
+.tile .source-name{font-weight:700}
+.tile .source-latest,
+.tile .source-latest a{font-weight:400;text-decoration:none!important}
+
+/* Final targeted refinements — preserve the existing design. */
+@media (max-width:430px){
+  .header .logo{
+    font-size:clamp(18px,6vw,28px);
+    max-width:none;
+    min-width:0;
+    overflow:visible;
+    text-overflow:clip;
+    white-space:nowrap;
+    letter-spacing:.01em;
+  }
+}
+
+/* The guide belongs once directly below the Ingredients list, not inside Ingredient File. */
+.ingredient-file-guide{
+  margin:14px 0 0;
+  font-size:14px;
+  line-height:1.5;
+  opacity:.7;
+}
+.ingredient-file-guide a{text-decoration:none}
+.ingredient-info{
+  display:inline-block;
+  margin-left:6px;
+  text-decoration:none!important;
+  font-size:.9em;
+  line-height:1;
+}
+
+/* Keep the two ABOUT sections distinct without changing global spacing. */
+.about-recipes-section{
+  margin-top:88px!important;
+}
+@media (max-width:720px){
+  .about-recipes-section{margin-top:58px!important}
+}
+
+/* Home source labels are bold; recipe titles match the regular Latest Recipes title weight. */
+.tile .source-name{font-weight:700}
+.tile .source-latest,
+.tile .source-latest a{font-weight:400;text-decoration:none!important}
