@@ -804,20 +804,16 @@ html,body{max-width:100%;overflow-x:hidden}
 .recipe-card #cookOpen,
 .recipe-card #shareRecipe,
 .recipe-card #printRecipe,
-.recipe-card #saveRecipe{
-  background:var(--mint);border-color:var(--mint);padding:9px 16px;
-}
 .recipe-card .rtop .btn:hover,
 .recipe-card #cookOpen:hover,
 .recipe-card #shareRecipe:hover,
 .recipe-card #printRecipe:hover,
-.recipe-card #saveRecipe:hover{background:var(--mint);border-color:var(--mint);}
 @media (max-width:720px){
   .recipe-card .rtop .btn,
   .recipe-card #cookOpen,
   .recipe-card #shareRecipe,
   .recipe-card #printRecipe,
-  .recipe-card #saveRecipe{padding:8px 14px;}
+  
 }
 
 /* v18 targeted refinements — preserve existing layout and controls */
@@ -1026,3 +1022,7 @@ html,body{max-width:100%;overflow-x:hidden}
 @media(max-width:720px){
   .recipe-card .usual-intro{margin-top:30px}
 }
+
+/* v21 targeted fixes — preserve the existing visual system. */
+.recipe-card .ing li > span > b{font-weight:700;}
+.recipe-card .ing .group{font-weight:700;}

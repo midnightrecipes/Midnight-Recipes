@@ -288,7 +288,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
     slug:'building-block-pie-crust', title:'Building Block Pie Crust', source:'The Usuals', cuisine:'American', course:'Baking', courseDisplay:'Baking', meal:'Baking', categories:['Baking'], ingredientCategories:['Pie'], dateAdded:'2026-09-27', timeStamp:'',
     isUsuals:true, usualsCategory:'BASES & CRUSTS',
     description:'The crust we make when a pie calls for a crust.',
-    usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\n\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
+    usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
     heroImage:'', cardImage:'', stepImages:[],
     ingredientFile:[],
     ingredients:[
@@ -300,16 +300,15 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
     stats:{prep:'15 mins',cook:'15 mins',total:'30 mins',serves:'8',pan:'23 cm / 9-inch pie dish',quest:'⭐⭐⭐⭐☆'},
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'',paragraphs:[
-        'Mix 180 g flour, 100 g cold butter, and ½ tsp salt until coarse crumbs form.',
-        'Add 3–4 tbsp ice water gradually, just until the dough comes together.',
-        '**Lightly flour your hands**, then press the dough evenly into the pie dish.',
-        'Chill for 10 minutes if the butter feels soft.'
-      ],stepNote:'**Midnight Shortcuts:** food processor'},
+        'Mix flour, butter, and salt until coarse crumbs form.',
+        'Add ice water gradually until the dough just comes together.',
+        '**Lightly flour your hands** and press the dough directly into the pie dish.',
+        'If the butter has softened, chill the crust for 10 minutes before baking.'
+      ],stepNote:'**Midnight Shortcut:** Use a food processor to make the dough quickly.'},
       {number:'02',title:'BLIND-BAKE',clock:'',paragraphs:[
-        'Prick the bottom lightly with a fork.',
-        'Line with parchment and add pie weights.',
+        'Prick the bottom with a fork. Add parchment paper and pie weights.',
         'Bake at 190°C / 375°F for 15 minutes.',
-        'Remove the weights and bake for another 5–7 minutes, until light golden.'
+        'Remove the weights and parchment, then bake for another 5–7 minutes, until lightly golden.'
       ]}
     ],
     notes:[
