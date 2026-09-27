@@ -23,39 +23,45 @@ window.MIDNIGHT_RECIPES = [
       {number:'01',title:'CRUSH IT DOWN',clock:'12:14 AM',paragraphs:[
         'Preheat your oven to 180°C (350°F).',
         'Crush 200g graham crackers finely.',
-        'Food Processor (Fastest): Pulse for about 30 seconds.',
-        'Quiet Mode (Silent): Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
+        '**Food Processor (Fastest):** Pulse for about 30 seconds.',
+        '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
         'Add 80g melted butter and mix until the crumbs are evenly coated.',
         'Press the crumb mixture firmly into a 9-inch (23 cm) pie dish using the flat bottom of a cup.',
         'Bake for 8–10 minutes.',
         'Let it cool.'
-      ],stepNote:'Midnight Shortcut: Skip baking and freeze the crust while you make the filling.',stepPhotos:[
+      ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepPhotos:[
         'images/recipes/chocolate-cream-comfort-pie-step01-1.jpg',
         'images/recipes/chocolate-cream-comfort-pie-step01-2.jpg',
         'images/recipes/chocolate-cream-comfort-pie-step01-3.jpg'
       ]},
       {number:'02',title:'MAKE IT GLOSSY',clock:'12:20 AM',paragraphs:[
-        'In a saucepan, whisk 80g sugar, 4 Tbsp cornstarch, 3 Tbsp cocoa powder, 1 tsp espresso powder, and a pinch of salt. Slowly pour in 500ml milk, whisking thoroughly until completely smooth before turning on the heat.',
+        'In a saucepan, whisk 80g sugar, 4 Tbsp cornstarch, 3 Tbsp cocoa powder, 1 tsp espresso powder, and a pinch of salt.',
+        'Slowly pour in 500ml milk, whisking thoroughly until completely smooth before turning on the heat.',
         'Cook over medium heat, whisking constantly until the mixture bubbles and thickens into a pudding-like consistency.',
-        'Remove the pan from the heat.',
-        'In a separate bowl, whisk 4 egg yolks. Slowly whisk ½ cup of the hot chocolate cream into the yolks to warm them up, then pour the yolk mixture back into the pan.',
-        'Return to low heat for 1 minute, whisking constantly until thick and glossy.',
-        'Remove from heat, then stir in 150g chopped dark chocolate and 20g butter until fully melted and smooth.'
+        'Remove the pan from the heat.'
       ],stepPhotos:[
         'images/recipes/chocolate-cream-comfort-pie-step02-1.jpg',
         'images/recipes/chocolate-cream-comfort-pie-step02-2.jpg',
         'images/recipes/chocolate-cream-comfort-pie-step02-3.jpg'
       ]},
-      {number:'03',title:'POUR AND WAIT',clock:'12:35 AM',paragraphs:[
-        'Pour the warm chocolate filling into your chilled pie crust. Tap the pie dish gently on the counter 2–3 times to level the surface and release trapped air bubbles.',
+      {number:'03',title:'MAKE IT SILKY',clock:'12:28 AM',paragraphs:[
+        'In a separate bowl, whisk 4 egg yolks.',
+        'Slowly whisk ½ cup of the hot chocolate cream into the yolks to warm them up, then pour the yolk mixture back into the pan.',
+        'Return to low heat for 1 minute, whisking constantly until thick and glossy.',
+        'Remove from heat, then stir in 150g chopped dark chocolate and 20g butter until fully melted and smooth.'
+      ],stepPhotos:[]},
+      {number:'04',title:'POUR AND WAIT',clock:'12:35 AM',paragraphs:[
+        'Pour the warm chocolate filling into your chilled pie crust.',
+        'Tap the pie dish gently on the counter 2–3 times to level the surface and release trapped air bubbles.',
         'Refrigerate for at least 4 hours. Overnight works best.'
       ],stepPhotos:[
         'images/recipes/chocolate-cream-comfort-pie-step03-1.jpg',
         'images/recipes/chocolate-cream-comfort-pie-step03-2.jpg',
         'images/recipes/chocolate-cream-comfort-pie-step03-3.jpg'
       ]},
-      {number:'04',title:'WHIP IT LATE',clock:'Optional',paragraphs:[
-        'Whip 200ml cold cream to soft peaks. Gradually add 2 Tbsp sugar and whip until medium-firm peaks form.',
+      {number:'05',title:'WHIP IT LATE',clock:'Optional',paragraphs:[
+        'Whip 200ml cold cream to soft peaks.',
+        'Gradually add 2 Tbsp sugar and whip until medium-firm peaks form.',
         'Dollop generously over the chilled pie and finish with cocoa powder, cacao nibs, or flaky sea salt.'
       ],stepPhotos:[
         'images/recipes/chocolate-cream-comfort-pie-step04-1.jpg',
@@ -88,8 +94,8 @@ window.MIDNIGHT_RECIPES = [
     story:`Taiwan Ramen (台湾ラーメン) at Misen (味仙) is famous in my hometown, Nagoya, Japan. Despite its name, this fiery ramen isn’t actually from Taiwan—the founder named it “Taiwan Ramen” after his own Taiwanese roots. It is one of Nagoya’s local food that evolved entirely in Japan, and this intensely spicy, strangely addictive flavor is so irresistible that I found myself going back to the restaurant again on my last trip home.\n\nTonight, I’m making the **Taiwan ground pork the star of the dish**, serving it over rice with a soft-boiled egg instead of its original ramen noodles. It might be so spicy that I end up staying awake all night.`,
     ingredientFile:[
       {name:'GROUND PORK',details:[['Flavor','Rich, savory, fatty'],['Substitute','Ground chicken or turkey, although fatty pork gives the closest result']]},
-      {name:'FRESH RED CHILI',details:[['Origin','East & Southeast Asia'],['Flavor','Fresh, sharp, bright heat'],['Substitute','Dried Thai chili or red chili flakes'],['Storage','Refrigerate loosely wrapped.'],['強烈な旨辛さを引き出すために','たっぷりの唐辛子とニンニクがこのレシピでは重要！']]},
-      {name:'GARLIC',details:[['Flavor','Fresh, garlicky, slightly sweet'],['Where to find','Chinese and Asian grocery stores'],['強烈な旨辛さを引き出すために','たっぷりの唐辛子とニンニクがこのレシピでは重要！']]},
+      {name:'FRESH RED CHILI',details:[['Origin','East & Southeast Asia'],['Flavor','Fresh, sharp, bright heat'],['Substitute','Dried Thai chili or red chili flakes'],['Storage','Refrigerate loosely wrapped.'],['To achieve the intense spicy-savory flavor','Plenty of fresh chili and garlic are essential to this recipe!']]},
+      {name:'GARLIC',details:[['Flavor','Fresh, garlicky, slightly sweet'],['Where to find','Chinese and Asian grocery stores'],['To achieve the intense spicy-savory flavor','Plenty of fresh chili and garlic are essential to this recipe!']]},
       {name:'DOUBANJIANG',details:[['Origin','China'],['Flavor','Fermented, salty, savory, deeply spicy'],['Where to find','Chinese and Asian grocery stores'],['Substitute','Chili bean paste or, in a pinch, a combination of chili paste and a little miso']]}
     ],
     ingredients:[
@@ -101,10 +107,10 @@ window.MIDNIGHT_RECIPES = [
       {amount:30,unit:'ml',item:'soy sauce'},
       {amount:30,unit:'ml',item:'Shaoxing wine'},
       {amount:15,unit:'ml',item:'doubanjiang'},
-      {amount:10,unit:'ml',item:'oyster sauce'},
-      {amount:10,unit:'ml',item:'gochujang'},
-      {amount:2.5,unit:'ml',item:'sugar'},
-      {amount:5,unit:'ml',item:'chicken bouillon powder'},
+      {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'oyster sauce'},
+      {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'gochujang'},
+      {amount:2.5,unit:'ml',imperialAmount:0.5,imperialUnit:'tsp',item:'sugar'},
+      {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'chicken bouillon powder'},
       {amount:180,unit:'ml',item:'water'},
       {unit:'',item:'Black pepper, to taste'},
       {amount:50,unit:'g',item:'garlic chives or green onion, cut into 3–4 cm pieces'},

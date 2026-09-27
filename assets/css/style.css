@@ -657,3 +657,24 @@ html,body{max-width:100%;overflow-x:hidden}
 @media (max-width:720px){
   .recipe-card .step-photos{grid-template-columns:repeat(3,minmax(0,1fr));}
 }
+
+/* Targeted instruction hierarchy: supporting notes sit one level below the main copy. */
+.recipe-card .step-copy .instruction-note{
+  margin-left:24px;
+  padding-left:12px;
+}
+.recipe-card .step-copy .step-note{
+  margin-left:24px;
+  padding-left:12px;
+}
+.recipe-card .step-copy .instruction-note strong,
+.recipe-card .step-copy .step-note strong{font-weight:700}
+
+/* Keep all first-level recipe menu items on the same vertical rhythm. */
+.menu .recipes-sub>a,
+.menu .recipes-sub>.acc,
+.menu .recipes-sub>.usuals-link{
+  padding-top:9px;
+  padding-bottom:9px;
+  margin:0;
+}
