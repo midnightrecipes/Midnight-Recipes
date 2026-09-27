@@ -819,3 +819,172 @@ html,body{max-width:100%;overflow-x:hidden}
   .recipe-card #printRecipe,
   .recipe-card #saveRecipe{padding:8px 14px;}
 }
+
+/* v18 targeted refinements — preserve existing layout and controls */
+.header .logo{
+  font-weight:850;
+  overflow:visible;
+  text-overflow:clip;
+  white-space:nowrap;
+}
+
+/* Recipe action row: all five existing controls stay together and compact. */
+.recipe-card .recipe-action-row{
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:10px;
+  width:100%;
+  margin:18px 0 0;
+}
+.recipe-card .recipe-action-row .btn{
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:8px 12px;
+  min-height:42px;
+  background:var(--mint);
+  border-color:var(--mint);
+  border-radius:999px;
+  font-size:16px;
+  line-height:1.25;
+}
+.recipe-card .recipe-action-row .btn:hover,
+.recipe-card .recipe-action-row .btn:focus-visible{
+  background:var(--mint);
+  border-color:var(--ink);
+}
+.recipe-card .recipe-action-row #cookOpen{
+  background:rgba(201,255,216,.48);
+  border-color:rgba(21,27,31,.28);
+}
+.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]{
+  background:var(--mint);
+  border-color:var(--mint);
+}
+
+/* Instructions: title bold, body regular, supporting labels visually one level down. */
+.recipe-card .step-head span:first-child{font-weight:700;}
+.recipe-card .step-head span:last-child{font-weight:400;}
+.recipe-card .step-copy p{
+  font-weight:400;
+  line-height:1.9;
+  margin:0 0 13px;
+}
+.recipe-card .step-copy .instruction-note{
+  margin-left:24px;
+  padding-left:12px;
+  font-size:.96em;
+  line-height:1.82;
+}
+.recipe-card .step-copy .instruction-note strong,
+.recipe-card .step-copy .step-note strong{font-weight:700;}
+.recipe-card .step-copy .step-note{
+  margin-left:24px;
+  padding-left:12px;
+  margin-top:15px;
+  font-weight:400;
+  line-height:1.85;
+}
+.recipe-card .step{padding:30px 0;}
+.recipe-card .step + .step{border-top:1px solid transparent;}
+
+/* Recipe sections: use the available desktop width without making the page globally wider. */
+.recipe-card > section > .body-copy{
+  max-width:none;
+  width:100%;
+  line-height:2;
+}
+.recipe-card .ingredient-file{
+  width:100%;
+  max-width:none;
+}
+.recipe-card .ingredient-file-group{
+  width:100%;
+  max-width:none;
+  margin-bottom:32px;
+}
+.recipe-card .ingredient-file-details{
+  width:100%;
+  max-width:none;
+}
+.recipe-card .ingredient-file-details p{
+  max-width:none;
+  width:100%;
+  overflow-wrap:normal;
+  word-break:normal;
+  line-height:1.85;
+}
+.recipe-card #the-recipe{margin-top:66px;}
+.recipe-card > section:has(.notes-list),
+.recipe-card > section:has(.note-sub + .body-copy){margin-top:64px;}
+.recipe-card > section:has(.note-sub + .body-copy) .body-copy{line-height:2;}
+
+/* Step photos remain square, edge-to-edge inside their existing grid. */
+.recipe-card .step-photos{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin-top:18px;
+}
+.recipe-card .step-photos .photo-frame{
+  aspect-ratio:1 / 1;
+  width:100%;
+  height:auto;
+  padding:0;
+  margin:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  overflow:hidden;
+}
+.recipe-card .step-photos .photo-frame .photo{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+@media (max-width:900px){
+  .recipe-card .recipe-action-row{gap:8px;}
+  .recipe-card .recipe-action-row .btn{padding:8px 9px;font-size:15px;}
+}
+@media (max-width:720px){
+  .header .logo{
+    font-size:clamp(18px,6vw,24px);
+    max-width:none;
+    min-width:0;
+    overflow:visible;
+    text-overflow:clip;
+    letter-spacing:0;
+  }
+  .recipe-card .recipe-action-row{
+    gap:7px;
+    margin-top:16px;
+  }
+  .recipe-card .recipe-action-row .btn{
+    padding:8px 7px;
+    min-height:40px;
+    font-size:13px;
+  }
+  .recipe-card .step{padding:25px 0;}
+  .recipe-card .step-copy p{line-height:1.85;margin-bottom:11px;}
+  .recipe-card .step-copy .instruction-note,
+  .recipe-card .step-copy .step-note{margin-left:18px;padding-left:10px;}
+  .recipe-card .ingredient-file-details p{line-height:1.8;}
+  .recipe-card #the-recipe{margin-top:56px;}
+  .recipe-card > section:has(.notes-list),
+  .recipe-card > section:has(.note-sub + .body-copy){margin-top:52px;}
+}
+@media (max-width:430px){
+  .header .logo{font-size:clamp(18px,6vw,23px);}
+  .recipe-card .recipe-action-row{gap:5px;}
+  .recipe-card .recipe-action-row .btn{
+    padding:7px 4px;
+    min-height:38px;
+    font-size:12px;
+  }
+  .recipe-card .step{padding:23px 0;}
+  .recipe-card .step-copy p{line-height:1.82;margin-bottom:10px;}
+  .recipe-card .step-copy .instruction-note,
+  .recipe-card .step-copy .step-note{margin-left:12px;padding-left:8px;}
+  .recipe-card .step-photos{gap:6px;margin-top:14px;}
+}
