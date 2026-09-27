@@ -3,7 +3,7 @@ window.MIDNIGHT_RECIPES = [
   {
     slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE AND JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Chocolate','Pie'], dateAdded:'2026-09-26', timeStamp:'12:14 AM',
     description:'A late-night chocolate cream pie inspired by Julie & Julia (2009).',
-    heroImage:'images/recipes/chocolate-cream-comfort-pie-hero.jpg', cardImage:'images/recipes/chocolate-cream-comfort-pie-hero.jpg', stepImages:[],
+    heroImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg', cardImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg', stepImages:[],
     story:`“You know what I like about cooking? I love that after a day when nothing is sure, and when I say nothing I mean nothing, you can come home and absolutely know that if you add egg yolks to chocolate and sugar and milk, it will get thick. It’s such a comfort.”\n\n*Reine de Saba* (chocolate cake with sliced almonds) might be the most famous dessert from this movie, but it was Julie’s whole emotional breakdown over making a chocolate cream pie that totally spoke to me. No matter how crazy or messy the day gets, the kitchen is always my ultimate comfort zone to reset!`,
     original:'JULIE AND JULIA (2009)',
     ingredientFile:[
@@ -30,9 +30,9 @@ window.MIDNIGHT_RECIPES = [
         'Bake for 8–10 minutes.',
         'Let it cool.'
       ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepPhotos:[
-        'images/recipes/chocolate-cream-comfort-pie-step01-1.jpg',
-        'images/recipes/chocolate-cream-comfort-pie-step01-2.jpg',
-        'images/recipes/chocolate-cream-comfort-pie-step01-3.jpg'
+        'images/recipes/chocolate-cream-comfort-pie/step01-1.jpg',
+        'images/recipes/chocolate-cream-comfort-pie/step01-2.jpg',
+        'images/recipes/chocolate-cream-comfort-pie/step01-3.jpg'
       ]},
       {number:'02',title:'MAKE IT GLOSSY',clock:'12:20 AM',paragraphs:[
         'In a saucepan, whisk 80g sugar, 4 Tbsp cornstarch, 3 Tbsp cocoa powder, 1 tsp espresso powder, and a pinch of salt.',
@@ -40,9 +40,9 @@ window.MIDNIGHT_RECIPES = [
         'Cook over medium heat, whisking constantly until the mixture bubbles and thickens into a pudding-like consistency.',
         'Remove the pan from the heat.'
       ],stepPhotos:[
-        'images/recipes/chocolate-cream-comfort-pie-step02-1.jpg',
-        'images/recipes/chocolate-cream-comfort-pie-step02-2.jpg',
-        'images/recipes/chocolate-cream-comfort-pie-step02-3.jpg'
+        'images/recipes/chocolate-cream-comfort-pie/step02-1.jpg',
+        'images/recipes/chocolate-cream-comfort-pie/step02-2.jpg',
+        'images/recipes/chocolate-cream-comfort-pie/step02-3.jpg'
       ]},
       {number:'03',title:'MAKE IT SILKY',clock:'12:28 AM',paragraphs:[
         'In a separate bowl, whisk 4 egg yolks.',
@@ -55,18 +55,18 @@ window.MIDNIGHT_RECIPES = [
         'Tap the pie dish gently on the counter 2–3 times to level the surface and release trapped air bubbles.',
         'Refrigerate for at least 4 hours. Overnight works best.'
       ],stepPhotos:[
-        'images/recipes/chocolate-cream-comfort-pie-step03-1.jpg',
-        'images/recipes/chocolate-cream-comfort-pie-step03-2.jpg',
-        'images/recipes/chocolate-cream-comfort-pie-step03-3.jpg'
+        'images/recipes/chocolate-cream-comfort-pie/step03-1.jpg',
+        'images/recipes/chocolate-cream-comfort-pie/step03-2.jpg',
+        'images/recipes/chocolate-cream-comfort-pie/step03-3.jpg'
       ]},
       {number:'05',title:'WHIP IT LATE',clock:'Optional',paragraphs:[
         'Whip 200ml cold cream to soft peaks.',
         'Gradually add 2 Tbsp sugar and whip until medium-firm peaks form.',
         'Dollop generously over the chilled pie and finish with cocoa powder, cacao nibs, or flaky sea salt.'
       ],stepPhotos:[
-        'images/recipes/chocolate-cream-comfort-pie-step04-1.jpg',
-        'images/recipes/chocolate-cream-comfort-pie-step04-2.jpg',
-        'images/recipes/chocolate-cream-comfort-pie-step04-3.jpg'
+        'images/recipes/chocolate-cream-comfort-pie/step04-1.jpg',
+        'images/recipes/chocolate-cream-comfort-pie/step04-2.jpg',
+        'images/recipes/chocolate-cream-comfort-pie/step04-3.jpg'
       ]}
     ],
     notes:[['Recreating the Flavor','I use dark chocolate together with cocoa powder and a hint of espresso powder to take the filling beyond a simple cocoa base, creating a deeper and more layered chocolate flavor.'],['Midnight Shortcut','Chilling the crust in the freezer while preparing the filling saves time without adding another complicated step.'],['Midnight Compromises','If you are too exhausted to whisk by hand, store-bought whipped cream works perfectly well. Freshly whipped cream, however, gives a better texture and a prettier finish when you have a few extra minutes.']],
@@ -88,8 +88,8 @@ window.MIDNIGHT_RECIPES = [
     dateAdded:'2026-09-27',
     timeStamp:'11:44 PM',
     description:'A fiery Nagoya-inspired Taiwan mince served over rice with a soft-boiled egg.',
-    heroImage:'images/recipes/addictive-spicy-taiwan-ground-pork-hero.jpg',
-    cardImage:'images/recipes/addictive-spicy-taiwan-ground-pork-hero.jpg',
+    heroImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg',
+    cardImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg',
     stepImages:[],
     story:`Taiwan Ramen (台湾ラーメン) at Misen (味仙) is famous in my hometown, Nagoya, Japan. Despite its name, this fiery ramen isn’t actually from Taiwan—the founder named it “Taiwan Ramen” after his own Taiwanese roots. It is one of Nagoya’s local food that evolved entirely in Japan, and this intensely spicy, strangely addictive flavor is so irresistible that I found myself going back to the restaurant again on my last trip home.\n\nTonight, I’m making the **Taiwan ground pork the star of the dish**, serving it over rice with a soft-boiled egg instead of its original ramen noodles. It might be so spicy that I end up staying awake all night.`,
     ingredientFile:[
@@ -125,7 +125,7 @@ window.MIDNIGHT_RECIPES = [
         'Add 3 tbsp sesame oil, 20 g minced garlic, and 3–5 finely minced fresh red chilies to a cold frying pan.',
         'Turn the heat to low and gently cook for 1–2 minutes.',
         'Keep the garlic pale. You want the oil infused with garlic and chili, not burnt garlic.'
-      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork-step01-1.jpg']},
+      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork/step01-1.jpg']},
       {number:'02',title:'COOK THE PORK',clock:'11:17 PM',paragraphs:[
         'Increase the heat to medium-high and add 500 g ground pork.',
         'Let the pork sit against the pan briefly so it develops some browned edges.',
@@ -134,7 +134,7 @@ window.MIDNIGHT_RECIPES = [
         'Add 1 tbsp doubanjiang to the exposed oil.',
         'Fry the doubanjiang for 30–45 seconds, then mix it thoroughly into the pork.',
         'This is the key step: frying the doubanjiang directly in the rendered pork fat brings out its fermented, spicy aroma and gives the mince a deeper flavor.'
-      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork-step02-1.jpg']},
+      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork/step02-1.jpg']},
       {number:'03',title:'BRAISE & REDUCE',clock:'11:22 PM',paragraphs:[
         'Add 2 tbsp Shaoxing wine and let it bubble for about 30 seconds.',
         'Add 2 tbsp soy sauce, 2 tsp oyster sauce, 2 tsp gochujang, ½ tsp sugar, 1 tsp chicken bouillon powder, and 180 ml water.',
@@ -144,7 +144,7 @@ window.MIDNIGHT_RECIPES = [
         'Once most of the liquid has been absorbed, increase the heat to medium-high and cook for another 2–4 minutes.',
         'Do not completely dry out the mince.',
         'The finished meat should be deeply colored, glossy and intensely savory, with a small amount of concentrated sauce and pork fat still coating the pan.'
-      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork-step03-1.jpg']},
+      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork/step03-1.jpg']},
       {number:'04',title:'FINISH WITH GARLIC CHIVES',clock:'11:34 PM',paragraphs:[
         'Add 50–60 g garlic chives.',
         'Toss over medium heat for 30–45 seconds.',
@@ -152,13 +152,13 @@ window.MIDNIGHT_RECIPES = [
         'Add ½–1 tsp sesame oil.',
         'Finish with a tiny pinch of sansho or Sichuan pepper, if using.',
         'Taste before adding salt—the soy sauce, doubanjiang, oyster sauce and bouillon already provide plenty of seasoning.'
-      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork-step04-1.jpg']},
+      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork/step04-1.jpg']},
       {number:'05',title:'PLATE',clock:'11:37 PM',paragraphs:[
         'Spoon hot steamed white rice into a shallow bowl.',
         'Pile the Taiwan mince generously over the rice.',
         'Make sure some of the concentrated sauce drips down into the rice.',
         'Top with a crispy-edged fried egg with a runny yolk.'
-      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork-step05-1.jpg']}
+      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork/step05-1.jpg']}
     ],
     notes:[
       ['Recreating the Flavor','The goal isn’t simply to make spicy ground pork. The flavor builds in layers: sesame oil + garlic + fresh chili → browned pork fat → fried doubanjiang → soy + oyster + gochujang → Shaoxing wine → chicken bouillon → slow reduction. The result should be fiery, garlicky, savory, slightly oily and deeply concentrated, capturing the character of the Taiwan mince served on Nagoya-style Taiwan Ramen.'],
