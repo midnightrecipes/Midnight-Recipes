@@ -583,3 +583,41 @@ html,body{max-width:100%;overflow-x:hidden}
   .recipe-card .step-photos{margin-top:14px;}
   .recipe-card > .recipe-footer{margin-top:44px;}
 }
+
+/* Recipe readability refinement: compact detail groups without heading margins */
+.recipe-card .ingredient-file-group{
+  margin:0 0 30px;
+  max-width:72ch;
+}
+.recipe-card .ingredient-file-group:last-child{margin-bottom:0}
+.recipe-card .ingredient-file-name{
+  margin:0 0 8px;
+  font-size:17px;
+  font-weight:700;
+  line-height:1.45;
+}
+.recipe-card .ingredient-file-details p{
+  margin:0 0 6px;
+  font-size:17px;
+  line-height:1.7;
+}
+.recipe-card .ingredient-file-details p:last-child{margin-bottom:0}
+.recipe-card .ingredient-file-details strong{font-weight:700}
+.recipe-card .step-copy p{
+  margin:0 0 12px;
+  line-height:1.85;
+}
+.recipe-card .step-copy p:last-child{margin-bottom:0}
+.recipe-card .step-copy .step-note{margin-top:14px;font-weight:600}
+
+@media (max-width:720px){
+  .recipe-card .ingredient-file-group{margin-bottom:26px}
+  .recipe-card .ingredient-file-name{margin-bottom:7px;font-size:16px}
+  .recipe-card .ingredient-file-details p{margin-bottom:5px;font-size:16px;line-height:1.72}
+  .recipe-card .step-copy p{margin-bottom:10px;line-height:1.8}
+  .recipe-card .step-copy .step-note{margin-top:12px}
+}
+@media (max-width:430px){
+  .recipe-card .ingredient-file-group{margin-bottom:24px}
+  .recipe-card .step-copy p{margin-bottom:9px}
+}

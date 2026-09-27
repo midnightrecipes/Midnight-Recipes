@@ -34,14 +34,36 @@ window.MIDNIGHT_RECIPES = [
     ingredients:[
       {group:'Crust'},{amount:200,unit:'g',item:'Graham Crackers, finely crushed'},{amount:80,unit:'g',item:'Unsalted Butter, melted'},
       {group:'Chocolate Filling'},{amount:150,unit:'g',item:'Dark Chocolate, chopped'},{amount:1,unit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',item:'Unsweetened Cocoa Powder'},{amount:4,unit:'',item:'Egg Yolks'},{amount:80,unit:'g',item:'Sugar'},{amount:4,unit:'Tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',item:'Salt'},{amount:500,unit:'ml',item:'3.25% Milk'},{amount:20,unit:'g',item:'Unsalted Butter'},
-      {group:'Topping (optional)'},{amount:200,unit:'ml',item:'Whipped Cream'},{amount:2,unit:'Tbsp',item:'Sugar'},{amount:0,unit:'',item:'Cocoa powder, cacao nibs, or flaky sea salt, to finish'}
+      {group:'Topping (optional)'},{amount:200,unit:'ml',item:'Whipped Cream'},{amount:2,unit:'Tbsp',item:'Sugar'},{unit:'',item:'Cocoa powder, cacao nibs, or flaky sea salt, to finish'}
     ],
     stats:{prep:'15 mins',cook:'15 mins',chill:'4 hrs',total:'4 hrs 30 min',serves:'6–8',pan:'23 cm / 9 inch pie dish',quest:'⭐⭐⭐☆☆'},
     steps:[
-      {label:'01  CRUSH IT DOWN',clock:'12:14 AM',text:'Preheat your oven to 180°C (350°F).\n\nCrush 200g graham crackers finely.\n\nFood Processor (Fastest): Pulse for about 30 seconds.\n\nQuiet Mode (Silent): Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.\n\nAdd 80g melted butter and mix until the crumbs are evenly coated.\n\nPress the crumb mixture firmly into a 9-inch (23 cm) pie dish using the flat bottom of a cup.\n\nBake for 8–10 minutes.\n\nLet it cool.\n\nMidnight Shortcut: Skip baking and freeze the crust while you make the filling.',stepPhotos:[]},
-      {label:'02  MAKE IT GLOSSY',clock:'12:20 AM',text:'In a saucepan, whisk 80g sugar, 4 Tbsp cornstarch, 3 Tbsp cocoa powder, 1 tsp espresso powder, and a pinch of salt. Slowly pour in 500ml milk, whisking thoroughly until completely smooth before turning on the heat.\n\nCook over medium heat, whisking constantly until the mixture bubbles and thickens into a pudding-like consistency.\n\nRemove the pan from the heat.\n\nIn a separate bowl, whisk 4 egg yolks. Slowly whisk ½ cup of the hot chocolate cream into the yolks to warm them up, then pour the yolk mixture back into the pan.\n\nReturn to low heat for 1 minute, whisking constantly until thick and glossy.\n\nRemove from heat, then stir in 150g chopped dark chocolate and 20g butter until fully melted and smooth.',stepPhotos:[]},
-      {label:'03  POUR AND WAIT',clock:'12:35 AM',text:'Pour the warm chocolate filling into your chilled pie crust. Tap the pie dish gently on the counter 2–3 times to level the surface and release trapped air bubbles.\n\nRefrigerate for at least 4 hours. Overnight works best.',stepPhotos:[]},
-      {label:'04  WHIP IT LATE',clock:'Optional',text:'Whip 200ml cold cream to soft peaks. Gradually add 2 Tbsp sugar and whip until medium-firm peaks form.\n\nDollop generously over the chilled pie and finish with cocoa powder, cacao nibs, or flaky sea salt.',stepPhotos:[]}
+      {number:'01',title:'CRUSH IT DOWN',clock:'12:14 AM',paragraphs:[
+        'Preheat your oven to 180°C (350°F).',
+        'Crush 200g graham crackers finely.',
+        'Food Processor (Fastest): Pulse for about 30 seconds.',
+        'Quiet Mode (Silent): Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
+        'Add 80g melted butter and mix until the crumbs are evenly coated.',
+        'Press the crumb mixture firmly into a 9-inch (23 cm) pie dish using the flat bottom of a cup.',
+        'Bake for 8–10 minutes.',
+        'Let it cool.'
+      ],stepNote:'Midnight Shortcut: Skip baking and freeze the crust while you make the filling.',stepPhotos:[]},
+      {number:'02',title:'MAKE IT GLOSSY',clock:'12:20 AM',paragraphs:[
+        'In a saucepan, whisk 80g sugar, 4 Tbsp cornstarch, 3 Tbsp cocoa powder, 1 tsp espresso powder, and a pinch of salt. Slowly pour in 500ml milk, whisking thoroughly until completely smooth before turning on the heat.',
+        'Cook over medium heat, whisking constantly until the mixture bubbles and thickens into a pudding-like consistency.',
+        'Remove the pan from the heat.',
+        'In a separate bowl, whisk 4 egg yolks. Slowly whisk ½ cup of the hot chocolate cream into the yolks to warm them up, then pour the yolk mixture back into the pan.',
+        'Return to low heat for 1 minute, whisking constantly until thick and glossy.',
+        'Remove from heat, then stir in 150g chopped dark chocolate and 20g butter until fully melted and smooth.'
+      ],stepPhotos:[]},
+      {number:'03',title:'POUR AND WAIT',clock:'12:35 AM',paragraphs:[
+        'Pour the warm chocolate filling into your chilled pie crust. Tap the pie dish gently on the counter 2–3 times to level the surface and release trapped air bubbles.',
+        'Refrigerate for at least 4 hours. Overnight works best.'
+      ],stepPhotos:[]},
+      {number:'04',title:'WHIP IT LATE',clock:'Optional',paragraphs:[
+        'Whip 200ml cold cream to soft peaks. Gradually add 2 Tbsp sugar and whip until medium-firm peaks form.',
+        'Dollop generously over the chilled pie and finish with cocoa powder, cacao nibs, or flaky sea salt.'
+      ],stepPhotos:[]}
     ],
     notes:[['Recreating the Flavor','I use dark chocolate together with cocoa powder and a hint of espresso powder to take the filling beyond a simple cocoa base, creating a deeper and more layered chocolate flavor.'],['Midnight Shortcut','Chilling the crust in the freezer while preparing the filling saves time without adding another complicated step.'],['Midnight Compromises','If you are too exhausted to whisk by hand, store-bought whipped cream works perfectly well. Freshly whipped cream, however, gives a better texture and a prettier finish when you have a few extra minutes.']],
     finePrint:{'Best Eaten':'Tomorrow — the filling becomes firmer and the flavors settle overnight.','Make ahead':'Yes — up to 1 day ahead. Prepare the pie and add the whipped cream just before serving.','Storage':'Refrigerate, covered, for up to 3 days.','Freezer':'Not Recommended.','Reheat':'N/A — serve chilled.'},
