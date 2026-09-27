@@ -644,6 +644,9 @@ html,body{max-width:100%;overflow-x:hidden}
 .recipe-card .step-photos{
   grid-template-columns:repeat(3,minmax(0,1fr));
 }
+.recipe-card .step-photos.step-photos-1{grid-template-columns:minmax(0,1fr);}
+.recipe-card .step-photos.step-photos-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.recipe-card .step-photos.step-photos-3{grid-template-columns:repeat(3,minmax(0,1fr));}
 
 /* Cuisine groups are hierarchy labels, not emphasized links. */
 .menu .menu-group-title{
@@ -656,6 +659,12 @@ html,body{max-width:100%;overflow-x:hidden}
 }
 @media (max-width:720px){
   .recipe-card .step-photos{grid-template-columns:repeat(3,minmax(0,1fr));}
+  .recipe-card .step-photos.step-photos-1{grid-template-columns:1fr;}
+  .recipe-card .step-photos.step-photos-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .recipe-card .step-photos.step-photos-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+}
+@media (max-width:430px){
+  .recipe-card .step-photos.step-photos-3{grid-template-columns:repeat(2,minmax(0,1fr));}
 }
 
 /* Targeted instruction hierarchy: supporting notes sit one level below the main copy. */
