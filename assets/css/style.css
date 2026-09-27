@@ -988,3 +988,30 @@ html,body{max-width:100%;overflow-x:hidden}
   .recipe-card .step-copy .step-note{margin-left:12px;padding-left:8px;}
   .recipe-card .step-photos{gap:6px;margin-top:14px;}
 }
+
+
+/* v19 targeted fixes: Jump To Recipe belongs in the recipe header; Recipe Info is five fields only. */
+.recipe-card .recipe-jump-top{
+  margin:20px 0 0;
+}
+.recipe-card .recipe-jump-top .btn{
+  display:inline-block;
+  width:auto;
+  max-width:100%;
+  margin:0;
+  padding:8px 16px;
+  min-height:42px;
+  background:var(--mint);
+  border-color:var(--mint);
+  border-radius:999px;
+  font-size:16px;
+  line-height:1.25;
+}
+.recipe-card .recipe-action-row{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+@media (max-width:720px){
+  .recipe-card .recipe-jump-top{margin-top:16px;}
+  .recipe-card .recipe-jump-top .btn{font-size:15px;padding:8px 14px;}
+  .recipe-card .recipe-action-row{grid-template-columns:repeat(4,minmax(0,1fr));}
+}

@@ -177,6 +177,113 @@ window.MIDNIGHT_RECIPES = [
     mainIngredients:['Ground Pork','Garlic','Fresh Red Chili','Garlic Chives','Doubanjiang'],
     usualsCategory:''
   },
+
+  {
+    slug:'apple-creme-brulee',
+    title:'Apple Crème Brûlée',
+    source:'Movie & TV',
+    original:'Amélie (2001)',
+    dish:'Crème Brûlée',
+    cuisine:'French',
+    course:'Desserts',
+    meal:'Desserts',
+    categories:['Desserts'],
+    ingredientCategories:['Fruit'],
+    dateAdded:'2026-09-27',
+    timeStamp:'11:58 PM',
+    description:'Apple crème brûlée inspired by Amélie (2001), with soft tart apples beneath silky custard and brittle caramel.',
+    heroImage:'images/recipes/apple-creme-brulee/hero.jpg',
+    cardImage:'images/recipes/apple-creme-brulee/hero.jpg',
+    stepImages:[],
+    story:`What is the first thing that comes to mind when you hear crème brûlée?
+
+For me, it is the movie Amélie. She is a little awkward, but she knows exactly what she likes and dislikes, and she is good at finding happiness in the smallest things — plunging her fingers into a sack of dried beans, skipping stones across a canal, and, of course, cracking the caramelized top of a crème brûlée with the back of a teaspoon.
+
+Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples tucked underneath the silky custard, waiting quietly beneath that brittle layer of burnt sugar.`,
+    ingredientFile:[
+      {name:'APPLE',details:[
+        ['Origin','Central Asia / cultivated worldwide'],
+        ['Flavor','Sweet-tart, crisp, floral'],
+        ['Best variety for this recipe in Canada','Honeycrisp — sweet-tart, aromatic, and holds its shape well when cooked. Pink Lady is a good choice for a slightly more tart flavor.'],
+        ['Substitute','Pears or other firm fruit'],
+        ['Storage','Refrigerate for up to several weeks, depending on variety.']
+      ]},
+      {name:'WHOLE MILK',details:[
+        ['Ratio','400 ml 35% whipping cream + 100 ml whole milk'],
+        ['Why this ratio','Crème brûlée can be made with different cream-to-milk ratios, and each one changes the result. More cream makes the custard richer, heavier, and silkier, while more milk makes it lighter and less rich.']
+      ]},
+      {name:'35% WHIPPING CREAM',details:[
+        ['Ratio','400 ml 35% whipping cream + 100 ml whole milk'],
+        ['Why this ratio','Many recipes use 100% cream, but for this version, I wanted a little more balance. The apples already bring acidity and moisture, so keeping some milk in the custard gives it just enough lightness to complement the rich cream without making the dessert feel too heavy.']
+      ]}
+    ],
+    ingredients:[
+      {group:'Apple mixture'},
+      {amount:300,unit:'g',item:'apples, peeled, cored, and cut into 1 cm cubes'},
+      {amount:15,unit:'g',item:'unsalted butter'},
+      {amount:20,unit:'g',item:'brown sugar'},
+      {amount:15,unit:'ml',item:'lemon juice'},
+      {amount:0.5,unit:'tsp',item:'ground cinnamon'},
+      {unit:'',item:'Pinch fine salt'},
+      {group:'Custard'},
+      {amount:100,unit:'ml',item:'whole milk'},
+      {amount:400,unit:'ml',item:'35% whipping cream'},
+      {amount:5,unit:'',item:'large egg yolks'},
+      {amount:65,unit:'g',item:'granulated sugar'},
+      {amount:1,unit:'tsp',item:'vanilla extract'},
+      {unit:'',item:'Pinch fine salt'},
+      {group:'Brûlée'},
+      {unit:'',item:'25–35 g granulated sugar, for brûlée'}
+    ],
+    stats:{prep:'20 mins',cook:'35 mins',total:'55 mins + chilling',serves:6,quest:'⭐⭐⭐⭐⭐'},
+    steps:[
+      {number:'01',title:'PREHEAT & SOFTEN THE APPLES',clock:'11:20 PM',paragraphs:[
+        'Preheat oven to 140°C / 285°F.',
+        'Melt 15 g butter over medium heat.',
+        'Add 300 g apples, 20 g brown sugar, 15 g lemon juice, ½ tsp cinnamon, and a pinch of salt.',
+        'Cook for 5–7 minutes, until the apples are tender but still hold their shape.',
+        'If there is excess liquid, cook for another 1–2 minutes until glossy but not wet.',
+        'Cool slightly.'
+      ],stepPhotos:[]},
+      {number:'02',title:'MAKE THE CUSTARD',clock:'11:32 PM',paragraphs:[
+        'Heat 100 ml whole milk and 400 ml 35% whipping cream over medium-low heat until hot and steaming, but do not boil.',
+        'Whisk 5 egg yolks, 65 g sugar, and a pinch of salt gently. Avoid creating too much foam.',
+        'Slowly add the hot dairy while whisking.',
+        'Stir in 1 tsp vanilla extract.',
+        'Strain through a fine-mesh sieve.',
+        'Let the custard rest for 5–10 minutes, then skim off any foam.'
+      ],stepPhotos:['images/recipes/apple-creme-brulee/step02-1.jpg']},
+      {number:'03',title:'FILL',clock:'11:42 PM',paragraphs:[
+        'Divide the apples among 6 × 8.5 cm mini cocottes.',
+        'Pour the custard over the apples, almost to the top.'
+      ],stepPhotos:[]},
+      {number:'04',title:'WATER BATH & BAKE',clock:'11:45 PM',paragraphs:[
+        'Place the cocottes in a deep baking dish.',
+        'Add hot water until it reaches halfway up the sides of the cocottes.',
+        'Bake at 140°C / 285°F for 30–35 minutes.',
+        'The edges should be set while the centers still have a gentle, even wobble.',
+        'Carefully remove the cocottes from the water bath.',
+        'Cool, then refrigerate for at least 2 hours, preferably overnight.'
+      ],stepPhotos:['images/recipes/apple-creme-brulee/step04-1.jpg']},
+      {number:'05',title:'CRACK THE TOP',clock:'NEXT NIGHT',paragraphs:[
+        'Blot any moisture from the surface.',
+        'Sprinkle 25–35 g sugar evenly over the six custards in a thin layer.',
+        'Torch until deeply golden and glassy.',
+        'Let stand for 2–3 minutes.',
+        'Crack the caramelized top with the back of a spoon, like Amélie.'
+      ],stepPhotos:['images/recipes/apple-creme-brulee/step05-1.jpg']}
+    ],
+    notes:[
+      ['Keeping the Apples Distinct','Cooking the apples separately concentrates their flavor and removes excess moisture.'],
+      ['A Smooth Surface','Gentle mixing, straining, resting, and removing foam help create a smooth custard.'],
+      ["Don't Overbake",'The center should still wobble gently when it comes out of the oven. It will continue to set as it cools.']
+    ],
+    finePrint:{'Best eaten':'The day the sugar is caramelized.','Make ahead':'Yes.','Storage':'Keep the baked custard covered and refrigerated for up to 2 days. Caramelize the sugar just before serving.','Reheat':'Do not reheat. Serve chilled.'},
+    tags:['Dessert','French','Apples','CremeBrulee','Custard','Movie'],
+    mainIngredients:['Apples','Cream','Milk','Egg Yolks','Vanilla'],
+    usualsCategory:''
+  },
+
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
 window.MIDNIGHT_COURSES = ['Breakfast & Brunch','Appetizers','Snacks','Soups','Salads','Main Dishes','Sides','Baking','Desserts'];
