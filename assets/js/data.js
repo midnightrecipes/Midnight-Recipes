@@ -375,6 +375,94 @@ Basically, this pie is my answer to one very simple question:
     mainIngredients:['Banana','Milk','Egg Yolks','Biscuits'], footerRating:'★★★★★', footerInspiredBy:'Midnight Experiment', footerCuisine:'American', footerCourse:'Baking, Dessert', footerMainIngredients:['Banana','Milk','Egg Yolks','Biscuits']
   },
   {
+    slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese',
+    course:'Baking', courseDisplay:'Baking, Dessert', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Sweet Potato','Ginger','Cream','Cinnamon','Pie'], dateAdded:'2026-09-27', timeStamp:'11:35 PM',
+    tags:['Midnight Experiment','Dessert','Baking','Chinese','American','Sweet Potato','Ginger','Pie'], heroImage:'', recipeImage:'', cardImage:'', stepImages:[], usesUsual:'building-block-pie-crust',
+    story:`Inspired by traditional Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水), a simple sweet soup made by simmering sweet potatoes with fresh ginger and sugar in water.
+
+I love how naturally sweet potato and ginger work together—the earthy sweetness of the sweet potato balanced by the warm, peppery kick of fresh ginger. I thought that combination would be perfect in a pie.
+
+Instead of simply replacing pumpkin with sweet potato in a classic pumpkin pie, I wanted a warmer, spicier pie where fresh ginger could shine.
+
+The result is silky and creamy, with naturally sweet roasted sweet potato, warm cinnamon, and a gentle kick of fresh ginger.`,
+    ingredientFile:[
+      {name:'SWEET POTATOES',details:[['Origin','South America'],['Flavor','Naturally sweet, earthy, creamy'],['Substitute','Japanese or Korean sweet potato works, although it is denser and sweeter.'],['Storage','Store whole sweet potatoes in a cool, dry place. Once cooked, refrigerate in an airtight container for up to 3 days.']]},
+      {name:'FRESH GINGER',details:[['Origin','Southeast Asia'],['Flavor','Warm, peppery, citrusy, spicy'],['Substitute','1½ g ground ginger can replace 6 g fresh ginger, but fresh ginger gives a brighter flavor.'],['Storage','Refrigerate for several weeks or freeze and grate directly from frozen.']]},
+      {name:'10% CREAM',details:[['Origin','Canada'],['Flavor','Light, creamy, milky'],['Where to find','Canadian supermarkets'],['Substitute','Half-and-half works well. For a similar fat level, mix 70 g 2% milk + 30 g 35% cream.'],['Storage','Refrigerate after opening.']]}
+    ],
+    stats:{prep:'30 mins',cook:'1 hr 45 mins',chill:'2 hrs+',total:'4 hrs 15 mins+',serves:'8',quest:'⭐⭐⭐⭐☆'},
+    ingredients:[
+      {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
+      {group:'FILLING'},
+      {amount:400,unit:'g',item:'cooked sweet potato flesh'}, {amount:100,unit:'g',item:'10% cream'}, {amount:70,unit:'g',item:'white sugar'}, {amount:2,unit:'',item:'large eggs'}, {amount:6,unit:'g',item:'fresh ginger, finely grated'}, {amount:2.2,unit:'g',item:'ground cinnamon'}, {amount:2.5,unit:'g',item:'kosher salt'},
+      {group:'TOPPING'},
+      {amount:200,unit:'ml',item:'35% whipping cream'}, {amount:2,unit:'Tbsp',item:'white sugar'}, {unit:'',item:'Cinnamon, for finishing'}
+    ],
+    steps:[
+      {number:'01',title:'COOK THE SWEET POTATO',clock:'11:35 PM',paragraphs:[
+        'For the best flavor, roast whole sweet potatoes at 205°C / 400°F for 45–60 minutes, until completely soft.',
+        'While they roast, start the crust.',
+        'Let the sweet potatoes cool enough to handle, peel, and weigh 400 g of flesh.',
+        'Midnight Shortcut — Microwave',
+        'Peel and cut the sweet potato into chunks. Place in a microwave-safe bowl with a small splash of water and cover.',
+        'Microwave until completely soft, turning halfway through. Drain any excess water, let cool, and weigh 400 g.',
+        'Midnight Shortcut — Boil',
+        'Peel and cut the sweet potato into chunks. Simmer in water for 15–20 minutes, until fork-tender.',
+        'Drain well and let it steam-dry for a few minutes before weighing 400 g.'
+      ],stepPhotos:[]},
+      {number:'02',title:'MAKE THE CRUST',clock:'11:45 PM',paragraphs:[
+        'While the sweet potatoes are roasting… start making Building Block Pie Crust.',
+        'Midnight Shortcut',
+        'Use a good-quality store-bought pie crust. Tonight is about the filling.'
+      ],stepPhotos:[]},
+      {number:'03',title:'BLIND BAKE',clock:'12:00 AM',paragraphs:[
+        'Prick the bottom lightly with a fork.',
+        'Line with parchment and add pie weights.',
+        'Bake at 175°C / 350°F for 15 minutes.',
+        'Remove the weights and bake for another 5–7 minutes, until lightly golden.'
+      ],stepPhotos:[]},
+      {number:'04',title:'BLEND THE FILLING',clock:'12:25 AM',paragraphs:[
+        'Once the sweet potato is cooked and cool enough to handle, weigh 400 g.',
+        'Finely grate 6 g ginger.',
+        'Combine 400 g sweet potato, 100 g 10% cream, 70 g white sugar, 2 large eggs, 6 g fresh ginger, 2.2 g ground cinnamon, and 2.5 g kosher salt.',
+        'Food Processor — Fastest',
+        'Blend the sweet potato until completely smooth.',
+        'Add all remaining filling ingredients and blend briefly until silky.',
+        'Quiet Mode — Silent',
+        'Mash the sweet potato thoroughly.',
+        'Add all remaining filling ingredients and blend directly in the bowl with a hand blender until completely smooth.'
+      ],stepPhotos:[]},
+      {number:'05',title:'BAKE',clock:'12:30 AM',paragraphs:[
+        'Pour the filling into the blind-baked crust.',
+        'Bake at 175°C / 350°F for 40–50 minutes.',
+        'The edges should be set and the centre should still have a slight wobble.',
+        'Remove from the oven and cool completely at room temperature.',
+        'The filling will continue to set as it cools.'
+      ],stepPhotos:[]},
+      {number:'06',title:'CHILL & FINISH',clock:'1:20 AM',paragraphs:[
+        'Let the pie cool completely before refrigerating. This should take about 45–60 minutes.',
+        'Once cooled:',
+        'Refrigerate for at least 2 hours, preferably overnight.',
+        'Whip 200 ml cold whipping cream to soft peaks.',
+        'Gradually add 2 tbsp sugar and continue whipping until medium-firm peaks form.',
+        'Keep the whipped cream refrigerated until serving.',
+        'Slice the chilled pie and top with whipped cream.',
+        'Finish with a light dusting of cinnamon.'
+      ],stepPhotos:[]}
+    ],
+    notes:[
+      ['Recreating the Flavor',`Fresh ginger is the signature. It gives the pie the warm, peppery character inspired by 番薯姜糖水.
+Roasting gives the deepest flavor. It removes excess moisture and concentrates the natural sweetness of the sweet potato.
+Keep the spices simple. There is no nutmeg, cloves, cardamom, or vanilla. Cinnamon supports the ginger instead of turning this into a classic pumpkin-spice pie.
+Don\'t over-sweeten it. The sweet potato provides natural sweetness, while the whipped cream adds another layer of sweetness.`],
+      ['Midnight Compromises',`No time to roast? Microwave or boil the sweet potato instead.
+Making this at midnight? The filling can be made in one blender or with one hand blender—no separate egg mixture and no extra bowl.
+If you use boiled or microwaved sweet potato, let it steam-dry well before weighing. Too much moisture will make the filling softer.`]
+    ],
+    finePrint:{'Best eaten':'The next day, fully chilled','Make ahead':'Yes','Storage':'Cover and refrigerate for up to 3 days','Reheat':'Best served chilled or slightly cool. If you prefer it warm, gently warm individual slices in a low oven.','Best flavor':'After an overnight rest, when the ginger, sweet potato, and cinnamon have had time to come together.'},
+    mainIngredients:['Sweet Potato','Ginger','Cream','Cinnamon'], footerInspiredBy:'Traditional', footerCuisine:'Chinese · American', footerCourse:'Dessert', footerMainIngredients:['Sweet Potato','Ginger','Cream','Cinnamon']
+  },
+  {
     slug:'building-block-pie-crust', title:'Building Block Pie Crust', source:'The Usuals', cuisine:'American', course:'Baking', courseDisplay:'Baking', meal:'Baking', categories:['Baking'], ingredientCategories:['Pie'], dateAdded:'2026-09-27', timeStamp:'',
     isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...',
     description:'The crust we make when a pie calls for a crust.',
@@ -424,7 +512,7 @@ window.MIDNIGHT_CUISINES = {
   'Central & South America':['Brazilian','Peruvian','Colombian','Argentinian'],
   'Oceania':['Australian','New Zealand']
 };
-window.MIDNIGHT_INGREDIENTS = ['Chicken','Beef','Pork','Fish & Seafood','Vegetable','Potatoes','Rice','Noodles','Eggs','Cheese','Fruit','Pantry','Herbs & Spices','Chocolate','Pie'];
+window.MIDNIGHT_INGREDIENTS = ['Chicken','Beef','Pork','Fish & Seafood','Vegetable','Potatoes','Sweet Potato','Rice','Noodles','Eggs','Cheese','Fruit','Pantry','Herbs & Spices','Ginger','Cream','Cinnamon','Chocolate','Pie'];
 window.MIDNIGHT_MEALS = window.MIDNIGHT_COURSES;
 
 window.MIDNIGHT_USUALS_CATEGORIES = ['SAUCES & DRESSINGS','BASES & CRUSTS','TOPPINGS & EXTRAS','SWEET STAPLES','FROZEN','MAYBE MORE…'];
