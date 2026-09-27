@@ -284,6 +284,43 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
     usualsCategory:''
   },
 
+  {
+    slug:'building-block-pie-crust', title:'Building Block Pie Crust', source:'The Usuals', cuisine:'American', course:'Baking', courseDisplay:'Baking', meal:'Baking', categories:['Baking'], ingredientCategories:['Pie'], dateAdded:'2026-09-27', timeStamp:'',
+    isUsuals:true, usualsCategory:'BASES & CRUSTS',
+    description:'The crust we make when a pie calls for a crust.',
+    usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\n\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
+    heroImage:'', cardImage:'', stepImages:[],
+    ingredientFile:[],
+    ingredients:[
+      {amount:180,unit:'g',imperialAmount:6.35,imperialUnit:'oz',item:'All-Purpose Flour'},
+      {amount:100,unit:'g',imperialAmount:3.53,imperialUnit:'oz',item:'Cold Unsalted Butter, cubed'},
+      {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
+      {minAmount:3,maxAmount:4,unit:'Tbsp',imperialMinAmount:3,imperialMaxAmount:4,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',item:'Ice Water'},
+    ],
+    stats:{prep:'15 mins',cook:'15 mins',total:'30 mins',serves:'8',pan:'23 cm / 9-inch pie dish',quest:'⭐⭐⭐⭐☆'},
+    steps:[
+      {number:'01',title:'MAKE THE CRUST',clock:'',paragraphs:[
+        'Mix 180 g flour, 100 g cold butter, and ½ tsp salt until coarse crumbs form.',
+        'Add 3–4 tbsp ice water gradually, just until the dough comes together.',
+        '**Lightly flour your hands**, then press the dough evenly into the pie dish.',
+        'Chill for 10 minutes if the butter feels soft.'
+      ],stepNote:'**Midnight Shortcuts:** food processor'},
+      {number:'02',title:'BLIND-BAKE',clock:'',paragraphs:[
+        'Prick the bottom lightly with a fork.',
+        'Line with parchment and add pie weights.',
+        'Bake at 190°C / 375°F for 15 minutes.',
+        'Remove the weights and bake for another 5–7 minutes, until light golden.'
+      ]}
+    ],
+    notes:[
+      ['The Golden Rule — Blind-Bake','For wet fillings, blind-baking helps keep the bottom from getting soggy. Take the crust only to light golden at this stage; it will continue browning when the filled pie goes back into the oven.'],
+      ['Glass Pie Dish','Glass heats more gently than metal, so give the crust enough time to dry and lightly brown. Avoid over-browning during the blind-bake.'],
+      ['Midnight Compromise','No rolling pin, pastry board, or complicated pastry work. Press the dough directly into the pie dish, and everything stays contained and easy to clean up.']
+    ],
+    foundIn:['Classic Pumpkin Pie','Sweet Potato Ginger Pie','Mexican (Calabaza en Tacha) Pumpkin Pie'],
+    tags:['The Usuals','Bases & Crusts','Pie'], mainIngredients:['Flour','Butter','Salt','Pie']
+  },
+
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
 window.MIDNIGHT_COURSES = ['Breakfast & Brunch','Appetizers','Snacks','Soups','Salads','Main Dishes','Sides','Baking','Desserts'];

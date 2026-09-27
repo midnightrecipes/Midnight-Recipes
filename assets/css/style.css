@@ -1015,3 +1015,14 @@ html,body{max-width:100%;overflow-x:hidden}
   .recipe-card .recipe-jump-top .btn{font-size:15px;padding:8px 14px;}
   .recipe-card .recipe-action-row{grid-template-columns:repeat(4,minmax(0,1fr));}
 }
+
+/* v20 — The Usuals recipe additions */
+.recipe-card .usual-intro{margin-top:42px}
+.recipe-card .usual-intro .body-copy{margin:0 0 18px}
+.recipe-card .usual-intro .body-copy:last-child{margin-bottom:0}
+.recipe-card .found-in .body-copy a,
+.recipe-card .found-in .body-copy span{line-height:2}
+.recipe-card .found-in .body-copy a{text-decoration:underline}
+@media(max-width:720px){
+  .recipe-card .usual-intro{margin-top:30px}
+}
