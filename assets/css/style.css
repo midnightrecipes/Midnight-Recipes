@@ -784,3 +784,38 @@ html,body{max-width:100%;overflow-x:hidden}
 .tile .source-name{font-weight:700}
 .tile .source-latest,
 .tile .source-latest a{font-weight:400;text-decoration:none!important}
+
+
+/* v17.1 targeted fixes — preserve the existing visual system. */
+@media (max-width:720px){
+  .header{grid-template-columns:56px minmax(0,1fr) 56px;padding:0 10px;}
+  .header .logo{display:block;width:100%;min-width:0;max-width:none;overflow:visible;text-overflow:clip;white-space:nowrap;text-align:center;font-size:clamp(18px,6.2vw,24px);letter-spacing:0;}
+  .header .icons{gap:0;}
+}
+
+/* Ingredient File: use the available recipe-column width rather than a narrow legacy item width. */
+.recipe-card .ingredient-file{width:100%;max-width:none;}
+.recipe-card .ingredient-file-group{max-width:none;width:100%;}
+.recipe-card .ingredient-file-details{max-width:none;width:100%;}
+.recipe-card .ingredient-file-details p{max-width:none;overflow-wrap:normal;word-break:normal;}
+
+/* The five recipe utility controls use the site's mint accent with compact padding. */
+.recipe-card .rtop .btn,
+.recipe-card #cookOpen,
+.recipe-card #shareRecipe,
+.recipe-card #printRecipe,
+.recipe-card #saveRecipe{
+  background:var(--mint);border-color:var(--mint);padding:9px 16px;
+}
+.recipe-card .rtop .btn:hover,
+.recipe-card #cookOpen:hover,
+.recipe-card #shareRecipe:hover,
+.recipe-card #printRecipe:hover,
+.recipe-card #saveRecipe:hover{background:var(--mint);border-color:var(--mint);}
+@media (max-width:720px){
+  .recipe-card .rtop .btn,
+  .recipe-card #cookOpen,
+  .recipe-card #shareRecipe,
+  .recipe-card #printRecipe,
+  .recipe-card #saveRecipe{padding:8px 14px;}
+}
