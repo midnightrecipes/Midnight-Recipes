@@ -1,4 +1,11 @@
 /* MIDNIGHT RECIPES — single source of truth for all recipe pages */
+window.MIDNIGHT_SITE = {
+  aboutImages: {
+    aboutMe: 'images/about/about-me.jpg',
+    aboutRecipes: 'images/about/about-midnight-recipes.jpg'
+  }
+};
+
 window.MIDNIGHT_RECIPES = [
   {
     slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE AND JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Chocolate','Pie'], dateAdded:'2026-09-26', timeStamp:'12:14 AM',

@@ -678,3 +678,25 @@ html,body{max-width:100%;overflow-x:hidden}
   padding-bottom:9px;
   margin:0;
 }
+
+/* Targeted fixes: keep the existing header design while ensuring the full site title fits on mobile. */
+.header .logo{white-space:nowrap;overflow:visible;text-overflow:clip;min-width:0;flex:1 1 auto;text-align:center}
+.header .icons{flex:0 0 auto}
+@media (max-width:430px){
+  .header .logo{font-size:20px;max-width:none;letter-spacing:.02em}
+}
+
+/* Ingredient File cross-links. */
+.ingredient-info{display:inline-block;margin-left:6px;text-decoration:none!important;font-weight:400}
+.ingredient-file-link{margin-top:10px!important;font-size:14px!important;opacity:.7}
+.ingredient-file-link a{text-decoration:none}
+.ingredient-file-group{scroll-margin-top:90px}
+
+/* About photos are optional: missing files remove their frame rather than showing a broken image. */
+.about-photo{width:min(100%,720px);aspect-ratio:16/10;margin:0 0 28px;overflow:hidden;background:rgba(21,27,31,.08)}
+.about-photo .photo{width:100%;height:100%;object-fit:cover}
+@media (max-width:720px){.about-photo{width:100%;aspect-ratio:4/3;margin-bottom:22px}}
+
+/* Source hierarchy: source labels are bold; recipe titles remain regular and un-underlined. */
+.source-name{font-weight:700}
+.source-latest a,.source-name{text-decoration:none!important}
