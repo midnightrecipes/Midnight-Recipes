@@ -1065,3 +1065,76 @@ html,body{max-width:100%;overflow-x:hidden}
     gap:8px;
   }
 }
+
+
+/* v27 targeted fixes — keep existing design while centering Cook Mode controls and tightening note copy. */
+.recipe-card .recipe-action-row{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  width:100%;
+}
+.recipe-card .recipe-action-row .btn{
+  flex:0 1 150px;
+}
+.recipe-card .notes-list{
+  line-height:1.85;
+}
+.recipe-card .notes-list .note-item{
+  margin:0 0 28px;
+  padding:0;
+}
+.recipe-card .notes-list .note-item:last-child{margin-bottom:0;}
+.recipe-card .notes-list .note-title{
+  margin:0 0 12px;
+  line-height:1.5;
+}
+.recipe-card .notes-list .note-body{
+  margin:0;
+  line-height:1.85;
+}
+.recipe-card .notes-list .note-body br{line-height:1.85;}
+.recipe-card .usual-reference{
+  display:block;
+  margin-top:8px;
+  font-weight:400;
+  line-height:1.6;
+}
+.recipe-card .usual-reference a{text-decoration:underline;}
+.recipe-card .found-in-list a{text-decoration:underline;}
+.home-about-photo{
+  width:100%;
+  aspect-ratio:1 / 1;
+  overflow:hidden;
+  background:rgba(21,27,31,.08);
+}
+.home-about-photo .photo{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+@media (max-width:720px){
+  .recipe-card .recipe-action-row{gap:7px;}
+  .recipe-card .recipe-action-row .btn{flex:1 1 120px;}
+  .recipe-card .notes-list .note-item{margin-bottom:24px;}
+  .recipe-card .notes-list .note-title{margin-bottom:10px;}
+}
+
+
+/* v28 targeted refinements: center the recipe utility row in the viewport on every screen width. */
+.recipe-card .recipe-action-row{
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.recipe-card .notes-list .note-body{
+  margin:0;
+  line-height:1.85;
+}
+.recipe-card .notes-list .note-body br{line-height:inherit;}

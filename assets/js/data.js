@@ -299,7 +299,7 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
     ],
     stats:{prep:'25 mins',cook:'55–65 mins',total:'1 hr 30 mins',serves:'8',pan:'23 cm / 9-inch pie dish',quest:'⭐⭐⭐⭐☆'},
     ingredients:[
-      {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'One of our usuals: Building Block Pie Crust'},
+      {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
       {group:'CALABAZA FILLING'},
       {amount:400,unit:'g',item:'pumpkin purée'}, {amount:2,unit:'large',item:'eggs'}, {amount:180,unit:'ml',item:'Half & Half / 10% cream'},
       {amount:60,unit:'g',item:'dark brown sugar'}, {amount:10,unit:'g',item:'molasses'}, {amount:15,unit:'ml',item:'orange juice'}, {amount:0.25,unit:'tsp',item:'salt'},
@@ -367,7 +367,7 @@ Basically, this pie is my answer to one very simple question:
     notes:[
       ['Midnight (Non)Compromises','Even in the middle of the night, concentrating the bananas is a non-negotiable.\n\nThose nearly black bananas are already packed with natural sweetness, so instead of adding more sugar, I cook them down in a skillet until their moisture evaporates and their natural sugars become concentrated.'],
       ['Experiment 1: The Banana Shape','Putting whole round banana slices in the pie made the banana presence too overwhelming.\n\nThe slices took over each bite and made the texture feel repetitive.\n\nCutting the fresh bananas **in half lengthwise** solved that problem.\n\nThe larger pieces create a clean cross-section while giving the pie a firm, juicy banana texture that contrasts with the smooth filling.'],
-      ['Experiment 2: Concentrating the Banana','Simply mashing overripe bananas into the custard didn\'t give the banana flavor enough intensity.\n\nCooking the **banana** in a skillet first changed everything.\n\nThe excess moisture cooks away, the natural sugars become concentrated, and the banana develops a deeper, almost caramel-like flavor.'],
+      ['Experiment 2: Concentrating the Banana','Simply mashing overripe bananas into the custard didn\'t give the banana flavor enough intensity.\n\nCooking the banana in a skillet first changed everything.\n\nThe excess moisture cooks away, the natural sugars become concentrated, and the banana develops a deeper, almost caramel-like flavor.'],
       ['Experiment 3: Blend it All Together','I originally considered keeping the banana and vanilla custards separate, but that meant making two different layers and adding extra steps.\n\nInstead, I decided to blend the concentrated banana directly into the finished custard.\n\nThe food processor turns everything into a completely smooth, silky banana cream while keeping the process simple.\n\nThe result is a filling that tastes intensely of banana from the first bite to the last.'],
       ['The Result','The final pie has a simple but satisfying contrast.\n\nThe fresh banana gives it texture, the concentrated banana brings depth, and the whipped cream adds a light finish.\n\nMost importantly, the banana isn\'t just sitting somewhere underneath the custard.\n\n**The banana is the custard!**']
     ],
@@ -376,7 +376,7 @@ Basically, this pie is my answer to one very simple question:
   },
   {
     slug:'building-block-pie-crust', title:'Building Block Pie Crust', source:'The Usuals', cuisine:'American', course:'Baking', courseDisplay:'Baking', meal:'Baking', categories:['Baking'], ingredientCategories:['Pie'], dateAdded:'2026-09-27', timeStamp:'',
-    isUsuals:true, usualsCategory:'BASES & CRUSTS',
+    isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...',
     description:'The crust we make when a pie calls for a crust.',
     usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
     heroImage:'', cardImage:'', stepImages:[],
