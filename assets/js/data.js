@@ -1,24 +1,6 @@
 /* MIDNIGHT RECIPES — single source of truth for all recipe pages */
 window.MIDNIGHT_RECIPES = [
   {
-    slug:'chocolate-pie', title:'Chocolate pie', source:'Restaurant', cuisine:'American', course:'Desserts', meal:'Dessert',
-    categories:['Desserts'], ingredientCategories:['Pantry','Eggs','Cheese'], dateAdded:'2026-09-25', timeStamp:'12:38 AM',
-    description:'A midnight recreation of a chocolate cream pie inspired by a restaurant dessert counter and Julie & Julia.',
-    heroImage:'images/recipes/chocolate-pie-hero.jpg', cardImage:'images/recipes/chocolate-pie-card.jpg', stepImages:[],
-    story:"I started noticing something about Toronto's dessert scene — every diner counter had a pie under glass, and none of them tasted like the one I remembered from the movie. So I went home and made it at 12:38 in the morning.",
-    ingredientFile:{'Ingredient':'Plain skyr','Origin / Why':'Used here for a tangy, creamy filling with a lighter texture.','Best choice':'Plain, unsweetened skyr with a thick consistency.','Substitute':'Greek yogurt or cream cheese, depending on the texture you want.','Midnight fix':'Use what is already in the fridge rather than making a late-night grocery run.'},
-    ingredients:[{amount:300,unit:'g',item:'plain skyr'},{amount:40,unit:'g',item:'sweetened condensed milk'},{group:'Optional finish'},{amount:50,unit:'ml',item:'heavy cream'},{amount:1,unit:'tsp',item:'icing sugar'}],
-    stats:{prep:'20 mins',cook:'20 mins',total:'40 mins',serves:2,quest:'★★★☆☆'},
-    steps:[
-      {label:'01  SLICE',clock:'12:45 AM',text:'Seal 300 g of biscuits in a bag and crush them with a rolling pin until no large pieces remain.',stepPhotos:[],photos:[]},
-      {label:'02  MIX',clock:'12:52 AM',text:'Fold 40 g of sweetened condensed milk into 300 g of plain skyr until the mixture holds a ribbon.',stepPhotos:[],photos:[]},
-      {label:'03  CHILL',clock:'1:10 AM',text:'Rest in the fridge for at least two hours. Overnight is better, if you can wait that long.',stepPhotos:[],photos:[]}
-    ],
-    notes:[['Recreating the flavor','Plain skyr instead of cream cheese keeps the tang of the original filling, folded with condensed milk for sweetness.'],['Midnight compromises','Store-bought graham crust — it was already past midnight, no time to bake one.']],
-    finePrint:{'Best eaten':'Next day, once fully chilled','Make ahead':'Yes','Storage':'Airtight container in the fridge, up to 3 days','Reheat':'N/A — served cold'},
-    tags:['Desserts','Chocolate','Pie','Baking','American'], mainIngredients:['Chocolate','Cream','Graham cracker'], usualsCategory:'BASES & CRUSTS'
-  },
-  {
     slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE AND JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Chocolate','Pie'], dateAdded:'2026-09-26', timeStamp:'12:14 AM',
     description:'A late-night chocolate cream pie inspired by Julie & Julia (2009).',
     heroImage:'images/recipes/chocolate-cream-comfort-pie-hero.jpg', cardImage:'images/recipes/chocolate-cream-comfort-pie-hero.jpg', stepImages:[],
@@ -85,19 +67,103 @@ window.MIDNIGHT_RECIPES = [
     finePrint:{'Best Eaten':'Tomorrow — the filling becomes firmer and the flavors settle overnight.','Make ahead':'Yes — up to 1 day ahead. Prepare the pie and add the whipped cream just before serving.','Storage':'Refrigerate, covered, for up to 3 days.','Freezer':'Not Recommended.','Reheat':'N/A — serve chilled.'},
     tags:['Movie & TV','Baking','Desserts','American','Chocolate','Pie'], mainIngredients:['Chocolate','Pie'], usualsCategory:''
   },
+
   {
-    slug:'banana-pudding', title:'Banana pudding', source:'Grocery Store Find', cuisine:'American', course:'Desserts', meal:'Dessert', categories:['Desserts'], ingredientCategories:['Fruit','Pantry'], dateAdded:'2026-09-24', timeStamp:'11:58 PM',
-    description:'A simple banana pudding built from an easy grocery-store haul.', heroImage:'images/recipes/banana-pudding-hero.jpg', cardImage:'images/recipes/banana-pudding-card.jpg', stepImages:[],
-    story:'A grocery-store dessert for the nights when the easiest ingredients are the ones worth making.',
-    ingredientFile:{'Ingredient':'Bananas','Best choice':'Yellow bananas with a little give but no bruised spots.','Substitute':'Plantain is not a direct substitute; use another soft, ripe fruit instead.','Midnight fix':'Use the ripest bananas first and chill the pudding before serving.'},
-    ingredients:[{amount:4,unit:'',item:'ripe bananas'},{amount:500,unit:'ml',item:'vanilla pudding'},{amount:150,unit:'g',item:'vanilla wafers'}],
-    stats:{prep:'15 mins',cook:'0 mins',total:'15 mins',serves:4,quest:'★★☆☆☆'},
-    steps:[
-      {label:'01  LAYER',clock:'11:58 PM',text:'Layer wafers, sliced bananas, and pudding in a serving dish.',stepPhotos:[],photos:[]},
-      {label:'02  CHILL',clock:'12:10 AM',text:'Chill until the wafers soften slightly and the pudding is cold.',stepPhotos:[],photos:[]}
+    slug:'addictive-spicy-taiwan-ground-pork',
+    title:'Addictive Spicy Taiwan Ground Pork',
+    source:'Restaurant',
+    original:'Misen 味仙, Nagoya, Japan',
+    dish:'Taiwan Ramen — Taiwan Mince',
+    cuisine:'Japanese',
+    course:'Main Dishes',
+    meal:'Main Dishes',
+    categories:['Main Dishes'],
+    ingredientCategories:['Pork'],
+    dateAdded:'2026-09-27',
+    timeStamp:'11:44 PM',
+    description:'A fiery Nagoya-inspired Taiwan mince served over rice with a soft-boiled egg.',
+    heroImage:'images/recipes/addictive-spicy-taiwan-ground-pork-hero.jpg',
+    cardImage:'images/recipes/addictive-spicy-taiwan-ground-pork-hero.jpg',
+    stepImages:[],
+    story:`Taiwan Ramen (台湾ラーメン) at Misen (味仙) is famous in my hometown, Nagoya, Japan. Despite its name, this fiery ramen isn’t actually from Taiwan—the founder named it “Taiwan Ramen” after his own Taiwanese roots. It is one of Nagoya’s local food that evolved entirely in Japan, and this intensely spicy, strangely addictive flavor is so irresistible that I found myself going back to the restaurant again on my last trip home.\n\nTonight, I’m making the **Taiwan ground pork the star of the dish**, serving it over rice with a soft-boiled egg instead of its original ramen noodles. It might be so spicy that I end up staying awake all night.`,
+    ingredientFile:[
+      {name:'GROUND PORK',details:[['Flavor','Rich, savory, fatty'],['Substitute','Ground chicken or turkey, although fatty pork gives the closest result']]},
+      {name:'FRESH RED CHILI',details:[['Origin','East & Southeast Asia'],['Flavor','Fresh, sharp, bright heat'],['Substitute','Dried Thai chili or red chili flakes'],['Storage','Refrigerate loosely wrapped.'],['強烈な旨辛さを引き出すために','たっぷりの唐辛子とニンニクがこのレシピでは重要！']]},
+      {name:'GARLIC',details:[['Flavor','Fresh, garlicky, slightly sweet'],['Where to find','Chinese and Asian grocery stores'],['強烈な旨辛さを引き出すために','たっぷりの唐辛子とニンニクがこのレシピでは重要！']]},
+      {name:'DOUBANJIANG',details:[['Origin','China'],['Flavor','Fermented, salty, savory, deeply spicy'],['Where to find','Chinese and Asian grocery stores'],['Substitute','Chili bean paste or, in a pinch, a combination of chili paste and a little miso']]}
     ],
-    notes:[['Texture','The longer it rests, the softer the wafers become.']], finePrint:{'Best eaten':'Same day','Make ahead':'Yes','Storage':'Covered in the fridge, up to 2 days'}, tags:['Desserts','Baking','American'], mainIngredients:['Banana','Vanilla']
-  }
+    ingredients:[
+      {group:'Taiwan Mince'},
+      {amount:500,unit:'g',item:'fatty ground pork'},
+      {amount:20,unit:'g',item:'garlic, finely minced'},
+      {amount:3,unit:'',item:'fresh red chilies, finely minced, seeds included'},
+      {amount:45,unit:'ml',item:'sesame oil'},
+      {amount:30,unit:'ml',item:'soy sauce'},
+      {amount:30,unit:'ml',item:'Shaoxing wine'},
+      {amount:15,unit:'ml',item:'doubanjiang'},
+      {amount:10,unit:'ml',item:'oyster sauce'},
+      {amount:10,unit:'ml',item:'gochujang'},
+      {amount:2.5,unit:'ml',item:'sugar'},
+      {amount:5,unit:'ml',item:'chicken bouillon powder'},
+      {amount:180,unit:'ml',item:'water'},
+      {unit:'',item:'Black pepper, to taste'},
+      {amount:50,unit:'g',item:'garlic chives or green onion, cut into 3–4 cm pieces'},
+      {amount:0.5,unit:'tsp',item:'sesame oil, for finishing'},
+      {group:'To Serve'},
+      {unit:'',item:'Hot steamed white rice'},
+      {unit:'',item:'Soft-boiled egg'}
+    ],
+    stats:{prep:'10 mins',cook:'20 mins',total:'30 mins',serves:4,quest:'⭐⭐⭐☆☆'},
+    steps:[
+      {number:'01',title:'BUILD THE CHILI-GARLIC OIL',clock:'11:14 PM',paragraphs:[
+        'Add 3 tbsp sesame oil, 20 g minced garlic, and 3–5 finely minced fresh red chilies to a cold frying pan.',
+        'Turn the heat to low and gently cook for 1–2 minutes.',
+        'Keep the garlic pale. You want the oil infused with garlic and chili, not burnt garlic.'
+      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork-step01-1.jpg']},
+      {number:'02',title:'COOK THE PORK',clock:'11:17 PM',paragraphs:[
+        'Increase the heat to medium-high and add 500 g ground pork.',
+        'Let the pork sit against the pan briefly so it develops some browned edges.',
+        'Break it apart and continue cooking until deeply browned and the pork fat has rendered.',
+        'Push the pork toward one side of the pan.',
+        'Add 1 tbsp doubanjiang to the exposed oil.',
+        'Fry the doubanjiang for 30–45 seconds, then mix it thoroughly into the pork.',
+        'This is the key step: frying the doubanjiang directly in the rendered pork fat brings out its fermented, spicy aroma and gives the mince a deeper flavor.'
+      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork-step02-1.jpg']},
+      {number:'03',title:'BRAISE & REDUCE',clock:'11:22 PM',paragraphs:[
+        'Add 2 tbsp Shaoxing wine and let it bubble for about 30 seconds.',
+        'Add 2 tbsp soy sauce, 2 tsp oyster sauce, 2 tsp gochujang, ½ tsp sugar, 1 tsp chicken bouillon powder, and 180 ml water.',
+        'Stir everything together and bring to a simmer.',
+        'Reduce the heat to low and simmer uncovered for 10–15 minutes.',
+        'The liquid will gradually penetrate the pork while the sauce becomes concentrated.',
+        'Once most of the liquid has been absorbed, increase the heat to medium-high and cook for another 2–4 minutes.',
+        'Do not completely dry out the mince.',
+        'The finished meat should be deeply colored, glossy and intensely savory, with a small amount of concentrated sauce and pork fat still coating the pan.'
+      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork-step03-1.jpg']},
+      {number:'04',title:'FINISH WITH GARLIC CHIVES',clock:'11:34 PM',paragraphs:[
+        'Add 50–60 g garlic chives.',
+        'Toss over medium heat for 30–45 seconds.',
+        'Turn off the heat.',
+        'Add ½–1 tsp sesame oil.',
+        'Finish with a tiny pinch of sansho or Sichuan pepper, if using.',
+        'Taste before adding salt—the soy sauce, doubanjiang, oyster sauce and bouillon already provide plenty of seasoning.'
+      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork-step04-1.jpg']},
+      {number:'05',title:'PLATE',clock:'11:37 PM',paragraphs:[
+        'Spoon hot steamed white rice into a shallow bowl.',
+        'Pile the Taiwan mince generously over the rice.',
+        'Make sure some of the concentrated sauce drips down into the rice.',
+        'Top with a crispy-edged fried egg with a runny yolk.'
+      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork-step05-1.jpg']}
+    ],
+    notes:[
+      ['Recreating the Flavor','The goal isn’t simply to make spicy ground pork. The flavor builds in layers: sesame oil + garlic + fresh chili → browned pork fat → fried doubanjiang → soy + oyster + gochujang → Shaoxing wine → chicken bouillon → slow reduction. The result should be fiery, garlicky, savory, slightly oily and deeply concentrated, capturing the character of the Taiwan mince served on Nagoya-style Taiwan Ramen.'],
+      ['The Fresh Chili Trick','Fresh red chili replaces the dried chili traditionally used in many versions of Taiwan mince. Finely chopping the chili with the seeds and membrane distributes the heat throughout the meat rather than giving you occasional bites of whole chili.'],
+      ['Why the Sauce Is Deliberately Generous','This version is designed specifically for rice. The mince shouldn’t be dry like ordinary soboro. It should sit somewhere between a stir-fried mince and a braised mince, with enough concentrated sauce to soak into the rice. The rice is supposed to get spicy, too.']
+    ],
+    finePrint:{'Best Eaten':'Fresh','Make ahead':'Yes','Storage':'Airtight container in the refrigerator for up to 3 days','Reheat':'Microwave or stovetop; add a splash of water if the mince becomes too dry','Freezer':'Freeze the Taiwan mince for up to 1–2 months','Fried egg':'Best made fresh'},
+    tags:['Restaurant','Main Dishes','Japanese','Ground Pork','Garlic','Fresh Red Chili','Garlic Chives','Doubanjiang'],
+    mainIngredients:['Ground Pork','Garlic','Fresh Red Chili','Garlic Chives','Doubanjiang'],
+    usualsCategory:''
+  },
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
 window.MIDNIGHT_COURSES = ['Breakfast & Brunch','Appetizers','Snacks','Soups','Salads','Main Dishes','Sides','Baking','Desserts'];

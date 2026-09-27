@@ -395,7 +395,7 @@ html,body{max-width:100%;overflow-x:hidden}
 .menu .recipes-sub>.acc{width:100%;text-align:left;border:0;background:transparent;padding:9px 12px;font:inherit;cursor:pointer;}
 .menu .menu-group-title{width:100%;text-align:left;border:0;background:transparent;cursor:pointer;padding:9px 12px;font:inherit;font-weight:700;opacity:.72;}
 .menu .menu-group-sub{padding-left:12px;}
-.menu .menu-group-sub a{display:block;padding:7px 12px;}
+.menu .menu-group-sub a{display:block;padding:9px 12px;}
 .menu .top-item{padding:8px 4px;}
 .recipe-actions{display:flex;align-items:center;gap:10px;flex-wrap:nowrap;margin-top:16px;}
 .recipe-actions .btn{margin:0;min-width:0;white-space:nowrap;}
@@ -620,4 +620,40 @@ html,body{max-width:100%;overflow-x:hidden}
 @media (max-width:430px){
   .recipe-card .ingredient-file-group{margin-bottom:24px}
   .recipe-card .step-copy p{margin-bottom:9px}
+}
+
+
+/* Targeted step-photo cleanup: use the existing photo system without the step text padding/background. */
+.recipe-card .step-photos .photo-frame{
+  aspect-ratio:1 / 1;
+  width:100%;
+  margin:0;
+  padding:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  overflow:hidden;
+}
+.recipe-card .step-photos .photo-frame .photo{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.recipe-card .step-photos{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
+/* Cuisine groups are hierarchy labels, not emphasized links. */
+.menu .menu-group-title{
+  font-weight:400;
+  text-decoration:none !important;
+}
+.menu .menu-group-title:hover,
+.menu .menu-group-title:focus-visible{
+  text-decoration:none !important;
+}
+@media (max-width:720px){
+  .recipe-card .step-photos{grid-template-columns:repeat(3,minmax(0,1fr));}
 }
