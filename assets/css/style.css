@@ -1243,3 +1243,92 @@ body[data-page="home"] .category-card .photo-frame{
     padding-left:9px;
   }
 }
+
+
+/* v32 shared fixes — keep the existing design while preventing recipe utilities from clipping. */
+.recipe-card .recipe-action-row{
+  width:100%;
+  margin:18px 0 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  overflow:visible;
+}
+.recipe-card .recipe-action-row .btn{
+  flex:1 1 0;
+  min-width:max-content;
+  max-width:none;
+  width:auto;
+  box-sizing:border-box;
+  white-space:nowrap;
+  overflow:visible;
+  padding:8px 10px;
+}
+.recipe-card .recipe-practical-box{
+  border:1px solid var(--line);
+  background:transparent;
+}
+.recipe-card .usual-reference a{
+  color:inherit;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.recipe-card .instruction-mode{
+  margin-left:24px!important;
+  padding-left:12px;
+  font-weight:400;
+}
+.recipe-card .instruction-mode strong{font-weight:700;}
+.recipe-card .instruction-mode-body{
+  margin-left:24px!important;
+  padding-left:12px;
+  font-weight:400;
+}
+.card .photo-frame,
+.card .ph,
+.category-card .photo-frame,
+.category-card .ph{
+  aspect-ratio:2 / 3;
+}
+@media (max-width:720px){
+  .recipe-card .recipe-action-row{gap:6px;}
+  .recipe-card .recipe-action-row .btn{padding:8px 7px;font-size:13px;}
+  .recipe-card .instruction-mode,
+  .recipe-card .instruction-mode-body{
+    margin-left:18px!important;
+    padding-left:9px;
+  }
+}
+
+/* v33 shared fixes — sort control, two-column instruction photos, and reusable usual photo holder. */
+.recipe-sort{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:8px;
+  margin:-4px 0 24px;
+  font-size:14px;
+}
+.recipe-sort label{font-weight:700;}
+.recipe-sort select{
+  min-width:150px;
+  padding:7px 30px 7px 9px;
+  border:1px solid var(--line);
+  background:transparent;
+  color:inherit;
+  font:inherit;
+}
+.recipe-card .step-photos{grid-template-columns:repeat(2,minmax(0,1fr));}
+.recipe-card .step-photos.step-photos-1{grid-template-columns:1fr;}
+.recipe-card .step-photos.step-photos-2,
+.recipe-card .step-photos.step-photos-3,
+.recipe-card .step-photos.step-photos-4{grid-template-columns:repeat(2,minmax(0,1fr));}
+.recipe-card .usual-photo-holder{aspect-ratio:1 / 1;}
+@media (max-width:720px){
+  .recipe-sort{justify-content:flex-start;margin:-2px 0 20px;}
+  .recipe-sort select{min-width:140px;}
+  .recipe-card .step-photos{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .recipe-card .step-photos.step-photos-1{grid-template-columns:1fr;}
+}
