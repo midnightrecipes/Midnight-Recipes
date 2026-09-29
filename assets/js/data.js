@@ -176,7 +176,7 @@ window.MIDNIGHT_RECIPES = [
     dateAdded:'2026-09-27',
     timeStamp:'11:58 PM',
     description:'Apple crème brûlée inspired by Amélie (2001), with soft tart apples beneath silky custard and brittle caramel.',
-    heroImage:'images/recipes/apple-creme-brulee/hero.jpg', recipeImage:'',
+    heroImage:'images/recipes/apple-creme-brulee/hero.jpg', recipeImage:'images/recipes/apple-creme-brulee/recipe.jpg',
     cardImage:'images/recipes/apple-creme-brulee/hero.jpg',
     stepImages:[],
     story:`What is the first thing that comes to mind when you hear crème brûlée?
