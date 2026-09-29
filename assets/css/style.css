@@ -1176,3 +1176,70 @@ body[data-page="home"] .category-card .photo-frame{
     margin-top:50px;
   }
 }
+
+/* v31 shared refinements — preserve the existing design while fixing common recipe layout behavior. */
+.recipe-practical-box{
+  margin-top:0;
+}
+.recipe-practical-box #the-recipe{
+  margin-top:0;
+}
+.recipe-card .recipe-action-row{
+  width:100%;
+  margin:18px 0 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  flex-wrap:nowrap;
+  overflow:visible;
+}
+.recipe-card .recipe-action-row .btn{
+  flex:1 1 0;
+  min-width:0;
+  width:auto;
+  max-width:none;
+  white-space:nowrap;
+  overflow:visible;
+  padding:8px 10px;
+  font-size:14px;
+  line-height:1.25;
+}
+.recipe-card .usual-reference a{
+  color:inherit;
+}
+.card .photo-frame,
+.card .ph,
+.category-card .photo-frame,
+.category-card .ph{
+  aspect-ratio:2 / 3;
+}
+.recipe-card .instruction-mode,
+.recipe-card .instruction-mode-body{
+  margin-left:24px!important;
+  padding-left:12px;
+}
+.recipe-card .instruction-mode{
+  margin-top:15px!important;
+  margin-bottom:8px!important;
+}
+.recipe-card .instruction-mode-body{
+  margin-bottom:12px!important;
+}
+.recipe-card .instruction-mode + .instruction-mode-body{
+  margin-top:0!important;
+}
+@media (max-width:720px){
+  .recipe-card .recipe-action-row{
+    gap:6px;
+  }
+  .recipe-card .recipe-action-row .btn{
+    padding:8px 7px;
+    font-size:13px;
+  }
+  .recipe-card .instruction-mode,
+  .recipe-card .instruction-mode-body{
+    margin-left:18px!important;
+    padding-left:9px;
+  }
+}
