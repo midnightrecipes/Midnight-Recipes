@@ -79,7 +79,7 @@ window.MIDNIGHT_RECIPES = [
     dateAdded:'2026-09-27',
     timeStamp:'11:44 PM',
     description:'A fiery Nagoya-inspired Taiwan mince served over rice with a soft-boiled egg.',
-    heroImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg',
+    heroImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg', recipeImage:'',
     cardImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg',
     stepImages:[],
     story:`Taiwan Ramen (台湾ラーメン) at Misen (味仙) is famous in my hometown, Nagoya, Japan. Despite its name, this fiery ramen isn’t actually from Taiwan—the founder named it “Taiwan Ramen” after his own Taiwanese roots. It is one of Nagoya’s local food that evolved entirely in Japan, and this intensely spicy, strangely addictive flavor is so irresistible that I found myself going back to the restaurant again on my last trip home.\n\nTonight, I’m making the **Taiwan ground pork the star of the dish**, serving it over rice with a soft-boiled egg instead of its original ramen noodles. It might be so spicy that I end up staying awake all night.`,
@@ -176,7 +176,7 @@ window.MIDNIGHT_RECIPES = [
     dateAdded:'2026-09-27',
     timeStamp:'11:58 PM',
     description:'Apple crème brûlée inspired by Amélie (2001), with soft tart apples beneath silky custard and brittle caramel.',
-    heroImage:'images/recipes/apple-creme-brulee/hero.jpg',
+    heroImage:'images/recipes/apple-creme-brulee/hero.jpg', recipeImage:'',
     cardImage:'images/recipes/apple-creme-brulee/hero.jpg',
     stepImages:[],
     story:`What is the first thing that comes to mind when you hear crème brûlée?
@@ -467,7 +467,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...',
     description:'The crust we make when a pie calls for a crust.',
     usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
-    heroImage:'', cardImage:'', stepImages:[],
+    heroImage:'', recipeImage:'', cardImage:'', stepImages:[],
     ingredientFile:[],
     ingredients:[
       {amount:180,unit:'g',imperialAmount:6.35,imperialUnit:'oz',item:'All-Purpose Flour'},
