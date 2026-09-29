@@ -1243,3 +1243,61 @@ body[data-page="home"] .category-card .photo-frame{
     padding-left:9px;
   }
 }
+
+
+/* v32 shared fixes — keep the existing design while preventing recipe utilities from clipping. */
+.recipe-card .recipe-action-row{
+  width:100%;
+  margin:18px 0 0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:8px;
+  overflow:visible;
+}
+.recipe-card .recipe-action-row .btn{
+  flex:1 1 0;
+  min-width:max-content;
+  max-width:none;
+  width:auto;
+  box-sizing:border-box;
+  white-space:nowrap;
+  overflow:visible;
+  padding:8px 10px;
+}
+.recipe-card .recipe-practical-box{
+  border:1px solid var(--line);
+  background:transparent;
+}
+.recipe-card .usual-reference a{
+  color:inherit;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.recipe-card .instruction-mode{
+  margin-left:24px!important;
+  padding-left:12px;
+  font-weight:400;
+}
+.recipe-card .instruction-mode strong{font-weight:700;}
+.recipe-card .instruction-mode-body{
+  margin-left:24px!important;
+  padding-left:12px;
+  font-weight:400;
+}
+.card .photo-frame,
+.card .ph,
+.category-card .photo-frame,
+.category-card .ph{
+  aspect-ratio:2 / 3;
+}
+@media (max-width:720px){
+  .recipe-card .recipe-action-row{gap:6px;}
+  .recipe-card .recipe-action-row .btn{padding:8px 7px;font-size:13px;}
+  .recipe-card .instruction-mode,
+  .recipe-card .instruction-mode-body{
+    margin-left:18px!important;
+    padding-left:9px;
+  }
+}
