@@ -36,29 +36,29 @@ window.MIDNIGHT_RECIPES = [
         'Press the crumb mixture firmly into a 9-inch (23 cm) pie dish using the flat bottom of a cup.',
         'Bake for 8–10 minutes.',
         'Let it cool.'
-      ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepPhotos:['images/recipes/chocolate-cream-comfort-pie/step01-1.jpg']},
+      ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/chocolate-cream-comfort-pie/step-01-01.jpg']},
       {number:'02',title:'MAKE IT GLOSSY',clock:'12:20 AM',paragraphs:[
         'In a saucepan, whisk 80g sugar, 4 Tbsp cornstarch, 3 Tbsp cocoa powder, 1 tsp espresso powder, and a pinch of salt.',
         'Slowly pour in 500ml milk, whisking thoroughly until completely smooth before turning on the heat.',
         'Cook over medium heat, whisking constantly until the mixture bubbles and thickens into a pudding-like consistency.',
         'Remove the pan from the heat.'
-      ],stepPhotos:['images/recipes/chocolate-cream-comfort-pie/step02-1.jpg']},
+      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-02-01.jpg']},
       {number:'03',title:'MAKE IT SILKY',clock:'12:28 AM',paragraphs:[
         'In a separate bowl, whisk 4 egg yolks.',
         'Slowly whisk ½ cup of the hot chocolate cream into the yolks to warm them up, then pour the yolk mixture back into the pan.',
         'Return to low heat for 1 minute, whisking constantly until thick and glossy.',
         'Remove from heat, then stir in 150g chopped dark chocolate and 20g butter until fully melted and smooth.'
-      ],stepPhotos:['images/recipes/chocolate-cream-comfort-pie/step03-1.jpg']},
+      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-03-01.jpg']},
       {number:'04',title:'POUR AND WAIT',clock:'12:35 AM',paragraphs:[
         'Pour the warm chocolate filling into your chilled pie crust.',
         'Tap the pie dish gently on the counter 2–3 times to level the surface and release trapped air bubbles.',
         'Refrigerate for at least 4 hours. Overnight works best.'
-      ],stepPhotos:['images/recipes/chocolate-cream-comfort-pie/step04-1.jpg']},
+      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-04-01.jpg']},
       {number:'05',title:'WHIP IT LATE',clock:'Optional',paragraphs:[
         'Whip 200ml cold cream to soft peaks.',
         'Gradually add 2 Tbsp sugar and whip until medium-firm peaks form.',
         'Dollop generously over the chilled pie and finish with cocoa powder, cacao nibs, or flaky sea salt.'
-      ],stepPhotos:['images/recipes/chocolate-cream-comfort-pie/step05-1.jpg']}
+      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-05-01.jpg']}
     ],
     notes:[['Recreating the Flavor','I use dark chocolate together with cocoa powder and a hint of espresso powder to take the filling beyond a simple cocoa base, creating a deeper and more layered chocolate flavor.'],['Midnight Shortcut','Chilling the crust in the freezer while preparing the filling saves time without adding another complicated step.'],['Midnight Compromises','If you are too exhausted to whisk by hand, store-bought whipped cream works perfectly well. Freshly whipped cream, however, gives a better texture and a prettier finish when you have a few extra minutes.']],
     finePrint:{'Best Eaten':'Tomorrow — the filling becomes firmer and the flavors settle overnight.','Make ahead':'Yes — up to 1 day ahead. Prepare the pie and add the whipped cream just before serving.','Storage':'Refrigerate, covered, for up to 3 days.','Freezer':'Not Recommended.','Reheat':'N/A — serve chilled.'},
@@ -116,7 +116,7 @@ window.MIDNIGHT_RECIPES = [
         'Add 3 tbsp sesame oil, 20 g minced garlic, and 3–5 finely minced fresh red chilies to a cold frying pan.',
         'Turn the heat to low and gently cook for 1–2 minutes.',
         'Keep the garlic pale. You want the oil infused with garlic and chili, not burnt garlic.'
-      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork/step01-1.jpg']},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-01-01.jpg']},
       {number:'02',title:'COOK THE PORK',clock:'11:17 PM',paragraphs:[
         'Increase the heat to medium-high and add 500 g ground pork.',
         'Let the pork sit against the pan briefly so it develops some browned edges.',
@@ -125,7 +125,7 @@ window.MIDNIGHT_RECIPES = [
         'Add 1 tbsp doubanjiang to the exposed oil.',
         'Fry the doubanjiang for 30–45 seconds, then mix it thoroughly into the pork.',
         'This is the key step: frying the doubanjiang directly in the rendered pork fat brings out its fermented, spicy aroma and gives the mince a deeper flavor.'
-      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork/step02-1.jpg']},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-02-01.jpg']},
       {number:'03',title:'BRAISE & REDUCE',clock:'11:22 PM',paragraphs:[
         'Add 2 tbsp Shaoxing wine and let it bubble for about 30 seconds.',
         'Add 2 tbsp soy sauce, 2 tsp oyster sauce, 2 tsp gochujang, ½ tsp sugar, 1 tsp chicken bouillon powder, and 180 ml water.',
@@ -135,7 +135,7 @@ window.MIDNIGHT_RECIPES = [
         'Once most of the liquid has been absorbed, increase the heat to medium-high and cook for another 2–4 minutes.',
         'Do not completely dry out the mince.',
         'The finished meat should be deeply colored, glossy and intensely savory, with a small amount of concentrated sauce and pork fat still coating the pan.'
-      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork/step03-1.jpg']},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-03-01.jpg']},
       {number:'04',title:'FINISH WITH GARLIC CHIVES',clock:'11:34 PM',paragraphs:[
         'Add 50–60 g garlic chives.',
         'Toss over medium heat for 30–45 seconds.',
@@ -143,13 +143,13 @@ window.MIDNIGHT_RECIPES = [
         'Add ½–1 tsp sesame oil.',
         'Finish with a tiny pinch of sansho or Sichuan pepper, if using.',
         'Taste before adding salt—the soy sauce, doubanjiang, oyster sauce and bouillon already provide plenty of seasoning.'
-      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork/step04-1.jpg']},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-04-01.jpg']},
       {number:'05',title:'PLATE',clock:'11:37 PM',paragraphs:[
         'Spoon hot steamed white rice into a shallow bowl.',
         'Pile the Taiwan mince generously over the rice.',
         'Make sure some of the concentrated sauce drips down into the rice.',
         'Top with a crispy-edged fried egg with a runny yolk.'
-      ],stepPhotos:['images/recipes/addictive-spicy-taiwan-ground-pork/step05-1.jpg']}
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-05-01.jpg']}
     ],
     notes:[
       ['Recreating the Flavor','The goal isn’t simply to make spicy ground pork. The flavor builds in layers: sesame oil + garlic + fresh chili → browned pork fat → fried doubanjiang → soy + oyster + gochujang → Shaoxing wine → chicken bouillon → slow reduction. The result should be fiery, garlicky, savory, slightly oily and deeply concentrated, capturing the character of the Taiwan mince served on Nagoya-style Taiwan Ramen.'],
@@ -228,7 +228,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         'Cook for 5–7 minutes, until the apples are tender but still hold their shape.',
         'If there is excess liquid, cook for another 1–2 minutes until glossy but not wet.',
         'Cool slightly.'
-      ],stepPhotos:[]},
+      ],stepImages:[]},
       {number:'02',title:'MAKE THE CUSTARD',clock:'11:32 PM',paragraphs:[
         'Heat 100 ml whole milk and 400 ml 35% whipping cream over medium-low heat until hot and steaming, but do not boil.',
         'Whisk 5 egg yolks, 65 g sugar, and a pinch of salt gently. Avoid creating too much foam.',
@@ -236,11 +236,11 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         'Stir in 1 tsp vanilla extract.',
         'Strain through a fine-mesh sieve.',
         'Let the custard rest for 5–10 minutes, then skim off any foam.'
-      ],stepPhotos:['images/recipes/apple-creme-brulee/step02-1.jpg']},
+      ],stepImages:['images/recipes/apple-creme-brulee/step-02-01.jpg']},
       {number:'03',title:'FILL',clock:'11:42 PM',paragraphs:[
         'Divide the apples among 6 × 8.5 cm mini cocottes.',
         'Pour the custard over the apples, almost to the top.'
-      ],stepPhotos:[]},
+      ],stepImages:[]},
       {number:'04',title:'WATER BATH & BAKE',clock:'11:45 PM',paragraphs:[
         'Place the cocottes in a deep baking dish.',
         'Add hot water until it reaches halfway up the sides of the cocottes.',
@@ -248,14 +248,14 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         'The edges should be set while the centers still have a gentle, even wobble.',
         'Carefully remove the cocottes from the water bath.',
         'Cool, then refrigerate for at least 2 hours, preferably overnight.'
-      ],stepPhotos:['images/recipes/apple-creme-brulee/step04-1.jpg']},
+      ],stepImages:['images/recipes/apple-creme-brulee/step-04-01.jpg']},
       {number:'05',title:'CRACK THE TOP',clock:'NEXT NIGHT',paragraphs:[
         'Blot any moisture from the surface.',
         'Sprinkle 25–35 g sugar evenly over the six custards in a thin layer.',
         'Torch until deeply golden and glassy.',
         'Let stand for 2–3 minutes.',
         'Crack the caramelized top with the back of a spoon, like Amélie.'
-      ],stepPhotos:['images/recipes/apple-creme-brulee/step05-1.jpg']}
+      ],stepImages:['images/recipes/apple-creme-brulee/step-05-01.jpg']}
     ],
     notes:[
       ['Keeping the Apples Distinct','Cooking the apples separately concentrates their flavor and removes excess moisture.'],
@@ -310,12 +310,12 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
       {amount:1,unit:'strip',item:'orange peel, about 2–3 cm long'}, {unit:'',item:'Pinch of salt'}
     ],
     steps:[
-      {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Start with one recipe of **Building Block Pie Crust.**'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.',stepPhotos:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step01-1.jpg']},
-      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Pour **180 ml Half & Half** into a small saucepan.','Add **½ cinnamon stick**, **2 whole cloves**, **1 star anise**, and **1 strip of orange peel (2–3 cm)**.','Warm gently over low heat for **10 minutes**. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another **10 minutes**.','Remove the cinnamon stick, cloves, star anise, and orange peel.','For a brighter, less bitter citrus aroma, remove the orange peel after **5–10 minutes** while leaving the other spices to steep.','While the infused Half & Half is still warm, whisk in **60 g dark brown sugar** and **10 g molasses** until completely dissolved.'],stepNote:'**Midnight Note:** This is what keeps the pie from tasting like ordinary pumpkin spice. Instead of adding powdered spices directly to the custard, the whole spices are gently infused into the dairy.',stepPhotos:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step02-1.jpg']},
-      {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together **400 g pumpkin purée**, **2 large eggs**, **15 ml orange juice**, and **¼ tsp salt**.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.','Avoid overmixing or whipping in too much air.'],stepPhotos:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step03-1.jpg']},
-      {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Reduce the oven temperature to **175°C**.','Pour the pumpkin filling into the blind-baked crust.','Bake for **40–50 minutes**.','The edges should be set while the center still has a **slight wobble** when the pie is gently shaken.','Remove from the oven.','Let the pie cool completely before adding the syrup.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepPhotos:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step04-1.jpg']},
-      {number:'05',title:'MAKE THE ORANGE-MOLASSES SYRUP',clock:'12:45 AM',paragraphs:['Add **35 g dark brown sugar**, **5 g molasses**, **30 ml orange juice**, **15 ml water**, **1 strip of orange peel (2–3 cm)**, and **a pinch of salt** to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for **3–5 minutes**, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel.','Let the syrup cool slightly.','The syrup will continue to thicken as it cools.'],stepPhotos:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step05-1.jpg']},
-      {number:'06',title:'FINISH',clock:'12:55 AM',paragraphs:['Once the pie has cooled completely, brush or spoon a **thin layer of the orange-molasses syrup** over the surface.','If desired, drizzle with another **1–2 teaspoons of syrup** just before serving.','Don\'t drown the pie in syrup. The goal is a glossy, concentrated finish rather than a very sweet topping.'],stepPhotos:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step06-1.jpg']}
+      {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Start with one recipe of **Building Block Pie Crust.**'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.',stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-01-01.jpg']},
+      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Pour **180 ml Half & Half** into a small saucepan.','Add **½ cinnamon stick**, **2 whole cloves**, **1 star anise**, and **1 strip of orange peel (2–3 cm)**.','Warm gently over low heat for **10 minutes**. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another **10 minutes**.','Remove the cinnamon stick, cloves, star anise, and orange peel.','For a brighter, less bitter citrus aroma, remove the orange peel after **5–10 minutes** while leaving the other spices to steep.','While the infused Half & Half is still warm, whisk in **60 g dark brown sugar** and **10 g molasses** until completely dissolved.'],stepNote:'**Midnight Note:** This is what keeps the pie from tasting like ordinary pumpkin spice. Instead of adding powdered spices directly to the custard, the whole spices are gently infused into the dairy.',stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg']},
+      {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together **400 g pumpkin purée**, **2 large eggs**, **15 ml orange juice**, and **¼ tsp salt**.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.','Avoid overmixing or whipping in too much air.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.jpg']},
+      {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Reduce the oven temperature to **175°C**.','Pour the pumpkin filling into the blind-baked crust.','Bake for **40–50 minutes**.','The edges should be set while the center still has a **slight wobble** when the pie is gently shaken.','Remove from the oven.','Let the pie cool completely before adding the syrup.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-04-01.jpg']},
+      {number:'05',title:'MAKE THE ORANGE-MOLASSES SYRUP',clock:'12:45 AM',paragraphs:['Add **35 g dark brown sugar**, **5 g molasses**, **30 ml orange juice**, **15 ml water**, **1 strip of orange peel (2–3 cm)**, and **a pinch of salt** to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for **3–5 minutes**, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel.','Let the syrup cool slightly.','The syrup will continue to thicken as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.jpg']},
+      {number:'06',title:'FINISH',clock:'12:55 AM',paragraphs:['Once the pie has cooled completely, brush or spoon a **thin layer of the orange-molasses syrup** over the surface.','If desired, drizzle with another **1–2 teaspoons of syrup** just before serving.','Don\'t drown the pie in syrup. The goal is a glossy, concentrated finish rather than a very sweet topping.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-06-01.jpg']}
     ],
     notes:[
       ['Recreating the Flavor','The original Calabaza en Tacha gets much of its character from pumpkin slowly cooked in a dark piloncillo syrup with warm spices.\n\nInstead of putting those flavors directly into a standard pumpkin custard, I split them into two layers:\n\n**Spiced Half & Half → Orange-Molasses Syrup**\n\nThe Half & Half carries the cinnamon, clove, star anise, and orange aroma into the custard, while the syrup recreates the darker caramelized sweetness associated with piloncillo.'],
@@ -356,13 +356,13 @@ Basically, this pie is my answer to one very simple question:
       {amount:150,unit:'ml',item:'heavy cream'}, {minAmount:1,maxAmount:2,unit:'Tbsp',item:'sugar, to taste'}, {unit:'',item:'Cinnamon or banana chips, to finish'}
     ],
     steps:[
-      {number:'01',title:'TURN IT UP',clock:'2:55 AM',paragraphs:['Preheat your oven to **180°C (350°F)**.'],stepPhotos:[]},
-      {number:'02',title:'MAKE IT JAMMY',clock:'2:56 AM',paragraphs:['Cook **3 (approx. 250 g) mashed very ripe banana** in a nonstick skillet over medium-low heat for 8–12 minutes, stirring often.','Keep cooking until the moisture cooks off and the banana turns thick, glossy, and jammy.','No sugar. No butter. Just banana.','Set aside.'],stepPhotos:[]},
-      {number:'03',title:'FAKE THE BISCOFF',clock:'3:08 AM',paragraphs:['Crush **200 g plain biscuits** finely.','**Food Processor (Fastest):** Pulse for about 30 seconds.','**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.','Mix with **1/2 tsp cinnamon**, **1/4 tsp ginger**, **1 pinch nutmeg**, **1/4 tsp salt**, and **80 g melted butter**.','Press firmly into a 9-inch (23 cm) pie dish.','Bake for 8–10 minutes, then let cool.'],stepNote:'**Midnight Shortcut:** Skip the oven entirely! Just press the crust into the dish and freeze it while making the filling. It won\'t be quite as toasted, but it sets super fast.',stepPhotos:[]},
-      {number:'04',title:'MAKE IT THICK',clock:'3:20 AM',paragraphs:['Whisk **35 g sugar**, **35 g cornstarch**, and **1 pinch salt** in a saucepan.','Gradually whisk in **400 ml milk** until smooth.','Cook over medium heat, whisking constantly, until the custard becomes very thick and starts to bubble.','Keep whisking and cook for another 1–2 minutes after it starts bubbling.','It should be thick enough that the whisk leaves a clear trail and the custard slowly fills it back in.','Remove from heat.','Whisk **3 egg yolks** in a bowl.','Slowly add the hot custard, a little at a time, whisking constantly.','Once the egg yolks are warmed through, pour everything back into the saucepan.','Return to low heat and cook for 1 minute, whisking constantly, until thick and glossy.','Remove from the heat and stir in **1 tsp vanilla extract**.'],stepPhotos:[]},
-      {number:'05',title:'BLEND THE BANANA IN',clock:'3:30 AM',paragraphs:['Add the concentrated **banana** to the warm custard.','Blend until completely smooth and silky.','**Quiet Mode (Silent):** Want a little texture? Skip the food processor and stir it in by hand.'],stepPhotos:[]},
-      {number:'06',title:'HIDE THE BANANAS',clock:'3:35 AM',paragraphs:['Peel the **2 firm-ripe bananas** and cut each one in half lengthwise.','Arrange banana halves along the outer edge of the cooled crust, flat-side down.','Pour the banana cream over the top and smooth the surface.'],stepPhotos:[]},
-      {number:'07',title:'NOW WE WAIT',clock:'3:40 AM',paragraphs:['Refrigerate for at least **4 hours**. Overnight is even better!','Optional:','Whip **150 ml cold heavy cream** to soft peaks.','Add **1–2 Tbsp sugar** and whip to medium-firm peaks.','Dollop over the chilled pie and finish with cinnamon or banana chips, if you like.'],stepPhotos:[]}
+      {number:'01',title:'TURN IT UP',clock:'2:55 AM',paragraphs:['Preheat your oven to **180°C (350°F)**.'],stepImages:[]},
+      {number:'02',title:'MAKE IT JAMMY',clock:'2:56 AM',paragraphs:['Cook **3 (approx. 250 g) mashed very ripe banana** in a nonstick skillet over medium-low heat for 8–12 minutes, stirring often.','Keep cooking until the moisture cooks off and the banana turns thick, glossy, and jammy.','No sugar. No butter. Just banana.','Set aside.'],stepImages:[]},
+      {number:'03',title:'FAKE THE BISCOFF',clock:'3:08 AM',paragraphs:['Crush **200 g plain biscuits** finely.','**Food Processor (Fastest):** Pulse for about 30 seconds.','**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.','Mix with **1/2 tsp cinnamon**, **1/4 tsp ginger**, **1 pinch nutmeg**, **1/4 tsp salt**, and **80 g melted butter**.','Press firmly into a 9-inch (23 cm) pie dish.','Bake for 8–10 minutes, then let cool.'],stepNote:'**Midnight Shortcut:** Skip the oven entirely! Just press the crust into the dish and freeze it while making the filling. It won\'t be quite as toasted, but it sets super fast.',stepImages:[]},
+      {number:'04',title:'MAKE IT THICK',clock:'3:20 AM',paragraphs:['Whisk **35 g sugar**, **35 g cornstarch**, and **1 pinch salt** in a saucepan.','Gradually whisk in **400 ml milk** until smooth.','Cook over medium heat, whisking constantly, until the custard becomes very thick and starts to bubble.','Keep whisking and cook for another 1–2 minutes after it starts bubbling.','It should be thick enough that the whisk leaves a clear trail and the custard slowly fills it back in.','Remove from heat.','Whisk **3 egg yolks** in a bowl.','Slowly add the hot custard, a little at a time, whisking constantly.','Once the egg yolks are warmed through, pour everything back into the saucepan.','Return to low heat and cook for 1 minute, whisking constantly, until thick and glossy.','Remove from the heat and stir in **1 tsp vanilla extract**.'],stepImages:[]},
+      {number:'05',title:'BLEND THE BANANA IN',clock:'3:30 AM',paragraphs:['Add the concentrated **banana** to the warm custard.','Blend until completely smooth and silky.','**Quiet Mode (Silent):** Want a little texture? Skip the food processor and stir it in by hand.'],stepImages:[]},
+      {number:'06',title:'HIDE THE BANANAS',clock:'3:35 AM',paragraphs:['Peel the **2 firm-ripe bananas** and cut each one in half lengthwise.','Arrange banana halves along the outer edge of the cooled crust, flat-side down.','Pour the banana cream over the top and smooth the surface.'],stepImages:[]},
+      {number:'07',title:'NOW WE WAIT',clock:'3:40 AM',paragraphs:['Refrigerate for at least **4 hours**. Overnight is even better!','Optional:','Whip **150 ml cold heavy cream** to soft peaks.','Add **1–2 Tbsp sugar** and whip to medium-firm peaks.','Dollop over the chilled pie and finish with cinnamon or banana chips, if you like.'],stepImages:[]}
     ],
     notes:[
       ['Midnight (Non)Compromises','Even in the middle of the night, concentrating the bananas is a non-negotiable.\n\nThose nearly black bananas are already packed with natural sweetness, so instead of adding more sugar, I cook them down in a skillet until their moisture evaporates and their natural sugars become concentrated.'],
@@ -409,18 +409,18 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
         'Midnight Shortcut — Boil',
         'Peel and cut the sweet potato into chunks. Simmer in water for 15–20 minutes, until fork-tender.',
         'Drain well and let it steam-dry for a few minutes before weighing 400 g.'
-      ],stepPhotos:[]},
+      ],stepImages:[]},
       {number:'02',title:'MAKE THE CRUST',clock:'11:45 PM',paragraphs:[
         'While the sweet potatoes are roasting… start making Building Block Pie Crust.',
         'Midnight Shortcut',
         'Use a good-quality store-bought pie crust. Tonight is about the filling.'
-      ],stepPhotos:[]},
+      ],stepImages:[]},
       {number:'03',title:'BLIND BAKE',clock:'12:00 AM',paragraphs:[
         'Prick the bottom lightly with a fork.',
         'Line with parchment and add pie weights.',
         'Bake at 175°C / 350°F for 15 minutes.',
         'Remove the weights and bake for another 5–7 minutes, until lightly golden.'
-      ],stepPhotos:[]},
+      ],stepImages:[]},
       {number:'04',title:'BLEND THE FILLING',clock:'12:25 AM',paragraphs:[
         'Once the sweet potato is cooked and cool enough to handle, weigh 400 g.',
         'Finely grate 6 g ginger.',
@@ -431,14 +431,14 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
         'Quiet Mode — Silent',
         'Mash the sweet potato thoroughly.',
         'Add all remaining filling ingredients and blend directly in the bowl with a hand blender until completely smooth.'
-      ],stepPhotos:[]},
+      ],stepImages:[]},
       {number:'05',title:'BAKE',clock:'12:30 AM',paragraphs:[
         'Pour the filling into the blind-baked crust.',
         'Bake at 175°C / 350°F for 40–50 minutes.',
         'The edges should be set and the centre should still have a slight wobble.',
         'Remove from the oven and cool completely at room temperature.',
         'The filling will continue to set as it cools.'
-      ],stepPhotos:[]},
+      ],stepImages:[]},
       {number:'06',title:'CHILL & FINISH',clock:'1:20 AM',paragraphs:[
         'Let the pie cool completely before refrigerating. This should take about 45–60 minutes.',
         'Once cooled:',
@@ -448,7 +448,7 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
         'Keep the whipped cream refrigerated until serving.',
         'Slice the chilled pie and top with whipped cream.',
         'Finish with a light dusting of cinnamon.'
-      ],stepPhotos:[]}
+      ],stepImages:[]}
     ],
     notes:[
       ['Recreating the Flavor',`Fresh ginger is the signature. It gives the pie the warm, peppery character inspired by 番薯姜糖水.
@@ -482,12 +482,12 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
         'Add ice water gradually until the dough just comes together.',
         '**Lightly flour your hands** and press the dough directly into the pie dish.',
         'If the butter has softened, chill the crust for 10 minutes before baking.'
-      ],stepNote:'**Midnight Shortcut:** Use a food processor to make the dough quickly.'},
+      ],stepNote:'**Midnight Shortcut:** Use a food processor to make the dough quickly.',stepImages:[]},
       {number:'02',title:'BLIND-BAKE',clock:'',paragraphs:[
         'Prick the bottom with a fork. Add parchment paper and pie weights.',
         'Bake at 190°C / 375°F for 15 minutes.',
         'Remove the weights and parchment, then bake for another 5–7 minutes, until lightly golden.'
-      ]}
+      ],stepImages:[]}
     ],
     notes:[
       ['The Golden Rule — Blind-Bake','For wet fillings, blind-baking helps keep the bottom from getting soggy. Take the crust only to light golden at this stage; it will continue browning when the filled pie goes back into the oven.'],
