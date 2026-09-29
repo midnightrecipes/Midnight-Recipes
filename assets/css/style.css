@@ -1301,3 +1301,20 @@ body[data-page="home"] .category-card .photo-frame{
     padding-left:9px;
   }
 }
+
+/* Image-only fix: keep the v32 Home layout untouched; limit instruction photos to two columns. */
+.recipe-card .step-photos{grid-template-columns:repeat(2,minmax(0,1fr));}
+.recipe-card .step-photos.step-photos-1{grid-template-columns:1fr;}
+.recipe-card .step-photos.step-photos-2,
+.recipe-card .step-photos.step-photos-3,
+.recipe-card .step-photos.step-photos-4{grid-template-columns:repeat(2,minmax(0,1fr));}
+@media (max-width:720px){
+  .recipe-card .step-photos{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .recipe-card .step-photos.step-photos-1{grid-template-columns:1fr;}
+  .recipe-card .step-photos.step-photos-2,
+  .recipe-card .step-photos.step-photos-3,
+  .recipe-card .step-photos.step-photos-4{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:430px){
+  .recipe-card .step-photos.step-photos-3{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
