@@ -470,10 +470,14 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
   },
   {
     slug:'building-block-pie-crust', title:'Building Block Pie Crust', source:'The Usuals', cuisine:'American', course:'Baking', courseDisplay:'Baking', meal:'Baking', categories:['Baking'], ingredientCategories:['Pie'], dateAdded:'2026-09-27', timeStamp:'',
-    isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...',
+    isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...', hideRecipeTags:true,
     description:'The crust we make when a pie calls for a crust.',
     usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
     heroImage:'', recipeImage:'images/recipes/building-block-pie-crust/recipe.jpg', cardImage:'',
+    unitOverrides:{imperial:{'all-purpose flour':'cup','cold unsalted butter, cubed':'cup'},metric:{'ice water':'ml'}},
+    densityOverrides:{'all purpose flour|cup':120,'cold unsalted butter cubed|cup':227},
+    usCupFractions:true,
+    integerUnits:{metric:['ice water']},
     ingredientFile:[],
     ingredients:[
       {amount:180,unit:'g',imperialAmount:6.35,imperialUnit:'oz',item:'All-Purpose Flour'},
@@ -486,14 +490,14 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
       {number:'01',title:'MAKE THE CRUST',clock:'',paragraphs:[
         'Mix flour, butter, and salt until coarse crumbs form.',
         'Add ice water gradually until the dough just comes together.',
-        '**Lightly flour your hands** and press the dough directly into the pie dish.',
+        'Lightly flour your hands and press the dough directly into the pie dish.',
         'If the butter has softened, chill the crust for 10 minutes before baking.'
-      ],stepNote:'**Midnight Shortcut:** Use a food processor to make the dough quickly.',stepImages:[]},
+      ],stepNote:'**Midnight Shortcut:** Use a food processor to make the dough quickly.',stepImages:['images/recipes/building-block-pie-crust/step-01-01.JPG','images/recipes/building-block-pie-crust/step-01-02.JPG','images/recipes/building-block-pie-crust/step-01-03.JPG','images/recipes/building-block-pie-crust/step-01-04.JPG']},
       {number:'02',title:'BLIND-BAKE',clock:'',paragraphs:[
         'Prick the bottom with a fork. Add parchment paper and pie weights.',
         'Bake at 190°C / 375°F for 15 minutes.',
         'Remove the weights and parchment, then bake for another 5–7 minutes, until lightly golden.'
-      ],stepImages:[]}
+      ],stepImages:['images/recipes/building-block-pie-crust/step-02-01.JPG','images/recipes/building-block-pie-crust/step-02-02.jpg']}
     ],
     notes:[
       ['The Golden Rule — Blind-Bake','For wet fillings, blind-baking helps keep the bottom from getting soggy. Take the crust only to light golden at this stage; it will continue browning when the filled pie goes back into the oven.'],
