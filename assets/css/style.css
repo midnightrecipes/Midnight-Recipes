@@ -863,12 +863,12 @@ html,body{max-width:100%;overflow-x:hidden}
   border-color:var(--ink);
 }
 .recipe-card .recipe-action-row #cookOpen{
-  background:rgba(201,255,216,.48);
-  border-color:rgba(21,27,31,.28);
-}
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]{
   background:var(--mint);
   border-color:var(--mint);
+}
+.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]{
+  background:rgba(201,255,216,.48);
+  border-color:rgba(21,27,31,.28);
 }
 
 /* Instructions: title bold, body regular, supporting labels visually one level down. */
