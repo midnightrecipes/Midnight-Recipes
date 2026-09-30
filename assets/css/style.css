@@ -1312,18 +1312,30 @@ body[data-page="home"] .category-card .photo-frame{
   }
 }
 
-/* Step Photo layout: up to four photos across on PC/iPad; two across on iPhone. */
-.recipe-card .step-photos{grid-template-columns:repeat(4,minmax(0,1fr));}
-.recipe-card .step-photos.step-photos-1{grid-template-columns:1fr;}
-.recipe-card .step-photos.step-photos-2{grid-template-columns:repeat(2,minmax(0,1fr));}
-.recipe-card .step-photos.step-photos-3{grid-template-columns:repeat(3,minmax(0,1fr));}
-.recipe-card .step-photos.step-photos-4{grid-template-columns:repeat(4,minmax(0,1fr));}
+/* Step Photo layout: common fixed-size cells — up to four across on PC/iPad, two across on iPhone. */
+.recipe-card .step-photos{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+.recipe-card .step-photos.step-photos-1,
+.recipe-card .step-photos.step-photos-2,
+.recipe-card .step-photos.step-photos-3,
+.recipe-card .step-photos.step-photos-4{
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+.recipe-card .step-photos .photo-frame{
+  aspect-ratio:1 / 1;
+}
+.recipe-card .step-photos .photo-frame .photo{
+  object-fit:contain;
+}
 @media (max-width:767px){
-  .recipe-card .step-photos{grid-template-columns:repeat(2,minmax(0,1fr));}
-  .recipe-card .step-photos.step-photos-1{grid-template-columns:1fr;}
+  .recipe-card .step-photos,
+  .recipe-card .step-photos.step-photos-1,
   .recipe-card .step-photos.step-photos-2,
   .recipe-card .step-photos.step-photos-3,
-  .recipe-card .step-photos.step-photos-4{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .recipe-card .step-photos.step-photos-4{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
 }
 
 /* Cook Mode / No Sleep: keep the two existing state colors swapped, including hover/focus. */
@@ -1340,34 +1352,9 @@ body[data-page="home"] .category-card .photo-frame{
   border-color:rgba(21,27,31,.28)!important;
 }
 
-/* Chocolate Cream Comfort Pie: keep one photo cell the same size regardless of photo count. */
-.recipe-card.fixed-step-photo-cells .step-photos{
-  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
-}
-.recipe-card.fixed-step-photo-cells .step-photos.step-photos-1,
-.recipe-card.fixed-step-photo-cells .step-photos.step-photos-2,
-.recipe-card.fixed-step-photo-cells .step-photos.step-photos-3,
-.recipe-card.fixed-step-photo-cells .step-photos.step-photos-4{
-  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
-}
-.recipe-card.fixed-step-photo-cells .step-photos .photo-frame{
-  aspect-ratio:1 / 1;
-}
-.recipe-card.fixed-step-photo-cells .step-photos .photo-frame .photo{
-  object-fit:contain;
-}
 .recipe-card .story-quote{
   margin:0 0 22px 24px;
   padding-left:12px;
   font-style:italic;
   line-height:1.9;
-}
-@media (max-width:767px){
-  .recipe-card.fixed-step-photo-cells .step-photos,
-  .recipe-card.fixed-step-photo-cells .step-photos.step-photos-1,
-  .recipe-card.fixed-step-photo-cells .step-photos.step-photos-2,
-  .recipe-card.fixed-step-photo-cells .step-photos.step-photos-3,
-  .recipe-card.fixed-step-photo-cells .step-photos.step-photos-4{
-    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
-  }
 }
