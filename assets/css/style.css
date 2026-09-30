@@ -862,15 +862,11 @@ html,body{max-width:100%;overflow-x:hidden}
   background:var(--mint);
   border-color:var(--ink);
 }
-.recipe-card .recipe-action-row #cookOpen,
-.recipe-card .recipe-action-row #cookOpen:hover,
-.recipe-card .recipe-action-row #cookOpen:focus-visible{
+.recipe-card .recipe-action-row #cookOpen{
   background:rgba(201,255,216,.48);
   border-color:rgba(21,27,31,.28);
 }
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"],
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]:hover,
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]:focus-visible{
+.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]{
   background:var(--mint);
   border-color:var(--mint);
 }
