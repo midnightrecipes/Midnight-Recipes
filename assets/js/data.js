@@ -94,8 +94,8 @@ window.MIDNIGHT_RECIPES = [
     ingredientFile:[
       {name:'GROUND PORK',details:[['Flavor','Rich, savory, fatty'],['Substitute','Ground chicken or turkey, although fatty pork gives the closest result']]},
       {name:'FRESH RED CHILI',details:[['Origin','East & Southeast Asia'],['Flavor','Fresh, sharp, bright heat'],['Substitute','Dried Thai chili or red chili flakes'],['Storage','Refrigerate loosely wrapped.'],['Why here?','Plenty of fresh chili and garlic are essential to this recipe!']]},
-      {name:'GARLIC',details:[['Flavor','Fresh, garlicky, slightly sweet'],['Where to find','Chinese and Asian grocery stores'],['Why here?','Plenty of fresh chili and garlic are essential to this recipe!']]},
-      {name:'DOUBANJIANG',details:[['Origin','China'],['Flavor','Fermented, salty, savory, deeply spicy'],['Where to find','Chinese and Asian grocery stores'],['Substitute','Chili bean paste or, in a pinch, a combination of chili paste and a little miso']]}
+      {name:'GARLIC',details:[['Flavor','Fresh, garlicky, slightly sweet'],['Why here?','Plenty of fresh chili and garlic are essential to this recipe!']]},
+      {name:'DOUBANJIANG',details:[['Origin','China'],['Flavor','Fermented, salty, savory, deeply spicy'],['Substitute','Chili bean paste or, in a pinch, a combination of chili paste and a little miso']]}
     ],
     ingredients:[
       {group:'Taiwan Mince'},
@@ -124,7 +124,7 @@ window.MIDNIGHT_RECIPES = [
         'Add 3 tbsp sesame oil, 20 g minced garlic, and 3–5 finely minced fresh red chilies to a cold frying pan.',
         'Turn the heat to low and gently cook for 1–2 minutes.',
         'Keep the garlic pale. You want the oil infused with garlic and chili, not burnt garlic.'
-      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-01-01.jpg']},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-01-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-01-02.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-01-03.JPG']},
       {number:'02',title:'COOK THE PORK',clock:'11:17 PM',paragraphs:[
         'Increase the heat to medium-high and add 500 g ground pork.',
         'Let the pork sit against the pan briefly so it develops some browned edges.',
@@ -133,7 +133,7 @@ window.MIDNIGHT_RECIPES = [
         'Add 1 tbsp doubanjiang to the exposed oil.',
         'Fry the doubanjiang for 30–45 seconds, then mix it thoroughly into the pork.',
         'This is the key step: frying the doubanjiang directly in the rendered pork fat brings out its fermented, spicy aroma and gives the mince a deeper flavor.'
-      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-02-01.jpg']},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-02-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-02-02.JPG']},
       {number:'03',title:'BRAISE & REDUCE',clock:'11:22 PM',paragraphs:[
         'Add 2 tbsp Shaoxing wine and let it bubble for about 30 seconds.',
         'Add 2 tbsp soy sauce, 2 tsp oyster sauce, 2 tsp gochujang, ½ tsp sugar, 1 tsp chicken bouillon powder, and 180 ml water.',
@@ -143,7 +143,7 @@ window.MIDNIGHT_RECIPES = [
         'Once most of the liquid has been absorbed, increase the heat to medium-high and cook for another 2–4 minutes.',
         'Do not completely dry out the mince.',
         'The finished meat should be deeply colored, glossy and intensely savory, with a small amount of concentrated sauce and pork fat still coating the pan.'
-      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-03-01.jpg']},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-03-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-03-02.JPG']},
       {number:'04',title:'FINISH WITH GARLIC CHIVES',clock:'11:34 PM',paragraphs:[
         'Add 50–60 g garlic chives.',
         'Toss over medium heat for 30–45 seconds.',
@@ -151,7 +151,7 @@ window.MIDNIGHT_RECIPES = [
         'Add ½–1 tsp sesame oil.',
         'Finish with a tiny pinch of sansho or Sichuan pepper, if using.',
         'Taste before adding salt—the soy sauce, doubanjiang, oyster sauce and bouillon already provide plenty of seasoning.'
-      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-04-01.jpg']},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-04-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-04-02.JPG']},
       {number:'05',title:'PLATE',clock:'11:37 PM',paragraphs:[
         'Spoon hot steamed white rice into a shallow bowl.',
         'Pile the Taiwan mince generously over the rice.',

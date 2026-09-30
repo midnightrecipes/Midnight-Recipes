@@ -1338,6 +1338,16 @@ body[data-page="home"] .category-card .photo-frame{
   }
 }
 
+/* Shared recipe divider separation: add one line of space before the existing divider. */
+.recipe-card .recipe-practical-box{
+  margin-top:22px;
+}
+@media (max-width:720px){
+  .recipe-card .recipe-practical-box{
+    margin-top:18px;
+  }
+}
+
 /* Cook Mode / No Sleep: keep the two existing state colors swapped, including hover/focus. */
 .recipe-card .recipe-action-row #cookOpen,
 .recipe-card .recipe-action-row #cookOpen:hover,
