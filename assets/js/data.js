@@ -36,29 +36,29 @@ window.MIDNIGHT_RECIPES = [
         'Press the crumb mixture firmly into a 9-inch (23 cm) pie dish using the flat bottom of a cup.',
         'Bake for 8–10 minutes.',
         'Let it cool.'
-      ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/chocolate-cream-comfort-pie/step-01-01.jpg']},
+      ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/chocolate-cream-comfort-pie/step-01-01.jpg','images/recipes/chocolate-cream-comfort-pie/step01-3.jpg','images/recipes/chocolate-cream-comfort-pie/step01-4.jpg']},
       {number:'02',title:'MAKE IT GLOSSY',clock:'12:20 AM',paragraphs:[
         'In a saucepan, whisk 80g sugar, 4 Tbsp cornstarch, 3 Tbsp cocoa powder, 1 tsp espresso powder, and a pinch of salt.',
         'Slowly pour in 500ml milk, whisking thoroughly until completely smooth before turning on the heat.',
         'Cook over medium heat, whisking constantly until the mixture bubbles and thickens into a pudding-like consistency.',
         'Remove the pan from the heat.'
-      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-02-01.jpg']},
+      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-02-01.jpg','images/recipes/chocolate-cream-comfort-pie/step02-2.jpg','images/recipes/chocolate-cream-comfort-pie/step02-3.jpg','images/recipes/chocolate-cream-comfort-pie/step02-4.jpg','images/recipes/chocolate-cream-comfort-pie/step02-6.jpg']},
       {number:'03',title:'MAKE IT SILKY',clock:'12:28 AM',paragraphs:[
         'In a separate bowl, whisk 4 egg yolks.',
         'Slowly whisk ½ cup of the hot chocolate cream into the yolks to warm them up, then pour the yolk mixture back into the pan.',
         'Return to low heat for 1 minute, whisking constantly until thick and glossy.',
         'Remove from heat, then stir in 150g chopped dark chocolate and 20g butter until fully melted and smooth.'
-      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-03-01.jpg']},
+      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-03-01.jpg','images/recipes/chocolate-cream-comfort-pie/step03-2.jpg','images/recipes/chocolate-cream-comfort-pie/step03-3.jpg']},
       {number:'04',title:'POUR AND WAIT',clock:'12:35 AM',paragraphs:[
         'Pour the warm chocolate filling into your chilled pie crust.',
         'Tap the pie dish gently on the counter 2–3 times to level the surface and release trapped air bubbles.',
         'Refrigerate for at least 4 hours. Overnight works best.'
-      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-04-01.jpg']},
+      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-04-01.jpg','images/recipes/chocolate-cream-comfort-pie/step04-2.jpg','images/recipes/chocolate-cream-comfort-pie/step04-3.jpg']},
       {number:'05',title:'WHIP IT LATE',clock:'Optional',paragraphs:[
         'Whip 200ml cold cream to soft peaks.',
         'Gradually add 2 Tbsp sugar and whip until medium-firm peaks form.',
         'Dollop generously over the chilled pie and finish with cocoa powder, cacao nibs, or flaky sea salt.'
-      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-05-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-05-02.jpg']}
+      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-05-01.jpg','images/recipes/chocolate-cream-comfort-pie/step05-2.jpg']}
     ],
     notes:[['Recreating the Flavor','I use dark chocolate together with cocoa powder and a hint of espresso powder to take the filling beyond a simple cocoa base, creating a deeper and more layered chocolate flavor.'],['Midnight Shortcut','Chilling the crust in the freezer while preparing the filling saves time without adding another complicated step.'],['Midnight Compromises','If you are too exhausted to whisk by hand, store-bought whipped cream works perfectly well. Freshly whipped cream, however, gives a better texture and a prettier finish when you have a few extra minutes.']],
     finePrint:{'Best Eaten':'Tomorrow — the filling becomes firmer and the flavors settle overnight.','Make ahead':'Yes — up to 1 day ahead. Prepare the pie and add the whipped cream just before serving.','Storage':'Refrigerate, covered, for up to 3 days.','Freezer':'Not Recommended.','Reheat':'N/A — serve chilled.'},
