@@ -1312,19 +1312,30 @@ body[data-page="home"] .category-card .photo-frame{
   }
 }
 
-/* Image-only fix: keep the v32 Home layout untouched; limit instruction photos to two columns. */
-.recipe-card .step-photos{grid-template-columns:repeat(2,minmax(0,1fr));}
+/* Step Photo layout: up to four photos across on PC/iPad; two across on iPhone. */
+.recipe-card .step-photos{grid-template-columns:repeat(4,minmax(0,1fr));}
 .recipe-card .step-photos.step-photos-1{grid-template-columns:1fr;}
-.recipe-card .step-photos.step-photos-2,
-.recipe-card .step-photos.step-photos-3,
-.recipe-card .step-photos.step-photos-4{grid-template-columns:repeat(2,minmax(0,1fr));}
-@media (max-width:720px){
+.recipe-card .step-photos.step-photos-2{grid-template-columns:repeat(2,minmax(0,1fr));}
+.recipe-card .step-photos.step-photos-3{grid-template-columns:repeat(3,minmax(0,1fr));}
+.recipe-card .step-photos.step-photos-4{grid-template-columns:repeat(4,minmax(0,1fr));}
+@media (max-width:767px){
   .recipe-card .step-photos{grid-template-columns:repeat(2,minmax(0,1fr));}
   .recipe-card .step-photos.step-photos-1{grid-template-columns:1fr;}
   .recipe-card .step-photos.step-photos-2,
   .recipe-card .step-photos.step-photos-3,
   .recipe-card .step-photos.step-photos-4{grid-template-columns:repeat(2,minmax(0,1fr));}
 }
-@media (max-width:430px){
-  .recipe-card .step-photos.step-photos-3{grid-template-columns:repeat(2,minmax(0,1fr));}
+
+/* Cook Mode / No Sleep: keep the two existing state colors swapped, including hover/focus. */
+.recipe-card .recipe-action-row #cookOpen,
+.recipe-card .recipe-action-row #cookOpen:hover,
+.recipe-card .recipe-action-row #cookOpen:focus-visible{
+  background:var(--mint)!important;
+  border-color:var(--mint)!important;
+}
+.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"],
+.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]:hover,
+.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]:focus-visible{
+  background:rgba(201,255,216,.48)!important;
+  border-color:rgba(21,27,31,.28)!important;
 }
