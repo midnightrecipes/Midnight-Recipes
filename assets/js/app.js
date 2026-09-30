@@ -69,12 +69,13 @@ function parseQuantity(value){
   if(/^\d+\/\d+$/.test(s)){const [a,b]=s.split('/').map(Number);return a/b}
   return Number(s);
 }
-function scaleInstructionQuantity(num,rawUnit,scale,unit,context='',pos=0){
+function scaleInstructionQuantity(num,rawUnit,scale,unit,context='',pos=0,ingredientContext=''){
   const amount=parseQuantity(num)*scale;
-  const item=inferIngredientFromText(context,pos);
-  return convert(amount,rawUnit,unit,item);
+  const unitCanInferBefore=/^(g|kg|ml|l|oz|ounces?|lbs?|pounds?|tsp|teaspoons?|tbsp|tablespoons?|cups?|cup)$/i.test(String(rawUnit||''));
+  const item=inferIngredientFromText(context,pos,ingredientContext,unitCanInferBefore);
+  return convert(amount,rawUnit,unit,item,ingredientContext);
 }
-function scaleInstructionText(value,r,scale,unit){
+function scaleInstructionText(value,r,scale,unit,ingredientContext=''){
   let text=String(value??'');
   const atom='(?:\\d+\\s+\\d+\\/\\d+|\\d+\\/\\d+|\\d+(?:\\.\\d+)?)';
   const range=`${atom}(?:\\s*[–-]\\s*${atom})?`;
@@ -83,40 +84,56 @@ function scaleInstructionText(value,r,scale,unit){
   text=text.replace(quantityPattern,(match,prefix,num,rawUnit,offset)=>{
     const rangeParts=num.match(new RegExp(`^(${atom})(?:\\s*[–-]\\s*(${atom}))?$`));
     if(!rangeParts)return match;
-    const first=scaleInstructionQuantity(rangeParts[1],rawUnit,scale,unit,text,offset+prefix.length);
+    const first=scaleInstructionQuantity(rangeParts[1],rawUnit,scale,unit,text,offset+prefix.length,ingredientContext);
     if(!rangeParts[2])return prefix+first;
-    const second=scaleInstructionQuantity(rangeParts[2],rawUnit,scale,unit,text,offset+prefix.length);
+    const second=scaleInstructionQuantity(rangeParts[2],rawUnit,scale,unit,text,offset+prefix.length,ingredientContext);
     return `${prefix}${first}–${second}`;
   });
   return text;
 }
-function instructionAmount(a,scale,unit){
-  if(a&&a.min!==undefined&&a.max!==undefined)return `${scaleInstructionQuantity(String(a.min),a.unit,scale,unit)}–${scaleInstructionQuantity(String(a.max),a.unit,scale,unit)}`;
-  if(a&&a.value!==undefined)return scaleInstructionQuantity(String(a.value),a.unit,scale,unit);
+function instructionAmount(a,scale,unit,context=''){
+  if(a&&a.min!==undefined&&a.max!==undefined)return `${scaleInstructionQuantity(String(a.min),a.unit,scale,unit,context)}–${scaleInstructionQuantity(String(a.max),a.unit,scale,unit,context)}`;
+  if(a&&a.value!==undefined)return scaleInstructionQuantity(String(a.value),a.unit,scale,unit,context);
   return '';
 }
 function instructionModeParts(value){
   const raw=String(value??'').trim();
   const m=raw.match(/^\*\*(Midnight Shortcut|Food Processor \(Fastest\)|Quiet Mode \(Silent\))\s*:\*\*\s*(.*)$/i) || raw.match(/^(Midnight Shortcut|Food Processor \(Fastest\)|Quiet Mode \(Silent\))\s*:\s*(.*)$/i);
-  if(!m)return null;
-  return {label:m[1],body:m[2]};
+  if(m)return {label:m[1],body:m[2]};
+  const title=raw.match(/^(Midnight Shortcut|Food Processor|Quiet Mode)(?:\s*[—-]\s*(Fastest|Silent|Microwave|Boil))?\s*:?[ ]*$/i);
+  if(title){
+    const label=title[2]&&/^(Food Processor|Quiet Mode)$/i.test(title[1])?`${title[1]} (${title[2]})`:title[2]&&/^Midnight Shortcut$/i.test(title[1])?`${title[1]} — ${title[2]}`:title[1];
+    return {label,body:'',titleOnly:true};
+  }
+  return null;
 }
 function instructionIsModeTitle(value){return !!instructionModeParts(value);}
-function instructionParagraph(value,isNote=false,r=null,scale=1,unit='metric',mode=false){
+function structuredInstructionText(value,r,scale,unit,context=''){
+  if(!value||typeof value!=='object'||typeof value.text!=='string')return '';
+  let text=value.text;
+  const amounts=Array.isArray(value.amounts)?value.amounts:[];
+  text=text.replace(/\{\{amount:(\d+)\}\}/g,(m,i)=>instructionAmount(amounts[Number(i)],scale,unit,context));
+  return text;
+}
+function instructionParagraph(value,isNote=false,r=null,scale=1,unit='metric',mode=false,context=''){
+  if(value&&typeof value==='object'){
+    const text=structuredInstructionText(value,r,scale,unit,context);
+    return `<p class="${isNote?'step-note':''}${mode?' instruction-mode-body':''}">${richText(text)}</p>`;
+  }
   const parts=instructionModeParts(value);
   if(parts){
-    const body=parts.body?scaleInstructionText(parts.body,r,scale,unit):'';
+    const body=parts.body?scaleInstructionText(parts.body,r,scale,unit,context):'';
     return `<p class="instruction-mode"><strong>${esc(parts.label)}:</strong>${body?` ${richText(body)}`:''}</p>`;
   }
-  const text=scaleInstructionText(value,r,scale,unit);
-  return `<p class="${isNote?'step-note':''}${mode?' instruction-mode-body':''}">${text}</p>`;
+  const text=scaleInstructionText(value,r,scale,unit,context);
+  return `<p class="${isNote?'step-note':''}${mode?' instruction-mode-body':''}">${richText(text)}</p>`;
 }
-function instructionBlock(paragraphs,r,scale,unit){
+function instructionBlock(paragraphs,r,scale,unit,context=''){
   let mode=false;
   return paragraphs.map(p=>{
     const isTitle=instructionIsModeTitle(p);
-    const html=instructionParagraph(p,false,r,scale,unit,mode);
-    mode=isTitle||mode;
+    const html=instructionParagraph(p,false,r,scale,unit,mode,context);
+    mode=isTitle&&!!instructionModeParts(p)?.titleOnly;
     return html;
   }).join('');
 }
@@ -151,24 +168,39 @@ function recipeHtml(r){
   const foundIn=foundTitles.map(title=>{const found=recipes.find(x=>x.title===title&&!x.isUsuals);return found?`<a href="${href('recipes/recipe.html',{slug:found.slug})}">${esc(title)}</a>`:`<span>${esc(title)}</span>`;}).join('<br>');
   const intro=isUsual?`<section class="usual-intro"><p class="body-copy"><em>${esc(r.description||'')}</em></p>${String(r.usualIntro||'').split(/\n\s*\n/).filter(Boolean).map(x=>`<p class="body-copy">${esc(x)}</p>`).join('')}</section>`:'';
   const statsPan=(isUsual||r.showPan)&&r.stats?.pan?`<br><b>Pan</b>: ${esc(r.stats.pan)}`:'';const statsChill=r.showChill&&r.stats?.chill?`<br><b>Chill</b>: ${esc(r.stats.chill)}`:'';
-  return `<div class="recipe-card"><div class="rtop"><div><h1 class="rtitle">${esc(cutieText(r.title))}</h1><div class="meta-line"><span>${r.timeStamp?`📍 ${esc(r.timeStamp)}<span> · TORONTO</span>`:'The Usuals'}</span></div><div class="tags">${(r.tags||[]).map(t=>`<a href="${href('recipes/index.html',{q:t})}">#${esc(t)}</a>`).join('')}</div><p class="facts">${isUsual?`<b>The Usuals</b>: <a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:`<b>Source</b>: <a href="${categoryLink('source',r.source)}">${esc(r.source)}</a>${r.sourceSecondary?` / <a href="${categoryLink('source',r.sourceSecondary)}">${esc(r.sourceSecondary)}</a>`:''}${hasMeaningfulValue(r.original)?`<br><b>Original</b>: ${esc(r.original)}`:''}${r.dish?`<br><b>Dish</b>: ${esc(r.dish)}`:''}<br><b>Cuisine</b>: <a href="${categoryLink('cuisine',r.cuisine)}">${esc(r.cuisine)}</a><br><b>Course</b>: <a href="${categoryLink('course',canonicalCourse(r))}">${esc(courseDisplay(r))}</a>`}</p><div class="recipe-jump-top"><button class="btn" data-jump="the-recipe">Jump To Recipe</button></div></div>${photo(r.heroImage,r.title)}</div>${intro}${!isUsual&&r.story?`<section><h2 class="h3">THE STORY</h2><p class="body-copy">${richText(r.story)}</p></section>`:''}${(ingredientFile.name||file.length||fileGroups.length)?`<section id="ingredient-file-section"><h2 class="h3">INGREDIENT FILE</h2><div class="ingredient-file">${ingredientFileMarkup(r,ingredientFile)}${ingredientFile.name?`<div class="ingredient-file-name">${esc(ingredientFile.name)}</div>`:''}${file.length?`<div class="ingredient-file-details">${file.map(([k,v])=>`<p><strong>${esc(k)}:</strong> ${esc(v)}</p>`).join('')}</div>`:''}</div></section>`:''}<div class="recipe-practical-box"><section id="the-recipe"><h2 class="h3">THE RECIPE</h2><div class="recipe-inner"><div>${r.recipeImage?photo(r.recipeImage,r.title):''}<h3 class="rname">${esc(cutieText(r.recipeTitle||r.title))}</h3><p class="stats"><b>Prep</b>: ${esc(r.stats?.prep||'—')} <b>Cook</b>: ${esc(r.stats?.cook||'—')}<br><b>Total</b>: ${esc(r.stats?.total||'—')}${statsChill}<br><b>Serves</b>: ${esc(r.stats?.serves||'—')}${statsPan}<br><b>Quiet level</b>: ${esc(r.stats?.quest||'—')}</p><div class="recipe-actions recipe-action-row"><button class="btn" id="cookOpen" aria-pressed="false">Cook Mode</button><button class="btn" id="shareRecipe">Share</button><button class="btn" id="printRecipe">Print</button></div><h4 class="block-title" style="margin-top:34px">INGREDIENTS</h4><div class="toggle-row" id="unitToggle"><button data-unit="metric" aria-pressed="true">Metric</button><button data-unit="imperial" aria-pressed="false">US</button></div><div class="toggle-row small" id="scaleToggle">${scaleOptions.map(v=>`<button data-scale="${v}"${v==='1'?` aria-pressed="true"`:''}>${v==='1'?'×1':`×${v}`}</button>`).join('')}</div><ul class="ing" id="ingredientsList"></ul>${fileGroups.length?`<p class="ingredient-file-guide">ⓘ <a href="#ingredient-file-section">Click for substitutions &amp; ingredient tips</a></p>`:''}</div><div><h4 class="block-title">INSTRUCTIONS</h4>${(r.steps||[]).map((s,i)=>{const label=s.number&&s.title?`${s.number} — ${s.title}`:(s.label||'');const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs:(s.text||'').split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);return `<div class="step"><div class="step-head"><span>${esc(label)}</span><span>${esc(s.clock||'')}</span></div><div class="step-copy">${instructionBlock(paragraphs,r,window.__recipeScale||1,window.__recipeUnit||'metric')}${s.stepNote?instructionParagraph(s.stepNote,true,r,window.__recipeScale||1,window.__recipeUnit||'metric'):''}</div>${stepPhotoMarkup(s,r,i)}</div>`}).join('')}</div></div></section></div>${r.notes?.length?`<section><h2 class="h3">MIDNIGHT NOTES</h2><p class="note-sub">How I made it work in my kitchen.</p><div class="notes-list">${r.notes.map(n=>`<div class="note-item"><div class="note-title"><b>${esc(n[0])}</b></div><div class="note-body">${plainRichText(n[1])}</div></div>`).join('')}</div></section>`:''}${isUsual&&foundTitles.length?`<section class="found-in"><h2 class="h3">FOUND IN</h2><p class="note-sub">${esc(r.foundInIntro||'Recipes that use this usual...')}</p><div class="body-copy found-in-list">${foundIn}</div></section>`:''}${r.finePrint?`<section><h2 class="h3">THE FINE PRINT</h2><p class="note-sub">Tonight or tomorrow?</p><p class="body-copy">${Object.entries(r.finePrint).filter(([k,v])=>hasMeaningfulValue(k)&&hasMeaningfulValue(v)).map(([k,v])=>`<b>${esc(k)}</b>: ${richText(v)}<br>`).join('')}</p></section>`:''}<footer class="recipe-footer"><p><b>Inspired by</b>: ${r.footerInspiredBy?footerLinks('source',r.footerInspiredBy):(isUsual?`<a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:footerLinks('source',r.source))}</p><p><b>Cuisine</b>: ${footerLinks('cuisine',r.footerCuisine||r.cuisine)}</p><p><b>Course</b>: ${footerLinks('course',r.footerCourse||courseDisplay(r))}</p><p><b>Main ingredients</b>: ${footerIngredientValues(r).map((x,i)=>`<a href="${href('recipes/index.html',{q:x})}">${esc(x)}</a>${i<footerIngredientValues(r).length-1?' · ':''}`).join('')}</p>${r.footerRating?`<p class="footer-rating">${esc(r.footerRating)}</p>`:''}<div class="review-form"><h4 class="block-title">How did you like it?</h4><div class="star-picker" id="starPicker" aria-label="Choose a rating">${[1,2,3,4,5].map(n=>`<button type="button" data-star="${n}" aria-label="${n} stars" aria-pressed="false">☆</button>`).join('')}</div><input id="reviewName" maxlength="80" placeholder="Name (optional)"><textarea id="reviewComment" maxlength="1000" placeholder="Comment (optional)"></textarea><button class="btn" id="submitReview">Submit</button><p class="review-status" id="reviewStatus">Reviews are saved on this device only until a shared backend is connected.</p><div id="reviewList" class="review-list"></div></div></footer></div>`
+  return `<div class="recipe-card"><div class="rtop"><div><h1 class="rtitle">${esc(cutieText(r.title))}</h1><div class="meta-line"><span>${r.timeStamp?`📍 ${esc(r.timeStamp)}<span> · TORONTO</span>`:'The Usuals'}</span></div><div class="tags">${(r.tags||[]).map(t=>`<a href="${href('recipes/index.html',{q:t})}">#${esc(t)}</a>`).join('')}</div><p class="facts">${isUsual?`<b>The Usuals</b>: <a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:`<b>Source</b>: <a href="${categoryLink('source',r.source)}">${esc(r.source)}</a>${r.sourceSecondary?` / <a href="${categoryLink('source',r.sourceSecondary)}">${esc(r.sourceSecondary)}</a>`:''}${hasMeaningfulValue(r.original)?`<br><b>Original</b>: ${esc(r.original)}`:''}${r.dish?`<br><b>Dish</b>: ${esc(r.dish)}`:''}<br><b>Cuisine</b>: <a href="${categoryLink('cuisine',r.cuisine)}">${esc(r.cuisine)}</a><br><b>Course</b>: <a href="${categoryLink('course',canonicalCourse(r))}">${esc(courseDisplay(r))}</a>`}</p><div class="recipe-jump-top"><button class="btn" data-jump="the-recipe">Jump To Recipe</button></div></div>${photo(r.heroImage,r.title)}</div>${intro}${!isUsual&&r.story?`<section><h2 class="h3">THE STORY</h2><p class="body-copy">${richText(r.story)}</p></section>`:''}${(ingredientFile.name||file.length||fileGroups.length)?`<section id="ingredient-file-section"><h2 class="h3">INGREDIENT FILE</h2><div class="ingredient-file">${ingredientFileMarkup(r,ingredientFile)}${ingredientFile.name?`<div class="ingredient-file-name">${esc(ingredientFile.name)}</div>`:''}${file.length?`<div class="ingredient-file-details">${file.map(([k,v])=>`<p><strong>${esc(k)}:</strong> ${esc(v)}</p>`).join('')}</div>`:''}</div></section>`:''}<div class="recipe-practical-box"><section id="the-recipe"><h2 class="h3">THE RECIPE</h2><div class="recipe-inner"><div>${r.recipeImage?photo(r.recipeImage,r.title):''}<h3 class="rname">${esc(cutieText(r.recipeTitle||r.title))}</h3><p class="stats"><b>Prep</b>: ${esc(r.stats?.prep||'—')} <b>Cook</b>: ${esc(r.stats?.cook||'—')}<br><b>Total</b>: ${esc(r.stats?.total||'—')}${statsChill}<br><b>Serves</b>: ${esc(r.stats?.serves||'—')}${statsPan}<br><b>Quiet level</b>: ${esc(r.stats?.quest||'—')}</p><div class="recipe-actions recipe-action-row"><button class="btn" id="cookOpen" aria-pressed="false">Cook Mode</button><button class="btn" id="shareRecipe">Share</button><button class="btn" id="printRecipe">Print</button></div><h4 class="block-title" style="margin-top:34px">INGREDIENTS</h4><div class="toggle-row" id="unitToggle"><button data-unit="metric" aria-pressed="true">Metric</button><button data-unit="imperial" aria-pressed="false">US</button></div><div class="toggle-row small" id="scaleToggle">${scaleOptions.map(v=>`<button data-scale="${v}"${v==='1'?` aria-pressed="true"`:''}>${v==='1'?'×1':`×${v}`}</button>`).join('')}</div><ul class="ing" id="ingredientsList"></ul>${fileGroups.length?`<p class="ingredient-file-guide">ⓘ <a href="#ingredient-file-section">Click for substitutions &amp; ingredient tips</a></p>`:''}</div><div><h4 class="block-title">INSTRUCTIONS</h4>${(r.steps||[]).map((s,i)=>{const label=s.number&&s.title?`${s.number} — ${s.title}`:(s.label||'');const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs:(s.text||'').split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);return `<div class="step"><div class="step-head"><span>${esc(label)}</span><span>${esc(s.clock||'')}</span></div><div class="step-copy">${instructionBlock(paragraphs,r,window.__recipeScale||1,window.__recipeUnit||'metric',s.title||'')}${s.stepNote?instructionParagraph(s.stepNote,true,r,window.__recipeScale||1,window.__recipeUnit||'metric',false,s.title||''):''}</div>${stepPhotoMarkup(s,r,i)}</div>`}).join('')}</div></div></section></div>${r.notes?.length?`<section><h2 class="h3">MIDNIGHT NOTES</h2><p class="note-sub">How I made it work in my kitchen.</p><div class="notes-list">${r.notes.map(n=>`<div class="note-item"><div class="note-title"><b>${esc(n[0])}</b></div><div class="note-body">${plainRichText(n[1])}</div></div>`).join('')}</div></section>`:''}${isUsual&&foundTitles.length?`<section class="found-in"><h2 class="h3">FOUND IN</h2><p class="note-sub">${esc(r.foundInIntro||'Recipes that use this usual...')}</p><div class="body-copy found-in-list">${foundIn}</div></section>`:''}${r.finePrint?`<section><h2 class="h3">THE FINE PRINT</h2><p class="note-sub">Tonight or tomorrow?</p><p class="body-copy">${Object.entries(r.finePrint).filter(([k,v])=>hasMeaningfulValue(k)&&hasMeaningfulValue(v)).map(([k,v])=>`<b>${esc(k)}</b>: ${richText(v)}<br>`).join('')}</p></section>`:''}<footer class="recipe-footer"><p><b>Inspired by</b>: ${r.footerInspiredBy?footerLinks('source',r.footerInspiredBy):(isUsual?`<a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:footerLinks('source',r.source))}</p><p><b>Cuisine</b>: ${footerLinks('cuisine',r.footerCuisine||r.cuisine)}</p><p><b>Course</b>: ${footerLinks('course',r.footerCourse||courseDisplay(r))}</p><p><b>Main ingredients</b>: ${footerIngredientValues(r).map((x,i)=>`<a href="${href('recipes/index.html',{q:x})}">${esc(x)}</a>${i<footerIngredientValues(r).length-1?' · ':''}`).join('')}</p>${r.footerRating?`<p class="footer-rating">${esc(r.footerRating)}</p>`:''}<div class="review-form"><h4 class="block-title">How did you like it?</h4><div class="star-picker" id="starPicker" aria-label="Choose a rating">${[1,2,3,4,5].map(n=>`<button type="button" data-star="${n}" aria-label="${n} stars" aria-pressed="false">☆</button>`).join('')}</div><input id="reviewName" maxlength="80" placeholder="Name (optional)"><textarea id="reviewComment" maxlength="1000" placeholder="Comment (optional)"></textarea><button class="btn" id="submitReview">Submit</button><p class="review-status" id="reviewStatus">Reviews are saved on this device only until a shared backend is connected.</p><div id="reviewList" class="review-list"></div></div></footer></div>`
 }
 function normalizeQuantityIngredient(value){
   return String(value??'').toLowerCase().replace(/[’']/g,"'").replace(/[^a-z0-9%.]+/g,' ').replace(/\s+/g,' ').trim();
 }
 const unitIngredientMap={
   metric:{
-    'white sugar':'g','espresso powder':'g','salt':'g','unsweetened cocoa powder':'g','cornstarch':'g','ground ginger':'g','ground cinnamon':'g','cinnamon':'g','ground ginger':'g','ginger':'g','plain biscuits':'g','sugar':'g','chicken bouillon powder':'g',
-    'sesame oil':'ml','10% cream':'ml','half & half / 10% cream':'ml'
+    'white sugar':'g','espresso powder':'g','salt':'g','unsweetened cocoa powder':'g','cornstarch':'g','ground ginger':'g','ground cinnamon':'g','cinnamon':'g','ginger':'g','plain biscuits':'g','sugar':'g','chicken bouillon powder':'g',
+    'sesame oil':'ml','10% cream':'ml','half & half / 10% cream':'ml','half & half':'ml','half half':'ml','ice water':'ml'
   },
   imperial:{
-    'ground pork':'lb','cooked sweet potato':'cup','cornstarch':'cup','3.25% milk':'cup','half & half / 10% cream':'cup','10% cream':'cup','whole milk':'cup','unsalted butter':'cup','unsalted butter melted':'cup','graham crackers':'cup','graham crackers finely crushed':'cup','dark brown sugar':'cup','molasses':'cup','finely crushed':'cup','dark chocolate chopped':'cup','sugar':'cup','35% whipping cream':'cup','brown sugar':'cup','whipped cream':'cup','water':'cup','granulated sugar':'cup','apples':'cup','chives':'cup',
+    'ground pork':'lb','cooked sweet potato':'cup','cornstarch':'cup','3.25% milk':'cup','half & half / 10% cream':'cup','half & half':'cup','half half':'cup','10% cream':'cup','whole milk':'cup','unsalted butter':'cup','unsalted butter melted':'cup','graham crackers':'cup','graham crackers finely crushed':'cup','dark brown sugar':'cup','molasses':'cup','finely crushed':'cup','dark chocolate chopped':'cup','sugar':'cup','white sugar':'cup','35% whipping cream':'cup','brown sugar':'cup','whipped cream':'cup','water':'cup','granulated sugar':'cup','apples':'cup','chives':'cup','garlic chives or green onion':'cup',
     'garlic':'tbsp','fresh ginger':'tbsp','ground cinnamon':'tbsp','cinnamon':'tbsp','ground ginger':'tbsp','ginger':'tbsp','salt':'tbsp','kosher salt':'tbsp'
   }
 };
+const orangeSyrupIngredients={'dark brown sugar':'tbsp','molasses':'tbsp','orange juice':'tbsp','water':'tbsp'};
 const densityPerUnit={
   
-  'g|tsp':1/6,
+  'salt|tsp':6,
+  'kosher salt|tsp':6,
+  'ground cinnamon|tsp':2.6,
+  'cinnamon|tsp':2.6,
+  'ground ginger|tsp':2,
+  'ginger|tsp':2,
+  'fresh ginger|tsp':2,
+  'garlic|tsp':8.5/3,
+  'unsweetened cocoa powder|tsp':5.4/3,
+  'cornstarch|tsp':8/3,
+  'sugar|tsp':12.5/3,
+  'dark brown sugar|tbsp':12.5,
+  'molasses|tbsp':20.5,
+  'orange juice|tbsp':14.7868,
+  'water|tbsp':14.7868,
   'salt|tbsp':18,
   'kosher salt|tbsp':18,
   'ground cinnamon|tbsp':7.8,
@@ -208,18 +240,23 @@ const densityPerUnit={
 };
 function ingredientKey(value){
   let s=normalizeQuantityIngredient(value);
-  s=s.replace(/\bfinely\s+crushed\b/g,'finely crushed').replace(/\bchopped\b/g,'chopped').replace(/\bcrumbs?\b/g,'');
+  s=s.replace(/\bfinely\s+(?:crushed|minced|grated)\b/g,'').replace(/\bchopped\b|\bminced\b|\bpeeled\b|\bcored\b|\bvery ripe\b|\bripe\b|\bmashed\b|\bfor finishing\b|\bfor finish\b|\bto taste\b/g,'').replace(/\band\s+cut\s+into\b.*$/,'').replace(/\bcut\s+into\b.*$/,'');
   s=s.replace(/\s+/g,' ').trim();
   const aliases={
     'espresso powder':'espresso powder','espresso powder':'espresso powder','graham crackers finely crushed':'graham crackers finely crushed','graham crackers finely crushed':'graham crackers finely crushed',
-    'unsalted butter melted':'unsalted butter melted','unsalted butter cubed':'unsalted butter','dark chocolate chopped':'dark chocolate chopped','half half 10% cream':'half & half / 10% cream','graham crackers finely crushed':'graham crackers finely crushed','unsweetened cocoa powder':'unsweetened cocoa powder','dark chocolate chopped':'dark chocolate chopped'
+    'unsalted butter melted':'unsalted butter melted','unsalted butter cubed':'unsalted butter','dark chocolate chopped':'dark chocolate chopped','half half 10% cream':'half & half / 10% cream','half half 10 cream':'half & half / 10% cream','half and half 10% cream':'half & half / 10% cream','half and half 10 cream':'half & half / 10% cream','fatty ground pork':'ground pork','white sugar':'sugar','unsweetened cocoa powder':'unsweetened cocoa powder','plain biscuits finely crushed':'plain biscuits','cooked sweet potato flesh':'cooked sweet potato','garlic chives or green onion cut into 3 4 cm pieces':'garlic chives or green onion','garlic chives or green onion':'garlic chives or green onion'
   };
   return aliases[s]||s;
 }
-function desiredUnit(item,mode,rawUnit){
+function desiredUnit(item,mode,rawUnit,context=''){
   const key=ingredientKey(item);
+  const contextText=normalizeQuantityIngredient(context);
+  if(contextText.includes('orange molasses syrup')&&orangeSyrupIngredients[key])return orangeSyrupIngredients[key];
   const map=unitIngredientMap[mode]||{};
   if(map[key])return map[key];
+  const candidates=Object.keys(map).sort((a,b)=>b.length-a.length);
+  const matched=candidates.find(k=>key===k||key.startsWith(k+' '));
+  if(matched)return map[matched];
   const u=String(rawUnit||'').toLowerCase();
   if(mode==='imperial'&&['tsp','teaspoon','teaspoons'].includes(u))return 'tsp';
   return null;
@@ -233,38 +270,45 @@ function fraction8(n){
   if(whole===0)return glyph[eighth]||String(eighth)+'/8';
   return `${whole} ${glyph[eighth]||String(eighth)+'/8'}`;
 }
+function densityValue(key,targetUnit){
+  const exact=densityPerUnit[`${key}|${targetUnit}`];
+  if(exact)return exact;
+  const entries=Object.keys(densityPerUnit).filter(k=>k.endsWith(`|${targetUnit}`)).sort((a,b)=>b.length-a.length);
+  const match=entries.find(k=>key===k.slice(0,-targetUnit.length-1)||key.startsWith(k.slice(0,-targetUnit.length-1)+' '));
+  return match?densityPerUnit[match]:null;
+}
 function formatUnitValue(n,u){
   if(!u)return String(Math.round(Number(n)*100)/100);
   const unit=String(u).toLowerCase();
   if(unit==='tbsp'||unit==='tsp')return `${fraction8(n)} ${u}`;
-  if(['g','ml','lb','cup','cups','oz','fl oz','l','kg'].includes(unit))return `${(Math.round(Number(n)*10)/10).toFixed(1)} ${u}`;
+  if(['g','ml','lb','cup','cups','oz','fl oz','l','kg'].includes(unit)){const rounded=Math.round(Number(n)*10)/10;return `${Number.isInteger(rounded)?String(rounded):rounded.toFixed(1)} ${u}`;}
   return `${Math.round(Number(n)*100)/100} ${u}`;
 }
-function convertToUnit(amount,from,to,item=''){
+function convertToUnit(amount,from,to,item='',context=''){
   const n=Number(amount); if(!Number.isFinite(n))return `${amount} ${to||from||''}`.trim();
   const f=String(from||'').toLowerCase(); const t=String(to||'').toLowerCase();
   if(!t||f===t)return formatUnitValue(n,to||from);
   const key=ingredientKey(item);
   if(f==='g'&&t==='lb')return formatUnitValue(n/453.592,'lb');
   if(f==='g'&&t==='cup'){
-    const density=densityPerUnit[`${key}|cup`]; if(density)return formatUnitValue(n/density,'cup');
+    const density=densityValue(key,'cup'); if(density)return formatUnitValue(n/density,'cup');
   }
   if(f==='tbsp'&&t==='cup'){
-    const density=densityPerUnit[`${key}|tbsp`]; if(density)return formatUnitValue(n*density/ (densityPerUnit[`${key}|cup`]||240),'cup');
+    const density=densityValue(key,'tbsp'); if(density)return formatUnitValue(n*density/ (densityValue(key,'cup')||240),'cup');
     return formatUnitValue(n/16,'cup');
   }
   if(f==='ml'&&t==='cup')return formatUnitValue(n/240,'cup');
   if(f==='g'&&t==='tbsp'){
-    const density=densityPerUnit[`${key}|tbsp`]; if(density)return formatUnitValue(n/density,'tbsp');
+    const density=densityValue(key,'tbsp'); if(density)return formatUnitValue(n/density,'tbsp');
   }
   if(f==='g'&&t==='tsp'){
-    const density=densityPerUnit[`${key}|tsp`]; if(density)return formatUnitValue(n/density,'tsp');
+    const density=densityValue(key,'tsp'); if(density)return formatUnitValue(n/density,'tsp');
   }
   if(f==='tbsp'&&t==='g'){
-    const density=densityPerUnit[`${key}|tbsp`]; if(density)return formatUnitValue(n*density,'g');
+    const density=densityValue(key,'tbsp'); if(density)return formatUnitValue(n*density,'g');
   }
   if(f==='tsp'&&t==='g'){
-    const density=densityPerUnit[`${key}|tsp`]; if(density)return formatUnitValue(n*density,'g');
+    const density=densityValue(key,'tsp'); if(density)return formatUnitValue(n*density,'g');
   }
   if(f==='g'&&t==='ml'){
     if(key==='10% cream'||key==='half & half / 10% cream')return formatUnitValue(n/1.01,'ml');
@@ -281,6 +325,7 @@ function convertToUnit(amount,from,to,item=''){
   if(f==='tsp'&&t==='tbsp')return formatUnitValue(n/3,'tbsp');
   if(f==='tbsp'&&t==='ml')return formatUnitValue(n*14.7868,'ml');
   if(f==='tsp'&&t==='ml')return formatUnitValue(n*4.92892,'ml');
+  if(f==='ml'&&t==='tbsp')return formatUnitValue(n/14.7868,'tbsp');
   if(f==='tbsp'&&t==='cup')return formatUnitValue(n/16,'cup');
   if(f==='tsp'&&t==='cup')return formatUnitValue(n/48,'cup');
   if(f==='cup'&&t==='tbsp')return formatUnitValue(n*16,'tbsp');
@@ -290,16 +335,31 @@ function convertToUnit(amount,from,to,item=''){
   if(f==='ml'&&t==='fl oz')return formatUnitValue(n/29.5735,'fl oz');
   return formatUnitValue(n,to);
 }
-function inferIngredientFromText(text,pos){
-  const tail=String(text||'').slice(pos,pos+90).toLowerCase();
-  const candidates=Object.keys({...unitIngredientMap.metric,...unitIngredientMap.imperial}).sort((a,b)=>b.length-a.length);
-  return candidates.find(k=>tail.includes(k))||'';
+function inferIngredientFromText(text,pos,context='',allowBefore=true){
+  const source=String(text||'');
+  const after=source.slice(pos,pos+90).toLowerCase();
+  const before=source.slice(Math.max(0,pos-90),pos).toLowerCase();
+  const afterSegment=after.split(/[,;]/,1)[0];
+  const ingredientAfter=afterSegment.replace(/^\s*(?:\d+\s+\d+\/\d+|\d+\/\d+|\d+(?:\.\d+)?)\s*(?:g|kg|ml|l|oz|ounces?|lbs?|pounds?|tsp|teaspoons?|tbsp|tablespoons?|cups?|cup|large\s+eggs?|eggs?)\s*/i,'');
+  const normalizedAfter=normalizeQuantityIngredient(ingredientAfter);
+  const normalizedBefore=normalizeQuantityIngredient(before);
+  const contextText=normalizeQuantityIngredient(context);
+  if(contextText.includes('orange molasses syrup')){const orangeCandidates=Object.keys(orangeSyrupIngredients).sort((a,b)=>b.length-a.length);const orangeMatch=orangeCandidates.find(k=>normalizedAfter.includes(normalizeQuantityIngredient(k))||normalizedBefore.includes(normalizeQuantityIngredient(k)));if(orangeMatch)return orangeMatch;}
+  const candidates=Object.keys({...unitIngredientMap.metric,...unitIngredientMap.imperial}).map(k=>({key:k,normalized:normalizeQuantityIngredient(k)})).sort((a,b)=>b.normalized.length-a.normalized.length);
+  const afterMatch=candidates.find(x=>normalizedAfter.includes(x.normalized));
+  if(afterMatch)return afterMatch.key;
+  if(normalizedAfter.includes('sweet potato'))return 'cooked sweet potato';
+  if(allowBefore){
+    if(normalizedBefore.includes('sweet potato'))return 'cooked sweet potato';
+    return candidates.find(x=>normalizedBefore.includes(x.normalized))?.key||'';
+  }
+  return '';
 }
 function format(n,u){return formatUnitValue(n,u)}
 function formatQuantity(n,u){return formatUnitValue(n,u)}
-function convert(amount,unit,mode,item=''){
-  const target=desiredUnit(item,mode,unit);
-  if(target)return convertToUnit(amount,unit,target,item);
+function convert(amount,unit,mode,item='',context=''){
+  const target=desiredUnit(item,mode,unit,context);
+  if(target)return convertToUnit(amount,unit,target,item,context);
   const u=String(unit||'').toLowerCase();
   if(!u)return format(amount,'');
   if(mode==='metric'){
@@ -322,35 +382,36 @@ function convert(amount,unit,mode,item=''){
 function renderIngredients(r,scale=1,unit='metric'){
   const list=document.getElementById('ingredientsList');
   if(!list)return;
+  let currentGroup='';
   list.innerHTML=(r.ingredients||[]).map(x=>{
     if(typeof x==='string')return `<li><input type="checkbox"><span>${esc(x)}</span></li>`;
-    if(x.group)return `<li><span class="group"><b>${esc(x.group)}</b>${x.usualSlug?`<span class="usual-reference">One of our usuals: <a href="${href('recipes/recipe.html',{slug:x.usualSlug})}">${esc(x.usualLabel||x.usualSlug)}</a></span>`:''}</span></li>`;
+    if(x.group){currentGroup=String(x.group);return `<li><span class="group"><b>${esc(x.group)}</b>${x.usualSlug?`<span class="usual-reference">One of our usuals: <a href="${href('recipes/recipe.html',{slug:x.usualSlug})}">${esc(x.usualLabel||x.usualSlug)}</a></span>`:''}</span></li>`;}
     const item=String(x.item??'').trim();
     const hasRange=x.minAmount!==undefined&&x.maxAmount!==undefined;
     const hasAmount=x.amount!==undefined&&x.amount!==null&&x.amount!=='';
     let v='';
     if(hasRange){
       const min=Number(x.minAmount)*scale,max=Number(x.maxAmount)*scale;
-      const target=desiredUnit(item,unit,x.unit);
+      const target=desiredUnit(item,unit,x.unit,currentGroup);
       if(target){
-        v=`${convertToUnit(min,x.unit,target,item)}–${convertToUnit(max,x.unit,target,item)}`;
+        v=`${convertToUnit(min,x.unit,target,item,currentGroup)}–${convertToUnit(max,x.unit,target,item,currentGroup)}`;
       }else if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
         v=`${formatQuantity(Number(x.imperialMinAmount)*scale,x.imperialMinUnit||x.unit)}–${formatQuantity(Number(x.imperialMaxAmount)*scale,x.imperialMaxUnit||x.unit)}`;
       }else if(unit==='imperial'){
-        v=`${convert(min,x.unit,'imperial',item)}–${convert(max,x.unit,'imperial',item)}`;
+        v=`${convert(min,x.unit,'imperial',item,currentGroup)}–${convert(max,x.unit,'imperial',item,currentGroup)}`;
       }else{
         v=`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
       }
     }else if(hasAmount){
-      const target=desiredUnit(item,unit,x.unit);
-      if(target)v=convertToUnit(Number(x.amount)*scale,x.unit,target,item);
+      const target=desiredUnit(item,unit,x.unit,currentGroup);
+      if(target)v=convertToUnit(Number(x.amount)*scale,x.unit,target,item,currentGroup);
       else if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!=='')v=formatQuantity(Number(x.imperialAmount)*scale,x.imperialUnit);
-      else v=convert(Number(x.amount)*scale,x.unit,unit,item);
+      else v=convert(Number(x.amount)*scale,x.unit,unit,item,currentGroup);
     }
     return `<li><input type="checkbox"><span>${v?`<strong class="ingredient-quantity">${esc(v)}</strong> `:''}${esc(item)}${ingredientInfoLink(r,item)}</span></li>`
   }).join('')
 }
-function renderInstructionSteps(r,scale,unit){document.querySelectorAll('.step').forEach((stepEl,i)=>{const s=r.steps?.[i];if(!s)return;const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs:(s.text||'').split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);const copy=stepEl.querySelector('.step-copy');if(copy)copy.innerHTML=paragraphs.map(p=>instructionParagraph(p,false,r,scale,unit)).join('')+(s.stepNote?instructionParagraph(s.stepNote,true,r,scale,unit):'');});}
+function renderInstructionSteps(r,scale,unit){document.querySelectorAll('.step').forEach((stepEl,i)=>{const s=r.steps?.[i];if(!s)return;const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs:(s.text||'').split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);const copy=stepEl.querySelector('.step-copy');if(copy)copy.innerHTML=instructionBlock(paragraphs,r,scale,unit,s.title||'')+(s.stepNote?instructionParagraph(s.stepNote,true,r,scale,unit,false,s.title||''):'');});}
 function bindRecipe(r){let scale=1,unit='metric';window.__recipeScale=scale;window.__recipeUnit=unit;renderIngredients(r,scale,unit);renderInstructionSteps(r,scale,unit);document.querySelectorAll('#unitToggle button').forEach(b=>b.onclick=()=>{unit=b.dataset.unit;window.__recipeUnit=unit;document.querySelectorAll('#unitToggle button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderIngredients(r,scale,unit);renderInstructionSteps(r,scale,unit)});document.querySelectorAll('#scaleToggle button').forEach(b=>b.onclick=()=>{scale=Number(b.dataset.scale);window.__recipeScale=scale;document.querySelectorAll('#scaleToggle button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderIngredients(r,scale,unit);renderInstructionSteps(r,scale,unit)});document.querySelector('[data-jump]')?.addEventListener('click',()=>document.getElementById('the-recipe')?.scrollIntoView({behavior:'smooth'}));document.getElementById('shareRecipe')?.addEventListener('click',async()=>{const data={title:r.title,url:location.href};try{if(navigator.share)await navigator.share(data);else{await navigator.clipboard.writeText(location.href);alert('Recipe link copied.')}}catch(e){}});document.getElementById('printRecipe')?.addEventListener('click',()=>window.print());bindReviews(r);bindCook();}
 function bindReviews(r){let rating=0;document.querySelectorAll('[data-star]').forEach(b=>b.onclick=()=>{rating=Number(b.dataset.star);document.querySelectorAll('[data-star]').forEach(x=>{const on=Number(x.dataset.star)<=rating;x.setAttribute('aria-pressed',String(on));x.textContent=on?'★':'☆'})});document.getElementById('submitReview')?.addEventListener('click',()=>{if(!rating){document.getElementById('reviewStatus').textContent='Please choose a star rating.';return}const key='mr-reviews-'+r.slug;const arr=JSON.parse(localStorage.getItem(key)||'[]');arr.push({rating,name:document.getElementById('reviewName').value.trim(),comment:document.getElementById('reviewComment').value.trim(),date:new Date().toISOString()});localStorage.setItem(key,JSON.stringify(arr));document.getElementById('reviewName').value='';document.getElementById('reviewComment').value='';rating=0;document.querySelectorAll('[data-star]').forEach(x=>{x.setAttribute('aria-pressed','false');x.textContent='☆'});showReviews(r);document.getElementById('reviewStatus').textContent='Saved on this device only.'});showReviews(r)}
 function showReviews(r){const box=document.getElementById('reviewList');if(!box)return;const arr=JSON.parse(localStorage.getItem('mr-reviews-'+r.slug)||'[]');box.innerHTML=arr.map(x=>`<div class="review-item"><div class="review-stars">${'★'.repeat(x.rating)}${'☆'.repeat(5-x.rating)}</div>${x.name?`<b>${esc(x.name)}</b>`:''}${x.comment?`<p>${esc(x.comment)}</p>`:''}</div>`).join('')}
