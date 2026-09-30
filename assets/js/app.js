@@ -162,8 +162,10 @@ const unitIngredientMap={
     'sesame oil':'ml','10% cream':'ml','half & half / 10% cream':'ml'
   },
   imperial:{
-    'ground pork':'lb','cooked sweet potato':'cup','cornstarch':'cup','3.25% milk':'cup','half & half / 10% cream':'cup','10% cream':'cup','whole milk':'cup','unsalted butter':'cup','unsalted butter melted':'cup','graham crackers':'cup','graham crackers finely crushed':'cup','dark brown sugar':'cup','molasses':'cup','finely crushed':'cup','dark chocolate chopped':'cup','sugar':'cup','35% whipping cream':'cup','brown sugar':'cup','whipped cream':'cup','water':'cup','granulated sugar':'cup','apples':'cup','chives':'cup',
-    'garlic':'tbsp','fresh ginger':'tbsp','ground cinnamon':'tbsp','cinnamon':'tbsp','ground ginger':'tbsp','ginger':'tbsp','salt':'tbsp','kosher salt':'tbsp'
+    'ground pork':'lb',
+    'fatty ground pork':'lb','cooked sweet potato':'cup','cornstarch':'cup','3.25% milk':'cup','half & half / 10% cream':'cup','10% cream':'cup','whole milk':'cup','unsalted butter':'cup','unsalted butter melted':'cup','graham crackers':'cup','graham crackers finely crushed':'cup','dark brown sugar':'cup','molasses':'cup','finely crushed':'cup','dark chocolate chopped':'cup','sugar':'cup','35% whipping cream':'cup','brown sugar':'cup','whipped cream':'cup','water':'cup','granulated sugar':'cup','apples':'cup','chives':'cup',
+    'garlic':'tbsp',
+    'garlic chives or green onion':'tbsp','fresh ginger':'tbsp','ground cinnamon':'tbsp','cinnamon':'tbsp','ground ginger':'tbsp','ginger':'tbsp','salt':'tbsp','kosher salt':'tbsp'
   }
 };
 const densityPerUnit={
@@ -201,8 +203,10 @@ const densityPerUnit={
   'water|cup':240,
   'apples|cup':125,
   'chives|cup':16,
+  'garlic chives or green onion|tbsp':8.5,
   'cooked sweet potato|cup':200,
   'ground pork|lb':453.592,
+  'fatty ground pork|lb':453.592,
   'molasses|cup':328,
   'finely crushed|cup':100
 };
@@ -212,7 +216,8 @@ function ingredientKey(value){
   s=s.replace(/\s+/g,' ').trim();
   const aliases={
     'espresso powder':'espresso powder','espresso powder':'espresso powder','graham crackers finely crushed':'graham crackers finely crushed','graham crackers finely crushed':'graham crackers finely crushed',
-    'unsalted butter melted':'unsalted butter melted','unsalted butter cubed':'unsalted butter','dark chocolate chopped':'dark chocolate chopped','half half 10% cream':'half & half / 10% cream','graham crackers finely crushed':'graham crackers finely crushed','unsweetened cocoa powder':'unsweetened cocoa powder','dark chocolate chopped':'dark chocolate chopped'
+    'unsalted butter melted':'unsalted butter melted','unsalted butter cubed':'unsalted butter','dark chocolate chopped':'dark chocolate chopped','half half 10% cream':'half & half / 10% cream','graham crackers finely crushed':'graham crackers finely crushed','unsweetened cocoa powder':'unsweetened cocoa powder','dark chocolate chopped':'dark chocolate chopped',
+    'fatty ground pork':'ground pork','garlic chives or green onion':'garlic'
   };
   return aliases[s]||s;
 }
@@ -237,7 +242,11 @@ function formatUnitValue(n,u){
   if(!u)return String(Math.round(Number(n)*100)/100);
   const unit=String(u).toLowerCase();
   if(unit==='tbsp'||unit==='tsp')return `${fraction8(n)} ${u}`;
-  if(['g','ml','lb','cup','cups','oz','fl oz','l','kg'].includes(unit))return `${(Math.round(Number(n)*10)/10).toFixed(1)} ${u}`;
+  if(['g','ml','lb','cup','cups','oz','fl oz','l','kg'].includes(unit)){
+    const rounded=Math.round(Number(n)*10)/10;
+    const display=Number.isInteger(rounded)?String(rounded):rounded.toFixed(1);
+    return `${display} ${u}`;
+  }
   return `${Math.round(Number(n)*100)/100} ${u}`;
 }
 function convertToUnit(amount,from,to,item=''){
