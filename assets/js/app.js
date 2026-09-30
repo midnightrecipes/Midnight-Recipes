@@ -43,7 +43,7 @@ function listPage(title,list,sub=''){const sort=listSortValue();app.innerHTML=`<
 function recipe(){const slug=new URLSearchParams(location.search).get('slug')||recipes[0]?.slug;const r=recipes.find(x=>String(x.slug||'').toLowerCase()===String(slug||'').toLowerCase())||recipes[0];if(!r){app.innerHTML='<div class="wrap"><p class="empty-state">Recipe not found.</p></div>';return}app.innerHTML=recipeHtml(r);bindRecipe(r)}
 function photo(src,alt,cls=''){return src?`<div class="photo-frame ${cls}"><img class="photo" src="${esc(root+src)}" alt="${esc(alt)}" onerror="${imageErrorHandler(cls)}"/></div>`:''}
 function stepPhoto(src,alt){return src?`<div class="photo-frame step-photo-frame"><img class="photo" src="${esc(root+src)}" alt="${esc(alt)}" onerror="const g=this.closest('.step-photos');if(this.dataset.extTried!=='1'){this.dataset.extTried='1';this.src=this.src.replace(/\.(?:jpe?g)$/i,m=>m.toLowerCase()==='.jpg'?'.jpeg':'.jpg');}else{this.closest('.photo-frame')?.remove();if(g&&!g.querySelector('img'))g.remove();}"></div>`:''}
-function stepPhotoMarkup(s,r,i){let list=Array.isArray(s.stepImages)?s.stepImages.filter(Boolean):[];if(!list.length&&Array.isArray(s.stepPhotos))list=s.stepPhotos.filter(Boolean);if(!list.length)return '';const count=Math.min(list.length,4);list=list.slice(0,4);return `<div class="step-photos step-photos-${count}">${list.map((src,n)=>stepPhoto(src,`${r.title} step ${i+1} photo ${n+1}`)).join('')}</div>`}
+function stepPhotoMarkup(s,r,i){let list=Array.isArray(s.stepImages)?s.stepImages.filter(Boolean):[];if(!list.length&&Array.isArray(s.stepPhotos))list=s.stepPhotos.filter(Boolean);if(!list.length)return '';const count=Math.min(list.length,4);list=list.slice(0,4);return `<div class="step-photos step-photos-${count}${r.stepPhotoLayout==='consistent'?' step-photos-consistent':''}">${list.map((src,n)=>stepPhoto(src,`${r.title} step ${i+1} photo ${n+1}`)).join('')}</div>`}
 function categoryLink(type,value){const map={source:'pages/source.html',course:'pages/meal.html',cuisine:'pages/cuisine.html'};return href(map[type],{value})}
 function normalizeIngredientFile(value){
   if(!value)return {groups:[],name:'',items:[]};
@@ -69,31 +69,31 @@ function parseQuantity(value){
   if(/^\d+\/\d+$/.test(s)){const [a,b]=s.split('/').map(Number);return a/b}
   return Number(s);
 }
-function scaleInstructionQuantity(num,rawUnit,scale,unit,context='',pos=0,ingredientContext=''){
+function scaleInstructionQuantity(num,rawUnit,scale,unit,context='',pos=0,ingredientContext='',recipe=null){
   const amount=parseQuantity(num)*scale;
   const unitCanInferBefore=/^(g|kg|ml|l|oz|ounces?|lbs?|pounds?|tsp|teaspoons?|tbsp|tablespoons?|cups?|cup)$/i.test(String(rawUnit||''));
-  const item=inferIngredientFromText(context,pos,ingredientContext,unitCanInferBefore);
-  return convert(amount,rawUnit,unit,item,ingredientContext);
+  const item=inferIngredientFromText(context,pos,ingredientContext,unitCanInferBefore,recipe);
+  return convert(amount,rawUnit,unit,item,ingredientContext,recipe);
 }
 function scaleInstructionText(value,r,scale,unit,ingredientContext=''){
-  let text=String(value??'');
+  let text=String(value??'').replace(/½/g,'1/2').replace(/¼/g,'1/4').replace(/¾/g,'3/4').replace(/⅛/g,'1/8').replace(/⅜/g,'3/8').replace(/⅝/g,'5/8').replace(/⅞/g,'7/8');
   const atom='(?:\\d+\\s+\\d+\\/\\d+|\\d+\\/\\d+|\\d+(?:\\.\\d+)?)';
   const range=`${atom}(?:\\s*[–-]\\s*${atom})?`;
   const units='g|kg|ml|l|oz|ounces?|lbs?|pounds?|tsp|teaspoons?|tbsp|tablespoons?|cups?|cup|large\\s+eggs?|eggs?';
-  const quantityPattern=new RegExp(`(^|[^\\d])(${range})\\s*(\\b(?:${units})\\b)(?=\\b|[,.])`,'gi');
+  const quantityPattern=new RegExp(`(^|[^\\d])(${range})\\s*((?:${units}))(?=\\s|[,.]|$)`,'gi');
   text=text.replace(quantityPattern,(match,prefix,num,rawUnit,offset)=>{
     const rangeParts=num.match(new RegExp(`^(${atom})(?:\\s*[–-]\\s*(${atom}))?$`));
     if(!rangeParts)return match;
-    const first=scaleInstructionQuantity(rangeParts[1],rawUnit,scale,unit,text,offset+prefix.length,ingredientContext);
+    const first=scaleInstructionQuantity(rangeParts[1],rawUnit,scale,unit,text,offset+match.length,ingredientContext,r);
     if(!rangeParts[2])return prefix+first;
-    const second=scaleInstructionQuantity(rangeParts[2],rawUnit,scale,unit,text,offset+prefix.length,ingredientContext);
+    const second=scaleInstructionQuantity(rangeParts[2],rawUnit,scale,unit,text,offset+match.length,ingredientContext,r);
     return `${prefix}${first}–${second}`;
   });
   return text;
 }
-function instructionAmount(a,scale,unit,context=''){
-  if(a&&a.min!==undefined&&a.max!==undefined)return `${scaleInstructionQuantity(String(a.min),a.unit,scale,unit,context)}–${scaleInstructionQuantity(String(a.max),a.unit,scale,unit,context)}`;
-  if(a&&a.value!==undefined)return scaleInstructionQuantity(String(a.value),a.unit,scale,unit,context);
+function instructionAmount(a,scale,unit,context='',recipe=null){
+  if(a&&a.min!==undefined&&a.max!==undefined)return `${scaleInstructionQuantity(String(a.min),a.unit,scale,unit,context,0,context,recipe)}–${scaleInstructionQuantity(String(a.max),a.unit,scale,unit,context,0,context,recipe)}`;
+  if(a&&a.value!==undefined)return scaleInstructionQuantity(String(a.value),a.unit,scale,unit,context,0,context,recipe);
   return '';
 }
 function instructionModeParts(value){
@@ -112,7 +112,7 @@ function structuredInstructionText(value,r,scale,unit,context=''){
   if(!value||typeof value!=='object'||typeof value.text!=='string')return '';
   let text=value.text;
   const amounts=Array.isArray(value.amounts)?value.amounts:[];
-  text=text.replace(/\{\{amount:(\d+)\}\}/g,(m,i)=>instructionAmount(amounts[Number(i)],scale,unit,context));
+  text=text.replace(/\{\{amount:(\d+)\}\}/g,(m,i)=>instructionAmount(amounts[Number(i)],scale,unit,context,r));
   return text;
 }
 function instructionParagraph(value,isNote=false,r=null,scale=1,unit='metric',mode=false,context=''){
@@ -168,7 +168,7 @@ function recipeHtml(r){
   const foundIn=foundTitles.map(title=>{const found=recipes.find(x=>x.title===title&&!x.isUsuals);return found?`<a href="${href('recipes/recipe.html',{slug:found.slug})}">${esc(title)}</a>`:`<span>${esc(title)}</span>`;}).join('<br>');
   const intro=isUsual?`<section class="usual-intro"><p class="body-copy"><em>${esc(r.description||'')}</em></p>${String(r.usualIntro||'').split(/\n\s*\n/).filter(Boolean).map(x=>`<p class="body-copy">${esc(x)}</p>`).join('')}</section>`:'';
   const statsPan=(isUsual||r.showPan)&&r.stats?.pan?`<br><b>Pan</b>: ${esc(r.stats.pan)}`:'';const statsChill=r.showChill&&r.stats?.chill?`<br><b>Chill</b>: ${esc(r.stats.chill)}`:'';
-  return `<div class="recipe-card"><div class="rtop"><div><h1 class="rtitle">${esc(cutieText(r.title))}</h1><div class="meta-line"><span>${r.timeStamp?`📍 ${esc(r.timeStamp)}<span> · TORONTO</span>`:'The Usuals'}</span></div><div class="tags">${(r.tags||[]).map(t=>`<a href="${href('recipes/index.html',{q:t})}">#${esc(t)}</a>`).join('')}</div><p class="facts">${isUsual?`<b>The Usuals</b>: <a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:`<b>Source</b>: <a href="${categoryLink('source',r.source)}">${esc(r.source)}</a>${r.sourceSecondary?` / <a href="${categoryLink('source',r.sourceSecondary)}">${esc(r.sourceSecondary)}</a>`:''}${hasMeaningfulValue(r.original)?`<br><b>Original</b>: ${esc(r.original)}`:''}${r.dish?`<br><b>Dish</b>: ${esc(r.dish)}`:''}<br><b>Cuisine</b>: <a href="${categoryLink('cuisine',r.cuisine)}">${esc(r.cuisine)}</a><br><b>Course</b>: <a href="${categoryLink('course',canonicalCourse(r))}">${esc(courseDisplay(r))}</a>`}</p><div class="recipe-jump-top"><button class="btn" data-jump="the-recipe">Jump To Recipe</button></div></div>${photo(r.heroImage,r.title)}</div>${intro}${!isUsual&&r.story?`<section><h2 class="h3">THE STORY</h2><p class="body-copy">${richText(r.story)}</p></section>`:''}${(ingredientFile.name||file.length||fileGroups.length)?`<section id="ingredient-file-section"><h2 class="h3">INGREDIENT FILE</h2><div class="ingredient-file">${ingredientFileMarkup(r,ingredientFile)}${ingredientFile.name?`<div class="ingredient-file-name">${esc(ingredientFile.name)}</div>`:''}${file.length?`<div class="ingredient-file-details">${file.map(([k,v])=>`<p><strong>${esc(k)}:</strong> ${esc(v)}</p>`).join('')}</div>`:''}</div></section>`:''}<div class="recipe-practical-box"><section id="the-recipe"><h2 class="h3">THE RECIPE</h2><div class="recipe-inner"><div>${r.recipeImage?photo(r.recipeImage,r.title):''}<h3 class="rname">${esc(cutieText(r.recipeTitle||r.title))}</h3><p class="stats"><b>Prep</b>: ${esc(r.stats?.prep||'—')} <b>Cook</b>: ${esc(r.stats?.cook||'—')}<br><b>Total</b>: ${esc(r.stats?.total||'—')}${statsChill}<br><b>Serves</b>: ${esc(r.stats?.serves||'—')}${statsPan}<br><b>Quiet level</b>: ${esc(r.stats?.quest||'—')}</p><div class="recipe-actions recipe-action-row"><button class="btn" id="cookOpen" aria-pressed="false">Cook Mode</button><button class="btn" id="shareRecipe">Share</button><button class="btn" id="printRecipe">Print</button></div><h4 class="block-title" style="margin-top:34px">INGREDIENTS</h4><div class="toggle-row" id="unitToggle"><button data-unit="metric" aria-pressed="true">Metric</button><button data-unit="imperial" aria-pressed="false">US</button></div><div class="toggle-row small" id="scaleToggle">${scaleOptions.map(v=>`<button data-scale="${v}"${v==='1'?` aria-pressed="true"`:''}>${v==='1'?'×1':`×${v}`}</button>`).join('')}</div><ul class="ing" id="ingredientsList"></ul>${fileGroups.length?`<p class="ingredient-file-guide">ⓘ <a href="#ingredient-file-section">Click for substitutions &amp; ingredient tips</a></p>`:''}</div><div><h4 class="block-title">INSTRUCTIONS</h4>${(r.steps||[]).map((s,i)=>{const label=s.number&&s.title?`${s.number} — ${s.title}`:(s.label||'');const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs:(s.text||'').split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);return `<div class="step"><div class="step-head"><span>${esc(label)}</span><span>${esc(s.clock||'')}</span></div><div class="step-copy">${instructionBlock(paragraphs,r,window.__recipeScale||1,window.__recipeUnit||'metric',s.title||'')}${s.stepNote?instructionParagraph(s.stepNote,true,r,window.__recipeScale||1,window.__recipeUnit||'metric',false,s.title||''):''}</div>${stepPhotoMarkup(s,r,i)}</div>`}).join('')}</div></div></section></div>${r.notes?.length?`<section><h2 class="h3">MIDNIGHT NOTES</h2><p class="note-sub">How I made it work in my kitchen.</p><div class="notes-list">${r.notes.map(n=>`<div class="note-item"><div class="note-title"><b>${esc(n[0])}</b></div><div class="note-body">${plainRichText(n[1])}</div></div>`).join('')}</div></section>`:''}${isUsual&&foundTitles.length?`<section class="found-in"><h2 class="h3">FOUND IN</h2><p class="note-sub">${esc(r.foundInIntro||'Recipes that use this usual...')}</p><div class="body-copy found-in-list">${foundIn}</div></section>`:''}${r.finePrint?`<section><h2 class="h3">THE FINE PRINT</h2><p class="note-sub">Tonight or tomorrow?</p><p class="body-copy">${Object.entries(r.finePrint).filter(([k,v])=>hasMeaningfulValue(k)&&hasMeaningfulValue(v)).map(([k,v])=>`<b>${esc(k)}</b>: ${richText(v)}<br>`).join('')}</p></section>`:''}<footer class="recipe-footer"><p><b>Inspired by</b>: ${r.footerInspiredBy?footerLinks('source',r.footerInspiredBy):(isUsual?`<a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:footerLinks('source',r.source))}</p><p><b>Cuisine</b>: ${footerLinks('cuisine',r.footerCuisine||r.cuisine)}</p><p><b>Course</b>: ${footerLinks('course',r.footerCourse||courseDisplay(r))}</p><p><b>Main ingredients</b>: ${footerIngredientValues(r).map((x,i)=>`<a href="${href('recipes/index.html',{q:x})}">${esc(x)}</a>${i<footerIngredientValues(r).length-1?' · ':''}`).join('')}</p>${r.footerRating?`<p class="footer-rating">${esc(r.footerRating)}</p>`:''}<div class="review-form"><h4 class="block-title">How did you like it?</h4><div class="star-picker" id="starPicker" aria-label="Choose a rating">${[1,2,3,4,5].map(n=>`<button type="button" data-star="${n}" aria-label="${n} stars" aria-pressed="false">☆</button>`).join('')}</div><input id="reviewName" maxlength="80" placeholder="Name (optional)"><textarea id="reviewComment" maxlength="1000" placeholder="Comment (optional)"></textarea><button class="btn" id="submitReview">Submit</button><p class="review-status" id="reviewStatus">Reviews are saved on this device only until a shared backend is connected.</p><div id="reviewList" class="review-list"></div></div></footer></div>`
+  return `<div class="recipe-card"><div class="rtop"><div><h1 class="rtitle">${esc(cutieText(r.title))}</h1><div class="meta-line"><span>${r.timeStamp?`📍 ${esc(r.timeStamp)}<span> · TORONTO</span>`:'The Usuals'}</span></div><div class="tags">${(r.tags||[]).map(t=>`<a href="${href('recipes/index.html',{q:t})}">#${esc(t)}</a>`).join('')}</div><p class="facts">${isUsual?`<b>The Usuals</b>: <a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:`<b>Source</b>: <a href="${categoryLink('source',r.source)}">${esc(r.source)}</a>${r.sourceSecondary?` / <a href="${categoryLink('source',r.sourceSecondary)}">${esc(r.sourceSecondary)}</a>`:''}${hasMeaningfulValue(r.original)?`<br><b>Original</b>: ${esc(r.original)}`:''}${r.dish?`<br><b>Dish</b>: ${esc(r.dish)}`:''}<br><b>Cuisine</b>: <a href="${categoryLink('cuisine',r.cuisine)}">${esc(r.cuisine)}</a><br><b>Course</b>: <a href="${categoryLink('course',canonicalCourse(r))}">${esc(courseDisplay(r))}</a>`}</p><div class="recipe-jump-top"><button class="btn" data-jump="the-recipe">Jump To Recipe</button></div></div>${photo(r.heroImage,r.title)}</div>${intro}${!isUsual&&(r.story||r.storyQuote)?`<section><h2 class="h3">THE STORY</h2>${r.storyQuote?`<p class="body-copy story-quote">${richText(r.storyQuote)}</p>`:''}${r.story?`<p class="body-copy">${richText(r.story)}</p>`:''}</section>`:''}${(ingredientFile.name||file.length||fileGroups.length)?`<section id="ingredient-file-section"><h2 class="h3">INGREDIENT FILE</h2><div class="ingredient-file">${ingredientFileMarkup(r,ingredientFile)}${ingredientFile.name?`<div class="ingredient-file-name">${esc(ingredientFile.name)}</div>`:''}${file.length?`<div class="ingredient-file-details">${file.map(([k,v])=>`<p><strong>${esc(k)}:</strong> ${esc(v)}</p>`).join('')}</div>`:''}</div></section>`:''}<div class="recipe-practical-box"><section id="the-recipe"><h2 class="h3">THE RECIPE</h2><div class="recipe-inner"><div>${r.recipeImage?photo(r.recipeImage,r.title):''}<h3 class="rname">${esc(cutieText(r.recipeTitle||r.title))}</h3><p class="stats"><b>Prep</b>: ${esc(r.stats?.prep||'—')} <b>Cook</b>: ${esc(r.stats?.cook||'—')}<br><b>Total</b>: ${esc(r.stats?.total||'—')}${statsChill}<br><b>Serves</b>: ${esc(r.stats?.serves||'—')}${statsPan}<br><b>Quiet level</b>: ${esc(r.stats?.quest||'—')}</p><div class="recipe-actions recipe-action-row"><button class="btn" id="cookOpen" aria-pressed="false">Cook Mode</button><button class="btn" id="shareRecipe">Share</button><button class="btn" id="printRecipe">Print</button></div><h4 class="block-title" style="margin-top:34px">INGREDIENTS</h4><div class="toggle-row" id="unitToggle"><button data-unit="metric" aria-pressed="true">Metric</button><button data-unit="imperial" aria-pressed="false">US</button></div><div class="toggle-row small" id="scaleToggle">${scaleOptions.map(v=>`<button data-scale="${v}"${v==='1'?` aria-pressed="true"`:''}>${v==='1'?'×1':`×${v}`}</button>`).join('')}</div><ul class="ing" id="ingredientsList"></ul>${fileGroups.length?`<p class="ingredient-file-guide">ⓘ <a href="#ingredient-file-section">Click for substitutions &amp; ingredient tips</a></p>`:''}</div><div><h4 class="block-title">INSTRUCTIONS</h4>${(r.steps||[]).map((s,i)=>{const label=s.number&&s.title?`${s.number} — ${s.title}`:(s.label||'');const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs:(s.text||'').split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);return `<div class="step"><div class="step-head"><span>${esc(label)}</span><span>${esc(s.clock||'')}</span></div><div class="step-copy">${instructionBlock(paragraphs,r,window.__recipeScale||1,window.__recipeUnit||'metric',s.title||'')}${s.stepNote?instructionParagraph(s.stepNote,true,r,window.__recipeScale||1,window.__recipeUnit||'metric',false,s.title||''):''}</div>${stepPhotoMarkup(s,r,i)}</div>`}).join('')}</div></div></section></div>${r.notes?.length?`<section><h2 class="h3">MIDNIGHT NOTES</h2><p class="note-sub">How I made it work in my kitchen.</p><div class="notes-list">${r.notes.map(n=>`<div class="note-item"><div class="note-title"><b>${esc(n[0])}</b></div><div class="note-body">${plainRichText(n[1])}</div></div>`).join('')}</div></section>`:''}${isUsual&&foundTitles.length?`<section class="found-in"><h2 class="h3">FOUND IN</h2><p class="note-sub">${esc(r.foundInIntro||'Recipes that use this usual...')}</p><div class="body-copy found-in-list">${foundIn}</div></section>`:''}${r.finePrint?`<section><h2 class="h3">THE FINE PRINT</h2><p class="note-sub">Tonight or tomorrow?</p><p class="body-copy">${Object.entries(r.finePrint).filter(([k,v])=>hasMeaningfulValue(k)&&hasMeaningfulValue(v)).map(([k,v])=>`<b>${esc(k)}</b>: ${richText(v)}<br>`).join('')}</p></section>`:''}<footer class="recipe-footer"><p><b>Inspired by</b>: ${r.footerInspiredBy?footerLinks('source',r.footerInspiredBy):(isUsual?`<a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:footerLinks('source',r.source))}</p><p><b>Cuisine</b>: ${footerLinks('cuisine',r.footerCuisine||r.cuisine)}</p><p><b>Course</b>: ${footerLinks('course',r.footerCourse||courseDisplay(r))}</p><p><b>Main ingredients</b>: ${footerIngredientValues(r).map((x,i)=>`<a href="${href('recipes/index.html',{q:x})}">${esc(x)}</a>${i<footerIngredientValues(r).length-1?' · ':''}`).join('')}</p>${r.footerRating?`<p class="footer-rating">${esc(r.footerRating)}</p>`:''}<div class="review-form"><h4 class="block-title">How did you like it?</h4><div class="star-picker" id="starPicker" aria-label="Choose a rating">${[1,2,3,4,5].map(n=>`<button type="button" data-star="${n}" aria-label="${n} stars" aria-pressed="false">☆</button>`).join('')}</div><input id="reviewName" maxlength="80" placeholder="Name (optional)"><textarea id="reviewComment" maxlength="1000" placeholder="Comment (optional)"></textarea><button class="btn" id="submitReview">Submit</button><p class="review-status" id="reviewStatus">Reviews are saved on this device only until a shared backend is connected.</p><div id="reviewList" class="review-list"></div></div></footer></div>`
 }
 function normalizeQuantityIngredient(value){
   return String(value??'').toLowerCase().replace(/[’']/g,"'").replace(/[^a-z0-9%.]+/g,' ').replace(/\s+/g,' ').trim();
@@ -179,7 +179,8 @@ const unitIngredientMap={
     'sesame oil':'ml','10% cream':'ml','half & half / 10% cream':'ml','half & half':'ml','half half':'ml','ice water':'ml'
   },
   imperial:{
-    'ground pork':'lb','cooked sweet potato':'cup','cornstarch':'cup','3.25% milk':'cup','half & half / 10% cream':'cup','half & half':'cup','half half':'cup','10% cream':'cup','whole milk':'cup','unsalted butter':'cup','unsalted butter melted':'cup','graham crackers':'cup','graham crackers finely crushed':'cup','dark brown sugar':'cup','molasses':'cup','finely crushed':'cup','dark chocolate chopped':'cup','sugar':'cup','white sugar':'cup','35% whipping cream':'cup','brown sugar':'cup','whipped cream':'cup','water':'cup','granulated sugar':'cup','apples':'cup','chives':'cup','garlic chives or green onion':'cup',
+    'ground pork':'lb','melted butter':'tbsp','chopped dark chocolate':'cup','cold cream':'cup','cooked sweet potato':'cup','cornstarch':'cup','3.25% milk':'cup','half & half / 10% cream':'cup','half & half':'cup','half half':'cup','10% cream':'cup','whole milk':'cup','unsalted butter':'cup','unsalted butter melted':'cup','graham crackers':'cup','graham crackers finely crushed':'cup','dark brown sugar':'cup','molasses':'cup','finely crushed':'cup','dark chocolate chopped':'cup',
+    'dark chocolate':'cup','sugar':'cup','white sugar':'cup','35% whipping cream':'cup','cold cream':'cup','brown sugar':'cup','whipped cream':'cup','water':'cup','granulated sugar':'cup','apples':'cup','chives':'cup','garlic chives or green onion':'cup',
     'garlic':'tbsp','fresh ginger':'tbsp','ground cinnamon':'tbsp','cinnamon':'tbsp','ground ginger':'tbsp','ginger':'tbsp','salt':'tbsp','kosher salt':'tbsp'
   }
 };
@@ -210,7 +211,7 @@ const densityPerUnit={
   'ground ginger|tbsp':6,
   'fresh ginger|tbsp':6,
   'garlic|tbsp':8.5,
-  'unsweetened cocoa powder|tbsp':5.4,
+  'unsweetened cocoa powder|tbsp':16/3,
   'cornstarch|tbsp':8,
   'white sugar|tbsp':12.5,
   'sugar|tbsp':12.5,
@@ -222,8 +223,11 @@ const densityPerUnit={
   'graham crackers finely crushed|cup':100,
   'graham crackers|cup':100,
   'dark chocolate chopped|cup':170,
+  'dark chocolate|cup':170,
   'unsalted butter|cup':227,
   'unsalted butter melted|cup':227,
+  'unsalted butter melted|tbsp':14.175,
+  'unsalted butter|tbsp':14.175,
   'whole milk|cup':240,
   '3.25% milk|cup':240,
   'half & half / 10% cream|cup':240,
@@ -244,13 +248,16 @@ function ingredientKey(value){
   s=s.replace(/\s+/g,' ').trim();
   const aliases={
     'espresso powder':'espresso powder','espresso powder':'espresso powder','graham crackers finely crushed':'graham crackers finely crushed','graham crackers finely crushed':'graham crackers finely crushed',
-    'unsalted butter melted':'unsalted butter melted','unsalted butter cubed':'unsalted butter','dark chocolate chopped':'dark chocolate chopped','half half 10% cream':'half & half / 10% cream','half half 10 cream':'half & half / 10% cream','half and half 10% cream':'half & half / 10% cream','half and half 10 cream':'half & half / 10% cream','fatty ground pork':'ground pork','white sugar':'sugar','unsweetened cocoa powder':'unsweetened cocoa powder','plain biscuits finely crushed':'plain biscuits','cooked sweet potato flesh':'cooked sweet potato','garlic chives or green onion cut into 3 4 cm pieces':'garlic chives or green onion','garlic chives or green onion':'garlic chives or green onion'
+    'unsalted butter melted':'unsalted butter melted','melted butter':'unsalted butter melted','unsalted butter cubed':'unsalted butter','dark chocolate chopped':'dark chocolate chopped','chopped dark chocolate':'dark chocolate chopped','half half 10% cream':'half & half / 10% cream','half half 10 cream':'half & half / 10% cream','half and half 10% cream':'half & half / 10% cream','half and half 10 cream':'half & half / 10% cream','fatty ground pork':'ground pork','white sugar':'sugar','unsweetened cocoa powder':'unsweetened cocoa powder','plain biscuits finely crushed':'plain biscuits','cooked sweet potato flesh':'cooked sweet potato','garlic chives or green onion cut into 3 4 cm pieces':'garlic chives or green onion','garlic chives or green onion':'garlic chives or green onion'
   };
   return aliases[s]||s;
 }
-function desiredUnit(item,mode,rawUnit,context=''){
+function desiredUnit(item,mode,rawUnit,context='',recipe=null){
   const key=ingredientKey(item);
   const contextText=normalizeQuantityIngredient(context);
+  const overrides=Array.isArray(recipe?.unitOverrides)?recipe.unitOverrides:[];
+  const override=overrides.slice().reverse().find(x=>ingredientKey(x.match||'')===key && (!x.context || contextText.includes(normalizeQuantityIngredient(x.context))));
+  if(override&&override[mode])return override[mode];
   if(contextText.includes('orange molasses syrup')&&orangeSyrupIngredients[key])return orangeSyrupIngredients[key];
   const map=unitIngredientMap[mode]||{};
   if(map[key])return map[key];
@@ -277,47 +284,43 @@ function densityValue(key,targetUnit){
   const match=entries.find(k=>key===k.slice(0,-targetUnit.length-1)||key.startsWith(k.slice(0,-targetUnit.length-1)+' '));
   return match?densityPerUnit[match]:null;
 }
+function fractionQuarter(n){
+  const rounded=Math.round(Number(n)*4)/4;
+  if(Math.abs(rounded)<0.0001)return '0';
+  const whole=Math.floor(rounded+1e-9),q=Math.round((rounded-whole)*4);
+  const glyph={1:'1/4',2:'1/2',3:'3/4'};
+  if(q===0)return String(whole);
+  if(whole===0)return glyph[q];
+  return `${whole} ${glyph[q]}`;
+}
 function formatUnitValue(n,u){
   if(!u)return String(Math.round(Number(n)*100)/100);
   const unit=String(u).toLowerCase();
   if(unit==='tbsp'||unit==='tsp')return `${fraction8(n)} ${u}`;
-  if(['g','ml','lb','cup','cups','oz','fl oz','l','kg'].includes(unit)){const rounded=Math.round(Number(n)*10)/10;return `${Number.isInteger(rounded)?String(rounded):rounded.toFixed(1)} ${u}`;}
+  if(unit==='cup'||unit==='cups'){
+    const rounded=Math.round(Number(n)*4)/4;
+    const value=fractionQuarter(rounded);
+    return `${value} ${rounded<=1?'cup':'cups'}`;
+  }
+  if(['g','ml','lb','oz','fl oz','l','kg'].includes(unit)){const rounded=Math.round(Number(n)*10)/10;return `${Number.isInteger(rounded)?String(rounded):rounded.toFixed(1)} ${u}`;}
   return `${Math.round(Number(n)*100)/100} ${u}`;
 }
-function convertToUnit(amount,from,to,item='',context=''){
+function convertToUnit(amount,from,to,item='',context='',recipe=null){
   const n=Number(amount); if(!Number.isFinite(n))return `${amount} ${to||from||''}`.trim();
   const f=String(from||'').toLowerCase(); const t=String(to||'').toLowerCase();
   if(!t||f===t)return formatUnitValue(n,to||from);
   const key=ingredientKey(item);
+  const finishCup=(value)=>value<=0.25?convertToUnit(value*(densityValue(key,'cup')||240), 'g', 'tbsp', item, context, recipe):formatUnitValue(value,'cup');
   if(f==='g'&&t==='lb')return formatUnitValue(n/453.592,'lb');
-  if(f==='g'&&t==='cup'){
-    const density=densityValue(key,'cup'); if(density)return formatUnitValue(n/density,'cup');
-  }
-  if(f==='tbsp'&&t==='cup'){
-    const density=densityValue(key,'tbsp'); if(density)return formatUnitValue(n*density/ (densityValue(key,'cup')||240),'cup');
-    return formatUnitValue(n/16,'cup');
-  }
-  if(f==='ml'&&t==='cup')return formatUnitValue(n/240,'cup');
-  if(f==='g'&&t==='tbsp'){
-    const density=densityValue(key,'tbsp'); if(density)return formatUnitValue(n/density,'tbsp');
-  }
-  if(f==='g'&&t==='tsp'){
-    const density=densityValue(key,'tsp'); if(density)return formatUnitValue(n/density,'tsp');
-  }
-  if(f==='tbsp'&&t==='g'){
-    const density=densityValue(key,'tbsp'); if(density)return formatUnitValue(n*density,'g');
-  }
-  if(f==='tsp'&&t==='g'){
-    const density=densityValue(key,'tsp'); if(density)return formatUnitValue(n*density,'g');
-  }
-  if(f==='g'&&t==='ml'){
-    if(key==='10% cream'||key==='half & half / 10% cream')return formatUnitValue(n/1.01,'ml');
-    if(key==='sesame oil')return formatUnitValue(n/0.92,'ml');
-  }
-  if(f==='ml'&&t==='g'){
-    if(key==='10% cream'||key==='half & half / 10% cream')return formatUnitValue(n*1.01,'g');
-    if(key==='sesame oil')return formatUnitValue(n*0.92,'g');
-  }
+  if(f==='g'&&t==='cup'){const density=densityValue(key,'cup');if(density)return finishCup(n/density);}
+  if(f==='tbsp'&&t==='cup'){const value=n/16;return value<=0.25?formatUnitValue(n,'tbsp'):formatUnitValue(value,'cup');}
+  if(f==='ml'&&t==='cup'){const value=n/240;return value<=0.25?formatUnitValue(n/14.7868,'tbsp'):formatUnitValue(value,'cup');}
+  if(f==='g'&&t==='tbsp'){const density=densityValue(key,'tbsp');if(density)return formatUnitValue(n/density,'tbsp');}
+  if(f==='g'&&t==='tsp'){const density=densityValue(key,'tsp');if(density)return formatUnitValue(n/density,'tsp');}
+  if(f==='tbsp'&&t==='g'){const density=densityValue(key,'tbsp');if(density)return formatUnitValue(n*density,'g');}
+  if(f==='tsp'&&t==='g'){const density=densityValue(key,'tsp');if(density)return formatUnitValue(n*density,'g');}
+  if(f==='g'&&t==='ml'){if(key==='10% cream'||key==='half & half / 10% cream')return formatUnitValue(n/1.01,'ml');if(key==='sesame oil')return formatUnitValue(n/0.92,'ml');}
+  if(f==='ml'&&t==='g'){if(key==='10% cream'||key==='half & half / 10% cream')return formatUnitValue(n*1.01,'g');if(key==='sesame oil')return formatUnitValue(n*0.92,'g');}
   if(f==='cup'&&t==='ml')return formatUnitValue(n*240,'ml');
   if(f==='lb'&&t==='g')return formatUnitValue(n*453.592,'g');
   if(f==='oz'&&t==='g')return formatUnitValue(n*28.3495,'g');
@@ -335,17 +338,19 @@ function convertToUnit(amount,from,to,item='',context=''){
   if(f==='ml'&&t==='fl oz')return formatUnitValue(n/29.5735,'fl oz');
   return formatUnitValue(n,to);
 }
-function inferIngredientFromText(text,pos,context='',allowBefore=true){
+function inferIngredientFromText(text,pos,context='',allowBefore=true,recipe=null){
   const source=String(text||'');
   const after=source.slice(pos,pos+90).toLowerCase();
   const before=source.slice(Math.max(0,pos-90),pos).toLowerCase();
-  const afterSegment=after.split(/[,;]/,1)[0];
+  const nextQuantity=after.search(/\b\d+(?:\s+\d+\/\d+|\/\d+|(?:\.\d+)?)\s*(?:g|kg|ml|l|oz|ounces?|lbs?|pounds?|tsp|teaspoons?|tbsp|tablespoons?|cups?|cup|large\s+eggs?|eggs?)\b/i);
+  const afterSegment=(nextQuantity>=0?after.slice(0,nextQuantity):after).split(/[,;]/,1)[0];
   const ingredientAfter=afterSegment.replace(/^\s*(?:\d+\s+\d+\/\d+|\d+\/\d+|\d+(?:\.\d+)?)\s*(?:g|kg|ml|l|oz|ounces?|lbs?|pounds?|tsp|teaspoons?|tbsp|tablespoons?|cups?|cup|large\s+eggs?|eggs?)\s*/i,'');
   const normalizedAfter=normalizeQuantityIngredient(ingredientAfter);
   const normalizedBefore=normalizeQuantityIngredient(before);
   const contextText=normalizeQuantityIngredient(context);
   if(contextText.includes('orange molasses syrup')){const orangeCandidates=Object.keys(orangeSyrupIngredients).sort((a,b)=>b.length-a.length);const orangeMatch=orangeCandidates.find(k=>normalizedAfter.includes(normalizeQuantityIngredient(k))||normalizedBefore.includes(normalizeQuantityIngredient(k)));if(orangeMatch)return orangeMatch;}
-  const candidates=Object.keys({...unitIngredientMap.metric,...unitIngredientMap.imperial}).map(k=>({key:k,normalized:normalizeQuantityIngredient(k)})).sort((a,b)=>b.normalized.length-a.normalized.length);
+  const recipeCandidates=(recipe?.ingredients||[]).filter(x=>x&&typeof x==='object'&&!x.group&&x.item).map(x=>({key:ingredientKey(x.item),normalized:normalizeQuantityIngredient(x.item)})).filter(x=>x.normalized).sort((a,b)=>b.normalized.length-a.normalized.length);
+  const candidates=[...recipeCandidates,...Object.keys({...unitIngredientMap.metric,...unitIngredientMap.imperial}).map(k=>({key:k,normalized:normalizeQuantityIngredient(k)}))].sort((a,b)=>b.normalized.length-a.normalized.length);
   const afterMatch=candidates.find(x=>normalizedAfter.includes(x.normalized));
   if(afterMatch)return afterMatch.key;
   if(normalizedAfter.includes('sweet potato'))return 'cooked sweet potato';
@@ -357,9 +362,9 @@ function inferIngredientFromText(text,pos,context='',allowBefore=true){
 }
 function format(n,u){return formatUnitValue(n,u)}
 function formatQuantity(n,u){return formatUnitValue(n,u)}
-function convert(amount,unit,mode,item='',context=''){
-  const target=desiredUnit(item,mode,unit,context);
-  if(target)return convertToUnit(amount,unit,target,item,context);
+function convert(amount,unit,mode,item='',context='',recipe=null){
+  const target=desiredUnit(item,mode,unit,context,recipe);
+  if(target)return convertToUnit(amount,unit,target,item,context,recipe);
   const u=String(unit||'').toLowerCase();
   if(!u)return format(amount,'');
   if(mode==='metric'){
@@ -392,21 +397,21 @@ function renderIngredients(r,scale=1,unit='metric'){
     let v='';
     if(hasRange){
       const min=Number(x.minAmount)*scale,max=Number(x.maxAmount)*scale;
-      const target=desiredUnit(item,unit,x.unit,currentGroup);
+      const target=desiredUnit(item,unit,x.unit,currentGroup,r);
       if(target){
-        v=`${convertToUnit(min,x.unit,target,item,currentGroup)}–${convertToUnit(max,x.unit,target,item,currentGroup)}`;
+        v=`${convertToUnit(min,x.unit,target,item,currentGroup,r)}–${convertToUnit(max,x.unit,target,item,currentGroup,r)}`;
       }else if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
         v=`${formatQuantity(Number(x.imperialMinAmount)*scale,x.imperialMinUnit||x.unit)}–${formatQuantity(Number(x.imperialMaxAmount)*scale,x.imperialMaxUnit||x.unit)}`;
       }else if(unit==='imperial'){
-        v=`${convert(min,x.unit,'imperial',item,currentGroup)}–${convert(max,x.unit,'imperial',item,currentGroup)}`;
+        v=`${convert(min,x.unit,'imperial',item,currentGroup,r)}–${convert(max,x.unit,'imperial',item,currentGroup,r)}`;
       }else{
         v=`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
       }
     }else if(hasAmount){
-      const target=desiredUnit(item,unit,x.unit,currentGroup);
-      if(target)v=convertToUnit(Number(x.amount)*scale,x.unit,target,item,currentGroup);
+      const target=desiredUnit(item,unit,x.unit,currentGroup,r);
+      if(target)v=convertToUnit(Number(x.amount)*scale,x.unit,target,item,currentGroup,r);
       else if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!=='')v=formatQuantity(Number(x.imperialAmount)*scale,x.imperialUnit);
-      else v=convert(Number(x.amount)*scale,x.unit,unit,item,currentGroup);
+      else v=convert(Number(x.amount)*scale,x.unit,unit,item,currentGroup,r);
     }
     return `<li><input type="checkbox"><span>${v?`<strong class="ingredient-quantity">${esc(v)}</strong> `:''}${esc(item)}${ingredientInfoLink(r,item)}</span></li>`
   }).join('')

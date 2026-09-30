@@ -1339,3 +1339,26 @@ body[data-page="home"] .category-card .photo-frame{
   background:rgba(201,255,216,.48)!important;
   border-color:rgba(21,27,31,.28)!important;
 }
+
+/* Chocolate Cream Comfort Pie: keep Step Photo tile scale consistent without changing the shared renderer. */
+.recipe-card .step-photos-consistent .photo-frame{
+  aspect-ratio:1 / 1;
+}
+.recipe-card .step-photos-consistent .photo-frame .photo{
+  object-fit:contain;
+}
+.recipe-card .step-photos-consistent.step-photos-1 .photo-frame{width:25%;}
+.recipe-card .step-photos-consistent.step-photos-2 .photo-frame{width:100%;}
+.recipe-card .step-photos-consistent.step-photos-3 .photo-frame{width:100%;}
+.recipe-card .step-photos-consistent.step-photos-4 .photo-frame{width:100%;}
+@media (max-width:767px){
+  .recipe-card .step-photos-consistent.step-photos-1 .photo-frame{width:100%;}
+}
+.recipe-card .story-quote{
+  margin:0 0 26px 24px;
+  padding-left:12px;
+  font-style:italic;
+}
+.recipe-card #the-recipe .block-title{
+  margin-top:24px;
+}
