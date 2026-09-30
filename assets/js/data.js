@@ -10,7 +10,7 @@ window.MIDNIGHT_RECIPES = [
   {
     slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE AND JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Chocolate','Pie'], dateAdded:'2026-09-26', timeStamp:'12:14 AM',
     description:'A late-night chocolate cream pie inspired by Julie & Julia (2009).',
-    heroImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg', recipeImage:'images/recipes/chocolate-cream-comfort-pie/recipe.jpg', cardImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg', stepImages:[],
+    heroImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg', recipeImage:'images/recipes/chocolate-cream-comfort-pie/recipe.jpg', cardImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg',
     story:`“You know what I like about cooking? I love that after a day when nothing is sure, and when I say nothing I mean nothing, you can come home and absolutely know that if you add egg yolks to chocolate and sugar and milk, it will get thick. It’s such a comfort.”\n\n*Reine de Saba* (chocolate cake with sliced almonds) might be the most famous dessert from this movie, but it was Julie’s whole emotional breakdown over making a chocolate cream pie that totally spoke to me. No matter how crazy or messy the day gets, the kitchen is always my ultimate comfort zone to reset!`,
     original:'JULIE AND JULIA (2009)',
     ingredientFile:[
@@ -81,7 +81,6 @@ window.MIDNIGHT_RECIPES = [
     description:'A fiery Nagoya-inspired Taiwan mince served over rice with a soft-boiled egg.',
     heroImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg', recipeImage:'images/recipes/addictive-spicy-taiwan-ground-pork/recipe.jpg',
     cardImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg',
-    stepImages:[],
     story:`Taiwan Ramen (台湾ラーメン) at Misen (味仙) is famous in my hometown, Nagoya, Japan. Despite its name, this fiery ramen isn’t actually from Taiwan—the founder named it “Taiwan Ramen” after his own Taiwanese roots. It is one of Nagoya’s local food that evolved entirely in Japan, and this intensely spicy, strangely addictive flavor is so irresistible that I found myself going back to the restaurant again on my last trip home.\n\nTonight, I’m making the **Taiwan ground pork the star of the dish**, serving it over rice with a soft-boiled egg instead of its original ramen noodles. It might be so spicy that I end up staying awake all night.`,
     ingredientFile:[
       {name:'GROUND PORK',details:[['Flavor','Rich, savory, fatty'],['Substitute','Ground chicken or turkey, although fatty pork gives the closest result']]},
@@ -178,7 +177,6 @@ window.MIDNIGHT_RECIPES = [
     description:'Apple crème brûlée inspired by Amélie (2001), with soft tart apples beneath silky custard and brittle caramel.',
     heroImage:'images/recipes/apple-creme-brulee/hero.jpg', recipeImage:'images/recipes/apple-creme-brulee/recipe.jpg',
     cardImage:'images/recipes/apple-creme-brulee/hero.jpg',
-    stepImages:[],
     story:`What is the first thing that comes to mind when you hear crème brûlée?
 
 For me, it is the movie Amélie. She is a little awkward, but she knows exactly what she likes and dislikes, and she is good at finding happiness in the smallest things — plunging her fingers into a sack of dried beans, skipping stones across a canal, and, of course, cracking the caramelized top of a crème brûlée with the back of a teaspoon.
@@ -279,7 +277,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
     heroImage:'images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/hero.jpg',
     recipeTitle:'Calabaza en Tacha Pumpkin Pie', showPan:true,
     recipeImage:'images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/recipe.jpg',
-    cardImage:'images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/hero.jpg', stepImages:[], usesUsual:'building-block-pie-crust',
+    cardImage:'images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/hero.jpg', usesUsual:'building-block-pie-crust',
     story:`Mexico's **Día de Muertos**, the traditional celebration featured in the movie *Coco*, centers around remembering and welcoming loved ones who have passed away.
 
 Celebrated especially on November 1 and 2, families create **ofrendas**, or altars, decorated with photographs, candles, marigolds, and foods that their loved ones enjoyed.
@@ -329,7 +327,7 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
   {
     slug:'banana-banana-cream-pie', title:'Banana Banana Cream Pie', source:'Midnight Experiment', dish:'Banana Cream Pie', cuisine:'American',
     course:'Baking', courseDisplay:'Baking, Dessert', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Fruit','Pie','Eggs','Pantry'], dateAdded:'2026-09-27', timeStamp:'2:50 AM',
-    tags:['Dessert','Baking','Banana','Pie'], heroImage:'images/recipes/banana-banana-cream-pie/hero.jpg', recipeImage:'images/recipes/banana-banana-cream-pie/recipe.jpg', cardImage:'images/recipes/banana-banana-cream-pie/card.jpg', stepImages:[],
+    tags:['Dessert','Baking','Banana','Pie'], heroImage:'images/recipes/banana-banana-cream-pie/hero.jpg', recipeImage:'images/recipes/banana-banana-cream-pie/recipe.jpg', cardImage:'images/recipes/banana-banana-cream-pie/card.jpg',
     story:`A few nearly black bananas had been sitting on my counter for way too long. They were way past the point where I'd normally eat them, but honestly, they were perfect for this pie.
 
 I started looking through banana cream pie recipes and noticed that most of them use just a few slices of fresh banana underneath a whole lot of custard.
@@ -377,7 +375,7 @@ Basically, this pie is my answer to one very simple question:
   {
     slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese',
     course:'Baking', courseDisplay:'Baking, Dessert', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Sweet Potato','Ginger','Cream','Cinnamon','Pie'], dateAdded:'2026-09-27', timeStamp:'11:35 PM',
-    tags:['Midnight Experiment','Dessert','Baking','Chinese','American','Sweet Potato','Ginger','Pie'], heroImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', recipeImage:'images/recipes/sweet-potato-ginger-pie/recipe.jpg', cardImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', stepImages:[], usesUsual:'building-block-pie-crust',
+    tags:['Midnight Experiment','Dessert','Baking','Chinese','American','Sweet Potato','Ginger','Pie'], heroImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', recipeImage:'images/recipes/sweet-potato-ginger-pie/recipe.jpg', cardImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', usesUsual:'building-block-pie-crust',
     story:`Inspired by traditional Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水), a simple sweet soup made by simmering sweet potatoes with fresh ginger and sugar in water.
 
 I love how naturally sweet potato and ginger work together—the earthy sweetness of the sweet potato balanced by the warm, peppery kick of fresh ginger. I thought that combination would be perfect in a pie.
@@ -467,7 +465,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...',
     description:'The crust we make when a pie calls for a crust.',
     usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
-    heroImage:'', recipeImage:'images/recipes/building-block-pie-crust/recipe.jpg', cardImage:'', stepImages:[],
+    heroImage:'', recipeImage:'images/recipes/building-block-pie-crust/recipe.jpg', cardImage:'',
     ingredientFile:[],
     ingredients:[
       {amount:180,unit:'g',imperialAmount:6.35,imperialUnit:'oz',item:'All-Purpose Flour'},
