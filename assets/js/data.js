@@ -77,7 +77,7 @@ window.MIDNIGHT_RECIPES = [
     source:'Restaurant',
     original:'Misen 味仙, Nagoya, Japan',
     dish:'Taiwan Ramen — Taiwan Mince',
-    cuisine:'Taiwan',
+    cuisine:'Taiwan', cuisineSecondary:'Japanese',
     course:'Main Dishes',
     meal:'Main Dishes',
     categories:['Main Dishes'],
@@ -86,12 +86,15 @@ window.MIDNIGHT_RECIPES = [
     timeStamp:'11:44 PM',
     description:'A fiery Nagoya-inspired Taiwan mince served over rice with a soft-boiled egg.',
     heroImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg', recipeImage:'images/recipes/addictive-spicy-taiwan-ground-pork/recipe.jpg',
+    unitOverrides:{imperial:{'sesame oil':'tbsp','Shaoxing wine':'tbsp','doubanjiang':'tbsp','sugar':'tsp'}},
+    integerUnits:{metric:['sesame oil','sugar']},
+    richTextNotes:true,
     cardImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg',
-    story:`Taiwan Ramen (台湾ラーメン) at Misen (味仙) is famous in my hometown, Nagoya, Japan. Despite its name, this fiery ramen isn’t actually from Taiwan—the founder named it “Taiwan Ramen” after his own Taiwanese roots. It is one of Nagoya’s local food that evolved entirely in Japan, and this intensely spicy, strangely addictive flavor is so irresistible that I found myself going back to the restaurant again on my last trip home.\n\nTonight, I’m making the **Taiwan ground pork the star of the dish**, serving it over rice with a soft-boiled egg instead of its original ramen noodles. It might be so spicy that I end up staying awake all night.`,
+    story:`*Taiwan Ramen* (台湾ラーメン) at Misen (味仙) is famous in my hometown, Nagoya, Japan. Despite its name, this fiery ramen isn’t actually from Taiwan—the founder named it “Taiwan Ramen” after his own Taiwanese roots. It is one of Nagoya’s local food that evolved entirely in Japan, and this intensely spicy, strangely addictive flavor is so irresistible that I found myself going back to the restaurant again on my last trip home.\n\nTonight, I’m making the Taiwan ground pork the star of the dish, serving it over rice with a soft-boiled egg instead of its original ramen noodles. It might be so spicy that I end up staying awake all night.`,
     ingredientFile:[
       {name:'GROUND PORK',details:[['Flavor','Rich, savory, fatty'],['Substitute','Ground chicken or turkey, although fatty pork gives the closest result']]},
-      {name:'FRESH RED CHILI',details:[['Origin','East & Southeast Asia'],['Flavor','Fresh, sharp, bright heat'],['Substitute','Dried Thai chili or red chili flakes'],['Storage','Refrigerate loosely wrapped.'],['To achieve the intense spicy-savory flavor','Plenty of fresh chili and garlic are essential to this recipe!']]},
-      {name:'GARLIC',details:[['Flavor','Fresh, garlicky, slightly sweet'],['Where to find','Chinese and Asian grocery stores'],['To achieve the intense spicy-savory flavor','Plenty of fresh chili and garlic are essential to this recipe!']]},
+      {name:'FRESH RED CHILI',details:[['Origin','East & Southeast Asia'],['Flavor','Fresh, sharp, bright heat'],['Substitute','Dried Thai chili or red chili flakes'],['Storage','Refrigerate loosely wrapped.'],['Why here?','Plenty of fresh chili and garlic are essential to this recipe!']]},
+      {name:'GARLIC',details:[['Flavor','Fresh, garlicky, slightly sweet'],['Where to find','Chinese and Asian grocery stores'],['Why here?','Plenty of fresh chili and garlic are essential to this recipe!']]},
       {name:'DOUBANJIANG',details:[['Origin','China'],['Flavor','Fermented, salty, savory, deeply spicy'],['Where to find','Chinese and Asian grocery stores'],['Substitute','Chili bean paste or, in a pinch, a combination of chili paste and a little miso']]}
     ],
     ingredients:[
@@ -109,7 +112,7 @@ window.MIDNIGHT_RECIPES = [
       {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'chicken bouillon powder'},
       {amount:180,unit:'ml',item:'water'},
       {unit:'',item:'Black pepper, to taste'},
-      {minAmount:50,maxAmount:60,unit:'g',item:'garlic chives or green onion, cut into 3–4 cm pieces'},
+      {amount:55,unit:'g',imperialAmount:1,imperialUnit:'small bunch',item:'garlic chives or green onion, cut into 3–4 cm pieces'},
       {minAmount:0.5,maxAmount:1,unit:'tsp',item:'sesame oil, for finishing'},
       {group:'To Serve'},
       {unit:'',item:'Hot steamed white rice'},
@@ -157,9 +160,8 @@ window.MIDNIGHT_RECIPES = [
       ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-05-01.jpg']}
     ],
     notes:[
-      ['Recreating the Flavor','The goal isn’t simply to make spicy ground pork. The flavor builds in layers: sesame oil + garlic + fresh chili → browned pork fat → fried doubanjiang → soy + oyster + gochujang → Shaoxing wine → chicken bouillon → slow reduction. The result should be fiery, garlicky, savory, slightly oily and deeply concentrated, capturing the character of the Taiwan mince served on Nagoya-style Taiwan Ramen.'],
       ['The Fresh Chili Trick','Fresh red chili replaces the dried chili traditionally used in many versions of Taiwan mince. Finely chopping the chili with the seeds and membrane distributes the heat throughout the meat rather than giving you occasional bites of whole chili.'],
-      ['Why the Sauce Is Deliberately Generous','This version is designed specifically for rice. The mince shouldn’t be dry like ordinary soboro. It should sit somewhere between a stir-fried mince and a braised mince, with enough concentrated sauce to soak into the rice. The rice is supposed to get spicy, too.']
+      ['Why the Sauce Is Deliberately Generous','This version is designed specifically for rice. The mince shouldn’t be dry like ordinary *soboro* (そぼろ: finely crumbled and seasoned ground meat). It should sit somewhere between a stir-fried mince and a braised mince, with enough concentrated sauce to soak into the rice. The rice is supposed to get spicy, too.']
     ],
     finePrint:{'Best Eaten':'Fresh','Make ahead':'Yes','Storage':'Airtight container in the refrigerator for up to 3 days','Reheat':'Microwave or stovetop; add a splash of water if the mince becomes too dry','Freezer':'Freeze the Taiwan mince for up to 1–2 months','Fried egg':'Best made fresh'},
     tags:['Restaurant','Main Dishes','Japanese','Ground Pork','Garlic','Fresh Red Chili','Garlic Chives','Doubanjiang'],
