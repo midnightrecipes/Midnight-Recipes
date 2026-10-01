@@ -245,11 +245,11 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         'Stir in {{qty:vanilla extract}} vanilla extract.',
         'Strain through a fine-mesh sieve.',
         'Let the custard rest for 5–10 minutes, then skim off any foam.'
-      ],stepImages:['images/recipes/apple-creme-brulee/step-02-01.jpg','images/recipes/apple-creme-brulee/step-02-02.jpg','images/recipes/apple-creme-brulee/step-02-03.jpg','images/recipes/apple-creme-brulee/step-02-04.jpg']},
+      ],stepImages:['images/recipes/apple-creme-brulee/step-02-01.jpg','images/recipes/apple-creme-brulee/step-02-02.JPG','images/recipes/apple-creme-brulee/step-02-03.JPG','images/recipes/apple-creme-brulee/step-02-04.JPG']},
       {number:'03',title:'FILL',clock:'11:42 PM',paragraphs:[
         'Divide the apples among 6 × 8.5 cm mini cocottes.',
         'Pour the custard over the apples, almost to the top.'
-      ],stepImages:['images/recipes/apple-creme-brulee/step-03-01.jpg']},
+      ],stepImages:['images/recipes/apple-creme-brulee/step-03-01.JPG']},
       {number:'04',title:'WATER BATH & BAKE',clock:'11:45 PM',paragraphs:[
         'Place the cocottes in a deep baking dish.',
         'Add hot water until it reaches halfway up the sides of the cocottes.',
