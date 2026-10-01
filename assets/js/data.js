@@ -187,9 +187,14 @@ window.MIDNIGHT_RECIPES = [
     description:'Apple crème brûlée inspired by Amélie (2001), with soft tart apples beneath silky custard and brittle caramel.',
     heroImage:'images/recipes/apple-creme-brulee/hero.jpg', recipeImage:'images/recipes/apple-creme-brulee/recipe.jpg',
     cardImage:'images/recipes/apple-creme-brulee/hero.jpg',
+    unitOverrides:{metric:{'apples':'g','unsalted butter':'g','brown sugar':'g','lemon juice':'ml','ground cinnamon':'g','whole milk':'ml','35% whipping cream':'ml','granulated sugar':'g','granulated sugar, for brûlée':'g','vanilla extract':'ml'},imperial:{'apples':'cup','unsalted butter':'tbsp','brown sugar':'tbsp','lemon juice':'tbsp','granulated sugar':'tbsp','ground cinnamon':'tsp','vanilla extract':'tsp'}},
+    integerUnits:{metric:['apples','unsalted butter','brown sugar','lemon juice','ground cinnamon','whole milk','35% whipping cream','granulated sugar','vanilla extract','granulated sugar, for brûlée','granulated sugar for br l e']},
+    usCupFractions:true,
+    densityOverrides:{'brown sugar|tbsp':12.5,'granulated sugar|tbsp':12.5},
+    stepQuantityConversion:true,
     story:`What is the first thing that comes to mind when you hear crème brûlée?
 
-For me, it is the movie Amélie. She is a little awkward, but she knows exactly what she likes and dislikes, and she is good at finding happiness in the smallest things — plunging her fingers into a sack of dried beans, skipping stones across a canal, and, of course, cracking the caramelized top of a crème brûlée with the back of a teaspoon.
+For me, it is the movie *Amélie*. She is a little awkward, but she knows exactly what she likes and dislikes, and she is good at finding happiness in the smallest things — plunging her fingers into a sack of dried beans, skipping stones across a canal, and, of course, cracking the caramelized top of a crème brûlée with the back of a teaspoon.
 
 Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples tucked underneath the silky custard, waiting quietly beneath that brittle layer of burnt sugar.`,
     ingredientFile:[
@@ -200,12 +205,8 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         ['Substitute','Pears or other firm fruit'],
         ['Storage','Refrigerate for up to several weeks, depending on variety.']
       ]},
-      {name:'WHOLE MILK',details:[
-        ['Ratio','400 ml 35% whipping cream + 100 ml whole milk'],
-        ['Why this ratio','Crème brûlée can be made with different cream-to-milk ratios, and each one changes the result. More cream makes the custard richer, heavier, and silkier, while more milk makes it lighter and less rich.']
-      ]},
-      {name:'35% WHIPPING CREAM',details:[
-        ['Ratio','400 ml 35% whipping cream + 100 ml whole milk'],
+      {name:'WHOLE MILK + 35% WHIPPING CREAM',details:[
+        ['Ratio','35% whipping cream : whole milk = 4:1'],
         ['Why this ratio','Many recipes use 100% cream, but for this version, I wanted a little more balance. The apples already bring acidity and moisture, so keeping some milk in the custard gives it just enough lightness to complement the rich cream without making the dessert feel too heavy.']
       ]}
     ],
@@ -215,33 +216,33 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
       {amount:15,unit:'g',item:'unsalted butter'},
       {amount:20,unit:'g',item:'brown sugar'},
       {amount:15,unit:'ml',item:'lemon juice'},
-      {amount:0.5,unit:'tsp',item:'ground cinnamon'},
+      {amount:2,unit:'g',item:'ground cinnamon'},
       {unit:'',item:'Pinch fine salt'},
       {group:'Custard'},
       {amount:100,unit:'ml',item:'whole milk'},
       {amount:400,unit:'ml',item:'35% whipping cream'},
       {amount:5,unit:'',item:'large egg yolks'},
       {amount:65,unit:'g',item:'granulated sugar'},
-      {amount:1,unit:'tsp',item:'vanilla extract'},
+      {amount:5,unit:'ml',item:'vanilla extract'},
       {unit:'',item:'Pinch fine salt'},
       {group:'Brûlée'},
-      {unit:'',item:'25–35 g granulated sugar, for brûlée'}
+      {minAmount:25,maxAmount:35,unit:'g',item:'granulated sugar, for brûlée'}
     ],
     stats:{prep:'20 mins',cook:'35 mins',total:'55 mins + chilling',serves:6,quest:'⭐⭐⭐⭐⭐'},
     steps:[
       {number:'01',title:'PREHEAT & SOFTEN THE APPLES',clock:'11:20 PM',paragraphs:[
         'Preheat oven to 140°C / 285°F.',
-        'Melt 15 g butter over medium heat.',
-        'Add 300 g apples, 20 g brown sugar, 15 g lemon juice, ½ tsp cinnamon, and a pinch of salt.',
+        'Melt {{qty:unsalted butter}} butter over medium heat.',
+        'Add {{qty:apples}} apples, {{qty:brown sugar}} brown sugar, {{qty:lemon juice}} lemon juice, {{qty:ground cinnamon}} cinnamon, and a pinch of salt.',
         'Cook for 5–7 minutes, until the apples are tender but still hold their shape.',
         'If there is excess liquid, cook for another 1–2 minutes until glossy but not wet.',
         'Cool slightly.'
       ],stepImages:[]},
       {number:'02',title:'MAKE THE CUSTARD',clock:'11:32 PM',paragraphs:[
-        'Heat 100 ml whole milk and 400 ml 35% whipping cream over medium-low heat until hot and steaming, but do not boil.',
-        'Whisk 5 egg yolks, 65 g sugar, and a pinch of salt gently. Avoid creating too much foam.',
+        'Heat {{qty:whole milk}} whole milk and {{qty:35% whipping cream}} 35% whipping cream over medium-low heat until hot and steaming, but do not boil.',
+        'Whisk 5 egg yolks, {{qty:granulated sugar}} sugar, and a pinch of salt gently. Avoid creating too much foam.',
         'Slowly add the hot dairy while whisking.',
-        'Stir in 1 tsp vanilla extract.',
+        'Stir in {{qty:vanilla extract}} vanilla extract.',
         'Strain through a fine-mesh sieve.',
         'Let the custard rest for 5–10 minutes, then skim off any foam.'
       ],stepImages:['images/recipes/apple-creme-brulee/step-02-01.jpg']},
@@ -259,10 +260,10 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
       ],stepImages:['images/recipes/apple-creme-brulee/step-04-01.jpg']},
       {number:'05',title:'CRACK THE TOP',clock:'NEXT NIGHT',paragraphs:[
         'Blot any moisture from the surface.',
-        'Sprinkle 25–35 g sugar evenly over the six custards in a thin layer.',
+        'Sprinkle {{qty:granulated sugar, for brûlée}} sugar evenly over the six custards in a thin layer.',
         'Torch until deeply golden and glassy.',
         'Let stand for 2–3 minutes.',
-        'Crack the caramelized top with the back of a spoon, like Amélie.'
+        'Crack the caramelized top with the back of a spoon, like *Amélie*.'
       ],stepImages:['images/recipes/apple-creme-brulee/step-05-01.jpg']}
     ],
     notes:[
