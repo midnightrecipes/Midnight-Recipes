@@ -363,9 +363,9 @@ function densityValue(key,targetUnit,r=null){
   const match=entries.find(k=>key===k.slice(0,-targetUnit.length-1)||key.startsWith(k.slice(0,-targetUnit.length-1)+' '));
   return match?densityPerUnit[match]:null;
 }
-function formatCupValue(n){
+function formatCupValue(n,forceCup=false){
   let value=Number(n); if(!Number.isFinite(value))return `${n} cup`;
-  if(value<=0.25+1e-9){
+  if(!forceCup&&value<=0.25+1e-9){
     const tbsp=value*16;
     if(tbsp<=0.25+1e-9){return `${fraction8(tbsp*3)} tsp`;}
     return `${fraction8(tbsp)} tbsp`;
@@ -377,7 +377,7 @@ function formatCupValue(n){
   const singular=whole===0||rounded===1;
   return `${text} ${singular?'cup':'cups'}`;
 }
-function formatTargetValue(n,u,r=null){return (r?.usCupFractions&&['cup','cups'].includes(String(u).toLowerCase()))?formatCupValue(n):formatUnitValue(n,u);}
+function formatTargetValue(n,u,r=null){return (r?.usCupFractions&&['cup','cups'].includes(String(u).toLowerCase()))?formatCupValue(n,!!r.forceCupUnits):formatUnitValue(n,u);}
 function formatUnitValue(n,u){
   if(!u)return String(Math.round(Number(n)*100)/100);
   const unit=String(u).toLowerCase();
@@ -390,7 +390,7 @@ function convertToUnit(amount,from,to,item='',context='',r=null){
   const f=String(from||'').toLowerCase(); const t=String(to||'').toLowerCase();
   if(!t||f===t){
     const sameKey=ingredientKey(item);
-    if(t==='cup'||t==='cups')return r?.usCupFractions?formatCupValue(n):formatUnitValue(n,to||from);
+    if(t==='cup'||t==='cups')return r?.usCupFractions?formatCupValue(n,!!r.forceCupUnits):formatUnitValue(n,to||from);
     if(r?.integerUnits?.metric?.includes(sameKey))return `${Math.round(n)} ${to||from}`;
     return formatUnitValue(n,to||from);
   }
