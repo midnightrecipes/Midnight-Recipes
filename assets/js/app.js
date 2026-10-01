@@ -449,10 +449,12 @@ function renderIngredients(r,scale=1,unit='metric'){
         v=`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
       }
     }else if(hasAmount){
-      const target=desiredUnit(item,unit,x.unit,currentGroup,r);
-      if(target)v=convertToUnit(Number(x.amount)*scale,x.unit,target,item,currentGroup,r);
-      else if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!=='')v=formatQuantity(Number(x.imperialAmount)*scale,x.imperialUnit);
-      else v=convert(Number(x.amount)*scale,x.unit,unit,item,currentGroup,r);
+      if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!=='')v=formatTargetValue(Number(x.imperialAmount)*scale,x.imperialUnit,r);
+      else {
+        const target=desiredUnit(item,unit,x.unit,currentGroup,r);
+        if(target)v=convertToUnit(Number(x.amount)*scale,x.unit,target,item,currentGroup,r);
+        else v=convert(Number(x.amount)*scale,x.unit,unit,item,currentGroup,r);
+      }
     }
     return `<li><input type="checkbox"><span>${v?`<strong class="ingredient-quantity">${esc(v)}</strong> `:''}${esc(item)}${ingredientInfoLink(r,item)}</span></li>`
   }).join('')
