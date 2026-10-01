@@ -237,7 +237,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         'Cook for 5–7 minutes, until the apples are tender but still hold their shape.',
         'If there is excess liquid, cook for another 1–2 minutes until glossy but not wet.',
         'Cool slightly.'
-      ],stepImages:[]},
+      ],stepImages:['images/recipes/apple-creme-brulee/step-01-01.jpg','images/recipes/apple-creme-brulee/step-01-02.jpg','images/recipes/apple-creme-brulee/step-01-03.jpg','images/recipes/apple-creme-brulee/step-01-04.jpg']},
       {number:'02',title:'MAKE THE CUSTARD',clock:'11:32 PM',paragraphs:[
         'Heat {{qty:whole milk}} whole milk and {{qty:35% whipping cream}} 35% whipping cream over medium-low heat until hot and steaming, but do not boil.',
         'Whisk 5 egg yolks, {{qty:granulated sugar}} sugar, and a pinch of salt gently. Avoid creating too much foam.',
@@ -245,11 +245,11 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         'Stir in {{qty:vanilla extract}} vanilla extract.',
         'Strain through a fine-mesh sieve.',
         'Let the custard rest for 5–10 minutes, then skim off any foam.'
-      ],stepImages:['images/recipes/apple-creme-brulee/step-02-01.jpg']},
+      ],stepImages:['images/recipes/apple-creme-brulee/step-02-01.jpg','images/recipes/apple-creme-brulee/step-02-02.jpg','images/recipes/apple-creme-brulee/step-02-03.jpg','images/recipes/apple-creme-brulee/step-02-04.jpg']},
       {number:'03',title:'FILL',clock:'11:42 PM',paragraphs:[
         'Divide the apples among 6 × 8.5 cm mini cocottes.',
         'Pour the custard over the apples, almost to the top.'
-      ],stepImages:[]},
+      ],stepImages:['images/recipes/apple-creme-brulee/step-03-01.jpg']},
       {number:'04',title:'WATER BATH & BAKE',clock:'11:45 PM',paragraphs:[
         'Place the cocottes in a deep baking dish.',
         'Add hot water until it reaches halfway up the sides of the cocottes.',
@@ -264,7 +264,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         'Torch until deeply golden and glassy.',
         'Let stand for 2–3 minutes.',
         'Crack the caramelized top with the back of a spoon, like *Amélie*.'
-      ],stepImages:['images/recipes/apple-creme-brulee/step-05-01.jpg']}
+      ],stepImages:['images/recipes/apple-creme-brulee/step-05-01.jpg','images/recipes/apple-creme-brulee/step-05-02.jpg']}
     ],
     notes:[
       ['Keeping the Apples Distinct','Cooking the apples separately concentrates their flavor and removes excess moisture.'],
