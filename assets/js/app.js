@@ -69,16 +69,83 @@ function parseQuantity(value){
   if(/^\d+\/\d+$/.test(s)){const [a,b]=s.split('/').map(Number);return a/b}
   return Number(s);
 }
+function normalizeStepUnit(value){
+  const u=String(value||'').toLowerCase().trim();
+  if(/^tablespoons?$/.test(u))return 'tbsp';
+  if(/^teaspoons?$/.test(u))return 'tsp';
+  if(/^cups?$/.test(u))return 'cup';
+  if(/^ounces?$/.test(u))return 'oz';
+  if(/^pounds?$/.test(u)||u==='lbs')return 'lb';
+  if(u==='c')return 'cup';
+  return u;
+}
+function instructionIngredientCandidates(r,item,rawUnit,context=''){
+  const key=ingredientKey(item);
+  const list=(r?.ingredients||[]).filter(x=>x&&typeof x==='object'&&!x.group&&x.item);
+  const matching=list.filter(x=>{
+    const xKey=ingredientKey(x.item);
+    return xKey===key || xKey.includes(key) || key.includes(xKey) || normalizeQuantityIngredient(x.item).includes(normalizeQuantityIngredient(item));
+  });
+  if(matching.length<=1)return matching;
+  const raw=normalizeStepUnit(rawUnit);
+  return matching.slice().sort((a,b)=>{
+    const score=x=>{
+      const xKey=ingredientKey(x.item);
+      const contextText=normalizeQuantityIngredient(context);
+      const finishingMatch=/finish|finishing/.test(contextText)&&/finish|finishing/.test(normalizeQuantityIngredient(x.item));
+      const nonFinishingMatch=!/finish|finishing/.test(contextText)&&!/finish|finishing/.test(normalizeQuantityIngredient(x.item));
+      const source=normalizeStepUnit(x.unit);
+      const imperial=normalizeStepUnit(x.imperialUnit||'');
+      const desired=normalizeStepUnit(desiredUnit(x.item,'imperial',x.unit,'',r)||'');
+      return (xKey===key?10000:0)+(finishingMatch?900:0)+(nonFinishingMatch?800:0)+(source===raw?400:0)+(imperial===raw?300:0)+(desired===raw?200:0)+Math.max(normalizeQuantityIngredient(x.item).length,ingredientKey(x.item).length)/1000;
+    };
+    return score(b)-score(a);
+  });
+}
+function instructionQuantityFromIngredient(x,scale,unit,r){
+  if(!x)return '';
+  if(x.minAmount!==undefined&&x.maxAmount!==undefined){
+    const min=Number(x.minAmount)*scale,max=Number(x.maxAmount)*scale;
+    if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
+      return `${formatTargetValue(Number(x.imperialMinAmount)*scale,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(Number(x.imperialMaxAmount)*scale,x.imperialMaxUnit||x.unit,r)}`;
+    }
+    const target=desiredUnit(x.item,unit,x.unit,'',r);
+    if(target)return `${convertToUnit(min,x.unit,target,x.item,'',r)}–${convertToUnit(max,x.unit,target,x.item,'',r)}`;
+    return unit==='imperial'?`${convert(min,x.unit,'imperial',x.item,'',r)}–${convert(max,x.unit,'imperial',x.item,'',r)}`:`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
+  }
+  if(x.amount!==undefined&&x.amount!==null&&x.amount!==''){
+    if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!=='')return formatTargetValue(Number(x.imperialAmount)*scale,x.imperialUnit,r);
+    const target=desiredUnit(x.item,unit,x.unit,'',r);
+    if(target)return convertToUnit(Number(x.amount)*scale,x.unit,target,x.item,'',r);
+    return convert(Number(x.amount)*scale,x.unit,unit,x.item,'',r);
+  }
+  return '';
+}
 function scaleInstructionQuantity(num,rawUnit,scale,unit,context='',pos=0,ingredientContext='',r=null){
   const amount=parseQuantity(num)*scale;
   const unitCanInferBefore=/^(g|kg|ml|l|oz|ounces?|lbs?|pounds?|tsp|teaspoons?|tbsp|tablespoons?|cups?|cup)$/i.test(String(rawUnit||''));
   const activeRecipe=r?.stepQuantityConversion?r:null;
   const item=inferIngredientFromText(context,pos,ingredientContext,unitCanInferBefore,activeRecipe);
+  const candidate=instructionIngredientCandidates(r,item,rawUnit,ingredientContext)[0];
+  if(candidate){
+    const synced=instructionQuantityFromIngredient(candidate,scale,unit,r);
+    if(synced)return synced;
+  }
   return convert(amount,rawUnit,unit,item,ingredientContext,r);
 }
 function scaleInstructionText(value,r,scale,unit,ingredientContext=''){
   let text=String(value??'');
-  if(r?.stepQuantityConversion)text=text.replace(/½/g,'1/2').replace(/¼/g,'1/4').replace(/¾/g,'3/4').replace(/⅓/g,'1/3').replace(/⅔/g,'2/3').replace(/⅛/g,'1/8').replace(/⅜/g,'3/8').replace(/⅝/g,'5/8').replace(/⅞/g,'7/8');
+  if(r?.stepQuantityConversion){
+    let usedQuantityTokens=false;
+    text=text.replace(/\{\{qty:([^}]+)\}\}/g,(m,item)=>{
+      const candidate=instructionIngredientCandidates(r,item,'',ingredientContext)[0];
+      const synced=candidate?instructionQuantityFromIngredient(candidate,scale,unit,r):'';
+      if(synced){usedQuantityTokens=true;return synced;}
+      return m;
+    });
+    text=text.replace(/½/g,'1/2').replace(/¼/g,'1/4').replace(/¾/g,'3/4').replace(/⅓/g,'1/3').replace(/⅔/g,'2/3').replace(/⅛/g,'1/8').replace(/⅜/g,'3/8').replace(/⅝/g,'5/8').replace(/⅞/g,'7/8');
+    if(usedQuantityTokens)return text;
+  }
   const atom='(?:\\d+\\s+\\d+\\/\\d+|\\d+\\/\\d+|\\d+(?:\\.\\d+)?)';
   const range=`${atom}(?:\\s*[–-]\\s*${atom})?`;
   const units='g|kg|ml|l|oz|ounces?|lbs?|pounds?|tsp|teaspoons?|tbsp|tablespoons?|cups?|cup|large\\s+eggs?|eggs?';
@@ -87,6 +154,13 @@ function scaleInstructionText(value,r,scale,unit,ingredientContext=''){
   text=text.replace(quantityPattern,(match,prefix,num,rawUnit,offset)=>{
     const rangeParts=num.match(new RegExp(`^(${atom})(?:\\s*[–-]\\s*(${atom}))?$`));
     if(!rangeParts)return match;
+    if(r?.stepQuantityConversion){
+      const unitCanInferBefore=/^(g|kg|ml|l|oz|ounces?|lbs?|pounds?|tsp|teaspoons?|tbsp|tablespoons?|cups?|cup)$/i.test(String(rawUnit||''));
+      const item=inferIngredientFromText(text,offset+prefix.length,ingredientContext,unitCanInferBefore,r);
+      const candidate=instructionIngredientCandidates(r,item,rawUnit,ingredientContext)[0];
+      const synced=instructionQuantityFromIngredient(candidate,scale,unit,r);
+      if(synced)return prefix+synced;
+    }
     const first=scaleInstructionQuantity(rangeParts[1],rawUnit,scale,unit,text,offset+prefix.length,ingredientContext,r);
     if(!rangeParts[2])return prefix+first;
     const second=scaleInstructionQuantity(rangeParts[2],rawUnit,scale,unit,text,offset+prefix.length,ingredientContext,r);
@@ -377,7 +451,7 @@ function inferIngredientFromText(text,pos,context='',allowBefore=true,r=null){
   const after=source.slice(pos,pos+90).toLowerCase();
   const before=source.slice(Math.max(0,pos-90),pos).toLowerCase();
   const afterSegment=after.split(/[,;]/,1)[0];
-  const ingredientAfter=afterSegment.replace(/^\s*(?:\d+\s+\d+\/\d+|\d+\/\d+|\d+(?:\.\d+)?)\s*(?:g|kg|ml|l|oz|ounces?|lbs?|pounds?|tsp|teaspoons?|tbsp|tablespoons?|cups?|cup|large\s+eggs?|eggs?)\s*/i,'');
+  const ingredientAfter=afterSegment.replace(/^\s*(?:\d+\s+\d+\/\d+|\d+\/\d+|\d+(?:\.\d+)?)(?:\s*[–-]\s*(?:\d+\s+\d+\/\d+|\d+\/\d+|\d+(?:\.\d+)?))?\s*(?:g|kg|ml|l|oz|ounces?|lbs?|pounds?|tsp|teaspoons?|tbsp|tablespoons?|cups?|cup|large\s+eggs?|eggs?)\s*/i,'');
   const normalizedAfter=normalizeQuantityIngredient(ingredientAfter);
   const normalizedAfterCanonical=normalizeQuantityIngredient(ingredientKey(ingredientAfter));
   const normalizedBefore=normalizeQuantityIngredient(before);
@@ -388,6 +462,14 @@ function inferIngredientFromText(text,pos,context='',allowBefore=true,r=null){
   const recipeItems=(r?.ingredients||[]).map(x=>typeof x==='object'?x.item:'').filter(Boolean);
   const recipeKeys=recipeItems.map(x=>ingredientKey(x));
   const candidates=Array.from(new Set([...Object.keys({...unitIngredientMap.metric,...unitIngredientMap.imperial}),...overrideKeys,...recipeItems,...recipeKeys])).map(k=>({key:k,normalized:normalizeQuantityIngredient(k),canonical:normalizeQuantityIngredient(ingredientKey(k))})).filter(x=>x.normalized||x.canonical).sort((a,b)=>Math.max(b.normalized.length,b.canonical.length)-Math.max(a.normalized.length,a.canonical.length));
+  const recipePhraseMatch=recipeItems.map(raw=>({raw,n:normalizeQuantityIngredient(raw)})).filter(x=>x.n).sort((a,b)=>b.n.length-a.n.length).find(x=>{
+    const words=x.n.split(' ');
+    const variants=[x.n,words.slice(0,3).join(' '),words.slice(0,2).join(' ')].filter(v=>v.length>=8);
+    return variants.some(v=>normalizedAfter.includes(v));
+  });
+  if(recipePhraseMatch)return recipePhraseMatch.raw;
+  const phraseMatch=candidates.filter(x=>x.normalized&&normalizedAfter.includes(x.normalized)||x.canonical&&normalizedAfterCanonical.includes(x.canonical)).sort((a,b)=>Math.max(b.normalized.length,b.canonical.length)-Math.max(a.normalized.length,a.canonical.length))[0];
+  if(phraseMatch)return phraseMatch.key;
   const recipeWordMatch=recipeItems.find(raw=>{const k=ingredientKey(raw);return k&&normalizedAfter&&normalizedAfter.includes(k.split(' ').slice(-1)[0])});
   if(recipeWordMatch)return recipeWordMatch;
   const afterMatch=candidates.find(x=>normalizedAfter.includes(x.normalized)||(x.canonical&&(normalizedAfterCanonical.includes(x.canonical)||x.canonical===normalizedAfter||x.canonical.endsWith(' '+normalizedAfter))));
