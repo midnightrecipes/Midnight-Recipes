@@ -15,6 +15,8 @@ window.MIDNIGHT_RECIPES = [
     integerUnits:{metric:['unsweetened cocoa powder']},
     stepQuantityConversion:true,
     usCupFractions:true,
+    fractionDenominator:16,
+    scaleMinimums:{'salt|pinch':1},
     fixedStepPhotoCells:true,
     storyQuote:'“You know what I like about cooking? I love that after a day when nothing is sure, and when I say nothing I mean nothing, you can come home and absolutely know that if you add egg yolks to chocolate and sugar and milk, it will get thick. It’s such a comfort.”',
     story:`*Reine de Saba* (chocolate cake with sliced almonds) might be the most famous dessert from this movie, but it was Julie’s whole emotional breakdown over making a chocolate cream pie that totally spoke to me. No matter how crazy or messy the day gets, the kitchen is always my ultimate comfort zone to reset!`,
@@ -24,11 +26,11 @@ window.MIDNIGHT_RECIPES = [
       {name:'DARK CHOCOLATE',details:[['Flavor','The chocolate is the heart of this pie, so use a good-quality chocolate you genuinely enjoy eating.'],['Best choice','60–70% dark chocolate.'],['Substitute','Semi-sweet chocolate.'],['Midnight Fix','If using sweeter chocolate, reduce the sugar to 50–60g.']]},
       {name:'ESPRESSO POWDER',details:[['Flavor','A small amount intensifies the chocolate flavor without making the pie taste like coffee.'],['Substitute','Instant coffee powder.']]},
       {name:'UNSWEETENED COCOA POWDER',details:[['Role','Adds concentrated chocolate flavor without adding extra sweetness.'],['Best choice','Dutch-processed cocoa powder for a darker, smoother chocolate flavor.'],['Substitute','Natural unsweetened cocoa powder.'],["Can't find cocoa powder?",'Leave it out and add an extra 20–30g dark chocolate to the filling. The chocolate flavor will be slightly richer, and the filling may be a little softer.']]},
-      {name:'3.25% MILK',details:[['Why 3.25%','The higher fat content gives the chocolate filling a richer, creamier mouthfeel.'],['Substitute','2% milk works too, but the filling will be slightly lighter.'],['Midnight Fix','If using 2% milk, add 1 Tbsp extra butter for a richer texture.']]}
+      {name:'WHOLE MILK',details:[['Why Whole Milk','The higher fat content gives the chocolate filling a richer, creamier mouthfeel.'],['Substitute','2% milk works too, but the filling will be slightly lighter.'],['Midnight Fix','If using 2% milk, add 1 Tbsp extra butter for a richer texture.']]}
     ],
     ingredients:[
       {group:'Crust'},{amount:200,unit:'g',item:'Graham Crackers, finely crushed'},{amount:80,unit:'g',item:'Unsalted Butter, melted'},
-      {group:'Chocolate Filling'},{amount:150,unit:'g',item:'Dark Chocolate, chopped'},{amount:1,unit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',item:'Unsweetened Cocoa Powder'},{amount:4,unit:'',item:'Egg Yolks'},{amount:80,unit:'g',item:'Sugar'},{amount:4,unit:'Tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',item:'Salt'},{amount:500,unit:'ml',item:'3.25% Milk'},{amount:20,unit:'g',item:'Unsalted Butter'},
+      {group:'Chocolate Filling'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark Chocolate, chopped'},{amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened Cocoa Powder'},{amount:4,unit:'',imperialAmount:4,imperialUnit:'',item:'Egg Yolks'},{amount:80,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:500,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole Milk'},{amount:20,unit:'g',imperialAmount:1.375,imperialUnit:'tbsp',item:'Unsalted Butter'},
       {group:'Topping (optional)'},{amount:200,unit:'ml',item:'Whipped Cream'},{amount:2,unit:'Tbsp',item:'Sugar'},{unit:'',item:'Cocoa powder, cacao nibs, or flaky sea salt, to finish'}
     ],
     stats:{prep:'15 mins',cook:'15 mins',chill:'4 hrs',total:'4 hrs 30 min',serves:'6–8',pan:'23 cm / 9 inch pie dish',quest:'⭐⭐⭐☆☆'},
@@ -38,14 +40,14 @@ window.MIDNIGHT_RECIPES = [
         'Crush 200g graham crackers finely.',
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
         '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
-        'Add 80g melted butter and mix until the crumbs are evenly coated.',
+        'Add {{qty:Crust::Unsalted Butter, melted}} and mix until the crumbs are evenly coated.',
         'Press the crumb mixture firmly into a 9-inch (23 cm) pie dish using the flat bottom of a cup.',
         'Bake for 8–10 minutes.',
         'Let it cool.'
       ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/chocolate-cream-comfort-pie/step-01-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-03.jpg']},
       {number:'02',title:'MAKE IT GLOSSY',clock:'12:20 AM',paragraphs:[
-        'In a saucepan, whisk 80g sugar, 4 Tbsp cornstarch, 3 Tbsp cocoa powder, 1 tsp espresso powder, and a pinch of salt.',
-        'Slowly pour in 500ml milk, whisking thoroughly until completely smooth before turning on the heat.',
+        'In a saucepan, whisk {{qty:Chocolate Filling::Sugar}}, {{qty:Chocolate Filling::Cornstarch}}, {{qty:Chocolate Filling::Unsweetened Cocoa Powder}}, {{qty:Chocolate Filling::Espresso powder}}, and {{qty:Chocolate Filling::Salt}}.',
+        'Slowly pour in {{qty:Chocolate Filling::Whole Milk}}, whisking thoroughly until completely smooth before turning on the heat.',
         'Cook over medium heat, whisking constantly until the mixture bubbles and thickens into a pudding-like consistency.',
         'Remove the pan from the heat.'
       ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-02-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-02-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-02-03.jpg','images/recipes/chocolate-cream-comfort-pie/step-02-04.jpg']},
@@ -53,7 +55,7 @@ window.MIDNIGHT_RECIPES = [
         'In a separate bowl, whisk 4 egg yolks.',
         'Slowly whisk ½ cup of the hot chocolate cream into the yolks to warm them up, then pour the yolk mixture back into the pan.',
         'Return to low heat for 1 minute, whisking constantly until thick and glossy.',
-        'Remove from heat, then stir in 150g chopped dark chocolate and 20g butter until fully melted and smooth.'
+        'Remove from heat, then stir in {{qty:Chocolate Filling::Dark Chocolate, chopped}} chopped dark chocolate and {{qty:Chocolate Filling::Unsalted Butter}} butter until fully melted and smooth.'
       ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-03-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-03-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-03-03.jpg','images/recipes/chocolate-cream-comfort-pie/step-03-04.jpg']},
       {number:'04',title:'POUR AND WAIT',clock:'12:35 AM',paragraphs:[
         'Pour the warm chocolate filling into your chilled pie crust.',
