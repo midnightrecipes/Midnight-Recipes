@@ -437,7 +437,6 @@ function formatTargetValue(n,u,r=null){
 function formatUnitValue(n,u){
   if(!u)return String(Math.round(Number(n)*100)/100);
   const unit=String(u).toLowerCase();
-  if(unit==='pinch'||unit==='pinches')return `${Math.round(Number(n)*100)/100} ${Number(n)===1?'pinch':'pinches'}`;
   if(unit==='tbsp'||unit==='tsp')return `${fraction8(n)} ${u}`;
   if(['g','ml','lb','oz','fl oz','l','kg','cup','cups'].includes(unit)){const rounded=Math.round(Number(n)*10)/10;return `${Number.isInteger(rounded)?String(rounded):rounded.toFixed(1)} ${u}`;}
   return `${Math.round(Number(n)*100)/100} ${u}`;
