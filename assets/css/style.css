@@ -233,14 +233,10 @@ body.scaled .overlay{position:absolute; top:76px; bottom:auto; height:820px;}
 [data-view]{display:none;}
 [data-view][data-active="true"]{display:block;}
 
-/* Search Results: use the available desktop viewport width without changing the shared recipe-card design. */
+/* Search Results: widen only the search panel's content container on desktop. */
 @media (min-width:1101px){
-  .search-inner #searchResults{
-    width:min(calc(100vw - 96px),1440px);
-    max-width:none;
-    margin-left:50%;
-    margin-right:0;
-    transform:translateX(-50%);
+  .panel.search .search-inner{
+    max-width:1440px;
   }
 }
 
