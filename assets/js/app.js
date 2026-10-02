@@ -157,7 +157,7 @@ function scaleInstructionQuantity(num,rawUnit,scale,unit,context='',pos=0,ingred
   const amount=parseQuantity(num)*scale;
   const unitCanInferBefore=/^(g|kg|ml|l|oz|ounces?|lbs?|pounds?|tsp|teaspoons?|tbsp|tablespoons?|cups?|cup)$/i.test(String(rawUnit||''));
   const activeRecipe=r?.stepQuantityConversion?r:null;
-  const item=inferIngredientFromText(context,pos,ingredientContext,unitCanInferBefore,activeRecipe);
+  const item=ingredientContext||inferIngredientFromText(context,pos,ingredientContext,unitCanInferBefore,activeRecipe);
   const candidate=instructionIngredientCandidates(r,item,rawUnit,ingredientContext)[0];
   if(candidate){
     const synced=instructionQuantityFromIngredient(candidate,scale,unit,r);
@@ -201,8 +201,17 @@ function scaleInstructionText(value,r,scale,unit,ingredientContext=''){
   return text;
 }
 function instructionAmount(a,scale,unit,context='',r=null){
-  if(a&&a.min!==undefined&&a.max!==undefined)return `${scaleInstructionQuantity(String(a.min),a.unit,scale,unit,context,0,'',r)}–${scaleInstructionQuantity(String(a.max),a.unit,scale,unit,context,0,'',r)}`;
-  if(a&&a.value!==undefined)return scaleInstructionQuantity(String(a.value),a.unit,scale,unit,context,0,'',r);
+  const ingredientContext=a?.ingredient||'';
+  if(a&&a.min!==undefined&&a.max!==undefined){
+    const candidate=ingredientContext?instructionIngredientCandidates(r,ingredientContext,a.unit,context)[0]:null;
+    if(candidate){
+      const minValue={...candidate,amount:unit==='imperial'&&candidate.imperialMinAmount!==undefined?candidate.imperialMinAmount:a.min,unit:unit==='imperial'&&candidate.imperialMinUnit?candidate.imperialMinUnit:candidate.unit,minAmount:undefined,maxAmount:undefined,imperialAmount:undefined};
+      const maxValue={...candidate,amount:unit==='imperial'&&candidate.imperialMaxAmount!==undefined?candidate.imperialMaxAmount:a.max,unit:unit==='imperial'&&candidate.imperialMaxUnit?candidate.imperialMaxUnit:candidate.unit,minAmount:undefined,maxAmount:undefined,imperialAmount:undefined};
+      return `${instructionQuantityFromIngredient(minValue,scale,unit,r)}–${instructionQuantityFromIngredient(maxValue,scale,unit,r)}`;
+    }
+    return `${scaleInstructionQuantity(String(a.min),a.unit,scale,unit,context,0,ingredientContext,r)}–${scaleInstructionQuantity(String(a.max),a.unit,scale,unit,context,0,ingredientContext,r)}`;
+  }
+  if(a&&a.value!==undefined)return scaleInstructionQuantity(String(a.value),a.unit,scale,unit,context,0,ingredientContext,r);
   return '';
 }
 function instructionModeParts(value){
@@ -285,7 +294,7 @@ function normalizeQuantityIngredient(value){
 const unitIngredientMap={
   metric:{
     'white sugar':'g','espresso powder':'g','salt':'g','unsweetened cocoa powder':'g','cornstarch':'g','ground ginger':'g','ground cinnamon':'g','cinnamon':'g','ginger':'g','plain biscuits':'g','sugar':'g','chicken bouillon powder':'g',
-    'sesame oil':'ml','10% cream':'ml','half & half / 10% cream':'ml','half & half':'ml','half half':'ml','ice water':'ml'
+    'sesame oil':'ml','10% cream':'ml','half & half / 10% cream':'ml','half & half':'ml','half half':'ml','cold water':'ml'
   },
   imperial:{
     'ground pork':'lb','cooked sweet potato':'cup','cornstarch':'cup','3.25% milk':'cup','half & half / 10% cream':'cup','half & half':'cup','half half':'cup','10% cream':'cup','whole milk':'cup','unsalted butter':'cup','unsalted butter melted':'cup','graham crackers':'cup','graham crackers finely crushed':'cup','dark brown sugar':'cup','molasses':'cup','finely crushed':'cup','dark chocolate chopped':'cup','dark chocolate':'cup','sugar':'cup','white sugar':'cup','35% whipping cream':'cup','brown sugar':'cup','whipped cream':'cup','water':'cup','granulated sugar':'cup','apples':'cup','chives':'cup',
