@@ -219,7 +219,7 @@ body.scaled .overlay{position:absolute; top:76px; bottom:auto; height:820px;}
 .menu .sub[data-open="true"]{display:block;}
 .menu .top-item{margin-top:20px; font-size:21px;}
 .menu .note{font-size:14px; opacity:.55;}
-.search-inner{max-width:760px; margin-left:auto; text-align:right;}
+.search-inner{max-width:var(--maxw); margin:0 auto; padding:0 34px; text-align:right;}
 .search-inner p{font-size:24px; letter-spacing:.05em; margin:0 0 22px;}
 .search-field{display:flex; align-items:center; justify-content:flex-end; gap:8px;}
 .search-field input{
