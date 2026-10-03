@@ -45,8 +45,8 @@ window.MIDNIGHT_RECIPES = [
         'Bake for 8–10 minutes. Let it cool.'
       ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/chocolate-cream-comfort-pie/step-01-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-03.jpg']},
       {number:'02',title:'MAKE IT GLOSSY',clock:'12:20 AM',paragraphs:[
-        'In a saucepan, whisk {{qty:Chocolate Filling::Sugar}}, {{qty:Chocolate Filling::Cornstarch}}, {{qty:Chocolate Filling::Unsweetened Cocoa Powder}}, {{qty:Chocolate Filling::Espresso powder}}, and {{qty:Chocolate Filling::Salt}}.',
-        'Slowly pour in {{qty:Chocolate Filling::Whole Milk}}, whisking thoroughly until completely smooth before turning on the heat.',
+        'In a saucepan, whisk {{qty:Chocolate Filling::Sugar}} sugar, {{qty:Chocolate Filling::Cornstarch}} cornstarch, {{qty:Chocolate Filling::Unsweetened Cocoa Powder}} cocoa powder, {{qty:Chocolate Filling::Espresso powder}} espresso powder, and {{qty:Chocolate Filling::Salt}} salt.',
+        'Slowly pour in {{qty:Chocolate Filling::Whole Milk}} whole milk, whisking thoroughly until completely smooth before turning on the heat.',
         'Cook over medium heat, whisking constantly until the mixture bubbles and thickens into a pudding-like consistency.',
         'Remove the pan from the heat.'
       ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-02-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-02-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-02-03.jpg','images/recipes/chocolate-cream-comfort-pie/step-02-04.jpg']},
