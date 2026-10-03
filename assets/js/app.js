@@ -50,7 +50,7 @@ function sortRecipes(list,sort='latest'){
   if(sort==='oldest')return base.sort((a,b)=>String(a.r.dateAdded||'').localeCompare(String(b.r.dateAdded||''))||a.index-b.index).map(x=>x.r);
   return base.sort((a,b)=>String(b.r.dateAdded||'').localeCompare(String(a.r.dateAdded||''))||b.index-a.index).map(x=>x.r);
 }
-function filterRecipes(type,value){const v=String(value||'').trim().toLowerCase();if(type==='usuals'){return recipes.filter(r=>r.isUsuals&&(!v||String(r.usualsCategory||'').toLowerCase()===v))}const pool=type==='search'?recipes:recipes.filter(r=>!r.isUsuals);if(!v)return pool;return pool.filter(r=>{if(type==='source')return String(r.source||'').toLowerCase()===v;if(type==='course'){const target=String(courseFilterValue(value)).toLowerCase();return courseValues(r).some(x=>String(x).toLowerCase()===target)||splitFooterValues(r.footerCourse).some(x=>String(courseFilterValue(x)).toLowerCase()===target)}if(type==='cuisine')return cuisineValues(r).some(x=>String(x).toLowerCase()===v);if(type==='ingredient')return ingredientNames(r).some(x=>String(x).toLowerCase()===v||String(x).toLowerCase().includes(v));return searchMatches(r,v)})}
+function filterRecipes(type,value){const v=String(value||'').trim().toLowerCase();if(type==='usuals'){return recipes.filter(r=>r.isUsuals&&(!v||String(r.usualsCategory||'').toLowerCase()===v))}const pool=type==='search'?recipes:recipes.filter(r=>!r.isUsuals);if(!v)return pool;return pool.filter(r=>{if(type==='source')return [r.source,r.sourceSecondary,...(Array.isArray(r.sources)?r.sources:[])].filter(Boolean).some(x=>String(x).toLowerCase()===v);if(type==='course'){const target=String(courseFilterValue(value)).toLowerCase();return courseValues(r).some(x=>String(x).toLowerCase()===target)||splitFooterValues(r.footerCourse).some(x=>String(courseFilterValue(x)).toLowerCase()===target)}if(type==='cuisine')return cuisineValues(r).some(x=>String(x).toLowerCase()===v);if(type==='ingredient')return ingredientNames(r).some(x=>String(x).toLowerCase()===v||String(x).toLowerCase().includes(v));return searchMatches(r,v)})}
 function listSortValue(){const value=new URLSearchParams(location.search).get('sort')||'latest';return ['popular','latest','oldest','az','za'].includes(value)?value:'latest'}
 function bindListSort(){const select=document.querySelector('[data-sort]');if(!select)return;select.addEventListener('change',()=>{const p=new URLSearchParams(location.search);p.set('sort',select.value);location.href=location.pathname+'?'+p.toString()})}
 function sortControl(sort){return `<div class="sort-control" style="display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:0 0 18px;font-size:15px"><label for="recipeSort">Sort:</label><select id="recipeSort" data-sort aria-label="Sort recipes" style="font:inherit;background:transparent;border:1px solid var(--line);padding:6px 9px"><option value="popular"${sort==='popular'?' selected':''}>Popular</option><option value="latest"${sort==='latest'?' selected':''}>Latest</option><option value="oldest"${sort==='oldest'?' selected':''}>Oldest</option><option value="az"${sort==='az'?' selected':''}>A–Z</option><option value="za"${sort==='za'?' selected':''}>Z–A</option></select></div>`}
@@ -173,13 +173,49 @@ function scaleInstructionText(value,r,scale,unit,ingredientContext=''){
   if(r?.stepQuantityConversion){
     let usedQuantityTokens=false;
     text=text.replace(/\{\{qty:([^}]+)\}\}/g,(m,item)=>{
+      if(r?.slug==='mexican-calabaza-en-tacha-pumpkin-pie'){
+        const syrup=String(item).startsWith('INSTRUCTION-ONLY SYRUP::');
+        const key=syrup?String(item).split('::').slice(1).join('::'):String(item);
+        const special={
+          'Half & Half / 10% Cream':{metric:[180,'ml'],imperial:[3/4,'cup',4]},
+          'Pumpkin Purée':{metric:[400,'g'],imperial:[5/3,'cup',3]},
+          'Eggs':{metric:[2,'large'],imperial:[2,'large']},
+          'Orange Juice':syrup?{metric:[30,'ml'],imperial:[2,'tbsp']}:{metric:[15,'ml'],imperial:[1,'tbsp']},
+          'Salt':syrup?{metric:[1,'pinch'],imperial:[1,'pinch']}:{metric:[0.25,'tsp'],imperial:[0.25,'tsp']},
+          'Dark Brown Sugar':syrup?{metric:[35,'g'],imperial:[2.5,'tbsp']}:{metric:[60,'g'],imperial:[1/3,'cup',3]},
+          'Molasses':syrup?{metric:[5,'g'],imperial:[1,'tsp']}:{metric:[10,'g'],imperial:[0.5,'tbsp']},
+          'Water':{metric:[15,'ml'],imperial:[1,'tbsp']},
+          'Orange Peel, about 2–3 cm (1 inch) long':{metric:[1,'strip'],imperial:[1,'strip']}
+        }[key];
+        if(special){
+          const spec=special[unit==='imperial'?'imperial':'metric'];
+          const amount=Number(spec[0])*scale, u=spec[1], den=spec[2];
+          let value;
+          if(u==='cup'&&den)value=`${formatFraction(amount,den)} cup${amount<=1+1e-9?'':'s'}`;
+          else if(u==='tbsp'||u==='tsp')value=formatFraction(amount,4).replace(/1\/2/g,'½').replace(/1\/4/g,'¼').replace(/3\/4/g,'¾')+` ${u}`;
+          else value=formatUnitValue(amount,u);
+          usedQuantityTokens=true; return value;
+        }
+      }
       const candidate=instructionIngredientCandidates(r,item,'',ingredientContext)[0];
       const synced=candidate?instructionQuantityFromIngredient(candidate,scale,unit,r):'';
       if(synced){usedQuantityTokens=true;return synced;}
       return m;
     });
     text=text.replace(/½/g,'1/2').replace(/¼/g,'1/4').replace(/¾/g,'3/4').replace(/⅓/g,'1/3').replace(/⅔/g,'2/3').replace(/⅛/g,'1/8').replace(/⅜/g,'3/8').replace(/⅝/g,'5/8').replace(/⅞/g,'7/8');
-    if(usedQuantityTokens)return text;
+    if(usedQuantityTokens){
+      if(r?.slug==='mexican-calabaza-en-tacha-pumpkin-pie'){
+        text=text.replace(/(^|[^\d])((?:\d+\s+)?\d+\/\d+|\d+(?:\.\d+)?)\s+(stick|strips?|pinch(?:es)?)(?=\s|[,.]|$)/gi,(match,prefix,num,rawUnit)=>{
+          const amount=parseQuantity(num)*scale;
+          const display=Math.abs(amount-Math.round(amount))<1e-9?String(Math.round(amount)):formatFraction(amount,8);
+          const base=String(rawUnit).toLowerCase().startsWith('strip')?'strip':String(rawUnit).toLowerCase().startsWith('pinch')?'pinch':'stick';
+          const normalized=amount===1?base:(base==='pinch'?'pinches':`${base}s`);
+          return `${prefix}${display} ${normalized}`;
+        });
+        text=text.replace(/2 1\/2 tbsp/g,'2½ tbsp').replace(/1 1\/4 tbsp/g,'1¼ tbsp');
+      }
+      return text;
+    }
   }
   const atom='(?:\\d+\\s+\\d+\\/\\d+|\\d+\\/\\d+|\\d+(?:\\.\\d+)?)';
   const range=`${atom}(?:\\s*[–-]\\s*${atom})?`;
@@ -201,6 +237,18 @@ function scaleInstructionText(value,r,scale,unit,ingredientContext=''){
     const second=scaleInstructionQuantity(rangeParts[2],rawUnit,scale,unit,text,offset+prefix.length,ingredientContext,r);
     return `${prefix}${first}–${second}`;
   });
+  if(r?.slug==='mexican-calabaza-en-tacha-pumpkin-pie'){
+    text=text.replace(/(^|[^\d])((?:\d+\s+)?\d+\/\d+|\d+(?:\.\d+)?)\s+(stick|strips?|pinch(?:es)?)(?=\s|[,.]|$)/gi,(match,prefix,num,rawUnit)=>{
+      const amount=parseQuantity(num)*scale;
+      const display=Math.abs(amount-Math.round(amount))<1e-9?String(Math.round(amount)):formatFraction(amount,8);
+      const base=String(rawUnit).toLowerCase().startsWith('strip')?'strip':String(rawUnit).toLowerCase().startsWith('pinch')?'pinch':'stick';
+      const normalized=amount===1?base:(base==='pinch'?'pinches':`${base}s`);
+      return `${prefix}${display} ${normalized}`;
+    });
+  }
+  if(r?.slug==='mexican-calabaza-en-tacha-pumpkin-pie'){
+    text=text.replace(/2 1\/2 tbsp/g,'2½ tbsp').replace(/1 1\/4 tbsp/g,'1¼ tbsp');
+  }
   return text;
 }
 function instructionAmount(a,scale,unit,context='',r=null){
@@ -247,7 +295,11 @@ function instructionParagraph(value,isNote=false,r=null,scale=1,unit='metric',mo
     return `<p class="instruction-mode"><strong>${esc(parts.label)}:</strong>${body?` ${richText(body)}`:''}</p>`;
   }
   const text=scaleInstructionText(value,r,scale,unit,context);
-  const rendered=richText(text).replace(/\{\{recipe:([^|}]+)\|([^}]+)\}\}/g,(m,slug,label)=>`<a href="${href('recipes/recipe.html',{slug})}"><u>${esc(label)}</u></a>`);
+  let rendered=richText(text);
+  if(!isNote&&r?.slug==='mexican-calabaza-en-tacha-pumpkin-pie'){
+    const link=href('recipes/recipe.html',{slug:'building-block-pie-crust'});
+    rendered=rendered.replace(/Building Block Pie Crust/g,`<a href="${link}"><u>Building Block Pie Crust</u></a>`);
+  }
   return `<p class="${isNote?'step-note':''}${mode?' instruction-mode-body':''}">${rendered}</p>`;
 }
 function instructionBlock(paragraphs,r,scale,unit,context=''){
@@ -407,20 +459,17 @@ function densityValue(key,targetUnit,r=null){
   const match=entries.find(k=>key===k.slice(0,-targetUnit.length-1)||key.startsWith(k.slice(0,-targetUnit.length-1)+' '));
   return match?densityPerUnit[match]:null;
 }
-function formatCupValue(n,forceCup=false,denominator=4){
+function formatCupValue(n,forceCup=false){
   let value=Number(n); if(!Number.isFinite(value))return `${n} cup`;
   if(!forceCup&&value<=0.25+1e-9){
     const tbsp=value*16;
     if(tbsp<=0.25+1e-9){return `${fraction8(tbsp*3)} tsp`;}
     return `${fraction8(tbsp)} tbsp`;
   }
-  const d=Math.max(1,Math.round(Number(denominator)||4));
-  const rounded=Math.round(value*d)/d;
-  const whole=Math.floor(rounded+1e-9), numerator=Math.round((rounded-whole)*d);
-  const gcd=(a,b)=>{while(b){const t=a%b;a=b;b=t}return a||1};
-  const reducedDen=numerator?d/gcd(numerator,d):d, reducedNum=numerator?numerator/gcd(numerator,d):0;
-  const fraction=reducedNum?`${reducedNum}/${reducedDen}`:'';
-  const text=numerator===0?String(whole):(whole?`${whole} ${fraction}`:fraction);
+  const rounded=Math.round(value*4)/4;
+  const whole=Math.floor(rounded+1e-9), quarter=Math.round((rounded-whole)*4);
+  const glyph={1:'1/4',2:'1/2',3:'3/4'};
+  const text=quarter===0?String(whole):(whole?`${whole} ${glyph[quarter]}`:glyph[quarter]);
   const singular=whole===0||rounded===1;
   return `${text} ${singular?'cup':'cups'}`;
 }
@@ -438,7 +487,7 @@ function formatCompactRange(min,max,minUnit,maxUnit,r=null){const left=formatTar
 function formatCompactTextRange(left,right){left=String(left);right=String(right);const match=right.match(/^(.*?)(\s+[^\s]+)$/);if(match&&left.endsWith(match[2]))left=left.slice(0,-match[2].length);return `${left}–${right}`;}
 function formatTargetValue(n,u,r=null){
   const unit=String(u||'').toLowerCase();
-  if(r?.usCupFractions&&['cup','cups'].includes(unit))return formatCupValue(n,!!r.forceCupUnits,r?.cupFractionDenominator||4);
+  if(r?.usCupFractions&&['cup','cups'].includes(unit))return formatCupValue(n,!!r.forceCupUnits);
   if(r?.fractionDenominator&&['tbsp','tsp'].includes(unit))return `${formatFraction(n,r.fractionDenominator)} ${u}`;
   return formatUnitValue(n,u);
 }
@@ -454,7 +503,7 @@ function convertToUnit(amount,from,to,item='',context='',r=null){
   const f=String(from||'').toLowerCase(); const t=String(to||'').toLowerCase();
   if(!t||f===t){
     const sameKey=ingredientKey(item);
-    if(t==='cup'||t==='cups')return r?.usCupFractions?formatCupValue(n,!!r.forceCupUnits,r?.cupFractionDenominator||4):formatUnitValue(n,to||from);
+    if(t==='cup'||t==='cups')return r?.usCupFractions?formatCupValue(n,!!r.forceCupUnits):formatUnitValue(n,to||from);
     if(r?.integerUnits?.metric?.includes(sameKey))return `${Math.round(n)} ${to||from}`;
     return formatUnitValue(n,to||from);
   }
@@ -576,6 +625,7 @@ function renderIngredients(r,scale=1,unit='metric'){
   if(!list)return;
   let currentGroup='';
   list.innerHTML=(r.ingredients||[]).map(x=>{
+    if(x&&typeof x==='object'&&x.hideFromIngredients)return '';
     if(typeof x==='string')return `<li><input type="checkbox"><span>${esc(x)}</span></li>`;
     if(x.group){currentGroup=String(x.group);return `<li><span class="group"><b>${esc(x.group)}</b>${x.usualSlug?`<span class="usual-reference">One of our usuals: <a href="${href('recipes/recipe.html',{slug:x.usualSlug})}">${esc(x.usualLabel||x.usualSlug)}</a></span>`:''}</span></li>`;}
     const item=String(x.item??'').trim();
@@ -602,6 +652,12 @@ function renderIngredients(r,scale=1,unit='metric'){
       }
     }else if(hasAmount){
       if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,item,x.imperialMinUnit||x.unit,r),max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,item,x.imperialMaxUnit||x.unit,r);v=x.compactRange?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;}
+      else if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''&&x.imperialFraction&&String(x.imperialUnit||'').toLowerCase()==='cup'){
+        const den=Number(x.imperialFraction.den)||1;
+        const amount=(Number(x.imperialFraction.num)/den)*scale;
+        const value=formatFraction(amount,den);
+        v=`${value} cup${Math.abs(amount-1)<1e-9||amount<1?'':'s'}`;
+      }
       else if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''){const amount=applyScaleMinimum(Number(x.imperialAmount)*scale,item,x.imperialUnit,r);v=formatTargetValue(amount,x.imperialUnit,r);}
       else {
         const scaledAmount=applyScaleMinimum(Number(x.amount)*scale,item,x.unit,r);
