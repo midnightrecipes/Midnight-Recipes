@@ -519,7 +519,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...', hideRecipeTags:true,
     description:'The crust we make when a pie calls for a crust.',
     usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
-    heroImage:'', recipeImage:'images/recipes/building-block-pie-crust/recipe.jpg', cardImage:'',
+    heroImage:'images/recipes/building-block-pie-crust/hero.jpg', recipeImage:'images/recipes/building-block-pie-crust/recipe.jpg', cardImage:'',
     unitOverrides:{imperial:{'all-purpose flour':'cup','cold unsalted butter, cubed':'tbsp','salt':'tsp'},metric:{'cold water':'ml'}},
     densityOverrides:{'all purpose flour|cup':120,'cold unsalted butter cubed|tbsp':100/7},
     stepQuantityConversion:true,
