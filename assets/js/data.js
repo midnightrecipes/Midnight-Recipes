@@ -520,21 +520,21 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     description:'The crust we make when a pie calls for a crust.',
     usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
     heroImage:'images/recipes/building-block-pie-crust/hero.jpg', recipeImage:'images/recipes/building-block-pie-crust/recipe.jpg', cardImage:'',
-    unitOverrides:{imperial:{'all-purpose flour':'cup','cold unsalted butter, cubed':'tbsp','salt':'tsp'},metric:{'cold water':'ml'}},
-    densityOverrides:{'all purpose flour|cup':120,'cold unsalted butter cubed|tbsp':100/7},
+    unitOverrides:{imperial:{'all-purpose flour':'cup','cold unsalted butter, cubed':'cup','salt':'tsp'},metric:{'cold water':'ml'}},
+    densityOverrides:{'all purpose flour|cup':120,'cold unsalted butter cubed|cup':113},
     stepQuantityConversion:true,
     usCupFractions:true,
     ingredientFile:[],
     ingredients:[
       {amount:180,unit:'g',imperialAmount:1.5,imperialUnit:'cup',item:'All-Purpose Flour'},
-      {amount:100,unit:'g',imperialAmount:7,imperialUnit:'tbsp',item:'Cold Unsalted Butter, cubed'},
+      {amount:113,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Cold Unsalted Butter, cubed'},
       {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
       {minAmount:45,maxAmount:60,unit:'ml',imperialMinAmount:3,imperialMaxAmount:4,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',item:'Cold Water'},
     ],
     stats:{prep:'15 mins',cook:'15 mins',total:'30 mins',serves:'8',pan:'23 cm / 9-inch pie dish',quest:'⭐⭐⭐⭐☆'},
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'',paragraphs:[
-        {text:'Mix {{amount:0}} flour, {{amount:1}} butter, and {{amount:2}} salt until coarse crumbs form.',amounts:[{value:180,unit:'g',ingredient:'All-Purpose Flour'},{value:100,unit:'g',ingredient:'Cold Unsalted Butter, cubed'},{value:3,unit:'g',ingredient:'Salt'}]},
+        {text:'Mix {{amount:0}} flour, {{amount:1}} butter, and {{amount:2}} salt until coarse crumbs form.',amounts:[{value:180,unit:'g',ingredient:'All-Purpose Flour'},{value:113,unit:'g',ingredient:'Cold Unsalted Butter, cubed'},{value:3,unit:'g',ingredient:'Salt'}]},
         {text:'Add {{amount:0}} cold water gradually until the dough just comes together.',amounts:[{min:45,max:60,unit:'ml',ingredient:'Cold Water'}]},
         'Lightly flour your hands and press the dough directly into the pie dish.',
         'If the butter has softened, chill the crust for 10 minutes before baking.'
