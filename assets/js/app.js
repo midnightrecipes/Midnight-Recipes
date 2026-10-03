@@ -139,13 +139,14 @@ function instructionQuantityFromIngredient(x,scale,unit,r){
     if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
       const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,x.item,x.imperialMinUnit||x.unit,r);
       const max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,x.item,x.imperialMaxUnit||x.unit,r);
-      return `${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;
+      return formatTargetRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r);
     }
     const target=desiredUnit(x.item,unit,x.unit,'',r);
     if(target)return `${convertToUnit(min,x.unit,target,x.item,'',r)}–${convertToUnit(max,x.unit,target,x.item,'',r)}`;
     return unit==='imperial'?`${convert(min,x.unit,'imperial',x.item,'',r)}–${convert(max,x.unit,'imperial',x.item,'',r)}`:`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
   }
   if(x.amount!==undefined&&x.amount!==null&&x.amount!==''){
+    if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){return formatTargetRange(Number(x.imperialMinAmount)*scale,Number(x.imperialMaxAmount)*scale,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r);}
     if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''){const amount=applyScaleMinimum(Number(x.imperialAmount)*scale,x.item,x.imperialUnit,r);return formatTargetValue(amount,x.imperialUnit,r);}
     const scaledAmount=applyScaleMinimum(Number(x.amount)*scale,x.item,x.unit,r);
     const target=desiredUnit(x.item,unit,x.unit,'',r);
@@ -428,6 +429,11 @@ function formatFraction(n,denominator=8){
   const g=gcd(numerator,d), num=numerator/g, den=d/g;
   return whole?`${whole} ${num}/${den}`:`${num}/${den}`;
 }
+function formatTargetRange(min,max,minUnit,maxUnit,r=null){
+  const left=formatTargetValue(min,minUnit,r),right=formatTargetValue(max,maxUnit,r);
+  if(String(minUnit||'').toLowerCase()===String(maxUnit||'').toLowerCase()&&minUnit){const suffix=' '+String(minUnit);const compactLeft=left.toLowerCase().endsWith(suffix.toLowerCase())?left.slice(0,-suffix.length):left;return `${compactLeft}–${right}`;}
+  return `${left}–${right}`;
+}
 function formatTargetValue(n,u,r=null){
   const unit=String(u||'').toLowerCase();
   if(r?.usCupFractions&&['cup','cups'].includes(unit))return formatCupValue(n,!!r.forceCupUnits);
@@ -577,17 +583,18 @@ function renderIngredients(r,scale=1,unit='metric'){
     if(hasRange){
       const min=applyScaleMinimum(Number(x.minAmount)*scale,x.item,x.unit,r),max=applyScaleMinimum(Number(x.maxAmount)*scale,x.item,x.unit,r);
       const target=desiredUnit(item,unit,x.unit,currentGroup,r);
-      if(target){
+      if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
+        v=formatTargetRange(Number(x.imperialMinAmount)*scale,Number(x.imperialMaxAmount)*scale,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r);
+      }else if(target){
         v=`${convertToUnit(min,x.unit,target,item,currentGroup,r)}–${convertToUnit(max,x.unit,target,item,currentGroup,r)}`;
-      }else if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
-        v=`${formatQuantity(Number(x.imperialMinAmount)*scale,x.imperialMinUnit||x.unit)}–${formatQuantity(Number(x.imperialMaxAmount)*scale,x.imperialMaxUnit||x.unit)}`;
       }else if(unit==='imperial'){
         v=`${convert(min,x.unit,'imperial',item,currentGroup)}–${convert(max,x.unit,'imperial',item,currentGroup)}`;
       }else{
         v=`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
       }
     }else if(hasAmount){
-      if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''){const amount=applyScaleMinimum(Number(x.imperialAmount)*scale,item,x.imperialUnit,r);v=formatTargetValue(amount,x.imperialUnit,r);}
+      if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){v=formatTargetRange(Number(x.imperialMinAmount)*scale,Number(x.imperialMaxAmount)*scale,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r);}
+      else if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''){const amount=applyScaleMinimum(Number(x.imperialAmount)*scale,item,x.imperialUnit,r);v=formatTargetValue(amount,x.imperialUnit,r);}
       else {
         const scaledAmount=applyScaleMinimum(Number(x.amount)*scale,item,x.unit,r);
         const target=desiredUnit(item,unit,x.unit,currentGroup,r);
@@ -613,7 +620,7 @@ function activeIngredients(){return ingredients.filter(v=>recipes.some(r=>ingred
 function setupMenu(){const src=document.getElementById('src'),cui=document.getElementById('cui'),course=document.getElementById('course'),ing=document.getElementById('ing');document.querySelector('[data-acc="ing"]')?.remove();ing?.remove();if(src)src.innerHTML=sources.map(v=>`<a href="${href('pages/source.html',{value:v})}">${esc(v)}</a>`).join('');if(course)course.innerHTML=courses.map(v=>`<a href="${href('pages/meal.html',{value:v})}">${esc(v)}</a>`).join('');if(ing)ing.innerHTML=activeIngredients().map(v=>`<a href="${href('recipes/index.html',{q:v})}">${esc(v)}</a>`).join('');if(cui)cui.innerHTML=Object.entries(activeCuisineTree()).map(([group,vals])=>`<div class="menu-group"><button class="menu-group-title acc" data-acc="cuisine-${esc(group).replace(/[^a-z0-9]+/gi,'-')}">${esc(group)}</button><div class="sub menu-group-sub" id="cuisine-${esc(group).replace(/[^a-z0-9]+/gi,'-')}">${vals.map(v=>`<a href="${href('pages/cuisine.html',{value:v})}">${esc(v)}</a>`).join('')}</div></div>`).join('');document.querySelectorAll('[data-acc]').forEach(b=>b.onclick=()=>{const s=document.getElementById(b.dataset.acc);if(!s)return;const open=s.classList.toggle('open');b.setAttribute('aria-expanded',String(open))});document.querySelectorAll('[data-go="all"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();location.href=href('recipes/index.html')}));document.querySelector('[data-recipes-toggle]')?.addEventListener('click',e=>{const s=document.getElementById('recipesSub');const open=s.classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',String(open))})}
 function setupOverlay(){const menu=document.getElementById('menuOverlay'),search=document.getElementById('searchOverlay');document.getElementById('menuBtn').onclick=()=>{menu.dataset.open='true'};document.getElementById('searchBtn').onclick=()=>{const open=search.dataset.open==='true';search.dataset.open=String(!open);const btn=document.getElementById('searchBtn');btn.setAttribute('aria-label',open?'Open search':'Close search');if(!open)document.getElementById('searchInput').focus()};[menu,search].forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.dataset.open='false'}));document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.dataset.open='false';search.dataset.open='false'}});document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',e=>{const g=a.dataset.go;if(!['home','all','usuals','about','contact'].includes(g))return;e.preventDefault();const target={home:'index.html',all:'recipes/index.html',usuals:'pages/usuals.html',about:'pages/about.html',contact:'pages/contact.html'}[g];location.href=href(target)}));document.getElementById('searchInput').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();const hits=q?recipes.filter(r=>searchMatches(r,q)):[];document.getElementById('searchResults').innerHTML=q?cards(hits):''})}
 function category(){const p=new URLSearchParams(location.search),v=p.get('value')||'';if(page==='source')listPage(cutieText(v)||'By Source',filterRecipes('source',v));if(page==='cuisine')listPage(cutieText(v)||'By Cuisine',filterRecipes('cuisine',v));if(page==='meal')listPage(cutieText(v)||'By Course',filterRecipes('course',v))}
-function all(){const q=new URLSearchParams(location.search).get('q')||'';listPage(q?`Recipes: ${q}`:'View All',q?filterRecipes('search',q):recipes.filter(r=>!r.isUsuals),q?'':'All recipes, newest first.')}
+function all(){const q=new URLSearchParams(location.search).get('q')||'';listPage(q?`Recipes: ${q}`:'View All',q?filterRecipes('search',q):recipes.filter(r=>!r.isUsuals))}
 function init(){setupMenu();setupOverlay();if(page==='home')top();else if(page==='all')all();else if(page==='latest')listPage('Latest Recipes',recipes.filter(r=>!r.isUsuals));else if(page==='recipe')recipe();else if(['source','cuisine','meal'].includes(page))category();else if(page==='about')about();else if(page==='contact')contact();else if(page==='usuals')usuals();else if(page==='usual')usual()}
 init();
 })();
