@@ -218,7 +218,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
       {amount:400,unit:'ml',item:'35% Whipping Cream'},
       {amount:5,unit:'',item:'Large Egg Yolks'},
       {amount:62.5,unit:'g',item:'Granulated Sugar'},
-      {amount:5,unit:'ml',item:'Vanilla Extract'},
+      {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla Extract'},
       {amount:1,unit:'pinch',item:'Fine Salt'},
       {group:'Brûlée'},
       {unit:'',item:'Granulated Sugar, for brûlée'}
