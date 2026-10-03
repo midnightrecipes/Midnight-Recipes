@@ -247,7 +247,8 @@ function instructionParagraph(value,isNote=false,r=null,scale=1,unit='metric',mo
     return `<p class="instruction-mode"><strong>${esc(parts.label)}:</strong>${body?` ${richText(body)}`:''}</p>`;
   }
   const text=scaleInstructionText(value,r,scale,unit,context);
-  return `<p class="${isNote?'step-note':''}${mode?' instruction-mode-body':''}">${richText(text)}</p>`;
+  const rendered=richText(text).replace(/\{\{recipe:([^|}]+)\|([^}]+)\}\}/g,(m,slug,label)=>`<a href="${href('recipes/recipe.html',{slug})}"><u>${esc(label)}</u></a>`);
+  return `<p class="${isNote?'step-note':''}${mode?' instruction-mode-body':''}">${rendered}</p>`;
 }
 function instructionBlock(paragraphs,r,scale,unit,context=''){
   let mode=false;
@@ -406,17 +407,20 @@ function densityValue(key,targetUnit,r=null){
   const match=entries.find(k=>key===k.slice(0,-targetUnit.length-1)||key.startsWith(k.slice(0,-targetUnit.length-1)+' '));
   return match?densityPerUnit[match]:null;
 }
-function formatCupValue(n,forceCup=false){
+function formatCupValue(n,forceCup=false,denominator=4){
   let value=Number(n); if(!Number.isFinite(value))return `${n} cup`;
   if(!forceCup&&value<=0.25+1e-9){
     const tbsp=value*16;
     if(tbsp<=0.25+1e-9){return `${fraction8(tbsp*3)} tsp`;}
     return `${fraction8(tbsp)} tbsp`;
   }
-  const rounded=Math.round(value*4)/4;
-  const whole=Math.floor(rounded+1e-9), quarter=Math.round((rounded-whole)*4);
-  const glyph={1:'1/4',2:'1/2',3:'3/4'};
-  const text=quarter===0?String(whole):(whole?`${whole} ${glyph[quarter]}`:glyph[quarter]);
+  const d=Math.max(1,Math.round(Number(denominator)||4));
+  const rounded=Math.round(value*d)/d;
+  const whole=Math.floor(rounded+1e-9), numerator=Math.round((rounded-whole)*d);
+  const gcd=(a,b)=>{while(b){const t=a%b;a=b;b=t}return a||1};
+  const reducedDen=numerator?d/gcd(numerator,d):d, reducedNum=numerator?numerator/gcd(numerator,d):0;
+  const fraction=reducedNum?`${reducedNum}/${reducedDen}`:'';
+  const text=numerator===0?String(whole):(whole?`${whole} ${fraction}`:fraction);
   const singular=whole===0||rounded===1;
   return `${text} ${singular?'cup':'cups'}`;
 }
@@ -434,7 +438,7 @@ function formatCompactRange(min,max,minUnit,maxUnit,r=null){const left=formatTar
 function formatCompactTextRange(left,right){left=String(left);right=String(right);const match=right.match(/^(.*?)(\s+[^\s]+)$/);if(match&&left.endsWith(match[2]))left=left.slice(0,-match[2].length);return `${left}–${right}`;}
 function formatTargetValue(n,u,r=null){
   const unit=String(u||'').toLowerCase();
-  if(r?.usCupFractions&&['cup','cups'].includes(unit))return formatCupValue(n,!!r.forceCupUnits);
+  if(r?.usCupFractions&&['cup','cups'].includes(unit))return formatCupValue(n,!!r.forceCupUnits,r?.cupFractionDenominator||4);
   if(r?.fractionDenominator&&['tbsp','tsp'].includes(unit))return `${formatFraction(n,r.fractionDenominator)} ${u}`;
   return formatUnitValue(n,u);
 }
@@ -450,7 +454,7 @@ function convertToUnit(amount,from,to,item='',context='',r=null){
   const f=String(from||'').toLowerCase(); const t=String(to||'').toLowerCase();
   if(!t||f===t){
     const sameKey=ingredientKey(item);
-    if(t==='cup'||t==='cups')return r?.usCupFractions?formatCupValue(n,!!r.forceCupUnits):formatUnitValue(n,to||from);
+    if(t==='cup'||t==='cups')return r?.usCupFractions?formatCupValue(n,!!r.forceCupUnits,r?.cupFractionDenominator||4):formatUnitValue(n,to||from);
     if(r?.integerUnits?.metric?.includes(sameKey))return `${Math.round(n)} ${to||from}`;
     return formatUnitValue(n,to||from);
   }
