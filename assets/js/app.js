@@ -139,19 +139,20 @@ function instructionQuantityFromIngredient(x,scale,unit,r){
     if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
       const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,x.item,x.imperialMinUnit||x.unit,r);
       const max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,x.item,x.imperialMaxUnit||x.unit,r);
-      return formatTargetRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r);
+      return x.compactRange?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;
     }
+    if(x.compactRange&&unit!=='imperial')return formatCompactRange(min,max,x.unit,x.unit,r);
     const target=desiredUnit(x.item,unit,x.unit,'',r);
-    if(target)return `${convertToUnit(min,x.unit,target,x.item,'',r)}–${convertToUnit(max,x.unit,target,x.item,'',r)}`;
-    return unit==='imperial'?`${convert(min,x.unit,'imperial',x.item,'',r)}–${convert(max,x.unit,'imperial',x.item,'',r)}`:`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
+    if(target)return x.compactRange?formatCompactTextRange(convertToUnit(min,x.unit,target,x.item,'',r),convertToUnit(max,x.unit,target,x.item,'',r)):`${convertToUnit(min,x.unit,target,x.item,'',r)}–${convertToUnit(max,x.unit,target,x.item,'',r)}`;
+    if(unit==='imperial'){const a=convert(min,x.unit,'imperial',x.item,'',r),b=convert(max,x.unit,'imperial',x.item,'',r);return x.compactRange?formatCompactRange(min,max,x.unit,x.unit,r):`${a}–${b}`}return x.compactRange?formatCompactRange(min,max,x.unit,x.unit,r):`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
   }
   if(x.amount!==undefined&&x.amount!==null&&x.amount!==''){
-    if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){return formatTargetRange(Number(x.imperialMinAmount)*scale,Number(x.imperialMaxAmount)*scale,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r);}
+    if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,x.item,x.imperialMinUnit||x.unit,r),max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,x.item,x.imperialMaxUnit||x.unit,r);return x.compactRange?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;}
     if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''){const amount=applyScaleMinimum(Number(x.imperialAmount)*scale,x.item,x.imperialUnit,r);return formatTargetValue(amount,x.imperialUnit,r);}
     const scaledAmount=applyScaleMinimum(Number(x.amount)*scale,x.item,x.unit,r);
     const target=desiredUnit(x.item,unit,x.unit,'',r);
-    if(target)return convertToUnit(scaledAmount,x.unit,target,x.item,'',r);
-    return convert(scaledAmount,x.unit,unit,x.item,'',r);
+    const formatted=target?convertToUnit(scaledAmount,x.unit,target,x.item,'',r):convert(scaledAmount,x.unit,unit,x.item,'',r);
+    return `${formatted}${unit!=='imperial'?(x.instructionMetricSuffix||''):''}`;
   }
   return '';
 }
@@ -429,11 +430,8 @@ function formatFraction(n,denominator=8){
   const g=gcd(numerator,d), num=numerator/g, den=d/g;
   return whole?`${whole} ${num}/${den}`:`${num}/${den}`;
 }
-function formatTargetRange(min,max,minUnit,maxUnit,r=null){
-  const left=formatTargetValue(min,minUnit,r),right=formatTargetValue(max,maxUnit,r);
-  if(String(minUnit||'').toLowerCase()===String(maxUnit||'').toLowerCase()&&minUnit){const suffix=' '+String(minUnit);const compactLeft=left.toLowerCase().endsWith(suffix.toLowerCase())?left.slice(0,-suffix.length):left;return `${compactLeft}–${right}`;}
-  return `${left}–${right}`;
-}
+function formatCompactRange(min,max,minUnit,maxUnit,r=null){const left=formatTargetValue(min,minUnit,r),right=formatTargetValue(max,maxUnit||minUnit,r);const suffix=` ${minUnit||''}`;const first=minUnit&&String(minUnit).toLowerCase()===String(maxUnit||minUnit).toLowerCase()&&left.toLowerCase().endsWith(suffix.toLowerCase())?left.slice(0,-suffix.length):left;return `${first}–${right}`;}
+function formatCompactTextRange(left,right){left=String(left);right=String(right);const match=right.match(/^(.*?)(\s+[^\s]+)$/);if(match&&left.endsWith(match[2]))left=left.slice(0,-match[2].length);return `${left}–${right}`;}
 function formatTargetValue(n,u,r=null){
   const unit=String(u||'').toLowerCase();
   if(r?.usCupFractions&&['cup','cups'].includes(unit))return formatCupValue(n,!!r.forceCupUnits);
@@ -582,18 +580,24 @@ function renderIngredients(r,scale=1,unit='metric'){
     let v='';
     if(hasRange){
       const min=applyScaleMinimum(Number(x.minAmount)*scale,x.item,x.unit,r),max=applyScaleMinimum(Number(x.maxAmount)*scale,x.item,x.unit,r);
-      const target=desiredUnit(item,unit,x.unit,currentGroup,r);
-      if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
-        v=formatTargetRange(Number(x.imperialMinAmount)*scale,Number(x.imperialMaxAmount)*scale,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r);
-      }else if(target){
-        v=`${convertToUnit(min,x.unit,target,item,currentGroup,r)}–${convertToUnit(max,x.unit,target,item,currentGroup,r)}`;
-      }else if(unit==='imperial'){
-        v=`${convert(min,x.unit,'imperial',item,currentGroup)}–${convert(max,x.unit,'imperial',item,currentGroup)}`;
-      }else{
-        v=`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
+      if(x.compactRange&&unit!=='imperial'){
+        v=formatCompactRange(min,max,x.unit,x.unit,r);
+      }else if(unit==='imperial'&&x.compactRange&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
+        v=formatCompactRange(Number(x.imperialMinAmount)*scale,Number(x.imperialMaxAmount)*scale,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r);
+      }else {
+        const target=desiredUnit(item,unit,x.unit,currentGroup,r);
+        if(target){
+          v=x.compactRange?formatCompactTextRange(convertToUnit(min,x.unit,target,item,currentGroup,r),convertToUnit(max,x.unit,target,item,currentGroup,r)):`${convertToUnit(min,x.unit,target,item,currentGroup,r)}–${convertToUnit(max,x.unit,target,item,currentGroup,r)}`;
+        }else if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
+          v=`${formatQuantity(Number(x.imperialMinAmount)*scale,x.imperialMinUnit||x.unit)}–${formatQuantity(Number(x.imperialMaxAmount)*scale,x.imperialMaxUnit||x.unit)}`;
+        }else if(unit==='imperial'){
+          v=`${convert(min,x.unit,'imperial',item,currentGroup)}–${convert(max,x.unit,'imperial',item,currentGroup)}`;
+        }else{
+          v=`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
+        }
       }
     }else if(hasAmount){
-      if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){v=formatTargetRange(Number(x.imperialMinAmount)*scale,Number(x.imperialMaxAmount)*scale,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r);}
+      if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,item,x.imperialMinUnit||x.unit,r),max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,item,x.imperialMaxUnit||x.unit,r);v=x.compactRange?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;}
       else if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''){const amount=applyScaleMinimum(Number(x.imperialAmount)*scale,item,x.imperialUnit,r);v=formatTargetValue(amount,x.imperialUnit,r);}
       else {
         const scaledAmount=applyScaleMinimum(Number(x.amount)*scale,item,x.unit,r);

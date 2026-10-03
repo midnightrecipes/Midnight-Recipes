@@ -29,8 +29,8 @@ window.MIDNIGHT_RECIPES = [
       {name:'WHOLE MILK',details:[['Why Whole Milk','The higher fat content gives the chocolate filling a richer, creamier mouthfeel.'],['Substitute','2% milk works too, but the filling will be slightly lighter.'],['Midnight Fix','If using 2% milk, add 1 Tbsp extra butter for a richer texture.']]}
     ],
     ingredients:[
-      {group:'Crust'},{amount:200,unit:'g',item:'Graham Crackers, finely crushed'},{amount:80,unit:'g',item:'Unsalted Butter, melted'},
-      {group:'Chocolate Filling'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark Chocolate, chopped'},{amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened Cocoa Powder'},{amount:4,unit:'',imperialAmount:4,imperialUnit:'',item:'Egg Yolks'},{amount:80,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:500,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole Milk'},{amount:20,unit:'g',imperialAmount:1.375,imperialUnit:'tbsp',item:'Unsalted Butter'},
+      {group:'Crust'},{amount:200,unit:'g',item:'Graham Crackers, finely crushed'},{amount:76,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Unsalted Butter, melted'},
+      {group:'Chocolate Filling'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark Chocolate, chopped'},{amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened Cocoa Powder'},{amount:4,unit:'',imperialAmount:4,imperialUnit:'',item:'Egg Yolks'},{amount:80,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:500,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole Milk'},{amount:21,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Unsalted Butter'},
       {group:'Topping (optional)'},{amount:200,unit:'ml',item:'Whipped Cream'},{amount:2,unit:'Tbsp',item:'Sugar'},{unit:'',item:'Cocoa powder, cacao nibs, or flaky sea salt, to finish'}
     ],
     stats:{prep:'15 mins',cook:'15 mins',chill:'4 hrs',total:'4 hrs 30 min',serves:'6–8',pan:'23 cm / 9 inch pie dish',quest:'⭐⭐⭐☆☆'},
@@ -40,10 +40,9 @@ window.MIDNIGHT_RECIPES = [
         'Crush 200g graham crackers finely.',
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
         '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
-        'Add {{qty:Crust::Unsalted Butter, melted}} and mix until the crumbs are evenly coated.',
+        'Add {{qty:Crust::Unsalted Butter, melted}} melted butter to the crushed graham crackers and mix until the crumbs are evenly coated.',
         'Press the crumb mixture firmly into a 9-inch (23 cm) pie dish using the flat bottom of a cup.',
-        'Bake for 8–10 minutes.',
-        'Let it cool.'
+        'Bake for 8–10 minutes. Let it cool.'
       ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/chocolate-cream-comfort-pie/step-01-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-03.jpg']},
       {number:'02',title:'MAKE IT GLOSSY',clock:'12:20 AM',paragraphs:[
         'In a saucepan, whisk {{qty:Chocolate Filling::Sugar}}, {{qty:Chocolate Filling::Cornstarch}}, {{qty:Chocolate Filling::Unsweetened Cocoa Powder}}, {{qty:Chocolate Filling::Espresso powder}}, and {{qty:Chocolate Filling::Salt}}.',
@@ -103,29 +102,29 @@ window.MIDNIGHT_RECIPES = [
     ],
     ingredients:[
       {group:'Taiwan Mince'},
-      {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Fatty Ground Pork'},
-      {amount:20,unit:'g',item:'Garlic, finely minced',imperialMinAmount:6,imperialMaxAmount:8,imperialMinUnit:'cloves',imperialMaxUnit:'cloves'},
-      {minAmount:3,maxAmount:5,unit:'',item:'Fresh Red Chilies, finely minced, seeds included'},
-      {amount:45,unit:'ml',item:'Sesame Oil'},
-      {amount:30,unit:'ml',item:'Soy Sauce'},
-      {amount:30,unit:'ml',item:'Shaoxing Wine'},
+      {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Fatty ground pork'},
+      {amount:20,unit:'g',item:'Garlic, finely minced',imperialMinAmount:6,imperialMaxAmount:8,imperialMinUnit:'cloves',imperialMaxUnit:'cloves',instructionImperialMinUnit:'garlic cloves',instructionImperialMaxUnit:'garlic cloves',instructionMetricSuffix:' of garlic',compactRange:true},
+      {minAmount:3,maxAmount:5,unit:'',item:'Fresh red chilies, finely minced, seeds included'},
+      {amount:45,unit:'ml',item:'Sesame oil'},
+      {amount:30,unit:'ml',item:'Soy sauce'},
+      {amount:30,unit:'ml',item:'Shaoxing wine'},
       {amount:15,unit:'ml',item:'Doubanjiang'},
-      {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Oyster Sauce'},
+      {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Oyster sauce'},
       {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Gochujang'},
       {amount:2.5,unit:'ml',imperialAmount:0.5,imperialUnit:'tsp',item:'Sugar'},
-      {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Chicken Bouillon Powder'},
+      {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Chicken bouillon powder'},
       {amount:180,unit:'ml',imperialAmount:0.75,imperialUnit:'cup',item:'Water'},
-      {unit:'',item:'Black Pepper, to taste'},
-      {amount:55,unit:'g',imperialAmount:1,imperialUnit:'small bunch',item:'Garlic Chives or Green Onion, cut into 3–4 cm pieces'},
-      {minAmount:2,maxAmount:5,unit:'g',imperialMinAmount:0.5,imperialMaxAmount:1,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',item:'Sesame Oil, for finishing'},
+      {unit:'',item:'Black pepper, to taste'},
+      {amount:55,unit:'g',imperialAmount:1,imperialUnit:'small bunch',item:'Garlic chives or green onion, cut into 3–4 cm pieces'},
+      {minAmount:3,maxAmount:5,unit:'ml',imperialMinAmount:0.5,imperialMaxAmount:1,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',compactRange:true,item:'Sesame oil, for finishing'},
       {group:'To Serve'},
-      {unit:'',item:'Hot Steamed White Rice'},
-      {unit:'',item:'Soft-Boiled Egg'}
+      {unit:'',item:'Hot steamed white rice'},
+      {unit:'',item:'Soft-boiled egg'}
     ],
     stats:{prep:'10 mins',cook:'20 mins',total:'30 mins',serves:4,quest:'⭐⭐⭐☆☆'},
     steps:[
       {number:'01',title:'BUILD THE CHILI-GARLIC OIL',clock:'11:14 PM',paragraphs:[
-        'Add 3 tbsp sesame oil, minced 6–8 garlic cloves, and 3–5 finely minced fresh red chilies to a cold frying pan.',
+        'Add {{qty:sesame oil}} sesame oil, minced {{qty:garlic}}, and {{qty:fresh red chilies}} finely minced fresh red chilies to a cold frying pan.',
         'Turn the heat to low and gently cook for 1–2 minutes.',
         'Keep the garlic pale. You want the oil infused with garlic and chili, not burnt garlic.'
       ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-01-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-01-02.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-01-03.JPG']},
@@ -133,7 +132,7 @@ window.MIDNIGHT_RECIPES = [
         'Increase the heat to medium-high and add {{qty:fatty ground pork}} ground pork.',
         'Let the pork sit against the pan briefly so it develops some browned edges.',
         'Break it apart and continue cooking until deeply browned and the pork fat has rendered.',
-        'Push the pork toward one side of the pan. Add 1 tbsp doubanjiang to the exposed oil.',
+        'Push the pork toward one side of the pan. Add {{qty:doubanjiang}} doubanjiang to the exposed oil.',
         'Fry the doubanjiang for 30–45 seconds, then mix it thoroughly into the pork.',
       ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-02-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-02-02.JPG']},
       {number:'03',title:'BRAISE & REDUCE',clock:'11:22 PM',paragraphs:[
