@@ -207,21 +207,21 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
     ],
     ingredients:[
       {group:'Apple mixture'},
-      {amount:300,unit:'g',item:'apples, peeled, cored, and cut into 1 cm cubes'},
-      {amount:15,unit:'g',item:'unsalted butter'},
-      {amount:20,unit:'g',item:'brown sugar'},
-      {amount:15,unit:'ml',item:'lemon juice'},
-      {amount:2,unit:'g',item:'ground cinnamon'},
-      {unit:'',item:'Pinch fine salt'},
+      {amount:300,unit:'g',item:'Apples, peeled, cored, and cut into 1 cm cubes'},
+      {amount:15,unit:'g',item:'Unsalted Butter'},
+      {amount:18.75,unit:'g',item:'Brown Sugar'},
+      {amount:15,unit:'ml',item:'Lemon Juice'},
+      {amount:2,unit:'g',item:'Ground Cinnamon'},
+      {amount:1,unit:'pinch',item:'Fine Salt'},
       {group:'Custard'},
-      {amount:100,unit:'ml',item:'whole milk'},
-      {amount:400,unit:'ml',item:'35% whipping cream'},
-      {amount:5,unit:'',item:'large egg yolks'},
-      {amount:65,unit:'g',item:'granulated sugar'},
-      {amount:5,unit:'ml',item:'vanilla extract'},
-      {unit:'',item:'Pinch fine salt'},
+      {amount:100,unit:'ml',item:'Whole Milk'},
+      {amount:400,unit:'ml',item:'35% Whipping Cream'},
+      {amount:5,unit:'',item:'Large Egg Yolks'},
+      {amount:62.5,unit:'g',item:'Granulated Sugar'},
+      {amount:5,unit:'ml',item:'Vanilla Extract'},
+      {amount:1,unit:'pinch',item:'Fine Salt'},
       {group:'Brûlée'},
-      {minAmount:25,maxAmount:35,unit:'g',item:'granulated sugar, for brûlée'}
+      {unit:'',item:'Granulated Sugar, for brûlée'}
     ],
     stats:{prep:'20 mins',cook:'35 mins',total:'55 mins + chilling',serves:6,quest:'⭐⭐⭐⭐⭐'},
     steps:[
@@ -242,7 +242,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         'Let the custard rest for 5–10 minutes, then skim off any foam.'
       ],stepImages:['images/recipes/apple-creme-brulee/step-02-01.jpg','images/recipes/apple-creme-brulee/step-02-02.JPG','images/recipes/apple-creme-brulee/step-02-03.JPG','images/recipes/apple-creme-brulee/step-02-04.JPG']},
       {number:'03',title:'FILL',clock:'11:42 PM',paragraphs:[
-        'Divide the apples among 6 × 8.5 cm mini cocottes.',
+        'Divide the apples among mini cocottes.',
         'Pour the custard over the apples, almost to the top.'
       ],stepImages:['images/recipes/apple-creme-brulee/step-03-01.JPG']},
       {number:'04',title:'WATER BATH & BAKE',clock:'11:45 PM',paragraphs:[
@@ -255,9 +255,8 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
       ],stepImages:['images/recipes/apple-creme-brulee/step-04-01.jpg']},
       {number:'05',title:'CRACK THE TOP',clock:'NEXT NIGHT',paragraphs:[
         'Blot any moisture from the surface.',
-        'Sprinkle {{qty:granulated sugar, for brûlée}} sugar evenly over the six custards in a thin layer.',
-        'Torch until deeply golden and glassy.',
-        'Let stand for 2–3 minutes.',
+        'Sprinkle sugar evenly over the six custards in a thin layer.',
+        'Torch until deeply golden and glassy. Let stand for 2–3 minutes.',
         'Crack the caramelized top with the back of a spoon, like *Amélie*.'
       ],stepImages:['images/recipes/apple-creme-brulee/step-05-01.jpg','images/recipes/apple-creme-brulee/step-05-02.jpg']}
     ],
