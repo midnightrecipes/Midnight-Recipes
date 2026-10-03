@@ -300,7 +300,6 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
       {name:'STAR ANISE',details:[['Flavor','Sweet, aromatic, lightly licorice-like'],['Why whole','A small amount adds a distinctive aromatic note found in some versions of Calabaza en Tacha.']]},
       {name:'WHOLE CLOVES',details:[['Flavor','Warm, intense, slightly sweet and peppery'],['Why whole','Whole cloves are easier to control when infusing. They give the Half & Half a gentle clove aroma without the stronger, more concentrated flavor of ground cloves.']]},
       {name:'ORANGE PEEL',details:[['Flavor','Bright, citrusy, slightly bitter'],['Why peel','The fragrant oils are infused into the Half & Half rather than adding grated zest directly to the custard. This gives the pie a softer, more rounded orange aroma.']]}
-      ,{name:'ORANGE-MOLASSES SYRUP',details:[]}
     ],
     stats:{prep:'25 mins',cook:'55–65 mins',total:'1 hr 30 mins',serves:'8',pan:'23 cm / 9-inch pie dish',quest:'⭐⭐⭐⭐☆'},
     ingredients:[
