@@ -16,7 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
 
       - name: Generate image manifest
         run: python .github/scripts/generate-image-manifest.py
@@ -31,4 +33,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/js/image-manifest.json
           git commit -m "Update recipe image manifest"
-          git push
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
