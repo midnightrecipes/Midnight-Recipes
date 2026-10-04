@@ -253,7 +253,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         'Carefully remove the cocottes from the water bath.',
         'Cool, then refrigerate for at least 2 hours, preferably overnight.'
       ],stepImages:['images/recipes/apple-creme-brulee/step-04-01.jpg']},
-      {number:'05',title:'CRACK THE TOP',clock:'NEXT NIGHT',paragraphs:[
+      {number:'05',title:'CRACK THE TOP',clock:'NEXT DAY',paragraphs:[
         'Blot any moisture from the surface.',
         'Sprinkle sugar evenly over the six custards in a thin layer.',
         'Torch until deeply golden and glassy. Let stand for 2–3 minutes.',
