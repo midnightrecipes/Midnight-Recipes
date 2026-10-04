@@ -1,0 +1,33 @@
+{
+  "addictive-spicy-taiwan-ground-pork": {
+    "hero": "images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg",
+    "recipe": null,
+    "steps": {}
+  },
+  "apple-creme-brulee": {
+    "hero": "images/recipes/apple-creme-brulee/hero.jpg",
+    "recipe": null,
+    "steps": {}
+  },
+  "chocolate-cream-comfort-pie": {
+    "hero": "images/recipes/chocolate-cream-comfort-pie/hero.jpg",
+    "recipe": null,
+    "steps": {
+      "01": [
+        "images/recipes/chocolate-cream-comfort-pie/step-01-01.jpg"
+      ],
+      "02": [
+        "images/recipes/chocolate-cream-comfort-pie/step-02-01.jpg"
+      ],
+      "03": [
+        "images/recipes/chocolate-cream-comfort-pie/step-03-01.jpg"
+      ],
+      "04": [
+        "images/recipes/chocolate-cream-comfort-pie/step-04-01.jpg"
+      ],
+      "05": [
+        "images/recipes/chocolate-cream-comfort-pie/step-05-01.jpg"
+      ]
+    }
+  }
+}
