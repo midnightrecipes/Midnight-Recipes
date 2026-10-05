@@ -358,16 +358,16 @@ What if we just put way more banana in banana cream pie?`,
     stats:{prep:'20 mins',cook:'30 mins',chill:'3+ hrs',total:'3 hrs 50 mins',serves:'6–8',pan:'9-inch / 23 cm pie plate',quest:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
     ingredients:[
       {group:'Crust'},
-      {amount:200,unit:'g',item:'plain biscuits, finely crushed'}, {amount:0.5,unit:'tsp',item:'ground cinnamon'}, {amount:0.25,unit:'tsp',item:'ground ginger'}, {amount:1,unit:'pinch',item:'ground nutmeg'}, {amount:0.25,unit:'tsp',item:'salt'}, {amount:80,unit:'g',item:'unsalted butter, melted'},
+      {amount:200,unit:'g',item:'plain biscuits, finely crushed'}, {amount:0.5,unit:'tsp',item:'ground cinnamon',imperialAmount:0.5,imperialUnit:'tsp'}, {amount:0.25,unit:'tsp',item:'ground ginger',imperialAmount:0.25,imperialUnit:'tsp'}, {amount:1,unit:'pinch',item:'ground nutmeg'}, {amount:0.25,unit:'tsp',item:'salt',imperialAmount:0.25,imperialUnit:'tsp'}, {amount:80,unit:'g',item:'unsalted butter, melted',imperialAmount:0.25,imperialUnit:'cup'},
       {group:'Filling'},
-      {amount:3,unit:'',item:'bananas (approx. 250 g flesh), very ripe and mashed'}, {amount:2,unit:'',item:'firm-ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',item:'Whole Milk'}, {amount:3,unit:'large',item:'egg yolks'}, {amount:35,unit:'g',item:'granulated sugar'}, {amount:35,unit:'g',item:'cornstarch'}, {amount:1,unit:'tsp',item:'vanilla extract'}, {amount:1,unit:'pinch',item:'salt'},
+      {amount:3,unit:'',item:'bananas (approx. 250 g flesh), very ripe and mashed'}, {amount:2,unit:'',item:'firm-ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',item:'Whole Milk'}, {amount:3,unit:'large',item:'egg yolks'}, {amount:35,unit:'g',item:'granulated sugar'}, {amount:35,unit:'g',item:'cornstarch'}, {amount:5,unit:'ml',item:'vanilla extract',imperialAmount:1,imperialUnit:'tsp'}, {amount:1,unit:'pinch',item:'salt'},
       {group:'Topping (Optional)'},
-      {amount:180,unit:'ml',item:'heavy cream'}, {minAmount:1,maxAmount:2,unit:'Tbsp',item:'sugar, to taste'}, {unit:'',item:'Cinnamon or banana chips, to finish',hideIngredientInfo:true}
+      {amount:180,unit:'ml',item:'heavy cream'}, {minAmount:13,maxAmount:25,unit:'g',item:'sugar, to taste',imperialMinAmount:1,imperialMaxAmount:2,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp'}, {unit:'',item:'Cinnamon or banana chips, to finish',hideIngredientInfo:true}
     ],
     steps:[
       {number:'01',title:'TURN IT UP & MAKE IT JAMMY',clock:'2:55 AM',paragraphs:[
-        'Preheat your oven to 180°C (350°F).',
-        'Cook 3 very ripe mashed bananas (approx. 2 cups) in a nonstick skillet over medium-low heat for 8–12 minutes, stirring often.',
+        'Preheat your oven to 180°C/350°F.',
+        'Cook 3 very ripe mashed bananas (approx. 250 g) in a nonstick skillet over medium-low heat for 8–12 minutes, stirring often.',
         'Keep cooking until the moisture cooks off and the banana turns thick, glossy, and jammy.',
         'No sugar. No butter. Just banana. Set aside.'
       ],stepImages:[]},
@@ -402,8 +402,9 @@ What if we just put way more banana in banana cream pie?`,
         'Peel {{qty:firm-ripe bananas, cut in half lengthwise}} firm-ripe bananas and cut each one in half lengthwise.',
         'Arrange the banana halves along the outer edge of the cooled crust, flat-side down.',
         'Pour the banana cream over the top and smooth the surface.',
-        'Refrigerate for at least 4 hours. Overnight is even better!',
-        'Optional:',
+        'Refrigerate for at least 4 hours. Overnight is even better.'
+      ],stepImages:[]},
+      {number:'07',title:'TOP IT OFF',clock:'NEXT DAY',paragraphs:[
         'Whip {{qty:heavy cream}} cold heavy cream to soft peaks. Add {{qty:sugar, to taste}} sugar and whip to medium-firm peaks.',
         'Dollop over the chilled pie and finish with cinnamon or banana chips, if you like.'
       ],stepImages:[]}
@@ -416,7 +417,7 @@ What if we just put way more banana in banana cream pie?`,
       ['The Result','The final pie has a simple but satisfying contrast.\n\nThe fresh banana gives it texture, the concentrated banana brings depth, and the whipped cream adds a light finish.\n\nMost importantly, the banana isn\'t just sitting somewhere underneath the custard.\n\n**The banana is the custard!**']
     ],
     finePrint:{'Best eaten':'Next Day (after chilling thoroughly)','Make ahead':'Yes','Storage':'Airtight container in the fridge for up to 3 days','Reheat':'Enjoy chilled straight from the fridge'},
-    mainIngredients:['Banana','Milk','Egg Yolks','Biscuits'], footerRating:'★★★★★', footerInspiredBy:'Midnight Experiment', footerCuisine:'American', footerCourse:'Baking, Dessert', footerMainIngredients:['Banana','Milk','Egg Yolks','Biscuits']
+    mainIngredients:['Banana','Milk','Egg Yolks','Biscuits'], footerInspiredBy:'Midnight Experiment', footerCuisine:'American', footerCourse:'Baking, Dessert', footerMainIngredients:['Banana','Milk','Egg Yolks','Biscuits']
   },
   {
     slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese',
