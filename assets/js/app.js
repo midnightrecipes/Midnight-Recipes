@@ -10,7 +10,7 @@ const usualsCategories=window.MIDNIGHT_USUALS_CATEGORIES||[];
 const depth=Number(document.body.dataset.depth||0), root=depth?'../':'./';
 let imageManifest={};
 function imageData(r){const auto=imageManifest[String(r?.slug||'').toLowerCase()]||{};return {heroImage:auto.hero||r.heroImage||'',recipeImage:auto.recipe||r.recipeImage||'',steps:auto.steps||{}}}
-function resolvedStepImages(s,r,index){const stepNo=String(s?.number||index+1).replace(/\D/g,'')||String(index+1);const auto=imageData(r).steps?.[stepNo.padStart(2,'0')];if(Array.isArray(auto)&&auto.length)return auto.filter(Boolean);return Array.isArray(s?.stepImages)?s.stepImages.filter(Boolean):(Array.isArray(s?.stepPhotos)?s.stepPhotos.filter(Boolean):[])}
+function resolvedStepImages(s,r,index){const stepNo=String(s?.number||index+1).replace(/\D/g,'')||String(index+1);const auto=imageData(r).steps?.[stepNo.padStart(2,'0')]||[];const manual=Array.isArray(s?.stepImages)?s.stepImages:(Array.isArray(s?.stepPhotos)?s.stepPhotos:[]);return [...new Set([...(Array.isArray(auto)?auto:[]),...manual].filter(Boolean))]}
 const page=document.body.dataset.page, app=document.getElementById('app');
 const slugify=s=>String(s??'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 const hasMeaningfulValue=v=>{if(v===null||v===undefined)return false;const t=String(v).trim().toLowerCase();return t!==''&&t!=='n/a'&&t!=='na';};
