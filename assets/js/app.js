@@ -305,7 +305,7 @@ function instructionParagraph(value,isNote=false,r=null,scale=1,unit='metric',mo
   }
   const text=scaleInstructionText(value,r,scale,unit,context);
   let rendered=richText(text);
-  if(!isNote&&r?.slug==='sweet-potato-ginger-pie'&&context==='COOK THE SWEET POTATO'){
+  if(!isNote&&r?.slug==='sweet-potato-ginger-pie'&&context==='MAKE THE CRUST'){
     const link=href('recipes/recipe.html',{slug:'building-block-pie-crust'});
     rendered=rendered.replace(/Building Block Pie Crust/g,`<a href="${link}"><u>Building Block Pie Crust</u></a>`);
   }
@@ -505,8 +505,9 @@ function formatTargetValue(n,u,r=null){
   return formatUnitValue(n,u);
 }
 function formatUnitValue(n,u){
-  if(!u)return String(Math.round(Number(n)*100)/100);
+  if(!u)return Number.isInteger(Number(n))?String(Number(n)):formatFraction(Number(n),4);
   const unit=String(u).toLowerCase();
+  if(['stick','sticks'].includes(unit)&&!Number.isInteger(Number(n)))return `${formatFraction(Number(n),4)} ${u}`;
   if(unit==='tbsp'||unit==='tsp')return `${fraction8(n)} ${u}`;
   if(unit==='g'||unit==='ml'){const whole=Number(n)>0?Math.max(1,Math.round(Number(n))):Math.round(Number(n));return `${whole} ${u}`;}
   if(['lb','oz','fl oz','l','kg','cup','cups'].includes(unit)){const rounded=Math.round(Number(n)*10)/10;return `${Number.isInteger(rounded)?String(rounded):rounded.toFixed(1)} ${u}`;}
