@@ -135,6 +135,7 @@ function applyScaleMinimum(amount,item,unit,r){
   if(minimum===undefined||minimum===null||minimum==='')return amount;
   return Math.max(Number(amount),Number(minimum));
 }
+function scaleApprox(t,scale){return String(t).replace(/(approx\.\s*)(\d+(?:\.\d+)?)(\s*g\b)/i,(m,a,n,g)=>`${a}${Math.round(Number(n)*scale)}${g}`)}
 function compactSameUnit(s){const m=String(s).match(/^(.+?)\s+(\S+)–(.+?)\s+(\S+)$/);return m&&m[2]===m[4]?`${m[1]}–${m[3]} ${m[4]}`:s}
 function rangeCompact(x,unit){return !!(x.compactRange||(unit==='imperial'&&x.imperialCompactRange))}
 function instructionQuantityFromIngredient(x,scale,unit,r){
@@ -178,6 +179,7 @@ function scaleInstructionText(value,r,scale,unit,ingredientContext=''){
   let text=String(value??'');
   if(r?.stepQuantityConversion){
     let usedQuantityTokens=false;
+    text=text.replace(/\{\{approx:([^}]+)\}\}/g,(m,key)=>{const ing=(r.ingredients||[]).find(i=>i&&i.item===key);const g=ing&&String(ing.item).match(/approx\.\s*(\d+(?:\.\d+)?)\s*g\b/i);if(!g)return m;usedQuantityTokens=true;return `${Math.round(Number(g[1])*scale)} g`;});
     text=text.replace(/\{\{qty:([^}]+)\}\}/g,(m,item)=>{
       if(r?.slug==='mexican-calabaza-en-tacha-pumpkin-pie'){
         const syrup=String(item).startsWith('INSTRUCTION-ONLY SYRUP::');
@@ -679,7 +681,7 @@ function renderIngredients(r,scale=1,unit='metric'){
       }
     }
     if(hasRange)v=compactSameUnit(v);
-    return `<li><input type="checkbox"><span>${v?`<strong class="ingredient-quantity">${esc(v)}</strong> `:''}${esc(item)}${ingredientInfoLink(r,item,!x.hideIngredientInfo)}</span></li>`
+    return `<li><input type="checkbox"><span>${v?`<strong class="ingredient-quantity">${esc(v)}</strong> `:''}${esc(scaleApprox(item,scale))}${ingredientInfoLink(r,item,!x.hideIngredientInfo)}</span></li>`
   }).join('')
 }
 function renderInstructionSteps(r,scale,unit){document.querySelectorAll('.step').forEach((stepEl,i)=>{const s=r.steps?.[i];if(!s)return;const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs:(s.text||'').split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);const copy=stepEl.querySelector('.step-copy');if(copy)copy.innerHTML=instructionBlock(paragraphs,r,scale,unit,s.title||'')+(s.stepNote?instructionParagraph(s.stepNote,true,r,scale,unit,false,s.title||''):'');});}

@@ -367,7 +367,7 @@ What if we just put way more banana in banana cream pie?`,
     steps:[
       {number:'01',title:'TURN IT UP & MAKE IT JAMMY',clock:'2:55 AM',paragraphs:[
         'Preheat your oven to 180°C/350°F.',
-        'Cook 3 very ripe mashed bananas (approx. 250 g) in a nonstick skillet over medium-low heat for 8–12 minutes, stirring often.',
+        'Cook {{qty:bananas (approx. 250 g flesh), very ripe and mashed}} very ripe mashed bananas (approx. {{approx:bananas (approx. 250 g flesh), very ripe and mashed}}) in a nonstick skillet over medium-low heat for 8–12 minutes, stirring often.',
         'Keep cooking until the moisture cooks off and the banana turns thick, glossy, and jammy.',
         'No sugar. No butter. Just banana. Set aside.'
       ],stepImages:[]},
