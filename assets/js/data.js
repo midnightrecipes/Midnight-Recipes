@@ -30,13 +30,13 @@ window.MIDNIGHT_RECIPES = [
     ],
     ingredients:[
       {group:'Crust'},{amount:200,unit:'g',item:'Graham Crackers, finely crushed'},{amount:76,unit:'g',imperialAmount:1/3,imperialUnit:'cup',imperialFraction:{num:1,den:3},item:'Unsalted Butter, melted'},
-      {group:'Chocolate Filling'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark Chocolate, chopped'},{amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened Cocoa Powder'},{amount:4,unit:'',imperialAmount:4,imperialUnit:'',item:'Egg Yolks'},{amount:80,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:500,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole Milk'},{amount:21,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Unsalted Butter'},
+      {group:'Chocolate Filling'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark Chocolate, chopped'},{amount:2,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened Cocoa Powder'},{amount:4,unit:'',imperialAmount:4,imperialUnit:'',item:'Egg Yolks'},{amount:80,unit:'g',imperialParts:[{amount:1/3,unit:'cup'},{amount:1,unit:'tbsp'}],item:'Sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:500,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole Milk'},{amount:21,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Unsalted Butter'},
       {group:'Topping (optional)'},{amount:200,unit:'ml',item:'Whipped Cream'},{amount:2,unit:'Tbsp',item:'Sugar'},{unit:'',item:'Cocoa powder, cacao nibs, or flaky sea salt, to finish'}
     ],
     stats:{prep:'15 mins',cook:'15 mins',chill:'4 hrs',total:'4 hrs 30 min',serves:'6–8',pan:'23 cm / 9 inch pie dish',quest:'⭐⭐⭐☆☆'},
     steps:[
       {number:'01',title:'CRUSH IT DOWN',clock:'12:14 AM',paragraphs:[
-        'Preheat your oven to 180°C (350°F).',
+        'Preheat your oven to 180°C / 350°F.',
         'Crush 200g graham crackers finely.',
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
         '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
@@ -214,7 +214,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
       {amount:2,unit:'g',item:'Ground Cinnamon'},
       {amount:1,unit:'pinch',item:'Fine Salt'},
       {group:'Custard'},
-      {amount:100,unit:'ml',item:'Whole Milk'},
+      {amount:100,unit:'ml',imperialAmount:7,imperialUnit:'tbsp',item:'Whole Milk'},
       {amount:400,unit:'ml',item:'35% Whipping Cream'},
       {amount:5,unit:'',item:'Large Egg Yolks'},
       {amount:62.5,unit:'g',item:'Granulated Sugar'},
@@ -309,15 +309,15 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
       {amount:60,unit:'g',imperialAmount:1/3,imperialUnit:'cup',imperialFraction:{num:1,den:3},item:'Dark Brown Sugar'}, {amount:10,unit:'g',imperialAmount:1/2,imperialUnit:'tbsp',item:'Molasses'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Orange Juice'}, {amount:0.25,unit:'tsp',imperialAmount:1/4,imperialUnit:'tsp',item:'Salt'},
       {group:'SPICE INFUSION'},
       {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Cinnamon Stick'}, {amount:2,unit:'',item:'Whole Cloves'}, {amount:1,unit:'',item:'Star Anise'}, {amount:1,unit:'strip',item:'Orange Peel, about 2–3 cm (1 inch) long'},
-      {group:'INSTRUCTION-ONLY SYRUP',hideFromIngredients:true},
-      {amount:35,unit:'g',imperialAmount:2.5,imperialUnit:'tbsp',item:'Dark Brown Sugar',hideFromIngredients:true}, {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Molasses',hideFromIngredients:true}, {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Orange Juice',hideFromIngredients:true}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Water',hideFromIngredients:true}, {amount:1,unit:'strip',imperialAmount:1,imperialUnit:'strip',item:'Orange Peel, about 2–3 cm (1 inch) long',hideFromIngredients:true}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt',hideFromIngredients:true}
+      {group:'PILONCILLO SYRUP'},
+      {amount:35,unit:'g',imperialAmount:2.5,imperialUnit:'tbsp',item:'Dark Brown Sugar'}, {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Molasses'}, {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Orange Juice'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Water'}, {amount:1,unit:'strip',imperialAmount:1,imperialUnit:'strip',item:'Orange Peel, about 2–3 cm (1 inch) long'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'}
     ],
     steps:[
-      {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat oven to 180°C / 350°F.','Start with one recipe of Building Block Pie Crust.'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
-      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the filling.','Pour {{qty:Half & Half / 10% Cream}} Half & Half into a small saucepan.','Add 1/2 cinnamon stick, 2 whole cloves, 1 star anise, and 1 strip orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, and star anise. Remove the orange peel.','Remove the orange peel if the infusion will steep for longer, as prolonged steeping can make it bitter.','While the infused Half & Half is still warm, whisk in {{qty:Dark Brown Sugar}} dark brown sugar and {{qty:Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
+      {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat oven to 175°C / 350°F.','Start with one recipe of Building Block Pie Crust.'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
+      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Cut 1 strip of orange peel, about 2–3 cm (1 inch) long. Squeeze the orange and set the juice aside for the filling.','Pour {{qty:Half & Half / 10% Cream}} Half & Half into a small saucepan.','Add {{qty:SPICE INFUSION::Cinnamon Stick}} cinnamon stick, 2 whole cloves, 1 star anise, and 1 strip orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, star anise, and orange peel.','Don\'t steep the peel any longer, as it can make the infusion bitter.','While the infused Half & Half is still warm, whisk in {{qty:Dark Brown Sugar}} dark brown sugar and {{qty:Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
       {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:Pumpkin Purée}} pumpkin purée, {{qty:Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
-      {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Pour the pumpkin filling into the crust.','Bake for 40–50 minutes.','The edges should be set while the center still has a slight wobble when the pie is gently shaken.','Remove from the oven.','Let the pie cool completely before adding the syrup.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-04-01.JPG']},
-      {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:INSTRUCTION-ONLY SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:INSTRUCTION-ONLY SYRUP::Molasses}} molasses, {{qty:INSTRUCTION-ONLY SYRUP::Orange Juice}} orange juice, {{qty:INSTRUCTION-ONLY SYRUP::Water}} water, {{qty:INSTRUCTION-ONLY SYRUP::Orange Peel, about 2–3 cm (1 inch) long}} orange peel, about 2–3 cm (1 inch) long, and {{qty:INSTRUCTION-ONLY SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
+      {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Bake at 175°C / 350°F for 40–50 minutes.','Pour the pumpkin filling into the crust.','Bake for 40–50 minutes.','The edges should be set while the center still has a slight wobble when the pie is gently shaken.','Remove from the oven.','Let the pie cool completely before adding the syrup.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-04-01.JPG']},
+      {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:PILONCILLO SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:PILONCILLO SYRUP::Molasses}} molasses, {{qty:PILONCILLO SYRUP::Orange Juice}} orange juice, {{qty:PILONCILLO SYRUP::Water}} water, {{qty:PILONCILLO SYRUP::Orange Peel, about 2–3 cm (1 inch) long}} orange peel, about 2–3 cm (1 inch) long, and {{qty:PILONCILLO SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
       {number:'06',title:'FINISH',clock:'NEXT DAY',paragraphs:['Once the pie has cooled completely, brush or spoon a thin layer of the piloncillo syrup over the surface.','The syrup will gradually soak into the pie over time. For the glossiest finish, warm the syrup just before serving and drizzle it over the pie right before eating.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-06-01.JPG']}
     ],
     notes:[
@@ -355,18 +355,18 @@ What if we just put way more banana in banana cream pie?`,
       {name:'PLAIN BISCUITS',details:[['Substitute','Biscoff cookies'],['Midnight Fix','If using 200g Biscoff, skip the cinnamon, ginger, and nutmeg. Simply combine the crumbs with 80g melted butter.']]},
       {name:'WHOLE MILK',details:[['Why Whole Milk','The higher fat content gives the filling a richer, creamier mouthfeel.'],['Substitute','2% milk works too, but the filling will be slightly lighter.']]}
     ],
-    stats:{prep:'20 mins',cook:'30 mins',chill:'3+ hrs',total:'3 hrs 50 mins',serves:'6–8',pan:'9-inch / 23 cm pie plate',quest:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
+    stats:{prep:'20 mins',cook:'30 mins',chill:'4 hrs+',total:'4 hrs 50 mins+',serves:'6–8',pan:'9-inch / 23 cm pie plate',quest:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
     ingredients:[
       {group:'Crust'},
       {amount:200,unit:'g',item:'plain biscuits, finely crushed'}, {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'ground cinnamon'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'ground ginger'}, {amount:1,unit:'pinch',item:'ground nutmeg'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'salt'}, {amount:80,unit:'g',item:'unsalted butter, melted'},
       {group:'Filling'},
-      {amount:3,unit:'',item:'bananas (approx. 250 g flesh), very ripe and mashed'}, {amount:2,unit:'',item:'firm-ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',item:'Whole Milk'}, {amount:3,unit:'large',item:'egg yolks'}, {amount:35,unit:'g',item:'granulated sugar'}, {amount:35,unit:'g',imperialAmount:4.5,imperialUnit:'tbsp',item:'cornstarch'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'vanilla extract'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'salt'},
+      {amount:3,unit:'',item:'bananas (approx. 250 g flesh), very ripe and mashed'}, {amount:2,unit:'',item:'firm-ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',item:'Whole Milk'}, {amount:3,unit:'large',item:'egg yolks'}, {amount:35,unit:'g',item:'granulated sugar'}, {amount:35,unit:'g',imperialAmount:4.5,imperialUnit:'tbsp',item:'cornstarch'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'vanilla extract'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',metricUnit:'pinch',item:'salt'},
       {group:'Topping (Optional)'},
       {amount:180,unit:'ml',item:'heavy cream'}, {minAmount:13,maxAmount:25,unit:'g',imperialMinAmount:1,imperialMaxAmount:2,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',imperialCompactRange:true,item:'sugar, to taste'}, {unit:'',item:'Cinnamon or banana chips, to finish',hideIngredientInfo:true}
     ],
     steps:[
       {number:'01',title:'TURN IT UP & MAKE IT JAMMY',clock:'2:55 AM',paragraphs:[
-        'Preheat your oven to 180°C/350°F.',
+        'Preheat your oven to 180°C / 350°F.',
         'Cook {{qty:bananas (approx. 250 g flesh), very ripe and mashed}} very ripe mashed bananas (approx. {{approx:bananas (approx. 250 g flesh), very ripe and mashed}}) in a nonstick skillet over medium-low heat for 8–12 minutes, stirring often.',
         'Keep cooking until the moisture cooks off and the banana turns thick, glossy, and jammy.',
         'No sugar. No butter. Just banana. Set aside.'
@@ -463,7 +463,7 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
         'Finely grate {{qty:fresh ginger, finely grated}} ginger.',
         'Combine {{qty:cooked sweet potato flesh}} sweet potato, {{qty:10% cream}} 10% cream, {{qty:FILLING::white sugar}} white sugar, {{qty:large eggs}} large eggs, {{qty:fresh ginger, finely grated}} fresh ginger, {{qty:ground cinnamon}} ground cinnamon, and {{qty:kosher salt}} kosher salt.',
         'Food Processor — Fastest',
-        'Blend the sweet potato and all remaining filling ingredients and blend briefly until silky.',
+        'Blend the sweet potato and all remaining filling ingredients briefly, until silky.',
         'Quiet Mode — Silent',
         'Mash the sweet potato thoroughly, add all remaining filling ingredients, and blend directly in the bowl with a hand blender until completely smooth.'
       ],stepImages:[]},
@@ -512,7 +512,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
       {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
       {minAmount:45,maxAmount:60,unit:'ml',imperialMinAmount:3,imperialMaxAmount:4,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',item:'Cold Water'},
     ],
-    stats:{prep:'15 mins',cook:'15 mins',total:'30 mins',serves:'8',pan:'23 cm / 9-inch pie dish',quest:'⭐⭐⭐⭐☆'},
+    stats:{prep:'15 mins',cook:'20–25 mins',total:'35–40 mins',serves:'8',pan:'23 cm / 9-inch pie dish',quest:'⭐⭐⭐⭐☆'},
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'',paragraphs:[
         {text:'Mix {{amount:0}} flour, {{amount:1}} butter, and {{amount:2}} salt until coarse crumbs form.',amounts:[{value:180,unit:'g',ingredient:'All-Purpose Flour'},{value:113,unit:'g',ingredient:'Cold Unsalted Butter, cubed'},{value:3,unit:'g',ingredient:'Salt'}]},

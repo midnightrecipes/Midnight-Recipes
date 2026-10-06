@@ -138,6 +138,13 @@ function applyScaleMinimum(amount,item,unit,r){
 function scaleApprox(t,scale){return String(t).replace(/(approx\.\s*)(\d+(?:\.\d+)?)(\s*g\b)/i,(m,a,n,g)=>`${a}${Math.round(Number(n)*scale)}${g}`)}
 function compactSameUnit(s){const m=String(s).match(/^(.+?)\s+(\S+)–(.+?)\s+(\S+)$/);return m&&m[2]===m[4]?`${m[1]}–${m[3]} ${m[4]}`:s}
 function rangeCompact(x,unit){return !!(x.compactRange||(unit==='imperial'&&x.imperialCompactRange))}
+function formatIngredientPart(part,scale,r=null){
+  const amount=Number(part?.amount)*scale;
+  const unit=String(part?.unit||'');
+  if(!Number.isFinite(amount))return '';
+  if(['cup','cups'].includes(unit.toLowerCase()))return `${formatFraction(amount,12)} ${amount===1?'cup':'cup'}`;
+  return formatTargetValue(amount,unit,r);
+}
 function instructionQuantityFromIngredient(x,scale,unit,r){
   if(!x)return '';
   if(x.minAmount!==undefined&&x.maxAmount!==undefined){
@@ -153,6 +160,12 @@ function instructionQuantityFromIngredient(x,scale,unit,r){
     if(unit==='imperial'){const a=convert(min,x.unit,'imperial',x.item,'',r),b=convert(max,x.unit,'imperial',x.item,'',r);return rangeCompact(x,unit)?formatCompactRange(min,max,x.unit,x.unit,r):`${a}–${b}`}return rangeCompact(x,unit)?formatCompactRange(min,max,x.unit,x.unit,r):`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
   }
   if(x.amount!==undefined&&x.amount!==null&&x.amount!==''){
+    if(unit==='imperial'&&Array.isArray(x.imperialParts)&&x.imperialParts.length){
+      return x.imperialParts.map(part=>formatIngredientPart(part,scale,r)).join(' + ');
+    }
+    if(unit==='metric'&&x.metricAmount!==undefined&&x.metricUnit){
+      return formatUnitValue(Number(x.metricAmount)*scale,x.metricUnit);
+    }
     if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,x.item,x.imperialMinUnit||x.unit,r),max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,x.item,x.imperialMaxUnit||x.unit,r);return rangeCompact(x,unit)?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;}
     if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''&&x.imperialFraction&&String(x.imperialUnit||'').toLowerCase()==='cup'){const den=Number(x.imperialFraction.den)||1;const amount=(Number(x.imperialFraction.num)/den)*scale;return `${formatFraction(amount,den)} cup${Math.abs(amount-1)<1e-9||amount<1?'':'s'}`;}
     if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''){const amount=applyScaleMinimum(Number(x.imperialAmount)*scale,x.item,x.imperialUnit,r);return formatTargetValue(amount,x.imperialUnit,r);}
@@ -182,7 +195,7 @@ function scaleInstructionText(value,r,scale,unit,ingredientContext=''){
     text=text.replace(/\{\{approx:([^}]+)\}\}/g,(m,key)=>{const ing=(r.ingredients||[]).find(i=>i&&i.item===key);const g=ing&&String(ing.item).match(/approx\.\s*(\d+(?:\.\d+)?)\s*g\b/i);if(!g)return m;usedQuantityTokens=true;return `${Math.round(Number(g[1])*scale)} g`;});
     text=text.replace(/\{\{qty:([^}]+)\}\}/g,(m,item)=>{
       if(r?.slug==='mexican-calabaza-en-tacha-pumpkin-pie'){
-        const syrup=String(item).startsWith('INSTRUCTION-ONLY SYRUP::');
+        const syrup=String(item).startsWith('PILONCILLO SYRUP::');
         const key=syrup?String(item).split('::').slice(1).join('::'):String(item);
         const special={
           'Half & Half / 10% Cream':{metric:[180,'ml'],imperial:[3/4,'cup',4]},
@@ -666,7 +679,13 @@ function renderIngredients(r,scale=1,unit='metric'){
         }
       }
     }else if(hasAmount){
-      if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,item,x.imperialMinUnit||x.unit,r),max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,item,x.imperialMaxUnit||x.unit,r);v=rangeCompact(x,unit)?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;}
+      if(unit==='imperial'&&Array.isArray(x.imperialParts)&&x.imperialParts.length){
+        v=x.imperialParts.map(part=>formatIngredientPart(part,scale,r)).join(' + ');
+      }
+      else if(unit==='metric'&&x.metricAmount!==undefined&&x.metricUnit){
+        v=formatUnitValue(Number(x.metricAmount)*scale,x.metricUnit);
+      }
+      else if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,item,x.imperialMinUnit||x.unit,r),max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,item,x.imperialMaxUnit||x.unit,r);v=rangeCompact(x,unit)?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;}
       else if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''&&x.imperialFraction&&String(x.imperialUnit||'').toLowerCase()==='cup'){
         const den=Number(x.imperialFraction.den)||1;
         const amount=(Number(x.imperialFraction.num)/den)*scale;
