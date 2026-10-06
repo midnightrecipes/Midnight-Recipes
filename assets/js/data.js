@@ -315,7 +315,7 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat oven to 180°C / 350°F.','Start with one recipe of Building Block Pie Crust.'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
       {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the filling.','Pour {{qty:Half & Half / 10% Cream}} Half & Half into a small saucepan.','Add 1/2 cinnamon stick, 2 whole cloves, 1 star anise, and 1 strip orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, and star anise. Remove the orange peel.','Remove the orange peel if the infusion will steep for longer, as prolonged steeping can make it bitter.','While the infused Half & Half is still warm, whisk in {{qty:Dark Brown Sugar}} dark brown sugar and {{qty:Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
-      {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:Pumpkin Purée}} pumpkin purée, {{qty:Eggs}} eggs, {{qty:Orange Juice}} orange juice, and {{qty:Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
+      {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:Pumpkin Purée}} pumpkin purée, {{qty:Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
       {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Pour the pumpkin filling into the blind-baked crust.','Bake for 40–50 minutes.','The edges should be set while the center still has a slight wobble when the pie is gently shaken.','Remove from the oven.','Let the pie cool completely before adding the syrup.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-04-01.JPG']},
       {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:INSTRUCTION-ONLY SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:INSTRUCTION-ONLY SYRUP::Molasses}} molasses, {{qty:INSTRUCTION-ONLY SYRUP::Orange Juice}} orange juice, {{qty:INSTRUCTION-ONLY SYRUP::Water}} water, {{qty:INSTRUCTION-ONLY SYRUP::Orange Peel, about 2–3 cm (1 inch) long}} orange peel, about 2–3 cm (1 inch) long, and {{qty:INSTRUCTION-ONLY SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
       {number:'06',title:'FINISH',clock:'NEXT DAY',paragraphs:['Once the pie has cooled completely, brush or spoon a thin layer of the piloncillo syrup over the surface.','The syrup will gradually soak into the pie over time. For the glossiest finish, warm the syrup just before serving and drizzle it over the pie right before eating.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-06-01.JPG']}
@@ -358,11 +358,11 @@ What if we just put way more banana in banana cream pie?`,
     stats:{prep:'20 mins',cook:'30 mins',chill:'3+ hrs',total:'3 hrs 50 mins',serves:'6–8',pan:'9-inch / 23 cm pie plate',quest:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
     ingredients:[
       {group:'Crust'},
-      {amount:200,unit:'g',item:'plain biscuits, finely crushed'}, {amount:0.5,unit:'tsp',item:'ground cinnamon',imperialAmount:0.5,imperialUnit:'tsp'}, {amount:0.25,unit:'tsp',item:'ground ginger',imperialAmount:0.25,imperialUnit:'tsp'}, {amount:1,unit:'pinch',item:'ground nutmeg'}, {amount:0.25,unit:'tsp',item:'salt',imperialAmount:0.25,imperialUnit:'tsp'}, {amount:80,unit:'g',item:'unsalted butter, melted',imperialAmount:0.25,imperialUnit:'cup'},
+      {amount:200,unit:'g',item:'plain biscuits, finely crushed'}, {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'ground cinnamon'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'ground ginger'}, {amount:1,unit:'pinch',item:'ground nutmeg'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'salt'}, {amount:80,unit:'g',item:'unsalted butter, melted'},
       {group:'Filling'},
-      {amount:3,unit:'',item:'bananas (approx. 250 g flesh), very ripe and mashed'}, {amount:2,unit:'',item:'firm-ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',item:'Whole Milk'}, {amount:3,unit:'large',item:'egg yolks'}, {amount:35,unit:'g',item:'granulated sugar'}, {amount:35,unit:'g',item:'cornstarch'}, {amount:5,unit:'ml',item:'vanilla extract',imperialAmount:1,imperialUnit:'tsp'}, {amount:1,unit:'pinch',item:'salt'},
+      {amount:3,unit:'',item:'bananas (approx. 250 g flesh), very ripe and mashed'}, {amount:2,unit:'',item:'firm-ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',item:'Whole Milk'}, {amount:3,unit:'large',item:'egg yolks'}, {amount:35,unit:'g',item:'granulated sugar'}, {amount:35,unit:'g',imperialAmount:4.5,imperialUnit:'tbsp',item:'cornstarch'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'vanilla extract'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'salt'},
       {group:'Topping (Optional)'},
-      {amount:180,unit:'ml',item:'heavy cream'}, {minAmount:13,maxAmount:25,unit:'g',item:'sugar, to taste',imperialMinAmount:1,imperialMaxAmount:2,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp'}, {unit:'',item:'Cinnamon or banana chips, to finish',hideIngredientInfo:true}
+      {amount:180,unit:'ml',item:'heavy cream'}, {minAmount:13,maxAmount:25,unit:'g',imperialMinAmount:1,imperialMaxAmount:2,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',imperialCompactRange:true,item:'sugar, to taste'}, {unit:'',item:'Cinnamon or banana chips, to finish',hideIngredientInfo:true}
     ],
     steps:[
       {number:'01',title:'TURN IT UP & MAKE IT JAMMY',clock:'2:55 AM',paragraphs:[
@@ -380,7 +380,7 @@ What if we just put way more banana in banana cream pie?`,
         'Bake for 8–10 minutes, then let cool.'
       ],stepNote:'**Midnight Shortcut:** Skip the oven entirely! Just press the crust into the dish and freeze it while making the filling. It won\'t be quite as toasted, but it sets super fast.',stepImages:[]},
       {number:'03',title:'MAKE IT THICK',clock:'3:20 AM',paragraphs:[
-        'Whisk {{qty:sugar, to taste}} sugar, {{qty:cornstarch}} cornstarch, and {{qty:salt}} salt in a saucepan.',
+        'Whisk {{qty:sugar, to taste}} sugar, {{qty:cornstarch}} cornstarch, and {{qty:Filling::salt}} salt in a saucepan.',
         'Gradually whisk in {{qty:Whole Milk}} whole milk until smooth.',
         'Cook over medium heat, whisking constantly, until the custard becomes very thick and starts to bubble.',
         'Keep whisking and cook for another 1–2 minutes after it starts bubbling.',
@@ -402,7 +402,7 @@ What if we just put way more banana in banana cream pie?`,
         'Peel {{qty:firm-ripe bananas, cut in half lengthwise}} firm-ripe bananas and cut each one in half lengthwise.',
         'Arrange the banana halves along the outer edge of the cooled crust, flat-side down.',
         'Pour the banana cream over the top and smooth the surface.',
-        'Refrigerate for at least 4 hours. Overnight is even better.'
+        'Refrigerate for at least 4 hours. Overnight is even better!'
       ],stepImages:[]},
       {number:'07',title:'TOP IT OFF',clock:'NEXT DAY',paragraphs:[
         'Whip {{qty:heavy cream}} cold heavy cream to soft peaks. Add {{qty:sugar, to taste}} sugar and whip to medium-firm peaks.',
@@ -420,9 +420,9 @@ What if we just put way more banana in banana cream pie?`,
     mainIngredients:['Banana','Milk','Egg Yolks','Biscuits'], footerInspiredBy:'Midnight Experiment', footerCuisine:'American', footerCourse:'Baking, Dessert', footerMainIngredients:['Banana','Milk','Egg Yolks','Biscuits']
   },
   {
-    slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese',
+    slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese', cuisineSecondary:'American',
     course:'Baking', courseDisplay:'Baking, Dessert', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Sweet Potato','Ginger','Cream','Cinnamon','Pie'], dateAdded:'2026-09-27', timeStamp:'11:35 PM',
-    tags:['Midnight Experiment','Dessert','Baking','Chinese','American','Sweet Potato','Ginger','Pie'], heroImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', recipeImage:'images/recipes/sweet-potato-ginger-pie/recipe.jpg', cardImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', usesUsual:'building-block-pie-crust',
+    tags:['Midnight Experiment','Dessert','Baking','Chinese','American','Sweet Potato','Ginger','Pie'], heroImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', recipeImage:'images/recipes/sweet-potato-ginger-pie/recipe.jpg', cardImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', usesUsual:'building-block-pie-crust', usCupFractions:true, forceCupUnits:true, stepQuantityConversion:true,
     story:`Inspired by traditional Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水), a simple sweet soup made by simmering sweet potatoes with fresh ginger and sugar in water.
 
 I love how naturally sweet potato and ginger work together—the earthy sweetness of the sweet potato balanced by the warm, peppery kick of fresh ginger. I thought that combination would be perfect in a pie.
@@ -432,67 +432,54 @@ Instead of simply replacing pumpkin with sweet potato in a classic pumpkin pie, 
 The result is silky and creamy, with naturally sweet roasted sweet potato, warm cinnamon, and a gentle kick of fresh ginger.`,
     ingredientFile:[
       {name:'SWEET POTATOES',details:[['Origin','South America'],['Flavor','Naturally sweet, earthy, creamy'],['Substitute','Japanese or Korean sweet potato works, although it is denser and sweeter.'],['Storage','Store whole sweet potatoes in a cool, dry place. Once cooked, refrigerate in an airtight container for up to 3 days.']]},
-      {name:'FRESH GINGER',details:[['Origin','Southeast Asia'],['Flavor','Warm, peppery, citrusy, spicy'],['Substitute','1½ g ground ginger can replace 6 g fresh ginger, but fresh ginger gives a brighter flavor.'],['Storage','Refrigerate for several weeks or freeze and grate directly from frozen.']]},
-      {name:'10% CREAM',details:[['Origin','Canada'],['Flavor','Light, creamy, milky'],['Where to find','Canadian supermarkets'],['Substitute','Half-and-half works well. For a similar fat level, mix 70 g 2% milk + 30 g 35% cream.'],['Storage','Refrigerate after opening.']]}
+      {name:'FRESH GINGER',details:[['Flavor','Warm, peppery, citrusy, spicy'],['Substitute','1½ g ground ginger can replace 6 g fresh ginger, but fresh ginger gives a brighter flavor.'],['Storage','Refrigerate for several weeks or freeze and grate directly from frozen.']]},
+      {name:'10% CREAM',details:[['Flavor','Light, creamy, milky'],['Substitute','Half-and-half works well. For a similar fat level, mix 70 g 2% milk + 30 g 35% cream.'],['Storage','Refrigerate after opening.']]}
     ],
     stats:{prep:'30 mins',cook:'1 hr 45 mins',chill:'2 hrs+',total:'4 hrs 15 mins+',serves:'8',quest:'⭐⭐⭐⭐☆'},
     ingredients:[
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
       {group:'FILLING'},
-      {amount:400,unit:'g',item:'cooked sweet potato flesh'}, {amount:100,unit:'g',item:'10% cream'}, {amount:70,unit:'g',item:'white sugar'}, {amount:2,unit:'',item:'large eggs'}, {amount:6,unit:'g',item:'fresh ginger, finely grated'}, {amount:2.2,unit:'g',item:'ground cinnamon'}, {amount:2.5,unit:'g',item:'kosher salt'},
+      {amount:400,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'cooked sweet potato flesh'}, {amount:100,unit:'ml',imperialAmount:7,imperialUnit:'tbsp',item:'10% cream'}, {amount:70,unit:'g',imperialAmount:1,imperialUnit:'cup',imperialFraction:{num:1,den:3},item:'white sugar'}, {amount:2,unit:'',item:'large eggs'}, {amount:6,unit:'g',item:'fresh ginger, finely grated'}, {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'ground cinnamon'}, {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'kosher salt'},
       {group:'TOPPING'},
-      {amount:200,unit:'ml',item:'35% whipping cream'}, {amount:2,unit:'Tbsp',item:'white sugar'}, {unit:'',item:'Cinnamon, for finishing'}
+      {amount:200,unit:'ml',imperialAmount:1,imperialUnit:'cup',imperialFraction:{num:7,den:8},item:'35% whipping cream'}, {amount:2,unit:'Tbsp',imperialAmount:2,imperialUnit:'tbsp',item:'white sugar'}, {unit:'',item:'Cinnamon, for finishing'}
     ],
     steps:[
       {number:'01',title:'COOK THE SWEET POTATO',clock:'11:35 PM',paragraphs:[
         'For the best flavor, roast whole sweet potatoes at 205°C / 400°F for 45–60 minutes, until completely soft.',
-        'While they roast, start the crust.',
-        'Let the sweet potatoes cool enough to handle, peel, and weigh 400 g of flesh.',
+        'While the sweet potatoes are roasting… start making Building Block Pie Crust.',
         'Midnight Shortcut — Microwave',
         'Peel and cut the sweet potato into chunks. Place in a microwave-safe bowl with a small splash of water and cover.',
-        'Microwave until completely soft, turning halfway through. Drain any excess water, let cool, and weigh 400 g.',
         'Midnight Shortcut — Boil',
-        'Peel and cut the sweet potato into chunks. Simmer in water for 15–20 minutes, until fork-tender.',
-        'Drain well and let it steam-dry for a few minutes before weighing 400 g.'
+        'Peel and cut the sweet potato into chunks. Simmer in water for 15–20 minutes, until fork-tender.'
       ],stepImages:[]},
       {number:'02',title:'MAKE THE CRUST',clock:'11:45 PM',paragraphs:[
         'While the sweet potatoes are roasting… start making Building Block Pie Crust.',
         'Midnight Shortcut',
         'Use a good-quality store-bought pie crust. Tonight is about the filling.'
       ],stepImages:[]},
-      {number:'03',title:'BLIND BAKE',clock:'12:00 AM',paragraphs:[
-        'Prick the bottom lightly with a fork.',
-        'Line with parchment and add pie weights.',
-        'Bake at 175°C / 350°F for 15 minutes.',
-        'Remove the weights and bake for another 5–7 minutes, until lightly golden.'
-      ],stepImages:[]},
-      {number:'04',title:'BLEND THE FILLING',clock:'12:25 AM',paragraphs:[
-        'Once the sweet potato is cooked and cool enough to handle, weigh 400 g.',
-        'Finely grate 6 g ginger.',
-        'Combine 400 g sweet potato, 100 g 10% cream, 70 g white sugar, 2 large eggs, 6 g fresh ginger, 2.2 g ground cinnamon, and 2.5 g kosher salt.',
+      {number:'03',title:'BLEND THE FILLING',clock:'12:25 AM',paragraphs:[
+        'Once the sweet potato is cooked and cool enough to handle, measure {{qty:cooked sweet potato flesh}}.',
+        'Finely grate {{qty:fresh ginger, finely grated}} ginger.',
+        'Combine {{qty:cooked sweet potato flesh}} sweet potato, {{qty:10% cream}} 10% cream, {{qty:FILLING::white sugar}} white sugar, {{qty:large eggs}} large eggs, {{qty:fresh ginger, finely grated}} fresh ginger, {{qty:ground cinnamon}} ground cinnamon, and {{qty:kosher salt}} kosher salt.',
         'Food Processor — Fastest',
-        'Blend the sweet potato until completely smooth.',
-        'Add all remaining filling ingredients and blend briefly until silky.',
+        'Blend the sweet potato and all remaining filling ingredients and blend briefly until silky.',
         'Quiet Mode — Silent',
-        'Mash the sweet potato thoroughly.',
-        'Add all remaining filling ingredients and blend directly in the bowl with a hand blender until completely smooth.'
+        'Mash the sweet potato thoroughly, add all remaining filling ingredients, and blend directly in the bowl with a hand blender until completely smooth.'
       ],stepImages:[]},
-      {number:'05',title:'BAKE',clock:'12:30 AM',paragraphs:[
-        'Pour the filling into the blind-baked crust.',
+      {number:'04',title:'BAKE',clock:'12:30 AM',paragraphs:[
+        'Pour the filling into the crust.',
         'Bake at 175°C / 350°F for 40–50 minutes.',
         'The edges should be set and the centre should still have a slight wobble.',
         'Remove from the oven and cool completely at room temperature.',
         'The filling will continue to set as it cools.'
       ],stepImages:[]},
-      {number:'06',title:'CHILL & FINISH',clock:'1:20 AM',paragraphs:[
-        'Let the pie cool completely before refrigerating. This should take about 45–60 minutes.',
-        'Once cooled:',
-        'Refrigerate for at least 2 hours, preferably overnight.',
-        'Whip 200 ml cold whipping cream to soft peaks.',
-        'Gradually add 2 tbsp sugar and continue whipping until medium-firm peaks form.',
+      {number:'05',title:'CHILL & FINISH',clock:'1:20 AM',paragraphs:[
+        'Let the pie cool completely before refrigerating. Once cooled, refrigerate for at least 2 hours, preferably overnight.',
+        'Optional:',
+        'Whip {{qty:35% whipping cream}} cold whipping cream to soft peaks.',
+        'Gradually add {{qty:TOPPING::white sugar}} sugar and continue whipping until medium-firm peaks form.',
         'Keep the whipped cream refrigerated until serving.',
-        'Slice the chilled pie and top with whipped cream.',
-        'Finish with a light dusting of cinnamon.'
+        'Slice the chilled pie and top with whipped cream and a light dusting of cinnamon.'
       ],stepImages:[]}
     ],
     notes:[

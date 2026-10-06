@@ -10,7 +10,7 @@ const usualsCategories=window.MIDNIGHT_USUALS_CATEGORIES||[];
 const depth=Number(document.body.dataset.depth||0), root=depth?'../':'./';
 let imageManifest={};
 function imageData(r){const auto=imageManifest[String(r?.slug||'').toLowerCase()]||{};return {heroImage:auto.hero||r.heroImage||'',recipeImage:auto.recipe||r.recipeImage||'',steps:auto.steps||{}}}
-function resolvedStepImages(s,r,index){const stepNo=String(s?.number||index+1).replace(/\D/g,'')||String(index+1);const auto=imageData(r).steps?.[stepNo.padStart(2,'0')]||[];const manual=Array.isArray(s?.stepImages)?s.stepImages:(Array.isArray(s?.stepPhotos)?s.stepPhotos:[]);return [...new Set([...(Array.isArray(auto)?auto:[]),...manual].filter(Boolean))]}
+function resolvedStepImages(s,r,index){const stepNo=String(s?.number||index+1).replace(/\D/g,'')||String(index+1);const auto=imageData(r).steps?.[stepNo.padStart(2,'0')];if(Array.isArray(auto)&&auto.length)return auto.filter(Boolean);return Array.isArray(s?.stepImages)?s.stepImages.filter(Boolean):(Array.isArray(s?.stepPhotos)?s.stepPhotos.filter(Boolean):[])}
 const page=document.body.dataset.page, app=document.getElementById('app');
 const slugify=s=>String(s??'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
 const hasMeaningfulValue=v=>{if(v===null||v===undefined)return false;const t=String(v).trim().toLowerCase();return t!==''&&t!=='n/a'&&t!=='na';};
@@ -135,6 +135,8 @@ function applyScaleMinimum(amount,item,unit,r){
   if(minimum===undefined||minimum===null||minimum==='')return amount;
   return Math.max(Number(amount),Number(minimum));
 }
+function compactSameUnit(s){const m=String(s).match(/^(.+?)\s+(\S+)–(.+?)\s+(\S+)$/);return m&&m[2]===m[4]?`${m[1]}–${m[3]} ${m[4]}`:s}
+function rangeCompact(x,unit){return !!(x.compactRange||(unit==='imperial'&&x.imperialCompactRange))}
 function instructionQuantityFromIngredient(x,scale,unit,r){
   if(!x)return '';
   if(x.minAmount!==undefined&&x.maxAmount!==undefined){
@@ -142,15 +144,16 @@ function instructionQuantityFromIngredient(x,scale,unit,r){
     if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
       const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,x.item,x.imperialMinUnit||x.unit,r);
       const max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,x.item,x.imperialMaxUnit||x.unit,r);
-      return x.compactRange?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;
+      return rangeCompact(x,unit)?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;
     }
-    if(x.compactRange&&unit!=='imperial')return formatCompactRange(min,max,x.unit,x.unit,r);
+    if(rangeCompact(x,unit)&&unit!=='imperial')return formatCompactRange(min,max,x.unit,x.unit,r);
     const target=desiredUnit(x.item,unit,x.unit,'',r);
-    if(target)return x.compactRange?formatCompactTextRange(convertToUnit(min,x.unit,target,x.item,'',r),convertToUnit(max,x.unit,target,x.item,'',r)):`${convertToUnit(min,x.unit,target,x.item,'',r)}–${convertToUnit(max,x.unit,target,x.item,'',r)}`;
-    if(unit==='imperial'){const a=convert(min,x.unit,'imperial',x.item,'',r),b=convert(max,x.unit,'imperial',x.item,'',r);return x.compactRange?formatCompactRange(min,max,x.unit,x.unit,r):`${a}–${b}`}return x.compactRange?formatCompactRange(min,max,x.unit,x.unit,r):`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
+    if(target)return rangeCompact(x,unit)?formatCompactTextRange(convertToUnit(min,x.unit,target,x.item,'',r),convertToUnit(max,x.unit,target,x.item,'',r)):`${convertToUnit(min,x.unit,target,x.item,'',r)}–${convertToUnit(max,x.unit,target,x.item,'',r)}`;
+    if(unit==='imperial'){const a=convert(min,x.unit,'imperial',x.item,'',r),b=convert(max,x.unit,'imperial',x.item,'',r);return rangeCompact(x,unit)?formatCompactRange(min,max,x.unit,x.unit,r):`${a}–${b}`}return rangeCompact(x,unit)?formatCompactRange(min,max,x.unit,x.unit,r):`${formatQuantity(min,x.unit)}–${formatQuantity(max,x.unit)}`;
   }
   if(x.amount!==undefined&&x.amount!==null&&x.amount!==''){
-    if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,x.item,x.imperialMinUnit||x.unit,r),max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,x.item,x.imperialMaxUnit||x.unit,r);return x.compactRange?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;}
+    if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,x.item,x.imperialMinUnit||x.unit,r),max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,x.item,x.imperialMaxUnit||x.unit,r);return rangeCompact(x,unit)?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;}
+    if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''&&x.imperialFraction&&String(x.imperialUnit||'').toLowerCase()==='cup'){const den=Number(x.imperialFraction.den)||1;const amount=(Number(x.imperialFraction.num)/den)*scale;return `${formatFraction(amount,den)} cup${Math.abs(amount-1)<1e-9||amount<1?'':'s'}`;}
     if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''){const amount=applyScaleMinimum(Number(x.imperialAmount)*scale,x.item,x.imperialUnit,r);return formatTargetValue(amount,x.imperialUnit,r);}
     const scaledAmount=applyScaleMinimum(Number(x.amount)*scale,x.item,x.unit,r);
     const target=desiredUnit(x.item,unit,x.unit,'',r);
@@ -202,7 +205,7 @@ function scaleInstructionText(value,r,scale,unit,ingredientContext=''){
       }
       const candidate=instructionIngredientCandidates(r,item,'',ingredientContext)[0];
       const synced=candidate?instructionQuantityFromIngredient(candidate,scale,unit,r):'';
-      if(synced){usedQuantityTokens=true;return synced;}
+      if(synced){usedQuantityTokens=true;return compactSameUnit(synced);}
       return m;
     });
     text=text.replace(/½/g,'1/2').replace(/¼/g,'1/4').replace(/¾/g,'3/4').replace(/⅓/g,'1/3').replace(/⅔/g,'2/3').replace(/⅛/g,'1/8').replace(/⅜/g,'3/8').replace(/⅝/g,'5/8').replace(/⅞/g,'7/8');
@@ -259,9 +262,10 @@ function instructionAmount(a,scale,unit,context='',r=null){
   if(a&&a.min!==undefined&&a.max!==undefined){
     const candidate=ingredientContext?instructionIngredientCandidates(r,ingredientContext,a.unit,context)[0]:null;
     if(candidate){
-      const minValue={...candidate,amount:unit==='imperial'&&candidate.imperialMinAmount!==undefined?candidate.imperialMinAmount:a.min,unit:unit==='imperial'&&candidate.imperialMinUnit?candidate.imperialMinUnit:candidate.unit,minAmount:undefined,maxAmount:undefined,imperialAmount:undefined};
-      const maxValue={...candidate,amount:unit==='imperial'&&candidate.imperialMaxAmount!==undefined?candidate.imperialMaxAmount:a.max,unit:unit==='imperial'&&candidate.imperialMaxUnit?candidate.imperialMaxUnit:candidate.unit,minAmount:undefined,maxAmount:undefined,imperialAmount:undefined};
-      return `${instructionQuantityFromIngredient(minValue,scale,unit,r)}–${instructionQuantityFromIngredient(maxValue,scale,unit,r)}`;
+      const minValue={...candidate,amount:unit==='imperial'&&candidate.imperialMinAmount!==undefined?candidate.imperialMinAmount:a.min,unit:unit==='imperial'&&candidate.imperialMinUnit?candidate.imperialMinUnit:candidate.unit,minAmount:undefined,maxAmount:undefined,imperialAmount:undefined,imperialMinAmount:undefined,imperialMaxAmount:undefined};
+      const maxValue={...candidate,amount:unit==='imperial'&&candidate.imperialMaxAmount!==undefined?candidate.imperialMaxAmount:a.max,unit:unit==='imperial'&&candidate.imperialMaxUnit?candidate.imperialMaxUnit:candidate.unit,minAmount:undefined,maxAmount:undefined,imperialAmount:undefined,imperialMinAmount:undefined,imperialMaxAmount:undefined};
+      const rangeText=`${instructionQuantityFromIngredient(minValue,scale,unit,r)}–${instructionQuantityFromIngredient(maxValue,scale,unit,r)}`;
+      return compactSameUnit(rangeText);
     }
     return `${scaleInstructionQuantity(String(a.min),a.unit,scale,unit,context,0,ingredientContext,r)}–${scaleInstructionQuantity(String(a.max),a.unit,scale,unit,context,0,ingredientContext,r)}`;
   }
@@ -299,6 +303,10 @@ function instructionParagraph(value,isNote=false,r=null,scale=1,unit='metric',mo
   }
   const text=scaleInstructionText(value,r,scale,unit,context);
   let rendered=richText(text);
+  if(!isNote&&r?.slug==='sweet-potato-ginger-pie'&&context==='COOK THE SWEET POTATO'){
+    const link=href('recipes/recipe.html',{slug:'building-block-pie-crust'});
+    rendered=rendered.replace(/Building Block Pie Crust/g,`<a href="${link}"><u>Building Block Pie Crust</u></a>`);
+  }
   if(!isNote&&r?.slug==='mexican-calabaza-en-tacha-pumpkin-pie'){
     const link=href('recipes/recipe.html',{slug:'building-block-pie-crust'});
     rendered=rendered.replace(/Building Block Pie Crust/g,`<a href="${link}"><u>Building Block Pie Crust</u></a>`);
@@ -498,7 +506,8 @@ function formatUnitValue(n,u){
   if(!u)return String(Math.round(Number(n)*100)/100);
   const unit=String(u).toLowerCase();
   if(unit==='tbsp'||unit==='tsp')return `${fraction8(n)} ${u}`;
-  if(['g','ml','lb','oz','fl oz','l','kg','cup','cups'].includes(unit)){const rounded=Math.round(Number(n)*10)/10;return `${Number.isInteger(rounded)?String(rounded):rounded.toFixed(1)} ${u}`;}
+  if(unit==='g'||unit==='ml'){const whole=Number(n)>0?Math.max(1,Math.round(Number(n))):Math.round(Number(n));return `${whole} ${u}`;}
+  if(['lb','oz','fl oz','l','kg','cup','cups'].includes(unit)){const rounded=Math.round(Number(n)*10)/10;return `${Number.isInteger(rounded)?String(rounded):rounded.toFixed(1)} ${u}`;}
   return `${Math.round(Number(n)*100)/100} ${u}`;
 }
 function convertToUnit(amount,from,to,item='',context='',r=null){
@@ -617,7 +626,7 @@ function convert(amount,unit,mode,item='',context='',r=null){
   }
   if(u==='g')return format(amount/28.3495,'oz');
   if(u==='kg')return format(amount*2.20462,'lb');
-  if(u==='ml')return format(amount/29.5735,'fl oz');
+  if(u==='ml')return formatCupValue(amount/236.588,false);
   if(['c','cup','cups'].includes(u))return format(amount*8,'fl oz');
   if(['tbsp','tablespoon','tablespoons'].includes(u))return format(amount,'tbsp');
   if(['tsp','teaspoon','teaspoons'].includes(u))return format(amount,'tsp');
@@ -637,14 +646,14 @@ function renderIngredients(r,scale=1,unit='metric'){
     let v='';
     if(hasRange){
       const min=applyScaleMinimum(Number(x.minAmount)*scale,x.item,x.unit,r),max=applyScaleMinimum(Number(x.maxAmount)*scale,x.item,x.unit,r);
-      if(x.compactRange&&unit!=='imperial'){
+      if(rangeCompact(x,unit)&&unit!=='imperial'){
         v=formatCompactRange(min,max,x.unit,x.unit,r);
-      }else if(unit==='imperial'&&x.compactRange&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
+      }else if(unit==='imperial'&&rangeCompact(x,unit)&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
         v=formatCompactRange(Number(x.imperialMinAmount)*scale,Number(x.imperialMaxAmount)*scale,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r);
       }else {
         const target=desiredUnit(item,unit,x.unit,currentGroup,r);
         if(target){
-          v=x.compactRange?formatCompactTextRange(convertToUnit(min,x.unit,target,item,currentGroup,r),convertToUnit(max,x.unit,target,item,currentGroup,r)):`${convertToUnit(min,x.unit,target,item,currentGroup,r)}–${convertToUnit(max,x.unit,target,item,currentGroup,r)}`;
+          v=rangeCompact(x,unit)?formatCompactTextRange(convertToUnit(min,x.unit,target,item,currentGroup,r),convertToUnit(max,x.unit,target,item,currentGroup,r)):`${convertToUnit(min,x.unit,target,item,currentGroup,r)}–${convertToUnit(max,x.unit,target,item,currentGroup,r)}`;
         }else if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){
           v=`${formatQuantity(Number(x.imperialMinAmount)*scale,x.imperialMinUnit||x.unit)}–${formatQuantity(Number(x.imperialMaxAmount)*scale,x.imperialMaxUnit||x.unit)}`;
         }else if(unit==='imperial'){
@@ -654,7 +663,7 @@ function renderIngredients(r,scale=1,unit='metric'){
         }
       }
     }else if(hasAmount){
-      if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,item,x.imperialMinUnit||x.unit,r),max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,item,x.imperialMaxUnit||x.unit,r);v=x.compactRange?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;}
+      if(unit==='imperial'&&x.imperialMinAmount!==undefined&&x.imperialMaxAmount!==undefined){const min=applyScaleMinimum(Number(x.imperialMinAmount)*scale,item,x.imperialMinUnit||x.unit,r),max=applyScaleMinimum(Number(x.imperialMaxAmount)*scale,item,x.imperialMaxUnit||x.unit,r);v=rangeCompact(x,unit)?formatCompactRange(min,max,x.imperialMinUnit||x.unit,x.imperialMaxUnit||x.unit,r):`${formatTargetValue(min,x.imperialMinUnit||x.unit,r)}–${formatTargetValue(max,x.imperialMaxUnit||x.unit,r)}`;}
       else if(unit==='imperial'&&x.imperialAmount!==undefined&&x.imperialAmount!==null&&x.imperialAmount!==''&&x.imperialFraction&&String(x.imperialUnit||'').toLowerCase()==='cup'){
         const den=Number(x.imperialFraction.den)||1;
         const amount=(Number(x.imperialFraction.num)/den)*scale;
@@ -669,6 +678,7 @@ function renderIngredients(r,scale=1,unit='metric'){
         else v=convert(scaledAmount,x.unit,unit,item,currentGroup,r);
       }
     }
+    if(hasRange)v=compactSameUnit(v);
     return `<li><input type="checkbox"><span>${v?`<strong class="ingredient-quantity">${esc(v)}</strong> `:''}${esc(item)}${ingredientInfoLink(r,item,!x.hideIngredientInfo)}</span></li>`
   }).join('')
 }
