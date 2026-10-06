@@ -391,10 +391,10 @@ What if we just put way more banana in banana cream pie?`,
         'Slowly add the hot custard, a little at a time, whisking constantly.',
         'Pour everything back into the saucepan.',
         'Return to low heat and cook for 1 minute, whisking constantly, until thick and glossy.',
-        'Remove from the heat and stir in {{qty:vanilla extract}} vanilla extract.'
+        'Remove from the heat'
       ],stepImages:[]},
       {number:'05',title:'BLEND THE BANANA IN',clock:'3:30 AM',paragraphs:[
-        'Add the concentrated banana to the warm custard.',
+        'Add the concentrated banana and {{qty:vanilla extract}} vanilla extract to the warm custard.',
         'Blend until completely smooth and silky.',
         '**Quiet Mode (Silent):** Want a little texture? Skip the food processor and stir it in by hand.'
       ],stepImages:[]},
