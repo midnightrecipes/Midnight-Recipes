@@ -36,19 +36,18 @@ ingredients: [
 ## Photo System
 ```text
 heroImage = Recipe page Hero, 2:3
-cardImage = Recipe cards, 1:1
+cardImage = Recipe cards, 1:1 (falls back to heroImage)
 stepImages = optional per-step photo arrays, 1:1
 Each step can also define `photos: []` with 1–3 image paths; when both are present, the step-level `photos` value takes priority.
 ```
 
 Photo naming:
 ```text
-[recipe-slug]-hero.jpg
-[recipe-slug]-card.jpg
-[recipe-slug]-step-01.jpg
-[recipe-slug]-step-02.jpg
-[recipe-slug]-step-03.jpg
-For multiple photos in one step, use any clear filename convention and list them in that step's `photos` array.
+hero.jpg
+card.jpg
+recipe.jpg
+step-XX-YY.jpg / stepXX-YY.jpg
+The GitHub Actions manifest generator recognizes `.jpg/.jpeg` case-insensitively and sorts step images numerically. Manual `stepImages` remain a fallback.
 ```
 
 Store them in `images/recipes/`.
@@ -61,7 +60,7 @@ Fallback rules:
 Recipe cards use `aspect-ratio: 1 / 1; object-fit: cover`. Recipe Hero uses `aspect-ratio: 2 / 3; object-fit: cover`. Step photos use `aspect-ratio: 1 / 1; object-fit: cover`.
 
 ## Automatic classification
-A recipe is entered once in `data.js`. `source`, `course`/`meal`, `cuisine`, `ingredientCategories`, and `categories` drive View All, By Source, By Course, By Cuisine, By Ingredient, The Usuals and Search automatically. Latest Recipes sorts by `dateAdded` descending.
+A recipe is entered once in `data.js`. `source`, `course`/`meal`, `cuisine`, `ingredientCategories`, and `categories` drive View All, By Source, By Course, By Cuisine, The Usuals and Search automatically. Latest Recipes sorts by `dateAdded` descending.
 
 ## Search
 Search crosses title, source, cuisine, meal, categories, description and ingredient metadata.
@@ -70,7 +69,7 @@ Search crosses title, source, cuisine, meal, categories, description and ingredi
 Cook Mode keeps the existing large, readable presentation and requests the Screen Wake Lock API where supported. Unsupported browsers simply continue without Wake Lock; the site does not depend on the API.
 
 ## Quantity scaling / units
-Ingredients use numeric `amount` + `unit` data. `×0.5`, `1`, and `×2` scale the quantity. Metric / US customary toggles convert common mass, volume and temperature units and round toward practical kitchen values.
+Ingredients use numeric `amount` + `unit` data. The quantity multiplier is a freely editable numeric input starting at `1`; adjacent `▼` / `▲` controls adjust it in 0.5 steps. Any positive decimal multiplier is accepted, while displayed recipe quantities use practical integers and fractions. Metric / US customary toggles convert common mass, volume and temperature units and round toward practical kitchen values.
 
 ## Reviews
 The five-star review UI supports a star-only submission, optional comment and optional name. Without an external backend, reviews are stored only in the current browser's local storage and are explicitly not presented as shared/public reviews. The UI is isolated so a future Supabase or other backend can replace the storage layer without changing recipe data.
@@ -83,14 +82,13 @@ RECIPES
     By Source
     By Course
     By Cuisine
-    By Ingredient
     The Usuals
 
 ABOUT
 CONTACT
 ```
 
-Source / course / cuisine / ingredient menu entries are clickable filters. Cuisine is displayed in the requested regional hierarchy.
+Source / course / cuisine menu entries are clickable filters. Cuisine is displayed in the requested regional hierarchy. The By Ingredient menu is intentionally removed.
 
 Recipe timestamps use `timeStamp`, for example `12:38 AM`, and render as `📍 12:38 AM · TORONTO`.
 No development view switcher is included in production.
@@ -123,7 +121,7 @@ The supplied source did not include the actual external recipe-photo files or th
 
 
 ## Latest targeted update
-- Menu hierarchy: RECIPES accordion with View All / By Source / By Course / By Cuisine / By Ingredient / The Usuals; ABOUT and CONTACT remain independent top-level items.
+- Menu hierarchy: RECIPES accordion with View All / By Source / By Course / By Cuisine / The Usuals; ABOUT and CONTACT remain independent top-level items. By Ingredient is intentionally removed.
 - Source names are single-source data values, including `Grocery Store Find` and `Midnight Experiment`.
 - Cuisine groups and individual cuisines in the sidebar are generated only when matching recipes exist.
 - Ingredient filters are generated from ingredients actually present in Recipe data.
