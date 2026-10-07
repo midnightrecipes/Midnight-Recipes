@@ -6,7 +6,7 @@
   --ink:#151B1F;
   --paper:#FFFFFF;
   --line:rgba(21,27,31,.22);
-  --head:var(--ink);            /* 見出し色（トグルで切替） */
+  --head:var(--ink);
   --logo-font:'Cutie Queues','Snell Roundhand','Brush Script MT','Segoe Script',cursive;
   --body-font:'Avenir Next',Avenir,'Nunito Sans','Hiragino Kaku Gothic ProN','Segoe UI',sans-serif;
   --maxw:1240px;
@@ -28,7 +28,7 @@ button{font:inherit;color:inherit;}
 a{color:inherit;}
 
 
-/* スマホでPC幅のレイアウトを縮小表示するモード */
+
 #stagewrap{overflow:hidden;}
 #stage{transform-origin:0 0;}
 body.scaled #stage{width:1440px;}
@@ -94,7 +94,7 @@ body.scaled .overlay{position:absolute; top:76px; bottom:auto; height:820px;}
 }
 .ph.sm::after{font-size:30px;}
 
-/* ---------- トップページ ---------- */
+
 .latest{display:grid; grid-template-columns:repeat(4,1fr); gap:30px 24px;}
 .card .ph{aspect-ratio:4/3;}
 .card .name{font-family:var(--body-font); font-weight:400; font-size:19px; letter-spacing:0; margin:14px 0 0;}
@@ -118,7 +118,7 @@ body.scaled .overlay{position:absolute; top:76px; bottom:auto; height:820px;}
 .section:first-of-type{margin-top:58px;}
 
 
-/* ---------- レシピページ ---------- */
+
 .recipe-card{
   width:min(100%,1380px); max-width:none; margin:22px auto 0; background:var(--paper);
   padding:34px 40px 46px;
