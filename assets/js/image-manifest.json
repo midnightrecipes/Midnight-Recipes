@@ -54,7 +54,7 @@
   },
   "banana-banana-cream-pie": {
     "hero": "images/recipes/banana-banana-cream-pie/hero.jpg",
-    "card": null,
+    "card": "images/recipes/banana-banana-cream-pie/card.jpg",
     "recipe": "images/recipes/banana-banana-cream-pie/recipe.jpg",
     "steps": {
       "01": [
