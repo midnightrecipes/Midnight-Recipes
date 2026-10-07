@@ -1,7 +1,7 @@
 /* MIDNIGHT RECIPES — single source of truth for all recipe pages */
 window.MIDNIGHT_SITE = {
   aboutImages: {
-    aboutMe: 'images/about/about-midnight-recipes.jpg',
+    aboutMe: 'images/about/about-me.jpg',
     aboutRecipes: 'images/about/about-midnight-recipes.jpg'
   }
 };
@@ -10,6 +10,7 @@ window.MIDNIGHT_RECIPES = [
   {
     slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE AND JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Chocolate','Pie'], dateAdded:'2026-09-26', timeStamp:'12:14 AM',
     description:'A late-night chocolate cream pie inspired by Julie & Julia (2009).',
+    heroImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg', recipeImage:'images/recipes/chocolate-cream-comfort-pie/recipe.jpg', cardImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg',
     unitOverrides:{imperial:{'unsalted butter':'tbsp','unsalted butter melted':'tbsp'}},
     integerUnits:{metric:['unsweetened cocoa powder']},
     stepQuantityConversion:true,
@@ -42,29 +43,29 @@ window.MIDNIGHT_RECIPES = [
         'Add {{qty:Crust::Unsalted Butter, melted}} melted butter to the crushed graham crackers and mix until the crumbs are evenly coated.',
         'Press the crumb mixture firmly into a 9-inch (23 cm) pie dish using the flat bottom of a cup.',
         'Bake for 8–10 minutes. Let it cool.'
-      ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',},
+      ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/chocolate-cream-comfort-pie/step-01-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-03.jpg']},
       {number:'02',title:'MAKE IT GLOSSY',clock:'12:20 AM',paragraphs:[
         'In a saucepan, whisk {{qty:Chocolate Filling::Sugar}} sugar, {{qty:Chocolate Filling::Cornstarch}} cornstarch, {{qty:Chocolate Filling::Unsweetened Cocoa Powder}} cocoa powder, {{qty:Chocolate Filling::Espresso powder}} espresso powder, and {{qty:Chocolate Filling::Salt}} salt.',
         'Slowly pour in {{qty:Chocolate Filling::Whole Milk}} whole milk, whisking thoroughly until completely smooth before turning on the heat.',
         'Cook over medium heat, whisking constantly until the mixture bubbles and thickens into a pudding-like consistency.',
         'Remove the pan from the heat.'
-      ],},
+      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-02-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-02-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-02-03.jpg','images/recipes/chocolate-cream-comfort-pie/step-02-04.jpg']},
       {number:'03',title:'MAKE IT SILKY',clock:'12:28 AM',paragraphs:[
         'In a separate bowl, whisk 4 egg yolks.',
         'Slowly whisk half of the hot chocolate cream into the yolks to warm them up, then pour the yolk mixture back into the pan.',
         'Return to low heat for 1 minute, whisking constantly until thick and glossy.',
         'Remove from heat, then stir in {{qty:Chocolate Filling::Dark Chocolate, chopped}} chopped dark chocolate and {{qty:Chocolate Filling::Unsalted Butter}} butter until fully melted and smooth.'
-      ],},
+      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-03-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-03-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-03-03.jpg','images/recipes/chocolate-cream-comfort-pie/step-03-04.jpg']},
       {number:'04',title:'POUR AND WAIT',clock:'12:35 AM',paragraphs:[
         'Pour the warm chocolate filling into your chilled pie crust.',
         'Tap the pie dish gently on the counter 2–3 times to level the surface and release trapped air bubbles.',
         'Refrigerate for at least 4 hours. Overnight works best.'
-      ],},
+      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-04-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-04-02.jpg']},
       {number:'05',title:'WHIP IT LATE',clock:'Optional',paragraphs:[
         'Whip 200ml cold cream to soft peaks.',
         'Gradually add 2 Tbsp sugar and whip until medium-firm peaks form.',
         'Dollop generously over the chilled pie and finish with cocoa powder, cacao nibs, or flaky sea salt.'
-      ],}
+      ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-05-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-05-02.jpg']}
     ],
     notes:[['Recreating the Flavor','I use dark chocolate together with cocoa powder and a hint of espresso powder to take the filling beyond a simple cocoa base, creating a deeper and more layered chocolate flavor.'],['Midnight Shortcut','Chilling the crust in the freezer while preparing the filling saves time without adding another complicated step.'],['Midnight Compromises','If you are too exhausted to whisk by hand, store-bought whipped cream works perfectly well. Freshly whipped cream, however, gives a better texture and a prettier finish when you have a few extra minutes.']],
     finePrint:{'Best Eaten':'Tomorrow — the filling becomes firmer and the flavors settle overnight.','Make ahead':'Yes — up to 1 day ahead. Prepare the pie and add the whipped cream just before serving.','Storage':'Refrigerate, covered, for up to 3 days.','Freezer':'Not Recommended.','Reheat':'N/A — serve chilled.'},
@@ -85,11 +86,13 @@ window.MIDNIGHT_RECIPES = [
     dateAdded:'2026-09-27',
     timeStamp:'11:44 PM',
     description:'A fiery Nagoya-inspired Taiwan mince served over rice with a soft-boiled egg.',
+    heroImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg', recipeImage:'images/recipes/addictive-spicy-taiwan-ground-pork/recipe.jpg',
     unitOverrides:{imperial:{'sesame oil':'tbsp','soy sauce':'tbsp','Shaoxing wine':'tbsp','doubanjiang':'tbsp','sugar':'tsp'}},
     stepQuantityConversion:true,
     usCupFractions:true,
     integerUnits:{metric:['sesame oil','sugar']},
     richTextNotes:true,
+    cardImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg',
     story:`*Taiwan Ramen* (台湾ラーメン) at Misen (味仙) is famous in my hometown, Nagoya, Japan. Despite its name, this fiery ramen isn’t actually from Taiwan—the founder named it “Taiwan Ramen” after his own Taiwanese roots. It is one of Nagoya’s local food that evolved entirely in Japan, and this intensely spicy, strangely addictive flavor is so irresistible that I found myself going back to the restaurant again on my last trip home.\n\nTonight, I’m making the Taiwan ground pork the star of the dish, serving it over rice with a soft-boiled egg instead of its original ramen noodles. It might be so spicy that I end up staying awake all night.`,
     ingredientFile:[
       {name:'GROUND PORK',details:[['Flavor','Rich, savory, fatty'],['Substitute','Ground chicken or turkey, although fatty pork gives the closest result']]},
@@ -124,14 +127,14 @@ window.MIDNIGHT_RECIPES = [
         'Add {{qty:sesame oil}} sesame oil, minced {{qty:garlic}}, and {{qty:fresh red chilies}} finely minced fresh red chilies to a cold frying pan.',
         'Turn the heat to low and gently cook for 1–2 minutes.',
         'Keep the garlic pale. You want the oil infused with garlic and chili, not burnt garlic.'
-      ],},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-01-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-01-02.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-01-03.JPG']},
       {number:'02',title:'COOK THE PORK',clock:'11:17 PM',paragraphs:[
         'Increase the heat to medium-high and add {{qty:fatty ground pork}} ground pork.',
         'Let the pork sit against the pan briefly so it develops some browned edges.',
         'Break it apart and continue cooking until deeply browned and the pork fat has rendered.',
         'Push the pork toward one side of the pan. Add {{qty:doubanjiang}} doubanjiang to the exposed oil.',
         'Fry the doubanjiang for 30–45 seconds, then mix it thoroughly into the pork.',
-      ],},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-02-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-02-02.JPG']},
       {number:'03',title:'BRAISE & REDUCE',clock:'11:22 PM',paragraphs:[
         'Add {{qty:Shaoxing wine}} Shaoxing wine and let it bubble for about 30 seconds.',
         'Add {{qty:soy sauce}} soy sauce, {{qty:oyster sauce}} oyster sauce, {{qty:gochujang}} gochujang, {{qty:sugar}} sugar, {{qty:chicken bouillon powder}} chicken bouillon powder, and {{qty:water}} water.',
@@ -139,19 +142,19 @@ window.MIDNIGHT_RECIPES = [
         'Reduce the heat to low and simmer uncovered for 10–15 minutes.',
         'Do not completely dry out the mince.',
         'The finished meat should be deeply colored, glossy and intensely savory, with a small amount of concentrated sauce and pork fat still coating the pan.'
-      ],},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-03-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-03-02.JPG']},
       {number:'04',title:'FINISH WITH GARLIC CHIVES',clock:'11:34 PM',paragraphs:[
         'Add {{qty:garlic chives or green onion}} garlic chives.',
         'Toss over medium heat for 30–45 seconds.',
         'Turn off the heat.',
         'Add {{qty:sesame oil, for finishing}} sesame oil.',
-      ],},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-04-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-04-02.JPG']},
       {number:'05',title:'BRING IT HOME',clock:'11:37 PM',paragraphs:[
         'Spoon hot steamed white rice into a shallow bowl.',
         'Pile the Taiwan mince generously over the rice.',
         'Make sure some of the concentrated sauce drips down into the rice.',
         'Top with a soft-boiled egg with a runny yolk.'
-      ],}
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-05-01.jpg']}
     ],
     notes:[
       ['The Fresh Chili Trick','Fresh red chili replaces the dried chili traditionally used in many versions of Taiwan mince. Finely chopping the chili with the seeds and membrane distributes the heat throughout the meat rather than giving you occasional bites of whole chili.'],
@@ -177,6 +180,8 @@ window.MIDNIGHT_RECIPES = [
     dateAdded:'2026-09-27',
     timeStamp:'11:58 PM',
     description:'Apple crème brûlée inspired by Amélie (2001), with soft tart apples beneath silky custard and brittle caramel.',
+    heroImage:'images/recipes/apple-creme-brulee/hero.jpg', recipeImage:'images/recipes/apple-creme-brulee/recipe.jpg',
+    cardImage:'images/recipes/apple-creme-brulee/hero.jpg',
     unitOverrides:{metric:{'apples':'g','unsalted butter':'g','brown sugar':'g','lemon juice':'ml','ground cinnamon':'g','whole milk':'ml','35% whipping cream':'ml','granulated sugar':'g','granulated sugar, for brûlée':'g','vanilla extract':'ml'},imperial:{'apples':'cup','unsalted butter':'tbsp','brown sugar':'tbsp','lemon juice':'tbsp','granulated sugar':'tbsp','ground cinnamon':'tsp','vanilla extract':'tsp'}},
     integerUnits:{metric:['apples','unsalted butter','brown sugar','lemon juice','ground cinnamon','whole milk','35% whipping cream','granulated sugar','vanilla extract','granulated sugar, for brûlée','granulated sugar for br l e']},
     usCupFractions:true,
@@ -227,7 +232,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         'Cook for 5–7 minutes, until the apples are tender but still hold their shape.',
         'If there is excess liquid, cook for another 1–2 minutes until glossy but not wet.',
         'Cool slightly.'
-      ],},
+      ],stepImages:['images/recipes/apple-creme-brulee/step-01-01.jpg','images/recipes/apple-creme-brulee/step-01-02.jpg','images/recipes/apple-creme-brulee/step-01-03.jpg','images/recipes/apple-creme-brulee/step-01-04.jpg']},
       {number:'02',title:'MAKE THE CUSTARD',clock:'11:32 PM',paragraphs:[
         'Heat {{qty:whole milk}} whole milk and {{qty:35% whipping cream}} 35% whipping cream over medium-low heat until hot and steaming, but do not boil.',
         'Whisk 5 egg yolks, {{qty:granulated sugar}} sugar, and a pinch of salt gently. Avoid creating too much foam.',
@@ -235,11 +240,11 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         'Stir in {{qty:vanilla extract}} vanilla extract.',
         'Strain through a fine-mesh sieve.',
         'Let the custard rest for 5–10 minutes, then skim off any foam.'
-      ],},
+      ],stepImages:['images/recipes/apple-creme-brulee/step-02-01.jpg','images/recipes/apple-creme-brulee/step-02-02.JPG','images/recipes/apple-creme-brulee/step-02-03.JPG','images/recipes/apple-creme-brulee/step-02-04.JPG']},
       {number:'03',title:'FILL',clock:'11:42 PM',paragraphs:[
         'Divide the apples among mini cocottes.',
         'Pour the custard over the apples, almost to the top.'
-      ],},
+      ],stepImages:['images/recipes/apple-creme-brulee/step-03-01.JPG']},
       {number:'04',title:'WATER BATH & BAKE',clock:'11:45 PM',paragraphs:[
         'Place the cocottes in a deep baking dish.',
         'Add hot water until it reaches halfway up the sides of the cocottes.',
@@ -247,13 +252,13 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
         'The edges should be set while the centers still have a gentle, even wobble.',
         'Carefully remove the cocottes from the water bath.',
         'Cool, then refrigerate for at least 2 hours, preferably overnight.'
-      ],},
+      ],stepImages:['images/recipes/apple-creme-brulee/step-04-01.jpg']},
       {number:'05',title:'CRACK THE TOP',clock:'DAY',paragraphs:[
         'Blot any moisture from the surface.',
         'Sprinkle sugar evenly over the six custards in a thin layer.',
         'Torch until deeply golden and glassy. Let stand for 2–3 minutes.',
         'Crack the caramelized top with the back of a spoon, like *Amélie*.'
-      ],}
+      ],stepImages:['images/recipes/apple-creme-brulee/step-05-01.jpg','images/recipes/apple-creme-brulee/step-05-02.jpg']}
     ],
     notes:[
       ['Keeping the Apples Distinct','Cooking the apples separately concentrates their flavor and removes excess moisture.'],
@@ -275,7 +280,10 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
     dateAdded:'2026-09-27', timeStamp:'11:48 PM',
     usCupFractions:true, stepQuantityConversion:true, unitOverrides:{metric:{'Cinnamon Stick':'stick'}},
     tags:['Movie','Coco','Pie','Mexican','Pumpkin','DíaDeMuertos','Ofrenda','CalabazaenTacha','Baking','Dessert'],
-    recipeTitle:'Calabaza en Tacha Pumpkin Pie', showPan:true, usesUsual:'building-block-pie-crust',
+    heroImage:'images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/hero.jpg',
+    recipeTitle:'Calabaza en Tacha Pumpkin Pie', showPan:true,
+    recipeImage:'images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/recipe.jpg',
+    cardImage:'images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/hero.jpg', usesUsual:'building-block-pie-crust',
     story:`Mexico's *Día de Muertos*, the traditional celebration featured in the movie *Coco*, centers around remembering and welcoming loved ones who have passed away.
 
 Celebrated especially on November 1 and 2, families create *ofrendas*, or altars, decorated with photographs, candles, marigolds, and foods that their loved ones enjoyed.
@@ -306,11 +314,11 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
     ],
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat oven to 180°C / 350°F.','Start with one of our usual recipes - Building Block Pie Crust.'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
-      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the filling.','Pour {{qty:Half & Half / 10% Cream}} Half & Half into a small saucepan.','Add 1/2 cinnamon stick, 2 whole cloves, 1 star anise, and 1 strip orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, and star anise. Remove the orange peel.','Remove the orange peel if the infusion will steep for longer, as prolonged steeping can make it bitter.','While the infused Half & Half is still warm, whisk in {{qty:Dark Brown Sugar}} dark brown sugar and {{qty:Molasses}} molasses until completely dissolved.'],},
-      {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:Pumpkin Purée}} pumpkin purée, {{qty:Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],},
-      {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Pour the pumpkin filling into the crust.','Bake for 40–50 minutes.','The edges should be set while the center still has a slight wobble when the pie is gently shaken.','Remove from the oven.','Let the pie cool completely before adding the syrup.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],},
-      {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:INSTRUCTION-ONLY SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:INSTRUCTION-ONLY SYRUP::Molasses}} molasses, {{qty:INSTRUCTION-ONLY SYRUP::Orange Juice}} orange juice, {{qty:INSTRUCTION-ONLY SYRUP::Water}} water, {{qty:INSTRUCTION-ONLY SYRUP::Orange Peel, about 2–3 cm (1 inch) long}} orange peel, about 2–3 cm (1 inch) long, and {{qty:INSTRUCTION-ONLY SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],},
-      {number:'06',title:'FINISH',clock:'NEXT DAY',paragraphs:['Once the pie has cooled completely, brush or spoon a thin layer of the piloncillo syrup over the surface.','The syrup will gradually soak into the pie over time. For the glossiest finish, warm the syrup just before serving and drizzle it over the pie right before eating.'],}
+      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the filling.','Pour {{qty:Half & Half / 10% Cream}} Half & Half into a small saucepan.','Add 1/2 cinnamon stick, 2 whole cloves, 1 star anise, and 1 strip orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, and star anise. Remove the orange peel.','Remove the orange peel if the infusion will steep for longer, as prolonged steeping can make it bitter.','While the infused Half & Half is still warm, whisk in {{qty:Dark Brown Sugar}} dark brown sugar and {{qty:Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
+      {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:Pumpkin Purée}} pumpkin purée, {{qty:Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
+      {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Pour the pumpkin filling into the crust.','Bake for 40–50 minutes.','The edges should be set while the center still has a slight wobble when the pie is gently shaken.','Remove from the oven.','Let the pie cool completely before adding the syrup.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-04-01.JPG']},
+      {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:INSTRUCTION-ONLY SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:INSTRUCTION-ONLY SYRUP::Molasses}} molasses, {{qty:INSTRUCTION-ONLY SYRUP::Orange Juice}} orange juice, {{qty:INSTRUCTION-ONLY SYRUP::Water}} water, {{qty:INSTRUCTION-ONLY SYRUP::Orange Peel, about 2–3 cm (1 inch) long}} orange peel, about 2–3 cm (1 inch) long, and {{qty:INSTRUCTION-ONLY SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
+      {number:'06',title:'FINISH',clock:'NEXT DAY',paragraphs:['Once the pie has cooled completely, brush or spoon a thin layer of the piloncillo syrup over the surface.','The syrup will gradually soak into the pie over time. For the glossiest finish, warm the syrup just before serving and drizzle it over the pie right before eating.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-06-01.JPG']}
     ],
     notes:[
       ['Recreating the Flavor','The original Calabaza en Tacha gets much of its character from pumpkin slowly cooked in a dark piloncillo syrup with warm spices.\n\nInstead of putting those flavors directly into a standard pumpkin custard, I split them into two layers:\n\n**Spiced Half & Half → Orange-Molasses Syrup**\n\nThe Half & Half carries the cinnamon, clove, star anise, and orange aroma into the custard, while the syrup recreates the darker caramelized sweetness associated with piloncillo.'],
@@ -324,7 +332,7 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
   {
     slug:'banana-banana-cream-pie', title:'Banana Banana Cream Pie', source:'Midnight Experiment', dish:'Banana Cream Pie', cuisine:'American',
     course:'Baking', courseDisplay:'Baking, Dessert', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Fruit','Pie','Eggs','Pantry'], dateAdded:'2026-09-27', timeStamp:'2:50 AM',
-    tags:['Dessert','Baking','Banana','Pie'],
+    tags:['Dessert','Baking','Banana','Pie'], heroImage:'images/recipes/banana-banana-cream-pie/hero.jpg', recipeImage:'images/recipes/banana-banana-cream-pie/recipe.jpg', cardImage:'images/recipes/banana-banana-cream-pie/card.jpg',
     unitOverrides:{imperial:{'plain biscuits, finely crushed':'cup','unsalted butter, melted':'cup','whole milk':'cup','granulated sugar':'tbsp','cornstarch':'tbsp','heavy cream':'cup','sugar, to taste':'tbsp'}},
     densityOverrides:{'plain biscuits|cup':100,'granulated sugar|tbsp':35/3},
     usCupFractions:true,
@@ -362,7 +370,7 @@ What if we just put way more banana in banana cream pie?`,
         'Cook {{qty:bananas (approx. 250 g flesh), very ripe and mashed}} very ripe mashed bananas (approx. {{approx:bananas (approx. 250 g flesh), very ripe and mashed}}) in a nonstick skillet over medium-low heat for 8–12 minutes, stirring often.',
         'Keep cooking until the moisture cooks off and the banana turns thick, glossy, and jammy.',
         'No sugar. No butter. Just banana. Set aside.'
-      ],},
+      ],stepImages:[]},
       {number:'02',title:'FAKE THE BISCOFF',clock:'3:08 AM',paragraphs:[
         'Crush {{qty:plain biscuits, finely crushed}} plain biscuits finely.',
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
@@ -370,36 +378,36 @@ What if we just put way more banana in banana cream pie?`,
         'Mix with {{qty:ground cinnamon}} cinnamon, {{qty:ground ginger}} ginger, {{qty:ground nutmeg}} nutmeg, {{qty:salt}} salt, and {{qty:unsalted butter, melted}} melted butter.',
         'Press firmly into a 9-inch (23 cm) pie dish.',
         'Bake for 8–10 minutes, then let cool.'
-      ],stepNote:'**Midnight Shortcut:** Skip the oven entirely! Just press the crust into the dish and freeze it while making the filling. It won\'t be quite as toasted, but it sets super fast.',},
+      ],stepNote:'**Midnight Shortcut:** Skip the oven entirely! Just press the crust into the dish and freeze it while making the filling. It won\'t be quite as toasted, but it sets super fast.',stepImages:[]},
       {number:'03',title:'MAKE IT THICK',clock:'3:20 AM',paragraphs:[
         'Whisk {{qty:Filling::granulated sugar}} sugar, {{qty:cornstarch}} cornstarch, and {{qty:Filling::salt}} salt in a saucepan.',
         'Gradually whisk in {{qty:Whole Milk}} whole milk until smooth.',
         'Cook over medium heat, whisking constantly, until the custard becomes very thick and starts to bubble.',
         'Keep whisking and cook for another 1–2 minutes after it starts bubbling.',
         'The whisk should leave a clear trail, and the custard should slowly fill it back in.'
-      ],},
+      ],stepImages:[]},
       {number:'04',title:'WARM THE EGGS',clock:'3:25 AM',paragraphs:[
         'Whisk {{qty:egg yolks}} egg yolks in a bowl.',
         'Slowly add the hot custard, a little at a time, whisking constantly.',
         'Pour everything back into the saucepan.',
         'Return to low heat and cook for 1 minute, whisking constantly, until thick and glossy.',
         'Remove from the heat'
-      ],},
+      ],stepImages:[]},
       {number:'05',title:'BLEND THE BANANA IN',clock:'3:30 AM',paragraphs:[
         'Add the concentrated banana and {{qty:vanilla extract}} vanilla extract to the warm custard.',
         'Blend until completely smooth and silky.',
         '**Quiet Mode (Silent):** Want a little texture? Skip the food processor and stir it in by hand.'
-      ],},
+      ],stepImages:[]},
       {number:'06',title:'HIDE THE BANANAS & NOW WE WAIT',clock:'3:35 AM',paragraphs:[
         'Peel {{qty:firm-ripe bananas, cut in half lengthwise}} firm-ripe bananas and cut each one in half lengthwise.',
         'Arrange the banana halves along the outer edge of the cooled crust, flat-side down.',
         'Pour the banana cream over the top and smooth the surface.',
         'Refrigerate for at least 4 hours. Overnight is even better!'
-      ],},
+      ],stepImages:[]},
       {number:'07',title:'TOP IT OFF',clock:'NEXT DAY',paragraphs:[
         'Whip {{qty:heavy cream}} cold heavy cream to soft peaks. Add {{qty:sugar, to taste}} sugar and whip to medium-firm peaks.',
         'Dollop over the chilled pie and finish with cinnamon or banana chips, if you like.'
-      ],}
+      ],stepImages:[]}
     ],
     notes:[
       ['Midnight (Non)Compromises','Even in the middle of the night, concentrating the bananas is a non-negotiable.\n\nThose nearly black bananas are already packed with natural sweetness, so instead of adding more sugar, I cook them down in a skillet until their moisture evaporates and their natural sugars become concentrated.'],
@@ -414,7 +422,7 @@ What if we just put way more banana in banana cream pie?`,
   {
     slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese', cuisineSecondary:'American',
     course:'Baking', courseDisplay:'Baking, Dessert', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Sweet Potato','Ginger','Cream','Cinnamon','Pie'], dateAdded:'2026-09-27', timeStamp:'11:35 PM',
-    tags:['Midnight Experiment','Dessert','Baking','Chinese','American','Sweet Potato','Ginger','Pie'], usesUsual:'building-block-pie-crust', usCupFractions:true, forceCupUnits:true, stepQuantityConversion:true,
+    tags:['Midnight Experiment','Dessert','Baking','Chinese','American','Sweet Potato','Ginger','Pie'], heroImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', recipeImage:'images/recipes/sweet-potato-ginger-pie/recipe.jpg', cardImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', usesUsual:'building-block-pie-crust', usCupFractions:true, forceCupUnits:true, stepQuantityConversion:true,
     story:`Inspired by traditional Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水), a simple sweet soup made by simmering sweet potatoes with fresh ginger and sugar in water.
 
 I love how naturally sweet potato and ginger work together—the earthy sweetness of the sweet potato balanced by the warm, peppery kick of fresh ginger. I thought that combination would be perfect in a pie.
@@ -442,13 +450,13 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
         'Peel and cut the sweet potato into chunks. Place in a microwave-safe bowl with a small splash of water and cover.',
         'Midnight Shortcut — Boil',
         'Peel and cut the sweet potato into chunks. Simmer in water for 15–20 minutes, until fork-tender.'
-      ],},
+      ],stepImages:[]},
       {number:'02',title:'MAKE THE CRUST',clock:'11:45 PM',paragraphs:[
         'While the sweet potatoes are roasting… start making Building Block Pie Crust.',
         'Prick the bottom well with a fork. Bake in the same oven at 205°C / 400°F for 10–12 minutes, until set and lightly golden.',
         'Midnight Shortcut',
         'Use a good-quality store-bought pie crust. Tonight is about the filling.'
-      ],},
+      ],stepImages:[]},
       {number:'03',title:'BLEND THE FILLING',clock:'12:25 AM',paragraphs:[
         'Lower the oven to 175°C / 350°F.',
         'Once the sweet potato is cooked and cool enough to handle, measure {{qty:cooked sweet potato flesh}}.',
@@ -458,14 +466,14 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
         'Blend the sweet potato and all remaining filling ingredients and blend briefly until silky.',
         'Quiet Mode — Silent',
         'Mash the sweet potato thoroughly, add all remaining filling ingredients, and blend directly in the bowl with a hand blender until completely smooth.'
-      ],},
+      ],stepImages:[]},
       {number:'04',title:'BAKE',clock:'12:30 AM',paragraphs:[
         'Pour the filling into the crust.',
         'Bake at 175°C / 350°F for 40–50 minutes.',
         'The edges should be set and the centre should still have a slight wobble.',
         'Remove from the oven and cool completely at room temperature.',
         'The filling will continue to set as it cools.'
-      ],},
+      ],stepImages:[]},
       {number:'05',title:'CHILL & FINISH',clock:'1:20 AM',paragraphs:[
         'Let the pie cool completely before refrigerating. Once cooled, refrigerate for at least 2 hours, preferably overnight.',
         'Optional:',
@@ -473,7 +481,7 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
         'Gradually add {{qty:TOPPING::white sugar}} sugar and continue whipping until medium-firm peaks form.',
         'Keep the whipped cream refrigerated until serving.',
         'Slice the chilled pie and top with whipped cream and a light dusting of cinnamon.'
-      ],}
+      ],stepImages:[]}
     ],
     notes:[
       ['Recreating the Flavor',`Fresh ginger is the signature. It gives the pie the warm, peppery character inspired by 番薯姜糖水.
@@ -488,10 +496,11 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     mainIngredients:['Sweet Potato','Ginger','Cream','Cinnamon'], footerInspiredBy:'Traditional', footerCuisine:'Chinese · American', footerCourse:'Dessert', footerMainIngredients:['Sweet Potato','Ginger','Cream','Cinnamon']
   },
   {
-    slug:'building-block-pie-crust', title:'Building Block Pie Crust', cuisine:'American', course:'Baking', courseDisplay:'Baking', meal:'Baking', categories:['Baking'], ingredientCategories:['Pie'], dateAdded:'2026-09-27', timeStamp:'',
+    slug:'building-block-pie-crust', title:'Building Block Pie Crust', source:'The Usuals', cuisine:'American', course:'Baking', courseDisplay:'Baking', meal:'Baking', categories:['Baking'], ingredientCategories:['Pie'], dateAdded:'2026-09-27', timeStamp:'',
     isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...', hideRecipeTags:true,
     description:'The crust we make when a pie calls for a crust.',
     usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
+    heroImage:'images/recipes/building-block-pie-crust/hero.jpg', recipeImage:'images/recipes/building-block-pie-crust/recipe.jpg', cardImage:'',
     unitOverrides:{imperial:{'all-purpose flour':'cup','cold unsalted butter, cubed':'cup','salt':'tsp'},metric:{'cold water':'ml'}},
     densityOverrides:{'all purpose flour|cup':120,'cold unsalted butter cubed|cup':113},
     stepQuantityConversion:true,
@@ -510,12 +519,12 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
         {text:'Add {{amount:0}} cold water gradually until the dough just comes together.',amounts:[{min:45,max:60,unit:'ml',ingredient:'Cold Water'}]},
         'Lightly flour your hands and press the dough directly into the pie dish.',
         'If the butter has softened, chill the crust for 10 minutes before baking.'
-      ],stepNote:'**Midnight Shortcut:** Use a food processor to make the dough quickly.',},
+      ],stepNote:'**Midnight Shortcut:** Use a food processor to make the dough quickly.',stepImages:['images/recipes/building-block-pie-crust/step-01-01.JPG','images/recipes/building-block-pie-crust/step-01-02.JPG','images/recipes/building-block-pie-crust/step-01-03.JPG','images/recipes/building-block-pie-crust/step-01-04.JPG']},
       {number:'02',title:'BLIND-BAKE',clock:'',paragraphs:[
         'Prick the bottom with a fork. Add parchment paper and pie weights.',
         'Bake at 175°C / 350°F for 15 minutes.',
         'Remove the weights and parchment, then bake for another 5–7 minutes, until lightly golden.'
-      ],}
+      ],stepImages:['images/recipes/building-block-pie-crust/step-02-01.JPG','images/recipes/building-block-pie-crust/step-02-02.jpg']}
     ],
     notes:[
       ['The Golden Rule — Blind-Bake','For wet fillings, blind-baking helps keep the bottom from getting soggy. Take the crust only to light golden at this stage; it will continue browning when the filled pie goes back into the oven.'],

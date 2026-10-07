@@ -1,235 +1,136 @@
-# MIDNIGHT RECIPES — GitHub Pages
+# MIDNIGHT RECIPES
 
-Repository: `Midnight-Recipes`  
-Expected site: `https://midnightrecipes.github.io/Midnight-Recipes/`
-
-## v108 data / image architecture
-
-This version keeps the existing MIDNIGHT RECIPES design, page structure, typography, colors, navigation style, and recipe layout. The main change is that recipe images are now **derived automatically from the recipe slug** instead of being maintained in `data.js` or `image-manifest.json`.
-
-### Adding a new recipe
-
-Add the recipe once to `assets/js/data.js` with its `slug`, title, source, course, cuisine, categories, date, ingredients, steps, etc.
-
-Then add the recipe's images directly to GitHub:
-
-```text
-images/
-└── recipes/
-    └── [recipe-slug]/
-        ├── hero.jpg
-        ├── recipe.jpg
-        ├── step-01-01.jpg
-        ├── step-01-02.jpg
-        ├── step-01-03.jpg
-        ├── step-01-04.jpg
-        ├── step-02-01.jpg
-        └── ...
-```
-
-No HTML page edit, category-page edit, image-manifest edit, or image-path entry in `data.js` is required.
-
-### Image rules
-
-- `hero.jpg` = Recipe page hero image and **all recipe cards/lists**.
-- `recipe.jpg` = image shown in THE RECIPE section when supplied.
-- Step images use `step-01-01.jpg` through `step-XX-04.jpg`.
-- Each step supports **0–4 photos**.
-- The production convention is lowercase `.jpg`.
-- Existing `.JPG`, `.jpeg`, and `.JPEG` files are also tried as fallbacks for compatibility.
-- Missing hero/recipe images fall back to the existing placeholder behavior.
-- Missing step photos are simply removed; no placeholder is shown for a missing step photo.
-- Images use the existing aspect-ratio rules: hero `2:3`, cards `1:1`, step photos `1:1`.
-
-### Important
-
-`assets/js/image-manifest.json` is intentionally no longer used. Do not create or maintain a manual image manifest.
+Static GitHub Pages site based on the supplied MIDNIGHT RECIPES prototype. The existing visual language, layout, colors, typography, header, menu, overlays, recipe-card treatment, Cook Mode and responsive direction are retained; the development-only view controls are removed from production.
 
 ## Recipe data
-
-`assets/js/data.js` is the single source of truth for recipe metadata and recipe content.
-
-Core fields include:
+Add one object to `assets/js/data.js`. Use:
 
 - `slug`
 - `title`
 - `source`
-- `sourceSecondary` (optional)
 - `cuisine`
-- `cuisineSecondary` (optional)
 - `course`
-- `courseDisplay` (optional)
-- `meal` (legacy compatibility)
+- `meal` (kept for compatibility)
 - `categories`
 - `ingredientCategories`
+- `timeStamp`
 - `dateAdded`
-- `description`
 - `ingredients`
 - `ingredientFile`
-- `steps`
-- `stats`
+- `heroImage`
+- `cardImage`
+- `stepImages`
 
-Image path fields such as `heroImage`, `recipeImage`, `cardImage`, and per-step `stepImages` are intentionally not stored in recipe data anymore. Image paths are generated from `slug`.
+`ingredients` are the ingredients actually used by the recipe. `ingredientFile` is separate supporting information about ingredients and may contain only the fields that are useful.
 
-## Source values
-
-The official By Source values are exactly:
-
-```text
-Restaurant
-Grocery Store Find
-Movie & TV
-Book
-Travel
-Family & Tradition
-Memory
-Internet Find
-Midnight Experiment
+### Ingredient structure
+```js
+ingredients: [
+  { amount: 200, unit: 'g', item: 'graham crackers' },
+  { amount: 80, unit: 'g', item: 'butter' },
+  { amount: 4, unit: '', item: 'egg yolks' },
+  { group: 'Optional finish' }
+]
 ```
 
-These names must not be renamed or generalized.
+## Photo System
+```text
+heroImage = Recipe page Hero, 2:3
+cardImage = Recipe cards, 1:1
+stepImages = optional per-step photo arrays, 1:1
+Each step can also define `photos: []` with 1–3 image paths; when both are present, the step-level `photos` value takes priority.
+```
 
-`The Usuals` is **not a Source**. It is a separate collection under RECIPES, driven by `isUsuals` / `usualsCategory`.
+Photo naming:
+```text
+[recipe-slug]-hero.jpg
+[recipe-slug]-card.jpg
+[recipe-slug]-step-01.jpg
+[recipe-slug]-step-02.jpg
+[recipe-slug]-step-03.jpg
+For multiple photos in one step, use any clear filename convention and list them in that step's `photos` array.
+```
+
+Store them in `images/recipes/`.
+
+Fallback rules:
+- Hero: `heroImage` → current placeholder if missing/unavailable.
+- Card: `cardImage` → `heroImage` → current placeholder.
+- Step: `stepImages` → show the photo; if there is no Step photo, do not show a placeholder.
+
+Recipe cards use `aspect-ratio: 1 / 1; object-fit: cover`. Recipe Hero uses `aspect-ratio: 2 / 3; object-fit: cover`. Step photos use `aspect-ratio: 1 / 1; object-fit: cover`.
+
+## Automatic classification
+A recipe is entered once in `data.js`. `source`, `course`/`meal`, `cuisine`, `ingredientCategories`, and `categories` drive View All, By Source, By Course, By Cuisine, By Ingredient, The Usuals and Search automatically. Latest Recipes sorts by `dateAdded` descending.
+
+## Search
+Search crosses title, source, cuisine, meal, categories, description and ingredient metadata.
+
+## Cook Mode
+Cook Mode keeps the existing large, readable presentation and requests the Screen Wake Lock API where supported. Unsupported browsers simply continue without Wake Lock; the site does not depend on the API.
+
+## Quantity scaling / units
+Ingredients use numeric `amount` + `unit` data. `×0.5`, `1`, and `×2` scale the quantity. Metric / US customary toggles convert common mass, volume and temperature units and round toward practical kitchen values.
+
+## Reviews
+The five-star review UI supports a star-only submission, optional comment and optional name. Without an external backend, reviews are stored only in the current browser's local storage and are explicitly not presented as shared/public reviews. The UI is isolated so a future Supabase or other backend can replace the storage layer without changing recipe data.
 
 ## Navigation
-
-Production navigation remains:
-
+The production navigation remains:
 ```text
 RECIPES
     View All
     By Source
     By Course
     By Cuisine
+    By Ingredient
     The Usuals
 
 ABOUT
 CONTACT
 ```
 
-There is no `By Ingredient` item in the production navigation.
+Source / course / cuisine / ingredient menu entries are clickable filters. Cuisine is displayed in the requested regional hierarchy.
 
-`By Course` is the official label. The existing compatibility field `meal` may remain in recipe data, but the public navigation and category page use Course.
+Recipe timestamps use `timeStamp`, for example `12:38 AM`, and render as `📍 12:38 AM · TORONTO`.
+No development view switcher is included in production.
 
-## Automatic classification
+## Contact
+`from.midnightkitchen@gmail.com` is linked with `mailto:`.
 
-A recipe is entered once in `data.js`. Its source, course, cuisine, categories, ingredients, and The Usuals status drive the relevant pages automatically:
+## GitHub Pages
+Repository: `Midnight-Recipes`
+Expected site base:
+`https://midnightrecipes.github.io/Midnight-Recipes/`
 
-- Home
-- Latest Recipes
-- View All
-- By Source
-- By Course
-- By Cuisine
-- The Usuals
-- Search
-- Individual Recipe pages
+All internal links and asset paths are generated relative to the current page depth so nested pages do not depend on a domain-root `/` path.
 
-Latest Recipes sort by `dateAdded` descending.
-
-## Search
-
-Search covers recipe title, slug, source, cuisine, course/meal, categories, tags, description, ingredient categories, ingredients, and The Usuals metadata.
-
-## Quantity scaling
-
-The recipe quantity control is intentionally user-editable and accepts any positive multiplier, including values such as `0.5`, `1`, `1.5`, `2`, etc. The stepper buttons move by `0.5`, while direct input allows other values.
-
-Range quantities such as `3–5 fresh red chilies` are represented with `minAmount` / `maxAmount` and scale with the recipe multiplier.
-
-## Metric / US units
-
-The existing Metric / US toggle remains data-driven. Cooking-friendly rounding and ingredient-specific unit overrides are preserved.
-
-When an ingredient contains both a decimal `imperialAmount` and a legacy `imperialFraction`, the current renderer treats the explicit fraction as the preferred cup representation for compatibility. New recipe data should prefer a single authoritative imperial quantity rather than storing conflicting duplicate representations.
-
-## Step quantity conversion
-
-Step instructions may use quantity tokens such as:
-
-```text
-{{qty:Pumpkin Purée}}
-{{qty:CALABAZA FILLING::Orange Juice}}
-{{qty:INSTRUCTION-ONLY SYRUP::Dark Brown Sugar}}
-```
-
-The same generic ingredient-matching system resolves these references for all recipes. Recipe-specific slug checks are not used for quantity conversion.
-
-Instruction-only ingredients can remain in the recipe's ingredient data with `hideFromIngredients:true` when they are needed by step instructions but should not appear in the visible ingredient list.
-
-## Recipe page actions
-
-The production recipe actions are:
-
-- Cook Mode
-- Share
-- Print
-
-Save Recipe is intentionally not included.
-
-Cook Mode requests the Screen Wake Lock API when supported. Unsupported browsers continue normally. No extra explanatory Wake Lock sentence is displayed.
-
-Jump To Recipe remains available. Back to Top is intentionally removed.
-
-## Reviews
-
-The five-star review UI supports:
-
-- 1–5 selectable stars
-- star-only submission
-- optional name
-- optional comment
-
-Without an external backend, reviews are stored only in the current browser's local storage and are not presented as shared/public reviews.
-
-## About image
-
-The current About image is:
-
-```text
-images/about/about-midnight-recipes.jpg
-```
-
-## GitHub Pages paths
-
-Internal links and assets use the current page depth so nested pages work under:
-
-```text
-/Midnight-Recipes/
-```
-
-Do not replace these with domain-root `/images/...` paths.
-
-## Validation
-
-The repository includes a GitHub Action:
-
-```text
-.github/workflows/validate-site-data.yml
-```
-
-It validates the official Source list, prevents legacy image properties from returning to `data.js`, and checks the 0–4 step-photo convention for committed images.
-
-## Recommended post-publish checks
-
+Recommended check after publishing:
 - Home
 - Recipes / View All
-- Latest Recipes
-- By Source
-- By Course
-- By Cuisine
+- By Source / Cuisine / Meal
 - The Usuals
 - About / Contact
 - Individual Recipe
 - Search
 - Cook Mode / Wake Lock fallback
-- Quantity scaling
-- Metric / US toggle
-- Share / Print
+- Quantity and unit toggles
+- Share / Print / Save
 - Review UI
-- Mobile widths / no horizontal overflow
-- Hero, recipe, and Step image fallback behavior
+- Mobile widths and no horizontal overflow
 
-## Production cleanup
+The supplied source did not include the actual external recipe-photo files or the original separate 15-file repository. Therefore this package preserves the supplied photo placeholders and will immediately use any matching files added under `images/recipes/` according to the rules above; it does not fabricate recipe photography.
 
-Development-only view switchers and Japanese test labels are not part of the production package.
+
+## Latest targeted update
+- Menu hierarchy: RECIPES accordion with View All / By Source / By Course / By Cuisine / By Ingredient / The Usuals; ABOUT and CONTACT remain independent top-level items.
+- Source names are single-source data values, including `Grocery Store Find` and `Midnight Experiment`.
+- Cuisine groups and individual cuisines in the sidebar are generated only when matching recipes exist.
+- Ingredient filters are generated from ingredients actually present in Recipe data.
+- The Usuals is an independent collection driven by `usualsCategory`; legacy `BUILDING BLOCKS` UI is removed.
+- Recipe Source / Cuisine / Course links use the same category-filter pages as the sidebar.
+- Ingredient File hides the old `Ingredient name` placeholder.
+- Cook Mode only requests Screen Wake Lock when supported; it does not change recipe layout or enlarge steps.
+- Share / Print / Save are compact, inline actions.
+- `timeStamp`, `heroImage`, and per-step `stepPhotos` remain data-driven.
+- Back to Top and Recipe-page wave decoration are removed.
