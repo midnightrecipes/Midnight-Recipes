@@ -161,12 +161,6 @@ body.scaled .overlay{position:absolute; top:76px; bottom:auto; height:820px;}
 }
 .toggle-row button[aria-pressed="true"]{background:var(--mint); border-color:var(--mint);}
 .toggle-row.small button{padding:6px 16px;}
-.scale-input-wrap{display:inline-flex;align-items:center;gap:6px;position:relative;}
-.scale-input-wrap #recipeScale{font:inherit;width:72px;background:transparent;border:1px solid var(--line);padding:6px 34px 6px 9px;color:var(--ink);box-sizing:border-box;}
-.scale-stepper{position:absolute;right:1px;top:1px;bottom:1px;width:22px;display:flex;flex-direction:column;justify-content:center;align-items:stretch;}
-.scale-stepper button{width:22px;height:16px;padding:0!important;border:0!important;background:transparent!important;color:var(--ink);font-size:9px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:2px;}
-.scale-stepper button:hover{background:var(--mint)!important;color:var(--ink);}
-.scale-stepper button:focus-visible{outline:1px solid var(--ink);outline-offset:-1px;}
 .ing{list-style:none; padding:0; margin:22px 0 0; font-size:17px; line-height:2.2;}
 .ing li{display:flex; gap:10px; align-items:baseline;}
 .ing .note{font-size:15px; opacity:.55;}
@@ -1385,4 +1379,63 @@ body[data-page="home"] .category-card .photo-frame{
   padding-left:12px;
   font-style:italic;
   line-height:1.9;
+}
+
+/* Quantity multiplier stepper: use only the custom ▲/▼ controls and hide the browser number spinner. */
+#scaleToggle{
+  align-items:center;
+}
+#scaleToggle .scale-stepper{
+  display:inline-flex;
+  align-items:stretch;
+  gap:0;
+}
+#scaleToggle #recipeScale{
+  box-sizing:border-box;
+  width:72px;
+  min-width:72px;
+  margin:0;
+  padding:6px 9px;
+  font:inherit;
+  background:transparent;
+  border:1px solid var(--line);
+  border-right:0;
+  border-radius:0;
+  text-align:center;
+  appearance:textfield;
+  -moz-appearance:textfield;
+}
+#scaleToggle #recipeScale::-webkit-outer-spin-button,
+#scaleToggle #recipeScale::-webkit-inner-spin-button{
+  -webkit-appearance:none;
+  appearance:none;
+  margin:0;
+}
+#scaleToggle .scale-stepper-buttons{
+  display:flex;
+  flex-direction:column;
+  width:24px;
+}
+#scaleToggle .scale-stepper-buttons button{
+  appearance:none;
+  -webkit-appearance:none;
+  flex:1 1 50%;
+  min-height:50%;
+  margin:0;
+  padding:0;
+  border:1px solid var(--line);
+  border-left:0;
+  background:transparent;
+  color:inherit;
+  font:inherit;
+  font-size:11px;
+  line-height:1;
+  cursor:pointer;
+}
+#scaleToggle .scale-stepper-buttons button:first-child{
+  border-bottom:0;
+}
+#scaleToggle .scale-stepper-buttons button:hover,
+#scaleToggle .scale-stepper-buttons button:focus-visible{
+  background:var(--soft);
 }
