@@ -651,7 +651,7 @@ If the internet was calling it the world’s best, I had to find out for myself,
         ['Storage','Wrap fresh galangal loosely and refrigerate. Dried galangal should be kept airtight in a cool, dark place.'],
         ['Midnight Fix','Use frozen or dried galangal if fresh galangal is unavailable.']
       ]},
-      {name:'Makrut Lime Leaf',details:[
+      {name:'Makrut Lime Leaves',details:[
         ['Origin','Thailand / Southeast Asia'],
         ['Flavor','Intensely citrusy, floral, aromatic'],
         ['Best choice','Fresh makrut lime leaves'],
@@ -722,7 +722,7 @@ If the internet was calling it the world’s best, I had to find out for myself,
       ['Toronto Pantry Reality','Fresh Galangal and Lemongrass are easy to find at Toronto Asian grocery stores, while dried Makrut Lime Leaves are useful when you want to make this on a random midnight without another grocery run.']
     ],
     finePrint:{'Best Eaten':'Fresh','Make ahead':'Yes — If possible, add the Fresh Lime Juice just before serving rather than before storing.','Storage':'Refrigerate in an airtight container for up to 3 days.','Reheat':'Gently on the stovetop or in the microwave. Avoid a hard boil.'},
-    tags:['Galangal','Makrut Lime Leaf','Lemongrass','Coconut Milk','Chicken'],
+    tags:['Galangal','Makrut Lime Leaves','Lemongrass','Coconut Milk','Chicken'],
     usualsCategory:''
   }
 
