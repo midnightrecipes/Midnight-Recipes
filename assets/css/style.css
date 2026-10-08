@@ -135,6 +135,7 @@ body.scaled .overlay{position:absolute; top:76px; bottom:auto; height:820px;}
 .facts{font-size:19px; line-height:2.05; margin:0 0 20px;}
 .facts b{font-weight:700;}
 .facts u{text-underline-offset:3px;}
+.facts .original-link{text-decoration:underline;text-underline-offset:3px;cursor:pointer;}
 .btn{
   display:block; width:100%; max-width:330px; margin:0 0 12px;
   padding:11px 18px; border:1px solid var(--ink); border-radius:999px;
