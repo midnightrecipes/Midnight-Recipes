@@ -533,6 +533,86 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     tags:['The Usuals','Bases & Crusts','Pie'], mainIngredients:['Flour','Butter','Salt','Pie']
   },
 
+  {
+    slug:'fun-key-lime-pie', title:'Fun(Key) Lime Pie', source:'Grocery Store Find', original:'', dish:'Lime Pie', cuisine:'American',
+    course:'Baking', courseDisplay:'Baking, Desserts', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Fruit','Eggs','Cream','Pie'], timeStamp:'11:20 PM',
+    description:'A Key Lime Pie-inspired pie made with the limes you can actually find.',
+    heroImage:'images/recipes/fun-key-lime-pie/hero.jpg', recipeImage:'images/recipes/fun-key-lime-pie/recipe.jpg', cardImage:'images/recipes/fun-key-lime-pie/hero.jpg',
+    stepQuantityConversion:true,
+    usCupFractions:true,
+    ingredientFile:[
+      {name:'Sweetened Condensed Milk',details:[['Flavor','Rich, milky, caramel-like sweetness.'],['Best choice','Use plain full-fat sweetened condensed milk. The entire 300 ml can is used.'],['Why here?','The acid in the lime juice reacts with the milk proteins, helping the filling thicken without needing starch or gelatin.'],['Substitute','Evaporated milk is not a direct substitute because it is unsweetened and has a different consistency.'],['Storage','Refrigerate after opening. Keep the unopened can according to the manufacturer\'s instructions.'],['Midnight Fix','Use the entire 300 ml can so there is no leftover condensed milk to deal with.']]},
+      {name:'Persian/Tahiti Limes',details:[['Flavor','Bright, tart, fresh, and aromatic.'],['Best choice','Choose firm, heavy-for-their-size limes with fragrant skin. Because the zest is used, organic limes are preferable. If organic limes are unavailable, choose unwaxed limes when possible. If using conventional waxed limes, wash them thoroughly before zesting: scrub under warm running water with a clean produce brush, then rinse and dry well. For an extra-clean surface, soak briefly in a baking-soda solution, rinse thoroughly, and dry before zesting.'],['Why here?','Regular Persian/Tahiti limes are much easier to find in Toronto while still providing the bright acidity and fresh lime aroma needed for the pie. The extra zest helps make up for the difference from Key limes.'],['Substitute','Key limes can be used if available. Use the same total amount of juice. Bottled Key lime juice can be used in a pinch, but fresh lime juice and zest are preferred for the brightest flavor.'],['Storage','Store whole limes at room temperature for short-term use or refrigerate for longer storage.'],['Other','One average-sized lime yields about 2 tbsp (30 ml) of fresh lime juice.'],['Tips','Roll each lime firmly against the counter before juicing to help release more juice. Cold limes are firmer, which can make the zest easier to grate cleanly. Because both the zest and juice are used, zest the limes before squeezing them.']]},
+      {name:'Sour Cream',details:[['Flavor','Creamy, slightly tangy, with a subtle fermented note.'],['Best choice','Use regular full-fat sour cream rather than a very low-fat version.'],['Why here?','It adds body, creaminess, and extra tang to the filling without increasing the amount of condensed milk.'],['Substitute','Plain full-fat Greek yogurt can work, although the flavor will be slightly different.'],['Storage','Keep refrigerated.']]},
+      {name:'Cream of Tartar',details:[['Flavor','Mildly acidic, but the small amount used here does not noticeably affect the flavor.'],['Why here?','Helps stabilize whipped egg whites and create a more stable meringue structure.'],['Substitute','A small amount of lemon juice or white vinegar can help stabilize meringue, but cream of tartar is preferred here because it adds very little additional liquid.'],['Midnight Fix','If you don\'t have cream of tartar, the meringue can still be made without it. Make sure the bowl and beaters are completely clean and dry, and add the sugar gradually.']] }
+    ],
+    ingredients:[
+      {group:'Graham Cracker Crust'},
+      {amount:200,unit:'g',item:'Graham Crackers, Finely Crushed'},
+      {amount:76,unit:'g',item:'Unsalted Butter, Melted'},
+      {group:'Lime Filling'},
+      {amount:300,unit:'ml',item:'Sweetened Condensed Milk'},
+      {amount:3,unit:'large',item:'Egg Yolks'},
+      {amount:58,unit:'g',item:'Sour Cream'},
+      {amount:120,unit:'ml',item:'Fresh Lime Juice'},
+      {amount:1,unit:'tbsp',item:'Finely Grated Lime Zest'},
+      {group:'Meringue'},
+      {amount:3,unit:'large',item:'Egg Whites'},
+      {amount:50,unit:'g',item:'Granulated Sugar'},
+      {amount:1/8,unit:'tsp',item:'Cream of Tartar'}
+    ],
+    stats:{prep:'20 mins',cook:'30 mins',total:'4 hrs 50 mins +',serves:'6–8',pan:'23 cm / 9-inch pie dish',quest:'⭐☆☆☆☆'},
+    steps:[
+      {number:'01',title:'CRUSH IT DOWN',clock:'12:14 AM',paragraphs:[
+        'Preheat your oven to 180°C (350°F).',
+        'Crush {{qty:Graham Cracker Crust::Graham Crackers, Finely Crushed}} graham crackers finely.',
+        '**Food Processor (Fastest):** Pulse for about 30 seconds.',
+        '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
+        'Add {{qty:Graham Cracker Crust::Unsalted Butter, Melted}} melted butter to the crushed graham crackers and mix until the crumbs are evenly coated.',
+        'Press the crumb mixture firmly into a 9-inch (23 cm) pie dish using the flat bottom of a cup.',
+        'Bake for 8–10 minutes. Let it cool.'
+      ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/fun-key-lime-pie/step-01-01.jpg','images/recipes/fun-key-lime-pie/step-01-02.jpg','images/recipes/fun-key-lime-pie/step-01-03.jpg']},
+      {number:'02',title:'MIX THE LIME FILLING',clock:'11:20 PM',paragraphs:[
+        'Finely grate the zest from the limes, then squeeze the limes to make {{qty:Lime Filling::Fresh Lime Juice}} of fresh lime juice.',
+        'Separate the eggs, placing the {{qty:Lime Filling::Egg Yolks}} egg yolks in a mixing bowl and reserving the {{qty:Meringue::Egg Whites}} egg whites for the meringue.',
+        'Add the {{qty:Lime Filling::Sweetened Condensed Milk}} sweetened condensed milk, {{qty:Lime Filling::Sour Cream}} sour cream, {{qty:Lime Filling::Finely Grated Lime Zest}} lime zest, and {{qty:Lime Filling::Fresh Lime Juice}} lime juice to the egg yolks.',
+        'Whisk everything together until completely smooth.'
+      ],stepImages:['images/recipes/fun-key-lime-pie/step-02-01.jpg','images/recipes/fun-key-lime-pie/step-02-02.jpg','images/recipes/fun-key-lime-pie/step-02-03.jpg','images/recipes/fun-key-lime-pie/step-02-04.jpg']},
+      {number:'03',title:'BAKE THE FILLING',clock:'11:30 PM',paragraphs:[
+        'Pour the lime filling into the cooled 23 cm / 9-inch graham cracker crust.',
+        'Bake at 175°C / 350°F for 10 minutes.',
+        'The edges should be beginning to set while the center still has a gentle jiggle.',
+        'Remove the pie from the oven and let it rest for 5–10 minutes while preparing the meringue.'
+      ],stepImages:['images/recipes/fun-key-lime-pie/step-03-01.jpg','images/recipes/fun-key-lime-pie/step-03-02.jpg']},
+      {number:'04',title:'WHIP THE MERINGUE',clock:'11:35 PM',paragraphs:[
+        'Place the {{qty:Meringue::Egg Whites}} egg whites in a completely clean and dry bowl. Beat until foamy.',
+        'Add {{qty:Meringue::Cream of Tartar}} cream of tartar.',
+        'Gradually add the {{qty:Meringue::Granulated Sugar}} granulated sugar, a little at a time, while continuing to beat.',
+        'Continue beating until the meringue is glossy and holds stiff peaks.'
+      ],stepImages:['images/recipes/fun-key-lime-pie/step-04-01.jpg','images/recipes/fun-key-lime-pie/step-04-02.jpg']},
+      {number:'05',title:'MAKE THE PEAKS',clock:'11:42 PM',paragraphs:[
+        'Spoon the meringue over the warm lime filling.',
+        'Spread the meringue all the way to the edge of the crust, making sure it completely touches and seals against the filling and crust edge. Do not leave gaps between the meringue and the filling.',
+        'For the signature peaks, place the back of a spoon gently onto the meringue and pull it straight upward.',
+        'Repeat across the surface, creating a mixture of small and tall peaks.'
+      ],stepImages:['images/recipes/fun-key-lime-pie/step-05-01.jpg','images/recipes/fun-key-lime-pie/step-05-02.jpg']},
+      {number:'06',title:'BROWN THE MERINGUE & CHILL',clock:'11:45 PM',paragraphs:[
+        'Return the pie to the 175°C / 350°F oven for 5–10 minutes, until the peaks are lightly golden.',
+        'Watch carefully near the end because the tips can brown quickly.',
+        'Remove from the oven and let the pie cool completely at room temperature.',
+        'Refrigerate for at least 4 hours, preferably overnight.'
+      ],stepImages:['images/recipes/fun-key-lime-pie/step-06-01.jpg']}
+    ],
+    notes:[
+      ['This is a seriously easy pie.','If I had to name the most annoying part, it\'s squeezing the limes and grating the zest. Once that\'s done, you\'re basically finished. Everything else is just mixing, baking, and waiting for the pie to chill—which is honestly most of the work. So if you\'re making this at midnight, don\'t let the long recipe card fool you. The lime is the hardest part!'],
+      ["Can't Find Key Limes? Not a Problem at All!",'Key limes aren\'t always easy to find in Toronto, so this recipe uses regular Persian/Tahiti limes instead. The extra lime zest keeps the flavor bright and aromatic, so the pie still feels unmistakably lime-forward.'],
+      ['Why Sour Cream?','The 300 ml can of condensed milk already brings plenty of sweetness. Sour cream adds body, creaminess, and a little extra tang without requiring more condensed milk.'],
+      ['Stable Meringue','The goal here is a soft, fluffy pie meringue, not a crisp meringue-cookie texture. I increased the sugar slightly and added a small amount of cream of tartar to help stabilize the whipped egg whites. When spreading the meringue over the warm filling, make sure it reaches all the way to the edge and seals against the filling and crust. Gaps can allow moisture to collect underneath the meringue as the pie chills. These small details help the meringue stay fluffy and hold together better the next day.']
+    ],
+    finePrint:{'Best Eaten':'Cold, after at least 4 hours of chilling.','Make ahead':'Yes. The pie is ideal made the night before.','Storage':'Refrigerate, covered, for up to 3 days.','Reheat':'Do not reheat. Serve chilled.','Other':'The meringue is at its prettiest on the day it is made, especially the lightly toasted peaks.'},
+    tags:['Baking','Dessert','American','Lime','Key Lime Pie','Pie','Meringue','Toronto','Grocery Store Find'], mainIngredients:['Lime','Eggs','Cream','Pie'], usualsCategory:''
+  },
+
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
 window.MIDNIGHT_COURSES = ['Breakfast & Brunch','Appetizers','Snacks','Soups','Salads','Main Dishes','Sides','Baking','Desserts'];
