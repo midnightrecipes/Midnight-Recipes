@@ -673,7 +673,7 @@ If the internet was calling it the world’s best, I had to find out for myself,
     ],
     ingredients:[
       {group:'Chicken & Coconut Base'},
-      {amount:227,unit:'g',imperialAmount:0.5,imperialUnit:'lb',item:'Boneless, Skinless Chicken Thighs'},
+      {amount:227,unit:'g',imperialAmount:0.5,imperialUnit:'lb',imperialFraction:{num:1,den:2},item:'Boneless, Skinless Chicken Thighs'},
       {amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Mushrooms'},
       {amount:400,unit:'ml',imperialAmount:5/3,imperialUnit:'cup',imperialFraction:{num:5,den:3},item:'Coconut Milk'},
       {amount:250,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'Water or Chicken Stock'},
