@@ -206,5 +206,24 @@
         "images/recipes/sweet-potato-ginger-pie/step-04-02.JPG"
       ]
     }
+  },
+  "tom-kha-gai": {
+    "hero": "images/recipes/tom-kha-gai/hero.jpg",
+    "recipe": "images/recipes/tom-kha-gai/recipe.jpg",
+    "steps": {
+      "01": [
+        "images/recipes/tom-kha-gai/step-01-01.jpg",
+        "images/recipes/tom-kha-gai/step-01-02.jpg"
+      ],
+      "02": [
+        "images/recipes/tom-kha-gai/step-02-01.jpg",
+        "images/recipes/tom-kha-gai/step-02-02.jpg",
+        "images/recipes/tom-kha-gai/step-02-03.jpg"
+      ],
+      "03": [
+        "images/recipes/tom-kha-gai/step-03-01.jpg",
+        "images/recipes/tom-kha-gai/step-03-02.jpg"
+      ]
+    }
   }
 }
