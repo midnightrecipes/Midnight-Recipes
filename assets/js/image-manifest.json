@@ -134,7 +134,7 @@
   },
   "fun-key-lime-pie": {
     "hero": "images/recipes/fun-key-lime-pie/hero.jpg",
-    "recipe": null,
+    "recipe": "images/recipes/fun-key-lime-pie/recipe.jpg",
     "steps": {
       "01": [
         "images/recipes/fun-key-lime-pie/step-01-01.jpg",
