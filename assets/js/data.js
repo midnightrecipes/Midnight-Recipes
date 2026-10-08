@@ -36,7 +36,7 @@ window.MIDNIGHT_RECIPES = [
     stats:{prep:'15 mins',cook:'15 mins',chill:'4 hrs',total:'4 hrs 30 min',serves:'6–8',pan:'23 cm / 9 inch pie dish',quest:'⭐⭐⭐☆☆'},
     steps:[
       {number:'01',title:'CRUSH IT DOWN',clock:'12:14 AM',paragraphs:[
-        'Preheat your oven to 180°C (350°F).',
+        'Preheat your oven to 180°C/350°F.',
         'Crush 200g graham crackers finely.',
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
         '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
@@ -62,8 +62,8 @@ window.MIDNIGHT_RECIPES = [
         'Refrigerate for at least 4 hours. Overnight works best.'
       ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-04-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-04-02.jpg']},
       {number:'05',title:'WHIP IT LATE',clock:'Optional',paragraphs:[
-        'Whip 200ml cold cream to soft peaks.',
-        'Gradually add 2 Tbsp sugar and whip until medium-firm peaks form.',
+        'Whip 237 ml cold 35% Whipping Cream to soft peaks.',
+        'Gradually add 3 tbsp Granulated Sugar and whip until medium-firm peaks form.',
         'Dollop generously over the chilled pie and finish with cocoa powder, cacao nibs, or flaky sea salt.'
       ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-05-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-05-02.jpg']}
     ],
@@ -313,7 +313,7 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
       {amount:35,unit:'g',imperialAmount:2.5,imperialUnit:'tbsp',item:'Dark Brown Sugar',hideFromIngredients:true}, {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Molasses',hideFromIngredients:true}, {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Orange Juice',hideFromIngredients:true}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Water',hideFromIngredients:true}, {amount:1,unit:'strip',imperialAmount:1,imperialUnit:'strip',item:'Orange Peel, About 2–3 cm (1 Inch) Long',hideFromIngredients:true}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt',hideFromIngredients:true}
     ],
     steps:[
-      {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat oven to 180°C / 350°F.','Start with one of our usual recipes - Building Block Pie Crust.'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
+      {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat your oven to 180°C/350°F.','Start with one of our usual recipes - Building Block Pie Crust.'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
       {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the filling.','Pour {{qty:Half & Half / 10% Cream}} Half & Half into a small saucepan.','Add 1/2 cinnamon stick, 2 whole cloves, 1 star anise, and 1 strip orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, and star anise. Remove the orange peel.','Remove the orange peel if the infusion will steep for longer, as prolonged steeping can make it bitter.','While the infused Half & Half is still warm, whisk in {{qty:Dark Brown Sugar}} dark brown sugar and {{qty:Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
       {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:Pumpkin Purée}} pumpkin purée, {{qty:Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
       {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Pour the pumpkin filling into the crust.','Bake for 40–50 minutes.','The edges should be set while the center still has a slight wobble when the pie is gently shaken.','Remove from the oven.','Let the pie cool completely before adding the syrup.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-04-01.JPG']},
@@ -445,7 +445,7 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
     ],
     steps:[
       {number:'01',title:'COOK THE SWEET POTATO',clock:'11:35 PM',paragraphs:[
-        'For the best flavor, roast whole sweet potatoes at 205°C / 400°F for 45–60 minutes, until completely soft.',
+        'For the best flavor, roast whole sweet potatoes at 180°C/350°F for 45–60 minutes, until completely soft.',
         'Midnight Shortcut — Microwave',
         'Peel and cut the sweet potato into chunks. Place in a microwave-safe bowl with a small splash of water and cover.',
         'Midnight Shortcut — Boil',
@@ -453,15 +453,14 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
       ],stepImages:[]},
       {number:'02',title:'MAKE THE CRUST',clock:'11:45 PM',paragraphs:[
         'While the sweet potatoes are roasting… start making Building Block Pie Crust.',
-        'Prick the bottom well with a fork. Bake in the same oven at 205°C / 400°F for 10–12 minutes, until set and lightly golden.',
+        'Prick the bottom well with a fork. Bake in the same oven at 175°C/350°F for 10–12 minutes, until set and lightly golden.',
         'Midnight Shortcut',
         'Use a good-quality store-bought pie crust. Tonight is about the filling.'
       ],stepImages:[]},
       {number:'03',title:'BLEND THE FILLING',clock:'12:25 AM',paragraphs:[
-        'Lower the oven to 175°C / 350°F.',
         'Once the sweet potato is cooked and cool enough to handle, measure {{qty:Cooked Sweet Potato Flesh}}.',
         'Finely grate {{qty:Fresh Ginger, Finely Grated}} ginger.',
-        'Combine {{qty:Cooked Sweet Potato Flesh}} sweet potato, {{qty:10% Cream}} 10% cream, {{qty:FILLING::Granulated Sugar}} white sugar, {{qty:large eggs}} large eggs, {{qty:Fresh Ginger, Finely Grated}} fresh ginger, {{qty:Ground Cinnamon}} ground cinnamon, and {{qty:Kosher Salt}} kosher salt.',
+        'Combine {{qty:Cooked Sweet Potato Flesh}} sweet potato, {{qty:10% Cream}} 10% cream, {{qty:FILLING::Granulated Sugar}} Granulated Sugar, {{qty:large eggs}} large eggs, {{qty:Fresh Ginger, Finely Grated}} fresh ginger, {{qty:Ground Cinnamon}} ground cinnamon, and {{qty:Kosher Salt}} kosher salt.',
         'Food Processor — Fastest',
         'Blend the sweet potato and all remaining filling ingredients and blend briefly until silky.',
         'Quiet Mode — Silent',
@@ -469,7 +468,7 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
       ],stepImages:[]},
       {number:'04',title:'BAKE',clock:'12:30 AM',paragraphs:[
         'Pour the filling into the crust.',
-        'Bake at 175°C / 350°F for 40–50 minutes.',
+        'Bake at 175°C/350°F for 40–50 minutes.',
         'The edges should be set and the centre should still have a slight wobble.',
         'Remove from the oven and cool completely at room temperature.',
         'The filling will continue to set as it cools.'
@@ -522,7 +521,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
       ],stepNote:'**Midnight Shortcut:** Use a food processor to make the dough quickly.',stepImages:['images/recipes/building-block-pie-crust/step-01-01.JPG','images/recipes/building-block-pie-crust/step-01-02.JPG','images/recipes/building-block-pie-crust/step-01-03.JPG','images/recipes/building-block-pie-crust/step-01-04.JPG']},
       {number:'02',title:'BLIND-BAKE',clock:'',paragraphs:[
         'Prick the bottom with a fork. Add parchment paper and pie weights.',
-        'Bake at 175°C / 350°F for 15 minutes.',
+        'Bake at 175°C/350°F for 15 minutes.',
         'Remove the weights and parchment, then bake for another 5–7 minutes, until lightly golden.'
       ],stepImages:['images/recipes/building-block-pie-crust/step-02-01.JPG','images/recipes/building-block-pie-crust/step-02-02.jpg']}
     ],
