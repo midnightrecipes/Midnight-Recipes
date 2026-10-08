@@ -619,7 +619,8 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     slug:'tom-kha-gai',
     title:'Tom Kha Gai (Coconut Chicken Soup)',
     source:'Internet Find',
-    original:'TasteAtlas — https://www.tasteatlas.com/',
+    original:'TasteAtlas',
+    originalUrl:'https://www.tasteatlas.com/',
     dish:'Tom Kha Gai / ต้มข่าไก่',
     cuisine:'Thai',
     course:'Soups',
@@ -628,6 +629,11 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     categories:['Soups'],
     dateAdded:'2026-10-08',
     timeStamp:'11:21 PM',
+    description:'',
+    story:`TasteAtlas had ranked Tom Kha Gai #1 on its list of the world’s best chicken soups. I knew Tom Yum, but somehow Tom Kha Gai had always stayed in the background.
+It sounded like the perfect combination: creamy coconut milk, the bright citrus of makrut lime leaf and lemongrass, fresh lime acidity, and the gentle heat and peppery bite of chilies and galangal.
+The biggest challenge was finding all the ingredients. The actual cooking is surprisingly simple. And in a diverse city like Toronto, hunting down those ingredients might not be as difficult as it sounds.
+If the internet was calling it the world’s best, I had to find out for myself, even at midnight..!`,
     heroImage:'images/recipes/tom-kha-gai/hero.jpg',
     recipeImage:'images/recipes/tom-kha-gai/recipe.jpg',
     cardImage:'images/recipes/tom-kha-gai/hero.jpg',
@@ -667,12 +673,12 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     ],
     ingredients:[
       {group:'Chicken & Coconut Base'},
-      {amount:227,unit:'g',imperialAmount:8,imperialUnit:'oz',item:'Boneless, Skinless Chicken Thighs'},
-      {amount:150,unit:'g',imperialAmount:5.3,imperialUnit:'oz',item:'Mushrooms'},
+      {amount:227,unit:'g',imperialAmount:0.5,imperialUnit:'lb',item:'Boneless, Skinless Chicken Thighs'},
+      {amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Mushrooms'},
       {amount:400,unit:'ml',imperialAmount:5/3,imperialUnit:'cup',imperialFraction:{num:5,den:3},item:'Coconut Milk'},
       {amount:250,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'Water or Chicken Stock'},
       {group:'Aromatics'},
-      {amount:30,unit:'g',imperialAmount:1.1,imperialUnit:'oz',item:'Fresh Galangal, Thinly Sliced'},
+      {amount:30,unit:'g',imperialMinAmount:10,imperialMaxAmount:12,imperialMinUnit:'slices',imperialMaxUnit:'slices',item:'Fresh Galangal, Thinly Sliced',compactRange:true},
       {minAmount:1,maxAmount:2,unit:'stalks',imperialMinAmount:1,imperialMaxAmount:2,imperialMinUnit:'stalks',imperialMaxUnit:'stalks',item:'Lemongrass, Bruised and Cut Into Pieces',compactRange:true},
       {minAmount:4,maxAmount:5,unit:'leaves',imperialMinAmount:4,imperialMaxAmount:5,imperialMinUnit:'leaves',imperialMaxUnit:'leaves',item:'Makrut Lime Leaves, Rehydrated if Dried',compactRange:true},
       {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Onion, Sliced'},
@@ -682,7 +688,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
       {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Fish Sauce'},
       {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Fresh Lime Juice'},
       {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Palm Sugar or Granulated Sugar'},
-      {minAmount:1.25,maxAmount:2.5,unit:'ml',imperialMinAmount:0.25,imperialMaxAmount:0.5,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',item:'Salt',compactRange:true},
+      {minAmount:2,maxAmount:3,unit:'g',imperialMinAmount:0.25,imperialMaxAmount:0.5,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',item:'Salt',compactRange:true},
       {group:'Garnish'},
       {unit:'',item:'Cilantro'}
     ],
@@ -694,7 +700,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
         'If using minced Lemongrass instead, measure 1½ tbsp.',
         'Add {{qty:Water or Chicken Stock}} Water or Chicken Stock, Galangal, Lemongrass, Makrut Lime Leaves, {{qty:Onion, Sliced}} Onion, {{qty:Garlic Clove, Lightly Crushed}} Garlic Clove, and {{qty:Fresh Chilies, Lightly Crushed}} Fresh Chilies to a saucepan.',
         'Bring to a gentle simmer over medium heat and cook for 5–10 minutes, until the broth smells deeply aromatic.'
-      ],stepNote:'**Midnight Shortcut:** Don’t finely chop the Galangal or Lemongrass if using whole pieces. Bruising and cutting them into large pieces means less knife work, and they can simply be removed before serving.',stepImages:['images/recipes/tom-kha-gai/step-01-01.jpg','images/recipes/tom-kha-gai/step-01-02.jpg','images/recipes/tom-kha-gai/step-01-03.jpg']},
+      ],stepImages:['images/recipes/tom-kha-gai/step-01-01.jpg','images/recipes/tom-kha-gai/step-01-02.jpg','images/recipes/tom-kha-gai/step-01-03.jpg']},
       {number:'02',title:'COOK THE CHICKEN & COCONUT',clock:'11:33 PM',paragraphs:[
         'Cut {{qty:Boneless, Skinless Chicken Thighs}} Boneless, Skinless Chicken Thighs into bite-sized pieces.',
         'Add the Chicken Thighs to the aromatic broth and simmer until just cooked through.',
@@ -718,7 +724,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     finePrint:{'Best Eaten':'Fresh','Make ahead':'Yes — If possible, add the Fresh Lime Juice just before serving rather than before storing.','Storage':'Refrigerate in an airtight container for up to 3 days.','Reheat':'Gently on the stovetop or in the microwave. Avoid a hard boil.'},
     tags:['Galangal','Makrut Lime Leaf','Lemongrass','Coconut Milk','Chicken'],
     usualsCategory:''
-  },
+  }
 
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
