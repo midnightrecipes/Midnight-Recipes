@@ -132,6 +132,35 @@
       ]
     }
   },
+  "fun-key-lime-pie": {
+    "hero": "images/recipes/fun-key-lime-pie/hero.jpg",
+    "recipe": null,
+    "steps": {
+      "01": [
+        "images/recipes/fun-key-lime-pie/step-01-01.jpg",
+        "images/recipes/fun-key-lime-pie/step-01-02.jpg",
+        "images/recipes/fun-key-lime-pie/step-01-03.jpg"
+      ],
+      "02": [
+        "images/recipes/fun-key-lime-pie/step-02-01.JPG",
+        "images/recipes/fun-key-lime-pie/step-02-02.jpg",
+        "images/recipes/fun-key-lime-pie/step-02-03.JPG",
+        "images/recipes/fun-key-lime-pie/step-02-04.JPG"
+      ],
+      "03": [
+        "images/recipes/fun-key-lime-pie/step-03-01.JPG",
+        "images/recipes/fun-key-lime-pie/step-03-02.JPG"
+      ],
+      "04": [
+        "images/recipes/fun-key-lime-pie/step-04-01.JPG",
+        "images/recipes/fun-key-lime-pie/step-04-02.JPG"
+      ],
+      "05": [
+        "images/recipes/fun-key-lime-pie/step-05-01.JPG",
+        "images/recipes/fun-key-lime-pie/step-05-02.JPG"
+      ]
+    }
+  },
   "mexican-calabaza-en-tacha-pumpkin-pie": {
     "hero": "images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/hero.jpg",
     "recipe": "images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/recipe.jpg",
