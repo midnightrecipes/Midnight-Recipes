@@ -615,6 +615,111 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     tags:['Baking','Dessert','American','Lime','Key Lime Pie','Pie','Meringue','Toronto','Grocery Store Find'], mainIngredients:['Lime','Eggs','Cream','Pie'], usualsCategory:''
   },
 
+  {
+    slug:'tom-kha-gai',
+    title:'Tom Kha Gai (Coconut Chicken Soup)',
+    source:'Internet Find',
+    original:'TasteAtlas — https://www.tasteatlas.com/',
+    dish:'Tom Kha Gai / ต้มข่าไก่',
+    cuisine:'Thai',
+    course:'Soups',
+    courseDisplay:'Soups',
+    meal:'Soups',
+    categories:['Soups'],
+    dateAdded:'2026-10-08',
+    timeStamp:'11:21 PM',
+    heroImage:'images/recipes/tom-kha-gai/hero.jpg',
+    recipeImage:'images/recipes/tom-kha-gai/recipe.jpg',
+    cardImage:'images/recipes/tom-kha-gai/hero.jpg',
+    stepQuantityConversion:true,
+    usCupFractions:true,
+    fractionDenominator:16,
+    ingredientFile:[
+      {name:'Galangal',details:[
+        ['Origin','Southeast Asia'],
+        ['Flavor','Peppery, citrusy, floral, slightly piney'],
+        ['Best choice','Fresh galangal'],
+        ['Why here?','Fresh galangal gives Tom Kha its distinctive peppery and floral character and tastes noticeably different from ginger.'],
+        ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, and T&T are good places to look.'],
+        ['Substitute','Fresh ginger plus a little extra lemongrass, although the flavor will be different.'],
+        ['Storage','Wrap fresh galangal loosely and refrigerate. Dried galangal should be kept airtight in a cool, dark place.'],
+        ['Midnight Fix','Use frozen or dried galangal if fresh galangal is unavailable.']
+      ]},
+      {name:'Makrut Lime Leaf',details:[
+        ['Origin','Thailand / Southeast Asia'],
+        ['Flavor','Intensely citrusy, floral, aromatic'],
+        ['Best choice','Fresh makrut lime leaves'],
+        ['Why here?','Makrut lime leaf provides the floral citrus aroma that makes the broth recognizable as Tom Kha.'],
+        ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, and T&T are good places to look.'],
+        ['Substitute','Fresh lime zest can add some citrus aroma, but it cannot fully replace makrut lime leaf.'],
+        ['Storage','Keep dried leaves airtight and away from light and moisture.']
+      ]},
+      {name:'Lemongrass',details:[
+        ['Origin','Southeast Asia'],
+        ['Flavor','Bright, citrusy, grassy'],
+        ['Best choice','Fresh lemongrass stalks'],
+        ['Why here?','Lemongrass adds a bright citrus aroma to the broth and works together with galangal and makrut lime leaf.'],
+        ['Substitute','Frozen or pre-minced lemongrass'],
+        ['Storage','Fresh stalks can be refrigerated for about a week; frozen lemongrass keeps much longer.'],
+        ['Midnight Fix','Use 1½ tbsp finely minced lemongrass when whole stalks are inconvenient.'],
+        ['Other','Asian grocery stores and many large supermarkets carry fresh lemongrass.']
+      ]}
+    ],
+    ingredients:[
+      {group:'Chicken & Coconut Base'},
+      {amount:227,unit:'g',imperialAmount:8,imperialUnit:'oz',item:'Boneless, Skinless Chicken Thighs'},
+      {amount:150,unit:'g',imperialAmount:5.3,imperialUnit:'oz',item:'Mushrooms'},
+      {amount:400,unit:'ml',imperialAmount:5/3,imperialUnit:'cup',imperialFraction:{num:5,den:3},item:'Coconut Milk'},
+      {amount:250,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'Water or Chicken Stock'},
+      {group:'Aromatics'},
+      {amount:30,unit:'g',imperialAmount:1.1,imperialUnit:'oz',item:'Fresh Galangal, Thinly Sliced'},
+      {minAmount:1,maxAmount:2,unit:'stalks',imperialMinAmount:1,imperialMaxAmount:2,imperialMinUnit:'stalks',imperialMaxUnit:'stalks',item:'Lemongrass, Bruised and Cut Into Pieces',compactRange:true},
+      {minAmount:4,maxAmount:5,unit:'leaves',imperialMinAmount:4,imperialMaxAmount:5,imperialMinUnit:'leaves',imperialMaxUnit:'leaves',item:'Makrut Lime Leaves, Rehydrated if Dried',compactRange:true},
+      {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Onion, Sliced'},
+      {amount:1,unit:'clove',imperialAmount:1,imperialUnit:'clove',item:'Garlic Clove, Lightly Crushed'},
+      {minAmount:2,maxAmount:4,unit:'',imperialMinAmount:2,imperialMaxAmount:4,imperialMinUnit:'',imperialMaxUnit:'',item:'Fresh Chilies, Lightly Crushed',compactRange:true},
+      {group:'Seasoning'},
+      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Fish Sauce'},
+      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Fresh Lime Juice'},
+      {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Palm Sugar or Granulated Sugar'},
+      {minAmount:1.25,maxAmount:2.5,unit:'ml',imperialMinAmount:0.25,imperialMaxAmount:0.5,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',item:'Salt',compactRange:true},
+      {group:'Garnish'},
+      {unit:'',item:'Cilantro'}
+    ],
+    stats:{prep:'10 mins',cook:'20 mins',total:'30 mins',serves:'2–3',quest:'⭐⭐⭐⭐☆'},
+    steps:[
+      {number:'01',title:'BUILD THE AROMATIC BROTH',clock:'11:21 PM',paragraphs:[
+        'If using dried {{qty:Makrut Lime Leaves, Rehydrated if Dried}} Makrut Lime Leaves, soak them in hot water for 5–10 minutes. Drain and gently tear them.',
+        'Thinly slice {{qty:Fresh Galangal, Thinly Sliced}} Fresh Galangal. Remove the tough outer layers from {{qty:Lemongrass, Bruised and Cut Into Pieces}} Lemongrass stalks, bruise them with the back of a knife, and cut them into 5–6 cm pieces.',
+        'If using minced Lemongrass instead, measure 1½ tbsp.',
+        'Add {{qty:Water or Chicken Stock}} Water or Chicken Stock, Galangal, Lemongrass, Makrut Lime Leaves, {{qty:Onion, Sliced}} Onion, {{qty:Garlic Clove, Lightly Crushed}} Garlic Clove, and {{qty:Fresh Chilies, Lightly Crushed}} Fresh Chilies to a saucepan.',
+        'Bring to a gentle simmer over medium heat and cook for 5–10 minutes, until the broth smells deeply aromatic.'
+      ],stepNote:'**Midnight Shortcut:** Don’t finely chop the Galangal or Lemongrass if using whole pieces. Bruising and cutting them into large pieces means less knife work, and they can simply be removed before serving.',stepImages:['images/recipes/tom-kha-gai/step-01-01.jpg','images/recipes/tom-kha-gai/step-01-02.jpg','images/recipes/tom-kha-gai/step-01-03.jpg']},
+      {number:'02',title:'COOK THE CHICKEN & COCONUT',clock:'11:33 PM',paragraphs:[
+        'Cut {{qty:Boneless, Skinless Chicken Thighs}} Boneless, Skinless Chicken Thighs into bite-sized pieces.',
+        'Add the Chicken Thighs to the aromatic broth and simmer until just cooked through.',
+        'Add {{qty:Mushrooms}} Mushrooms and cook for another 2–3 minutes.',
+        'Pour in {{qty:Coconut Milk}} Coconut Milk. Reduce the heat to low and warm gently.',
+        'Do not let the Coconut Milk boil aggressively. Keep the broth smooth and fragrant.'
+      ],stepImages:['images/recipes/tom-kha-gai/step-02-01.jpg','images/recipes/tom-kha-gai/step-02-02.jpg','images/recipes/tom-kha-gai/step-02-03.jpg']},
+      {number:'03',title:'SEASON & FINISH',clock:'11:41 PM',paragraphs:[
+        'Stir in {{qty:Fish Sauce}} Fish Sauce and {{qty:Palm Sugar or Granulated Sugar}} Palm Sugar or Granulated Sugar. Turn off the heat.',
+        'Add {{qty:Fresh Lime Juice}} Fresh Lime Juice.',
+        'Taste and adjust with a little more Fish Sauce for saltiness, Lime Juice for acidity, or sugar if the flavors feel too sharp.',
+        'Finish with fresh Cilantro.'
+      ],stepImages:['images/recipes/tom-kha-gai/step-03-01.jpg','images/recipes/tom-kha-gai/step-03-02.jpg']}
+    ],
+    notes:[
+      ['Recreating the Flavor','The character of Tom Kha Gai comes from the combination of Coconut Milk with Galangal, Lemongrass, and Makrut Lime Leaf. I built the aromatic base directly from the herbs.'],
+      ['The Lime Trick','Makrut Lime Leaf gives the soup its floral citrus aroma, while Fresh Lime Juice brings the sharp acidity. Add the juice after turning off the heat to keep that fresh citrus character.'],
+      ['Galangal Matters','Ginger is an acceptable emergency substitute, but fresh Galangal gives a distinctly peppery, floral flavor that makes the soup taste much more like Tom Kha.'],
+      ['Toronto Pantry Reality','Fresh Galangal and Lemongrass are easy to find at Toronto Asian grocery stores, while dried Makrut Lime Leaves are useful when you want to make this on a random midnight without another grocery run.']
+    ],
+    finePrint:{'Best Eaten':'Fresh','Make ahead':'Yes — If possible, add the Fresh Lime Juice just before serving rather than before storing.','Storage':'Refrigerate in an airtight container for up to 3 days.','Reheat':'Gently on the stovetop or in the microwave. Avoid a hard boil.'},
+    tags:['Galangal','Makrut Lime Leaf','Lemongrass','Coconut Milk','Chicken'],
+    usualsCategory:''
+  },
+
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
 window.MIDNIGHT_COURSES = ['Breakfast & Brunch','Appetizers','Snacks','Soups','Salads','Main Dishes','Sides','Baking','Desserts'];
