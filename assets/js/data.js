@@ -29,9 +29,9 @@ window.MIDNIGHT_RECIPES = [
       {name:'WHOLE MILK',details:[['Why Whole Milk','The higher fat content gives the chocolate filling a richer, creamier mouthfeel.'],['Substitute','2% milk works too, but the filling will be slightly lighter.'],['Midnight Fix','If using 2% milk, add 1 Tbsp extra butter for a richer texture.']]}
     ],
     ingredients:[
-      {group:'Crust'},{amount:200,unit:'g',item:'Graham Crackers, finely crushed'},{amount:76,unit:'g',imperialAmount:1/3,imperialUnit:'cup',imperialFraction:{num:1,den:3},item:'Unsalted Butter, melted'},
-      {group:'Chocolate Filling'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark Chocolate, chopped'},{amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened Cocoa Powder'},{amount:4,unit:'',imperialAmount:4,imperialUnit:'',item:'Egg Yolks'},{amount:80,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:500,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole Milk'},{amount:21,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Unsalted Butter'},
-      {group:'Topping (optional)'},{amount:200,unit:'ml',item:'Whipped Cream'},{amount:2,unit:'Tbsp',item:'Sugar'},{unit:'',item:'Cocoa powder, cacao nibs, or flaky sea salt, to finish'}
+      {group:'Crust'},{amount:200,unit:'g',item:'Graham Crackers, Finely Crushed'},{amount:76,unit:'g',imperialAmount:1/3,imperialUnit:'cup',imperialFraction:{num:1,den:3},item:'Unsalted Butter, Melted'},
+      {group:'Chocolate Filling'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark Chocolate, Chopped'},{amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Espresso Powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened Cocoa Powder'},{amount:4,unit:'',imperialAmount:4,imperialUnit:'',item:'Egg Yolks'},{amount:80,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Granulated Sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:500,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole Milk'},{amount:21,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Unsalted Butter'},
+      {group:'Topping (optional)'},{amount:237,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'35% Whipping Cream'},{amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated Sugar'},{unit:'',item:'Cocoa Powder, Cacao Nibs, or Flaky Sea Salt, to Finish'}
     ],
     stats:{prep:'15 mins',cook:'15 mins',chill:'4 hrs',total:'4 hrs 30 min',serves:'6–8',pan:'23 cm / 9 inch pie dish',quest:'⭐⭐⭐☆☆'},
     steps:[
@@ -45,7 +45,7 @@ window.MIDNIGHT_RECIPES = [
         'Bake for 8–10 minutes. Let it cool.'
       ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/chocolate-cream-comfort-pie/step-01-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-03.jpg']},
       {number:'02',title:'MAKE IT GLOSSY',clock:'12:20 AM',paragraphs:[
-        'In a saucepan, whisk {{qty:Chocolate Filling::Sugar}} sugar, {{qty:Chocolate Filling::Cornstarch}} cornstarch, {{qty:Chocolate Filling::Unsweetened Cocoa Powder}} cocoa powder, {{qty:Chocolate Filling::Espresso powder}} espresso powder, and {{qty:Chocolate Filling::Salt}} salt.',
+        'In a saucepan, whisk {{qty:Chocolate Filling::Granulated Sugar}} sugar, {{qty:Chocolate Filling::Cornstarch}} cornstarch, {{qty:Chocolate Filling::Unsweetened Cocoa Powder}} cocoa powder, {{qty:Chocolate Filling::Espresso powder}} espresso powder, and {{qty:Chocolate Filling::Salt}} salt.',
         'Slowly pour in {{qty:Chocolate Filling::Whole Milk}} whole milk, whisking thoroughly until completely smooth before turning on the heat.',
         'Cook over medium heat, whisking constantly until the mixture bubbles and thickens into a pudding-like consistency.',
         'Remove the pan from the heat.'
@@ -102,24 +102,24 @@ window.MIDNIGHT_RECIPES = [
     ],
     ingredients:[
       {group:'Taiwan Mince'},
-      {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Fatty ground pork'},
-      {amount:20,unit:'g',item:'Garlic, finely minced',imperialMinAmount:6,imperialMaxAmount:8,imperialMinUnit:'cloves',imperialMaxUnit:'cloves',instructionImperialMinUnit:'garlic cloves',instructionImperialMaxUnit:'garlic cloves',instructionMetricSuffix:' of garlic',compactRange:true},
-      {minAmount:3,maxAmount:5,unit:'',item:'Fresh red chilies, finely minced, seeds included'},
-      {amount:45,unit:'ml',item:'Sesame oil'},
-      {amount:30,unit:'ml',item:'Soy sauce'},
-      {amount:30,unit:'ml',item:'Shaoxing wine'},
+      {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Fatty Ground Pork'},
+      {amount:20,unit:'g',item:'Garlic, Finely Minced',imperialMinAmount:6,imperialMaxAmount:8,imperialMinUnit:'cloves',imperialMaxUnit:'cloves',instructionImperialMinUnit:'garlic cloves',instructionImperialMaxUnit:'garlic cloves',instructionMetricSuffix:' of garlic',compactRange:true},
+      {minAmount:3,maxAmount:5,unit:'',item:'Fresh Red Chilies, Finely Minced, Seeds Included'},
+      {amount:45,unit:'ml',item:'Sesame Oil'},
+      {amount:30,unit:'ml',item:'Soy Sauce'},
+      {amount:30,unit:'ml',item:'Shaoxing Wine'},
       {amount:15,unit:'ml',item:'Doubanjiang'},
-      {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Oyster sauce'},
+      {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Oyster Sauce'},
       {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Gochujang'},
-      {amount:2.5,unit:'ml',imperialAmount:0.5,imperialUnit:'tsp',item:'Sugar'},
-      {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Chicken bouillon powder'},
+      {amount:2.5,unit:'ml',imperialAmount:0.5,imperialUnit:'tsp',item:'Granulated Sugar'},
+      {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Chicken Bouillon Powder'},
       {amount:180,unit:'ml',imperialAmount:0.75,imperialUnit:'cup',item:'Water'},
-      {unit:'',item:'Black pepper, to taste'},
-      {amount:55,unit:'g',imperialAmount:1,imperialUnit:'small bunch',item:'Garlic chives or green onion, cut into 3–4 cm pieces'},
-      {minAmount:3,maxAmount:5,unit:'ml',imperialMinAmount:0.5,imperialMaxAmount:1,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',compactRange:true,item:'Sesame oil, for finishing'},
+      {unit:'',item:'Black Pepper, to Taste'},
+      {amount:55,unit:'g',imperialAmount:1,imperialUnit:'small bunch',item:'Garlic Chives or Green Onion, Cut into 3–4 cm Pieces'},
+      {minAmount:3,maxAmount:5,unit:'ml',imperialMinAmount:0.5,imperialMaxAmount:1,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',compactRange:true,item:'Sesame Oil, for Finishing'},
       {group:'To Serve'},
-      {unit:'',item:'Hot steamed white rice'},
-      {unit:'',item:'Soft-boiled egg'}
+      {unit:'',item:'Hot Steamed White Rice'},
+      {unit:'',item:'Soft-boiled Egg'}
     ],
     stats:{prep:'10 mins',cook:'20 mins',total:'30 mins',serves:4,quest:'⭐⭐⭐☆☆'},
     steps:[
@@ -137,7 +137,7 @@ window.MIDNIGHT_RECIPES = [
       ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-02-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-02-02.JPG']},
       {number:'03',title:'BRAISE & REDUCE',clock:'11:22 PM',paragraphs:[
         'Add {{qty:Shaoxing wine}} Shaoxing wine and let it bubble for about 30 seconds.',
-        'Add {{qty:soy sauce}} soy sauce, {{qty:oyster sauce}} oyster sauce, {{qty:gochujang}} gochujang, {{qty:sugar}} sugar, {{qty:chicken bouillon powder}} chicken bouillon powder, and {{qty:water}} water.',
+        'Add {{qty:soy sauce}} soy sauce, {{qty:oyster sauce}} oyster sauce, {{qty:gochujang}} gochujang, {{qty:Granulated Sugar}} sugar, {{qty:chicken bouillon powder}} chicken bouillon powder, and {{qty:water}} water.',
         'Stir everything together and bring to a simmer.',
         'Reduce the heat to low and simmer uncovered for 10–15 minutes.',
         'Do not completely dry out the mince.',
@@ -207,7 +207,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
     ],
     ingredients:[
       {group:'Apple mixture'},
-      {amount:300,unit:'g',item:'Apples, peeled, cored, and cut into 1 cm cubes'},
+      {amount:300,unit:'g',item:'Apples, Peeled, Cored, and Cut into 1 cm Cubes'},
       {amount:15,unit:'g',item:'Unsalted Butter'},
       {amount:18.75,unit:'g',item:'Brown Sugar'},
       {amount:15,unit:'ml',item:'Lemon Juice'},
@@ -217,25 +217,25 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
       {amount:100,unit:'ml',item:'Whole Milk'},
       {amount:400,unit:'ml',item:'35% Whipping Cream'},
       {amount:5,unit:'',item:'Large Egg Yolks'},
-      {amount:62.5,unit:'g',item:'Granulated Sugar'},
+      {amount:63,unit:'g',imperialAmount:5,imperialUnit:'tbsp',item:'Granulated Sugar'},
       {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla Extract'},
       {amount:1,unit:'pinch',item:'Fine Salt'},
       {group:'Brûlée'},
-      {unit:'',item:'Granulated Sugar, for brûlée'}
+      {unit:'',item:'Granulated Sugar, for Brûlée'}
     ],
     stats:{prep:'20 mins',cook:'35 mins',total:'55 mins + chilling',serves:6,quest:'⭐⭐⭐⭐⭐'},
     steps:[
       {number:'01',title:'PREHEAT & SOFTEN THE APPLES',clock:'11:20 PM',paragraphs:[
         'Preheat oven to 140°C / 285°F.',
         'Melt {{qty:unsalted butter}} butter over medium heat.',
-        'Add {{qty:apples}} apples, {{qty:brown sugar}} brown sugar, {{qty:lemon juice}} lemon juice, {{qty:ground cinnamon}} cinnamon, and a pinch of salt.',
+        'Add {{qty:apples}} apples, {{qty:brown sugar}} brown sugar, {{qty:lemon juice}} lemon juice, {{qty:Ground Cinnamon}} cinnamon, and a pinch of salt.',
         'Cook for 5–7 minutes, until the apples are tender but still hold their shape.',
         'If there is excess liquid, cook for another 1–2 minutes until glossy but not wet.',
         'Cool slightly.'
       ],stepImages:['images/recipes/apple-creme-brulee/step-01-01.jpg','images/recipes/apple-creme-brulee/step-01-02.jpg','images/recipes/apple-creme-brulee/step-01-03.jpg','images/recipes/apple-creme-brulee/step-01-04.jpg']},
       {number:'02',title:'MAKE THE CUSTARD',clock:'11:32 PM',paragraphs:[
-        'Heat {{qty:whole milk}} whole milk and {{qty:35% whipping cream}} 35% whipping cream over medium-low heat until hot and steaming, but do not boil.',
-        'Whisk 5 egg yolks, {{qty:granulated sugar}} sugar, and a pinch of salt gently. Avoid creating too much foam.',
+        'Heat {{qty:whole milk}} whole milk and {{qty:35% Whipping Cream}} 35% whipping cream over medium-low heat until hot and steaming, but do not boil.',
+        'Whisk 5 egg yolks, {{qty:Granulated Sugar}} sugar, and a pinch of salt gently. Avoid creating too much foam.',
         'Slowly add the hot dairy while whisking.',
         'Stir in {{qty:vanilla extract}} vanilla extract.',
         'Strain through a fine-mesh sieve.',
@@ -308,9 +308,9 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
       {amount:400,unit:'g',imperialAmount:5/3,imperialUnit:'cup',imperialFraction:{num:5,den:3},item:'Pumpkin Purée'}, {amount:2,unit:'large',imperialAmount:2,imperialUnit:'large',item:'Eggs'}, {amount:180,unit:'ml',imperialAmount:3/4,imperialUnit:'cup',item:'Half & Half / 10% Cream'},
       {amount:60,unit:'g',imperialAmount:1/3,imperialUnit:'cup',imperialFraction:{num:1,den:3},item:'Dark Brown Sugar'}, {amount:10,unit:'g',imperialAmount:1/2,imperialUnit:'tbsp',item:'Molasses'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Orange Juice'}, {amount:0.25,unit:'tsp',imperialAmount:1/4,imperialUnit:'tsp',item:'Salt'},
       {group:'SPICE INFUSION'},
-      {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Cinnamon Stick'}, {amount:2,unit:'',item:'Whole Cloves'}, {amount:1,unit:'',item:'Star Anise'}, {amount:1,unit:'strip',item:'Orange Peel, about 2–3 cm (1 inch) long'},
+      {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Cinnamon Stick'}, {amount:2,unit:'',item:'Whole Cloves'}, {amount:1,unit:'',item:'Star Anise'}, {amount:1,unit:'strip',item:'Orange Peel, About 2–3 cm (1 Inch) Long'},
       {group:'INSTRUCTION-ONLY SYRUP',hideFromIngredients:true},
-      {amount:35,unit:'g',imperialAmount:2.5,imperialUnit:'tbsp',item:'Dark Brown Sugar',hideFromIngredients:true}, {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Molasses',hideFromIngredients:true}, {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Orange Juice',hideFromIngredients:true}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Water',hideFromIngredients:true}, {amount:1,unit:'strip',imperialAmount:1,imperialUnit:'strip',item:'Orange Peel, about 2–3 cm (1 inch) long',hideFromIngredients:true}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt',hideFromIngredients:true}
+      {amount:35,unit:'g',imperialAmount:2.5,imperialUnit:'tbsp',item:'Dark Brown Sugar',hideFromIngredients:true}, {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Molasses',hideFromIngredients:true}, {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Orange Juice',hideFromIngredients:true}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Water',hideFromIngredients:true}, {amount:1,unit:'strip',imperialAmount:1,imperialUnit:'strip',item:'Orange Peel, About 2–3 cm (1 Inch) Long',hideFromIngredients:true}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt',hideFromIngredients:true}
     ],
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat oven to 180°C / 350°F.','Start with one of our usual recipes - Building Block Pie Crust.'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
@@ -333,7 +333,7 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
     slug:'banana-banana-cream-pie', title:'Banana Banana Cream Pie', source:'Midnight Experiment', dish:'Banana Cream Pie', cuisine:'American',
     course:'Baking', courseDisplay:'Baking, Dessert', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Fruit','Pie','Eggs','Pantry'], dateAdded:'2026-09-27', timeStamp:'2:50 AM',
     tags:['Dessert','Baking','Banana','Pie'], heroImage:'images/recipes/banana-banana-cream-pie/hero.jpg', recipeImage:'images/recipes/banana-banana-cream-pie/recipe.jpg', cardImage:'images/recipes/banana-banana-cream-pie/card.jpg',
-    unitOverrides:{imperial:{'plain biscuits, finely crushed':'cup','unsalted butter, melted':'cup','whole milk':'cup','granulated sugar':'tbsp','cornstarch':'tbsp','heavy cream':'cup','sugar, to taste':'tbsp'}},
+    unitOverrides:{imperial:{'plain biscuits, finely crushed':'cup','unsalted butter, melted':'cup','whole milk':'cup','granulated sugar':'tbsp','cornstarch':'tbsp','35% Whipping Cream':'cup','Granulated Sugar, To Taste':'tbsp'}},
     densityOverrides:{'plain biscuits|cup':100,'granulated sugar|tbsp':35/3},
     usCupFractions:true,
     forceCupUnits:true,
@@ -358,11 +358,11 @@ What if we just put way more banana in banana cream pie?`,
     stats:{prep:'20 mins',cook:'30 mins',chill:'3+ hrs',total:'3 hrs 50 mins',serves:'6–8',pan:'9-inch / 23 cm pie plate',quest:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
     ingredients:[
       {group:'Crust'},
-      {amount:200,unit:'g',item:'plain biscuits, finely crushed'}, {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'ground cinnamon'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'ground ginger'}, {amount:1,unit:'pinch',item:'ground nutmeg'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'salt'}, {amount:80,unit:'g',item:'unsalted butter, melted'},
+      {amount:200,unit:'g',item:'Plain Biscuits, Finely Crushed'}, {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground Cinnamon'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Ground Ginger'}, {amount:1,unit:'pinch',item:'Ground Nutmeg'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'}, {amount:80,unit:'g',item:'Unsalted Butter, Melted'},
       {group:'Filling'},
-      {amount:3,unit:'',item:'bananas (approx. 250 g flesh), very ripe and mashed'}, {amount:2,unit:'',item:'firm-ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',item:'Whole Milk'}, {amount:3,unit:'large',item:'egg yolks'}, {amount:35,unit:'g',item:'granulated sugar'}, {amount:35,unit:'g',imperialAmount:4.5,imperialUnit:'tbsp',item:'cornstarch'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'vanilla extract'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'salt'},
+      {amount:3,unit:'',item:'Bananas (Approx. 250 g Flesh), Very Ripe and Mashed'}, {amount:2,unit:'',item:'Firm-Ripe Bananas, Cut in Half Lengthwise'}, {amount:400,unit:'ml',item:'Whole Milk'}, {amount:3,unit:'large',item:'Egg Yolks'}, {amount:35,unit:'g',item:'Granulated Sugar'}, {amount:35,unit:'g',imperialAmount:4.5,imperialUnit:'tbsp',item:'Cornstarch'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla Extract'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},
       {group:'Topping (Optional)'},
-      {amount:180,unit:'ml',item:'heavy cream'}, {minAmount:13,maxAmount:25,unit:'g',imperialMinAmount:1,imperialMaxAmount:2,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',imperialCompactRange:true,item:'sugar, to taste'}, {unit:'',item:'Cinnamon or banana chips, to finish',hideIngredientInfo:true}
+      {amount:180,unit:'ml',item:'35% Whipping Cream'}, {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated Sugar'}, {unit:'',item:'Cinnamon or Banana Chips, to Finish',hideIngredientInfo:true}
     ],
     steps:[
       {number:'01',title:'TURN IT UP & MAKE IT JAMMY',clock:'2:55 AM',paragraphs:[
@@ -372,10 +372,10 @@ What if we just put way more banana in banana cream pie?`,
         'No sugar. No butter. Just banana. Set aside.'
       ],stepImages:[]},
       {number:'02',title:'FAKE THE BISCOFF',clock:'3:08 AM',paragraphs:[
-        'Crush {{qty:plain biscuits, finely crushed}} plain biscuits finely.',
+        'Crush {{qty:Plain Biscuits, Finely Crushed}} plain biscuits finely.',
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
         '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
-        'Mix with {{qty:ground cinnamon}} cinnamon, {{qty:ground ginger}} ginger, {{qty:ground nutmeg}} nutmeg, {{qty:salt}} salt, and {{qty:unsalted butter, melted}} melted butter.',
+        'Mix with {{qty:Ground Cinnamon}} cinnamon, {{qty:Ground Ginger}} ginger, {{qty:Ground Nutmeg}} nutmeg, {{qty:Salt}} salt, and {{qty:Unsalted Butter, Melted}} melted butter.',
         'Press firmly into a 9-inch (23 cm) pie dish.',
         'Bake for 8–10 minutes, then let cool.'
       ],stepNote:'**Midnight Shortcut:** Skip the oven entirely! Just press the crust into the dish and freeze it while making the filling. It won\'t be quite as toasted, but it sets super fast.',stepImages:[]},
@@ -405,7 +405,7 @@ What if we just put way more banana in banana cream pie?`,
         'Refrigerate for at least 4 hours. Overnight is even better!'
       ],stepImages:[]},
       {number:'07',title:'TOP IT OFF',clock:'NEXT DAY',paragraphs:[
-        'Whip {{qty:heavy cream}} cold heavy cream to soft peaks. Add {{qty:sugar, to taste}} sugar and whip to medium-firm peaks.',
+        'Whip {{qty:35% Whipping Cream}} cold heavy cream to soft peaks. Add {{qty:Granulated Sugar, To Taste}} sugar and whip to medium-firm peaks.',
         'Dollop over the chilled pie and finish with cinnamon or banana chips, if you like.'
       ],stepImages:[]}
     ],
@@ -439,9 +439,9 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
     ingredients:[
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
       {group:'FILLING'},
-      {amount:400,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'cooked sweet potato flesh'}, {amount:100,unit:'ml',imperialAmount:7,imperialUnit:'tbsp',item:'10% cream'}, {amount:70,unit:'g',imperialAmount:1,imperialUnit:'cup',imperialFraction:{num:1,den:3},item:'white sugar'}, {amount:2,unit:'',item:'large eggs'}, {amount:6,unit:'g',item:'fresh ginger, finely grated'}, {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'ground cinnamon'}, {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'kosher salt'},
-      {group:'TOPPING'},
-      {amount:200,unit:'ml',imperialAmount:1,imperialUnit:'cup',imperialFraction:{num:7,den:8},item:'35% whipping cream'}, {amount:2,unit:'Tbsp',imperialAmount:2,imperialUnit:'tbsp',item:'white sugar'}, {unit:'',item:'Cinnamon, for finishing'}
+      {amount:400,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'Cooked Sweet Potato Flesh'}, {amount:87,unit:'g',imperialAmount:7,imperialUnit:'tbsp',item:'10% Cream'}, {amount:70,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Granulated Sugar'}, {amount:2,unit:'',item:'Large Eggs'}, {amount:6,unit:'g',item:'Fresh Ginger, Finely Grated'}, {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'Ground Cinnamon'}, {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Kosher Salt'},
+      {group:'Topping (optional)'},
+      {amount:237,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'35% Whipping Cream'}, {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated Sugar'}, {unit:'',item:'Cinnamon, for Finishing'}
     ],
     steps:[
       {number:'01',title:'COOK THE SWEET POTATO',clock:'11:35 PM',paragraphs:[
@@ -459,9 +459,9 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
       ],stepImages:[]},
       {number:'03',title:'BLEND THE FILLING',clock:'12:25 AM',paragraphs:[
         'Lower the oven to 175°C / 350°F.',
-        'Once the sweet potato is cooked and cool enough to handle, measure {{qty:cooked sweet potato flesh}}.',
-        'Finely grate {{qty:fresh ginger, finely grated}} ginger.',
-        'Combine {{qty:cooked sweet potato flesh}} sweet potato, {{qty:10% cream}} 10% cream, {{qty:FILLING::white sugar}} white sugar, {{qty:large eggs}} large eggs, {{qty:fresh ginger, finely grated}} fresh ginger, {{qty:ground cinnamon}} ground cinnamon, and {{qty:kosher salt}} kosher salt.',
+        'Once the sweet potato is cooked and cool enough to handle, measure {{qty:Cooked Sweet Potato Flesh}}.',
+        'Finely grate {{qty:Fresh Ginger, Finely Grated}} ginger.',
+        'Combine {{qty:Cooked Sweet Potato Flesh}} sweet potato, {{qty:10% Cream}} 10% cream, {{qty:FILLING::Granulated Sugar}} white sugar, {{qty:large eggs}} large eggs, {{qty:Fresh Ginger, Finely Grated}} fresh ginger, {{qty:Ground Cinnamon}} ground cinnamon, and {{qty:Kosher Salt}} kosher salt.',
         'Food Processor — Fastest',
         'Blend the sweet potato and all remaining filling ingredients and blend briefly until silky.',
         'Quiet Mode — Silent',
@@ -477,8 +477,8 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
       {number:'05',title:'CHILL & FINISH',clock:'1:20 AM',paragraphs:[
         'Let the pie cool completely before refrigerating. Once cooled, refrigerate for at least 2 hours, preferably overnight.',
         'Optional:',
-        'Whip {{qty:35% whipping cream}} cold whipping cream to soft peaks.',
-        'Gradually add {{qty:TOPPING::white sugar}} sugar and continue whipping until medium-firm peaks form.',
+        'Whip {{qty:35% Whipping Cream}} cold whipping cream to soft peaks.',
+        'Gradually add {{qty:Topping (optional)::Granulated Sugar}} sugar and continue whipping until medium-firm peaks form.',
         'Keep the whipped cream refrigerated until serving.',
         'Slice the chilled pie and top with whipped cream and a light dusting of cinnamon.'
       ],stepImages:[]}
@@ -508,7 +508,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     ingredientFile:[],
     ingredients:[
       {amount:180,unit:'g',imperialAmount:1.5,imperialUnit:'cup',item:'All-Purpose Flour'},
-      {amount:113,unit:'g',imperialAmount:0.5,imperialUnit:'cup',imperialFraction:{num:1,den:2},item:'Cold Unsalted Butter, cubed'},
+      {amount:113,unit:'g',imperialAmount:0.5,imperialUnit:'cup',imperialFraction:{num:1,den:2},item:'Cold Unsalted Butter, Cubed'},
       {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
       {minAmount:45,maxAmount:60,unit:'ml',imperialMinAmount:3,imperialMaxAmount:4,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',item:'Cold Water'},
     ],
