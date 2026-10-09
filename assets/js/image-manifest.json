@@ -188,6 +188,28 @@
       ]
     }
   },
+  "moms-hamburg-steak": {
+    "hero": "images/recipes/moms-hamburg-steak/hero.jpg",
+    "recipe": null,
+    "steps": {
+      "01": [
+        "images/recipes/moms-hamburg-steak/step-01-01.jpg",
+        "images/recipes/moms-hamburg-steak/step-01-02.jpg",
+        "images/recipes/moms-hamburg-steak/step-01-03.jpg",
+        "images/recipes/moms-hamburg-steak/step-01-04.jpg"
+      ],
+      "02": [
+        "images/recipes/moms-hamburg-steak/step-02-01.jpg",
+        "images/recipes/moms-hamburg-steak/step-02-02.jpg"
+      ],
+      "03": [
+        "images/recipes/moms-hamburg-steak/step-03-01.jpg"
+      ],
+      "04": [
+        "images/recipes/moms-hamburg-steak/step-04-01.jpg"
+      ]
+    }
+  },
   "sweet-chili-peanut-chicken": {
     "hero": "images/recipes/sweet-chili-peanut-chicken/hero.jpg",
     "recipe": "images/recipes/sweet-chili-peanut-chicken/recipe.jpg",
