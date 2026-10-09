@@ -1452,3 +1452,11 @@ body[data-page="home"] .category-card .photo-frame{
   line-height:1.7;
 }
 .home-tagline p{margin:0;font:inherit;color:inherit;}
+
+
+/* Contact page: body copy left-aligned, sign-off centered. */
+.contact-section .contact-copy{display:flex;flex-direction:column;gap:16px;}
+.contact-section .contact-copy .body-copy{margin:0;text-align:left;}
+.contact-signoff{margin-top:28px;text-align:center;}
+.contact-signoff .contact-star{margin:0 0 10px;text-align:center;}
+.contact-signoff .contact-email{margin:0;text-align:center;}
