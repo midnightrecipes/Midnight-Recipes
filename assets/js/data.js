@@ -668,7 +668,6 @@ If the internet was calling it the world’s best, I had to find out for myself,
         ['Substitute','Frozen or pre-minced lemongrass'],
         ['Storage','Fresh stalks can be refrigerated for about a week; frozen lemongrass keeps much longer.'],
         ['Midnight Fix','Use 1½ tbsp finely minced lemongrass when whole stalks are inconvenient.'],
-        ['Other','Asian grocery stores and many large supermarkets carry fresh lemongrass.']
       ]}
     ],
     ingredients:[
