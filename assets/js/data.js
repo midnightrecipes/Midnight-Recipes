@@ -725,6 +725,119 @@ If the internet was calling it the world’s best, I had to find out for myself,
     tags:['Galangal','Makrut Lime Leaves','Lemongrass','Coconut Milk','Chicken'],
     usualsCategory:''
   }
+,
+
+  {
+    slug:'sweet-chili-peanut-chicken',
+    title:'Sweet Chili Peanut Chicken',
+    source:'Travel',
+    original:'Thailand · Tod Mun Pla (Thai Fish Cakes)',
+    dish:'Crispy chicken coated in a sweet, tangy, mildly spicy peanut sauce',
+    cuisine:'Thai',
+    course:'Main Dishes',
+    courseDisplay:'Main Dishes',
+    meal:'Main Dishes',
+    categories:['Main Dishes'],
+    dateAdded:'2026-10-08',
+    timeStamp:'10:15 PM',
+    description:'',
+    story:`I first fell for the combination of sweet chili sauce and peanuts in Thailand, where sweet chili sauce and crushed peanuts were served alongside crispy Thai fish cakes (Tod Mun Pla).
+But actually, the sauce was the best part of the dish. That sweet, tangy, slightly spicy, nutty combination stayed with me long after the trip.
+Thailand isn't exactly a quick midnight trip from Toronto, so I decided to bring that memory home instead. I had some chicken in the fridge and wondered: what if I gave it that sauce?
+This isn't a traditional Thai dish. It's simply my midnight attempt to recreate a Thai-inspired flavor I couldn't forget.`,
+    heroImage:'images/recipes/sweet-chili-peanut-chicken/hero.jpg',
+    recipeImage:'images/recipes/sweet-chili-peanut-chicken/recipe.jpg',
+    cardImage:'images/recipes/sweet-chili-peanut-chicken/hero.jpg',
+    stepQuantityConversion:true,
+    usCupFractions:true,
+    fractionDenominator:16,
+    ingredientFile:[
+      {name:'100% Peanut Butter',details:[
+        ['Flavor','Rich, nutty, roasted, creamy'],
+        ['Best choice','Smooth peanut butter made from 100% peanuts, with no added sugar'],
+        ['Why','Adds concentrated roasted-peanut flavor and creates a creamy, glossy sauce without needing a separate peanut sauce.'],
+        ['Substitute','Other nut butter']
+      ]},
+      {name:'Sambal Oelek',details:[
+        ['Origin','Indonesia'],
+        ['Flavor','Fresh chili heat with a slightly tangy edge'],
+        ['Best choice','A simple chili paste with minimal added ingredients'],
+        ['Why here?','Provides the chili element without making the sauce overwhelmingly spicy.'],
+        ['Substitute','Finely minced fresh red chili or a mild chili paste'],
+        ['Storage','Refrigerate after opening, following the product label.']
+      ]},
+      {name:'Rice Vinegar',details:[
+        ['Origin','East Asia'],
+        ['Flavor','Clean, mild acidity'],
+        ['Best choice','Plain, unseasoned rice vinegar'],
+        ['Why here?','Balances the richness of peanut butter and the sweetness of sugar.'],
+        ['Substitute','White vinegar, using slightly less at first and adjusting to taste'],
+        ['Other','The vinegar helps recreate the sweet-and-tangy character of the flavor that inspired this recipe.']
+      ]}
+    ],
+    ingredients:[
+      {group:'Chicken'},
+      {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',imperialFraction:{num:1,den:1},item:'Chicken Thighs, Cut Into Bite-Sized Pieces'},
+      {amount:20,unit:'g',imperialAmount:2,imperialUnit:'tbsp',item:'Cornstarch'},
+      {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
+      {amount:1,unit:'g',imperialAmount:0.25,imperialUnit:'tsp',item:'Black Pepper'},
+      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Neutral Oil, for Pan-Frying'},
+      {group:'Sweet Chili Peanut Sauce'},
+      {amount:32,unit:'g',imperialAmount:2,imperialUnit:'tbsp',item:'100% Peanut Butter'},
+      {amount:45,unit:'ml',imperialAmount:3,imperialUnit:'tbsp',item:'Water'},
+      {amount:30,unit:'g',imperialAmount:2,imperialUnit:'tbsp',item:'Rice Vinegar'},
+      {amount:26,unit:'g',imperialAmount:2,imperialUnit:'tbsp',item:'Granulated Sugar'},
+      {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Soy Sauce'},
+      {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Sambal Oelek'},
+      {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Garlic, Finely Grated'},
+      {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Fresh Ginger, Finely Grated'},
+      {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Sesame Oil'},
+      {amount:1,unit:'g',imperialAmount:0.125,imperialUnit:'tsp',item:'Salt, or to Taste'},
+      {group:'Garnish'},
+      {unit:'',item:'Roasted Peanuts, Roughly Crushed'},
+      {unit:'',item:'Fresh Cilantro, Chopped'},
+      {unit:'',item:'1–2 Lime Wedges'}
+    ],
+    stats:{prep:'10 mins',cook:'15 mins',total:'25 mins',serves:'2',quest:'⭐⭐⭐☆☆'},
+    steps:[
+      {number:'01',title:'CRISP THE CHICKEN',clock:'10:15 PM',paragraphs:[
+        'Pat the {{qty:Chicken Thighs, Cut Into Bite-Sized Pieces}} Chicken Thighs dry and cut them into bite-sized pieces.',
+        'Toss the chicken with the {{qty:Chicken::Cornstarch}} Cornstarch, {{qty:Chicken::Salt}} Salt, and {{qty:Black Pepper}} Black Pepper until evenly coated.',
+        'Heat the {{qty:Neutral Oil, for Pan-Frying}} Neutral Oil in a large skillet over medium-high heat.',
+        'Arrange the chicken in a single layer. Cook for 3–4 minutes per side until golden and crisp. Work in batches if needed.',
+        'Transfer the chicken to a plate, leaving about 1–2 teaspoons of oil in the skillet.'
+      ],stepImages:['images/recipes/sweet-chili-peanut-chicken/step-01-01.jpg','images/recipes/sweet-chili-peanut-chicken/step-01-02.jpg','images/recipes/sweet-chili-peanut-chicken/step-01-03.jpg','images/recipes/sweet-chili-peanut-chicken/step-01-04.jpg']},
+      {number:'02',title:'BUILD THE SAUCE',clock:'10:25 PM',paragraphs:[
+        'Reduce the heat to medium-low.',
+        'Add the {{qty:Sambal Oelek}} Sambal Oelek, {{qty:Garlic, Finely Grated}} Garlic, and {{qty:Fresh Ginger, Finely Grated}} Fresh Ginger to the skillet. Sauté for 20–30 seconds, stirring gently. Do not let the garlic burn.',
+        'Add the {{qty:100% Peanut Butter}} Peanut Butter, {{qty:Water}} Water, {{qty:Rice Vinegar}} Rice Vinegar, {{qty:Granulated Sugar}} Granulated Sugar, {{qty:Soy Sauce}} Soy Sauce, and {{qty:Sweet Chili Peanut Sauce::Salt, or to Taste}} Salt.',
+        'Stir for 1–2 minutes until the sauce becomes smooth and glossy.',
+        'Stir in the {{qty:Sesame Oil}} Sesame Oil.',
+        'Taste and adjust the seasoning. Add a little more salt only if needed. If the sauce is too thick, add water a teaspoon at a time.'
+      ],stepImages:['images/recipes/sweet-chili-peanut-chicken/step-02-01.jpg','images/recipes/sweet-chili-peanut-chicken/step-02-02.jpg']},
+      {number:'03',title:'COAT THE CHICKEN',clock:'10:29 PM',paragraphs:[
+        'Return the crispy chicken to the skillet.',
+        'Toss gently for 1–2 minutes until the pieces are evenly coated.',
+        'If the sauce is too thick, add 5–10 ml water and toss again. This is extra adjustment water, separate from the sauce water listed in the ingredients.',
+        'Remove from the heat once the chicken is coated in the glossy sauce.'
+      ],stepImages:['images/recipes/sweet-chili-peanut-chicken/step-03-01.jpg','images/recipes/sweet-chili-peanut-chicken/step-03-02.jpg']},
+      {number:'04',title:'GARNISH AND SERVE',clock:'Optional',paragraphs:[
+        'Sprinkle with roughly crushed roasted peanuts and chopped cilantro.',
+        'Serve with lime wedges for squeezing over the chicken just before eating.'
+      ],stepImages:[]}
+    ],
+    notes:[
+      ['The Flavor Memory','The starting point was the sweet chili sauce and crushed peanuts served with Thai fish cakes. The goal wasn\'t to recreate Tod Mun Pla itself, but to bring that sweet, tangy, spicy, nutty combination to crispy chicken.'],
+      ['Building the Sweet Chili Base','Instead of using bottled Thai sweet chili sauce, this recipe builds a quick version from vinegar, sugar, chili, garlic, and seasonings. Peanut butter adds a creamy, nutty twist.'],
+      ['Keeping It Mild','The sambal provides a gentle chili kick rather than dominating the sauce. Add a little more if you prefer a spicier finish.'],
+      ['Crispy First, Sauce Second','Cook the chicken until golden before making the sauce. Coating it too early would prevent the chicken from developing its crisp exterior.'],
+      ['The One-Pan Midnight Rule','The chicken and sauce are made in the same skillet. Less cleanup means more time to enjoy dinner.']
+    ],
+    finePrint:{'Best Eaten':'Immediately after cooking, while the chicken is at its crispest.','Make ahead':'Yes — For the best texture, cook the chicken and combine it with the sauce just before serving.','Storage':'Refrigerate leftovers in an airtight container for up to 3 days.','Reheat':'An oven or air fryer is best for restoring some crispness. The microwave is convenient but will soften the coating.'},
+    tags:['Chicken','Peanut Butter','Sweet Chili','One-Pan','Weeknight Dinner'],
+    mainIngredients:['Chicken','Pantry','Herbs & Spices'],
+    usualsCategory:''
+  }
 
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
