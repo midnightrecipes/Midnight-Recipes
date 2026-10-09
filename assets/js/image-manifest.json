@@ -190,7 +190,7 @@
   },
   "moms-hamburg-steak": {
     "hero": "images/recipes/moms-hamburg-steak/hero.jpg",
-    "recipe": null,
+    "recipe": "images/recipes/moms-hamburg-steak/recipe.jpg",
     "steps": {
       "01": [
         "images/recipes/moms-hamburg-steak/step-01-01.jpg",
