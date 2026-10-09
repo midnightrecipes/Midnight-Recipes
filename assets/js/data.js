@@ -695,24 +695,24 @@ If the internet was calling it the world’s best, I had to find out for myself,
     stats:{prep:'10 mins',cook:'20 mins',total:'30 mins',serves:'2–3',quest:'⭐⭐⭐⭐☆'},
     steps:[
       {number:'01',title:'BUILD THE AROMATIC BROTH',clock:'11:21 PM',paragraphs:[
-        'If using dried {{qty:Makrut Lime Leaves, Rehydrated if Dried}} Makrut Lime Leaves, soak them in hot water for 5–10 minutes. Drain and gently tear them.',
-        'Thinly slice {{qty:Fresh Galangal, Thinly Sliced}} Fresh Galangal. Remove the tough outer layers from {{qty:Lemongrass, Bruised and Cut Into Pieces}} Lemongrass stalks, bruise them with the back of a knife, and cut them into 5–6 cm pieces.',
-        'If using minced Lemongrass instead, measure 1½ tbsp.',
-        'Add {{qty:Water or Chicken Stock}} Water or Chicken Stock, Galangal, Lemongrass, Makrut Lime Leaves, {{qty:Onion, Sliced}} Onion, {{qty:Garlic Clove, Lightly Crushed}} Garlic Clove, and {{qty:Fresh Chilies, Lightly Crushed}} Fresh Chilies to a saucepan.',
+        'If using dried {{qty:Makrut Lime Leaves, Rehydrated if Dried}} makrut lime leaves, soak them in hot water for 5–10 minutes. Drain and gently tear them.',
+        'Thinly slice {{qty:Fresh Galangal, Thinly Sliced}} fresh galangal. Remove the tough outer layers from {{qty:Lemongrass, Bruised and Cut Into Pieces}} lemongrass stalks, bruise them with the back of a knife, and cut them into 5–6 cm pieces.',
+        'If using minced lemongrass instead, measure 1½ tbsp.',
+        'Add {{qty:Water or Chicken Stock}} water or chicken stock, galangal, lemongrass, makrut lime leaves, {{qty:Onion, Sliced}} onion, {{qty:Garlic Clove, Lightly Crushed}} garlic clove, and {{qty:Fresh Chilies, Lightly Crushed}} fresh chilies to a saucepan.',
         'Bring to a gentle simmer over medium heat and cook for 5–10 minutes, until the broth smells deeply aromatic.'
       ],stepImages:['images/recipes/tom-kha-gai/step-01-01.jpg','images/recipes/tom-kha-gai/step-01-02.jpg','images/recipes/tom-kha-gai/step-01-03.jpg']},
       {number:'02',title:'COOK THE CHICKEN & COCONUT',clock:'11:33 PM',paragraphs:[
-        'Cut {{qty:Boneless, Skinless Chicken Thighs}} Boneless, Skinless Chicken Thighs into bite-sized pieces.',
-        'Add the Chicken Thighs to the aromatic broth and simmer until just cooked through.',
-        'Add {{qty:Mushrooms}} Mushrooms and cook for another 2–3 minutes.',
-        'Pour in {{qty:Coconut Milk}} Coconut Milk. Reduce the heat to low and warm gently.',
-        'Do not let the Coconut Milk boil aggressively. Keep the broth smooth and fragrant.'
+        'Cut {{qty:Boneless, Skinless Chicken Thighs}} boneless, skinless chicken thighs into bite-sized pieces.',
+        'Add the chicken thighs to the aromatic broth and simmer until just cooked through.',
+        'Add {{qty:Mushrooms}} mushrooms and cook for another 2–3 minutes.',
+        'Pour in {{qty:Coconut Milk}} coconut milk. Reduce the heat to low and warm gently.',
+        'Do not let the coconut milk boil aggressively. Keep the broth smooth and fragrant.'
       ],stepImages:['images/recipes/tom-kha-gai/step-02-01.jpg','images/recipes/tom-kha-gai/step-02-02.jpg','images/recipes/tom-kha-gai/step-02-03.jpg']},
       {number:'03',title:'SEASON & FINISH',clock:'11:41 PM',paragraphs:[
-        'Stir in {{qty:Fish Sauce}} Fish Sauce and {{qty:Palm Sugar or Granulated Sugar}} Palm Sugar or Granulated Sugar. Turn off the heat.',
-        'Add {{qty:Fresh Lime Juice}} Fresh Lime Juice.',
-        'Taste and adjust with a little more Fish Sauce for saltiness, Lime Juice for acidity, or sugar if the flavors feel too sharp.',
-        'Finish with fresh Cilantro.'
+        'Stir in {{qty:Fish Sauce}} fish sauce and {{qty:Palm Sugar or Granulated Sugar}} palm sugar or granulated sugar. Turn off the heat.',
+        'Add {{qty:Fresh Lime Juice}} fresh lime juice.',
+        'Taste and adjust with a little more fish sauce for saltiness, lime juice for acidity, or sugar if the flavors feel too sharp.',
+        'Finish with fresh cilantro.'
       ],stepImages:['images/recipes/tom-kha-gai/step-03-01.jpg','images/recipes/tom-kha-gai/step-03-02.jpg']}
     ],
     notes:[
@@ -731,8 +731,6 @@ If the internet was calling it the world’s best, I had to find out for myself,
     slug:'sweet-chili-peanut-chicken',
     title:'Sweet Chili Peanut Chicken',
     source:'Travel',
-    original:'Thailand · Tod Mun Pla (Thai Fish Cakes)',
-    dish:'Crispy chicken coated in a sweet, tangy, mildly spicy peanut sauce',
     cuisine:'Thai',
     course:'Main Dishes',
     courseDisplay:'Main Dishes',
@@ -755,7 +753,7 @@ This isn't a traditional Thai dish. It's simply my midnight attempt to recreate 
       {name:'100% Peanut Butter',details:[
         ['Flavor','Rich, nutty, roasted, creamy'],
         ['Best choice','Smooth peanut butter made from 100% peanuts, with no added sugar'],
-        ['Why','Adds concentrated roasted-peanut flavor and creates a creamy, glossy sauce without needing a separate peanut sauce.'],
+        ['Why here?','Adds concentrated roasted-peanut flavor and creates a creamy, glossy sauce without needing a separate peanut sauce.'],
         ['Substitute','Other nut butter']
       ]},
       {name:'Sambal Oelek',details:[
@@ -771,8 +769,7 @@ This isn't a traditional Thai dish. It's simply my midnight attempt to recreate 
         ['Flavor','Clean, mild acidity'],
         ['Best choice','Plain, unseasoned rice vinegar'],
         ['Why here?','Balances the richness of peanut butter and the sweetness of sugar.'],
-        ['Substitute','White vinegar, using slightly less at first and adjusting to taste'],
-        ['Other','The vinegar helps recreate the sweet-and-tangy character of the flavor that inspired this recipe.']
+        ['Substitute','White vinegar, using slightly less at first and adjusting to taste']
       ]}
     ],
     ingredients:[
@@ -801,18 +798,18 @@ This isn't a traditional Thai dish. It's simply my midnight attempt to recreate 
     stats:{prep:'10 mins',cook:'15 mins',total:'25 mins',serves:'2',quest:'⭐⭐⭐☆☆'},
     steps:[
       {number:'01',title:'CRISP THE CHICKEN',clock:'10:15 PM',paragraphs:[
-        'Pat the {{qty:Chicken Thighs, Cut Into Bite-Sized Pieces}} Chicken Thighs dry and cut them into bite-sized pieces.',
-        'Toss the chicken with the {{qty:Chicken::Cornstarch}} Cornstarch, {{qty:Chicken::Salt}} Salt, and {{qty:Black Pepper}} Black Pepper until evenly coated.',
-        'Heat the {{qty:Neutral Oil, for Pan-Frying}} Neutral Oil in a large skillet over medium-high heat.',
+        'Pat the {{qty:Chicken Thighs, Cut Into Bite-Sized Pieces}} chicken thighs dry and cut them into bite-sized pieces.',
+        'Toss the chicken with the {{qty:Chicken::Cornstarch}} cornstarch, {{qty:Chicken::Salt}} salt, and {{qty:Black Pepper}} black pepper until evenly coated.',
+        'Heat the {{qty:Neutral Oil, for Pan-Frying}} neutral oil in a large skillet over medium-high heat.',
         'Arrange the chicken in a single layer. Cook for 3–4 minutes per side until golden and crisp. Work in batches if needed.',
         'Transfer the chicken to a plate, leaving about 1–2 teaspoons of oil in the skillet.'
       ],stepImages:['images/recipes/sweet-chili-peanut-chicken/step-01-01.jpg','images/recipes/sweet-chili-peanut-chicken/step-01-02.jpg','images/recipes/sweet-chili-peanut-chicken/step-01-03.jpg','images/recipes/sweet-chili-peanut-chicken/step-01-04.jpg']},
       {number:'02',title:'BUILD THE SAUCE',clock:'10:25 PM',paragraphs:[
         'Reduce the heat to medium-low.',
-        'Add the {{qty:Sambal Oelek}} Sambal Oelek, {{qty:Garlic, Finely Grated}} Garlic, and {{qty:Fresh Ginger, Finely Grated}} Fresh Ginger to the skillet. Sauté for 20–30 seconds, stirring gently. Do not let the garlic burn.',
-        'Add the {{qty:100% Peanut Butter}} Peanut Butter, {{qty:Water}} Water, {{qty:Rice Vinegar}} Rice Vinegar, {{qty:Granulated Sugar}} Granulated Sugar, {{qty:Soy Sauce}} Soy Sauce, and {{qty:Sweet Chili Peanut Sauce::Salt, or to Taste}} Salt.',
+        'Add the {{qty:Sambal Oelek}} sambal oelek, {{qty:Garlic, Finely Grated}} garlic, and {{qty:Fresh Ginger, Finely Grated}} fresh ginger to the skillet. Sauté for 20–30 seconds, stirring gently. Do not let the garlic burn.',
+        'Add the {{qty:100% Peanut Butter}} peanut butter, {{qty:Water}} water, {{qty:Rice Vinegar}} rice vinegar, {{qty:Granulated Sugar}} granulated sugar, {{qty:Soy Sauce}} soy sauce, and {{qty:Sweet Chili Peanut Sauce::Salt, or to Taste}} salt.',
         'Stir for 1–2 minutes until the sauce becomes smooth and glossy.',
-        'Stir in the {{qty:Sesame Oil}} Sesame Oil.',
+        'Stir in the {{qty:Sesame Oil}} sesame oil.',
         'Taste and adjust the seasoning. Add a little more salt only if needed. If the sauce is too thick, add water a teaspoon at a time.'
       ],stepImages:['images/recipes/sweet-chili-peanut-chicken/step-02-01.jpg','images/recipes/sweet-chili-peanut-chicken/step-02-02.jpg']},
       {number:'03',title:'COAT THE CHICKEN',clock:'10:29 PM',paragraphs:[
