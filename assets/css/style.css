@@ -1440,3 +1440,15 @@ body[data-page="home"] .category-card .photo-frame{
 #scaleToggle .scale-stepper-buttons button:focus-visible{
   background:var(--soft);
 }
+
+
+/* v131: homepage tagline moved above Midnight Dispatches; keep the existing typeface and understated styling. */
+.home-tagline{
+  margin:0;
+  padding:20px 0 4px;
+  color:#222;
+  text-align:center;
+  font-weight:400;
+  line-height:1.7;
+}
+.home-tagline p{margin:0;font:inherit;color:inherit;}
