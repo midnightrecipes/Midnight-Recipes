@@ -856,7 +856,7 @@ And yet, my mom made it.
 
 The sauce is part of what makes it feel like Japanese hamburg steak, too. Japanese-style *“demi-glace”* sauce is rich, sweet, tangy, and made with familiar pantry staples. It’s the kind of sauce that makes the whole dish feel complete.
 
-Maybe that’s what *haha no aji* really means. Not that every mom made the same dish, but that somewhere along the way, an ordinary meal becomes a taste you remember. And the hamburg steak you make for your own family might just become their No. 1, their one and only!`,
+Maybe that’s what *haha no aji* really means. Not that every mom made the same dish, but that somewhere along the way, an ordinary meal becomes a taste you remember. And the hamburg steak you make for your own family might just become their favorite — the one they remember most.`,
     heroImage:'images/recipes/moms-hamburg-steak/hero.jpg',
     recipeImage:'images/recipes/moms-hamburg-steak/recipe.jpg',
     cardImage:'images/recipes/moms-hamburg-steak/hero.jpg',
@@ -894,7 +894,6 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
         ['Best choice','Cooking sake or regular sake'],
         ['Why here','Adds depth to the sauce.'],
         ['Substitute','Dry white wine or Chinese Shaoxing wine'],
-        ['Midnight Fix','Use dry white wine if sake is not available.']
       ]}
     ],
     ingredients:[
@@ -915,22 +914,22 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
       {amount:2,unit:'tbsp',imperialAmount:2,imperialUnit:'tbsp',item:'Granulated Sugar'},
       {amount:2,unit:'tbsp',imperialAmount:2,imperialUnit:'tbsp',item:'Soy Sauce'}
     ],
-    stats:{prep:'15 mins',cook:'15 mins',total:'30 mins',serves:'4'},
+    stats:{prep:'15 mins',cook:'15 mins',total:'30 mins',serves:'4',quest:'⭐⭐⭐☆☆'},
     steps:[
       {number:'01',title:'MIX',clock:'01:15 AM',paragraphs:[
-        'Place {{qty:Hamburg Steak::Ground Meat}} Ground Meat in a bowl. Add {{qty:Hamburg Steak::Salt}} Salt and knead until sticky and cohesive.',
-        'Add {{qty:Hamburg Steak::Egg}} Egg, {{qty:Hamburg Steak::Breadcrumbs}} Breadcrumbs, {{qty:Hamburg Steak::Milk}} Milk, {{qty:Hamburg Steak::Onion, Very Finely Chopped}} finely chopped Onion, {{qty:Hamburg Steak::Black Pepper}} Black Pepper, and {{qty:Hamburg Steak::Ground Nutmeg}} Ground Nutmeg. Mix just until combined.'
+        'Place {{qty:Hamburg Steak::Ground Meat}} ground meat in a bowl. Add {{qty:Hamburg Steak::Salt}} salt and knead until sticky and cohesive.',
+        'Add {{qty:Hamburg Steak::Egg}} egg, {{qty:Hamburg Steak::Breadcrumbs}} breadcrumbs, {{qty:Hamburg Steak::Milk}} milk, {{qty:Hamburg Steak::Onion, Very Finely Chopped}} finely chopped onion, {{qty:Hamburg Steak::Black Pepper}} black pepper, and {{qty:Hamburg Steak::Ground Nutmeg}} ground nutmeg. Mix just until combined.'
       ],stepImages:['images/recipes/moms-hamburg-steak/step-01-01.jpg','images/recipes/moms-hamburg-steak/step-01-02.jpg','images/recipes/moms-hamburg-steak/step-01-03.jpg','images/recipes/moms-hamburg-steak/step-01-04.jpg']},
       {number:'02',title:'SHAPE & SEAR',clock:'01:23 AM',paragraphs:[
         'Divide the mixture into 4 portions. Shape into oval patties about 2–2.5 cm thick and make a shallow indentation in the center of each.',
-        'Heat a little Oil in a frying pan over medium heat. Cook the patties for 2–3 minutes per side, until well browned.'
+        'Heat a little oil in a frying pan over medium heat. Cook the patties for 2–3 minutes per side, until well browned.'
       ],stepImages:['images/recipes/moms-hamburg-steak/step-02-01.jpg','images/recipes/moms-hamburg-steak/step-02-02.jpg']},
       {number:'03',title:'STEAM',clock:'01:30 AM',paragraphs:[
         'Add a little water to the pan and cover with a lid. Reduce the heat to medium-low and steam for 5–7 minutes, until cooked through.',
         'Transfer the patties to a plate and rest for 3–5 minutes. Keep the pan for the sauce.'
       ],stepImages:['images/recipes/moms-hamburg-steak/step-03-01.jpg']},
       {number:'04',title:'MAKE THE “DEMI-GLACE” SAUCE',clock:'01:37 AM',paragraphs:[
-        'Add {{qty:Japanese-Style “Demi-Glace” Sauce::Sake or Dry White Wine}} Sake or Dry White Wine, {{qty:Japanese-Style “Demi-Glace” Sauce::Ketchup}} Ketchup, {{qty:Japanese-Style “Demi-Glace” Sauce::Worcestershire Sauce}} Worcestershire Sauce, {{qty:Japanese-Style “Demi-Glace” Sauce::Granulated Sugar}} Granulated Sugar, and {{qty:Japanese-Style “Demi-Glace” Sauce::Soy Sauce}} Soy Sauce to the same pan.',
+        'Add {{qty:Japanese-Style “Demi-Glace” Sauce::Sake or Dry White Wine}} sake or dry white wine, {{qty:Japanese-Style “Demi-Glace” Sauce::Ketchup}} ketchup, {{qty:Japanese-Style “Demi-Glace” Sauce::Worcestershire Sauce}} Worcestershire sauce, {{qty:Japanese-Style “Demi-Glace” Sauce::Granulated Sugar}} granulated sugar, and {{qty:Japanese-Style “Demi-Glace” Sauce::Soy Sauce}} soy sauce to the same pan.',
         'Scrape up the browned bits and simmer for 1–2 minutes, until slightly thickened. Spoon the sauce over the hamburg steaks.'
       ],stepImages:['images/recipes/moms-hamburg-steak/step-04-01.jpg']}
     ],

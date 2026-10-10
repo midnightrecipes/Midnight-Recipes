@@ -126,6 +126,7 @@ body.scaled .overlay{position:absolute; top:76px; bottom:auto; height:820px;}
 .rtop{display:grid; grid-template-columns:1fr 470px; gap:40px; align-items:start;}
 .rtitle{font-family:var(--logo-font); font-size:58px; letter-spacing:0; margin:0 0 18px;}
 .meta-line{display:flex; justify-content:space-between; font-size:19px; margin-bottom:10px;}
+.recipe-meta-divider{border-top:1px solid var(--line); margin:12px 0 14px; width:100%;}
 .tags{
   display:flex; flex-wrap:wrap; gap:8px 26px; font-size:19px;
   padding-bottom:20px; border-bottom:1px solid var(--line); margin-bottom:26px;
