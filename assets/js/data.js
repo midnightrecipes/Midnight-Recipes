@@ -96,8 +96,8 @@ window.MIDNIGHT_RECIPES = [
     story:`*Taiwan Ramen* (台湾ラーメン) at Misen (味仙) is famous in my hometown, Nagoya, Japan. Despite its name, this fiery ramen isn’t actually from Taiwan—the founder named it “Taiwan Ramen” after his own Taiwanese roots. It is one of Nagoya’s local food that evolved entirely in Japan, and this intensely spicy, strangely addictive flavor is so irresistible that I found myself going back to the restaurant again on my last trip home.\n\nTonight, I’m making the Taiwan ground pork the star of the dish, serving it over rice with a soft-boiled egg instead of its original ramen noodles. It might be so spicy that I end up staying awake all night.`,
     ingredientFile:[
       {name:'GROUND PORK',details:[['Flavor','Rich, savory, fatty'],['Substitute','Ground chicken or turkey, although fatty pork gives the closest result']]},
-      {name:'FRESH RED CHILI',details:[['Origin','East & Southeast Asia'],['Flavor','Fresh, sharp, bright heat'],['Substitute','Dried Thai chili or red chili flakes'],['Storage','Refrigerate loosely wrapped.'],['Why here?','Plenty of fresh chili and garlic are essential to this recipe!']]},
-      {name:'GARLIC',details:[['Flavor','Fresh, garlicky, slightly sweet'],['Why here?','Plenty of fresh chili and garlic are essential to this recipe!']]},
+      {name:'FRESH RED CHILI',details:[['Origin','East & Southeast Asia'],['Flavor','Fresh, sharp, bright heat'],['Substitute','Dried Thai chili or red chili flakes'],['Storage','Refrigerate loosely wrapped.'],['Why here','Plenty of fresh chili and garlic are essential to this recipe!']]},
+      {name:'GARLIC',details:[['Flavor','Fresh, garlicky, slightly sweet'],['Why here','Plenty of fresh chili and garlic are essential to this recipe!']]},
       {name:'DOUBANJIANG',details:[['Origin','China'],['Flavor','Fermented, salty, savory, deeply spicy'],['Substitute','Chili bean paste or, in a pinch, a combination of chili paste and a little miso']]}
     ],
     ingredients:[
@@ -543,10 +543,10 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     usCupFractions:true,
     forceCupUnits:true,
     ingredientFile:[
-      {name:'Sweetened Condensed Milk',details:[['Flavor','Rich, milky, caramel-like sweetness.'],['Best choice','Use plain full-fat sweetened condensed milk. The entire 300 ml can is used.'],['Why here?','The acid in the lime juice reacts with the milk proteins, helping the filling thicken without needing starch or gelatin.'],['Substitute','Evaporated milk is not a direct substitute because it is unsweetened and has a different consistency.'],['Storage','Refrigerate after opening. Keep the unopened can according to the manufacturer\'s instructions.'],['Midnight Fix','Use the entire 300 ml can so there is no leftover condensed milk to deal with.']]},
-      {name:'Persian/Tahiti Limes',details:[['Flavor','Bright, tart, fresh, and aromatic.'],['Best choice','Choose firm, heavy limes with fragrant skin. Since the zest is used, organic or unwaxed limes are best. If using waxed limes, scrub and rinse well before zesting.'],['Why here?','Regular Persian/Tahiti limes are much easier to find in Toronto while still providing the bright acidity and fresh lime aroma needed for the pie. The extra zest helps make up for the difference from Key limes.'],['Substitute','Key limes can be used if available. Use the same total amount of juice. Bottled Key lime juice can be used in a pinch, but fresh lime juice and zest are preferred for the brightest flavor.'],['Storage','Store whole limes at room temperature for short-term use or refrigerate for longer storage.'],['Tips','One average-sized lime yields about 2 tbsp (30 ml) of fresh lime juice. Roll each lime firmly against the counter before juicing to help release more juice. Cold limes are firmer, which can make the zest easier to grate cleanly. Because both the zest and juice are used, zest the limes before squeezing them.']]},
-      {name:'Sour Cream',details:[['Flavor','Creamy, slightly tangy, with a subtle fermented note.'],['Best choice','Use regular full-fat sour cream rather than a very low-fat version.'],['Why here?','It adds body, creaminess, and extra tang to the filling without increasing the amount of condensed milk.'],['Substitute','Plain full-fat Greek yogurt can work, although the flavor will be slightly different.'],['Storage','Keep refrigerated.']]},
-      {name:'Cream of Tartar',details:[['Flavor','Mildly acidic, but the small amount used here does not noticeably affect the flavor.'],['Why here?','Helps stabilize whipped egg whites and create a more stable meringue structure.'],['Substitute','A small amount of lemon juice or white vinegar can help stabilize meringue, but cream of tartar is preferred here because it adds very little additional liquid.'],['Midnight Fix','If you don\'t have cream of tartar, the meringue can still be made without it. Make sure the bowl and beaters are completely clean and dry, and add the sugar gradually.']] }
+      {name:'Sweetened Condensed Milk',details:[['Flavor','Rich, milky, caramel-like sweetness.'],['Best choice','Use plain full-fat sweetened condensed milk. The entire 300 ml can is used.'],['Why here','The acid in the lime juice reacts with the milk proteins, helping the filling thicken without needing starch or gelatin.'],['Substitute','Evaporated milk is not a direct substitute because it is unsweetened and has a different consistency.'],['Storage','Refrigerate after opening. Keep the unopened can according to the manufacturer\'s instructions.'],['Midnight Fix','Use the entire 300 ml can so there is no leftover condensed milk to deal with.']]},
+      {name:'Persian/Tahiti Limes',details:[['Flavor','Bright, tart, fresh, and aromatic.'],['Best choice','Choose firm, heavy limes with fragrant skin. Since the zest is used, organic or unwaxed limes are best. If using waxed limes, scrub and rinse well before zesting.'],['Why here','Regular Persian/Tahiti limes are much easier to find in Toronto while still providing the bright acidity and fresh lime aroma needed for the pie. The extra zest helps make up for the difference from Key limes.'],['Substitute','Key limes can be used if available. Use the same total amount of juice. Bottled Key lime juice can be used in a pinch, but fresh lime juice and zest are preferred for the brightest flavor.'],['Storage','Store whole limes at room temperature for short-term use or refrigerate for longer storage.'],['Tips','One average-sized lime yields about 2 tbsp (30 ml) of fresh lime juice. Roll each lime firmly against the counter before juicing to help release more juice. Cold limes are firmer, which can make the zest easier to grate cleanly. Because both the zest and juice are used, zest the limes before squeezing them.']]},
+      {name:'Sour Cream',details:[['Flavor','Creamy, slightly tangy, with a subtle fermented note.'],['Best choice','Use regular full-fat sour cream rather than a very low-fat version.'],['Why here','It adds body, creaminess, and extra tang to the filling without increasing the amount of condensed milk.'],['Substitute','Plain full-fat Greek yogurt can work, although the flavor will be slightly different.'],['Storage','Keep refrigerated.']]},
+      {name:'Cream of Tartar',details:[['Flavor','Mildly acidic, but the small amount used here does not noticeably affect the flavor.'],['Why here','Helps stabilize whipped egg whites and create a more stable meringue structure.'],['Substitute','A small amount of lemon juice or white vinegar can help stabilize meringue, but cream of tartar is preferred here because it adds very little additional liquid.'],['Midnight Fix','If you don\'t have cream of tartar, the meringue can still be made without it. Make sure the bowl and beaters are completely clean and dry, and add the sugar gradually.']] }
     ],
     ingredients:[
       {group:'Graham Cracker Crust'},
@@ -645,7 +645,7 @@ If the internet was calling it the world’s best, I had to find out for myself,
         ['Origin','Southeast Asia'],
         ['Flavor','Peppery, citrusy, floral, slightly piney'],
         ['Best choice','Fresh galangal'],
-        ['Why here?','Fresh galangal gives Tom Kha its distinctive peppery and floral character and tastes noticeably different from ginger.'],
+        ['Why here','Fresh galangal gives Tom Kha its distinctive peppery and floral character and tastes noticeably different from ginger.'],
         ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, and T&T are good places to look.'],
         ['Substitute','Fresh ginger plus a little extra lemongrass, although the flavor will be different.'],
         ['Storage','Wrap fresh galangal loosely and refrigerate. Dried galangal should be kept airtight in a cool, dark place.'],
@@ -655,7 +655,7 @@ If the internet was calling it the world’s best, I had to find out for myself,
         ['Origin','Thailand / Southeast Asia'],
         ['Flavor','Intensely citrusy, floral, aromatic'],
         ['Best choice','Fresh makrut lime leaves'],
-        ['Why here?','Makrut lime leaf provides the floral citrus aroma that makes the broth recognizable as Tom Kha.'],
+        ['Why here','Makrut lime leaf provides the floral citrus aroma that makes the broth recognizable as Tom Kha.'],
         ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, and T&T are good places to look.'],
         ['Substitute','Fresh lime zest can add some citrus aroma, but it cannot fully replace makrut lime leaf.'],
         ['Storage','Keep dried leaves airtight and away from light and moisture.']
@@ -664,7 +664,7 @@ If the internet was calling it the world’s best, I had to find out for myself,
         ['Origin','Southeast Asia'],
         ['Flavor','Bright, citrusy, grassy'],
         ['Best choice','Fresh lemongrass stalks'],
-        ['Why here?','Lemongrass adds a bright citrus aroma to the broth and works together with galangal and makrut lime leaf.'],
+        ['Why here','Lemongrass adds a bright citrus aroma to the broth and works together with galangal and makrut lime leaf.'],
         ['Substitute','Frozen or pre-minced lemongrass'],
         ['Storage','Fresh stalks can be refrigerated for about a week; frozen lemongrass keeps much longer.'],
         ['Midnight Fix','Use 1½ tbsp finely minced lemongrass when whole stalks are inconvenient.'],
@@ -752,14 +752,14 @@ This isn't a traditional Thai dish. It's simply my midnight attempt to recreate 
       {name:'100% Peanut Butter',details:[
         ['Flavor','Rich, nutty, roasted, creamy'],
         ['Best choice','Smooth peanut butter made from 100% peanuts, with no added sugar'],
-        ['Why here?','Adds concentrated roasted-peanut flavor and creates a creamy, glossy sauce without needing a separate peanut sauce.'],
+        ['Why here','Adds concentrated roasted-peanut flavor and creates a creamy, glossy sauce without needing a separate peanut sauce.'],
         ['Substitute','Other nut butter']
       ]},
       {name:'Sambal Oelek',details:[
         ['Origin','Indonesia'],
         ['Flavor','Fresh chili heat with a slightly tangy edge'],
         ['Best choice','A simple chili paste with minimal added ingredients'],
-        ['Why here?','Provides the chili element without making the sauce overwhelmingly spicy.'],
+        ['Why here','Provides the chili element without making the sauce overwhelmingly spicy.'],
         ['Substitute','Finely minced fresh red chili or a mild chili paste'],
         ['Storage','Refrigerate after opening, following the product label.']
       ]},
@@ -767,7 +767,7 @@ This isn't a traditional Thai dish. It's simply my midnight attempt to recreate 
         ['Origin','East Asia'],
         ['Flavor','Clean, mild acidity'],
         ['Best choice','Plain, unseasoned rice vinegar'],
-        ['Why here?','Balances the richness of peanut butter and the sweetness of sugar.'],
+        ['Why here','Balances the richness of peanut butter and the sweetness of sugar.'],
         ['Substitute','White vinegar, using slightly less at first and adjusting to taste']
       ]}
     ],
@@ -873,8 +873,7 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
         ['Flavor','Sweet, savory, aromatic'],
         ['Best choice','Yellow onion'],
         ['Why here','Adds moisture and sweetness to the patties.'],
-        ['Substitute','Shallot'],
-        ['Midnight Fix','Finely chop the onion so it cooks through without sautéing it first.']
+        ['Substitute','Shallot']
       ]},
       {name:'Worcestershire Sauce',details:[
         ['Origin','England'],
