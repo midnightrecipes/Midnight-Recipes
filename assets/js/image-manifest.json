@@ -210,7 +210,7 @@
     }
   },
   "silky-cheesecake": {
-    "hero": null,
+    "hero": "images/recipes/silky-cheesecake/hero.jpg",
     "recipe": "images/recipes/silky-cheesecake/recipe.jpg",
     "steps": {
       "02": [
