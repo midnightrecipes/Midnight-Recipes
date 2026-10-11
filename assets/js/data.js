@@ -347,7 +347,7 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
       'BEST EATEN':'Tomorrow, after chilling overnight. The orange and spices develop a rounder flavor overnight. For the cleanest slices, refrigerate for several hours before serving. Serve cold or at room temperature.',
       'MAKE AHEAD':'Yes. Make the pie the day before serving so it can chill overnight.',
       'STORAGE':'Cover and refrigerate for up to 3 days. Store the orange-molasses syrup separately in a covered container in the refrigerator for up to 5 days.',
-      'FREEZER':'Freezing guidance needs confirmation.',
+      'FREEZER':'Freeze the fully cooled pie, wrapped tightly and placed in a freezer-safe container, for up to 1 month for best quality. Thaw overnight in the refrigerator before serving. The filling may be slightly softer after thawing.',
       'REHEAT':'Gently warm individual slices in a low oven if you prefer the pie warm.'
     },
     tags:['Movie','Coco','Pie','Mexican','Pumpkin','DíaDeMuertos','Ofrenda','CalabazaenTacha','Baking','Dessert'], mainIngredients:['Pumpkin','Orange','Cinnamon','Molasses'],
@@ -444,7 +444,7 @@ What if we just put way more banana in banana cream pie?`,
       'BEST EATEN':'Tomorrow, after chilling thoroughly. Enjoy chilled straight from the fridge.',
       'MAKE AHEAD':'Yes. Prepare the pie the day before serving so it has time to chill thoroughly.',
       'STORAGE':'Store in an airtight container in the refrigerator for up to 3 days.',
-      'FREEZER':'Freezing guidance needs confirmation.',
+      'FREEZER':'Freezing is not recommended. The bananas may darken and the custard filling can become watery or change texture after thawing.',
       'REHEAT':'Not applicable.'
     },
     mainIngredients:['Banana','Milk','Egg Yolks','Biscuits'], footerInspiredBy:'Midnight Experiment', footerCuisine:'American', footerCourse:'Baking, Dessert', footerMainIngredients:['Banana','Milk','Egg Yolks','Biscuits']
@@ -525,7 +525,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
       'BEST EATEN':'Tomorrow, after chilling overnight, when the sweet potato, ginger, and cinnamon flavors have had time to come together.',
       'MAKE AHEAD':'Yes. Make the pie the day before serving and refrigerate overnight.',
       'STORAGE':'Cover and refrigerate for up to 4 days.',
-      'FREEZER':'Freezing may affect the filling’s texture. Freezing guidance needs confirmation.',
+      'FREEZER':'Freeze the fully cooled pie, wrapped tightly and placed in a freezer-safe container, for up to 1 month for best quality. Thaw overnight in the refrigerator. The filling may soften slightly after thawing.',
       'REHEAT':'Gently warm individual slices in a low oven if you prefer the pie warm.'
     },
     mainIngredients:['Sweet Potato','Ginger','Cream','Cinnamon'], footerInspiredBy:'Traditional', footerCuisine:'Chinese · American', footerCourse:'Dessert', footerMainIngredients:['Sweet Potato','Ginger','Cream','Cinnamon']
@@ -658,7 +658,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
       'BEST EATEN':'Tomorrow (after chilling thoroughly).',
       'MAKE AHEAD':'Yes. The pie is ideal made the night before.',
       'STORAGE':'Refrigerate, covered, for up to 3 days.',
-      'FREEZER':'Freezing guidance needs confirmation, especially for the meringue’s texture.',
+      'FREEZER':'Freezing is not recommended for this meringue-topped pie. The meringue may weep or become watery, and its texture can change after thawing.',
       'REHEAT':'Not applicable.'
     },
     tags:['Baking','Dessert','American','Lime','Key Lime Pie','Pie','Meringue','Toronto','Grocery Store Find'], mainIngredients:['Lime','Eggs','Cream','Pie'], usualsCategory:''
@@ -1002,7 +1002,7 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
       'BEST EATEN':'Fresh, while warm.',
       'MAKE AHEAD':'Shape the patties up to 1 day ahead. Cover and refrigerate.',
       'STORAGE':'Refrigerate in an airtight container for up to 3 days.',
-      'FREEZER':'Freeze cooked patties in an airtight, freezer-safe container. Storage duration needs confirmation.',
+      'FREEZER':'Freeze cooked patties in an airtight, freezer-safe container for up to 3 months for best quality. Cool promptly before freezing and thaw in the refrigerator before reheating.',
       'REHEAT':'Reheat covered in a pan with a splash of water, or gently in the microwave.'
     },
     tags:['Memory','Japanese','Hamburg Steak','Ground Meat','Family Cooking','Demi-Glace Sauce'],
