@@ -18,7 +18,6 @@ Add one object to `assets/js/data.js`. Use:
 - `ingredients`
 - `ingredientFile`
 - `heroImage`
-- `cardImage`
 - `stepImages`
 
 `ingredients` are the ingredients actually used by the recipe. `ingredientFile` is separate supporting information about ingredients and may contain only the fields that are useful.
@@ -35,8 +34,7 @@ ingredients: [
 
 ## Photo System
 ```text
-heroImage = Recipe page Hero, 2:3
-cardImage = Recipe cards, 1:1
+heroImage = Recipe page Hero, 2:3, also reused as the Recipe card image, 1:1
 stepImages = optional per-step photo arrays, 1:1
 Each step can also define `photos: []` with 1–3 image paths; when both are present, the step-level `photos` value takes priority.
 ```
@@ -44,7 +42,6 @@ Each step can also define `photos: []` with 1–3 image paths; when both are pre
 Photo naming:
 ```text
 [recipe-slug]-hero.jpg
-[recipe-slug]-card.jpg
 [recipe-slug]-step-01.jpg
 [recipe-slug]-step-02.jpg
 [recipe-slug]-step-03.jpg
@@ -54,14 +51,13 @@ For multiple photos in one step, use any clear filename convention and list them
 Store them in `images/recipes/`.
 
 Fallback rules:
-- Hero: `heroImage` → current placeholder if missing/unavailable.
-- Card: `cardImage` → `heroImage` → current placeholder.
+- Hero / Card: `heroImage` → current placeholder if missing/unavailable. There is no separate card image field; cards always reuse the hero image.
 - Step: `stepImages` → show the photo; if there is no Step photo, do not show a placeholder.
 
 Recipe cards use `aspect-ratio: 1 / 1; object-fit: cover`. Recipe Hero uses `aspect-ratio: 2 / 3; object-fit: cover`. Step photos use `aspect-ratio: 1 / 1; object-fit: cover`.
 
 ## Automatic classification
-A recipe is entered once in `data.js`. `source`, `course`/`meal`, `cuisine`, `ingredientCategories`, and `categories` drive View All, By Source, By Course, By Cuisine, By Ingredient, The Usuals and Search automatically. Latest Recipes sorts by `dateAdded` descending.
+A recipe is entered once in `data.js`. `source`, `course`/`meal`, `cuisine`, and `categories` drive View All, By Source, By Course, By Cuisine, The Usuals and Search automatically. `ingredientCategories` and `ingredients` feed Search and the Ingredient File only; there is no By Ingredient browse menu. Latest Recipes sorts by `dateAdded` descending.
 
 ## Search
 Search crosses title, source, cuisine, meal, categories, description and ingredient metadata.
@@ -83,14 +79,13 @@ RECIPES
     By Source
     By Course
     By Cuisine
-    By Ingredient
     The Usuals
 
 ABOUT
 CONTACT
 ```
 
-Source / course / cuisine / ingredient menu entries are clickable filters. Cuisine is displayed in the requested regional hierarchy.
+Source / course / cuisine menu entries are clickable filters. Cuisine is displayed in the requested regional hierarchy. The Usuals sits alongside these as its own independent collection, driven by `usualsCategory`, not by `source`.
 
 Recipe timestamps use `timeStamp`, for example `12:38 AM`, and render as `📍 12:38 AM · TORONTO`.
 No development view switcher is included in production.
@@ -146,3 +141,10 @@ The supplied source did not include the actual external recipe-photo files or th
 - Source values are exactly: Restaurant, Grocery Store Find, Movie & TV, Book, Travel, Family & Tradition, Memory, Internet Find, Midnight Experiment.
 - The Usuals is a separate Recipes category, not a Source.
 - Navigation: View All, By Source, By Course, By Cuisine, The Usuals.
+
+## Cleanup pass
+- `cardImage` is removed from `data.js` entirely; recipe cards always reuse `heroImage` (there is nothing left to keep in sync).
+- `courseDisplay` / `footerCourse` values are standardized on `Desserts` (plural), matching the canonical course list.
+- The By Ingredient menu and all of its supporting code (`MIDNIGHT_INGREDIENTS`, the ingredient filter branch, `activeIngredients()`) are removed; it was already hidden from the UI and unused.
+- `stats.quest` is renamed to `stats.quiet` to match the "Quiet level" label it drives.
+- The shared header, menu and search markup repeated across all 11 HTML shells now lives in one place, `assets/js/shell.js`, injected into each page at load time. Each page file only keeps its own `data-depth` / `data-page` and script tags, so a future header/menu change is a single-file edit instead of an 11-file find-and-replace.
