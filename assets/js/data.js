@@ -942,7 +942,110 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
     tags:['Memory','Japanese','Hamburg Steak','Ground Meat','Family Cooking','Demi-Glace Sauce'],
     usualsCategory:''
   }
-
+,
+  {
+    slug:'silky-cheesecake',
+    title:'Silky Cheesecake',
+    source:'Book',
+    original:'Norwegian Wood (1987) by Haruki Murakami',
+    dish:'Cheesecake',
+    cuisine:'American',
+    course:'Baking',
+    courseDisplay:'Baking, Desserts',
+    meal:'Baking',
+    categories:['Baking','Desserts'],
+    dateAdded:'2026-10-10',
+    timeStamp:'10:10 PM',
+    story:`In Haruki Murakami's *Norwegian Wood*, Midori has an unusual idea of what it means to be loved.
+Imagine someone buying her a strawberry shortcake, only for her to throw it out of the window. Instead of getting angry, she wants him to ask, “Chocolate mousse or cheesecake?”
+It's a slightly unreasonable thing to ask of someone, isn't it? But I think that's what makes the scene so memorable. Midori isn't really talking about cake. She wants to know that even when she's difficult, even when she pushes someone away, they might still choose to stay.
+I don't completely agree with her, because I don't think love means putting up with everything someone does. We all have our limits, and loving someone doesn't mean ignoring your own feelings. But there's something comforting about being with someone who doesn't give up on you the moment things get difficult. Someone who is willing to ask again, rather than assuming the answer will always be no.
+For me, food has always been one of the ways we express love. Cooking for someone is a way of saying, "I thought of you. I want you to be happy. I care about what you need." Sometimes, love is simply remembering what someone likes to eat. And sometimes, it's being willing to ask one more time.
+ *"To make it up to you, I'll go out and buy you something else. What would you like? Chocolate mousse? Cheesecake?"*
+If you choose cheesecake, try this recipe tonight.`,
+    ingredientFile:[
+      {name:'Cream Cheese',details:[
+        ['Flavor','Smooth, rich, milky, and slightly tangy, with a subtle salty note.'],
+        ['Best Choice','Full-fat cream cheese for a richer flavor and creamier texture.'],
+        ['Substitute','There is no substitute for the main character!'],
+        ['Storage','Keep refrigerated. For this recipe, soften at room temperature before using.']
+      ]},
+      {name:'Sour Cream',details:[
+        ['Flavor','Creamy with a pleasant tang that balances the richness of the cheese and creates a lighter finish.'],
+        ['Best Choice','Full-fat sour cream for a creamy texture and balanced tanginess.'],
+        ['Why Here?','Adds acidity to balance the richness of the cream cheese, creating a smooth texture that doesn\'t feel too heavy.'],
+        ['Substitute','Plain Greek yogurt can be used.'],
+        ['Storage','Keep refrigerated. For this recipe, bring it close to room temperature before using.'],
+        ['Midnight Fix','Replace sour cream with the same amount of plain Greek yogurt. The cheesecake will taste slightly tangier and may have a somewhat lighter, less rich texture. Choose full-fat Greek yogurt if possible for the creamiest result.']
+      ]},
+      {name:'35% Whipping Cream',details:[
+        ['Flavor','Mild, milky, and creamy. It softens the tanginess of the sour cream and contributes to a smooth mouthfeel.'],
+        ['Best Choice','35% milk-fat whipping cream for a smooth, rich texture without making the cheesecake as dense as a New York-style cheesecake.'],
+        ['Why Here?','Adds moisture and milk fat to create a cheesecake that feels silky and creamy without being overly heavy.'],
+        ['Substitute','Other creams may have different fat and water contents, so the final texture may vary.'],
+        ['Storage','Keep refrigerated until ready to use. For this recipe, bring it close to room temperature before using.'],
+        ['Midnight Fix','When using a substitute, consider its fat and water content, as these can affect the cheesecake\'s richness and texture.']
+      ]}
+    ],
+    ingredients:[
+      {amount:250,unit:'g',item:'Cream Cheese'},
+      {amount:85,unit:'g',item:'Granulated Sugar'},
+      {amount:173,unit:'g',item:'Sour Cream'},
+      {amount:125,unit:'g',item:'35% Whipping Cream'},
+      {amount:2,unit:'',item:'Eggs'},
+      {amount:8,unit:'g',item:'Cornstarch'},
+      {amount:10,unit:'ml',item:'Lemon Juice'},
+      {amount:0.5,unit:'tsp',item:'Vanilla Extract'}
+    ],
+    stats:{prep:'20 mins',cook:'45–50 mins',chill:'8 hrs+',total:'9 hrs+',serves:'6–8 slices',pan:'18 cm loaf pan',quest:'⭐⭐⭐⭐⭐'},
+    showPan:true,
+    showChill:true,
+    stepQuantityConversion:true,
+    usCupFractions:true,
+    fractionDenominator:16,
+    steps:[
+      {number:'01',title:'PREPARE THE INGREDIENTS',clock:'10:10 PM',paragraphs:[
+        'Bring the cream cheese, sour cream, and eggs close to room temperature.',
+        'Preheat the oven to 150°C / 300°F. Line an 18 cm loaf pan with parchment paper.',
+        'Beat the eggs in a separate bowl and set aside.'
+      ],stepImages:[]},
+      {number:'02',title:'BUILD THE CREAMY BASE',clock:'10:15 PM',paragraphs:[
+        'In a large bowl, mix the {{qty:Cream Cheese}} cream cheese until completely smooth and free of lumps.',
+        'Add the {{qty:Granulated Sugar}} granulated sugar, {{qty:Sour Cream}} sour cream, and {{qty:35% Whipping Cream}} whipping cream. Mix until evenly combined.'
+      ],stepImages:[]},
+      {number:'03',title:'FINISH WITH A SILKY BATTER',clock:'10:20 PM',paragraphs:[
+        'Gradually add {{qty:Eggs}} beaten eggs in two or three additions, mixing gently after each addition.',
+        'Sift in the {{qty:Cornstarch}} cornstarch, then add the {{qty:Lemon Juice}} lemon juice and {{qty:Vanilla Extract}} vanilla extract. Mix until the batter is smooth and uniform.',
+        'Pour the batter into the prepared loaf pan. Gently tap the pan against the counter to release large air bubbles.',
+        'For an extra-silky texture, strain the batter through a fine-mesh sieve before pouring it into the pan.'
+      ],stepNote:'**Midnight Shortcut:** Put all the batter ingredients into the food processor and blend until smooth. Avoid overmixing to prevent unnecessary air incorporation.',stepImages:[]},
+      {number:'04',title:'LET THE WATER BATH DO THE WORK',clock:'10:30 PM',paragraphs:[
+        'Place the loaf pan inside a larger, deep oven-safe tray. Carefully pour hot water into the outer tray to create a water bath.',
+        'Bake at 150°C / 300°F for approximately 45–50 minutes, checking for doneness from around 45 minutes. The edges should be set while the center still jiggles slightly when the pan is gently moved.',
+        'While the cheesecake bakes, you can go take a shower. Let the oven do the work for a while.'
+      ],stepNote:'**Estimated Baking Window:** Approximately 10:40–11:25 PM or later, depending on the oven and pan.',stepImages:[]},
+      {number:'05',title:'GIVE IT THE NIGHT',clock:'11:15 PM',paragraphs:[
+        'Remove the pan from the water bath and let the cheesecake cool in the pan until it reaches room temperature.',
+        'Refrigerate overnight for at least 8 hours to allow the texture to set completely.',
+        'Once thoroughly chilled, lift the cheesecake out of the pan.'
+      ],stepImages:[]}
+    ],
+    notes:[
+      ['Not Quite New York, Not Quite Soufflé','This cheesecake sits somewhere between a dense New York-style cheesecake and a light Japanese soufflé cheesecake. It has a creamy, silky mouthfeel without feeling quite so heavy, while remaining rich enough to satisfy a cheesecake craving. The goal is a delicate texture that feels just right, even for a late-night slice.'],
+      ['Why Bake It in a Water Bath?','A water bath helps moderate the heat around the pan, encouraging the cheesecake to bake more gently and evenly. This is especially useful when aiming for a soft, creamy texture rather than a dry or overly firm one.'],
+      ['To Strain or Not to Strain?','Straining is optional, but I recommend it if you want the smoothest texture. A fine-mesh sieve catches small lumps of cream cheese and any undissolved bits that might otherwise affect the finished mouthfeel.'],
+      ['The Gentle Jiggle','The cheesecake should still have a slight wobble in the center when it comes out of the oven. It will continue to set as it cools and chills. Waiting until the center is completely firm in the oven may result in a drier texture.']
+    ],
+    finePrint:{
+      'BEST EATEN':'Tomorrow — Let the cheesecake sit at room temperature for 5–10 minutes before serving. This helps soften the texture and bring out its creamy, silky mouthfeel.',
+      'MAKE AHEAD':'Yes — Prepare the cheesecake the day before serving and refrigerate overnight to allow it to set completely.',
+      'STORAGE':'Cover and refrigerate leftovers promptly. For best quality, enjoy within 3–4 days.',
+      'FREEZER':'Cheesecake can be frozen for longer storage. For the best texture, wrap individual slices tightly and place them in an airtight freezer-safe container. Use within 1 month for best quality. Thaw overnight in the refrigerator before serving. The texture may change slightly after freezing.',
+      'REHEAT':'Not applicable.'
+    },
+    tags:['cheesecake','baked cheesecake','creamy cheesecake','silky texture','cream cheese','water bath','make ahead dessert','Haruki Murakami','Norwegian Wood'],
+    usualsCategory:''
+  },
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
 window.MIDNIGHT_COURSES = ['Breakfast & Brunch','Appetizers','Snacks','Soups','Salads','Main Dishes','Sides','Baking','Desserts'];
