@@ -209,6 +209,29 @@
       ]
     }
   },
+  "silky-cheesecake": {
+    "hero": "images/recipes/silky-cheesecake/hero.jpg",
+    "recipe": "images/recipes/silky-cheesecake/recipe.jpg",
+    "steps": {
+      "02": [
+        "images/recipes/silky-cheesecake/step-02-01.jpg",
+        "images/recipes/silky-cheesecake/step-02-02.jpg",
+        "images/recipes/silky-cheesecake/step-02-03.jpg"
+      ],
+      "03": [
+        "images/recipes/silky-cheesecake/step-03-01.jpg",
+        "images/recipes/silky-cheesecake/step-03-02.jpg",
+        "images/recipes/silky-cheesecake/step-03-03.jpg",
+        "images/recipes/silky-cheesecake/step-03-04.jpg"
+      ],
+      "04": [
+        "images/recipes/silky-cheesecake/step-04-01.jpg"
+      ],
+      "05": [
+        "images/recipes/silky-cheesecake/step-05-01.jpg"
+      ]
+    }
+  },
   "sweet-chili-peanut-chicken": {
     "hero": "images/recipes/sweet-chili-peanut-chicken/hero.jpg",
     "recipe": "images/recipes/sweet-chili-peanut-chicken/recipe.jpg",
