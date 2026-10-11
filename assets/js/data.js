@@ -68,7 +68,13 @@ window.MIDNIGHT_RECIPES = [
       ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-05-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-05-02.jpg']}
     ],
     notes:[['Recreating the Flavor','I use dark chocolate together with cocoa powder and a hint of espresso powder to take the filling beyond a simple cocoa base, creating a deeper and more layered chocolate flavor.'],['Midnight Shortcut','Chilling the crust in the freezer while preparing the filling saves time without adding another complicated step.'],['Midnight Compromises','If you are too exhausted to whisk by hand, store-bought whipped cream works perfectly well. Freshly whipped cream, however, gives a better texture and a prettier finish when you have a few extra minutes.']],
-    finePrint:{'BEST EATEN':'Tomorrow — the filling becomes firmer and the flavors settle overnight.','MAKE AHEAD':'Yes. Prepare up to 1 day ahead. Add the whipped cream just before serving.','STORAGE':'Refrigerate, covered, for up to 3 days.','FREEZER':'Not applicable.','REHEAT':'Not applicable.'},
+    finePrint:{
+      'BEST EATEN':'Tomorrow — the filling becomes firmer and the flavors settle overnight.',
+      'MAKE AHEAD':'Yes. Prepare up to 1 day ahead. Add the whipped cream just before serving.',
+      'STORAGE':'Refrigerate, covered, for up to 3 days.',
+      'FREEZER':'Not applicable.',
+      'REHEAT':'Not applicable.'
+    },
     tags:['Movie & TV','Baking','Desserts','American','Chocolate','Pie'], mainIngredients:['Chocolate','Pie'], usualsCategory:''
   },
 
@@ -160,7 +166,13 @@ window.MIDNIGHT_RECIPES = [
       ['The Fresh Chili Trick','Fresh red chili replaces the dried chili traditionally used in many versions of Taiwan mince. Finely chopping the chili with the seeds and membrane distributes the heat throughout the meat rather than giving you occasional bites of whole chili.'],
       ['Why the Sauce Is Deliberately Generous','This version is designed specifically for rice. The mince shouldn’t be dry like ordinary *soboro* (そぼろ: finely crumbled and seasoned ground meat). It should sit somewhere between a stir-fried mince and a braised mince, with enough concentrated sauce to soak into the rice. The rice is supposed to get spicy, too.']
     ],
-    finePrint:{'BEST EATEN':'Fresh, served hot over steamed white rice with a freshly cooked fried egg.','MAKE AHEAD':'Yes. Prepare the Taiwan mince ahead of time. Cook the rice and fried egg just before serving.','STORAGE':'Refrigerate the Taiwan mince in an airtight container for up to 3 days. Store the rice separately.','FREEZER':'Freeze the Taiwan mince for up to 1–2 months.','REHEAT':'Reheat in the microwave or on the stovetop. Add a splash of water if the mince becomes too dry.','FRIED EGG':'Best made fresh.'},
+    finePrint:{
+      'BEST EATEN':'Fresh, served hot over steamed white rice with a freshly cooked fried egg.',
+      'MAKE AHEAD':'Yes. Prepare the Taiwan mince ahead of time. Cook the rice and fried egg just before serving.',
+      'STORAGE':'Refrigerate the Taiwan mince in an airtight container for up to 3 days. Store the rice separately.',
+      'FREEZER':'Freeze the Taiwan mince in an airtight container for up to 1–2 months. Thaw in the refrigerator before reheating.',
+      'REHEAT':'Reheat the mince in the microwave or on the stovetop. Add a splash of water if it becomes too dry.'
+    },
     tags:['Restaurant','Main Dishes','Japanese','Ground Pork','Garlic','Fresh Red Chili','Garlic Chives','Doubanjiang'],
     mainIngredients:['Ground Pork','Garlic','Fresh Red Chili','Garlic Chives','Doubanjiang'],
     usualsCategory:''
@@ -265,7 +277,13 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
       ['A Smooth Surface','Gentle mixing, straining, resting, and removing foam help create a smooth custard.'],
       ["Don't Overbake",'The center should still wobble gently when it comes out of the oven. It will continue to set as it cools.']
     ],
-    finePrint:{'BEST EATEN':'Chilled, with the sugar freshly caramelized just before serving.','MAKE AHEAD':'Yes. Prepare the custard ahead and caramelize the sugar just before serving.','STORAGE':'Keep the baked custard covered and refrigerated for up to 3–4 days. Caramelize the sugar just before serving.','FREEZER':'Not applicable.','REHEAT':'Not applicable.'},
+    finePrint:{
+      'BEST EATEN':'Tomorrow (after chilling thoroughly). Caramelize the sugar just before serving.',
+      'MAKE AHEAD':'Yes. Prepare the custard ahead of time and refrigerate. Caramelize the sugar just before serving.',
+      'STORAGE':'Cover and refrigerate for up to 3–4 days. Caramelize the sugar just before serving.',
+      'FREEZER':'Not applicable.',
+      'REHEAT':'Not applicable.'
+    },
     tags:['Dessert','French','Apples','CremeBrulee','Custard','Movie'],
     mainIngredients:['Apples','Cream','Milk','Egg Yolks','Vanilla'],
     usualsCategory:''
@@ -325,7 +343,13 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
       ['Midnight Compromises','Traditional Calabaza en Tacha is made with pieces of pumpkin cooked directly in syrup. This isn\'t that.\n\nI used canned pumpkin purée and turned the same flavor profile into a creamy pumpkin pie — because at midnight, opening a can beats peeling and simmering an entire pumpkin.\n\nI also don\'t have piloncillo, so dark brown sugar and a little molasses stand in for its deep, almost caramel-like flavor.'],
       ['Why No Pumpkin Spice?','No ground cinnamon.\n\nNo nutmeg.\n\nNo ginger.\n\nInstead, the spices are infused whole into the Half & Half.\n\nIt\'s warmer, more aromatic, and closer to the syrupy character I wanted from Calabaza en Tacha.']
     ],
-    finePrint:{'BEST EATEN':'Tomorrow, after chilling overnight. The orange and spices develop a rounder flavor overnight. For the cleanest slices, refrigerate the pie for several hours before serving. Serve cold or at room temperature.','MAKE AHEAD':'Yes. Make the pie the day before serving so it can chill overnight.','STORAGE':'Cover and refrigerate for up to 3 days.','REHEAT':'Not applicable.','SYRUP':'Store separately in the refrigerator for up to 5 days.'},
+    finePrint:{
+      'BEST EATEN':'Tomorrow, after chilling overnight. The orange and spices develop a rounder flavor overnight. For the cleanest slices, refrigerate for several hours before serving. Serve cold or at room temperature.',
+      'MAKE AHEAD':'Yes. Make the pie the day before serving so it can chill overnight.',
+      'STORAGE':'Cover and refrigerate for up to 3 days. Store the orange-molasses syrup separately in a covered container in the refrigerator for up to 5 days.',
+      'FREEZER':'Freezing guidance needs confirmation.',
+      'REHEAT':'Gently warm individual slices in a low oven if you prefer the pie warm.'
+    },
     tags:['Movie','Coco','Pie','Mexican','Pumpkin','DíaDeMuertos','Ofrenda','CalabazaenTacha','Baking','Dessert'], mainIngredients:['Pumpkin','Orange','Cinnamon','Molasses'],
     footerInspiredBy:'Calabaza en Tacha', footerCuisine:'Mexican, Canadian, North American', footerCourse:'Baking · Dessert', footerMainIngredients:['Pumpkin','Orange','Cinnamon','Molasses']
   },
@@ -416,7 +440,13 @@ What if we just put way more banana in banana cream pie?`,
       ['Experiment 3: Blend it All Together','I originally considered keeping the banana and vanilla custards separate, but that meant making two different layers and adding extra steps.\n\nInstead, I decided to blend the concentrated banana directly into the finished custard.\n\nThe food processor turns everything into a completely smooth, silky banana cream while keeping the process simple.\n\nThe result is a filling that tastes intensely of banana from the first bite to the last.'],
       ['The Result','The final pie has a simple but satisfying contrast.\n\nThe fresh banana gives it texture, the concentrated banana brings depth, and the whipped cream adds a light finish.\n\nMost importantly, the banana isn\'t just sitting somewhere underneath the custard.\n\n**The banana is the custard!**']
     ],
-    finePrint:{'BEST EATEN':'Tomorrow, after chilling thoroughly. Enjoy chilled straight from the fridge.','MAKE AHEAD':'Yes. Prepare the pie the day before serving so it has time to chill thoroughly.','STORAGE':'Store in an airtight container in the refrigerator for up to 3 days.','REHEAT':'Not applicable.'},
+    finePrint:{
+      'BEST EATEN':'Tomorrow, after chilling thoroughly. Enjoy chilled straight from the fridge.',
+      'MAKE AHEAD':'Yes. Prepare the pie the day before serving so it has time to chill thoroughly.',
+      'STORAGE':'Store in an airtight container in the refrigerator for up to 3 days.',
+      'FREEZER':'Freezing guidance needs confirmation.',
+      'REHEAT':'Not applicable.'
+    },
     mainIngredients:['Banana','Milk','Egg Yolks','Biscuits'], footerInspiredBy:'Midnight Experiment', footerCuisine:'American', footerCourse:'Baking, Dessert', footerMainIngredients:['Banana','Milk','Egg Yolks','Biscuits']
   },
   {
@@ -491,7 +521,13 @@ Don\'t over-sweeten it. The sweet potato provides natural sweetness, while the w
 Making this at midnight? The filling can be made in one blender or with one hand blender—no separate egg mixture and no extra bowl.
 If you use boiled or microwaved sweet potato, let it steam-dry well before weighing. Too much moisture will make the filling softer.`]
     ],
-    finePrint:{'BEST EATEN':'Tomorrow, after chilling overnight, when the sweet potato, ginger, and cinnamon flavors have had time to come together.','MAKE AHEAD':'Yes. Make the pie the day before serving and refrigerate overnight.','STORAGE':'Cover and refrigerate for up to 4 days.','REHEAT':'Gently warm individual slices in a low oven if you prefer the pie warm.'},
+    finePrint:{
+      'BEST EATEN':'Tomorrow, after chilling overnight, when the sweet potato, ginger, and cinnamon flavors have had time to come together.',
+      'MAKE AHEAD':'Yes. Make the pie the day before serving and refrigerate overnight.',
+      'STORAGE':'Cover and refrigerate for up to 4 days.',
+      'FREEZER':'Freezing may affect the filling’s texture. Freezing guidance needs confirmation.',
+      'REHEAT':'Gently warm individual slices in a low oven if you prefer the pie warm.'
+    },
     mainIngredients:['Sweet Potato','Ginger','Cream','Cinnamon'], footerInspiredBy:'Traditional', footerCuisine:'Chinese · American', footerCourse:'Dessert', footerMainIngredients:['Sweet Potato','Ginger','Cream','Cinnamon']
   },
   {
@@ -530,7 +566,13 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
       ['Glass Pie Dish','Glass heats more gently than metal, so give the crust enough time to dry and lightly brown. Avoid over-browning during the blind-bake.'],
       ['Midnight Compromise','No rolling pin, pastry board, or complicated pastry work. Press the dough directly into the pie dish, and everything stays contained and easy to clean up.']
     ],
-    finePrint:{'BEST EATEN':'Use the dough to make your chosen pie crust, following the pie recipe’s baking instructions.','MAKE AHEAD':'Yes. Prepare the dough ahead of time and refrigerate until ready to use.','STORAGE':'Wrap the dough tightly and refrigerate for 2–3 days.','FREEZER':'Wrap the dough tightly and freeze for up to 3 months. Thaw in the refrigerator before rolling out. If the dough is already fitted into a pie pan, it can often be baked straight from frozen; adjust the baking time as needed.','REHEAT':'Not applicable.'},
+    finePrint:{
+      'BEST EATEN':'Use the dough to make your chosen pie crust, following the pie recipe’s baking instructions.',
+      'MAKE AHEAD':'Yes. Prepare the dough ahead of time and refrigerate until ready to use.',
+      'STORAGE':'Wrap the dough tightly and refrigerate for 2–3 days.',
+      'FREEZER':'Wrap the dough tightly and freeze for up to 3 months. Thaw in the refrigerator before rolling out. If the dough is already fitted into a pie pan, it can often be baked straight from frozen; adjust the baking time as needed.',
+      'REHEAT':'Not applicable.'
+    },
     tags:['The Usuals','Bases & Crusts','Pie'], mainIngredients:['Flour','Butter','Salt','Pie']
   },
 
@@ -612,7 +654,13 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
       ['Why Sour Cream?','The 300 ml can of condensed milk already brings plenty of sweetness. Sour cream adds body, creaminess, and a little extra tang without requiring more condensed milk.'],
       ['Stable Meringue','The goal here is a soft, fluffy pie meringue, not a crisp meringue-cookie texture. I increased the sugar slightly and added a small amount of cream of tartar to help stabilize the whipped egg whites. When spreading the meringue over the warm filling, make sure it reaches all the way to the edge and seals against the filling and crust. Gaps can allow moisture to collect underneath the meringue as the pie chills. These small details help the meringue stay fluffy and hold together better the next day.']
     ],
-    finePrint:{'BEST EATEN':'Tomorrow, after chilling overnight. For the prettiest meringue, especially its lightly toasted peaks, serve on the day the meringue is made.','MAKE AHEAD':'Yes. The pie is ideal made the night before.','STORAGE':'Refrigerate, covered, for up to 3 days.','REHEAT':'Not applicable.'},
+    finePrint:{
+      'BEST EATEN':'Tomorrow (after chilling thoroughly).',
+      'MAKE AHEAD':'Yes. The pie is ideal made the night before.',
+      'STORAGE':'Refrigerate, covered, for up to 3 days.',
+      'FREEZER':'Freezing guidance needs confirmation, especially for the meringue’s texture.',
+      'REHEAT':'Not applicable.'
+    },
     tags:['Baking','Dessert','American','Lime','Key Lime Pie','Pie','Meringue','Toronto','Grocery Store Find'], mainIngredients:['Lime','Eggs','Cream','Pie'], usualsCategory:''
   },
 
@@ -721,7 +769,13 @@ If the internet was calling it the world’s best, I had to find out for myself,
       ['Galangal Matters','Ginger is an acceptable emergency substitute, but fresh Galangal gives a distinctly peppery, floral flavor that makes the soup taste much more like Tom Kha.'],
       ['Toronto Pantry Reality','Fresh Galangal and Lemongrass are easy to find at Toronto Asian grocery stores, while dried Makrut Lime Leaves are useful when you want to make this on a random midnight without another grocery run.']
     ],
-    finePrint:{'BEST EATEN':'Fresh, while the aromatics are fragrant and the lime flavor is bright.','MAKE AHEAD':'Yes. If possible, add the fresh lime juice just before serving rather than before storing.','STORAGE':'Refrigerate in an airtight container for up to 3 days.','REHEAT':'Reheat gently on the stovetop or in the microwave. Avoid bringing the soup to a hard boil.'},
+    finePrint:{
+      'BEST EATEN':'Fresh, while the aromatics are fragrant and the lime flavor is bright.',
+      'MAKE AHEAD':'Yes. If possible, add the fresh lime juice just before serving rather than before storing.',
+      'STORAGE':'Refrigerate in an airtight container for up to 3 days.',
+      'FREEZER':'Freezing may cause the coconut broth to separate and the mushrooms to soften. Stir well after reheating.',
+      'REHEAT':'Reheat gently on the stovetop or in the microwave. Avoid bringing the soup to a hard boil.'
+    },
     tags:['Galangal','Makrut Lime Leaves','Lemongrass','Coconut Milk','Chicken'],
     usualsCategory:''
   }
@@ -830,7 +884,13 @@ This isn't a traditional Thai dish. It's simply my midnight attempt to recreate 
       ['Crispy First, Sauce Second','Cook the chicken until golden before making the sauce. Coating it too early would prevent the chicken from developing its crisp exterior.'],
       ['The One-Pan Midnight Rule','The chicken and sauce are made in the same skillet. Less cleanup means more time to enjoy dinner.']
     ],
-    finePrint:{'BEST EATEN':'Immediately after cooking, while the chicken is at its crispest.','MAKE AHEAD':'Yes. Prepare the components ahead, then cook the chicken and combine it with the sauce just before serving.','STORAGE':'Refrigerate leftovers in an airtight container for 3–4 days.','REHEAT':'Reheat in the oven or air fryer to restore some crispness. The microwave is convenient but will soften the coating.'},
+    finePrint:{
+      'BEST EATEN':'Immediately after cooking, while the chicken is at its crispest.',
+      'MAKE AHEAD':'Yes. Prepare the components ahead, then cook the chicken and combine it with the sauce just before serving.',
+      'STORAGE':'Refrigerate leftovers in an airtight container for 3–4 days.',
+      'FREEZER':'Freezing may reduce the coating’s crispness. If freezing, store the chicken and sauce separately.',
+      'REHEAT':'Reheat in the oven or air fryer to restore some crispness. The microwave is convenient but will soften the coating.'
+    },
     tags:['Chicken','Peanut Butter','Sweet Chili','One-Pan','Weeknight Dinner'],
     mainIngredients:['Chicken','Pantry','Herbs & Spices'],
     usualsCategory:''
@@ -938,7 +998,13 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
       ['RAW ONION','No need to sauté the onion first. Finely chop it and add it straight to the mixture. It cooks while the hamburg steak cooks.'],
       ['SAME PAN','Don’t wash the pan after cooking the patties. Those browned bits add flavor to the sauce.']
     ],
-    finePrint:{'BEST EATEN':'Fresh, while warm.','MAKE AHEAD':'Shape the patties up to 1 day ahead. Cover and refrigerate.','STORAGE':'Refrigerate in an airtight container for up to 3 days.','REHEAT':'Reheat covered in a pan with a splash of water, or gently in the microwave.'},
+    finePrint:{
+      'BEST EATEN':'Fresh, while warm.',
+      'MAKE AHEAD':'Shape the patties up to 1 day ahead. Cover and refrigerate.',
+      'STORAGE':'Refrigerate in an airtight container for up to 3 days.',
+      'FREEZER':'Freeze cooked patties in an airtight, freezer-safe container. Storage duration needs confirmation.',
+      'REHEAT':'Reheat covered in a pan with a splash of water, or gently in the microwave.'
+    },
     tags:['Memory','Japanese','Hamburg Steak','Ground Meat','Family Cooking','Demi-Glace Sauce'],
     usualsCategory:''
   }
@@ -973,7 +1039,7 @@ If you choose cheesecake, try this recipe tonight.`,
       {name:'Sour Cream',details:[
         ['Flavor','Creamy with a pleasant tang that balances the richness of the cheese and creates a lighter finish.'],
         ['Best Choice','Full-fat sour cream for a creamy texture and balanced tanginess.'],
-        ['Why Here?','Adds acidity to balance the richness of the cream cheese, creating a smooth texture that doesn\'t feel too heavy.'],
+        ['Why Here','Adds acidity to balance the richness of the cream cheese, creating a smooth texture that doesn\'t feel too heavy.'],
         ['Substitute','Plain Greek yogurt can be used.'],
         ['Storage','Keep refrigerated. For this recipe, bring it close to room temperature before using.'],
         ['Midnight Fix','Replace sour cream with the same amount of plain Greek yogurt. The cheesecake will taste slightly tangier and may have a somewhat lighter, less rich texture. Choose full-fat Greek yogurt if possible for the creamiest result.']
@@ -981,20 +1047,20 @@ If you choose cheesecake, try this recipe tonight.`,
       {name:'35% Whipping Cream',details:[
         ['Flavor','Mild, milky, and creamy. It softens the tanginess of the sour cream and contributes to a smooth mouthfeel.'],
         ['Best Choice','35% milk-fat whipping cream for a smooth, rich texture without making the cheesecake as dense as a New York-style cheesecake.'],
-        ['Why Here?','Adds moisture and milk fat to create a cheesecake that feels silky and creamy without being overly heavy.'],
+        ['Why Here','Adds moisture and milk fat to create a cheesecake that feels silky and creamy without being overly heavy.'],
         ['Substitute','Other creams may have different fat and water contents, so the final texture may vary.'],
         ['Storage','Keep refrigerated until ready to use. For this recipe, bring it close to room temperature before using.'],
         ['Midnight Fix','When using a substitute, consider its fat and water content, as these can affect the cheesecake\'s richness and texture.']
       ]}
     ],
     ingredients:[
-      {amount:250,unit:'g',item:'Cream Cheese'},
+      {amount:250,unit:'g',item:'Cream Cheese',imperialAmount:1,imperialUnit:'cup'},
       {amount:85,unit:'g',item:'Granulated Sugar'},
-      {amount:173,unit:'g',item:'Sour Cream'},
+      {amount:173,unit:'g',item:'Sour Cream',imperialAmount:0.75,imperialUnit:'cup'},
       {amount:125,unit:'g',item:'35% Whipping Cream'},
       {amount:2,unit:'',item:'Eggs'},
       {amount:8,unit:'g',item:'Cornstarch'},
-      {amount:10,unit:'ml',item:'Lemon Juice'},
+      {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Lemon Juice'},
       {amount:0.5,unit:'tsp',item:'Vanilla Extract'}
     ],
     stats:{prep:'20 mins',cook:'45–50 mins',chill:'8 hrs+',total:'9 hrs+',serves:'6–8 slices',pan:'18 cm loaf pan',quest:'⭐⭐⭐⭐⭐'},
@@ -1012,23 +1078,23 @@ If you choose cheesecake, try this recipe tonight.`,
       {number:'02',title:'BUILD THE CREAMY BASE',clock:'10:15 PM',paragraphs:[
         'In a large bowl, mix the {{qty:Cream Cheese}} cream cheese until completely smooth and free of lumps.',
         'Add the {{qty:Granulated Sugar}} granulated sugar, {{qty:Sour Cream}} sour cream, and {{qty:35% Whipping Cream}} whipping cream. Mix until evenly combined.'
-      ],stepImages:[]},
+      ],stepImages:['images/recipes/silky-cheesecake/step-02-01.jpg','images/recipes/silky-cheesecake/step-02-02.jpg','images/recipes/silky-cheesecake/step-02-03.jpg']},
       {number:'03',title:'FINISH WITH A SILKY BATTER',clock:'10:20 PM',paragraphs:[
         'Gradually add {{qty:Eggs}} beaten eggs in two or three additions, mixing gently after each addition.',
         'Sift in the {{qty:Cornstarch}} cornstarch, then add the {{qty:Lemon Juice}} lemon juice and {{qty:Vanilla Extract}} vanilla extract. Mix until the batter is smooth and uniform.',
         'Pour the batter into the prepared loaf pan. Gently tap the pan against the counter to release large air bubbles.',
         'For an extra-silky texture, strain the batter through a fine-mesh sieve before pouring it into the pan.'
-      ],stepNote:'**Midnight Shortcut:** Put all the batter ingredients into the food processor and blend until smooth. Avoid overmixing to prevent unnecessary air incorporation.',stepImages:[]},
+      ],stepNote:'**Midnight Shortcut:** Put all the batter ingredients into the food processor and blend until smooth. Avoid overmixing to prevent unnecessary air incorporation.',stepImages:['images/recipes/silky-cheesecake/step-03-01.jpg','images/recipes/silky-cheesecake/step-03-02.jpg','images/recipes/silky-cheesecake/step-03-03.jpg','images/recipes/silky-cheesecake/step-03-04.jpg']},
       {number:'04',title:'LET THE WATER BATH DO THE WORK',clock:'10:30 PM',paragraphs:[
         'Place the loaf pan inside a larger, deep oven-safe tray. Carefully pour hot water into the outer tray to create a water bath.',
         'Bake at 150°C / 300°F for approximately 45–50 minutes, checking for doneness from around 45 minutes. The edges should be set while the center still jiggles slightly when the pan is gently moved.',
         'While the cheesecake bakes, you can go take a shower. Let the oven do the work for a while.'
-      ],stepNote:'**Estimated Baking Window:** Approximately 10:40–11:25 PM or later, depending on the oven and pan.',stepImages:[]},
+      ],stepImages:['images/recipes/silky-cheesecake/step-04-01.jpg']},
       {number:'05',title:'GIVE IT THE NIGHT',clock:'11:15 PM',paragraphs:[
         'Remove the pan from the water bath and let the cheesecake cool in the pan until it reaches room temperature.',
         'Refrigerate overnight for at least 8 hours to allow the texture to set completely.',
         'Once thoroughly chilled, lift the cheesecake out of the pan.'
-      ],stepImages:[]}
+      ],stepImages:['images/recipes/silky-cheesecake/step-05-01.jpg','images/recipes/silky-cheesecake/step-05-02.jpg']}
     ],
     notes:[
       ['Not Quite New York, Not Quite Soufflé','This cheesecake sits somewhere between a dense New York-style cheesecake and a light Japanese soufflé cheesecake. It has a creamy, silky mouthfeel without feeling quite so heavy, while remaining rich enough to satisfy a cheesecake craving. The goal is a delicate texture that feels just right, even for a late-night slice.'],
@@ -1037,9 +1103,9 @@ If you choose cheesecake, try this recipe tonight.`,
       ['The Gentle Jiggle','The cheesecake should still have a slight wobble in the center when it comes out of the oven. It will continue to set as it cools and chills. Waiting until the center is completely firm in the oven may result in a drier texture.']
     ],
     finePrint:{
-      'BEST EATEN':'Tomorrow — Let the cheesecake sit at room temperature for 5–10 minutes before serving. This helps soften the texture and bring out its creamy, silky mouthfeel.',
-      'MAKE AHEAD':'Yes — Prepare the cheesecake the day before serving and refrigerate overnight to allow it to set completely.',
-      'STORAGE':'Cover and refrigerate leftovers promptly. For best quality, enjoy within 3–4 days.',
+      'BEST EATEN':'Tomorrow. Let the cheesecake sit at room temperature for 5–10 minutes before serving. This helps soften the texture and bring out its creamy, silky mouthfeel.',
+      'MAKE AHEAD':'Yes. Prepare the cheesecake the day before serving and refrigerate overnight to allow it to set completely.',
+      'STORAGE':'Cover and refrigerate for up to 4 days.',
       'FREEZER':'Cheesecake can be frozen for longer storage. For the best texture, wrap individual slices tightly and place them in an airtight freezer-safe container. Use within 1 month for best quality. Thaw overnight in the refrigerator before serving. The texture may change slightly after freezing.',
       'REHEAT':'Not applicable.'
     },
