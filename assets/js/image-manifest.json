@@ -132,6 +132,22 @@
       ]
     }
   },
+  "classic-pumpkin-pie": {
+    "hero": null,
+    "recipe": null,
+    "steps": {
+      "02": [
+        "images/recipes/classic-pumpkin-pie/step-02-01.jpg",
+        "images/recipes/classic-pumpkin-pie/step-02-02.jpg"
+      ],
+      "03": [
+        "images/recipes/classic-pumpkin-pie/step-03-01.jpg"
+      ],
+      "04": [
+        "images/recipes/classic-pumpkin-pie/step-04-01.jpg"
+      ]
+    }
+  },
   "fun-key-lime-pie": {
     "hero": "images/recipes/fun-key-lime-pie/hero.jpg",
     "recipe": "images/recipes/fun-key-lime-pie/recipe.jpg",
