@@ -1107,6 +1107,64 @@ If you choose cheesecake, try this recipe tonight.`,
     tags:['cheesecake','baked cheesecake','creamy cheesecake','silky texture','cream cheese','water bath','make ahead dessert','Haruki Murakami','Norwegian Wood'],
     usualsCategory:''
   },
+
+  {
+    slug:'classic-pumpkin-pie', title:'Classic Pumpkin Pie', source:'Family & Tradition', dish:'Pumpkin Pie', cuisine:'American',
+    course:'Baking', courseDisplay:'Baking, Desserts', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Pumpkin','Pie','Eggs','Cream','Cinnamon'],
+    dateAdded:'2026-10-11', timeStamp:'12:15 AM',
+    heroImage:'images/recipes/classic-pumpkin-pie/hero.jpg', recipeImage:'images/recipes/classic-pumpkin-pie/recipe.jpg',
+    usesUsual:'building-block-pie-crust', showPan:true, showChill:true, hideRecipeTags:true,
+    stepQuantityConversion:true, usCupFractions:true, fractionDenominator:16,
+    story:`Pumpkin pie is *the* Canadian Thanksgiving classic, and I had my very first bite on Thanksgiving Monday back in October during my first year in Canada. Safe to say, I was completely hooked! The smooth, silky pumpkin filling and that warm punch of cinnamon, cloves, and nutmeg were unlike anything I knew back home with Japanese Kabocha. After that, I went a little crazy trying pumpkin pie everywhere I could get my hands on. Fast forward through endless pie runs and tweaking ingredients, I’ve finally nailed my dream spice mix. I make it all the time now, but honestly? Baking it in the middle of a quiet autumn night hits differently.`,
+    ingredientFile:[
+      {name:'PUMPKIN PURÉE',details:[['Best Choice','In Toronto/Canada, you’ll mostly find E.D. Smith “100% Pure Pumpkin” (make sure it says Pure, not Pumpkin Pie Mix!).'],['Substitute','Steamed and puréed Kabocha squash or sweet potatoes. Avoid butternut squash, as its higher water content can make the filling too loose.'],['Storage','Freeze extra purée in airtight containers or Ziploc bags for up to 3 months.']]},
+      {name:'BROWN SUGAR',details:[['Flavor','Warm, caramel-like, molasses-rich'],['Substitute','White sugar, although the flavor will be slightly lighter.']]}
+    ],
+    ingredients:[
+      {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
+      {group:'PUMPKIN FILLING'},
+      {amount:400,unit:'g',imperialAmount:5/3,imperialUnit:'cup',imperialFraction:{num:5,den:3},item:'Pumpkin Purée'},
+      {amount:70,unit:'g',imperialAmount:1/3,imperialUnit:'cup',imperialFraction:{num:1,den:3},item:'Brown Sugar'},
+      {amount:2,unit:'large',imperialAmount:2,imperialUnit:'large',item:'Eggs'},
+      {amount:79,unit:'ml',imperialAmount:1/3,imperialUnit:'cup',imperialFraction:{num:1,den:3},item:'Whole Milk'},
+      {amount:78,unit:'g',imperialAmount:1/3,imperialUnit:'cup',imperialFraction:{num:1,den:3},item:'35% Whipping Cream'},
+      {amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Ground Cinnamon'},
+      {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground Ginger'},
+      {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Ground Nutmeg'},
+      {amount:0.125,unit:'tsp',imperialAmount:0.125,imperialUnit:'tsp',item:'Ground Cloves'},
+      {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'}
+    ],
+    stats:{prep:'20 mins',cook:'55–60 mins',chill:'2 hrs+',total:'4 hrs 20 mins +',serves:'6–8',pan:'23 cm / 9-inch pie dish',quiet:'⭐⭐⭐⭐☆'},
+    steps:[
+      {number:'01',title:'MAKE THE CRUST',clock:'12:15 AM',paragraphs:[
+        'Preheat your oven to 175°C / 350°F.',
+        'Start with one of our usual recipes — Building Block Pie Crust.',
+        '**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'
+      ],stepImages:[]},
+      {number:'02',title:'MAKE THE FILLING',clock:'12:35 AM',paragraphs:[
+        'Mix {{qty:PUMPKIN FILLING::Pumpkin Purée}} pumpkin purée, {{qty:PUMPKIN FILLING::Brown Sugar}} brown sugar, {{qty:PUMPKIN FILLING::Eggs}} eggs, {{qty:PUMPKIN FILLING::Whole Milk}} whole milk, {{qty:PUMPKIN FILLING::35% Whipping Cream}} whipping cream, {{qty:PUMPKIN FILLING::Ground Cinnamon}} ground cinnamon, {{qty:PUMPKIN FILLING::Ground Ginger}} ground ginger, {{qty:PUMPKIN FILLING::Ground Nutmeg}} ground nutmeg, {{qty:PUMPKIN FILLING::Ground Cloves}} ground cloves, and {{qty:PUMPKIN FILLING::Salt}} salt until smooth.'
+      ],stepImages:['images/recipes/classic-pumpkin-pie/step-02-01.jpg','images/recipes/classic-pumpkin-pie/step-02-02.jpg']},
+      {number:'03',title:'POUR & BAKE',clock:'12:50 AM',paragraphs:[
+        'Pour the filling into the warm crust.',
+        'Bake at 175°C / 350°F for 35–40 minutes, until the edges are set but the center still has a slight wobble.'
+      ],stepImages:['images/recipes/classic-pumpkin-pie/step-03-01.jpg']},
+      {number:'04',title:'COOL & CHILL',clock:'1:30 AM',paragraphs:[
+        'Cool completely, then refrigerate for at least 2 hours or overnight. Slice chilled and serve.'
+      ],stepImages:['images/recipes/classic-pumpkin-pie/step-04-01.jpg']}
+    ],
+    notes:[],
+    finePrint:{
+      'BEST EATEN':'Tomorrow',
+      'MAKE AHEAD':'Yes. Ideal to bake the night before.',
+      'STORAGE':'Keep covered and refrigerated for up to 4 days.',
+      'REHEAT':'Best chilled or at room temperature. For a warm slice, heat at 160°C / 325°F for 5–10 minutes.',
+      'FREEZER':'Freeze tightly wrapped individual slices for up to 1 month.',
+      'SERVE WITH':'Fresh whipped cream and a light sprinkle of cinnamon.'
+    },
+    tags:['Thanksgiving','Fall','Baking','Dessert','Pumpkin','Pie','Cinnamon','Make Ahead','Classic Pumpkin Pie'],
+    mainIngredients:['Pumpkin','Pie','Eggs','Cream','Cinnamon'], footerRating:'★★★★★ Have you made this recipe? Leave a rating and tell us what inspired your version.',
+    footerCuisine:'American', footerCourse:'Baking · Desserts', footerMainIngredients:['Pumpkin','Pie','Eggs','Cream','Cinnamon'], usualsCategory:''
+  },
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
 window.MIDNIGHT_COURSES = ['Breakfast & Brunch','Appetizers','Snacks','Soups','Salads','Main Dishes','Sides','Baking','Desserts'];
