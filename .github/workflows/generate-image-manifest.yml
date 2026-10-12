@@ -2,11 +2,18 @@ name: Generate Recipe Image Manifest
 
 on:
   push:
+    branches: [main]
     paths:
       - 'images/recipes/**'
       - '.github/scripts/generate-image-manifest.py'
       - '.github/workflows/generate-image-manifest.yml'
   workflow_dispatch:
+
+# Several uploads in a row used to start several runs at once; an older run could
+# finish last and overwrite the manifest with stale data. Now only the newest run survives.
+concurrency:
+  group: image-manifest
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -16,9 +23,10 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout latest main
         uses: actions/checkout@v5
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Generate image manifest
@@ -34,9 +42,11 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/js/image-manifest.json
           git commit -m "Update recipe image manifest"
-          git fetch origin main
-          git rebase origin/main
-          git push origin HEAD:main
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1
 
       - name: Request GitHub Pages rebuild
         if: success()
