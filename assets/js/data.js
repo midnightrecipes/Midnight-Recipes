@@ -1109,7 +1109,7 @@ If you choose cheesecake, try this recipe tonight.`,
   },
 
   {
-    slug:'classic-pumpkin-pie', title:'Classic Pumpkin Pie', source:'Family & Tradition', dish:'Pumpkin Pie', cuisine:'American',
+    slug:'classic-pumpkin-pie', title:'Classic Pumpkin Pie', source:'Family & Tradition', dish:'Pumpkin Pie', cuisine:'Canadian', cuisineSecondary:'American',
     course:'Baking', courseDisplay:'Baking, Desserts', meal:'Baking', categories:['Baking','Desserts'], ingredientCategories:['Pumpkin','Pie','Eggs','Cream','Cinnamon'],
     dateAdded:'2026-10-11', timeStamp:'12:15 AM',
     heroImage:'images/recipes/classic-pumpkin-pie/hero.jpg', recipeImage:'images/recipes/classic-pumpkin-pie/recipe.jpg',
@@ -1117,8 +1117,8 @@ If you choose cheesecake, try this recipe tonight.`,
     stepQuantityConversion:true, usCupFractions:true, fractionDenominator:16,
     story:`Pumpkin pie is *the* Canadian Thanksgiving classic, and I had my very first bite on Thanksgiving Monday back in October during my first year in Canada. Safe to say, I was completely hooked! The smooth, silky pumpkin filling and that warm punch of cinnamon, cloves, and nutmeg were unlike anything I knew back home with Japanese Kabocha. After that, I went a little crazy trying pumpkin pie everywhere I could get my hands on. Fast forward through endless pie runs and tweaking ingredients, I’ve finally nailed my dream spice mix. I make it all the time now, but honestly? Baking it in the middle of a quiet autumn night hits differently.`,
     ingredientFile:[
-      {name:'PUMPKIN PURÉE',details:[['Best Choice','In Toronto/Canada, you’ll mostly find E.D. Smith “100% Pure Pumpkin” (make sure it says Pure, not Pumpkin Pie Mix!).'],['Substitute','Steamed and puréed Kabocha squash or sweet potatoes. Avoid butternut squash, as its higher water content can make the filling too loose.'],['Storage','Freeze extra purée in airtight containers or Ziploc bags for up to 3 months.']]},
-      {name:'BROWN SUGAR',details:[['Flavor','Warm, caramel-like, molasses-rich'],['Substitute','White sugar, although the flavor will be slightly lighter.']]}
+      {name:'PUMPKIN PURÉE',details:[['Flavor','Earthy, mellow, and mildly sweet; it gives the filling its signature pumpkin flavor and creamy body.'],['Best Choice','In Toronto/Canada, you’ll mostly find E.D. Smith “100% Pure Pumpkin” (make sure it says Pure, not Pumpkin Pie Mix!).'],['Substitute','Steamed and puréed Kabocha squash or sweet potatoes. Avoid butternut squash, as its higher water content can make the filling too loose.'],['Storage','Freeze extra purée in airtight containers or Ziploc bags for up to 3 months.'],['Midnight Fix','Use pure pumpkin purée, not pumpkin pie mix, which already contains sweeteners and spices. If the purée seems unusually watery, drain it briefly before measuring so the filling is less likely to turn loose.']]},
+      {name:'BROWN SUGAR',details:[['Flavor','Warm, caramel-like, molasses-rich'],['Role','Adds sweetness and moisture while balancing the earthy pumpkin and warm spices.'],['Best Choice','Light brown sugar gives a balanced flavor; dark brown sugar adds a deeper molasses note. Either can be used.'],['Substitute','White sugar, although the flavor will be slightly lighter.'],['Storage','Keep in an airtight container at room temperature to help prevent it from drying out and hardening.']]}
     ],
     ingredients:[
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
@@ -1154,7 +1154,7 @@ If you choose cheesecake, try this recipe tonight.`,
     ],
     notes:[],
     finePrint:{
-      'BEST EATEN':'Tomorrow',
+      'BEST EATEN':'Tomorrow. The filling becomes smoother and more fully set after chilling.',
       'MAKE AHEAD':'Yes. Ideal to bake the night before.',
       'STORAGE':'Keep covered and refrigerated for up to 4 days.',
       'REHEAT':'Best chilled or at room temperature. For a warm slice, heat at 160°C / 325°F for 5–10 minutes.',
@@ -1162,8 +1162,8 @@ If you choose cheesecake, try this recipe tonight.`,
       'SERVE WITH':'Fresh whipped cream and a light sprinkle of cinnamon.'
     },
     tags:['Thanksgiving','Fall','Baking','Dessert','Pumpkin','Pie','Cinnamon','Make Ahead','Classic Pumpkin Pie'],
-    mainIngredients:['Pumpkin','Pie','Eggs','Cream','Cinnamon'], footerRating:'★★★★★ Have you made this recipe? Leave a rating and tell us what inspired your version.',
-    footerCuisine:'American', footerCourse:'Baking · Desserts', footerMainIngredients:['Pumpkin','Pie','Eggs','Cream','Cinnamon'], usualsCategory:''
+    mainIngredients:['Pumpkin','Pie','Eggs','Cream','Cinnamon'],
+    footerCuisine:'Canadian · American', footerCourse:'Baking · Desserts', footerMainIngredients:['Pumpkin','Pie','Eggs','Cream','Cinnamon'], usualsCategory:''
   },
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
