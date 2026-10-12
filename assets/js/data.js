@@ -1016,6 +1016,7 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
     categories:['Baking','Desserts'],
     dateAdded:'2026-10-10',
     timeStamp:'10:10 PM',
+    heroImage:'images/recipes/silky-cheesecake/hero.jpg', recipeImage:'images/recipes/silky-cheesecake/recipe.jpg',
     story:`In Haruki Murakami's *Norwegian Wood*, Midori has an unusual idea of what it means to be loved.
 Imagine someone buying her a strawberry shortcake, only for her to throw it out of the window. Instead of getting angry, she wants him to ask, “Chocolate mousse or cheesecake?”
 It's a slightly unreasonable thing to ask of someone, isn't it? But I think that's what makes the scene so memorable. Midori isn't really talking about cake. She wants to know that even when she's difficult, even when she pushes someone away, they might still choose to stay.
