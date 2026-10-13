@@ -1475,7 +1475,7 @@ body[data-page="home"] .category-card .photo-frame{
 /* ---- recipe page extras ---- */
 .recipe-actions{flex-wrap:wrap;}
 .related{margin-top:56px;}
-.recipe-actions .btn[aria-pressed="true"]{background:var(--ink);color:var(--paper);}
+#favRecipe[aria-pressed="true"]{background:var(--ink);color:var(--paper);}
 
 /* ---- header favorites heart ---- */
 .fav-icon{display:inline-flex;align-items:center;justify-content:center;padding:6px;margin-right:6px;background:none;border:0;line-height:0;cursor:pointer;text-decoration:none;}
