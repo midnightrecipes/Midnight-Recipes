@@ -290,7 +290,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
 
   {
     slug:'mexican-calabaza-en-tacha-pumpkin-pie',
-    title:'Mexican (Calabaza en Tacha) Pumpkin Pie',
+    title:'Mexican (Calabaza en Tacha) Pumpkin Pie', description:'Inspired by Coco and Día de Muertos, this pumpkin pie reimagines calabaza en tacha with warm spices and the comforting flavors of a traditional Mexican seasonal sweet.',
     source:'Movie & TV', sourceSecondary:'Family & Tradition', original:'Coco (2017)', dish:'Calabaza en Tacha-inspired Pumpkin Pie', cuisine:'Mexican',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Vegetable','Pie'],
     dateAdded:'2026-09-27', timeStamp:'11:48 PM',
@@ -351,7 +351,7 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
     footerInspiredBy:'Calabaza en Tacha', footerCuisine:'Mexican, Canadian, North American', footerCourse:'Baking · Desserts', footerMainIngredients:['Pumpkin','Orange','Cinnamon','Molasses']
   },
   {
-    slug:'banana-banana-cream-pie', title:'Banana Banana Cream Pie', source:'Midnight Experiment', dish:'Banana Cream Pie', cuisine:'American',
+    slug:'banana-banana-cream-pie', title:'Banana Banana Cream Pie', description:'Made for seriously banana-y flavor, this cream pie uses very ripe bananas cooked down into a sweet, concentrated filling beneath a smooth custard.', source:'Midnight Experiment', dish:'Banana Cream Pie', cuisine:'American',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Fruit','Pie','Eggs','Pantry'], dateAdded:'2026-09-27', timeStamp:'2:50 AM',
     tags:['Dessert','Baking','Banana','Pie'], heroImage:'images/recipes/banana-banana-cream-pie/hero.jpg', recipeImage:'images/recipes/banana-banana-cream-pie/recipe.jpg',
     unitOverrides:{imperial:{'plain biscuits, finely crushed':'cup','unsalted butter, melted':'cup','whole milk':'cup','granulated sugar':'tbsp','cornstarch':'tbsp','35% Whipping Cream':'cup','Granulated Sugar, To Taste':'tbsp'}},
@@ -447,7 +447,7 @@ What if we just put way more banana in banana cream pie?`,
     mainIngredients:['Banana','Milk','Egg Yolks','Biscuits'], footerInspiredBy:'Midnight Experiment', footerCuisine:'American', footerCourse:'Baking, Desserts', footerMainIngredients:['Banana','Milk','Egg Yolks','Biscuits']
   },
   {
-    slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese', cuisineSecondary:'American',
+    slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', description:'Inspired by Chinese sweet potato ginger dessert soup, this silky pie pairs earthy sweet potato with fresh ginger, cinnamon, and a gentle warming spice.', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese', cuisineSecondary:'American',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Sweet Potato','Ginger','Cream','Cinnamon','Pie'], dateAdded:'2026-09-27', timeStamp:'11:35 PM',
     tags:['Midnight Experiment','Dessert','Baking','Chinese','American','Sweet Potato','Ginger','Pie'], heroImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', recipeImage:'images/recipes/sweet-potato-ginger-pie/recipe.jpg', usesUsual:'building-block-pie-crust', usCupFractions:true, forceCupUnits:true, stepQuantityConversion:true,
     story:`Inspired by traditional Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水), a simple sweet soup made by simmering sweet potatoes with fresh ginger and sugar in water.
@@ -671,10 +671,10 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     cuisine:'Thai',
     course:'Soups',
     courseDisplay:'Soups',
-    categories:['Soups'],
+    categories:['Soups'], ingredientCategories:["Chicken", "Coconut Milk", "Galangal", "Lemongrass", "Mushroom", "Soup"],
     dateAdded:'2026-10-08',
     timeStamp:'11:21 PM',
-    description:'',
+    description:'A Thai coconut chicken soup with galangal, lemongrass, makrut lime leaves, fresh lime, and gentle chili heat—my late-night attempt to see if it deserved its reputation.',
     story:`TasteAtlas had ranked Tom Kha Gai #1 on its list of the world’s best chicken soups. I knew Tom Yum, but somehow Tom Kha Gai had always stayed in the background.
 It sounded like the perfect combination: creamy coconut milk, the bright citrus of makrut lime leaf and lemongrass, fresh lime acidity, and the gentle heat and peppery bite of chilies and galangal.
 The biggest challenge was finding all the ingredients. The actual cooking is surprisingly simple. And in a diverse city like Toronto, hunting down those ingredients might not be as difficult as it sounds.
@@ -783,10 +783,10 @@ If the internet was calling it the world’s best, I had to find out for myself,
     cuisine:'Thai',
     course:'Main Dishes',
     courseDisplay:'Main Dishes',
-    categories:['Main Dishes'],
+    categories:['Main Dishes'], ingredientCategories:["Chicken", "Peanut", "Chili", "Sauce"],
     dateAdded:'2026-10-08',
     timeStamp:'10:15 PM',
-    description:'',
+    description:'Inspired by sweet chili sauce and crushed peanuts served with Thai fish cakes, this chicken brings together sweet, tangy, spicy, and nutty flavors in a quick homemade dish.',
     story:`I first fell for the combination of sweet chili sauce and peanuts in Thailand, where sweet chili sauce and crushed peanuts were served alongside crispy Thai fish cakes (Tod Mun Pla).
 But actually, the sauce was the best part of the dish. That sweet, tangy, slightly spicy, nutty combination stayed with me long after the trip.
 Thailand isn't exactly a quick midnight trip from Toronto, so I decided to bring that memory home instead. I had some chicken in the fridge and wondered: what if I gave it that sauce?
@@ -890,13 +890,14 @@ This isn't a traditional Thai dish. It's simply my midnight attempt to recreate 
   },
   {
     slug:'moms-hamburg-steak',
-    title:'Mom’s Hamburg Steak',
+    title:'Mom’s Hamburg Steak', description:'A Japanese-style hamburg steak inspired by my mom’s cooking, served with a rich, sweet-tangy sauce that brings back the comforting taste of home.',
     source:'Memory',
     dish:'Japanese Hamburg Steak',
     cuisine:'Japanese',
     course:'Main Dishes',
     courseDisplay:'Main Dishes',
     categories:['Main Dishes'],
+    ingredientCategories:['Ground Meat','Onion','Eggs','Breadcrumbs','Milk','Sauce'],
     dateAdded:'2026-10-08',
     timeStamp:'01:15 AM',
     story:`In Japan, hamburg steak is one of those dishes that feels like “*haha no aji*” (母の味) — literally, “the taste of mother.” It’s that familiar, nostalgic taste we associate with home and childhood.
@@ -1002,7 +1003,7 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
 ,
   {
     slug:'silky-cheesecake',
-    title:'Silky Cheesecake',
+    title:'Silky Cheesecake', description:'Inspired by a memorable moment in Haruki Murakami’s Norwegian Wood, this silky cheesecake reflects on comfort, love, and the small things food can say.',
     source:'Book',
     original:'Norwegian Wood (1987) by Haruki Murakami',
     dish:'Cheesecake',
@@ -1106,7 +1107,7 @@ If you choose cheesecake, try this recipe tonight.`,
   },
 
   {
-    slug:'classic-pumpkin-pie', title:'Classic Pumpkin Pie', source:'Family & Tradition', dish:'Pumpkin Pie', cuisine:'Canadian', cuisineSecondary:'American',
+    slug:'classic-pumpkin-pie', title:'Classic Pumpkin Pie', description:'My take on a Canadian Thanksgiving classic, with silky pumpkin filling and a warm blend of cinnamon, cloves, and nutmeg—especially comforting on a quiet autumn night.', source:'Family & Tradition', dish:'Pumpkin Pie', cuisine:'Canadian', cuisineSecondary:'American',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Pumpkin','Pie','Eggs','Cream','Cinnamon'],
     dateAdded:'2026-10-11', timeStamp:'12:15 AM',
     heroImage:'images/recipes/classic-pumpkin-pie/hero.jpg', recipeImage:'images/recipes/classic-pumpkin-pie/recipe.jpg',

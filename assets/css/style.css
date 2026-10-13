@@ -1493,3 +1493,20 @@ body[data-page="home"] .category-card .photo-frame{
   .step,.ing li{break-inside:avoid;}
   a{color:#000;text-decoration:none;}
 }
+
+/* Mobile header balance: keep the title clear of the favorite and search icons. */
+@media (max-width:720px){
+  .header{grid-template-columns:44px minmax(0,1fr) 76px;padding:0 10px;}
+  .header .icons{gap:2px;min-width:0;}
+  .header .icons.right{justify-self:end;display:flex;align-items:center;justify-content:flex-end;}
+  .header .icon{width:30px;height:32px;padding:4px;display:inline-flex;align-items:center;justify-content:center;flex:0 0 30px;}
+  .header .icon svg,.header .fav-icon svg{width:22px;height:22px;}
+  .header .fav-icon{width:30px;height:32px;flex:0 0 30px;padding:4px;margin-right:0;display:inline-flex;align-items:center;justify-content:center;}
+  .header .logo{min-width:0;width:100%;max-width:100%;font-size:clamp(16px,4.8vw,24px);letter-spacing:0;overflow:hidden;text-overflow:clip;white-space:nowrap;}
+}
+@media (max-width:360px){
+  .header{grid-template-columns:38px minmax(0,1fr) 68px;padding:0 8px;}
+  .header .icon,.header .fav-icon{width:28px;flex-basis:28px;}
+  .header .icon svg,.header .fav-icon svg{width:21px;height:21px;}
+  .header .logo{font-size:16px;}
+}
