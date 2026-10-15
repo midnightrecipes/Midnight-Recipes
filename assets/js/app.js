@@ -53,11 +53,9 @@ const searchMatches=(r,query)=>{
 };
 function imageErrorHandler(fallbackClass='',optional=false){return `let i=Number(this.dataset.extI||0);const E=['.jpeg','.JPG','.JPEG'];if(i<E.length){this.dataset.extI=String(i+1);this.src=this.src.replace(/\\.(?:jpe?g)$/i,E[i]);}else{const f=this.closest('.photo-frame');if(f){${optional?`f.remove();`:`f.outerHTML='<div class=\\'ph ${fallbackClass}\\'></div>';`}}}`}
 function cardPhoto(r,eager=false){
-  const paths=imageData(r), source=paths.heroImage||paths.recipeImage;
+  const source=imageData(r).heroImage;
   if(!source)return '<div class="ph"></div>';
-  const base=`images/recipes/${r.slug}/card-`;
-  const img=`<img class="photo" ${eager?'loading="eager" fetchpriority="high"':'loading="lazy"'} decoding="async" src="${esc(root+source)}" alt="" width="640" height="640" onerror="${imageErrorHandler('',false)}">`;
-  return `<div class="photo-frame"><picture><source type="image/webp" srcset="${esc(root+base+'320.webp')} 320w, ${esc(root+base+'640.webp')} 640w" sizes="(max-width:430px) calc(50vw - 25px), (max-width:720px) calc(50vw - 25px), (max-width:1100px) calc(50vw - 40px), 300px">${img}</picture></div>`;
+  return `<div class="photo-frame"><img class="photo" ${eager?'loading="eager" fetchpriority="high"':'loading="lazy"'} decoding="async" src="${esc(root+source)}" alt="" onerror="${imageErrorHandler('',false)}"></div>`;
 }
 function card(r,usualsContext=false){const media=usualsContext?`<div class="photo-frame"><img class="photo" loading="lazy" decoding="async" src="${esc(root+imageData(r).heroImage)}" alt="" onerror="${imageErrorHandler('',false)}"></div>`:cardPhoto(r);return `<article class="category-card card"><a href="${href('recipes/recipe.html',{slug:r.slug})}">${media}<h3 class="name">${esc(r.title)}</h3></a></article>`} 
 function cards(list,usualsContext=false){return list.length?`<div class="category-grid">${list.map(r=>card(r,usualsContext)).join('')}</div>`:'<p class="empty-state">No recipes here yet</p>'}
