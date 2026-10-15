@@ -52,7 +52,7 @@ const searchMatches=(r,query)=>{
   });
 };
 function imageErrorHandler(fallbackClass='',optional=false){return `let i=Number(this.dataset.extI||0);const E=['.jpeg','.JPG','.JPEG'];if(i<E.length){this.dataset.extI=String(i+1);this.src=this.src.replace(/\\.(?:jpe?g)$/i,E[i]);}else{const f=this.closest('.photo-frame');if(f){${optional?`f.remove();`:`f.outerHTML='<div class=\\'ph ${fallbackClass}\\'></div>';`}}}`}
-function card(r,usualsContext=false){const src=imageData(r).heroImage;const media=src?`<div class="photo-frame"><img class="photo" loading="lazy" decoding="async" src="${esc(root+src)}" alt="${esc(r.title)}" onerror="${imageErrorHandler('')}"/></div>`:'<div class="ph"></div>';return `<article class="category-card card"><a href="${href('recipes/recipe.html',{slug:r.slug})}">${media}<h3 class="name">${esc(r.title)}</h3></a></article>`}
+function card(r,usualsContext=false){const src=imageData(r).heroImage;const media=src?photo(src,r.title):'<div class="ph"></div>';return `<article class="category-card card"><a href="${href('recipes/recipe.html',{slug:r.slug})}">${media}<h3 class="name">${esc(r.title)}</h3></a></article>`}
 function cards(list,usualsContext=false){return list.length?`<div class="category-grid">${list.map(r=>card(r,usualsContext)).join('')}</div>`:'<p class="empty-state">No recipes here yet</p>'}
 function sortedAll(){return recipes.map((r,index)=>({r,index})).sort((a,b)=>String(b.r.dateAdded||'').localeCompare(String(a.r.dateAdded||''))||b.index-a.index).map(x=>x.r)}
 function sorted(){return sortedAll().filter(r=>!r.isUsuals)}
