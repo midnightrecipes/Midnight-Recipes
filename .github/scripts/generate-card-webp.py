@@ -5,7 +5,7 @@ root = Path('images/recipes')
 for folder in sorted(root.iterdir()):
     if not folder.is_dir():
         continue
-    source = next((folder / name for name in ('recipe.jpg', 'hero.jpg') if (folder / name).exists()), None)
+    source = next((folder / name for name in ('hero.jpg', 'recipe.jpg') if (folder / name).exists()), None)
     if source is None:
         continue
     for size in (320, 640):
