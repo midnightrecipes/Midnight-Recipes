@@ -466,8 +466,8 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
       {group:'FILLING'},
       {amount:400,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'Cooked Sweet Potato Flesh'}, {amount:87,unit:'g',imperialAmount:7,imperialUnit:'tbsp',item:'10% Cream'}, {amount:70,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Granulated Sugar'}, {amount:2,unit:'',item:'Large Eggs'}, {amount:6,unit:'g',item:'Fresh Ginger, Finely Grated'}, {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'Ground Cinnamon'}, {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Kosher Salt'},
-      {group:'Topping (optional)'},
-      {amount:237,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'35% Whipping Cream'}, {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated Sugar'}, {unit:'',item:'Cinnamon, for Finishing'}
+      {group:'For Finishing'},
+      {unit:'',item:'Crystallized Ginger, Finely Chopped, for Finishing'}, {unit:'',item:'Ground Cinnamon, for Dusting'}
     ],
     steps:[
       {number:'01',title:'COOK THE SWEET POTATO',clock:'11:35 PM',paragraphs:[
@@ -501,18 +501,15 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
       ],stepImages:[]},
       {number:'05',title:'CHILL & FINISH',clock:'1:20 AM',paragraphs:[
         'Let the pie cool completely before refrigerating. Once cooled, refrigerate for at least 2 hours, preferably overnight.',
-        'Optional:',
-        'Whip {{qty:35% Whipping Cream}} cold whipping cream to soft peaks.',
-        'Gradually add {{qty:Topping (optional)::Granulated Sugar}} sugar and continue whipping until medium-firm peaks form.',
-        'Keep the whipped cream refrigerated until serving.',
-        'Slice the chilled pie and top with whipped cream and a light dusting of cinnamon.'
+        'Just before serving, sprinkle the pie with finely chopped crystallized ginger and a light dusting of cinnamon.',
+        'Slice and serve chilled.'
       ],stepImages:[]}
     ],
     notes:[
       ['Recreating the Flavor',`Fresh ginger is the signature. It gives the pie the warm, peppery character inspired by 番薯姜糖水.
 Roasting gives the deepest flavor. It removes excess moisture and concentrates the natural sweetness of the sweet potato.
 Keep the spices simple. There is no nutmeg, cloves, cardamom, or vanilla. Cinnamon supports the ginger instead of turning this into a classic pumpkin-spice pie.
-Don\'t over-sweeten it. The sweet potato provides natural sweetness, while the whipped cream adds another layer of sweetness.`],
+Don\'t over-sweeten it. The sweet potato provides natural sweetness, while crystallized ginger adds a little sweetness and a pleasant spicy bite.`],
       ['Midnight Compromises',`No time to roast? Microwave or boil the sweet potato instead.
 Making this at midnight? The filling can be made in one blender or with one hand blender—no separate egg mixture and no extra bowl.
 If you use boiled or microwaved sweet potato, let it steam-dry well before weighing. Too much moisture will make the filling softer.`]
