@@ -53,7 +53,7 @@ const searchMatches=(r,query)=>{
 };
 function imageErrorHandler(fallbackClass='',optional=false){return `let i=Number(this.dataset.extI||0);const E=['.jpeg','.JPG','.JPEG'];if(i<E.length){this.dataset.extI=String(i+1);this.src=this.src.replace(/\\.(?:jpe?g)$/i,E[i]);}else{const f=this.closest('.photo-frame');if(f){${optional?`f.remove();`:`f.outerHTML='<div class=\\'ph ${fallbackClass}\\'></div>';`}}}`}
 function cardPhoto(r,eager=false){
-  const paths=imageData(r), source=paths.recipeImage||paths.heroImage;
+  const paths=imageData(r), source=paths.heroImage||paths.recipeImage;
   if(!source)return '<div class="ph"></div>';
   const base=`images/recipes/${r.slug}/card-`;
   const img=`<img class="photo" ${eager?'loading="eager" fetchpriority="high"':'loading="lazy"'} decoding="async" src="${esc(root+source)}" alt="" width="640" height="640" onerror="${imageErrorHandler('',false)}">`;
