@@ -31,6 +31,12 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      - name: Install image optimizer
+        run: python -m pip install Pillow
+
+      - name: Generate card WebP images
+        run: python .github/scripts/generate-card-webp.py
+
       - name: Generate image manifest
         run: python .github/scripts/generate-image-manifest.py
 
@@ -39,7 +45,7 @@ jobs:
 
       - name: Commit generated files
         run: |
-          FILES="assets/js/image-manifest.json sitemap.xml robots.txt"
+          FILES="assets/js/image-manifest.json sitemap.xml robots.txt images/recipes"
           if [ -z "$(git status --porcelain -- $FILES)" ]; then
             echo "Generated files are already up to date."
             exit 0
