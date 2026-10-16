@@ -1516,3 +1516,7 @@ body[data-page="home"] .category-card .photo-frame{
 .recipe-card .ing li > .ingredient-check:focus-within{outline:2px solid currentColor;outline-offset:2px;}
 /* The info link remains a separate interactive element, not nested inside the checkbox label. */
 .recipe-card .ing li > .ingredient-info{display:inline-flex;align-items:center;justify-content:center;min-width:32px;min-height:44px;margin-left:0;}
+  /* Reserve space for JavaScript-rendered page content */
+body[data-page="home"] #app {
+  min-height: 100vh;
+}
