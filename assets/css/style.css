@@ -1520,3 +1520,19 @@ body[data-page="home"] .category-card .photo-frame{
 body[data-page="home"] #app {
   min-height: 100vh;
 }
+/* Custom heading star — page and section titles only */
+.h2 .mrstar {
+  width: .9em;
+  height: .9em;
+  flex: none;
+
+  background-image: url("/images/heading-star.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Hide the original SVG drawing inside headings */
+.h2 .mrstar use {
+  opacity: 0;
+}
