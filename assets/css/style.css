@@ -1544,3 +1544,8 @@ body[data-page="home"] #app {
 /* Mint Submit button, inverted on hover or keyboard focus */
 #submitReview:not(:disabled){background:var(--mint);color:var(--ink);border-color:var(--ink);transition:background-color .18s ease,color .18s ease}
 #submitReview:not(:disabled):hover,#submitReview:not(:disabled):focus-visible{background:var(--ink);color:var(--mint)}
+  
+/* MIDNIGHT RECIPES — Ingredient checkboxes */
+.ing input[type="checkbox"] {
+  accent-color: #C9FFD8;
+}
