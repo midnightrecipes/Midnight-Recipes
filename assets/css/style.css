@@ -1536,3 +1536,7 @@ body[data-page="home"] #app {
 .h2 .mrstar use {
   opacity: 0;
 }
+/* Supabase review form additions */
+#reviewTurnstile{margin:12px 0 16px;min-height:65px}
+#submitReview:disabled{opacity:.55;cursor:wait}
+.review-summary{font-size:16px;font-weight:600;margin:16px 0 8px}
