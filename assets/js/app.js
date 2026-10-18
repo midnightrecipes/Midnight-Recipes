@@ -84,12 +84,12 @@ function listPhoto(r,eager=false,alt=''){
   const webp=optimized?source.replace(/\.jpg$/i,'-list.webp'):'';
   return `<div class="photo-frame"><picture>${webp?`<source srcset="${esc(root+webp)}" type="image/webp">`:''}<img class="photo" ${eager?'loading="eager" fetchpriority="high"':'loading="lazy"'} decoding="async" src="${esc(root+source)}" alt="${esc(alt)}" onerror="${imageErrorHandler('',false)}"></picture></div>`;
 }
-function cardPhoto(r,eager=false){return listPhoto(r,eager)}
+function cardPhoto(r,eager=false,alt=''){return listPhoto(r,eager,alt)}
 
 function card(r,usualsContext=false,eager=false){
   const media=usualsContext
-    ? listPhoto(r,eager)
-    : cardPhoto(r,eager);
+    ? listPhoto(r,eager,r.title)
+    : cardPhoto(r,eager,r.title);
 
   return `<article class="category-card card"><a href="${href('recipes/recipe.html',{slug:r.slug})}">${media}<h3 class="name">${esc(r.title)}</h3></a></article>`;
 }
