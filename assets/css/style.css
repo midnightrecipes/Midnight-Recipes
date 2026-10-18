@@ -1519,6 +1519,6 @@ body[data-page="home"] .category-card .photo-frame{
 .recipe-card .ing input[type="checkbox"]:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
 @media(max-width:430px){.recipe-card .recipe-action-row{gap:8px}.recipe-card .recipe-action-row .recipe-icon-btn{flex-basis:40px;width:40px;min-width:40px;height:40px;min-height:40px}.recipe-card .ingredient-heading-row{margin-top:28px}}
 /* THE AFTERTASTE — MIDNIGHT RECIPES existing palette */
-.review-form > .h3{margin:0 0 8px;color:var(--head);font-family:var(--logo-font)}
+.review-form > .h3{margin:0 0 8px;color:var(--head);}
 .review-form .review-intro{margin:0 0 20px;line-height:1.65;color:var(--ink)}
 .review-form #submitReview{background:var(--mint);color:var(--ink)}
