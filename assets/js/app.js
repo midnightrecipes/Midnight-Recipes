@@ -132,7 +132,13 @@ function photo(src,alt,cls='',optional=false,eager=false){
   return `<div class="photo-frame ${cls}"><picture><source srcset="${esc(root+webpPath)}" type="image/webp">${img}</picture></div>`;
 }
 function stepPhoto(src,alt){return src?`<div class="photo-frame step-photo-frame"><img class="photo" loading="lazy" decoding="async" src="${esc(root+src)}" alt="${esc(alt)}" onerror="const g=this.closest('.step-photos');const E=['.jpeg','.JPG','.JPEG'];let i=Number(this.dataset.extI||0);if(i<E.length){this.dataset.extI=String(i+1);this.src=this.src.replace(/\\.(?:jpe?g)$/i,E[i]);}else{this.closest('.photo-frame')?.remove();if(g&&!g.querySelector('img'))g.remove();}"></div>`:''}
-function stepPhotoMarkup(s,r,i){let list=resolvedStepImages(s,r,i);if(!list.length)return '';return `<div class="step-photos step-photos-${list.length}">${list.map((src,n)=>stepPhoto(src,`${r.title} step ${i+1} photo ${n+1}`)).join('')}</div>`}
+
+function stepPhotoMarkup(s,r,i){
+  const list=resolvedStepImages(s,r,i);
+  if(!list.length)return '';
+  const stepTitle=s.title||s.label||`Step ${i+1}`;
+  return `<div class="step-photos step-photos-${list.length}">${list.map((src,n)=>stepPhoto(src,`${r.title} — ${stepTitle}${list.length>1?` (photo ${n+1})`:''}`)).join('')}</div>`;
+}
 function categoryLink(type,value){const map={source:'pages/source.html',course:'pages/meal.html',cuisine:'pages/cuisine.html'};return href(map[type],{value})}
 function normalizeIngredientFile(value){
   if(!value)return {groups:[],name:'',items:[]};
