@@ -78,29 +78,13 @@ const searchMatches=(r,query)=>{
 };
 function imageErrorHandler(fallbackClass='',optional=false){return `let i=Number(this.dataset.extI||0);const E=['.jpeg','.JPG','.JPEG'];if(i<E.length){this.dataset.extI=String(i+1);this.src=this.src.replace(/\\.(?:jpe?g)$/i,E[i]);}else{const f=this.closest('.photo-frame');if(f){${optional?`f.remove();`:`f.outerHTML='<div class=\\'ph ${fallbackClass}\\'></div>';`}}}`}
 
+
 function listPhoto(r,eager=false,alt=''){
   const source=imageData(r).heroImage;
   if(!source)return '<div class="ph"></div>';
-
   const optimized=/^images\/recipes\/[^/]+\/hero\.jpg$/i.test(source);
-  const base=optimized?source.replace(/hero\.jpg$/i,''):'';
-  const webp=optimized?base+'hero-list.webp':'';
-  const srcset=optimized
-    ? `${root+base}card-320.webp 320w, ${root+base}card-640.webp 640w`
-    : '';
-
-  return `<div class="photo-frame"><picture>
-    ${optimized?`<source
-      type="image/webp"
-      srcset="${esc(srcset)}"
-      sizes="(max-width: 600px) 90vw, (max-width: 900px) 45vw, 300px">`:''}
-    <img class="photo"
-      ${eager?'loading="eager" fetchpriority="high"':'loading="lazy"'}
-      decoding="async"
-      src="${esc(root+source)}"
-      alt="${esc(alt)}"
-      onerror="${imageErrorHandler('',false)}">
-  </picture></div>`;
+  const webp=optimized?source.replace(/\.jpg$/i,'-list.webp'):'';
+  return `<div class="photo-frame"><picture>${webp?`<source srcset="${esc(root+webp)}" type="image/webp">`:''}<img class="photo" ${eager?'loading="eager" fetchpriority="high"':'loading="lazy"'} decoding="async" src="${esc(root+source)}" alt="${esc(alt)}" onerror="${imageErrorHandler('',false)}"></picture></div>`;
 }
 
 function cardPhoto(r,eager=false,alt=''){return listPhoto(r,eager,alt)}
