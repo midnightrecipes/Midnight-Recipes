@@ -279,7 +279,7 @@ body.scaled #stage,body.scaled #stagewrap{width:auto!important;transform:none!im
 .category-card .name{font-family:var(--body-font);font-weight:600;font-size:19px;margin:14px 0 0}
 .category-card a{text-decoration:none;color:inherit}
 .empty-state{padding:28px 0;font-size:18px;opacity:.65}
-.filter-subtitle{font-size:15px;opacity:.65;margin:-12px 0 26px}
+.filter-subtitle{font-size:15px;opacity:1;margin:-12px 0 26px}
 .ingredient-file{border-top:1px solid var(--line);padding-top:22px}
 .ingredient-file-item{margin:0 0 18px;max-width:72ch}
 .ingredient-file-item h4{margin:0 0 5px;font-size:17px}
