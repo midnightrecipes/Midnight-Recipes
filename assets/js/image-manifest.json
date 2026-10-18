@@ -89,6 +89,25 @@
       ]
     }
   },
+  "beef-chili": {
+    "hero": "images/recipes/beef-chili/hero.jpg",
+    "recipe": "images/recipes/beef-chili/recipe.jpg",
+    "steps": {
+      "01": [
+        "images/recipes/beef-chili/step-01-01.jpg",
+        "images/recipes/beef-chili/step-01-02.jpg"
+      ],
+      "02": [
+        "images/recipes/beef-chili/step-02-01.jpg",
+        "images/recipes/beef-chili/step-02-02.jpg",
+        "images/recipes/beef-chili/step-02-03.jpg"
+      ],
+      "03": [
+        "images/recipes/beef-chili/step-03-01.jpg",
+        "images/recipes/beef-chili/step-03-02.jpg"
+      ]
+    }
+  },
   "building-block-pie-crust": {
     "hero": "images/recipes/building-block-pie-crust/hero.jpg",
     "recipe": null,
