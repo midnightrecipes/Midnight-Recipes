@@ -1,0 +1,30 @@
+name: Validate recipes
+
+on:
+  push:
+    paths:
+      - 'assets/js/data.js'
+      - 'validate-recipes.cjs'
+      - '.github/workflows/validate-recipes.yml'
+  pull_request:
+    paths:
+      - 'assets/js/data.js'
+      - 'validate-recipes.cjs'
+      - '.github/workflows/validate-recipes.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate recipe data
+        run: node validate-recipes.cjs assets/js/data.js
