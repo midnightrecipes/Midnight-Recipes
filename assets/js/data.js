@@ -375,7 +375,7 @@ What if we just put way more banana in banana cream pie?`,
       {name:'PLAIN BISCUITS',details:[['Substitute','Biscoff cookies'],['Midnight Fix','If using 200g Biscoff, skip the cinnamon, ginger, and nutmeg. Simply combine the crumbs with 80g melted butter.']]},
       {name:'WHOLE MILK',details:[['Why Whole Milk','The higher fat content gives the filling a richer, creamier mouthfeel.'],['Substitute','2% milk works too, but the filling will be slightly lighter.']]}
     ],
-    stats:{prep:'20 mins',cook:'30 mins',chill:'3+ hrs',total:'3 hrs 50 mins',serves:'6–8',pan:'9-inch / 23 cm pie plate',quiet:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
+    stats:{prep:'20 mins',cook:'30 mins',chill:'3+ hrs',total:'3 hrs 50 mins+',serves:'6–8',pan:'9-inch / 23 cm pie plate',quiet:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
     ingredients:[
       {group:'Crust'},
       {amount:200,unit:'g',item:'Plain Biscuits, Finely Crushed'}, {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground Cinnamon'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Ground Ginger'}, {amount:1,unit:'pinch',item:'Ground Nutmeg'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'}, {amount:80,unit:'g',item:'Unsalted Butter, Melted'},
@@ -1050,7 +1050,7 @@ If you choose cheesecake, try this recipe tonight.`,
       {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Lemon Juice'},
       {amount:0.5,unit:'tsp',item:'Vanilla Extract'}
     ],
-    stats:{prep:'20 mins',cook:'45–50 mins',chill:'8 hrs+',total:'9 hrs+',serves:'6–8 slices',pan:'18 cm loaf pan',quiet:'⭐⭐⭐⭐⭐'},
+    stats:{prep:'20 mins',cook:'45–50 mins',chill:'8 hrs+',total:'9 hrs 5 mins+',serves:'6–8 slices',pan:'18 cm loaf pan',quiet:'⭐⭐⭐⭐⭐'},
     showPan:true,
     showChill:true,
     stepQuantityConversion:true,
