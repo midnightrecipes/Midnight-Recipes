@@ -120,9 +120,45 @@ function sortControl(sort){return `<div class="sort-control" style="display:flex
 function top(){const latest=sorted().slice(0,4);app.innerHTML=`<div class="wrap"><h1 class="visually-hidden">MIDNIGHT RECIPES</h1><div class="home-tagline"><p>Food we find. Recipes we recreate.</p><p>Stories from our midnight kitchen.</p></div><section class="section"><h2 class="h2">${star()}Midnight Dispatches</h2>${cards(latest,true,true)}<p class="viewall"><a href="${href('recipes/index.html')}">View all</a></p></section><section class="section"><h2 class="h2">${star()}Where did the idea come from?</h2><p class="filter-subtitle">Browse recipes by what inspired them.</p><div class="sources">${sources.map(s=>{const r=sorted().find(x=>x.source===s||x.sourceSecondary===s||(Array.isArray(x.sources)&&x.sources.includes(s)));return `<div class="tile"><a href="${href('pages/source.html',{value:s})}">${r&&imageData(r).heroImage?`<div class="photo-frame"><img class="photo" loading="lazy" decoding="async" src="${esc(root+imageData(r).heroImage)}" alt="${esc(r.title)}" onerror="${imageErrorHandler('sm')}"></div>`:'<div class="ph sm"></div>'}<p class="source-name">${esc(cutieText(s))}</p></a>${r?`<p class="source-latest"><a href="${href('recipes/recipe.html',{slug:r.slug})}">${esc(r.title)}</a></p>`:'<p class="source-empty">No recipes here yet</p>'}</div>`}).join('')}</div></section><section class="section"><h1 class="h2">${star()}About</h1><div class="about"><div class="about-photo home-about-photo">${window.MIDNIGHT_SITE?.aboutImages?.aboutRecipes?`<img class="photo" loading="lazy" decoding="async" src="${esc(root+window.MIDNIGHT_SITE.aboutImages.aboutRecipes)}" alt="MIDNIGHT KITCHEN">`:''}</div><div><p>Hi, my name is Mitsuka. I cook after dark. This is a collection of recipes inspired by restaurants, travels, memories, traditions, and whatever catches my curiosity late at night.</p><p class="more"><a href="${href('pages/about.html')}">Learn more</a></p></div></div></section></div>`}
 function listPage(title,list,sub=''){setMeta(title,`${title}: ${list.length} recipe${list.length===1?'':'s'} from ${SITE_NAME}.`);setCanonicalFromLocation();const sort=listSortValue();const usualsContext=list.length>0&&list.every(r=>r.isUsuals);app.innerHTML=`<div class="wrap"><section class="section"><h1 class="h2">${star()}${esc(title)}</h1>${sub?`<p class="filter-subtitle">${esc(sub)}</p>`:''}${sortControl(sort)}${cards(sortRecipes(list,sort),usualsContext)}</section></div>`;bindListSort()}
 function notFound(msg){setMeta('Page not found');const m=document.createElement('meta');m.name='robots';m.content='noindex';document.head.appendChild(m);app.innerHTML=`<div class="wrap"><section class="section"><h1 class="h2">${star()}Page not found</h1><p class="body-copy">${esc(msg)}</p><p class="body-copy"><a href="${href('recipes/index.html')}">View all recipes</a> · <a href="${href('index.html')}">Home</a></p></section></div>`}
-function isoDuration(t){const x=String(t||'');const h=x.match(/(\d+(?:\.\d+)?)\s*(?:hrs?|hours?|h)\b/i),m=x.match(/(\d+)\s*(?:mins?|minutes?|m)\b/i);if(!h&&!m)return '';return 'PT'+(h?Math.round(Number(h[1]))+'H':'')+(m?Number(m[1])+'M':'')}
-function cleanStepText(t){return String(t||'').replace(/\{\{qty:[^}]*\}\}\s*/g,'').replace(/\*+/g,'').replace(/\s+/g,' ').trim()}
-function addRecipeJsonLd(r){document.getElementById('recipe-jsonld')?.remove();const abs=p=>p?`${SITE_URL}/${p}`:undefined;const ing=(r.ingredients||[]).filter(x=>x&&x.item&&!x.hideFromIngredients).map(x=>[x.amount,x.unit,x.item].filter(v=>v!==undefined&&v!==null&&v!=='').join(' '));const steps=(r.steps||[]).flatMap(st=>(Array.isArray(st.paragraphs)?st.paragraphs:[]).map(cleanStepText).filter(Boolean)).map(text=>({'@type':'HowToStep',text}));if(!ing.length||!steps.length)return;const st=r.stats||{};const data={'@context':'https://schema.org','@type':'Recipe',name:r.title,description:r.description||undefined,url:`https://midnightrecipes.com/recipes/recipe.html?slug=${encodeURIComponent(r.slug)}`,image:abs(imageData(r).heroImage)||DEFAULT_SHARE_IMAGE,datePublished:r.dateAdded||undefined,author:{'@type':'Organization',name:SITE_NAME},recipeCategory:r.course||undefined,recipeCuisine:r.cuisine||undefined,prepTime:isoDuration(st.prep)||undefined,cookTime:isoDuration(st.cook)||undefined,totalTime:isoDuration(st.total)||undefined,recipeYield:st.serves!==undefined?String(st.serves):undefined,recipeIngredient:ing,recipeInstructions:steps};const el=document.createElement('script');el.type='application/ld+json';el.id='recipe-jsonld';el.textContent=JSON.stringify(data);document.head.appendChild(el)}function relatedRecipes(r){if(r.isUsuals)return [];const lc=v=>String(v).toLowerCase();const cu=new Set(cuisineValues(r).map(lc)),co=new Set(courseValues(r).map(lc)),ic=new Set((r.ingredientCategories||[]).map(lc));return recipes.filter(x=>x!==r&&!x.isUsuals).map(x=>{let n=0;if(cuisineValues(x).some(v=>cu.has(lc(v))))n+=2;if(courseValues(x).some(v=>co.has(lc(v))))n+=1;if((x.ingredientCategories||[]).some(v=>ic.has(lc(v))))n+=1;if(x.source&&x.source===r.source)n+=1;return {x,n}}).filter(o=>o.n>0).sort((a,b)=>b.n-a.n||String(b.x.dateAdded||'').localeCompare(String(a.x.dateAdded||''))).slice(0,3).map(o=>o.x)}
+// Structured data only: keep recipe-page presentation unchanged.
+function isoDuration(t){
+  const value=String(t||'').toLowerCase().replace(/[–—]/g,'-');
+  // ISO 8601 cannot express an open-ended duration or a range. Use its stated minimum.
+  const h=value.match(/(\d+(?:\.\d+)?)\s*(?:hrs?|hours?|h)\b/);
+  const m=value.match(/(\d+(?:\.\d+)?)\s*(?:mins?|minutes?|m)\b/);
+  if(!h&&!m)return '';
+  const minutes=Math.round((h?Number(h[1])*60:0)+(m?Number(m[1]):0));
+  return minutes>0?'PT'+(Math.floor(minutes/60)?Math.floor(minutes/60)+'H':'')+(minutes%60?minutes%60+'M':''):'';
+}
+function schemaIngredient(x){
+  if(!x||!x.item||x.hideFromIngredients)return '';
+  let amount='';
+  if(x.minAmount!=null&&x.maxAmount!=null)amount=`${x.minAmount}–${x.maxAmount}`;
+  else if(x.amount!=null)amount=String(x.amount);
+  else if(x.minAmount!=null)amount=String(x.minAmount);
+  else if(x.maxAmount!=null)amount=String(x.maxAmount);
+  return [amount,x.unit,x.item].filter(v=>v!==undefined&&v!==null&&String(v).trim()!=='').join(' ');
+}
+function schemaStepText(t,r){
+  return String(t||'').replace(/\{\{qty:([^}]+)\}\}/g,(_,key)=>{
+    const match=instructionIngredientCandidates(r,key,'')[0];
+    return match?instructionQuantityFromIngredient(match,1,'metric',r):'';
+  }).replace(/\*+/g,'').replace(/\s+/g,' ').trim();
+}
+function addRecipeJsonLd(r){
+  document.getElementById('recipe-jsonld')?.remove();
+  const abs=p=>p?`${SITE_URL}/${p}`:undefined;
+  const ing=(r.ingredients||[]).map(schemaIngredient).filter(Boolean);
+  const steps=(r.steps||[]).map((st,i)=>{
+    const text=(Array.isArray(st.paragraphs)?st.paragraphs:[]).map(t=>schemaStepText(t,r)).filter(Boolean).join(' ');
+    return text?{'@type':'HowToStep',name:st.title||st.label||`Step ${i+1}`,text}:null;
+  }).filter(Boolean);
+  if(!ing.length||!steps.length)return;
+  const st=r.stats||{};
+  const data={'@context':'https://schema.org','@type':'Recipe',name:r.title,description:r.description||undefined,url:`${SITE_URL}/recipes/recipe.html?slug=${encodeURIComponent(r.slug)}`,image:abs(imageData(r).heroImage)||DEFAULT_SHARE_IMAGE,datePublished:r.dateAdded||undefined,author:{'@type':'Organization',name:SITE_NAME},recipeCategory:r.course||undefined,recipeCuisine:r.cuisine||undefined,prepTime:isoDuration(st.prep)||undefined,cookTime:isoDuration(st.cook)||undefined,totalTime:isoDuration(st.total)||undefined,recipeYield:st.serves!==undefined?String(st.serves):undefined,recipeIngredient:ing,recipeInstructions:steps};
+  const el=document.createElement('script');el.type='application/ld+json';el.id='recipe-jsonld';el.textContent=JSON.stringify(data);document.head.appendChild(el);
+}
+function relatedRecipes(r){if(r.isUsuals)return [];const lc=v=>String(v).toLowerCase();const cu=new Set(cuisineValues(r).map(lc)),co=new Set(courseValues(r).map(lc)),ic=new Set((r.ingredientCategories||[]).map(lc));return recipes.filter(x=>x!==r&&!x.isUsuals).map(x=>{let n=0;if(cuisineValues(x).some(v=>cu.has(lc(v))))n+=2;if(courseValues(x).some(v=>co.has(lc(v))))n+=1;if((x.ingredientCategories||[]).some(v=>ic.has(lc(v))))n+=1;if(x.source&&x.source===r.source)n+=1;return {x,n}}).filter(o=>o.n>0).sort((a,b)=>b.n-a.n||String(b.x.dateAdded||'').localeCompare(String(a.x.dateAdded||''))).slice(0,3).map(o=>o.x)}
 function recipe(){const slug=(new URLSearchParams(location.search).get('slug')||'').trim();const r=slug?recipes.find(x=>String(x.slug||'').toLowerCase()===slug.toLowerCase()):null;if(!r){notFound(slug?'We could not find that recipe. It may have been moved or renamed.':'No recipe was selected.');return}setMeta(r.title,r.description);setCanonical(`${SITE_URL}/recipes/recipe.html?slug=${encodeURIComponent(r.slug)}`);{const heroPath=imageData(r).heroImage;setShareImage(heroPath?`${SITE_URL}/${heroPath}`:DEFAULT_SHARE_IMAGE,!!heroPath)}app.innerHTML=recipeHtml(r);bindRecipe(r);addRecipeJsonLd(r)}
 function favorites(){setMeta('Favorites','Recipes you have saved on this device.');setNoindex();const favs=getFavs();const list=sorted().filter(r=>favs.includes(r.slug));if(!list.length){app.innerHTML=`<div class="wrap"><section class="section"><h1 class="h2">${star()}Favorites</h1><p class="body-copy">No favorites yet. Tap “Favorite” on a recipe to keep it here.</p><p class="body-copy"><a href="${href('recipes/index.html')}">Browse all recipes</a></p></section></div>`;return}listPage('Favorites',list,'Saved on this device only.')}
 function photo(src,alt,cls='',optional=false,eager=false){
