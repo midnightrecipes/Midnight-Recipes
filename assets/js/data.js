@@ -232,7 +232,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
       {group:'Brûlée'},
       {unit:'',item:'Granulated Sugar, for Brûlée'}
     ],
-    stats:{prep:'20 mins',cook:'35 mins',total:'55 mins + chilling',serves:'6',quiet:'⭐⭐⭐⭐⭐'},
+    stats:{prep:'20 mins',cook:'35 mins',chill:'2 hrs+',total:'2 hrs 55 mins+',serves:'6',quiet:'⭐⭐⭐⭐⭐'},
     steps:[
       {number:'01',title:'PREHEAT & SOFTEN THE APPLES',clock:'11:20 PM',paragraphs:[
         'Preheat your oven to 140°C / 285°F.',
