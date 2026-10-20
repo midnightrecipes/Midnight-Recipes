@@ -10,7 +10,7 @@ window.MIDNIGHT_SITE = {
 
 window.MIDNIGHT_RECIPES = [
   {
-    slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE AND JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-26', timeStamp:'11:20 PM',
+    slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE AND JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Chocolate','Pie'], dateAdded:'2026-09-26', timeStamp:'11:20 PM',
     description:'A late-night chocolate cream pie inspired by Julie & Julia (2009).',
     heroImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg', recipeImage:'images/recipes/chocolate-cream-comfort-pie/recipe.jpg',
     unitOverrides:{imperial:{'unsalted butter':'tbsp','unsalted butter melted':'tbsp'}},
@@ -88,6 +88,7 @@ window.MIDNIGHT_RECIPES = [
     cuisine:'Taiwan', cuisineSecondary:'Japanese',
     course:'Main Dishes',
     categories:['Main Dishes'],
+    ingredientCategories:['Pork'],
     dateAdded:'2026-09-27',
     timeStamp:'11:14 PM',
     description:'A fiery Nagoya-inspired Taiwan mince served over rice with a soft-boiled egg.',
@@ -185,6 +186,7 @@ window.MIDNIGHT_RECIPES = [
     cuisine:'French',
     course:'Desserts',
     categories:['Desserts'],
+    ingredientCategories:['Fruit'],
     dateAdded:'2026-09-27',
     timeStamp:'11:20 PM',
     description:'Apple crème brûlée inspired by Amélie (2001), with soft tart apples beneath silky custard and brittle caramel.',
@@ -289,7 +291,8 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
     slug:'mexican-calabaza-en-tacha-pumpkin-pie',
     title:'Mexican (Calabaza en Tacha) Pumpkin Pie', description:'Inspired by Coco and Día de Muertos, this pumpkin pie reimagines calabaza en tacha with warm spices and the comforting flavors of a traditional Mexican seasonal sweet.',
     source:'Movie & TV', sourceSecondary:'Family & Tradition', original:'Coco (2017)', dish:'Calabaza en Tacha-inspired Pumpkin Pie', cuisine:'Mexican',
-    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-27', timeStamp:'11:48 PM',
+    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Vegetable','Pie'],
+    dateAdded:'2026-09-27', timeStamp:'11:48 PM',
     usCupFractions:true, stepQuantityConversion:true,
     tags:['Movie','Coco','Pie','Mexican','Pumpkin','DíaDeMuertos','Ofrenda','CalabazaenTacha','Baking','Dessert'],
     heroImage:'images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/hero.jpg',
@@ -348,7 +351,7 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
   },
   {
     slug:'banana-banana-cream-pie', title:'Banana Banana Cream Pie', description:'Made for seriously banana-y flavor, this cream pie uses very ripe bananas cooked down into a sweet, concentrated filling beneath a smooth custard.', source:'Midnight Experiment', dish:'Banana Cream Pie', cuisine:'American',
-    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-27', timeStamp:'2:55 AM',
+    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Fruit','Pie','Eggs','Pantry'], dateAdded:'2026-09-27', timeStamp:'2:55 AM',
     tags:['Dessert','Baking','Banana','Pie'], heroImage:'images/recipes/banana-banana-cream-pie/hero.jpg', recipeImage:'images/recipes/banana-banana-cream-pie/recipe.jpg',
     unitOverrides:{imperial:{'plain biscuits, finely crushed':'cup','unsalted butter, melted':'cup','whole milk':'cup','granulated sugar':'tbsp','cornstarch':'tbsp','35% Whipping Cream':'cup','Granulated Sugar, To Taste':'tbsp'}},
     densityOverrides:{'plain biscuits|cup':100,'granulated sugar|tbsp':35/3},
@@ -444,7 +447,7 @@ What if we just put way more banana in banana cream pie?`,
   },
   {
     slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', description:'Inspired by Chinese sweet potato ginger dessert soup, this silky pie pairs earthy sweet potato with fresh ginger, cinnamon, and a gentle warming spice.', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese', cuisineSecondary:'American',
-    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-27', timeStamp:'11:35 PM',
+    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Sweet Potato','Ginger','Cream','Cinnamon','Pie'], dateAdded:'2026-09-27', timeStamp:'11:35 PM',
     tags:['Midnight Experiment','Dessert','Baking','Chinese','American','Sweet Potato','Ginger','Pie'], heroImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', recipeImage:'images/recipes/sweet-potato-ginger-pie/recipe.jpg', usesUsual:'building-block-pie-crust', usCupFractions:true, forceCupUnits:true, stepQuantityConversion:true,
     story:`Inspired by traditional Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水), a simple sweet soup made by simmering sweet potatoes with fresh ginger and sugar in water.
 
@@ -521,7 +524,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     mainIngredients:['Sweet Potato','Ginger','Cream','Cinnamon'], footerInspiredBy:'Traditional', footerCuisine:'Chinese · American', footerCourse:'Desserts', footerMainIngredients:['Sweet Potato','Ginger','Cream','Cinnamon']
   },
   {
-    slug:'building-block-pie-crust', title:'Building Block Pie Crust', source:'The Usuals', cuisine:'American', course:'Baking', courseDisplay:'Baking', categories:['Baking'], dateAdded:'2026-09-27', timeStamp:'',
+    slug:'building-block-pie-crust', title:'Building Block Pie Crust', source:'The Usuals', cuisine:'American', course:'Baking', courseDisplay:'Baking', categories:['Baking'], ingredientCategories:['Pie'], dateAdded:'2026-09-27', timeStamp:'',
     isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...', hideRecipeTags:true,
     description:'The crust we make when a pie calls for a crust.',
     usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
@@ -569,7 +572,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
 
   {
     slug:'fun-key-lime-pie', title:'Fun(Key) Lime Pie', source:'Grocery Store Find', original:'', dish:'Lime Pie', cuisine:'American', dateAdded:'2026-10-08',
-    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], timeStamp:'11:20 PM',
+    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Fruit','Eggs','Cream','Pie'], timeStamp:'11:20 PM',
     description:'A Key Lime Pie-inspired pie made with the limes you can actually find.',
     story:`Key Lime Pie is easy to find in Toronto. I kept seeing it in grocery store freezer sections and bakery counters, almost as if it were just another everyday dessert.\nOne night, I decided to make one myself.\nI went looking for Key limes.\nAnd suddenly, they were nowhere.\nThe pie was easy to find. The Key limes were not.\nSo I stopped looking for the perfect Key lime and started with the limes I could actually buy.\nRegular Persian/Tahiti limes. A little extra zest. Sour cream for more body and tang.\nIt isn't a traditional Key Lime Pie, but it still has the creamy, tart, sweet character I was looking for.\nA Key Lime Pie-inspired pie made with the lime you can actually find!`,
     heroImage:'images/recipes/fun-key-lime-pie/hero.jpg', recipeImage:'images/recipes/fun-key-lime-pie/recipe.jpg',
@@ -665,7 +668,8 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     cuisine:'Thai',
     course:'Soups',
     courseDisplay:'Soups',
-    categories:['Soups'], dateAdded:'2026-10-08',
+    categories:['Soups'], ingredientCategories:["Chicken", "Coconut Milk", "Galangal", "Lemongrass", "Mushroom", "Soup"],
+    dateAdded:'2026-10-08',
     timeStamp:'11:21 PM',
     description:'A Thai coconut chicken soup with galangal, lemongrass, makrut lime leaves, fresh lime, and gentle chili heat—my late-night attempt to see if it deserved its reputation.',
     story:`TasteAtlas had ranked Tom Kha Gai #1 on its list of the world’s best chicken soups. I knew Tom Yum, but somehow Tom Kha Gai had always stayed in the background.
@@ -764,7 +768,7 @@ If the internet was calling it the world’s best, I had to find out for myself,
       'REHEAT':'Reheat gently on the stovetop or in the microwave. Avoid bringing the soup to a hard boil.'
     },
     tags:['Galangal','Makrut Lime Leaves','Lemongrass','Coconut Milk','Chicken'],
-    mainIngredients:['Chicken', 'Coconut Milk', 'Galangal', 'Lemongrass', 'Mushrooms'], usualsCategory:''
+    usualsCategory:''
   }
 ,
 
@@ -775,7 +779,8 @@ If the internet was calling it the world’s best, I had to find out for myself,
     cuisine:'Thai',
     course:'Main Dishes',
     courseDisplay:'Main Dishes',
-    categories:['Main Dishes'], dateAdded:'2026-10-08',
+    categories:['Main Dishes'], ingredientCategories:["Chicken", "Peanut", "Chili", "Sauce"],
+    dateAdded:'2026-10-08',
     timeStamp:'10:15 PM',
     description:'Inspired by sweet chili sauce and crushed peanuts served with Thai fish cakes, this chicken brings together sweet, tangy, spicy, and nutty flavors in a quick homemade dish.',
     story:`I first fell for the combination of sweet chili sauce and peanuts in Thailand, where sweet chili sauce and crushed peanuts were served alongside crispy Thai fish cakes (Tod Mun Pla).
@@ -887,6 +892,7 @@ This isn't a traditional Thai dish. It's simply my midnight attempt to recreate 
     course:'Main Dishes',
     courseDisplay:'Main Dishes',
     categories:['Main Dishes'],
+    ingredientCategories:['Ground Meat','Onion','Eggs','Breadcrumbs','Milk','Sauce'],
     dateAdded:'2026-10-08',
     timeStamp:'01:15 AM',
     story:`In Japan, hamburg steak is one of those dishes that feels like “*haha no aji*” (母の味) — literally, “the taste of mother.” It’s that familiar, nostalgic taste we associate with home and childhood.
@@ -986,7 +992,7 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
       'REHEAT':'Reheat covered in a pan with a splash of water, or gently in the microwave.'
     },
     tags:['Memory','Japanese','Hamburg Steak','Ground Meat','Family Cooking','Demi-Glace Sauce'],
-    mainIngredients:['Ground Meat', 'Onion', 'Egg', 'Breadcrumbs', 'Milk'], usualsCategory:''
+    usualsCategory:''
   }
 ,
   {
@@ -998,6 +1004,7 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
     cuisine:'American',
     course:'Baking',
     courseDisplay:'Baking, Desserts',
+    ingredientCategories:['Cheese','Cream','Eggs','Pantry'],
     categories:['Baking','Desserts'],
     dateAdded:'2026-10-10',
     timeStamp:'10:10 PM',
@@ -1089,12 +1096,13 @@ If you choose cheesecake, try this recipe tonight.`,
       'REHEAT':'Not applicable.'
     },
     tags:['cheesecake','baked cheesecake','creamy cheesecake','silky texture','cream cheese','water bath','make ahead dessert','Haruki Murakami','Norwegian Wood'],
-    mainIngredients:['Cream Cheese', 'Sour Cream', 'Eggs', 'Whipping Cream', 'Lemon'], usualsCategory:''
+    usualsCategory:''
   },
 
   {
     slug:'classic-pumpkin-pie', title:'Classic Pumpkin Pie', description:'My take on a Canadian Thanksgiving classic, with silky pumpkin filling and a warm blend of cinnamon, cloves, and nutmeg—especially comforting on a quiet autumn night.', source:'Family & Tradition', dish:'Pumpkin Pie', cuisine:'Canadian', cuisineSecondary:'American',
-    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-10-11', timeStamp:'12:15 AM',
+    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Pumpkin','Pie','Eggs','Cream','Cinnamon'],
+    dateAdded:'2026-10-11', timeStamp:'12:15 AM',
     heroImage:'images/recipes/classic-pumpkin-pie/hero.jpg', recipeImage:'images/recipes/classic-pumpkin-pie/recipe.jpg',
     usesUsual:'building-block-pie-crust', showPan:true, showChill:true, hideRecipeTags:true,
     stepQuantityConversion:true, usCupFractions:true, fractionDenominator:16,
