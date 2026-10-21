@@ -249,6 +249,11 @@
       ]
     }
   },
+  "sichuan-kung-pao-chicken": {
+    "hero": "images/recipes/sichuan-kung-pao-chicken/hero.jpg",
+    "recipe": "images/recipes/sichuan-kung-pao-chicken/recipe.jpg",
+    "steps": {}
+  },
   "silky-cheesecake": {
     "hero": "images/recipes/silky-cheesecake/hero.jpg",
     "recipe": "images/recipes/silky-cheesecake/recipe.jpg",
