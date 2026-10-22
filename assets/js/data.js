@@ -10,7 +10,7 @@ window.MIDNIGHT_SITE = {
 
 window.MIDNIGHT_RECIPES = [
   {
-    slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE AND JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Chocolate','Pie'], dateAdded:'2026-09-26', timeStamp:'11:20 PM',
+    slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE AND JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-26', timeStamp:'11:20 PM',
     description:'A late-night chocolate cream pie inspired by Julie & Julia (2009).',
     heroImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg', recipeImage:'images/recipes/chocolate-cream-comfort-pie/recipe.jpg',
     unitOverrides:{imperial:{'unsalted butter':'tbsp','unsalted butter melted':'tbsp'}},
@@ -21,7 +21,6 @@ window.MIDNIGHT_RECIPES = [
     fixedStepPhotoCells:true,
     storyQuote:'“You know what I like about cooking? I love that after a day when nothing is sure, and when I say nothing I mean nothing, you can come home and absolutely know that if you add egg yolks to chocolate and sugar and milk, it will get thick. It’s such a comfort.”',
     story:`*Reine de Saba* (chocolate cake with sliced almonds) might be the most famous dessert from this movie, but it was Julie’s whole emotional breakdown over making a chocolate cream pie that totally spoke to me. No matter how crazy or messy the day gets, the kitchen is always my ultimate comfort zone to reset!`,
-    original:'JULIE AND JULIA (2009)',
     ingredientFile:[
       {name:'GRAHAM CRACKERS',details:[['Origin','Graham crackers are used in the pie shown in *Julie & Julia*.'],['Substitute','Store-bought pie crust, chocolate wafers, or Oreo-style cookies.']]},
       {name:'DARK CHOCOLATE',details:[['Flavor','The chocolate is the heart of this pie, so use a good-quality chocolate you genuinely enjoy eating.'],['Best choice','60–70% dark chocolate.'],['Substitute','Semi-sweet chocolate.'],['Midnight Fix','If using sweeter chocolate, reduce the sugar to 50–60g.']]},
@@ -63,8 +62,8 @@ window.MIDNIGHT_RECIPES = [
         'Refrigerate for at least 4 hours. Overnight works best.'
       ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-04-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-04-02.jpg']},
       {number:'05',title:'WHIP IT LATE',clock:'Optional',paragraphs:[
-        'Whip {{qty:Topping (optional)::35% Whipping Cream}} cold 35% Whipping Cream to soft peaks.',
-        'Gradually add {{qty:Topping (optional)::Granulated Sugar}} Granulated Sugar and whip until medium-firm peaks form.',
+        'Whip {{qty:Topping (optional)::35% Whipping Cream}} cold 35% whipping cream to soft peaks.',
+        'Gradually add {{qty:Topping (optional)::Granulated Sugar}} granulated sugar and whip until medium-firm peaks form.',
         'Dollop generously over the chilled pie and finish with cocoa powder, cacao nibs, or flaky sea salt.'
       ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-05-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-05-02.jpg']}
     ],
@@ -88,7 +87,6 @@ window.MIDNIGHT_RECIPES = [
     cuisine:'Taiwan', cuisineSecondary:'Japanese',
     course:'Main Dishes',
     categories:['Main Dishes'],
-    ingredientCategories:['Pork'],
     dateAdded:'2026-09-27',
     timeStamp:'11:14 PM',
     description:'A fiery Nagoya-inspired Taiwan mince served over rice with a soft-boiled egg.',
@@ -98,7 +96,7 @@ window.MIDNIGHT_RECIPES = [
     usCupFractions:true,
     integerUnits:{metric:['sesame oil','sugar']},
     richTextNotes:true,
-    story:`*Taiwan Ramen* (台湾ラーメン) at Misen (味仙) is famous in my hometown, Nagoya, Japan. Despite its name, this fiery ramen isn’t actually from Taiwan—the founder named it “Taiwan Ramen” after his own Taiwanese roots. It is one of Nagoya’s local food that evolved entirely in Japan, and this intensely spicy, strangely addictive flavor is so irresistible that I found myself going back to the restaurant again on my last trip home.\n\nTonight, I’m making the Taiwan ground pork the star of the dish, serving it over rice with a soft-boiled egg instead of its original ramen noodles. It might be so spicy that I end up staying awake all night.`,
+    story:`*Taiwan Ramen* (台湾ラーメン) at Misen (味仙) is famous in my hometown, Nagoya, Japan. Despite its name, this fiery ramen isn’t actually from Taiwan—the founder named it “Taiwan Ramen” after his own Taiwanese roots. It is one of Nagoya’s local foods that evolved entirely in Japan, and this intensely spicy, strangely addictive flavor is so irresistible that I found myself going back to the restaurant again on my last trip home.\n\nTonight, I’m making the Taiwan ground pork the star of the dish, serving it over rice with a soft-boiled egg instead of its original ramen noodles. It might be so spicy that I end up staying awake all night.`,
     ingredientFile:[
       {name:'GROUND PORK',details:[['Flavor','Rich, savory, fatty'],['Substitute','Ground chicken or turkey, although fatty pork gives the closest result']]},
       {name:'FRESH RED CHILI',details:[['Origin','East & Southeast Asia'],['Flavor','Fresh, sharp, bright heat'],['Substitute','Dried Thai chili or red chili flakes'],['Storage','Refrigerate loosely wrapped.'],['Why here','Plenty of fresh chili and garlic are essential to this recipe!']]},
@@ -119,7 +117,6 @@ window.MIDNIGHT_RECIPES = [
       {amount:2,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Granulated Sugar'},
       {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Chicken Bouillon Powder'},
       {amount:180,unit:'ml',imperialAmount:0.75,imperialUnit:'cup',item:'Water'},
-      {unit:'',item:'Black Pepper, to Taste'},
       {amount:55,unit:'g',imperialAmount:1,imperialUnit:'small bunch',item:'Garlic Chives or Green Onion, Cut into 3–4 cm Pieces'},
       {minAmount:3,maxAmount:5,unit:'ml',imperialMinAmount:0.5,imperialMaxAmount:1,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',compactRange:true,item:'Sesame Oil, for Finishing'},
       {group:'To Serve'},
@@ -166,8 +163,8 @@ window.MIDNIGHT_RECIPES = [
       ['Why the Sauce Is Deliberately Generous','This version is designed specifically for rice. The mince shouldn’t be dry like ordinary *soboro* (そぼろ: finely crumbled and seasoned ground meat). It should sit somewhere between a stir-fried mince and a braised mince, with enough concentrated sauce to soak into the rice. The rice is supposed to get spicy, too.']
     ],
     finePrint:{
-      'BEST EATEN':'Fresh, served hot over steamed white rice with a freshly cooked fried egg.',
-      'MAKE AHEAD':'Yes. Prepare the Taiwan mince ahead of time. Cook the rice and fried egg just before serving.',
+      'BEST EATEN':'Fresh, served hot over steamed white rice with a soft-boiled egg.',
+      'MAKE AHEAD':'Yes. Prepare the Taiwan mince ahead of time. Cook the rice and soft-boiled egg just before serving.',
       'STORAGE':'Refrigerate the Taiwan mince in an airtight container for up to 3 days. Store the rice separately.',
       'FREEZER':'Freeze the Taiwan mince in an airtight container for up to 1–2 months. Thaw in the refrigerator before reheating.',
       'REHEAT':'Reheat the mince in the microwave or on the stovetop. Add a splash of water if it becomes too dry.'
@@ -186,7 +183,6 @@ window.MIDNIGHT_RECIPES = [
     cuisine:'French',
     course:'Desserts',
     categories:['Desserts'],
-    ingredientCategories:['Fruit'],
     dateAdded:'2026-09-27',
     timeStamp:'11:20 PM',
     description:'Apple crème brûlée inspired by Amélie (2001), with soft tart apples beneath silky custard and brittle caramel.',
@@ -291,7 +287,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
     slug:'mexican-calabaza-en-tacha-pumpkin-pie',
     title:'Mexican (Calabaza en Tacha) Pumpkin Pie', description:'Inspired by Coco and Día de Muertos, this pumpkin pie reimagines calabaza en tacha with warm spices and the comforting flavors of a traditional Mexican seasonal sweet.',
     source:'Movie & TV', sourceSecondary:'Family & Tradition', original:'Coco (2017)', dish:'Calabaza en Tacha-inspired Pumpkin Pie', cuisine:'Mexican',
-    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Vegetable','Pie'],
+    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'],
     dateAdded:'2026-09-27', timeStamp:'11:48 PM',
     usCupFractions:true, stepQuantityConversion:true,
     tags:['Movie','Coco','Pie','Mexican','Pumpkin','DíaDeMuertos','Ofrenda','CalabazaenTacha','Baking','Dessert'],
@@ -328,10 +324,10 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
     ],
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat your oven to 175°C / 350°F.','Start with one of our usual recipes - Building Block Pie Crust.'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
-      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the filling.','Pour {{qty:Half & Half / 10% Cream}} Half & Half into a small saucepan.','Add 1/2 cinnamon stick, 2 whole cloves, 1 star anise, and 1 strip orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, and star anise. Remove the orange peel.','Remove the orange peel if the infusion will steep for longer, as prolonged steeping can make it bitter.','While the infused Half & Half is still warm, whisk in {{qty:CALABAZA FILLING::Dark Brown Sugar}} dark brown sugar and {{qty:CALABAZA FILLING::Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
-      {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:Pumpkin Purée}} pumpkin purée, {{qty:Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
+      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the spice infusion and syrup.','Pour {{qty:CALABAZA FILLING::Half & Half / 10% Cream}} Half & Half into a small saucepan.','Add {{qty:SPICE INFUSION::Cinnamon Stick}} cinnamon stick, {{qty:SPICE INFUSION::Whole Cloves}} whole cloves, {{qty:SPICE INFUSION::Star Anise}} star anise, and {{qty:SPICE INFUSION::Orange Peel, About 2–3 cm (1 Inch) Long}} of orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, star anise, and orange peel. Prolonged steeping can make the peel bitter.','While the infused Half & Half is still warm, whisk in {{qty:CALABAZA FILLING::Dark Brown Sugar}} dark brown sugar and {{qty:CALABAZA FILLING::Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
+      {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:CALABAZA FILLING::Pumpkin Purée}} pumpkin purée, {{qty:CALABAZA FILLING::Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
       {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Pour the pumpkin filling into the crust.','Bake for 40–50 minutes.','The edges should be set while the center still has a slight wobble when the pie is gently shaken.','Remove from the oven.','Let the pie cool slightly until it is no longer hot, then refrigerate.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-04-01.JPG']},
-      {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:THE PILONCILLO SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:THE PILONCILLO SYRUP::Molasses}} molasses, {{qty:THE PILONCILLO SYRUP::Orange Juice}} orange juice, {{qty:THE PILONCILLO SYRUP::Water}} water, {{qty:THE PILONCILLO SYRUP::Orange Peel, about 2–3 cm (1 inch) long}} orange peel, about 2–3 cm (1 inch) long, and {{qty:THE PILONCILLO SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
+      {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:THE PILONCILLO SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:THE PILONCILLO SYRUP::Molasses}} molasses, {{qty:THE PILONCILLO SYRUP::Orange Juice}} orange juice, {{qty:THE PILONCILLO SYRUP::Water}} water, {{qty:THE PILONCILLO SYRUP::Orange Peel, About 2–3 cm (1 Inch) Long}} of orange peel, and {{qty:THE PILONCILLO SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
       {number:'06',title:'FINISH',clock:'NEXT DAY',paragraphs:['Once the pie is no longer hot, refrigerate for at least 4 hours, preferably overnight.','Before serving, brush or spoon a thin layer of the piloncillo syrup over the surface. For the glossiest finish, warm the syrup slightly and drizzle it over the pie just before serving.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-06-01.JPG']}
     ],
     notes:[
@@ -351,7 +347,7 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
   },
   {
     slug:'banana-banana-cream-pie', title:'Banana Banana Cream Pie', description:'Made for seriously banana-y flavor, this cream pie uses very ripe bananas cooked down into a sweet, concentrated filling beneath a smooth custard.', source:'Midnight Experiment', dish:'Banana Cream Pie', cuisine:'American',
-    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Fruit','Pie','Eggs','Pantry'], dateAdded:'2026-09-27', timeStamp:'2:55 AM',
+    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-27', timeStamp:'2:55 AM',
     tags:['Dessert','Baking','Banana','Pie'], heroImage:'images/recipes/banana-banana-cream-pie/hero.jpg', recipeImage:'images/recipes/banana-banana-cream-pie/recipe.jpg',
     unitOverrides:{imperial:{'plain biscuits, finely crushed':'cup','unsalted butter, melted':'cup','whole milk':'cup','granulated sugar':'tbsp','cornstarch':'tbsp','35% Whipping Cream':'cup','Granulated Sugar, To Taste':'tbsp'}},
     densityOverrides:{'plain biscuits|cup':100,'granulated sugar|tbsp':35/3},
@@ -447,7 +443,7 @@ What if we just put way more banana in banana cream pie?`,
   },
   {
     slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', description:'Inspired by Chinese sweet potato ginger dessert soup, this silky pie pairs earthy sweet potato with fresh ginger, cinnamon, and a gentle warming spice.', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese', cuisineSecondary:'American',
-    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Sweet Potato','Ginger','Cream','Cinnamon','Pie'], dateAdded:'2026-09-27', timeStamp:'11:35 PM',
+    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-27', timeStamp:'11:35 PM',
     tags:['Midnight Experiment','Dessert','Baking','Chinese','American','Sweet Potato','Ginger','Pie'], heroImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', recipeImage:'images/recipes/sweet-potato-ginger-pie/recipe.jpg', usesUsual:'building-block-pie-crust', usCupFractions:true, forceCupUnits:true, stepQuantityConversion:true,
     story:`Inspired by traditional Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水), a simple sweet soup made by simmering sweet potatoes with fresh ginger and sugar in water.
 
@@ -524,7 +520,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     mainIngredients:['Sweet Potato','Ginger','Cream','Cinnamon'], footerInspiredBy:'Traditional', footerCuisine:'Chinese · American', footerCourse:'Desserts', footerMainIngredients:['Sweet Potato','Ginger','Cream','Cinnamon']
   },
   {
-    slug:'building-block-pie-crust', title:'Building Block Pie Crust', source:'The Usuals', cuisine:'American', course:'Baking', courseDisplay:'Baking', categories:['Baking'], ingredientCategories:['Pie'], dateAdded:'2026-09-27', timeStamp:'',
+    slug:'building-block-pie-crust', title:'Building Block Pie Crust', source:'The Usuals', cuisine:'American', course:'Baking', courseDisplay:'Baking', categories:['Baking'], dateAdded:'2026-09-27', timeStamp:'',
     isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...', hideRecipeTags:true,
     description:'The crust we make when a pie calls for a crust.',
     usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
@@ -572,7 +568,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
 
   {
     slug:'fun-key-lime-pie', title:'Fun(Key) Lime Pie', source:'Grocery Store Find', original:'', dish:'Lime Pie', cuisine:'American', dateAdded:'2026-10-08',
-    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Fruit','Eggs','Cream','Pie'], timeStamp:'11:20 PM',
+    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], timeStamp:'11:20 PM',
     description:'A Key Lime Pie-inspired pie made with the limes you can actually find.',
     story:`Key Lime Pie is easy to find in Toronto. I kept seeing it in grocery store freezer sections and bakery counters, almost as if it were just another everyday dessert.\nOne night, I decided to make one myself.\nI went looking for Key limes.\nAnd suddenly, they were nowhere.\nThe pie was easy to find. The Key limes were not.\nSo I stopped looking for the perfect Key lime and started with the limes I could actually buy.\nRegular Persian/Tahiti limes. A little extra zest. Sour cream for more body and tang.\nIt isn't a traditional Key Lime Pie, but it still has the creamy, tart, sweet character I was looking for.\nA Key Lime Pie-inspired pie made with the lime you can actually find!`,
     heroImage:'images/recipes/fun-key-lime-pie/hero.jpg', recipeImage:'images/recipes/fun-key-lime-pie/recipe.jpg',
@@ -668,7 +664,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     cuisine:'Thai',
     course:'Soups',
     courseDisplay:'Soups',
-    categories:['Soups'], ingredientCategories:["Chicken", "Coconut Milk", "Galangal", "Lemongrass", "Mushroom", "Soup"],
+    categories:['Soups'], mainIngredients:['Chicken','Coconut Milk','Galangal','Lemongrass','Mushrooms'],
     dateAdded:'2026-10-08',
     timeStamp:'11:21 PM',
     description:'A Thai coconut chicken soup with galangal, lemongrass, makrut lime leaves, fresh lime, and gentle chili heat—my late-night attempt to see if it deserved its reputation.',
@@ -779,7 +775,7 @@ If the internet was calling it the world’s best, I had to find out for myself,
     cuisine:'Thai',
     course:'Main Dishes',
     courseDisplay:'Main Dishes',
-    categories:['Main Dishes'], ingredientCategories:["Chicken", "Peanut", "Chili", "Sauce"],
+    categories:['Main Dishes'],
     dateAdded:'2026-10-08',
     timeStamp:'10:15 PM',
     description:'Inspired by sweet chili sauce and crushed peanuts served with Thai fish cakes, this chicken brings together sweet, tangy, spicy, and nutty flavors in a quick homemade dish.',
@@ -892,9 +888,9 @@ This isn't a traditional Thai dish. It's simply my midnight attempt to recreate 
     course:'Main Dishes',
     courseDisplay:'Main Dishes',
     categories:['Main Dishes'],
-    ingredientCategories:['Ground Meat','Onion','Eggs','Breadcrumbs','Milk','Sauce'],
+    mainIngredients:['Ground Meat','Onion','Eggs','Breadcrumbs','Milk'],
     dateAdded:'2026-10-08',
-    timeStamp:'01:15 AM',
+    timeStamp:'1:15 AM',
     story:`In Japan, hamburg steak is one of those dishes that feels like “*haha no aji*” (母の味) — literally, “the taste of mother.” It’s that familiar, nostalgic taste we associate with home and childhood.
 
 For me, hamburg steak is one of the dishes my mom used to make. When I was younger, I never really thought much about it. It was just hamburg steak — something that appeared on the dinner table.
@@ -954,27 +950,27 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
       {amount:0.25,unit:'g',imperialAmount:0.125,imperialUnit:'tsp',item:'Ground Nutmeg'},
       {unit:'',item:'Neutral Oil, for Cooking'},
       {group:'Japanese-Style “Demi-Glace” Sauce'},
-      {amount:4,unit:'tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Sake or Dry White Wine'},
-      {amount:4,unit:'tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Ketchup'},
-      {amount:25,unit:'g',imperialAmount:2,imperialUnit:'tbsp',item:'Worcestershire Sauce'},
+      {amount:60,unit:'ml',imperialAmount:4,imperialUnit:'tbsp',item:'Sake or Dry White Wine'},
+      {amount:60,unit:'ml',imperialAmount:4,imperialUnit:'tbsp',item:'Ketchup'},
+      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Worcestershire Sauce'},
       {amount:2,unit:'tbsp',imperialAmount:2,imperialUnit:'tbsp',item:'Granulated Sugar'},
-      {amount:2,unit:'tbsp',imperialAmount:2,imperialUnit:'tbsp',item:'Soy Sauce'}
+      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Soy Sauce'}
     ],
     stats:{prep:'15 mins',cook:'15 mins',total:'30 mins',serves:'4',quiet:'⭐⭐⭐☆☆'},
     steps:[
-      {number:'01',title:'MIX',clock:'01:15 AM',paragraphs:[
+      {number:'01',title:'MIX',clock:'1:15 AM',paragraphs:[
         'Place {{qty:Hamburg Steak::Ground Meat}} ground meat in a bowl. Add {{qty:Hamburg Steak::Salt}} salt and knead until sticky and cohesive.',
         'Add {{qty:Hamburg Steak::Egg}} egg, {{qty:Hamburg Steak::Breadcrumbs}} breadcrumbs, {{qty:Hamburg Steak::Milk}} milk, {{qty:Hamburg Steak::Onion, Very Finely Chopped}} finely chopped onion, {{qty:Hamburg Steak::Black Pepper}} black pepper, and {{qty:Hamburg Steak::Ground Nutmeg}} ground nutmeg. Mix just until combined.'
       ],stepImages:['images/recipes/moms-hamburg-steak/step-01-01.jpg','images/recipes/moms-hamburg-steak/step-01-02.jpg','images/recipes/moms-hamburg-steak/step-01-03.jpg','images/recipes/moms-hamburg-steak/step-01-04.jpg']},
-      {number:'02',title:'SHAPE & SEAR',clock:'01:23 AM',paragraphs:[
+      {number:'02',title:'SHAPE & SEAR',clock:'1:23 AM',paragraphs:[
         'Divide the mixture into 4 portions. Shape into oval patties about 2–2.5 cm thick and make a shallow indentation in the center of each.',
-        'Heat a little oil in a frying pan over medium heat. Cook the patties for 2–3 minutes per side, until well browned.'
+        'Heat a little neutral oil in a frying pan over medium heat. Cook the patties for 2–3 minutes per side, until well browned.'
       ],stepImages:['images/recipes/moms-hamburg-steak/step-02-01.jpg','images/recipes/moms-hamburg-steak/step-02-02.jpg']},
-      {number:'03',title:'STEAM',clock:'01:30 AM',paragraphs:[
+      {number:'03',title:'STEAM',clock:'1:30 AM',paragraphs:[
         'Add a little water to the pan and cover with a lid. Reduce the heat to medium-low and steam for 5–7 minutes, until cooked through.',
         'Transfer the patties to a plate and rest for 3–5 minutes. Keep the pan for the sauce.'
       ],stepImages:['images/recipes/moms-hamburg-steak/step-03-01.jpg']},
-      {number:'04',title:'MAKE THE “DEMI-GLACE” SAUCE',clock:'01:37 AM',paragraphs:[
+      {number:'04',title:'MAKE THE “DEMI-GLACE” SAUCE',clock:'1:37 AM',paragraphs:[
         'Add {{qty:Japanese-Style “Demi-Glace” Sauce::Sake or Dry White Wine}} sake or dry white wine, {{qty:Japanese-Style “Demi-Glace” Sauce::Ketchup}} ketchup, {{qty:Japanese-Style “Demi-Glace” Sauce::Worcestershire Sauce}} Worcestershire sauce, {{qty:Japanese-Style “Demi-Glace” Sauce::Granulated Sugar}} granulated sugar, and {{qty:Japanese-Style “Demi-Glace” Sauce::Soy Sauce}} soy sauce to the same pan.',
         'Scrape up the browned bits and simmer for 1–2 minutes, until slightly thickened. Spoon the sauce over the hamburg steaks.'
       ],stepImages:['images/recipes/moms-hamburg-steak/step-04-01.jpg']}
@@ -1004,7 +1000,7 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
     cuisine:'American',
     course:'Baking',
     courseDisplay:'Baking, Desserts',
-    ingredientCategories:['Cheese','Cream','Eggs','Pantry'],
+    mainIngredients:['Cream Cheese','Sour Cream','Eggs','Whipping Cream','Lemon'],
     categories:['Baking','Desserts'],
     dateAdded:'2026-10-10',
     timeStamp:'10:10 PM',
@@ -1101,7 +1097,7 @@ If you choose cheesecake, try this recipe tonight.`,
 
   {
     slug:'classic-pumpkin-pie', title:'Classic Pumpkin Pie', description:'My take on a Canadian Thanksgiving classic, with silky pumpkin filling and a warm blend of cinnamon, cloves, and nutmeg—especially comforting on a quiet autumn night.', source:'Family & Tradition', dish:'Pumpkin Pie', cuisine:'Canadian', cuisineSecondary:'American',
-    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], ingredientCategories:['Pumpkin','Pie','Eggs','Cream','Cinnamon'],
+    course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'],
     dateAdded:'2026-10-11', timeStamp:'12:15 AM',
     heroImage:'images/recipes/classic-pumpkin-pie/hero.jpg', recipeImage:'images/recipes/classic-pumpkin-pie/recipe.jpg',
     usesUsual:'building-block-pie-crust', showPan:true, showChill:true, hideRecipeTags:true,
@@ -1117,15 +1113,15 @@ If you choose cheesecake, try this recipe tonight.`,
       {amount:400,unit:'g',imperialAmount:5/3,imperialUnit:'cup',item:'Pumpkin Purée'},
       {amount:70,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Brown Sugar'},
       {amount:2,unit:'large',imperialAmount:2,imperialUnit:'large',item:'Eggs'},
-      {amount:80,unit:'ml',imperialAmount:0.3333333333333333,imperialUnit:'cup',item:'Whole Milk'},
-      {amount:80,unit:'ml',imperialAmount:0.3333333333333333,imperialUnit:'cup',item:'35% Whipping Cream'},
+      {amount:80,unit:'ml',imperialAmount:1/3,imperialUnit:'cup',item:'Whole Milk'},
+      {amount:80,unit:'ml',imperialAmount:1/3,imperialUnit:'cup',item:'35% Whipping Cream'},
       {amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Ground Cinnamon'},
       {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground Ginger'},
       {amount:0.5,unit:'g',imperialAmount:0.25,imperialUnit:'tsp',item:'Ground Nutmeg'},
       {amount:0.25,unit:'g',imperialAmount:0.125,imperialUnit:'tsp',item:'Ground Cloves'},
       {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'}
     ],
-    stats:{prep:'20 mins',cook:'55–60 mins',chill:'2 hrs+',total:'4 hrs 20 mins +',serves:'6–8',pan:'23 cm / 9-inch pie dish',quiet:'⭐⭐⭐⭐☆'},
+    stats:{prep:'20 mins',cook:'25–40 mins',chill:'2 hrs',total:'2 hrs 45 mins+',serves:'6–8',pan:'23 cm / 9-inch pie dish',quiet:'⭐⭐⭐⭐☆'},
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'12:15 AM',paragraphs:[
         'Preheat your oven to 175°C / 350°F.',
@@ -1150,7 +1146,6 @@ If you choose cheesecake, try this recipe tonight.`,
       'STORAGE':'Keep covered and refrigerated for up to 4 days.',
       'REHEAT':'Best chilled or at room temperature. For a warm slice, heat at 160°C / 325°F for 5–10 minutes.',
       'FREEZER':'Freeze tightly wrapped individual slices for up to 1 month.',
-      'SERVE WITH':'Fresh whipped cream and a light sprinkle of cinnamon.'
     },
     tags:['Thanksgiving','Fall','Baking','Dessert','Pumpkin','Pie','Cinnamon','Make Ahead','Classic Pumpkin Pie'],
     mainIngredients:['Pumpkin','Pie','Eggs','Cream','Cinnamon'],

@@ -65,7 +65,7 @@ const searchText=r=>[
   canonicalCourse(r),r.footerInspiredBy,r.footerCuisine,r.footerCourse,
   ...(r.categories||[]),...(r.tags||[]),r.description,
   ...(r.ingredients||[]).map(x=>x.item||''),
-  ...(r.ingredientCategories||[]),r.usualsCategory
+  ...(r.mainIngredients||[]),r.usualsCategory
 ].filter(hasMeaningfulValue).join(' ').toLowerCase();
 const searchMatches=(r,query)=>{
   const text=searchText(r);
@@ -76,7 +76,7 @@ const searchMatches=(r,query)=>{
     return new RegExp(`(?:^|[^a-z0-9])${escaped}(?=$|[^a-z0-9])`,'i').test(text);
   });
 };
-function imageErrorHandler(fallbackClass='',optional=false){return `let i=Number(this.dataset.extI||0);const E=['.jpeg','.JPG','.JPEG'];if(i<E.length){this.dataset.extI=String(i+1);this.src=this.src.replace(/\\.(?:jpe?g)$/i,E[i]);}else{const f=this.closest('.photo-frame');if(f){${optional?`f.remove();`:`f.outerHTML='<div class=\\'ph ${fallbackClass}\\'></div>';`}}}`}
+function imageErrorHandler(fallbackClass='',optional=false){return `const pic=this.closest('picture'),srcEl=pic&&pic.querySelector('source');if(srcEl){srcEl.remove();const u=this.getAttribute('src');this.removeAttribute('src');this.setAttribute('src',u);return;}let i=Number(this.dataset.extI||0);if(this.dataset.origExt===undefined){const mm=this.src.match(/\\.(?:jpe?g)$/i);this.dataset.origExt=mm?mm[0]:'';}const E=['.jpg','.JPG','.jpeg','.JPEG'].filter(x=>x!==this.dataset.origExt);if(i<E.length){this.dataset.extI=String(i+1);this.src=this.src.replace(/\\.(?:jpe?g)$/i,E[i]);}else{const f=this.closest('.photo-frame');if(f){${optional?`f.remove();`:`f.outerHTML='<div class=\\'ph ${fallbackClass}\\'></div>';`}}}`}
 
 
 function listPhoto(r,eager=false,alt=''){
@@ -140,7 +140,8 @@ function schemaIngredient(x){
   return [amount,x.unit,x.item].filter(v=>v!==undefined&&v!==null&&String(v).trim()!=='').join(' ');
 }
 function schemaStepText(t,r){
-  return String(t||'').replace(/\{\{qty:([^}]+)\}\}/g,(_,key)=>{
+  if(t&&typeof t==='object'&&typeof t.text==='string')t=structuredInstructionText(t,r,1,'metric','');
+  return String(t||'').replace(/\{\{approx:([^}]+)\}\}/g,(m,key)=>{const ing=(r.ingredients||[]).find(i=>i&&String(i.item).toLowerCase()===String(key).toLowerCase());const g=ing&&String(ing.item).match(/approx\.\s*(\d+(?:\.\d+)?)\s*g\b/i);return g?`${g[1]} g`:'';}).replace(/\{\{qty:([^}]+)\}\}/g,(_,key)=>{
     const match=instructionIngredientCandidates(r,key,'')[0];
     return match?instructionQuantityFromIngredient(match,1,'metric',r):'';
   }).replace(/\*+/g,'').replace(/\s+/g,' ').trim();
@@ -158,7 +159,7 @@ function addRecipeJsonLd(r){
   const data={'@context':'https://schema.org','@type':'Recipe',name:r.title,description:r.description||undefined,url:`${SITE_URL}/recipes/recipe.html?slug=${encodeURIComponent(r.slug)}`,image:abs(imageData(r).heroImage)||DEFAULT_SHARE_IMAGE,datePublished:r.dateAdded||undefined,author:{'@type':'Organization',name:SITE_NAME},recipeCategory:r.course||undefined,recipeCuisine:r.cuisine||undefined,prepTime:isoDuration(st.prep)||undefined,cookTime:isoDuration(st.cook)||undefined,totalTime:isoDuration(st.total)||undefined,recipeYield:st.serves!==undefined?String(st.serves):undefined,recipeIngredient:ing,recipeInstructions:steps};
   const el=document.createElement('script');el.type='application/ld+json';el.id='recipe-jsonld';el.textContent=JSON.stringify(data);document.head.appendChild(el);
 }
-function relatedRecipes(r){if(r.isUsuals)return [];const lc=v=>String(v).toLowerCase();const cu=new Set(cuisineValues(r).map(lc)),co=new Set(courseValues(r).map(lc)),ic=new Set((r.ingredientCategories||[]).map(lc));return recipes.filter(x=>x!==r&&!x.isUsuals).map(x=>{let n=0;if(cuisineValues(x).some(v=>cu.has(lc(v))))n+=2;if(courseValues(x).some(v=>co.has(lc(v))))n+=1;if((x.ingredientCategories||[]).some(v=>ic.has(lc(v))))n+=1;if(x.source&&x.source===r.source)n+=1;return {x,n}}).filter(o=>o.n>0).sort((a,b)=>b.n-a.n||String(b.x.dateAdded||'').localeCompare(String(a.x.dateAdded||''))).slice(0,3).map(o=>o.x)}
+function relatedRecipes(r){if(r.isUsuals)return [];const lc=v=>String(v).toLowerCase();const cu=new Set(cuisineValues(r).map(lc)),co=new Set(courseValues(r).map(lc)),ic=new Set((r.mainIngredients||[]).map(lc));return recipes.filter(x=>x!==r&&!x.isUsuals).map(x=>{let n=0;if(cuisineValues(x).some(v=>cu.has(lc(v))))n+=2;if(courseValues(x).some(v=>co.has(lc(v))))n+=1;if((x.mainIngredients||[]).some(v=>ic.has(lc(v))))n+=1;if(x.source&&x.source===r.source)n+=1;return {x,n}}).filter(o=>o.n>0).sort((a,b)=>b.n-a.n||String(b.x.dateAdded||'').localeCompare(String(a.x.dateAdded||''))).slice(0,3).map(o=>o.x)}
 function recipe(){const slug=(new URLSearchParams(location.search).get('slug')||'').trim();const r=slug?recipes.find(x=>String(x.slug||'').toLowerCase()===slug.toLowerCase()):null;if(!r){notFound(slug?'We could not find that recipe. It may have been moved or renamed.':'No recipe was selected.');return}setMeta(r.title,r.description);setCanonical(`${SITE_URL}/recipes/recipe.html?slug=${encodeURIComponent(r.slug)}`);{const heroPath=imageData(r).heroImage;setShareImage(heroPath?`${SITE_URL}/${heroPath}`:DEFAULT_SHARE_IMAGE,!!heroPath)}app.innerHTML=recipeHtml(r);bindRecipe(r);addRecipeJsonLd(r)}
 function favorites(){setMeta('Favorites','Recipes you have saved on this device.');setNoindex();const favs=getFavs();const list=sorted().filter(r=>favs.includes(r.slug));if(!list.length){app.innerHTML=`<div class="wrap"><section class="section"><h1 class="h2">${star()}Favorites</h1><p class="body-copy">No favorites yet. Tap “Favorite” on a recipe to keep it here.</p><p class="body-copy"><a href="${href('recipes/index.html')}">Browse all recipes</a></p></section></div>`;return}listPage('Favorites',list,'Saved on this device only.')}
 function photo(src,alt,cls='',optional=false,eager=false){
@@ -170,7 +171,7 @@ function photo(src,alt,cls='',optional=false,eager=false){
   const webpPath=jpgPath.replace(/\.jpg$/i,'.webp');
   return `<div class="photo-frame ${cls}"><picture><source srcset="${esc(root+webpPath)}" type="image/webp">${img}</picture></div>`;
 }
-function stepPhoto(src,alt){return src?`<div class="photo-frame step-photo-frame"><img class="photo" loading="lazy" decoding="async" src="${esc(root+src)}" alt="${esc(alt)}" onerror="const g=this.closest('.step-photos');const E=['.jpeg','.JPG','.JPEG'];let i=Number(this.dataset.extI||0);if(i<E.length){this.dataset.extI=String(i+1);this.src=this.src.replace(/\\.(?:jpe?g)$/i,E[i]);}else{this.closest('.photo-frame')?.remove();if(g&&!g.querySelector('img'))g.remove();}"></div>`:''}
+function stepPhoto(src,alt){return src?`<div class="photo-frame step-photo-frame"><img class="photo" loading="lazy" decoding="async" src="${esc(root+src)}" alt="${esc(alt)}" onerror="const g=this.closest('.step-photos');if(this.dataset.origExt===undefined){const mm=this.src.match(/\\.(?:jpe?g)$/i);this.dataset.origExt=mm?mm[0]:'';}const E=['.jpg','.JPG','.jpeg','.JPEG'].filter(x=>x!==this.dataset.origExt);let i=Number(this.dataset.extI||0);if(i<E.length){this.dataset.extI=String(i+1);this.src=this.src.replace(/\\.(?:jpe?g)$/i,E[i]);}else{this.closest('.photo-frame')?.remove();if(g&&!g.querySelector('img'))g.remove();}"></div>`:''}
 
 function stepPhotoMarkup(s,r,i){
   const list=resolvedStepImages(s,r,i);
@@ -305,29 +306,6 @@ function scaleInstructionTextRaw(value,r,scale,unit,ingredientContext=''){
     let usedQuantityTokens=false;
     text=text.replace(/\{\{approx:([^}]+)\}\}/g,(m,key)=>{const ing=(r.ingredients||[]).find(i=>i&&String(i.item).toLowerCase()===String(key).toLowerCase());const g=ing&&String(ing.item).match(/approx\.\s*(\d+(?:\.\d+)?)\s*g\b/i);if(!g)return m;usedQuantityTokens=true;return `${Math.round(Number(g[1])*scale)} g`;});
     text=text.replace(/\{\{qty:([^}]+)\}\}/g,(m,item)=>{
-      if(r?.slug==='mexican-calabaza-en-tacha-pumpkin-pie'){
-        const syrup=String(item).startsWith('INSTRUCTION-ONLY SYRUP::');
-        const key=syrup?String(item).split('::').slice(1).join('::'):String(item);
-        const special={
-          'Half & Half / 10% Cream':{metric:[180,'ml'],imperial:[3/4,'cup',4]},
-          'Pumpkin Purée':{metric:[400,'g'],imperial:[5/3,'cup',3]},
-          'Eggs':{metric:[2,'large'],imperial:[2,'large']},
-          'Orange Juice':syrup?{metric:[30,'ml'],imperial:[2,'tbsp']}:{metric:[15,'ml'],imperial:[1,'tbsp']},
-          'Salt':syrup?{metric:[1,'pinch'],imperial:[1,'pinch']}:{metric:[0.25,'tsp'],imperial:[0.25,'tsp']},
-          'Dark Brown Sugar':syrup?{metric:[35,'g'],imperial:[2.5,'tbsp']}:{metric:[60,'g'],imperial:[1/3,'cup',3]},
-          'Molasses':syrup?{metric:[5,'g'],imperial:[1,'tsp']}:{metric:[10,'g'],imperial:[0.5,'tbsp']},
-          'Water':{metric:[15,'ml'],imperial:[1,'tbsp']},
-          'Orange Peel, about 2–3 cm (1 inch) long':{metric:[1,'strip'],imperial:[1,'strip']}
-        }[key];
-        if(special){
-          const spec=special[unit==='imperial'?'imperial':'metric'];
-          const amount=Number(spec[0])*scale, u=spec[1];
-          let value;
-          if(u==='cup')value=formatCupValue(amount,false);
-          else value=formatUnitValue(amount,u);
-          usedQuantityTokens=true; return value;
-        }
-      }
       const candidate=instructionIngredientCandidates(r,item,'',ingredientContext)[0];
       const synced=candidate?instructionQuantityFromIngredient(candidate,scale,unit,r):'';
       if(synced){usedQuantityTokens=true;return compactSameUnit(synced);}
@@ -335,16 +313,6 @@ function scaleInstructionTextRaw(value,r,scale,unit,ingredientContext=''){
     });
     text=text.replace(/½/g,'1/2').replace(/¼/g,'1/4').replace(/¾/g,'3/4').replace(/⅓/g,'1/3').replace(/⅔/g,'2/3').replace(/⅛/g,'1/8').replace(/⅜/g,'3/8').replace(/⅝/g,'5/8').replace(/⅞/g,'7/8');
     if(usedQuantityTokens){
-      if(r?.slug==='mexican-calabaza-en-tacha-pumpkin-pie'){
-        text=text.replace(/(^|[^\d])((?:\d+\s+)?\d+\/\d+|\d+(?:\.\d+)?)\s+(stick|strips?|pinch(?:es)?)(?=\s|[,.]|$)/gi,(match,prefix,num,rawUnit)=>{
-          const amount=parseQuantity(num)*scale;
-          const display=Math.abs(amount-Math.round(amount))<1e-9?String(Math.round(amount)):formatFraction(amount,8);
-          const base=String(rawUnit).toLowerCase().startsWith('strip')?'strip':String(rawUnit).toLowerCase().startsWith('pinch')?'pinch':'stick';
-          const normalized=amount<=1+1e-9?base:(base==='pinch'?'pinches':`${base}s`);
-          return `${prefix}${display} ${normalized}`;
-        });
-        
-      }
       return text;
     }
   }
@@ -368,18 +336,6 @@ function scaleInstructionTextRaw(value,r,scale,unit,ingredientContext=''){
     const second=scaleInstructionQuantity(rangeParts[2],rawUnit,scale,unit,text,offset+prefix.length,ingredientContext,r);
     return `${prefix}${first}–${second}`;
   });
-  if(r?.slug==='mexican-calabaza-en-tacha-pumpkin-pie'){
-    text=text.replace(/(^|[^\d])((?:\d+\s+)?\d+\/\d+|\d+(?:\.\d+)?)\s+(stick|strips?|pinch(?:es)?)(?=\s|[,.]|$)/gi,(match,prefix,num,rawUnit)=>{
-      const amount=parseQuantity(num)*scale;
-      const display=Math.abs(amount-Math.round(amount))<1e-9?String(Math.round(amount)):formatFraction(amount,8);
-      const base=String(rawUnit).toLowerCase().startsWith('strip')?'strip':String(rawUnit).toLowerCase().startsWith('pinch')?'pinch':'stick';
-      const normalized=amount<=1+1e-9?base:(base==='pinch'?'pinches':`${base}s`);
-      return `${prefix}${display} ${normalized}`;
-    });
-  }
-  if(r?.slug==='mexican-calabaza-en-tacha-pumpkin-pie'){
-    
-  }
   return text;
 }
 function instructionAmount(a,scale,unit,context='',r=null){
@@ -462,7 +418,7 @@ function footerLinks(type,value){
 function footerIngredientValues(r){
   if(Array.isArray(r.footerMainIngredients)&&r.footerMainIngredients.length)return r.footerMainIngredients;
   if(Array.isArray(r.mainIngredients)&&r.mainIngredients.length)return r.mainIngredients;
-  return Array.isArray(r.ingredientCategories)?r.ingredientCategories.filter(hasMeaningfulValue):[];
+  return [];
 }
 function recipeHtml(r){
   const ingredientFile=normalizeIngredientFile(r.ingredientFile);
@@ -473,7 +429,7 @@ function recipeHtml(r){
   const foundIn=foundTitles.map(title=>{const found=recipes.find(x=>x.title===title&&!x.isUsuals);return found?`<a href="${href('recipes/recipe.html',{slug:found.slug})}">${esc(title)}</a>`:`<span>${esc(title)}</span>`;}).join('<br>');
   const intro=isUsual?`<section class="usual-intro"><p class="body-copy"><em>${esc(r.description||'')}</em></p>${String(r.usualIntro||'').split(/\n\s*\n/).filter(Boolean).map(x=>`<p class="body-copy">${esc(x)}</p>`).join('')}</section>`:'';
   const statsPan=(isUsual||r.showPan)&&r.stats?.pan?`<br><b>Pan</b>: ${esc(r.stats.pan)}`:'';const statsChill=r.stats?.chill?` <b>Chill</b>: ${esc(r.stats.chill)}`:'';
-  return `<div class="recipe-card${r.fixedStepPhotoCells?' fixed-step-photo-cells':''}"><div class="rtop"><div><h1 class="rtitle">${esc(cutieText(r.title))}</h1><div class="meta-line"><span>${r.timeStamp?`📍 ${esc(r.timeStamp)}<span> · TORONTO</span>`:'The Usuals'}</span></div><div class="recipe-meta-divider"></div><p class="facts">${isUsual?`<b>The Usuals</b>: <a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:`<b>Source</b>: <a href="${categoryLink('source',r.source)}">${esc(r.source)}</a>${r.sourceSecondary?` / <a href="${categoryLink('source',r.sourceSecondary)}">${esc(r.sourceSecondary)}</a>`:''}${hasMeaningfulValue(r.original)?`<br><b>Inspired by</b>: ${r.originalUrl?`<a class="original-link" href="${esc(r.originalUrl)}" target="_blank" rel="noopener noreferrer">${esc(r.original)}</a>`:esc(r.original)}`:''}${r.dish?`<br><b>Dish</b>: ${esc(r.dish)}`:''}<br><b>Cuisine</b>: <a href="${categoryLink('cuisine',r.cuisine)}">${esc(r.cuisine)}</a>${r.cuisineSecondary?`, <a href="${categoryLink('cuisine',r.cuisineSecondary)}">${esc(r.cuisineSecondary)}</a>`:''}<br><b>Course</b>: <a href="${categoryLink('course',canonicalCourse(r))}">${esc(courseDisplay(r))}</a>`}</p><div class="recipe-jump-top"><button class="btn" data-jump="the-recipe">Jump To Recipe</button></div></div>${photo(imageData(r).heroImage,r.title,'',false,true)}</div>${intro}${!isUsual&&(r.story||r.storyQuote)?`<section><h2 class="h3">THE STORY</h2>${r.storyQuote?`<p class="story-quote"><em>${esc(r.storyQuote)}</em></p>`:''}${r.story?`<p class="body-copy${r.compactStory?' story-compact':''}">${r.compactStory?richText(r.story).replace(/<br><br>/g,'<br>'):richText(r.story)}</p>`:''}</section>`:''}${(ingredientFile.name||file.length||fileGroups.length)?`<section id="ingredient-file-section"><h2 class="h3">INGREDIENT FILE</h2><div class="ingredient-file">${ingredientFileMarkup(r,ingredientFile)}${ingredientFile.name?`<div class="ingredient-file-name">${esc(ingredientFile.name)}</div>`:''}${file.length?`<div class="ingredient-file-details">${file.map(([k,v])=>`<p><strong>${esc(k)}:</strong> ${esc(v)}</p>`).join('')}</div>`:''}</div></section>`:''}<div class="recipe-practical-box"><section id="the-recipe"><h2 class="h3">THE RECIPE</h2><div class="recipe-inner"><div>${!isUsual&&imageData(r).recipeImage?photo(imageData(r).recipeImage,r.title,'',true):''}<h3 class="rname">${esc(cutieText(r.recipeTitle||r.title))}</h3><p class="stats"><b>Prep</b>: ${esc(r.stats?.prep||'—')} <b>Cook</b>: ${esc(r.stats?.cook||'—')}${statsChill}<br><b>Total</b>: ${esc(r.stats?.total||'—')}<br><b>Serves</b>: ${esc(r.stats?.serves||'—')}${statsPan}<br><b>Quiet level</b>: ${esc(r.stats?.quiet||'—')}</p><div class="recipe-actions recipe-action-row"><button class="btn recipe-icon-btn" id="shareRecipe" aria-label="Share recipe" title="Share recipe"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.7 10.6 6.6-4.1M8.7 13.4l6.6 4.1"/></svg><span class="visually-hidden">Share</span></button><button class="btn recipe-icon-btn" id="printRecipe" aria-label="Print recipe" title="Print recipe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6zM18 12h.01"/></svg><span class="visually-hidden">Print</span></button><button class="btn recipe-icon-btn" id="favRecipe" aria-label="Add to favorites" aria-pressed="false" title="Favorite"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="visually-hidden">Favorite</span></button></div><div class="ingredient-heading-row"><h4 class="block-title" style="margin:0">INGREDIENTS</h4><label class="cook-switch-control" for="cookOpen"><span>Cook Mode</span><button type="button" id="cookOpen" class="cook-switch" role="switch" aria-checked="false" aria-label="Prevent screen from sleeping"><span class="cook-switch-knob"></span></button></label></div><div class="toggle-row" id="unitToggle"><button data-unit="metric" aria-pressed="false">Metric</button><button data-unit="imperial" aria-pressed="true">US</button></div><div class="toggle-row small" id="scaleToggle"><span aria-hidden="true">×</span><div class="scale-stepper"><button type="button" class="scale-step-button" data-scale-step="down" aria-label="Decrease quantity multiplier">−</button><input id="recipeScale" data-scale type="number" inputmode="decimal" min="0.5" step="0.5" value="1" aria-label="Quantity multiplier"><button type="button" class="scale-step-button" data-scale-step="up" aria-label="Increase quantity multiplier">+</button></div></div><ul class="ing" id="ingredientsList"></ul>${fileGroups.length?`<p class="ingredient-file-guide">ⓘ <a href="#ingredient-file-section">Click for substitutions &amp; ingredient tips</a></p>`:''}</div><div><h4 class="block-title" style="margin-top:34px">INSTRUCTIONS</h4>${(r.steps||[]).map((s,i)=>{const label=s.number&&s.title?`${s.number} — ${s.title}`:(s.label||'');const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs:(s.text||'').split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);return `<div class="step"><div class="step-head"><span>${esc(label)}</span><span>${esc(s.clock||'')}</span></div><div class="step-copy">${instructionBlock(paragraphs,r,window.__recipeScale||1,window.__recipeUnit||'metric',s.title||'')}${s.stepNote?instructionParagraph(s.stepNote,true,r,window.__recipeScale||1,window.__recipeUnit||'metric',false,s.title||''):''}</div>${stepPhotoMarkup(s,r,i)}</div>`}).join('')}</div></div></section></div>${r.notes?.length?`<section><h2 class="h3">MIDNIGHT NOTES</h2><p class="note-sub">How I made it work in my kitchen.</p><div class="notes-list">${r.notes.map(n=>`<div class="note-item"><div class="note-title"><b>${esc(n[0])}</b></div><div class="note-body">${r.richTextNotes?richText(n[1]):plainRichText(n[1])}</div></div>`).join('')}</div></section>`:''}${isUsual&&foundTitles.length?`<section class="found-in"><h2 class="h3">FOUND IN</h2><p class="note-sub">${esc(r.foundInIntro||'Recipes that use this usual...')}</p><div class="body-copy found-in-list">${foundIn}</div></section>`:''}${r.finePrint?`<section><h2 class="h3">THE FINE PRINT</h2><p class="note-sub">Tonight or tomorrow?</p><p class="body-copy">${Object.entries(r.finePrint).filter(([k,v])=>hasMeaningfulValue(k)&&hasMeaningfulValue(v)).map(([k,v])=>`<b>${esc(k)}</b>: ${richText(v)}<br>`).join('')}</p></section>`:''}${(r.footerRating||reviewsEnabled)?`<footer class="recipe-footer">${r.footerRating?`<p class="footer-rating">${esc(r.footerRating)}</p>`:''}${reviewsEnabled?`<div class="review-form"><h2 class="h3">THE AFTERTASTE</h2><p class="review-intro">Made it? Tell us how it turned out.</p><div class="star-picker" id="starPicker" aria-label="Choose a rating">${[1,2,3,4,5].map(n=>`<button type="button" data-star="${n}" aria-label="${n} stars" aria-pressed="false">☆</button>`).join('')}</div><input id="reviewName" maxlength="60" placeholder="Name (optional)"><textarea id="reviewComment" maxlength="2000" placeholder="Comment (optional)"></textarea><div id="reviewTurnstile" style="margin:12px 0"></div><button class="btn" id="submitReview" type="button">SUBMIT</button><p class="review-status" id="reviewStatus" role="status" aria-live="polite">Loading shared reviews…</p><div id="reviewList" class="review-list"></div></div>`:''}</footer>`:''}${(()=>{const rel=relatedRecipes(r);return rel.length?`<section class="related"><h2 class="h3">YOU MIGHT ALSO LIKE</h2>${cards(rel)}</section>`:''})()}</div>`
+  return `<div class="recipe-card${r.fixedStepPhotoCells?' fixed-step-photo-cells':''}"><div class="rtop"><div><h1 class="rtitle">${esc(cutieText(r.title))}</h1><div class="meta-line"><span>${r.timeStamp?`📍 ${esc(r.timeStamp)}<span> · TORONTO</span>`:'The Usuals'}</span></div><div class="recipe-meta-divider"></div><p class="facts">${isUsual?`<b>The Usuals</b>: <a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:`<b>Source</b>: <a href="${categoryLink('source',r.source)}">${esc(r.source)}</a>${r.sourceSecondary?` / <a href="${categoryLink('source',r.sourceSecondary)}">${esc(r.sourceSecondary)}</a>`:''}${hasMeaningfulValue(r.original)?`<br><b>Inspired by</b>: ${r.originalUrl?`<a class="original-link" href="${esc(r.originalUrl)}" target="_blank" rel="noopener noreferrer">${esc(r.original)}</a>`:esc(r.original)}`:''}${r.dish?`<br><b>Dish</b>: ${esc(r.dish)}`:''}<br><b>Cuisine</b>: <a href="${categoryLink('cuisine',r.cuisine)}">${esc(r.cuisine)}</a>${r.cuisineSecondary?`, <a href="${categoryLink('cuisine',r.cuisineSecondary)}">${esc(r.cuisineSecondary)}</a>`:''}<br><b>Course</b>: <a href="${categoryLink('course',canonicalCourse(r))}">${esc(courseDisplay(r))}</a>`}</p><div class="recipe-jump-top"><button class="btn" data-jump="the-recipe">Jump To Recipe</button></div></div>${photo(imageData(r).heroImage,r.title,'',false,true)}</div>${intro}${!isUsual&&(r.story||r.storyQuote)?`<section><h2 class="h3">THE STORY</h2>${r.storyQuote?`<p class="story-quote"><em>${esc(r.storyQuote)}</em></p>`:''}${r.story?`<p class="body-copy${r.compactStory?' story-compact':''}">${r.compactStory?richText(r.story).replace(/<br><br>/g,'<br>'):richText(r.story)}</p>`:''}</section>`:''}${(ingredientFile.name||file.length||fileGroups.length)?`<section id="ingredient-file-section"><h2 class="h3">INGREDIENT FILE</h2><div class="ingredient-file">${ingredientFileMarkup(r,ingredientFile)}${ingredientFile.name?`<div class="ingredient-file-name">${esc(ingredientFile.name)}</div>`:''}${file.length?`<div class="ingredient-file-details">${file.map(([k,v])=>`<p><strong>${esc(k)}:</strong> ${esc(v)}</p>`).join('')}</div>`:''}</div></section>`:''}<div class="recipe-practical-box"><section id="the-recipe"><h2 class="h3">THE RECIPE</h2><div class="recipe-inner"><div>${!isUsual&&imageData(r).recipeImage?photo(imageData(r).recipeImage,r.title,'',true):''}<h3 class="rname">${esc(cutieText(r.recipeTitle||r.title))}</h3><p class="stats"><b>Prep</b>: ${esc(r.stats?.prep||'—')} <b>Cook</b>: ${esc(r.stats?.cook||'—')}${statsChill}<br><b>Total</b>: ${esc(r.stats?.total||'—')}<br><b>Serves</b>: ${esc(r.stats?.serves||'—')}${statsPan}<br><b>Quiet level</b>: ${esc(r.stats?.quiet||'—')}</p><div class="recipe-actions recipe-action-row"><button class="btn recipe-icon-btn" id="shareRecipe" aria-label="Share recipe" title="Share recipe"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.7 10.6 6.6-4.1M8.7 13.4l6.6 4.1"/></svg><span class="visually-hidden">Share</span></button><button class="btn recipe-icon-btn" id="printRecipe" aria-label="Print recipe" title="Print recipe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v7H6zM18 12h.01"/></svg><span class="visually-hidden">Print</span></button><button class="btn recipe-icon-btn" id="favRecipe" aria-label="Add to favorites" aria-pressed="false" title="Favorite"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="visually-hidden">Favorite</span></button></div><div class="ingredient-heading-row"><h4 class="block-title" style="margin:0">INGREDIENTS</h4><label class="cook-switch-control" for="cookOpen"><span>Cook Mode</span><button type="button" id="cookOpen" class="cook-switch" role="switch" aria-checked="false" aria-label="Prevent screen from sleeping"><span class="cook-switch-knob"></span></button></label></div><div class="toggle-row" id="unitToggle"><button data-unit="imperial" aria-pressed="true">US</button><button data-unit="metric" aria-pressed="false">Metric</button></div><div class="toggle-row small" id="scaleToggle"><span aria-hidden="true">×</span><div class="scale-stepper"><button type="button" class="scale-step-button" data-scale-step="down" aria-label="Decrease quantity multiplier">−</button><input id="recipeScale" data-scale type="number" inputmode="decimal" min="0.5" step="0.5" value="1" aria-label="Quantity multiplier"><button type="button" class="scale-step-button" data-scale-step="up" aria-label="Increase quantity multiplier">+</button></div></div><ul class="ing" id="ingredientsList"></ul>${fileGroups.length?`<p class="ingredient-file-guide">ⓘ <a href="#ingredient-file-section">Click for substitutions &amp; ingredient tips</a></p>`:''}</div><div><h4 class="block-title" style="margin-top:34px">INSTRUCTIONS</h4>${(r.steps||[]).map((s,i)=>{const label=s.number&&s.title?`${s.number} — ${s.title}`:(s.label||'');const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs:(s.text||'').split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);return `<div class="step"><div class="step-head"><span>${esc(label)}</span><span>${esc(s.clock||'')}</span></div><div class="step-copy">${instructionBlock(paragraphs,r,window.__recipeScale||1,window.__recipeUnit||'metric',s.title||'')}${s.stepNote?instructionParagraph(s.stepNote,true,r,window.__recipeScale||1,window.__recipeUnit||'metric',false,s.title||''):''}</div>${stepPhotoMarkup(s,r,i)}</div>`}).join('')}</div></div></section></div>${r.notes?.length?`<section><h2 class="h3">MIDNIGHT NOTES</h2><p class="note-sub">How I made it work in my kitchen.</p><div class="notes-list">${r.notes.map(n=>`<div class="note-item"><div class="note-title"><b>${esc(n[0])}</b></div><div class="note-body">${r.richTextNotes?richText(n[1]):plainRichText(n[1])}</div></div>`).join('')}</div></section>`:''}${isUsual&&foundTitles.length?`<section class="found-in"><h2 class="h3">FOUND IN</h2><p class="note-sub">${esc(r.foundInIntro||'Recipes that use this usual...')}</p><div class="body-copy found-in-list">${foundIn}</div></section>`:''}${r.finePrint?`<section><h2 class="h3">THE FINE PRINT</h2><p class="note-sub">Tonight or tomorrow?</p><p class="body-copy">${Object.entries(r.finePrint).filter(([k,v])=>hasMeaningfulValue(k)&&hasMeaningfulValue(v)).map(([k,v])=>`<b>${esc(k)}</b>: ${richText(v)}<br>`).join('')}</p></section>`:''}${(r.footerRating||reviewsEnabled)?`<footer class="recipe-footer">${r.footerRating?`<p class="footer-rating">${esc(r.footerRating)}</p>`:''}${reviewsEnabled?`<div class="review-form"><h2 class="h3">THE AFTERTASTE</h2><p class="review-intro">Made it? Tell us how it turned out.</p><div class="star-picker" id="starPicker" aria-label="Choose a rating">${[1,2,3,4,5].map(n=>`<button type="button" data-star="${n}" aria-label="${n} stars" aria-pressed="false">☆</button>`).join('')}</div><input id="reviewName" maxlength="60" placeholder="Name (optional)"><textarea id="reviewComment" maxlength="2000" placeholder="Comment (optional)"></textarea><div id="reviewTurnstile" style="margin:12px 0"></div><button class="btn" id="submitReview" type="button">SUBMIT</button><p class="review-status" id="reviewStatus" role="status" aria-live="polite">Loading shared reviews…</p><div id="reviewList" class="review-list"></div></div>`:''}</footer>`:''}${(()=>{const rel=relatedRecipes(r);return rel.length?`<section class="related"><h2 class="h3">YOU MIGHT ALSO LIKE</h2>${cards(rel)}</section>`:''})()}</div>`
 }
 function normalizeQuantityIngredient(value){
   return String(value??'').toLowerCase().replace(/[’']/g,"'").replace(/[^a-z0-9%.]+/g,' ').replace(/\s+/g,' ').trim();
@@ -509,11 +465,15 @@ const densityPerUnit={
   'unsweetened cocoa powder|tsp':5.4/3,
   'cornstarch|tsp':8/3,
   'sugar|tsp':12.5/3,
+  'granulated sugar|tsp':12.5/3,
+  'granulated sugar|tbsp':12.5,
+  'espresso powder|tsp':2,
+  'espresso powder|tbsp':6,
   'sugar|ml':0.833,
   'dark brown sugar|tbsp':12.5,
   'molasses|tbsp':20.5,
-  'orange juice|tbsp':14.7868,
-  'water|tbsp':14.7868,
+  'orange juice|tbsp':15,
+  'water|tbsp':15,
   'salt|tbsp':18,
   'kosher salt|tbsp':18,
   'ground cinnamon|tbsp':7.8,
@@ -698,9 +658,9 @@ function convertToUnit(amount,from,to,item='',context='',r=null){
   if(f==='oz'&&t==='g')return formatUnitValue(n*28.3495,'g');
   if(f==='tbsp'&&t==='tsp')return formatUnitValue(n*3,'tsp');
   if(f==='tsp'&&t==='tbsp')return formatUnitValue(n/3,'tbsp');
-  if(f==='tbsp'&&t==='ml')return formatConverted(n*14.7868,'ml');
-  if(f==='tsp'&&t==='ml')return formatConverted(n*4.92892,'ml');
-  if(f==='ml'&&t==='tbsp')return formatUnitValue(n/14.7868,'tbsp');
+  if(f==='tbsp'&&t==='ml')return formatConverted(n*15,'ml');
+  if(f==='tsp'&&t==='ml')return formatConverted(n*5,'ml');
+  if(f==='ml'&&t==='tbsp')return formatUnitValue(n/15,'tbsp');
   if(f==='tbsp'&&t==='cup')return formatTargetValue(n/16,'cup',r);
   if(f==='tsp'&&t==='cup')return formatUnitValue(n/48,'cup');
   if(f==='cup'&&t==='tbsp')return formatUnitValue(n*16,'tbsp');
@@ -760,12 +720,12 @@ function convert(amount,unit,mode,item='',context='',r=null){
     if(['lb','lbs','pound','pounds'].includes(u))return format(amount*453.592,'g');
     if(['tsp','teaspoon','teaspoons'].includes(u))return convertToUnit(amount,'tsp',desiredUnit(item,'metric','tsp',context,r)||'ml',item,context,r);
     if(['tbsp','tablespoon','tablespoons'].includes(u))return convertToUnit(amount,'tbsp',desiredUnit(item,'metric','tbsp',context,r)||'ml',item,context,r);
-    if(['c','cup','cups'].includes(u))return format(amount*236.588,'ml');
+    if(['c','cup','cups'].includes(u))return format(amount*240,'ml');
     return format(amount,unit);
   }
   if(u==='g')return format(amount/28.3495,'oz');
   if(u==='kg')return format(amount*2.20462,'lb');
-  if(u==='ml')return formatCupValue(amount/236.588,false);
+  if(u==='ml')return formatCupValue(amount/240,false);
   if(['c','cup','cups'].includes(u))return format(amount*8,'fl oz');
   if(['tbsp','tablespoon','tablespoons'].includes(u))return format(amount,'tbsp');
   if(['tsp','teaspoon','teaspoons'].includes(u))return format(amount,'tsp');
@@ -816,7 +776,7 @@ function renderIngredients(r,scale=1,unit='metric'){
   }).join('')
 }
 function renderInstructionSteps(r,scale,unit){document.querySelectorAll('.step').forEach((stepEl,i)=>{const s=r.steps?.[i];if(!s)return;const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs:(s.text||'').split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);const copy=stepEl.querySelector('.step-copy');if(copy)copy.innerHTML=instructionBlock(paragraphs,r,scale,unit,s.title||'')+(s.stepNote?instructionParagraph(s.stepNote,true,r,scale,unit,false,s.title||''):'');});}
-function bindRecipe(r){let scale=1,unit=store.get('mr-unit')==='imperial'?'imperial':'metric';window.__recipeScale=scale;window.__recipeUnit=unit;document.querySelectorAll('#unitToggle button').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.unit===unit)));renderIngredients(r,scale,unit);renderInstructionSteps(r,scale,unit);document.querySelectorAll('#unitToggle button').forEach(b=>b.onclick=()=>{unit=b.dataset.unit;window.__recipeUnit=unit;store.set('mr-unit',unit);document.querySelectorAll('#unitToggle button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderIngredients(r,scale,unit);renderInstructionSteps(r,scale,unit)});const scaleInput=document.getElementById('recipeScale');const updateScale=()=>{const value=Number(scaleInput.value);if(!Number.isFinite(value)||value<0.5||Math.abs(value*2-Math.round(value*2))>1e-9)return;scale=value;window.__recipeScale=scale;renderIngredients(r,scale,unit);renderInstructionSteps(r,scale,unit)};scaleInput?.addEventListener('input',updateScale);document.querySelectorAll('[data-scale-step]').forEach(b=>b.addEventListener('click',()=>{const current=Number(scaleInput.value);const base=Number.isFinite(current)&&current>0?current:1;const next=Math.max(0.5,Number((base+(b.dataset.scaleStep==='up'?0.5:-0.5)).toFixed(2)));scaleInput.value=String(next);updateScale();}));document.querySelector('[data-jump]')?.addEventListener('click',()=>document.getElementById('the-recipe')?.scrollIntoView({behavior:'smooth'}));document.getElementById('shareRecipe')?.addEventListener('click',async()=>{const data={title:r.title,url:location.href};try{if(navigator.share)await navigator.share(data);else{await navigator.clipboard.writeText(location.href);alert('Recipe link copied.')}}catch(e){}});document.getElementById('printRecipe')?.addEventListener('click',async()=>{const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);const isChromeIOS=/CriOS/i.test(navigator.userAgent);if(isIOS&&isChromeIOS){try{if(navigator.share){await navigator.share({title:r.title,url:location.href});return;}}catch(e){if(e?.name==='AbortError')return;}alert('To print on iPhone: tap Chrome’s Share button, then choose Print. If Print is not available, open this recipe in Safari and select Share → Print.');return;}try{window.print();}catch(e){alert('Printing is not available in this browser. Open this recipe in Safari and choose Share → Print.');}});bindReviews(r);bindCook();}
+function bindRecipe(r){let scale=1,unit=store.get('mr-unit')==='metric'?'metric':'imperial';window.__recipeScale=scale;window.__recipeUnit=unit;document.querySelectorAll('#unitToggle button').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.unit===unit)));renderIngredients(r,scale,unit);renderInstructionSteps(r,scale,unit);document.querySelectorAll('#unitToggle button').forEach(b=>b.onclick=()=>{unit=b.dataset.unit;window.__recipeUnit=unit;store.set('mr-unit',unit);document.querySelectorAll('#unitToggle button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderIngredients(r,scale,unit);renderInstructionSteps(r,scale,unit)});const scaleInput=document.getElementById('recipeScale');const updateScale=()=>{const value=Number(scaleInput.value);if(!Number.isFinite(value)||value<0.5||Math.abs(value*2-Math.round(value*2))>1e-9)return;scale=value;window.__recipeScale=scale;renderIngredients(r,scale,unit);renderInstructionSteps(r,scale,unit)};scaleInput?.addEventListener('input',updateScale);document.querySelectorAll('[data-scale-step]').forEach(b=>b.addEventListener('click',()=>{const current=Number(scaleInput.value);const base=Number.isFinite(current)&&current>0?current:1;const next=Math.max(0.5,Number((base+(b.dataset.scaleStep==='up'?0.5:-0.5)).toFixed(2)));scaleInput.value=String(next);updateScale();}));document.querySelector('[data-jump]')?.addEventListener('click',()=>document.getElementById('the-recipe')?.scrollIntoView({behavior:'smooth'}));document.getElementById('shareRecipe')?.addEventListener('click',async()=>{const data={title:r.title,url:location.href};try{if(navigator.share)await navigator.share(data);else{await navigator.clipboard.writeText(location.href);alert('Recipe link copied.')}}catch(e){}});document.getElementById('printRecipe')?.addEventListener('click',async()=>{const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);const isChromeIOS=/CriOS/i.test(navigator.userAgent);if(isIOS&&isChromeIOS){try{if(navigator.share){await navigator.share({title:r.title,url:location.href});return;}}catch(e){if(e?.name==='AbortError')return;}alert('To print on iPhone: tap Chrome’s Share button, then choose Print. If Print is not available, open this recipe in Safari and select Share → Print.');return;}try{window.print();}catch(e){alert('Printing is not available in this browser. Open this recipe in Safari and choose Share → Print.');}});bindReviews(r);bindCook();}
 function bindReviews(r){
   let rating=0,turnstileWidget=null,turnstileToken='';
   const status=document.getElementById('reviewStatus');
