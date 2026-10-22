@@ -523,7 +523,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     slug:'building-block-pie-crust', title:'Building Block Pie Crust', source:'The Usuals', cuisine:'American', course:'Baking', courseDisplay:'Baking', categories:['Baking'], dateAdded:'2026-09-27', timeStamp:'',
     isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...', hideRecipeTags:true,
     description:'The crust we make when a pie calls for a crust.',
-    usualIntro:'This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust.\nNothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.',
+    usualIntro:`This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust. Nothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.\n\nAt Midnight Recipes, our pies take three different routes: some go into the oven with an unbaked crust (No Pre-Baking), some need a little head start (Partial Blind-Baking), and others need the crust fully baked before the filling goes in (Full Blind-Baking).\n\n**No Pre-Baking** is for pies like Sweet Cherry Pie, where the filling and crust bake together. For a double-crust pie, the second portion of dough becomes the top crust.\n\n**Partial Blind-Baking** gives the crust a head start before the filling goes in. We use this method for pies like Classic Pumpkin Pie and Sweet Potato Ginger Pie, where the crust needs extra time to bake without overcooking the filling.\n\n**Full Blind-Baking** takes the crust all the way to golden and crisp before the filling is added. This is useful for pies with fillings that are already cooked or don't need to be baked.\n\nThree methods, one dependable crust. Choose the route that suits your pie.\n\nThis recipe makes enough for one double-crust pie, or two single-crust pies. If you only need a bottom crust, use half and freeze the rest. Or make the full batch anyway. Future-you might be grateful when the midnight urge to bake strikes.`,
     heroImage:'images/recipes/building-block-pie-crust/hero.jpg', recipeImage:'images/recipes/building-block-pie-crust/recipe.jpg',
     unitOverrides:{imperial:{'all-purpose flour':'cup','cold unsalted butter, cubed':'cup','salt':'tsp'},metric:{'cold water':'ml'}},
     densityOverrides:{'all purpose flour|cup':120,'cold unsalted butter cubed|cup':113},
@@ -531,36 +531,62 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
     usCupFractions:true,
     ingredientFile:[],
     ingredients:[
-      {amount:180,unit:'g',imperialAmount:1.5,imperialUnit:'cup',item:'All-Purpose Flour'},
-      {amount:113,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Cold Unsalted Butter, Cubed'},
-      {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
-      {minAmount:45,maxAmount:60,unit:'ml',imperialMinAmount:3,imperialMaxAmount:4,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',item:'Cold Water'},
+      {amount:360,unit:'g',imperialAmount:3,imperialUnit:'cup',item:'All-Purpose Flour'},
+      {amount:226,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Cold Unsalted Butter, Cubed'},
+      {amount:6,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Salt'},
+      {minAmount:80,maxAmount:100,unit:'ml',imperialMinAmount:5.5,imperialMaxAmount:7,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',item:'Cold Water'}
     ],
-    stats:{prep:'15 mins',cook:'15 mins',total:'30 mins',serves:'8',pan:'23 cm / 9-inch pie dish',quiet:'⭐⭐⭐⭐☆'},
+    stats:{prep:'20 mins',cook:'20–45 mins depending on finish',total:'40–65 mins depending on finish',serves:'8',pan:'23 cm / 9-inch pie dish',quiet:'⭐⭐⭐⭐☆'},
     steps:[
-      {number:'01',title:'MAKE THE CRUST',clock:'',paragraphs:[
-        'Preheat your oven to 175°C / 350°F.',
-        {text:'Mix {{amount:0}} flour, {{amount:1}} butter, and {{amount:2}} salt until coarse crumbs form.',amounts:[{value:180,unit:'g',ingredient:'All-Purpose Flour'},{value:113,unit:'g',ingredient:'Cold Unsalted Butter, cubed'},{value:3,unit:'g',ingredient:'Salt'}]},
-        {text:'Add {{amount:0}} cold water gradually until the dough just comes together.',amounts:[{min:45,max:60,unit:'ml',ingredient:'Cold Water'}]},
-        'Lightly flour your hands and press the dough directly into the pie dish.',
-        'If the butter has softened, chill the crust for 10 minutes before baking.'
-      ],stepNote:'**Midnight Shortcut:** Use a food processor to make the dough quickly.',stepImages:['images/recipes/building-block-pie-crust/step-01-01.JPG','images/recipes/building-block-pie-crust/step-01-02.JPG','images/recipes/building-block-pie-crust/step-01-03.JPG','images/recipes/building-block-pie-crust/step-01-04.JPG']},
-      {number:'02',title:'BLIND-BAKE',clock:'',paragraphs:[
-        'Prick the bottom with a fork. Add parchment paper and pie weights.',
-        'Bake at 175°C / 350°F for 15 minutes.',
-        'Remove the weights and parchment, then bake for another 5–7 minutes, until lightly golden.'
-      ],stepImages:['images/recipes/building-block-pie-crust/step-02-01.JPG','images/recipes/building-block-pie-crust/step-02-02.jpg']}
+      {number:'01',title:'MAKE THE DOUGH',clock:'',paragraphs:[
+        'Mix the flour and salt in a large bowl. Add the cold, cubed butter and work it into the flour until the mixture resembles coarse crumbs, with some small pieces of butter still visible.',
+        'Start with 80 ml ice-cold water, adding it gradually while mixing gently. Add more, a little at a time, only until the dough holds together when pressed. It should not feel wet or sticky.',
+        '**Midnight Shortcut — Food Processor:** Pulse the flour, salt, and cold butter until coarse crumbs form. Add the water gradually and pulse just until the dough begins to come together. Avoid overmixing.'
+      ]},
+      {number:'02',title:'DIVIDE & CHILL',clock:'',paragraphs:[
+        'Divide the dough into two equal portions. For a single-crust pie, use one portion and wrap the other tightly for freezing. For a double-crust pie, use one portion for the base and the other for the top.',
+        '**For the bottom crust:** Press one portion evenly into a 23 cm / 9-inch pie dish, covering the base and sides. Keep the thickness as even as possible.',
+        '**For the top crust:** Shape the second portion into a flat disc. Wrap it tightly and refrigerate until firm. When you are ready to assemble the pie, roll it out on a lightly floured surface.',
+        'Refrigerate the shaped bottom crust and wrapped top-crust dough for at least 30 minutes. If the butter softens while you work, chill the dough for longer.',
+        '**Midnight Shortcut — The Freezer:** Short on time? Place the shaped bottom crust and wrapped dough disc in the freezer until firm, checking frequently. If the dough freezes solid, let it soften slightly before rolling or handling. Keep it cold, but pliable.'
+      ]},
+      {number:'03',title:'NO PRE-BAKING',clock:'',paragraphs:[
+        '**For pies that bake with their filling**, such as Sweet Cherry Pie.',
+        'Add the filling to the unbaked crust and bake according to the individual pie recipe.',
+        'For a double-crust pie, roll out the second portion, cover the filling, and gently press the top and bottom edges together to seal. Trim any excess dough, crimp the edges, and cut a few vents in the top crust to let steam escape.',
+        'Follow the temperature and baking time specified in the individual pie recipe. Fruit pies often need a longer bake so the filling cooks through and the bottom crust has time to bake properly.'
+      ]},
+      {number:'04',title:'PARTIAL BLIND-BAKE',clock:'',paragraphs:[
+        '**For pies that need a head start**, such as Classic Pumpkin Pie and Sweet Potato Ginger Pie.',
+        'Preheat the oven to 175°C / 350°F, unless the individual pie recipe specifies otherwise.',
+        'Line the chilled crust with parchment paper, pressing it gently into the base and sides. Fill with pie weights or dried beans, distributing them evenly to support the sides as well as the base.',
+        'Bake for about 15–20 minutes, until the edges are set and the pastry no longer looks raw. Carefully remove the parchment and weights.',
+        'Prick the base several times with a fork, then return the crust to the oven for another 5–10 minutes. The base should look dry and set, but it does not need to be fully browned.',
+        'Let the crust cool slightly, then add the filling and continue baking according to the individual pie recipe.',
+        '**Midnight Compromise — No Pie Weights?** Pricking the base with a fork before baking can help steam escape, but it is less reliable than weights for preventing the sides from shrinking or slumping. If you skip the weights, keep a close eye on the crust as it bakes.'
+      ]},
+      {number:'05',title:'FULL BLIND-BAKE',clock:'',paragraphs:[
+        '**For pies with cooked or no-bake fillings** that will not go back into the oven.',
+        'Preheat the oven to 175°C / 350°F, unless the filling recipe specifies otherwise.',
+        'Line the chilled crust with parchment paper and fill with pie weights or dried beans. Bake for about 15–20 minutes, until the edges are set and the pastry no longer looks raw.',
+        'Carefully remove the parchment and weights. Prick the base several times with a fork, then return the crust to the oven for another 15–25 minutes, checking regularly, until the base is dry and the pastry is evenly golden.',
+        'The total baking time will vary depending on your oven and pie dish, so look for the finished texture and colour rather than relying on the clock alone. Cool completely before adding the filling.'
+      ]}
     ],
     notes:[
-      ['The Golden Rule — Blind-Bake','For wet fillings, blind-baking helps keep the bottom from getting soggy. Take the crust only to light golden at this stage; it will continue browning when the filled pie goes back into the oven.'],
-      ['Glass Pie Dish','Glass heats more gently than metal, so give the crust enough time to dry and lightly brown. Avoid over-browning during the blind-bake.'],
-      ['Midnight Compromise','No rolling pin, pastry board, or complicated pastry work. Press the dough directly into the pie dish, and everything stays contained and easy to clean up.']
+      ['The Two-Minute Decision','Before you start, ask what happens to the filling after it goes into the crust. If the filling and crust bake together, choose No Pre-Baking for pies such as Sweet Cherry Pie, unless the individual recipe says otherwise. If the filling needs less oven time than the crust, choose Partial Blind-Baking. If the filling will not be baked, choose Full Blind-Baking and cool the crust completely before filling. Always follow the individual pie recipe if it specifies a particular crust preparation method.'],
+      ['Tip #1 — Keep the Butter Cold','Cold butter is part of what gives pie crust its flaky texture. If it softens too much before baking, the crust can lose some of that texture and shrink more easily. If the dough starts feeling greasy or soft, stop and put it back in the fridge. There is no need to rush it.'],
+      ['Tip #2 — Water Is a Slow Addition','Start with the smaller amount and add more gradually. The dough is ready when you can press a handful together and it holds its shape. It may still look a little crumbly. That is fine. You want it to come together, not become a smooth, wet ball.'],
+      ['Tip #3 — Crumbly Is Not Always a Crisis','If the dough falls apart when pressed, it may simply need a little more water. Sprinkle in cold water a teaspoon at a time and gently press the dough together. Avoid kneading it until smooth. Too much handling can make the crust tough.'],
+      ['Tip #4 — Give It a Cold Rest','Chilling the shaped crust helps firm the butter and relax the dough, making it less likely to shrink in the oven. The refrigerator is the usual choice; the freezer is the midnight shortcut. Dough frozen solid may need time to soften before it can be handled. Aim for cold and firm, not brittle.'],
+      ['Tip #5 — Let the Glass Dish Tell You','Glass pie dishes heat differently from metal ones. Check the bottom and edges instead of relying on time alone. If the base still looks pale or damp, it may need more time.'],
+      ['The Midnight Compromise','Pressing the dough directly into the pie dish means no rolling pin, no flour-covered counter, and one less thing to wash. It may not give you the most polished pastry edge, but it gets a homemade pie one step closer. For the top crust of a double-crust pie, you will still need to roll out the second portion.']
     ],
     finePrint:{
-      'BEST EATEN':'Use the dough to make your chosen pie crust, following the pie recipe’s baking instructions.',
+      'BEST EATEN':'Use the crust in your chosen pie, following that recipe’s baking instructions.',
       'MAKE AHEAD':'Yes. Prepare the dough ahead of time and refrigerate until ready to use.',
-      'STORAGE':'Wrap the dough tightly and refrigerate for 2–3 days.',
-      'FREEZER':'Wrap the dough tightly and freeze for up to 3 months. Thaw in the refrigerator before rolling out. If the dough is already fitted into a pie pan, it can often be baked straight from frozen; adjust the baking time as needed.',
+      'STORAGE':'Wrap dough tightly and refrigerate for 2–3 days.',
+      'FREEZER':'Wrap unused dough tightly and freeze for up to 2 months for best quality. Thaw in the refrigerator before using. A shaped, unbaked pie shell can also be frozen; follow the individual pie recipe for baking from frozen or thawed.',
       'REHEAT':'Not applicable.'
     },
     tags:['The Usuals','Bases & Crusts','Pie'], mainIngredients:['Flour','Butter','Salt','Pie']
