@@ -1,30 +1,17 @@
+# Checks data.js and the photos every time you upload (push) to GitHub.
+# A red ✗ on the commit means "look at the Actions log"; the site itself is not blocked.
 name: Validate recipes
-
 on:
   push:
-    paths:
-      - 'assets/js/data.js'
-      - 'validate-recipes.cjs'
-      - '.github/workflows/validate-recipes.yml'
+    paths: ['assets/js/data.js', 'images/**', 'tools/validate-recipes.cjs']
   pull_request:
-    paths:
-      - 'assets/js/data.js'
-      - 'validate-recipes.cjs'
-      - '.github/workflows/validate-recipes.yml'
-  workflow_dispatch:
-
-permissions:
-  contents: read
-
+    paths: ['assets/js/data.js', 'images/**', 'tools/validate-recipes.cjs']
 jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '22'
-      - name: Validate recipe data
-        run: node validate-recipes.cjs assets/js/data.js
+          node-version: 20
+      - run: node tools/validate-recipes.cjs
