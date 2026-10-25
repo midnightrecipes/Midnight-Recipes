@@ -104,7 +104,11 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
     usCupFractions:true,
     integerUnits:{metric:['sesame oil','sugar']},
     richTextNotes:true,
-    story:`*Taiwan Ramen* (台湾ラーメン) at Misen (味仙) is famous in my hometown, Nagoya, Japan. Despite its name, this fiery ramen isn’t actually from Taiwan—the founder named it “Taiwan Ramen” after his own Taiwanese roots. It is one of Nagoya’s local foods that evolved entirely in Japan, and this intensely spicy, strangely addictive flavor is so irresistible that I found myself going back to the restaurant again on my last trip home.\n\nTonight, I’m making the Taiwan ground pork the star of the dish, serving it over rice with a soft-boiled egg instead of its original ramen noodles. It might be so spicy that I end up staying awake all night.`,
+    story:`*Taiwan Ramen* (台湾ラーメン) at Misen (味仙) is absolute comfort food in my hometown, Nagoya, Japan. Despite the name, this fiery dish isn’t actually from Taiwan—the founder named it after his own Taiwanese heritage. It’s a true Nagoya original that evolved entirely in Japan, and the flavor is something you never really forget. Every time I go back home, I find myself drawn straight back to Misen, sitting at a noisy table surrounded by people happily sweating their way through a bowl.
+
+What makes it so addictive isn't just the heat—it’s that intense, punchy wallop of fresh chili and minced garlic seamlessly blended into rich, savory pork fat. It’s crazy spicy, but there’s this deep, craveable umami underneath that keeps you reaching for the next bite before the last one even settles. 
+
+Tonight, I’m taking that iconic flavor and making the ground pork the star, serving it over hot rice with a rich soft-boiled egg. As you break the egg, the creamy, runny yolk flows into the spicy mince, perfectly cutting through the fiery punch and rounding out all those sharp garlic notes. It’s dangerous, intensely savory, and so good it might just keep me up all night.`,
     ingredientFile:[
       {name:'GROUND PORK',details:[['Flavor','Rich, savory, fatty'],['Substitute','Ground chicken or turkey, although fatty pork gives the closest result']]},
       {name:'FRESH RED CHILI',details:[['Origin','East & Southeast Asia'],['Flavor','Fresh, sharp, bright heat'],['Substitute','Dried Thai chili or red chili flakes'],['Storage','Refrigerate loosely wrapped.'],['Why here','Plenty of fresh chili and garlic are essential to this recipe!']]},
