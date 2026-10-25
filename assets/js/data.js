@@ -557,13 +557,13 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
         'When ready to assemble, roll out the dough on a lightly floured surface. Transfer the bottom crust to a 23 cm / 9-inch pie dish, gently pressing it into the base and sides without stretching. Trim or crimp the edges as needed.',
         'If the dough feels too firm to roll, let it sit at room temperature for a few minutes. If it becomes soft or sticky, return it to the refrigerator before continuing.'
       ]},
-      {number:'03',title:'OPTION A — NO PRE-BAKING',clock:'',paragraphs:[
+      {number:'',title:'OPTION A — NO PRE-BAKING',clock:'',paragraphs:[
         '**For pies that bake with their filling**, such as Sweet Cherry Pie.',
         'Add the filling to the unbaked crust and bake according to the individual pie recipe.',
         'For a double-crust pie, roll out the second portion, cover the filling, and gently press the top and bottom edges together to seal. Trim any excess dough, crimp the edges, and cut a few vents in the top crust to let steam escape.',
         'Follow the temperature and baking time specified in the individual pie recipe. Fruit pies often need a longer bake so the filling cooks through and the bottom crust has time to bake properly.'
       ]},
-      {number:'04',title:'OPTION B — PARTIAL BLIND-BAKE',clock:'',paragraphs:[
+      {number:'',title:'OPTION B — PARTIAL BLIND-BAKE',clock:'',paragraphs:[
         '**For pies that need a head start**, such as Classic Pumpkin Pie and Sweet Potato Ginger Pie.',
         'Preheat the oven to 175°C / 350°F, unless the individual pie recipe specifies otherwise.',
         'Line the chilled crust with parchment paper, pressing it gently into the base and sides. Fill with pie weights or dried beans, distributing them evenly to support the sides as well as the base.',
@@ -572,7 +572,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
         'Let the crust cool slightly, then add the filling and continue baking according to the individual pie recipe.',
         '**Midnight Compromise — No Pie Weights?:** Pricking the base with a fork before baking can help steam escape, but it is less reliable than weights for preventing the sides from shrinking or slumping. If you skip the weights, keep a close eye on the crust as it bakes.'
       ]},
-      {number:'05',title:'OPTION C — FULL BLIND-BAKE',clock:'',paragraphs:[
+      {number:'',title:'OPTION C — FULL BLIND-BAKE',clock:'',paragraphs:[
         '**For pies with cooked or no-bake fillings** that will not go back into the oven.',
         'Preheat the oven to 175°C / 350°F, unless the filling recipe specifies otherwise.',
         'Line the chilled crust with parchment paper and fill with pie weights or dried beans. Bake for about 15–20 minutes, until the edges are set and the pastry no longer looks raw.',
