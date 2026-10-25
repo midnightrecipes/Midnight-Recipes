@@ -119,8 +119,10 @@
         "images/recipes/building-block-pie-crust/step-01-04.JPG"
       ],
       "02": [
-        "images/recipes/building-block-pie-crust/step-02-01.JPG",
         "images/recipes/building-block-pie-crust/step-02-02.jpg"
+      ],
+      "04": [
+        "images/recipes/building-block-pie-crust/step-04-01.JPG"
       ]
     }
   },
