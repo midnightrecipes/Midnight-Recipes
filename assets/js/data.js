@@ -397,7 +397,7 @@ Tonight, I wanted to create something a little different from a standard pumpkin
     ],
     notes:[
       ['The Art of Steeping (Why Whole Spices Matter)','Instead of dumping ground "pumpkin pie spice" into the bowl, I steep whole cinnamon, star anise, cloves, and orange peel in warm Half & Half over low heat. Fat is an incredible flavor carrier. By letting the spices sit in the warm dairy for 20 minutes, you get a clean, silky custard infused with a soft, rounded botanical aroma without any grittiness.'],
-      ['Recreating Piloncillo without Piloncillo','Authentic Calabaza en Tacha relies on piloncillo cones. Since it's not always in my pantry late at night, combining dark brown sugar with a splash of molasses mimics that deep, unrefined caramel profile effortlessly.'],
+      ['Recreating Piloncillo without Piloncillo',"Authentic Calabaza en Tacha relies on piloncillo cones. Since it's not always in my pantry late at night, combining dark brown sugar with a splash of molasses mimics that deep, unrefined caramel profile effortlessly."],
       ['Why the Glaze Goes on Last (And How to Apply It)','Traditional Calabaza en Tacha pumpkin is coated in a sticky, glossy reduction. Drizzling our warm orange-molasses syrup over the chilled custard just before serving gives each slice a gorgeous sheen and an instant hit of bright citrus-caramel sweetness on your first bite. Do not drizzle the syrup the night before, as the custard will gradually absorb it, leaving the top surface looking dull and matte. Also, I recommend gently pouring or spooning the syrup straight over the pie instead of brushing it on—a pastry brush can leave unsightly streak marks on the delicate custard surface.']
     ],
     finePrint:{
