@@ -195,21 +195,18 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
       {number:'03',title:'BRAISE & REDUCE',clock:'11:22 PM',paragraphs:[
         'Add {{qty:Shaoxing wine}} Shaoxing wine and let it bubble for about 30 seconds.',
         'Add {{qty:soy sauce}} soy sauce, {{qty:oyster sauce}} oyster sauce, {{qty:gochujang}} gochujang, {{qty:Granulated Sugar}} sugar, {{qty:chicken bouillon powder}} chicken bouillon powder, and {{qty:water}} water.',
-        'Stir everything together and bring to a simmer.',
-        'Reduce the heat to low and simmer uncovered for 10–15 minutes.',
+        'Stir everything together and bring to a simmer. Reduce the heat to low and simmer uncovered for 10–15 minutes.',
         'Do not completely dry out the mince.',
         'The finished meat should be deeply colored, glossy and intensely savory, with a small amount of concentrated sauce and pork fat still coating the pan.'
       ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-03-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-03-02.JPG']},
       {number:'04',title:'FINISH WITH GARLIC CHIVES',clock:'11:34 PM',paragraphs:[
         'Add {{qty:garlic chives or green onion}} garlic chives.',
         'Toss over medium heat for 30–45 seconds.',
-        'Turn off the heat.',
-        'Add {{qty:sesame oil, for finishing}} sesame oil.',
+        'Turn off the heat. Add {{qty:sesame oil, for finishing}} sesame oil.',
       ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-04-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-04-02.JPG']},
       {number:'05',title:'BRING IT HOME',clock:'11:37 PM',paragraphs:[
         'Spoon hot steamed white rice into a shallow bowl.',
-        'Pile the Taiwan mince generously over the rice.',
-        'Make sure some of the concentrated sauce drips down into the rice.',
+        'Pile the Taiwan mince generously over the rice. Make sure some of the concentrated sauce drips down into the rice.',
         'Top with a soft-boiled egg with a runny yolk.'
       ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-05-01.jpg']}
     ],
