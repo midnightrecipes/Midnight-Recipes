@@ -113,11 +113,8 @@
     "recipe": null,
     "steps": {
       "01": [
-        "images/recipes/building-block-pie-crust/step-01-01.JPG",
         "images/recipes/building-block-pie-crust/step-01-01.jpg",
-        "images/recipes/building-block-pie-crust/step-01-02.JPG",
         "images/recipes/building-block-pie-crust/step-01-02.jpg",
-        "images/recipes/building-block-pie-crust/step-01-03.JPG",
         "images/recipes/building-block-pie-crust/step-01-03.jpg",
         "images/recipes/building-block-pie-crust/step-01-04.JPG"
       ],
