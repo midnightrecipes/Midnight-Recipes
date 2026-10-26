@@ -473,7 +473,7 @@ What if we just stopped treating the banana like an afterthought and made the ba
         'Slowly add the hot custard, a little at a time, whisking constantly.',
         'Pour everything back into the saucepan.',
         'Return to low heat and cook for 1 minute, whisking constantly, until thick and glossy.',
-        'Remove from the heat'
+        'Remove from the heat.'
       ],stepImages:[]},
       {number:'05',title:'BLEND THE BANANA IN',clock:'3:30 AM',paragraphs:[
         'Add the concentrated banana and {{qty:vanilla extract}} vanilla extract to the warm custard.',
@@ -495,7 +495,7 @@ What if we just stopped treating the banana like an afterthought and made the ba
       ['Midnight (Non)Compromises','Even in the middle of the night, concentrating the bananas is a non-negotiable.\n\nThose nearly black bananas are already packed with natural sweetness, so instead of adding more sugar, I cook them down in a skillet until their moisture evaporates and their natural sugars become concentrated.'],
       ['Experiment 1: The Banana Shape','Putting whole round banana slices in the pie made the banana presence too overwhelming.\n\nThe slices took over each bite and made the texture feel repetitive.\n\nCutting the fresh bananas **in half lengthwise** solved that problem.\n\nThe larger pieces create a clean cross-section while giving the pie a firm, juicy banana texture that contrasts with the smooth filling.'],
       ['Experiment 2: Concentrating the Banana','Simply mashing overripe bananas into the custard didn\'t give the banana flavor enough intensity.\n\nCooking the banana in a skillet first changed everything.\n\nThe excess moisture cooks away, the natural sugars become concentrated, and the banana develops a deeper, almost caramel-like flavor.'],
-      ['Experiment 3: Blend it All Together','I originally considered keeping the banana and vanilla custards separate, but that meant making two different layers and adding extra steps.\n\nInstead, I decided to blend the concentrated banana directly into the finished custard.\n\nThe food processor turns everything into a completely smooth, silky banana cream while keeping the process simple. (If you prefer a little rustic texture or don't want to wake up the house by running a food processor late at night—you can simply whisk or mash the cooked banana paste into the custard by hand.)\n\nThe result is a filling that tastes intensely of banana from the first bite to the last.'],
+      ['Experiment 3: Blend it All Together',"I originally considered keeping the banana and vanilla custards separate, but that meant making two different layers and adding extra steps.\n\nInstead, I decided to blend the concentrated banana directly into the finished custard.\n\nThe food processor turns everything into a completely smooth, silky banana cream while keeping the process simple. (If you prefer a little rustic texture or don't want to wake up the house by running a food processor late at night—you can simply whisk or mash the cooked banana paste into the custard by hand.)\n\nThe result is a filling that tastes intensely of banana from the first bite to the last."],
       ['The Result','The final pie has a simple but satisfying contrast.\n\nThe fresh banana gives it texture, the concentrated banana brings depth, and the whipped cream adds a light finish.\n\nMost importantly, the banana isn\'t just sitting somewhere underneath the custard.\n\n**The banana is the custard!**']
     ],
     finePrint:{
