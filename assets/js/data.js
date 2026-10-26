@@ -77,7 +77,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
       ["Don't Forget the Corners",'Keep whisking and scrape the bottom and corners of the saucepan as the custard thickens. Mixture can collect in these spots and cook faster than the rest. I like using a silicone spatula to reach the corners, especially when the filling starts to get thick.']
     ],
     finePrint:{
-      'BEST EATEN':'Tomorrow — the filling becomes firmer and the flavors settle overnight.',
+      'BEST EATEN':'Tomorrow, after chilling thoroughly. The filling becomes firmer and the flavors settle overnight.',
       'MAKE AHEAD':'Yes. Prepare up to 1 day ahead. Add the whipped cream just before serving.',
       'STORAGE':'Refrigerate, covered, for up to 3 days.',
       'FREEZER':'Not applicable.',
@@ -323,7 +323,7 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
       ["Don't Overbake",'The center should still wobble gently when it comes out of the oven. It will continue to set as it cools.']
     ],
     finePrint:{
-      'BEST EATEN':'Tomorrow (after chilling thoroughly). Caramelize the sugar just before serving.',
+      'BEST EATEN':'Tomorrow, after chilling thoroughly. Caramelize the sugar just before serving.',
       'MAKE AHEAD':'Yes. Prepare the custard ahead of time and refrigerate. Caramelize the sugar just before serving.',
       'STORAGE':'Cover and refrigerate for up to 3–4 days. Caramelize the sugar just before serving.',
       'FREEZER':'Not applicable.',
@@ -388,7 +388,7 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
       ['Why No Pumpkin Spice?','No ground cinnamon.\n\nNo nutmeg.\n\nNo ginger.\n\nInstead, the spices are infused whole into the Half & Half.\n\nIt\'s warmer, more aromatic, and closer to the syrupy character I wanted from Calabaza en Tacha.']
     ],
     finePrint:{
-      'BEST EATEN':'Tomorrow, after chilling overnight. The orange and spices develop a rounder flavor overnight. For the cleanest slices, refrigerate for several hours before serving. Serve cold or at room temperature.',
+      'BEST EATEN':'Tomorrow, after chilling thoroughly. The orange and spices develop a rounder flavor overnight. For the cleanest slices, refrigerate for several hours before serving. Serve cold or at room temperature.',
       'MAKE AHEAD':'Yes. Make the pie the day before serving so it can chill overnight.',
       'STORAGE':'Cover and refrigerate for up to 3 days. Store the orange-molasses syrup separately in a covered container in the refrigerator for up to 5 days.',
       'FREEZER':'Freeze the fully cooled pie, wrapped tightly and placed in a freezer-safe container, for up to 1 month for best quality. Thaw overnight in the refrigerator before serving. The filling may be slightly softer after thawing.',
@@ -563,7 +563,7 @@ Making this at midnight? The filling can be made in one blender or with one hand
 If you use boiled or microwaved sweet potato, let it steam-dry well before weighing. Too much moisture will make the filling softer.`]
     ],
     finePrint:{
-      'BEST EATEN':'Tomorrow, after chilling overnight, when the sweet potato, ginger, and cinnamon flavors have had time to come together.',
+      'BEST EATEN':'Tomorrow, after chilling thoroughly, when the sweet potato, ginger, and cinnamon flavors have had time to come together.',
       'MAKE AHEAD':'Yes. Make the pie the day before serving and refrigerate overnight.',
       'STORAGE':'Cover and refrigerate for up to 4 days.',
       'FREEZER':'Freeze the fully cooled pie, wrapped tightly and placed in a freezer-safe container, for up to 1 month for best quality. Thaw overnight in the refrigerator. The filling may soften slightly after thawing.',
@@ -721,7 +721,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
       ['Stable Meringue','The goal here is a soft, fluffy pie meringue, not a crisp meringue-cookie texture. I increased the sugar slightly and added a small amount of cream of tartar to help stabilize the whipped egg whites. When spreading the meringue over the warm filling, make sure it reaches all the way to the edge and seals against the filling and crust. Gaps can allow moisture to collect underneath the meringue as the pie chills. These small details help the meringue stay fluffy and hold together better the next day.']
     ],
     finePrint:{
-      'BEST EATEN':'Tomorrow (after chilling thoroughly).',
+      'BEST EATEN':'Tomorrow, after chilling thoroughly.',
       'MAKE AHEAD':'Yes. The pie is ideal made the night before.',
       'STORAGE':'Refrigerate, covered, for up to 3 days.',
       'FREEZER':'Freezing is not recommended for this meringue-topped pie. The meringue may weep or become watery, and its texture can change after thawing.',
@@ -1217,7 +1217,7 @@ If you choose cheesecake, try this recipe tonight.`,
     ],
     notes:[],
     finePrint:{
-      'BEST EATEN':'Tomorrow. The filling becomes smoother and more fully set after chilling.',
+      'BEST EATEN':'Tomorrow, after chilling thoroughly. The filling becomes smoother and more fully set after chilling.',
       'MAKE AHEAD':'Yes. Ideal to bake the night before.',
       'STORAGE':'Keep covered and refrigerated for up to 4 days.',
       'REHEAT':'Best chilled or at room temperature. For a warm slice, heat at 160°C / 325°F for 5–10 minutes.',
