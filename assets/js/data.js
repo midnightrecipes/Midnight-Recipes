@@ -407,7 +407,7 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
     forceCupUnits:true,
     compactStory:true,
     stepQuantityConversion:true,
-    story:`A few nearly black bananas had been sitting on my counter for way too long. They were way past the point where I'd normally eat them, but honestly, they were perfect for this pie.
+    story:`A few nearly black bananas had been sitting on my counter for way too long. They were way past the point where I'd normally eat them, but actually, they were perfect for this pie.
 
 I started looking through banana cream pie recipes and noticed that most of them use just a few slices of fresh banana underneath a whole lot of custard.
 
@@ -526,7 +526,7 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
         'Peel and cut the sweet potato into chunks. Simmer in water for 15–20 minutes, until fork-tender.'
       ],stepImages:[]},
       {number:'02',title:'MAKE THE CRUST',clock:'11:45 PM',paragraphs:[
-        'While the sweet potatoes are roasting… start making Building Block Pie Crust.',
+        'While the sweet potatoes are roasting… start making Building Block Pie Crust (OPTION B — PARTIAL BLIND-BAKE).',
         'Prick the bottom well with a fork. Bake in the same oven at 175°C / 350°F for 10–12 minutes, until set and lightly golden.',
         'Midnight Shortcut',
         'Use a good-quality store-bought pie crust. Tonight is about the filling.'
@@ -715,7 +715,7 @@ If you use boiled or microwaved sweet potato, let it steam-dry well before weigh
       ],stepImages:['images/recipes/fun-key-lime-pie/step-06-01.jpg']}
     ],
     notes:[
-      ['This is a seriously easy pie.','If I had to name the most annoying part, it\'s squeezing the limes and grating the zest. Once that\'s done, you\'re basically finished. Everything else is just mixing, baking, and waiting for the pie to chill—which is honestly most of the work. So if you\'re making this at midnight, don\'t let the long recipe card fool you. The lime is the hardest part!'],
+      ['This is a seriously easy pie.','If I had to name the most annoying part, it\'s squeezing the limes and grating the zest. Once that\'s done, you\'re basically finished. Everything else is just mixing, baking, and waiting for the pie to chill—which is most of the work. So if you\'re making this at midnight, don\'t let the long recipe card fool you. The lime is the hardest part!'],
       ["Can't Find Key Limes? Not a Problem at All!",'Key limes aren\'t always easy to find in Toronto, so this recipe uses regular Persian/Tahiti limes instead. The extra lime zest keeps the flavor bright and aromatic, so the pie still feels unmistakably lime-forward.'],
       ['Why Sour Cream?','The 300 ml can of condensed milk already brings plenty of sweetness. Sour cream adds body, creaminess, and a little extra tang without requiring more condensed milk.'],
       ['Stable Meringue','The goal here is a soft, fluffy pie meringue, not a crisp meringue-cookie texture. I increased the sugar slightly and added a small amount of cream of tartar to help stabilize the whipped egg whites. When spreading the meringue over the warm filling, make sure it reaches all the way to the edge and seals against the filling and crust. Gaps can allow moisture to collect underneath the meringue as the pie chills. These small details help the meringue stay fluffy and hold together better the next day.']
@@ -1178,7 +1178,7 @@ If you choose cheesecake, try this recipe tonight.`,
     heroImage:'images/recipes/classic-pumpkin-pie/hero.jpg', recipeImage:'images/recipes/classic-pumpkin-pie/recipe.jpg',
     usesUsual:'building-block-pie-crust', showPan:true, showChill:true, hideRecipeTags:true,
     stepQuantityConversion:true, usCupFractions:true, fractionDenominator:16,
-    story:`Pumpkin pie is *the* Canadian Thanksgiving classic, and I had my very first bite on Thanksgiving Monday back in October during my first year in Canada. Safe to say, I was completely hooked! The smooth, silky pumpkin filling and that warm punch of cinnamon, cloves, and nutmeg were unlike anything I knew back home with Japanese Kabocha. After that, I went a little crazy trying pumpkin pie everywhere I could get my hands on. Fast forward through endless pie runs and tweaking ingredients, I’ve finally nailed my dream spice mix. I make it all the time now, but honestly? Baking it in the middle of a quiet autumn night hits differently.`,
+    story:`Pumpkin pie is *the* Canadian Thanksgiving classic, and I had my very first bite on Thanksgiving Monday back in October during my first year in Canada. Safe to say, I was completely hooked! The smooth, silky pumpkin filling and that warm punch of cinnamon, cloves, and nutmeg were unlike anything I knew back home with Japanese Kabocha. After that, I went a little crazy trying pumpkin pie everywhere I could get my hands on. Fast forward through endless pie runs and tweaking ingredients, I’ve finally nailed my dream spice mix. I make it all the time now. Especially, baking it in the middle of a quiet autumn night hits differently.`,
     ingredientFile:[
       {name:'PUMPKIN PURÉE',details:[['Flavor','Earthy, mellow, and mildly sweet; it gives the filling its signature pumpkin flavor and creamy body.'],['Best Choice','In Toronto/Canada, you’ll mostly find E.D. Smith “100% Pure Pumpkin” (make sure it says Pure, not Pumpkin Pie Mix!).'],['Substitute','Steamed and puréed Kabocha squash or sweet potatoes. Avoid butternut squash, as its higher water content can make the filling too loose.'],['Storage','Freeze extra purée in airtight containers or Ziploc bags for up to 3 months.'],['Midnight Fix','Use pure pumpkin purée, not pumpkin pie mix, which already contains sweeteners and spices. If the purée seems unusually watery, drain it briefly before measuring so the filling is less likely to turn loose.']]},
       {name:'BROWN SUGAR',details:[['Flavor','Warm, caramel-like, molasses-rich'],['Role','Adds sweetness and moisture while balancing the earthy pumpkin and warm spices.'],['Best Choice','Light brown sugar gives a balanced flavor; dark brown sugar adds a deeper molasses note. Either can be used.'],['Substitute','White sugar, although the flavor will be slightly lighter.'],['Storage','Keep in an airtight container at room temperature to help prevent it from drying out and hardening.']]}
@@ -1201,7 +1201,7 @@ If you choose cheesecake, try this recipe tonight.`,
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'12:15 AM',paragraphs:[
         'Preheat your oven to 175°C / 350°F.',
-        'Start with one of our usual recipes — Building Block Pie Crust.',
+        'Start with one of our usual recipes — Building Block Pie Crust (OPTION B — PARTIAL BLIND-BAKE).',
         '**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'
       ],stepImages:[]},
       {number:'02',title:'MAKE THE FILLING',clock:'12:35 AM',paragraphs:[
