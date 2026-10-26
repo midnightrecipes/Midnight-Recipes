@@ -420,20 +420,21 @@ Tonight, I wanted to create something a little different from a standard pumpkin
     forceCupUnits:true,
     compactStory:true,
     stepQuantityConversion:true,
-    story:`A few nearly black bananas had been sitting on my counter for way too long. They were way past the point where I'd normally eat them, but actually, they were perfect for this pie.
+    story:`A few nearly black bananas had been sitting on my counter for way too long. They were way past the point where I'd normally eat them fresh, but as it turns out, they were absolute perfection for this pie.
 
-I started looking through banana cream pie recipes and noticed that most of them use just a few slices of fresh banana underneath a whole lot of custard.
+I started looking through traditional banana cream pie recipes and noticed that most of them rely on a few slices of fresh banana hiding underneath a mountain of standard vanilla custard. 
 
-I wanted a pie that was seriously banana-y. Not just vanilla custard with a few banana slices hiding underneath.
+I wanted a pie that was seriously, unapologetically banana-y. Not vanilla pudding with a vague hint of banana flavor, but a rich, velvety banana custard made from real fruit.
 
-So I took those super-ripe bananas, cooked them down in a skillet until they were thick and sweet, and blended them right into the custard. Then I tucked fresh banana underneath for a little texture and that beautiful banana cross-section when you slice into it.
+So I took those overripe bananas, cooked them down in a skillet until they were thick, dark, and sweet, and blended them right into the custard. Then, I tucked fresh banana halves underneath for a little bite and that beautiful, clean cross-section when you slice into it.
 
-Basically, this pie is my answer to one very simple question:
+To complement all that fruitiness, I crafted a custom spiced biscuit crust. The warm, exotic notes of cinnamon, ginger, and nutmeg cut through the rich sweetness of the banana, creating a beautiful depth of flavor. 
 
-What if we just put way more banana in banana cream pie?`,
+Basically, this pie is my answer to one very simple, late-night question: 
+What if we just stopped treating the banana like an afterthought and made the banana the custard itself?`,
     ingredientFile:[
-      {name:'BANANA',details:[['Origin','Global / Tropical'],['Flavor','Deep, caramel-like when roasted; fresh and aromatic when raw. The blacker, the better!'],['Where to find','Your Kitchen Counter'],['Storage','Room temperature until fully ripe.'],['Why cook?','Cooking the bananas in a skillet drives off excess moisture and concentrates their natural sugars, creating a thick, jammy texture and deep banana flavor without adding extra sugar.']]},
-      {name:'PLAIN BISCUITS',details:[['Substitute','Biscoff cookies'],['Midnight Fix','If using 200g Biscoff, skip the cinnamon, ginger, and nutmeg. Simply combine the crumbs with 80g melted butter.']]},
+      {name:'BANANA',details:[['Origin','Global / Tropical'],['Flavor','Deep, caramel-like when roasted; fresh and aromatic when raw. The blacker, the better! When bananas develop heavy sugar spots and dark skins, their starches have fully converted into natural sugars, making them soft, fragrant, and ideal for baking.'],['Where to find','Your Kitchen Counter'],['Storage','Room temperature until fully ripe.'],['Why cook?','Cooking the bananas in a skillet drives off excess moisture and concentrates their natural sugars, creating a thick, jammy texture and deep banana flavor without adding extra sugar.']]},
+      {name:'PLAIN BISCUITS',details:[['Flavor', 'A crisp, spiced crumb crust featuring cinnamon, ginger, and nutmeg that beautifully balances the rich, sweet banana filling.'], ['Substitute', 'Biscoff cookies or graham crackers.'],['Substitute','Biscoff cookies'],['Midnight Fix','If using Biscoff, skip the cinnamon, ginger, and nutmeg. Simply combine the crumbs with 80g melted butter.']['Crust Technique', 'Baking the crust for 8–10 minutes locks in its structure, preventing it from getting soggy when the heavy custard and fresh bananas sit on top.']]},
       {name:'WHOLE MILK',details:[['Why Whole Milk','The higher fat content gives the filling a richer, creamier mouthfeel.'],['Substitute','2% milk works too, but the filling will be slightly lighter.']]}
     ],
     stats:{prep:'20 mins',cook:'30 mins',chill:'3+ hrs',total:'3 hrs 50 mins+',serves:'6–8',pan:'9-inch / 23 cm pie plate',quiet:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
@@ -494,7 +495,7 @@ What if we just put way more banana in banana cream pie?`,
       ['Midnight (Non)Compromises','Even in the middle of the night, concentrating the bananas is a non-negotiable.\n\nThose nearly black bananas are already packed with natural sweetness, so instead of adding more sugar, I cook them down in a skillet until their moisture evaporates and their natural sugars become concentrated.'],
       ['Experiment 1: The Banana Shape','Putting whole round banana slices in the pie made the banana presence too overwhelming.\n\nThe slices took over each bite and made the texture feel repetitive.\n\nCutting the fresh bananas **in half lengthwise** solved that problem.\n\nThe larger pieces create a clean cross-section while giving the pie a firm, juicy banana texture that contrasts with the smooth filling.'],
       ['Experiment 2: Concentrating the Banana','Simply mashing overripe bananas into the custard didn\'t give the banana flavor enough intensity.\n\nCooking the banana in a skillet first changed everything.\n\nThe excess moisture cooks away, the natural sugars become concentrated, and the banana develops a deeper, almost caramel-like flavor.'],
-      ['Experiment 3: Blend it All Together','I originally considered keeping the banana and vanilla custards separate, but that meant making two different layers and adding extra steps.\n\nInstead, I decided to blend the concentrated banana directly into the finished custard.\n\nThe food processor turns everything into a completely smooth, silky banana cream while keeping the process simple.\n\nThe result is a filling that tastes intensely of banana from the first bite to the last.'],
+      ['Experiment 3: Blend it All Together','I originally considered keeping the banana and vanilla custards separate, but that meant making two different layers and adding extra steps.\n\nInstead, I decided to blend the concentrated banana directly into the finished custard.\n\nThe food processor turns everything into a completely smooth, silky banana cream while keeping the process simple. (If you prefer a little rustic texture or don't want to wake up the house by running a food processor late at night—you can simply whisk or mash the cooked banana paste into the custard by hand.)\n\nThe result is a filling that tastes intensely of banana from the first bite to the last.'],
       ['The Result','The final pie has a simple but satisfying contrast.\n\nThe fresh banana gives it texture, the concentrated banana brings depth, and the whipped cream adds a light finish.\n\nMost importantly, the banana isn\'t just sitting somewhere underneath the custard.\n\n**The banana is the custard!**']
     ],
     finePrint:{
