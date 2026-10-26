@@ -349,23 +349,33 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
     heroImage:'images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/hero.jpg',
     recipeTitle:'Calabaza en Tacha Pumpkin Pie', showPan:true,
     recipeImage:'images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/recipe.jpg', usesUsual:'building-block-pie-crust',
-    story:`Mexico's *Día de Muertos*, the traditional celebration featured in the movie *Coco*, centers around remembering and welcoming loved ones who have passed away.
+    story:`Mexico's *Día de Muertos*, the traditional celebration featured in the movie *Coco*, centers around remembering and welcoming back loved ones who have passed away.
 
-Celebrated especially on November 1 and 2, families create *ofrendas*, or altars, decorated with photographs, candles, marigolds, and foods that their loved ones enjoyed.
+Celebrated especially on November 1 and 2, families create vibrant ofrendas (altars) decorated with photographs, candles, marigolds, and the favorite foods that their loved ones enjoyed.
 
-*Calabaza en Tacha* is a traditional seasonal pumpkin sweet that can also be offered on ofrendas. Traditionally, pieces of pumpkin are slowly cooked with *piloncillo (panela)*, cinnamon, and sometimes cloves, anise, and orange until they become tender and coated in a rich syrup.
+Growing up in Japan, our summer tradition of welcoming ancestral spirits during *Obon* (お盆) was always quiet, solemn, and reflective. I wasn't used to a tradition that celebrates and remembers the dead in such a bright, warm, and lively way. When I watched *Coco*, I found that perspective beautiful and special.
 
-Japan has its own summer tradition of welcoming ancestral spirits during *Obon* (お盆). But I wasn't familiar with a tradition that celebrates and remembers the dead in such a bright and lively way. When I watched *Coco*, I found that beauty really special.
+*Calabaza en Tacha* is a traditional Mexican seasonal pumpkin sweet often placed on these ofrendas. Traditionally, pieces of hard-shelled pumpkin are slowly simmered in a dark piloncillo (panela) syrup infused with whole cinnamon, cloves, star anise, and fresh orange until perfectly tender and glazed.
 
-Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a moment to remember the people I love.`,
+Tonight, I wanted to create something a little different from a standard pumpkin pie—a dessert warmly inspired by *Calabaza en Tacha*, taking a quiet moment late at night to remember the people I love. By transferring those traditional flavors into a pie format, using spice-infused cream and topping it with a glossy orange-molasses syrup, this pie comes together with a beautifully rounded flavor and a smooth, comforting texture.`,
     ingredientFile:[
-      {name:'PUMPKIN PURÉE',details:[['Flavor','Earthy, naturally sweet, mellow'],['Substitute','Homemade roasted pumpkin purée'],['Storage','Refrigerate opened purée in an airtight container for up to 3–4 days.']]},
-      {name:'DARK BROWN SUGAR + MOLASSES',details:[['Role','Creates the deep, caramel-like sweetness needed to mimic the flavor of piloncillo.'],['Why Dark Brown Sugar + Molasses?','Traditional Calabaza en Tacha is commonly made with pieces of *piloncillo (panela)*. Since piloncillo isn\'t what I have in my pantry, dark brown sugar with a little molasses gives me a similar deep, slightly bitter caramel character.'],['Substitute','If molasses is unavailable, use additional dark brown sugar, although the flavor will be lighter and less complex.']]},
-      {name:'CINNAMON STICK',details:[['Flavor','Warm, woody, sweet'],['Why whole','Infusing the Half & Half creates a softer, rounder spice flavor without making the pie taste like conventional pumpkin spice.']]},
-      {name:'STAR ANISE',details:[['Flavor','Sweet, aromatic, lightly licorice-like'],['Why whole','A small amount adds a distinctive aromatic note found in some versions of Calabaza en Tacha.']]},
-      {name:'WHOLE CLOVES',details:[['Flavor','Warm, intense, slightly sweet and peppery'],['Why whole','Whole cloves are easier to control when infusing. They give the Half & Half a gentle clove aroma without the stronger, more concentrated flavor of ground cloves.']]},
-      {name:'ORANGE PEEL',details:[['Flavor','Bright, citrusy, slightly bitter'],['Why peel','The fragrant oils are infused into the Half & Half rather than adding grated zest directly to the custard. This gives the pie a softer, more rounded orange aroma.']]}
-    ],
+    {name: 'PUMPKIN PURÉE',
+      details: [
+        ['Flavor Profile', 'Earthy, naturally sweet, mellow, and velvety.'],
+        ['Canned vs. Fresh', 'While roasting a whole sugar pumpkin from scratch is lovely, canned pumpkin purée actually has a lower, more consistent water content. At midnight, using pure pumpkin purée guarantees a silky custard without risking a watery pie base.'],
+        ['Pro Tip', 'Look for 100% pure pumpkin purée on the label, not canned "pumpkin pie mix," which already contains added sugar and ground spices.']]
+    },
+    {name: 'DARK BROWN SUGAR + MOLASSES (THE PILONCILLO DUPLE)',
+      details: [
+        ['What is Piloncillo?', 'Piloncillo (or Panela) is unrefined whole cane sugar traditional to Mexican cooking. It has an intense, smoky, dark-caramel flavor that standard white sugar cannot match.'],
+        ['Why Molasses?', 'Combining dark brown sugar with a touch of dark molasses introduces that distinct, slightly bitter, mineral-rich complexity of authentic piloncillo, mimicking its cooked-down syrup flavor perfectly.']]
+    },
+    {name: 'THE WHOLE SPICE INFUSION (CINNAMON, STAR ANISE, CLOVE, ORANGE PEEL)',
+      details: [
+        ['Why Whole Spices Instead of Powder?', 'Standard pumpkin pies rely on ground cinnamon, nutmeg, and ginger, which can make the custard look muddy and feel slightly gritty on the tongue. By gently steeping whole spices in warm Half & Half, the fat absorbs their pure, aromatic essential oils.'],
+        ['The Magic of Orange Peel', 'Steeping a strip of fresh orange peel introduces bright citrus oils to the dairy. It cuts through the heavy pumpkin and rich eggs, leaving a fresh, fragrant finish that defines Calabaza en Tacha. Just be careful not to over-steep, as it can turn bitter.']]
+    }
+  ],
     stats:{prep:'25 mins',cook:'55–65 mins',chill:'4 hrs+',total:'5 hrs 20 mins+',serves:'8',pan:'23 cm / 9-inch pie dish',quiet:'⭐⭐⭐⭐☆'},
     ingredients:[
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
@@ -386,9 +396,9 @@ Tonight, I'm making a pumpkin pie inspired by Calabaza en Tacha — and taking a
       {number:'06',title:'FINISH',clock:'NEXT DAY',paragraphs:['Once the pie is no longer hot, refrigerate for at least 4 hours, preferably overnight.','Before serving, spoon a thin layer of the piloncillo syrup over the surface. For the glossiest finish, warm the syrup slightly and drizzle it over the pie just before serving.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-06-01.JPG']}
     ],
     notes:[
-      ['Recreating the Flavor','The original Calabaza en Tacha gets much of its character from pumpkin slowly cooked in a dark piloncillo syrup with warm spices.\n\nInstead of putting those flavors directly into a standard pumpkin custard, I split them into two layers:\n\n**Spiced Half & Half → Orange-Molasses Syrup**\n\nThe Half & Half carries the cinnamon, clove, star anise, and orange aroma into the custard, while the syrup recreates the darker caramelized sweetness associated with piloncillo.'],
-      ['Midnight Compromises','Traditional Calabaza en Tacha is made with pieces of pumpkin cooked directly in syrup. This isn\'t that.\n\nI used canned pumpkin purée and turned the same flavor profile into a creamy pumpkin pie — because at midnight, opening a can beats peeling and simmering an entire pumpkin.\n\nI also don\'t have piloncillo, so dark brown sugar and a little molasses stand in for its deep, almost caramel-like flavor.'],
-      ['Why No Pumpkin Spice?','No ground cinnamon.\n\nNo nutmeg.\n\nNo ginger.\n\nInstead, the spices are infused whole into the Half & Half.\n\nIt\'s warmer, more aromatic, and closer to the syrupy character I wanted from Calabaza en Tacha.']
+      ['The Art of Steeping (Why Whole Spices Matter)','Instead of dumping ground "pumpkin pie spice" into the bowl, I steep whole cinnamon, star anise, cloves, and orange peel in warm Half & Half over low heat. Fat is an incredible flavor carrier. By letting the spices sit in the warm dairy for 20 minutes, you get a clean, silky custard infused with a soft, rounded botanical aroma without any grittiness.'],
+      ['Recreating Piloncillo without Piloncillo','Authentic Calabaza en Tacha relies on piloncillo cones. Since it's not always in my pantry late at night, combining dark brown sugar with a splash of molasses mimics that deep, unrefined caramel profile effortlessly.'],
+      ['Why the Glaze Goes on Last (And How to Apply It)','Traditional Calabaza en Tacha pumpkin is coated in a sticky, glossy reduction. Drizzling our warm orange-molasses syrup over the chilled custard just before serving gives each slice a gorgeous sheen and an instant hit of bright citrus-caramel sweetness on your first bite. Do not drizzle the syrup the night before, as the custard will gradually absorb it, leaving the top surface looking dull and matte. Also, I recommend gently pouring or spooning the syrup straight over the pie instead of brushing it on—a pastry brush can leave unsightly streak marks on the delicate custard surface.']
     ],
     finePrint:{
       'BEST EATEN':'Tomorrow, after chilling thoroughly. The orange and spices develop a rounder flavor overnight. For the cleanest slices, refrigerate for several hours before serving. Serve cold or at room temperature.',
