@@ -123,7 +123,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
         name:'FRESH RED CHILI',
         details:[
           ['Origin','Fresh red chilies are used widely across East and Southeast Asian cuisines, with varieties ranging from bright and fruity to intensely hot.'],
-          ['Why Fresh Over Dried','Dried chilies bring concentrated, rounded heat, while fresh red chilies can add a brighter, sharper, fruitier punch. In this rich pork mince, that fresh chili character helps balance the savory fat and fermented bean paste.'],
+          ['Fresh vs. Dried','Dried chilies bring concentrated, rounded heat, while fresh red chilies can add a brighter, sharper, fruitier punch. In this rich pork mince, that fresh chili character helps balance the savory fat and fermented bean paste.'],
           ['Pro Tip','Finely chop the chili so it disperses through the mince. The inner ribs and surrounding membrane contain much of a chili’s capsaicin, so keeping them increases the heat; remove some if you want a milder result. Seeds can carry heat on their surfaces, but they are not the main source of capsaicin.'],
           ['Substitute','Thai bird’s-eye chilies give intense heat; Fresno or another mild red chili gives a gentler result. Red chili flakes can work in a pinch, although they will not provide the same fresh, fruity aroma.'],
           ['Storage','Refrigerate fresh chilies in a breathable bag or loosely wrapped, and use them while they remain firm and unspoiled.']
@@ -132,10 +132,9 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
       {
         name:'GARLIC',
         details:[
-          ['Role','Garlic is one of the main aromatic foundations of this Misen-inspired mince. The generous amount gives the pork its punchy, unmistakable garlic aroma.'],
-          ['Technique','Start the minced garlic in the cold pan with the oil and chili, then bring the heat up gently. Slow heating lets the garlic flavor infuse the oil; keep it pale to golden rather than dark brown, which can taste bitter.'],
+          ['Why here','Garlic is one of the main aromatic foundations of this Misen-inspired mince. The generous amount gives the pork its punchy, unmistakable garlic aroma.'],
+          ['Technique','Start the minced garlic in the cold pan with the oil and chili, then bring the heat up gently. Slow heating lets the garlic flavor infuse the oil; keep it pale to golden rather than dark brown, which can taste bitter.If the garlic begins browning too quickly, lower the heat and add the next step once the aroma is fragrant. Burnt garlic can make the entire batch taste bitter.'],
           ['Why Finely Minced','Finely minced garlic disperses throughout the meat and exposes more surface area to the oil, so its aroma reaches the whole pan instead of remaining in larger pieces.'],
-          ['Midnight Fix','If the garlic begins browning too quickly, lower the heat and add the next step once the aroma is fragrant. Burnt garlic can make the entire batch taste bitter.']
         ]
       },
       {
@@ -151,7 +150,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
       {
         name:'GARLIC CHIVES (NIRA / 韮)',
         details:[
-          ['Flavor & Role','Garlic chives add a fresh, sharp, garlicky flavor, a little crunch, and a vivid green finish that lifts the rich pork mince.'],
+          ['Flavor','Garlic chives add a fresh, sharp, garlicky flavor, a little crunch, and a vivid green finish that lifts the rich pork mince.'],
           ['Technique','Cut the chives into 3–4 cm pieces and add them near the end. Toss for about 30–45 seconds—just long enough to soften them slightly while keeping their color and fresh aroma.'],
           ['Substitute','Green onions (scallions) cut into 3–4 cm pieces are an easy substitute. They are milder and less garlicky, so the finished flavor will be a little different.'],
           ['Storage','Keep fresh garlic chives refrigerated and use them while the leaves are crisp and green.']
