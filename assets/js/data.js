@@ -245,20 +245,24 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
     stepQuantityConversion:true,
     story:`What is the first thing that comes to mind when you hear crème brûlée?
 
-For me, it is the movie *Amélie*. She is a little awkward, but she knows exactly what she likes and dislikes, and she is good at finding happiness in the smallest things — plunging her fingers into a sack of dried beans, skipping stones across a canal, and, of course, cracking the caramelized top of a crème brûlée with the back of a teaspoon.
+For me, it is the movie Amélie. She is a little awkward, but she knows exactly what she likes and dislikes, and she is so good at finding joy in the smallest things—plunging her hand into a sack of grain, skipping stones across a canal, and, of course, cracking the caramelized top of a crème brûlée with the back of a teaspoon.
 
-Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples tucked underneath the silky custard, waiting quietly beneath that brittle layer of burnt sugar.`,
+Like her, I believe we should all find simple things that bring us joy. Tonight, I wanted to recreate that quiet, quirky kind of magic, but with a cozy midnight twist. Instead of a standard custard, I tucked a layer of tender, cinnamon-spiced apples right at the bottom of the ramekin—a sweet, unexpected surprise meant to bring a smile to whoever eats it after a long day.
+
+I also used a blend of whole milk and whipping cream, even though a traditional crème brûlée relies entirely on heavy cream. The milk creates a lighter, silky texture with a clean aftertaste that pairs beautifully with the crisp sourness of the apples—making you feel just a little less guilty about enjoying a late-night treat! 
+
+(And of course, don’t forget to crack the top before taking your first bite!)`,
     ingredientFile:[
-      {name:'APPLE',details:[
-        ['Origin','Central Asia / cultivated worldwide'],
-        ['Flavor','Sweet-tart, crisp, floral'],
-        ['Best variety for this recipe in Canada','Honeycrisp — sweet-tart, aromatic, and holds its shape well when cooked. Pink Lady is a good choice for a slightly more tart flavor.'],
-        ['Substitute','Pears or other firm fruit'],
-        ['Storage','Refrigerate for up to several weeks, depending on variety.']
+      {name: 'APPLE',details: [
+        ['Origin', 'Central Asia / cultivated worldwide'],
+        ['Flavor Profile', 'Sweet-tart, crisp, and floral.'],
+        ['Why Honeycrisp?', 'In Canada, Honeycrisp is the gold standard for baking. Unlike softer apples that turn into complete mush, Honeycrisp holds its structural integrity wonderfully while releasing just enough tart juices to balance the rich dairy.'],
+        ['Substitute', 'Pink Lady or Braeburn for a similar sweet-tart punch; or firm pears if you want a softer, more autumnal fruit base.'],
+        ['Cooking Secret', 'Sautéing the apples beforehand isn’t just about softening them—it evaporates excess moisture. If you put raw apples straight into the custard, they will bleed water and ruin the silky texture of the set cream.']
       ]},
-      {name:'WHOLE MILK + 35% WHIPPING CREAM',details:[
-        ['Ratio','35% whipping cream : whole milk = 4:1'],
-        ['Why this ratio','Many recipes use 100% cream, but for this version, I wanted a little more balance. The apples already bring acidity and moisture, so keeping some milk in the custard gives it just enough lightness to complement the rich cream without making the dessert feel too heavy.']
+    {name: 'WHOLE MILK + 35% WHIPPING CREAM',details: [
+        ['The 4:1 Ratio', 'While many classic French recipes lean exclusively on heavy whipping cream, this version uses a carefully balanced 4-to-1 ratio of 35% cream to whole milk.'],
+        ['Why Add Milk?', 'Because the spiced apples already bring moisture and fruit acidity, a 100% cream custard can feel overly heavy late at night. The splash of whole milk keeps the custard remarkably silky and light, letting the vanilla and apple flavors shine without weighing you down.']
       ]}
     ],
     ingredients:[
@@ -317,9 +321,9 @@ Tonight, I wanted to enjoy it a little differently: soft, slightly tart apples t
       ],stepImages:['images/recipes/apple-creme-brulee/step-05-01.jpg','images/recipes/apple-creme-brulee/step-05-02.jpg']}
     ],
     notes:[
-      ['Keeping the Apples Distinct','Cooking the apples separately concentrates their flavor and removes excess moisture.'],
-      ['A Smooth Surface','Gentle mixing, straining, resting, and removing foam help create a smooth custard.'],
-      ["Don't Overbake",'The center should still wobble gently when it comes out of the oven. It will continue to set as it cools.']
+      ['Keeping the Apples Distinct','Cooking the apples separately concentrates their flavor and removes excess moisture before they meet the custard. Just be careful not to overcook them—keeping a slight crispness gives the best contrast in texture.'],
+      ['A Smooth Surface','Gentle mixing, straining, resting, and skimming off any foam help keep the custard surface glass-smooth. Baking in a water bath is equally crucial, as it gently cooks the eggs and prevents your silky custard from turning into scrambled eggs.resting, and removing foam help create a smooth custard.'],
+      ["Don't Overbake",'The center should still wobble gently when it comes out of the oven. It will continue to set as it cools in its ramekin.']
     ],
     finePrint:{
       'BEST EATEN':'Tomorrow, after chilling thoroughly. Caramelize the sugar just before serving.',
