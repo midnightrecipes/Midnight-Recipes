@@ -322,7 +322,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
     ],
     notes:[
       ['Keeping the Apples Distinct','Cooking the apples separately concentrates their flavor and removes excess moisture before they meet the custard. Just be careful not to overcook them—keeping a slight crispness gives the best contrast in texture.'],
-      ['A Smooth Surface','Gentle mixing, straining, resting, and skimming off any foam help keep the custard surface glass-smooth. Baking in a water bath is equally crucial, as it gently cooks the eggs and prevents your silky custard from turning into scrambled eggs.resting, and removing foam help create a smooth custard.'],
+      ['A Smooth Surface','Gentle mixing, straining, resting, and skimming off any foam help keep the custard surface glass-smooth. Baking in a water bath is equally crucial, as it gently cooks the eggs and prevents your silky custard from turning into scrambled eggs.'],
       ["Don't Overbake",'The center should still wobble gently when it comes out of the oven. It will continue to set as it cools in its ramekin.']
     ],
     finePrint:{
