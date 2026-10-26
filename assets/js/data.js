@@ -110,10 +110,53 @@ What makes it so addictive isn't just the heat—it’s that intense, punchy wal
 
 Tonight, I’m taking that iconic flavor and making the ground pork the star, serving it over hot rice with a rich soft-boiled egg. As you break the egg, the creamy, runny yolk flows into the spicy mince, perfectly cutting through the fiery punch and rounding out all those sharp garlic notes. It’s dangerous, intensely savory, and so good it might just keep me up all night.`,
     ingredientFile:[
-      {name:'GROUND PORK',details:[['Flavor','Rich, savory, fatty'],['Substitute','Ground chicken or turkey, although fatty pork gives the closest result']]},
-      {name:'FRESH RED CHILI',details:[['Origin','East & Southeast Asia'],['Flavor','Fresh, sharp, bright heat'],['Substitute','Dried Thai chili or red chili flakes'],['Storage','Refrigerate loosely wrapped.'],['Why here','Plenty of fresh chili and garlic are essential to this recipe!']]},
-      {name:'GARLIC',details:[['Flavor','Fresh, garlicky, slightly sweet'],['Why here','Plenty of fresh chili and garlic are essential to this recipe!']]},
-      {name:'DOUBANJIANG',details:[['Origin','China'],['Flavor','Fermented, salty, savory, deeply spicy'],['Substitute','Chili bean paste or, in a pinch, a combination of chili paste and a little miso']]}
+      {
+        name:'FATTY GROUND PORK',
+        details:[
+          ['Why Fatty Pork','The fat is more than a texture choice—it carries much of the dish’s flavor. As the pork renders, its fat picks up chili aroma and the color and savory compounds released from doubanjiang, helping create a glossy coating that clings to the meat and rice.'],
+          ['Best Choice','Look for ground pork with roughly 20–30% fat, often sold as regular rather than lean ground pork. The exact ratio varies by product.'],
+          ['Substitute','Ground chicken made with dark meat or ground turkey can work, but both are leaner. Add a little extra sesame or neutral vegetable oil if needed; the result will still taste different from pork cooked in its own fat.'],
+          ['Midnight Fix','If the mince tastes dry because the pork is very lean, stir in a small splash of sesame or neutral oil at the end. Add a little at a time so the finished mince stays glossy rather than greasy.']
+        ]
+      },
+      {
+        name:'FRESH RED CHILI',
+        details:[
+          ['Origin','Fresh red chilies are used widely across East and Southeast Asian cuisines, with varieties ranging from bright and fruity to intensely hot.'],
+          ['Why Fresh Over Dried','Dried chilies bring concentrated, rounded heat, while fresh red chilies can add a brighter, sharper, fruitier punch. In this rich pork mince, that fresh chili character helps balance the savory fat and fermented bean paste.'],
+          ['Pro Tip','Finely chop the chili so it disperses through the mince. The inner ribs and surrounding membrane contain much of a chili’s capsaicin, so keeping them increases the heat; remove some if you want a milder result. Seeds can carry heat on their surfaces, but they are not the main source of capsaicin.'],
+          ['Substitute','Thai bird’s-eye chilies give intense heat; Fresno or another mild red chili gives a gentler result. Red chili flakes can work in a pinch, although they will not provide the same fresh, fruity aroma.'],
+          ['Storage','Refrigerate fresh chilies in a breathable bag or loosely wrapped, and use them while they remain firm and unspoiled.']
+        ]
+      },
+      {
+        name:'GARLIC',
+        details:[
+          ['Role','Garlic is one of the main aromatic foundations of this Misen-inspired mince. The generous amount gives the pork its punchy, unmistakable garlic aroma.'],
+          ['Technique','Start the minced garlic in the cold pan with the oil and chili, then bring the heat up gently. Slow heating lets the garlic flavor infuse the oil; keep it pale to golden rather than dark brown, which can taste bitter.'],
+          ['Why Finely Minced','Finely minced garlic disperses throughout the meat and exposes more surface area to the oil, so its aroma reaches the whole pan instead of remaining in larger pieces.'],
+          ['Midnight Fix','If the garlic begins browning too quickly, lower the heat and add the next step once the aroma is fragrant. Burnt garlic can make the entire batch taste bitter.']
+        ]
+      },
+      {
+        name:'DOUBANJIANG (四川豆瓣酱 / 豆板醤)',
+        details:[
+          ['Origin','Doubanjiang is a Chinese fermented bean-and-chili paste strongly associated with Sichuan cooking. Many varieties are made with broad beans, chili, salt, and sometimes wheat flour or other ingredients; check the label for the exact product.'],
+          ['Flavor Profile','Salty, fermented, savory, and spicy, with deep umami and a red chili aroma. Brands and styles vary in heat, saltiness, texture, and sweetness.'],
+          ['Why Fry It First','Frying doubanjiang briefly in the oil before adding the liquids helps release its chili color and aroma and softens its raw fermented edge. In this recipe, fry it for about 30–45 seconds while stirring so it becomes fragrant without scorching.'],
+          ['Substitute','Chili bean sauce is the closest practical substitute. Gochujang mixed with a small pinch of salt can work in a pinch, but it is generally sweeter and has a different fermented flavor. A little red chili paste plus dark miso can also approximate some of the savory depth, though the result will not be identical.'],
+          ['Salt Check','Doubanjiang is already salty, and this recipe also uses soy sauce, oyster sauce, and bouillon. Taste before adding any extra salt.']
+        ]
+      },
+      {
+        name:'GARLIC CHIVES (NIRA / 韮)',
+        details:[
+          ['Flavor & Role','Garlic chives add a fresh, sharp, garlicky flavor, a little crunch, and a vivid green finish that lifts the rich pork mince.'],
+          ['Technique','Cut the chives into 3–4 cm pieces and add them near the end. Toss for about 30–45 seconds—just long enough to soften them slightly while keeping their color and fresh aroma.'],
+          ['Substitute','Green onions (scallions) cut into 3–4 cm pieces are an easy substitute. They are milder and less garlicky, so the finished flavor will be a little different.'],
+          ['Storage','Keep fresh garlic chives refrigerated and use them while the leaves are crisp and green.']
+        ]
+      }
     ],
     ingredients:[
       {group:'Taiwan Mince'},
