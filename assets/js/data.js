@@ -437,7 +437,7 @@ What if we just stopped treating the banana like an afterthought and made the ba
       {name:'PLAIN BISCUITS',details:[['Flavor', 'A crisp, spiced crumb crust featuring cinnamon, ginger, and nutmeg that beautifully balances the rich, sweet banana filling.'], ['Substitute', 'Biscoff cookies or graham crackers.'],['Midnight Fix','If using Biscoff, skip the cinnamon, ginger, and nutmeg. Simply combine the crumbs with melted butter.'],['Crust Technique', 'Baking the crust for 8–10 minutes locks in its structure, preventing it from getting soggy when the heavy custard and fresh bananas sit on top.']]},
       {name:'WHOLE MILK',details:[['Why Whole Milk','The higher fat content gives the filling a richer, creamier mouthfeel.'],['Substitute','2% milk works too, but the filling will be slightly lighter.']]}
     ],
-    stats:{prep:'20 mins',cook:'30 mins',chill:'3+ hrs',total:'3 hrs 50 mins+',serves:'6–8',pan:'9-inch / 23 cm pie plate',quiet:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
+    stats:{prep:'20 mins',cook:'30 mins',chill:'3 hrs+',total:'3 hrs 50 mins+',serves:'6–8',pan:'9-inch / 23 cm pie plate',quiet:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
     ingredients:[
       {group:'Crust'},
       {amount:200,unit:'g',item:'Plain Biscuits, Finely Crushed'}, {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground Cinnamon'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Ground Ginger'}, {amount:1,unit:'pinch',item:'Ground Nutmeg'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'}, {amount:80,unit:'g',item:'Unsalted Butter, Melted'},
@@ -511,17 +511,19 @@ What if we just stopped treating the banana like an afterthought and made the ba
     slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', description:'Inspired by Chinese sweet potato ginger dessert soup, this silky pie pairs earthy sweet potato with fresh ginger, cinnamon, and a gentle warming spice.', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese', cuisineSecondary:'American',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-27', timeStamp:'11:35 PM',
     tags:['Midnight Experiment','Dessert','Baking','Chinese','American','Sweet Potato','Ginger','Pie'], heroImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', recipeImage:'images/recipes/sweet-potato-ginger-pie/recipe.jpg', usesUsual:'building-block-pie-crust', usCupFractions:true, forceCupUnits:true, stepQuantityConversion:true,
-    story:`Inspired by traditional Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水), a simple sweet soup made by simmering sweet potatoes with fresh ginger and sugar in water.
+    story:`This pie is inspired by a traditional Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水), a simple, soothing sweet soup made by simmering sweet potatoes with fresh ginger and sugar in water.
 
-I love how naturally sweet potato and ginger work together—the earthy sweetness of the sweet potato balanced by the warm, peppery kick of fresh ginger. I thought that combination would be perfect in a pie.
+I love how naturally sweet potato and ginger complement each other, the earthy sweetness of the sweet potato balanced by the warm, peppery kick of fresh ginger. I thought that combination would work beautifully in a pie, and I was right!
 
-Instead of simply replacing pumpkin with sweet potato in a classic pumpkin pie, I wanted a warmer, spicier pie where fresh ginger could shine.
+On a cold night, or after a long, exhausting day, this pie calls for real, freshly grated ginger rather than standard ground ginger. Fresh ginger brings a bright, comforting heat that truly warms you up from the inside and helps you unwind.
 
-The result is silky and creamy, with naturally sweet roasted sweet potato, warm cinnamon, and a gentle kick of fresh ginger.`,
+Instead of simply swapping pumpkin for sweet potato in a classic pumpkin pie recipe, I wanted a warmer, punchier dessert where fresh ginger could take center stage.
+
+What you get is a silky, creamy pie filled with naturally sweet roasted sweet potato, a touch of cinnamon warmth, and that unmistakable, gentle kick of fresh ginger.`,
     ingredientFile:[
-      {name:'SWEET POTATOES',details:[['Origin','South America'],['Flavor','Naturally sweet, earthy, creamy'],['Substitute','Japanese or Korean sweet potato works, although it is denser and sweeter.'],['Storage','Store whole sweet potatoes in a cool, dry place. Once cooked, refrigerate in an airtight container for up to 3 days.']]},
-      {name:'FRESH GINGER',details:[['Flavor','Warm, peppery, citrusy, spicy'],['Substitute','1½ g ground ginger can replace 6 g fresh ginger, but fresh ginger gives a brighter flavor.'],['Storage','Refrigerate for several weeks or freeze and grate directly from frozen.']]},
-      {name:'10% CREAM',details:[['Flavor','Light, creamy, milky'],['Substitute','Half-and-half works well. For a similar fat level, mix 70 g 2% milk + 30 g 35% cream.'],['Storage','Refrigerate after opening.']]}
+      {name:'SWEET POTATOES',details:[['Origin','South America'],['Flavor','Naturally sweet, earthy, creamy, and comforting.'],['Roasting vs. Quick Cooking', 'Roasting whole sweet potatoes in their skins activates their natural enzymes, breaking down starches into sweet maltose while evaporating excess water. If you choose the midnight shortcut (microwaving or boiling), make sure to let the cooked sweet potato steam-dry thoroughly so your pie filling won’t turn watery.'],['Substitute','Japanese (Satsumaimo) or Korean sweet potato works for an even denser, sweeter interior, though you may need a splash more cream to thin out the paste.'],['Storage','Store whole sweet potatoes in a cool, dry place. Once cooked, refrigerate in an airtight container for up to 3 days.']]},
+      {name:'FRESH GINGER',details:[['Flavor','Warm, peppery, citrusy, spicy'],['Substitute','ground ginger'],['Midnight Fix','1½ g ground ginger can replace 6 g fresh ginger. While ground ginger offers a warm, subtle background spice, only finely grated fresh ginger delivers that authentic Sweet Potato Ginger Dessert Soup (番薯姜糖水) flavor—a bright, peppery, citrusy zing that pierces right through the heavy sweet potato.'],['Storage','Refrigerate for several weeks or freeze and grate directly from frozen.']]},
+      {name:'10% CREAM',details:[['Flavor','Light, creamy, milky'],['Why Here', 'Heavy 35% whipping cream can coat the palate and dull the fresh ginger oils. Using 10% cream provides just enough dairy fat to make the custard silky while keeping the overall dessert light and the ginger flavor sharp.'],['Substitute','Half-and-half works well. For a similar fat level, mix 70 g 2% milk + 30 g 35% cream for an exact fat-level equivalent.'],['Storage','Refrigerate after opening.']]}
     ],
     stats:{prep:'30 mins',cook:'1 hr 45 mins',chill:'2 hrs+',total:'4 hrs 15 mins+',serves:'8',quiet:'⭐⭐⭐⭐☆'},
     ingredients:[
@@ -567,13 +569,10 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
       ],stepImages:[]}
     ],
     notes:[
-      ['Recreating the Flavor',`Fresh ginger is the signature. It gives the pie the warm, peppery character inspired by Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水).
-Roasting gives the deepest flavor. It removes excess moisture and concentrates the natural sweetness of the sweet potato.
+      ['Recreating the Soup Flavor',`Fresh ginger is the signature. It gives the pie the warm, peppery character that defines Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水).
 Keep the spices simple. There is no nutmeg, cloves, cardamom, or vanilla. Cinnamon supports the ginger instead of turning this into a classic pumpkin-spice pie.
 Don\'t over-sweeten it. The sweet potato provides natural sweetness, while crystallized ginger adds a little sweetness and a pleasant spicy bite.`],
-      ['Midnight Compromises',`No time to roast? Microwave or boil the sweet potato instead.
-Making this at midnight? The filling can be made in one blender or with one hand blender—no separate egg mixture and no extra bowl.
-If you use boiled or microwaved sweet potato, let it steam-dry well before weighing. Too much moisture will make the filling softer.`]
+      ['Moisture Control (This is CRUVCIAL!)',`No time to roast? If you take the midnight shortcut and boil your sweet potato chunks, spread them out on a plate for 5 minutes after draining to let the steam escape. Excess trapped water will weaken the custard structure and lead to a soggy pie base.`]
     ],
     finePrint:{
       'BEST EATEN':'Tomorrow, after chilling thoroughly, when the sweet potato, ginger, and cinnamon flavors have had time to come together.',
