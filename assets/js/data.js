@@ -572,7 +572,7 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
       ['Recreating the Soup Flavor',`Fresh ginger is the signature. It gives the pie the warm, peppery character that defines Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水).
 Keep the spices simple. There is no nutmeg, cloves, cardamom, or vanilla. Cinnamon supports the ginger instead of turning this into a classic pumpkin-spice pie.
 Don\'t over-sweeten it. The sweet potato provides natural sweetness, while crystallized ginger adds a little sweetness and a pleasant spicy bite.`],
-      ['Moisture Control (This is CRUVCIAL!)',`No time to roast? If you take the midnight shortcut and boil your sweet potato chunks, spread them out on a plate for 5 minutes after draining to let the steam escape. Excess trapped water will weaken the custard structure and lead to a soggy pie base.`]
+      ['Moisture Control (This is CRUCIAL!)',`No time to roast? If you take the midnight shortcut and boil your sweet potato chunks, spread them out on a plate for 5 minutes after draining to let the steam escape. Excess trapped water will weaken the custard structure and lead to a soggy pie base.`]
     ],
     finePrint:{
       'BEST EATEN':'Tomorrow, after chilling thoroughly, when the sweet potato, ginger, and cinnamon flavors have had time to come together.',
