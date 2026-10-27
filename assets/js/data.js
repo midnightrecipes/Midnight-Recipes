@@ -541,7 +541,6 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
       ],stepImages:[]},
       {number:'02',title:'MAKE THE CRUST',clock:'11:45 PM',paragraphs:[
         'While the sweet potatoes are roasting… start making Building Block Pie Crust (OPTION B — PARTIAL BLIND-BAKE).',
-        'Prick the bottom well with a fork. Bake in the same oven at 175°C / 350°F for 10–12 minutes, until set and lightly golden.',
         'Midnight Shortcut',
         'Use a good-quality store-bought pie crust. Tonight is about the filling.'
       ],stepImages:[]},
@@ -568,7 +567,7 @@ The result is silky and creamy, with naturally sweet roasted sweet potato, warm 
       ],stepImages:[]}
     ],
     notes:[
-      ['Recreating the Flavor',`Fresh ginger is the signature. It gives the pie the warm, peppery character inspired by 番薯姜糖水.
+      ['Recreating the Flavor',`Fresh ginger is the signature. It gives the pie the warm, peppery character inspired by Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水).
 Roasting gives the deepest flavor. It removes excess moisture and concentrates the natural sweetness of the sweet potato.
 Keep the spices simple. There is no nutmeg, cloves, cardamom, or vanilla. Cinnamon supports the ginger instead of turning this into a classic pumpkin-spice pie.
 Don\'t over-sweeten it. The sweet potato provides natural sweetness, while crystallized ginger adds a little sweetness and a pleasant spicy bite.`],
