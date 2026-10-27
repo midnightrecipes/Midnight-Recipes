@@ -444,7 +444,7 @@ What if we just stopped treating the banana like an afterthought and made the ba
       {group:'Filling'},
       {amount:3,unit:'',item:'Bananas (Approx. 250 g Flesh), Very Ripe and Mashed'}, {amount:2,unit:'',item:'Firm-Ripe Bananas, Cut in Half Lengthwise'}, {amount:400,unit:'ml',item:'Whole Milk'}, {amount:3,unit:'large',item:'Egg Yolks'}, {amount:35,unit:'g',item:'Granulated Sugar'}, {amount:32,unit:'g',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla Extract'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},
       {group:'Topping (Optional)'},
-      {amount:180,unit:'ml',item:'35% Whipping Cream'}, {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated Sugar'}, {unit:'',item:'Cinnamon or Banana Chips, to Finish',hideIngredientInfo:true}
+      {amount:180,unit:'ml',item:'35% Whipping Cream'}, {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated Sugar'}, {unit:'',item:'Cinnamon or Sliced Banana, to Finish',hideIngredientInfo:true}
     ],
     steps:[
       {number:'01',title:'TURN IT UP & MAKE IT JAMMY',clock:'2:55 AM',paragraphs:[
@@ -488,7 +488,7 @@ What if we just stopped treating the banana like an afterthought and made the ba
       ],stepImages:[]},
       {number:'07',title:'TOP IT OFF',clock:'NEXT DAY',paragraphs:[
         'Whip {{qty:35% Whipping Cream}} cold heavy cream to soft peaks. Add {{qty:Granulated Sugar, To Taste}} sugar and whip to medium-firm peaks.',
-        'Dollop over the chilled pie and finish with cinnamon or banana chips, if you like.'
+        'Dollop over the chilled pie and finish with cinnamon or sliced banana, if you like.'
       ],stepImages:[]}
     ],
     notes:[
