@@ -697,7 +697,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
       {amount:50,unit:'g',item:'Granulated Sugar'},
       {amount:0.5,unit:'g',item:'Cream of Tartar'}
     ],
-    stats:{prep:'20 mins',cook:'30 mins',total:'4 hrs 50 mins +',serves:'6–8',pan:'23 cm / 9-inch pie dish',quiet:'⭐☆☆☆☆'},
+    stats:{prep:'20 mins',cook:'30 mins',chill:'4 hrs+',total:'4 hrs 50 mins +',serves:'6–8',pan:'23 cm / 9-inch pie dish',quiet:'⭐☆☆☆☆'},
     steps:[
       {number:'01',title:'CRUSH IT DOWN',clock:'11:20 PM',paragraphs:[
         'Preheat your oven to 175°C / 350°F.',
