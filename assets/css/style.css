@@ -1546,20 +1546,19 @@ body[data-page="home"] .category-card .photo-frame{
   .recipe-card .recipe-action-icons{margin-left:auto;gap:8px;}
   .recipe-card .recipe-action-row .recipe-icon-btn{flex-basis:40px;width:40px;min-width:40px;height:40px;min-height:40px;}
 }
-/* Stay Awake: gray OFF, mint ON, white knob in both states */
+/* Stay Awake switch colors */
 .recipe-card .cook-switch,
 .recipe-card .cook-switch:hover,
 .recipe-card .cook-switch:focus-visible {
-  background: #888888;
+  background-color: #888888 !important;
 }
 
 .recipe-card .cook-switch[aria-checked="true"],
 .recipe-card .cook-switch[aria-checked="true"]:hover,
 .recipe-card .cook-switch[aria-checked="true"]:focus-visible {
-  background: var(--mint);
+  background-color: var(--mint) !important;
 }
 
-.recipe-card .cook-switch .cook-switch-knob,
-.recipe-card .cook-switch[aria-checked="true"] .cook-switch-knob {
-  background: #ffffff;
+.recipe-card .cook-switch .cook-switch-knob {
+  background-color: #ffffff !important;
 }
