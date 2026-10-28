@@ -1562,3 +1562,74 @@ body[data-page="home"] .category-card .photo-frame{
   background-color:var(--mint)!important;
   border-color:var(--mint)!important;
 }
+
+/* MIDNIGHT RECIPES — Ingredient File readability */
+.recipe-card #ingredient-file-section .ingredient-file-group {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 30px;
+  padding: 0 0 22px;
+  border-bottom: 1px solid rgba(21, 27, 31, 0.14);
+  scroll-margin-top: 96px;
+}
+
+.recipe-card #ingredient-file-section .ingredient-file-group:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+/* Ingredient names: clear, prominent headings */
+.recipe-card #ingredient-file-section .ingredient-file-group > .ingredient-file-name {
+  margin: 0 0 12px;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+/* Supporting information */
+.recipe-card #ingredient-file-section .ingredient-file-details {
+  width: 100%;
+  max-width: none;
+}
+
+.recipe-card #ingredient-file-section .ingredient-file-details p {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.recipe-card #ingredient-file-section .ingredient-file-details p:last-child {
+  margin-bottom: 0;
+}
+
+/* Labels: visually secondary to the explanation */
+.recipe-card #ingredient-file-section .ingredient-file-details strong {
+  font-size: 0.76em;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+/* Mobile refinement */
+@media (max-width: 720px) {
+  .recipe-card #ingredient-file-section .ingredient-file-group {
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+  }
+
+  .recipe-card #ingredient-file-section .ingredient-file-group > .ingredient-file-name {
+    margin-bottom: 10px;
+    font-size: 19px;
+  }
+
+  .recipe-card #ingredient-file-section .ingredient-file-details p {
+    margin-bottom: 8px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
