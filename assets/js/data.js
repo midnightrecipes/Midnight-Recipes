@@ -783,7 +783,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
        {name:'Coconut Milk',details:[
         ['Origin','Southeast Asia, the Indian Pcific Oceans'],
         ['Flavor','Rich, tropical, nutty.'],
-        ['Best Choice', Full-fat coconut milk'],
+        ['Best Choice', 'Full-fat coconut milk'],
         ['Temperature Control', 'Never let coconut milk come to a hard, rolling boil! High heat breaks the fat-water emulsion, causing the broth to split and look oily or curdled. Keep the heat on low once the coconut milk is added.'],
         ['Substitute','Lite coconut milk.'],
         ['Midnight Fix','If using lite coconut milk, reduce the added water or chicken stock by about 60–80 ml. Lite coconut milk has a higher water content, so cutting back on the added liquid prevents your soup base from turning thin and watery.']
