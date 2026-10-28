@@ -766,39 +766,48 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
     dateAdded:'2026-10-08',
     timeStamp:'11:21 PM',
     description:'A Thai coconut chicken soup with galangal, lemongrass, makrut lime leaves, fresh lime, and gentle chili heat—my late-night attempt to see if it deserved its reputation.',
-    story:`TasteAtlas had ranked Tom Kha Gai #1 on its list of the world’s best chicken soups. I knew Tom Yum, but somehow Tom Kha Gai had always stayed in the background.
-It sounded like the perfect combination: creamy coconut milk, the bright citrus of makrut lime leaf and lemongrass, fresh lime acidity, and the gentle heat and peppery bite of chilies and galangal.
-The biggest challenge was finding all the ingredients. The actual cooking is surprisingly simple. And in a diverse city like Toronto, hunting down those ingredients might not be as difficult as it sounds.
-If the internet was calling it the world’s best, I had to find out for myself, even at midnight..!`,
+    story:`TasteAtlas had ranked Tom Kha Gai #1 on its list of the world’s best chicken soups. I was already familiar with Tom Yum, but somehow Tom Kha Gai had always stayed in the background for me.
+
+It sounded like a dream combination: creamy coconut milk, the bright citrus of makrut lime leaf and lemongrass, fresh lime acidity, and the gentle heat and peppery bite of chilies and galangal.
+
+The biggest challenge was simply finding all the ingredients. The actual cooking is surprisingly quick and simple, and in a diverse city like Toronto, hunting down those fresh Asian herbs isn't as difficult as you might think.
+
+When I took my first sip, I instantly understood why it earned that top spot. It’s an incredible balance of contrasts: the soothing, rich coconut milk hits you first, followed by the sharp citrus of makrut lime and lemongrass, the woody-peppery warmth of fresh galangal, and finally a clean, bright sour kick from fresh lime juice. It’s rich, velvety, sour, and mildly spicy all in one spoon.
+
+If the internet was calling it the world’s best chicken soup, I just had to find out for myself even at midnight..!`,
     heroImage:'images/recipes/tom-kha-gai/hero.jpg',
     recipeImage:'images/recipes/tom-kha-gai/recipe.jpg',
     stepQuantityConversion:true,
     usCupFractions:true,
     ingredientFile:[
-      {name:'Galangal',details:[
+       {name:'Coconut Milk',details:[
+        ['Origin','Southeast Asia, the Indian Pcific Oceans'],
+        ['Flavor','Rich, tropical, nutty.'],
+        ['Best Choice', Full-fat coconut milk'],
+        ['Temperature Control', 'Never let coconut milk come to a hard, rolling boil! High heat breaks the fat-water emulsion, causing the broth to split and look oily or curdled. Keep the heat on low once the coconut milk is added.'],
+        ['Substitute','Lite coconut milk.'],
+        ['Midnight Fix','If using lite coconut milk, reduce the added water or chicken stock by about 60–80 ml. Lite coconut milk has a higher water content, so cutting back on the added liquid prevents your soup base from turning thin and watery.']
+      ]},
+      {name:'Galangal (Kha)',details:[
         ['Origin','Southeast Asia'],
-        ['Flavor','Peppery, citrusy, floral, slightly piney'],
-        ['Best choice','Fresh galangal'],
-        ['Why here','Fresh galangal gives Tom Kha its distinctive peppery and floral character and tastes noticeably different from ginger.'],
-        ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, and T&T are good places to look.'],
-        ['Substitute','Fresh ginger plus a little extra lemongrass, although the flavor will be different.'],
-        ['Storage','Wrap fresh galangal loosely and refrigerate. Dried galangal should be kept airtight in a cool, dark place.'],
+        ['Flavor','Woody, citrusy, piney, and distinctly peppery. It tastes entirely different from standard ginger.'],
+        ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, Chinatown markets and T&T are good places to look.'],
+        ['Substitute','Fresh ginger plus a little extra lemongrass. While ginger brings a sharp, biting heat, galangal brings a rounder, botanical aroma that defines authentic Tom Kha.'],
+        ['Storage','Wrap fresh galangal loosely and freeze. Dried galangal should be kept airtight in a cool, dark place.'],
         ['Midnight Fix','Use frozen or dried galangal if fresh galangal is unavailable.']
       ]},
       {name:'Makrut Lime Leaves',details:[
         ['Origin','Thailand / Southeast Asia'],
-        ['Flavor','Intensely citrusy, floral, aromatic'],
-        ['Best choice','Fresh makrut lime leaves'],
-        ['Why here','Makrut lime leaf provides the floral citrus aroma that makes the broth recognizable as Tom Kha.'],
-        ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, and T&T are good places to look.'],
+        ['Flavor','Intensely citrusy, floral, sweet, aromatic'],
+        ['Best choice','Fresh makrut lime leaves.   ['Pro Technique', 'Tear or bruise the leaves with your hands before adding them to the pot to break the oil glands on the leaf surface and release their fragrance.'],'],
+        ['Pro Technique', 'Tear or bruise the leaves with your hands before adding them to the pot to break the oil glands on the leaf surface and release their fragrance.'],
+        ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, Chinatown markets and T&T are good places to look.'],
         ['Substitute','Fresh lime zest can add some citrus aroma, but it cannot fully replace makrut lime leaf.'],
-        ['Storage','Keep dried leaves airtight and away from light and moisture.']
+        ['Storage','Keep a bag of fredh or dried leaves in your freezer.']
       ]},
-      {name:'Lemongrass',details:[
+      {name:'Lemongrass stalks',details:[
         ['Origin','Southeast Asia'],
         ['Flavor','Bright, citrusy, grassy'],
-        ['Best choice','Fresh lemongrass stalks'],
-        ['Why here','Lemongrass adds a bright citrus aroma to the broth and works together with galangal and makrut lime leaf.'],
         ['Substitute','Frozen or pre-minced lemongrass'],
         ['Storage','Fresh stalks can be refrigerated for about a week; frozen lemongrass keeps much longer.'],
         ['Midnight Fix','Use 1½ tbsp finely minced lemongrass when whole stalks are inconvenient.'],
@@ -839,7 +848,7 @@ If the internet was calling it the world’s best, I had to find out for myself,
         'Add the chicken thighs to the aromatic broth and simmer until just cooked through.',
         'Add {{qty:Mushrooms}} mushrooms and cook for another 2–3 minutes.',
         'Pour in {{qty:Coconut Milk}} coconut milk. Reduce the heat to low and warm gently.',
-        'Do not let the coconut milk boil aggressively. Keep the broth smooth and fragrant.'
+        'Do not let the coconut milk boil aggressively. This prevents the coconut milk emulsion from spllitting.'
       ],stepImages:['images/recipes/tom-kha-gai/step-02-01.jpg','images/recipes/tom-kha-gai/step-02-02.jpg','images/recipes/tom-kha-gai/step-02-03.jpg']},
       {number:'03',title:'SEASON & FINISH',clock:'11:41 PM',paragraphs:[
         'Stir in {{qty:Fish Sauce}} fish sauce and {{qty:Palm Sugar or Granulated Sugar}} palm sugar or granulated sugar. Turn off the heat.',
@@ -849,10 +858,10 @@ If the internet was calling it the world’s best, I had to find out for myself,
       ],stepImages:['images/recipes/tom-kha-gai/step-03-01.jpg','images/recipes/tom-kha-gai/step-03-02.jpg']}
     ],
     notes:[
-      ['Recreating the Flavor','The character of Tom Kha Gai comes from the combination of Coconut Milk with Galangal, Lemongrass, and Makrut Lime Leaf. I built the aromatic base directly from the herbs.'],
       ['The Lime Trick','Makrut Lime Leaf gives the soup its floral citrus aroma, while Fresh Lime Juice brings the sharp acidity. Add the juice after turning off the heat to keep that fresh citrus character.'],
       ['Galangal Matters','Ginger is an acceptable emergency substitute, but fresh Galangal gives a distinctly peppery, floral flavor that makes the soup taste much more like Tom Kha.'],
-      ['Toronto Pantry Reality','Fresh Galangal and Lemongrass are easy to find at Toronto Asian grocery stores, while dried Makrut Lime Leaves are useful when you want to make this on a random midnight without another grocery run.']
+      ['Toronto Pantry Reality','Fresh Galangal and Lemongrass are easy to find at Toronto Asian grocery stores, while dried Makrut Lime Leaves are useful when you want to make this on a random midnight without another grocery run. If you buy fresh galangal or lime leaves and have extra, freeze them immediately!']
+      ['Do you Eat the Herbs?', 'Just like bay leaves in Western cooking, lemongrass, galangal, and makrut lime leaves are used to infuse the broth. They are generally left in the bowl for rustic presentation, but you do not eat the tough stalks or thick galangal pieces.']
     ],
     finePrint:{
       'BEST EATEN':'Fresh, while the aromatics are fragrant and the lime flavor is bright.',
