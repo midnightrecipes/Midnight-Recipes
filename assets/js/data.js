@@ -1,5 +1,4 @@
-/* MIDNIGHT RECIPES — single source of truth for all recipe pages */
-window.MIDNIGHT_SITE = {
+
   // Reviews are only stored in the visitor's own browser, so the form is hidden until a shared backend exists.
   reviewsEnabled: true,
   aboutImages: {
@@ -781,7 +780,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
     usCupFractions:true,
     ingredientFile:[
        {name:'Coconut Milk',details:[
-        ['Origin','Southeast Asia, the Indian Pcific Oceans'],
+        ['Origin','Southeast Asia, the Indian and Pcific Oceans'],
         ['Flavor','Rich, tropical, nutty.'],
         ['Best Choice', 'Full-fat coconut milk'],
         ['Temperature Control', 'Never let coconut milk come to a hard, rolling boil! High heat breaks the fat-water emulsion, causing the broth to split and look oily or curdled. Keep the heat on low once the coconut milk is added.'],
@@ -803,7 +802,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
         ['Pro Technique', 'Tear or bruise the leaves with your hands before adding them to the pot to break the oil glands on the leaf surface and release their fragrance.'],
         ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, Chinatown markets and T&T are good places to look.'],
         ['Substitute','Fresh lime zest can add some citrus aroma, but it cannot fully replace makrut lime leaf.'],
-        ['Storage','Keep a bag of fredh or dried leaves in your freezer.']
+        ['Storage','Keep a bag of fresh or dried leaves in your freezer.']
       ]},
       {name:'Lemongrass stalks',details:[
         ['Origin','Southeast Asia'],
@@ -848,7 +847,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
         'Add the chicken thighs to the aromatic broth and simmer until just cooked through.',
         'Add {{qty:Mushrooms}} mushrooms and cook for another 2–3 minutes.',
         'Pour in {{qty:Coconut Milk}} coconut milk. Reduce the heat to low and warm gently.',
-        'Do not let the coconut milk boil aggressively. This prevents the coconut milk emulsion from spllitting.'
+        'Do not let the coconut milk boil aggressively. This prevents the coconut milk emulsion from splitting.'
       ],stepImages:['images/recipes/tom-kha-gai/step-02-01.jpg','images/recipes/tom-kha-gai/step-02-02.jpg','images/recipes/tom-kha-gai/step-02-03.jpg']},
       {number:'03',title:'SEASON & FINISH',clock:'11:41 PM',paragraphs:[
         'Stir in {{qty:Fish Sauce}} fish sauce and {{qty:Palm Sugar or Granulated Sugar}} palm sugar or granulated sugar. Turn off the heat.',
@@ -860,7 +859,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
     notes:[
       ['The Lime Trick','Makrut Lime Leaf gives the soup its floral citrus aroma, while Fresh Lime Juice brings the sharp acidity. Add the juice after turning off the heat to keep that fresh citrus character.'],
       ['Galangal Matters','Ginger is an acceptable emergency substitute, but fresh Galangal gives a distinctly peppery, floral flavor that makes the soup taste much more like Tom Kha.'],
-      ['Toronto Pantry Reality','Fresh Galangal and Lemongrass are easy to find at Toronto Asian grocery stores, while dried Makrut Lime Leaves are useful when you want to make this on a random midnight without another grocery run. If you buy fresh galangal or lime leaves and have extra, freeze them immediately!']
+      ['Toronto Pantry Reality','Fresh Galangal and Lemongrass are easy to find at Toronto Asian grocery stores, while dried Makrut Lime Leaves are useful when you want to make this on a random midnight without another grocery run. If you buy fresh galangal or lime leaves and have extra, freeze them immediately!'],
       ['Do you Eat the Herbs?', 'Just like bay leaves in Western cooking, lemongrass, galangal, and makrut lime leaves are used to infuse the broth. They are generally left in the bowl for rustic presentation, but you do not eat the tough stalks or thick galangal pieces.']
     ],
     finePrint:{
