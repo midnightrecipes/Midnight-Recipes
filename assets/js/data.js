@@ -872,8 +872,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
     },
     tags:['Galangal','Makrut Lime Leaves','Lemongrass','Coconut Milk','Chicken'],
     usualsCategory:''
-  }
-,
+  },
 
   {
     slug:'sweet-chili-peanut-chicken',
