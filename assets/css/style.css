@@ -1633,3 +1633,37 @@ body[data-page="home"] .category-card .photo-frame{
     line-height: 1.8;
   }
 }
+
+/* Ingredient File readability: subtitles, descriptions, and subtle group separation */
+.recipe-card .ingredient-file-group{
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(21,27,31,.12);
+}
+.recipe-card .ingredient-file-group:last-child{
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+.recipe-card .ingredient-file-detail{
+  margin: 0 0 14px;
+}
+.recipe-card .ingredient-file-detail:last-child{
+  margin-bottom: 0;
+}
+.recipe-card .ingredient-file-subtitle{
+  margin: 0 0 3px;
+  line-height: 1.5;
+}
+.recipe-card .ingredient-file-details .ingredient-file-detail p{
+  margin: 0;
+  line-height: 1.7;
+}
+@media (max-width:720px){
+  .recipe-card .ingredient-file-group{
+    padding-bottom: 17px;
+    margin-bottom: 22px;
+  }
+  .recipe-card .ingredient-file-detail{
+    margin-bottom: 12px;
+  }
+}
+
