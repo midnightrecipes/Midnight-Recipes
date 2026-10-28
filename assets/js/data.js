@@ -1,6 +1,7 @@
-
+/* MIDNIGHT RECIPES — single source of truth for all recipe pages */
+window.MIDNIGHT_SITE = {
   // Reviews are only stored in the visitor's own browser, so the form is hidden until a shared backend exists.
-  reviewsEnabled: true,
+  reviewsEnabled: false,
   aboutImages: {
     aboutMe: 'images/about/about-me.jpg',
     aboutRecipes: 'images/about/about-midnight-recipes.jpg'
