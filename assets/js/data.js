@@ -765,7 +765,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
     categories:['Soups'], mainIngredients:['Chicken','Coconut Milk','Galangal','Lemongrass','Mushrooms'],
     dateAdded:'2026-10-08',
     timeStamp:'11:21 PM',
-    description:'A Thai coconut chicken soup with galangal, lemongrass, makrut lime leaves, fresh lime, and gentle chili heat—my late-night attempt to see if it deserved its reputation.',
+    description:'A Thai coconut chicken soup with galangal (kha), lemongrass, makrut lime leaves, fresh lime, and gentle chili heat—my late-night attempt to see if it deserved its reputation.',
     story:`TasteAtlas had ranked Tom Kha Gai #1 on its list of the world’s best chicken soups. I was already familiar with Tom Yum, but somehow Tom Kha Gai had always stayed in the background for me.
 
 It sounded like a dream combination: creamy coconut milk, the bright citrus of makrut lime leaf and lemongrass, fresh lime acidity, and the gentle heat and peppery bite of chilies and galangal.
@@ -788,7 +788,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
         ['Substitute','Lite coconut milk.'],
         ['Midnight Fix','If using lite coconut milk, reduce the added water or chicken stock by about 60–80 ml. Lite coconut milk has a higher water content, so cutting back on the added liquid prevents your soup base from turning thin and watery.']
       ]},
-      {name:'Galangal (Kha)',details:[
+      {name:'Galangal',details:[
         ['Origin','Southeast Asia'],
         ['Flavor','Woody, citrusy, piney, and distinctly peppery. It tastes entirely different from standard ginger.'],
         ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, Chinatown markets and T&T are good places to look.'],
@@ -805,7 +805,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
         ['Substitute','Fresh lime zest can add some citrus aroma, but it cannot fully replace makrut lime leaf.'],
         ['Storage','Keep a bag of fresh or dried leaves in your freezer.']
       ]},
-      {name:'Lemongrass stalks',details:[
+      {name:'Lemongrass',details:[
         ['Origin','Southeast Asia'],
         ['Flavor','Bright, citrusy, grassy'],
         ['Substitute','Frozen or pre-minced lemongrass'],
@@ -820,7 +820,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
       {amount:400,unit:'ml',imperialAmount:5/3,imperialUnit:'cup',item:'Coconut Milk'},
       {amount:240,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'Water or Chicken Stock'},
       {group:'Aromatics'},
-      {amount:30,unit:'g',imperialMinAmount:10,imperialMaxAmount:12,imperialMinUnit:'slices',imperialMaxUnit:'slices',item:'Fresh Galangal, Thinly Sliced',compactRange:true},
+      {amount:30,unit:'g',imperialMinAmount:10,imperialMaxAmount:12,imperialMinUnit:'slices',imperialMaxUnit:'slices',item:'Galangal, Thinly Sliced',compactRange:true},
       {minAmount:1,maxAmount:2,unit:'stalks',imperialMinAmount:1,imperialMaxAmount:2,imperialMinUnit:'stalks',imperialMaxUnit:'stalks',item:'Lemongrass, Bruised and Cut Into Pieces',compactRange:true},
       {minAmount:4,maxAmount:5,unit:'leaves',imperialMinAmount:4,imperialMaxAmount:5,imperialMinUnit:'leaves',imperialMaxUnit:'leaves',item:'Makrut Lime Leaves, Rehydrated if Dried',compactRange:true},
       {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Onion, Sliced'},
@@ -838,7 +838,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
     steps:[
       {number:'01',title:'BUILD THE AROMATIC BROTH',clock:'11:21 PM',paragraphs:[
         'If using dried {{qty:Makrut Lime Leaves, Rehydrated if Dried}} makrut lime leaves, soak them in hot water for 5–10 minutes. Drain and gently tear them.',
-        'Thinly slice {{qty:Fresh Galangal, Thinly Sliced}} fresh galangal. Remove the tough outer layers from {{qty:Lemongrass, Bruised and Cut Into Pieces}} lemongrass stalks, bruise them with the back of a knife, and cut them into 5–6 cm pieces.',
+        'Thinly slice {{qty:Galangal, Thinly Sliced}} galangal. Remove the tough outer layers from {{qty:Lemongrass, Bruised and Cut Into Pieces}} lemongrass stalks, bruise them with the back of a knife, and cut them into 5–6 cm pieces.',
         'If using minced lemongrass instead, measure 1½ tbsp.',
         'Add {{qty:Water or Chicken Stock}} water or chicken stock, galangal, lemongrass, makrut lime leaves, {{qty:Onion, Sliced}} onion, {{qty:Garlic, Lightly Crushed}} garlic, and {{qty:Fresh Chilies, Lightly Crushed}} fresh chilies to a saucepan.',
         'Bring to a gentle simmer over medium heat and cook for 5–10 minutes, until the broth smells deeply aromatic.'
