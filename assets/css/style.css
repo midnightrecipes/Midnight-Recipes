@@ -1509,3 +1509,40 @@ body[data-page="home"] .category-card .photo-frame{
 .review-form > .h3{margin:0 0 8px;color:var(--head);}
 .review-form .review-intro{margin:0 0 20px;line-height:1.65;color:var(--ink)}
 .review-form #submitReview{background:var(--mint);color:var(--ink)}
+
+/* Stay Awake + recipe actions: left-aligned switch/help, right-aligned icon group. */
+.recipe-card .recipe-action-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  width:100%;
+  margin:18px 0 0;
+  flex-wrap:wrap;
+}
+.recipe-card .stay-awake-control{flex:1 1 220px;min-width:0;}
+.recipe-card .stay-awake-main{display:flex;align-items:center;gap:12px;min-height:42px;}
+.recipe-card .stay-awake-label{font-size:15px;font-weight:600;line-height:1.3;}
+.recipe-card .stay-awake-help{margin:3px 0 0;font-size:12px;line-height:1.45;opacity:.76;}
+.recipe-card .recipe-action-icons{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex:0 0 auto;}
+.recipe-card .recipe-action-row .recipe-icon-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  flex:0 0 42px;width:42px;min-width:42px;max-width:42px;
+  height:42px;min-height:42px;margin:0;padding:9px;
+  border-radius:50%;background:var(--mint);border:1px solid var(--bg);color:var(--ink);
+}
+.recipe-card .recipe-action-row .recipe-icon-btn svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.recipe-card .recipe-action-row #favRecipe[aria-pressed="true"] svg{fill:var(--ink);}
+.recipe-card .recipe-action-row .recipe-icon-btn:hover{border-color:var(--ink);}
+.recipe-card .cook-switch{flex:0 0 48px;width:48px;height:28px;min-width:48px;padding:3px;border-radius:999px;border:1px solid var(--ink);background:var(--bg);display:inline-flex;align-items:center;cursor:pointer;transition:background .2s;}
+.recipe-card .cook-switch-knob{width:20px;height:20px;background:var(--paper);border:1px solid var(--ink);border-radius:50%;transition:transform .2s;}
+.recipe-card .cook-switch[aria-checked="true"]{background:var(--mint);}
+.recipe-card .cook-switch[aria-checked="true"] .cook-switch-knob{transform:translateX(20px);background:var(--ink);}
+.recipe-card .cook-switch:focus-visible,.recipe-card .recipe-icon-btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px;}
+.recipe-card .ingredient-heading-row{display:flex;align-items:center;justify-content:flex-start;gap:12px;margin-top:34px;margin-bottom:18px;flex-wrap:wrap;}
+@media(max-width:520px){
+  .recipe-card .recipe-action-row{align-items:flex-start;gap:14px;}
+  .recipe-card .stay-awake-control{flex:1 1 100%;}
+  .recipe-card .recipe-action-icons{margin-left:auto;gap:8px;}
+  .recipe-card .recipe-action-row .recipe-icon-btn{flex-basis:40px;width:40px;min-width:40px;height:40px;min-height:40px;}
+}
