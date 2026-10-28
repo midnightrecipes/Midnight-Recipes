@@ -799,7 +799,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
       {name:'Makrut Lime Leaves',details:[
         ['Origin','Thailand / Southeast Asia'],
         ['Flavor','Intensely citrusy, floral, sweet, aromatic'],
-        ['Best choice','Fresh makrut lime leaves.   ['Pro Technique', 'Tear or bruise the leaves with your hands before adding them to the pot to break the oil glands on the leaf surface and release their fragrance.'],'],
+        ['Best choice','Fresh makrut lime leaves.'],
         ['Pro Technique', 'Tear or bruise the leaves with your hands before adding them to the pot to break the oil glands on the leaf surface and release their fragrance.'],
         ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, Chinatown markets and T&T are good places to look.'],
         ['Substitute','Fresh lime zest can add some citrus aroma, but it cannot fully replace makrut lime leaf.'],
