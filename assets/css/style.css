@@ -1,4 +1,5 @@
-@font-face{font-family:"Cutie Queues";font-style:normal;font-weight:400 500;font-display:swap;src:url(../fonts/cutie-queues.woff2) format("woff2");}
+
+@font-face{font-family:'Cutie Queues';font-style:normal;font-weight:400 500;font-display:swap;src:url(../fonts/cutie-queues.woff2) format('woff2');}
 :root{
   --mint:#C9FFD8;
   --bg:#BCC8CC;
@@ -6,8 +7,8 @@
   --paper:#FFFFFF;
   --line:rgba(21,27,31,.22);
   --head:var(--ink);            /* 見出し色（トグルで切替） */
-  --logo-font:"Cutie Queues","Snell Roundhand","Brush Script MT","Segoe Script",cursive;
-  --body-font:"Avenir Next",Avenir,"Nunito Sans","Hiragino Kaku Gothic ProN","Segoe UI",sans-serif;
+  --logo-font:'Cutie Queues','Snell Roundhand','Brush Script MT','Segoe Script',cursive;
+  --body-font:'Avenir Next',Avenir,'Nunito Sans','Hiragino Kaku Gothic ProN','Segoe UI',sans-serif;
   --maxw:1240px;
 }
 :root[data-head="mint"]{ --head:var(--mint); }
@@ -26,6 +27,7 @@ img{max-width:100%;}
 button{font:inherit;color:inherit;}
 a{color:inherit;}
 
+
 /* スマホでPC幅のレイアウトを縮小表示するモード */
 #stagewrap{overflow:hidden;}
 #stage{transform-origin:0 0;}
@@ -33,17 +35,6 @@ body.scaled #stage{width:1440px;}
 body.scaled .header{position:sticky; top:0;}
 body.scaled .overlay{position:absolute; top:76px; bottom:auto; height:820px;}
 .review{flex-wrap:wrap; row-gap:8px;}
-
-:root{
-  --img-pie:url(../images/css-pie.jpg);
-  --img-bowl:url(../images/css-bowl.jpg);
-  --img-step:url(../images/css-step.jpg);
-}
-.ph.pie,.ph.bowl,.ph.step{background-size:cover; background-position:center;}
-.ph.pie{background-image:var(--img-pie);}
-.ph.bowl{background-image:var(--img-bowl);}
-.ph.step{background-image:var(--img-step);}
-.ph.pie::after,.ph.bowl::after,.ph.step::after{content:none;}
 
 /* ---------- ヘッダー ---------- */
 .header{
@@ -109,8 +100,10 @@ body.scaled .overlay{position:absolute; top:76px; bottom:auto; height:820px;}
 .about .more{margin-top:26px; text-align:right;}
 .about .more a{text-decoration:underline; text-underline-offset:3px;}
 
+
 .section{margin-top:104px;}
 .section:first-of-type{margin-top:58px;}
+
 
 /* ---------- レシピページ ---------- */
 .recipe-card{
@@ -249,8 +242,9 @@ body.scaled .overlay{position:absolute; top:76px; bottom:auto; height:820px;}
 }
 @media (prefers-reduced-motion:reduce){ html{scroll-behavior:auto;} }
 
-/* ---------- MIDNIGHT RECIPES production overrides ---------- */
 
+/* ---------- MIDNIGHT RECIPES production overrides ---------- */
+html,body{max-width:100%;overflow-x:hidden}
 body.scaled #stage,body.scaled #stagewrap{width:auto!important;transform:none!important}
 .review{display:none!important}
 .card .ph,.recipe-inner .ph,.tile .ph{aspect-ratio:1/1}
@@ -262,7 +256,7 @@ body.scaled #stage,body.scaled #stagewrap{width:auto!important;transform:none!im
 .photo-frame{overflow:hidden;position:relative;background:rgba(21,27,31,.18)}
 .card .photo-frame{aspect-ratio:1/1}
 .recipe-inner .photo-frame{aspect-ratio:1/1}
-
+.rtop .photo-frame{aspect-ratio:2/3}
 .step .photo-frame{aspect-ratio:1/1;margin-top:16px}
 .latest .card,.grid .card{min-width:0}
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px 24px}
@@ -272,7 +266,7 @@ body.scaled #stage,body.scaled #stagewrap{width:auto!important;transform:none!im
 .category-card .name{font-family:var(--body-font);font-weight:600;font-size:19px;margin:14px 0 0}
 .category-card a{text-decoration:none;color:inherit}
 .empty-state{padding:28px 0;font-size:18px;opacity:.65}
-.filter-subtitle{font-size:15px;opacity:.65;margin:-12px 0 26px}
+.filter-subtitle{font-size:15px;opacity:1;margin:-12px 0 26px}
 .ingredient-file{border-top:1px solid var(--line);padding-top:22px}
 .ingredient-file-item{margin:0 0 18px;max-width:72ch}
 .ingredient-file-item h4{margin:0 0 5px;font-size:17px}
@@ -411,11 +405,12 @@ html,body{max-width:100%;overflow-x:hidden}
 .recipe-actions{display:flex;align-items:center;gap:10px;flex-wrap:nowrap;margin-top:16px;}
 .recipe-actions .btn{margin:0;min-width:0;white-space:nowrap;}
 .ingredient-file{border-bottom:0!important;}
-
+.ingredient-file-item h4{font-weight:700;}
 .usuals-categories{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;}
 .usuals-category{display:flex;min-height:110px;align-items:flex-end;padding:20px;text-decoration:none;border:1px solid var(--line);font-weight:700;}
 @media(max-width:720px){.recipe-actions{gap:7px}.recipe-actions .btn{padding:9px 10px;font-size:14px}.usuals-categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.usuals-category{min-height:88px;padding:14px;font-size:15px}}
 @media(max-width:430px){.recipe-actions{gap:5px}.recipe-actions .btn{font-size:13px;padding:8px 7px}.usuals-categories{grid-template-columns:1fr 1fr}}
+
 
 /* Targeted typography refinements — preserve existing menu/card design */
 .menu-top,
@@ -543,6 +538,9 @@ html,body{max-width:100%;overflow-x:hidden}
 .recipe-card > section:has(.note-sub + .body-copy){
   margin-top:60px;
 }
+.recipe-card > section:has(.note-sub + .body-copy) .body-copy{
+  line-height:2;
+}
 
 /* Recipe footer follows the content as a clear final group */
 .recipe-card > .recipe-footer{
@@ -628,6 +626,7 @@ html,body{max-width:100%;overflow-x:hidden}
   .recipe-card .ingredient-file-group{margin-bottom:24px}
   .recipe-card .step-copy p{margin-bottom:9px}
 }
+
 
 /* Targeted step-photo cleanup: use the existing photo system without the step text padding/background. */
 .recipe-card .step-photos .photo-frame{
@@ -730,14 +729,33 @@ html,body{max-width:100%;overflow-x:hidden}
 }
 
 /* The guide belongs once directly below the Ingredients list, not inside Ingredient File. */
+.ingredient-file-guide{
+  margin:14px 0 0;
+  font-size:14px;
+  line-height:1.5;
+  opacity:.7;
+}
+.ingredient-file-guide a{text-decoration:none}
+.ingredient-info{
+  display:inline-block;
+  margin-left:6px;
+  text-decoration:none!important;
+  font-size:.9em;
+  line-height:1;
+}
 
 /* Keep the two ABOUT sections distinct without changing global spacing. */
-
+.about-recipes-section{
+  margin-top:88px!important;
+}
 @media (max-width:720px){
   .about-recipes-section{margin-top:58px!important}
 }
 
 /* Home source labels are bold; recipe titles match the regular Latest Recipes title weight. */
+.tile .source-name{font-weight:700}
+.tile .source-latest,
+.tile .source-latest a{font-weight:400;text-decoration:none!important}
 
 /* Final targeted refinements — preserve the existing design. */
 @media (max-width:430px){
@@ -781,6 +799,7 @@ html,body{max-width:100%;overflow-x:hidden}
 .tile .source-latest,
 .tile .source-latest a{font-weight:400;text-decoration:none!important}
 
+
 /* v17.1 targeted fixes — preserve the existing visual system. */
 @media (max-width:720px){
   .header{grid-template-columns:56px minmax(0,1fr) 56px;padding:0 10px;}
@@ -793,23 +812,6 @@ html,body{max-width:100%;overflow-x:hidden}
 .recipe-card .ingredient-file-group{max-width:none;width:100%;}
 .recipe-card .ingredient-file-details{max-width:none;width:100%;}
 .recipe-card .ingredient-file-details p{max-width:none;overflow-wrap:normal;word-break:normal;}
-
-/* The five recipe utility controls use the site's mint accent with compact padding. */
-.recipe-card .rtop .btn,
-.recipe-card #cookOpen,
-.recipe-card #shareRecipe,
-.recipe-card #printRecipe,
-.recipe-card .rtop .btn:hover,
-.recipe-card #cookOpen:hover,
-.recipe-card #shareRecipe:hover,
-.recipe-card #printRecipe:hover,
-@media (max-width:720px){
-  .recipe-card .rtop .btn,
-  .recipe-card #cookOpen,
-  .recipe-card #shareRecipe,
-  .recipe-card #printRecipe,
-  
-}
 
 /* v18 targeted refinements — preserve existing layout and controls */
 .header .logo{
@@ -847,10 +849,6 @@ html,body{max-width:100%;overflow-x:hidden}
 .recipe-card .recipe-action-row #cookOpen{
   background:rgba(201,255,216,.48);
   border-color:rgba(21,27,31,.28);
-}
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]{
-  background:var(--mint);
-  border-color:var(--mint);
 }
 
 /* Instructions: title bold, body regular, supporting labels visually one level down. */
@@ -933,6 +931,12 @@ html,body{max-width:100%;overflow-x:hidden}
   box-shadow:none;
   overflow:hidden;
 }
+.recipe-card .step-photos .photo-frame .photo{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
 @media (max-width:900px){
   .recipe-card .recipe-action-row{gap:8px;}
@@ -979,6 +983,7 @@ html,body{max-width:100%;overflow-x:hidden}
   .recipe-card .step-copy .step-note{margin-left:12px;padding-left:8px;}
   .recipe-card .step-photos{gap:6px;margin-top:14px;}
 }
+
 
 /* v19 targeted fixes: Jump To Recipe belongs in the recipe header; Recipe Info is five fields only. */
 .recipe-card .recipe-jump-top{
@@ -1051,6 +1056,7 @@ html,body{max-width:100%;overflow-x:hidden}
   }
 }
 
+
 /* v27 targeted fixes — keep existing design while centering Cook Mode controls and tightening note copy. */
 .recipe-card .recipe-action-row{
   display:flex;
@@ -1075,7 +1081,10 @@ html,body{max-width:100%;overflow-x:hidden}
   margin:0 0 12px;
   line-height:1.5;
 }
-
+.recipe-card .notes-list .note-body{
+  margin:0;
+  line-height:1.85;
+}
 .recipe-card .notes-list .note-body br{line-height:1.85;}
 .recipe-card .usual-reference{
   display:block;
@@ -1104,6 +1113,7 @@ html,body{max-width:100%;overflow-x:hidden}
   .recipe-card .notes-list .note-title{margin-bottom:10px;}
 }
 
+
 /* v28 targeted refinements: center the recipe utility row in the viewport on every screen width. */
 .recipe-card .recipe-action-row{
   width:100vw;
@@ -1118,6 +1128,7 @@ html,body{max-width:100%;overflow-x:hidden}
   line-height:1.85;
 }
 .recipe-card .notes-list .note-body br{line-height:inherit;}
+
 
 /* v29 targeted fixes */
 /* Home recipe cards use a consistent 2:3 portrait thumbnail without changing recipe-page imagery. */
@@ -1187,7 +1198,12 @@ body[data-page="home"] .category-card .photo-frame{
 .recipe-card .usual-reference a{
   color:inherit;
 }
-
+.card .photo-frame,
+.card .ph,
+.category-card .photo-frame,
+.category-card .ph{
+  aspect-ratio:2 / 3;
+}
 .recipe-card .instruction-mode,
 .recipe-card .instruction-mode-body{
   margin-left:24px!important;
@@ -1217,6 +1233,7 @@ body[data-page="home"] .category-card .photo-frame{
     padding-left:9px;
   }
 }
+
 
 /* v32 shared fixes — keep the existing design while preventing recipe utilities from clipping. */
 .recipe-card .recipe-action-row{
@@ -1311,18 +1328,20 @@ body[data-page="home"] .category-card .photo-frame{
   }
 }
 
-/* Cook Mode / No Sleep: keep the two existing state colors swapped, including hover/focus. */
-.recipe-card .recipe-action-row #cookOpen,
-.recipe-card .recipe-action-row #cookOpen:hover,
-.recipe-card .recipe-action-row #cookOpen:focus-visible{
-  background:var(--mint)!important;
-  border-color:var(--mint)!important;
+/* Cook Mode / Stay Awake: use the actual role=switch state (aria-checked). */
+.recipe-card .recipe-action-row #cookOpen[aria-checked="false"],
+.recipe-card .recipe-action-row #cookOpen[aria-checked="false"]:hover,
+.recipe-card .recipe-action-row #cookOpen[aria-checked="false"]:focus-visible{
+  background:#888888!important;
+  background-color:#888888!important;
+  border-color:#888888!important;
 }
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"],
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]:hover,
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]:focus-visible{
-  background:rgba(201,255,216,.48)!important;
-  border-color:rgba(21,27,31,.28)!important;
+.recipe-card .recipe-action-row #cookOpen[aria-checked="true"],
+.recipe-card .recipe-action-row #cookOpen[aria-checked="true"]:hover,
+.recipe-card .recipe-action-row #cookOpen[aria-checked="true"]:focus-visible{
+  background:var(--mint)!important;
+  background-color:var(--mint)!important;
+  border-color:var(--mint)!important;
 }
 
 .recipe-card .story-quote{
@@ -1366,12 +1385,14 @@ body[data-page="home"] .category-card .photo-frame{
 }
 .home-tagline p{margin:0;font:inherit;color:inherit;}
 
+
 /* Contact page: body copy left-aligned, sign-off centered. */
 .contact-section .contact-copy{display:flex;flex-direction:column;gap:16px;}
 .contact-section .contact-copy .body-copy{margin:0;text-align:left;}
 .contact-signoff{margin-top:28px;text-align:center;}
 .contact-signoff .contact-star{margin:0 0 10px;text-align:center;}
 .contact-signoff .contact-email{margin:0;text-align:center;}
+
 
 /* ---- site footer ---- */
 .site-footer{margin-top:80px;border-top:1px solid var(--line);padding:38px 20px 46px;text-align:center;font-family:var(--body-font);}
@@ -1463,78 +1484,81 @@ body[data-page="home"] .category-card .photo-frame{
 .recipe-card .ing li > .ingredient-check:focus-within{outline:2px solid currentColor;outline-offset:2px;}
 /* The info link remains a separate interactive element, not nested inside the checkbox label. */
 .recipe-card .ing li > .ingredient-info{display:inline-flex;align-items:center;justify-content:center;min-width:32px;min-height:44px;margin-left:0;}
-
-/* Mint ingredient checkbox with dark tick; keep whole label tappable. */
-.recipe-card .ing input[type="checkbox"]{appearance:none;-webkit-appearance:none;position:relative;width:20px;height:20px;min-width:20px;border:1px solid var(--ink);border-radius:4px;background:var(--mint);vertical-align:middle;cursor:pointer}
-.recipe-card .ing input[type="checkbox"]:checked::after{content:"";position:absolute;left:6px;top:2px;width:5px;height:10px;border:solid var(--ink);border-width:0 2px 2px 0;transform:rotate(45deg)}
-.recipe-card .ing input[type="checkbox"]:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-
-/* Recipe controls — compact icon actions and ingredient cook switch. */
+/* Recipe controls — compact icon actions and ingredient cook switch */
 .recipe-card .recipe-action-row{display:flex;justify-content:flex-end;gap:10px;margin:16px 0 0;flex-wrap:nowrap;width:100%}
 .recipe-card .recipe-action-row .recipe-icon-btn{display:inline-flex;align-items:center;justify-content:center;flex:0 0 42px;width:42px;min-width:42px;max-width:42px;height:42px;min-height:42px;padding:9px;border-radius:50%;background:var(--mint);border:1px solid var(--bg);color:var(--ink)}
-
+.recipe-card .recipe-action-row .recipe-icon-btn svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .recipe-card .recipe-action-row #favRecipe[aria-pressed="true"]{background:var(--mint);color:var(--ink)}
-
+.recipe-card .recipe-action-row #favRecipe[aria-pressed="true"] svg{fill:var(--ink)}
+.recipe-card .recipe-action-row .recipe-icon-btn:hover{border-color:var(--ink)}
 .recipe-card .ingredient-heading-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:34px;margin-bottom:18px;flex-wrap:wrap}
 .recipe-card .cook-switch-control{display:inline-flex;align-items:center;gap:10px;font-size:14px;cursor:pointer}
 .recipe-card .cook-switch{width:48px;height:28px;padding:3px;border-radius:999px;border:1px solid var(--ink);background:var(--bg);display:inline-flex;align-items:center;cursor:pointer;transition:background .2s}
-
-@media(max-width:430px){.recipe-card .recipe-action-row{gap:8px}.recipe-card .recipe-action-row .recipe-icon-btn{flex-basis:40px;width:40px;min-width:40px;height:40px;min-height:40px}.recipe-card .ingredient-heading-row{margin-top:28px}}
-
-/* Stay Awake + recipe actions: left-aligned switch/help, right-aligned icon group. */
-.recipe-card .recipe-action-row{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;margin:18px 0 0;flex-wrap:wrap}
-.recipe-card .stay-awake-control{flex:1 1 220px;min-width:0}
-.recipe-card .stay-awake-main{display:flex;align-items:center;gap:12px;min-height:42px}
-.recipe-card .stay-awake-label{font-size:15px;font-weight:600;line-height:1.3}
-.recipe-card .stay-awake-help{margin:3px 0 0;font-size:12px;line-height:1.45;opacity:.76}
-.recipe-card .recipe-action-icons{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex:0 0 auto}
-.recipe-card .recipe-action-row .recipe-icon-btn{display:inline-flex;align-items:center;justify-content:center;flex:0 0 42px;width:42px;min-width:42px;max-width:42px;height:42px;min-height:42px;margin:0;padding:9px;border-radius:50%;background:var(--mint);border:1px solid var(--bg);color:var(--ink)}
-.recipe-card .recipe-action-row .recipe-icon-btn svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.recipe-card .recipe-action-row #favRecipe[aria-pressed="true"] svg{fill:var(--ink)}
-.recipe-card .recipe-action-row .recipe-icon-btn:hover{border-color:var(--ink)}
-.recipe-card .cook-switch{flex:0 0 48px;width:48px;height:28px;min-width:48px;padding:3px;border-radius:999px;border:1px solid var(--ink);background:var(--bg);display:inline-flex;align-items:center;cursor:pointer;transition:background .2s}
 .recipe-card .cook-switch-knob{width:20px;height:20px;background:var(--paper);border:1px solid var(--ink);border-radius:50%;transition:transform .2s}
 .recipe-card .cook-switch[aria-checked="true"]{background:var(--mint)}
 .recipe-card .cook-switch[aria-checked="true"] .cook-switch-knob{transform:translateX(20px);background:var(--ink)}
 .recipe-card .cook-switch:focus-visible,.recipe-card .recipe-icon-btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
-.recipe-card .ingredient-heading-row{display:flex;align-items:center;justify-content:flex-start;gap:12px;margin-top:34px;margin-bottom:18px;flex-wrap:wrap}
-@media(max-width:520px){.recipe-card .recipe-action-row{align-items:flex-start;gap:14px}.recipe-card .stay-awake-control{flex:1 1 100%}.recipe-card .recipe-action-icons{margin-left:auto;gap:8px}.recipe-card .recipe-action-row .recipe-icon-btn{flex-basis:40px;width:40px;min-width:40px;height:40px;min-height:40px}}
+/* Mint ingredient checkbox with dark tick; keep whole label tappable. */
+.recipe-card .ing input[type="checkbox"]{appearance:none;-webkit-appearance:none;position:relative;width:20px;height:20px;min-width:20px;border:1px solid var(--ink);border-radius:4px;background:var(--mint);vertical-align:middle;cursor:pointer}
+.recipe-card .ing input[type="checkbox"]:checked::after{content:"";position:absolute;left:6px;top:2px;width:5px;height:10px;border:solid var(--ink);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.recipe-card .ing input[type="checkbox"]:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+@media(max-width:430px){.recipe-card .recipe-action-row{gap:8px}.recipe-card .recipe-action-row .recipe-icon-btn{flex-basis:40px;width:40px;min-width:40px;height:40px;min-height:40px}.recipe-card .ingredient-heading-row{margin-top:28px}}
+/* THE AFTERTASTE — MIDNIGHT RECIPES existing palette */
+.review-form > .h3{margin:0 0 8px;color:var(--head);}
+.review-form .review-intro{margin:0 0 20px;line-height:1.65;color:var(--ink)}
+.review-form #submitReview{background:var(--mint);color:var(--ink)}
 
-/* Definitive ON/OFF colors for the Cook Mode button and Stay Awake switch.
-   OFF must be gray; ON must be mint. State attributes are the source of truth. */
-.recipe-card .recipe-action-row #cookOpen,
-.recipe-card .recipe-action-row #cookOpen:hover,
-.recipe-card .recipe-action-row #cookOpen:focus-visible,
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="false"],
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="false"]:hover,
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="false"]:focus-visible,
-.recipe-card .cook-switch,
-.recipe-card .cook-switch:hover,
-.recipe-card .cook-switch:focus-visible,
-.recipe-card .cook-switch[aria-checked="false"],
-.recipe-card .cook-switch[aria-checked="false"]:hover,
-.recipe-card .cook-switch[aria-checked="false"]:focus-visible {
-  background: #888888 !important;
-  background-color: #888888 !important;
-  border-color: #888888 !important;
+/* Stay Awake + recipe actions: left-aligned switch/help, right-aligned icon group. */
+.recipe-card .recipe-action-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  width:100%;
+  margin:18px 0 0;
+  flex-wrap:wrap;
 }
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"],
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]:hover,
-.recipe-card .recipe-action-row #cookOpen[aria-pressed="true"]:focus-visible,
-.recipe-card .cook-switch[aria-checked="true"],
-.recipe-card .cook-switch[aria-checked="true"]:hover,
-.recipe-card .cook-switch[aria-checked="true"]:focus-visible {
-  background: #C9FFD8 !important;
-  background-color: #C9FFD8 !important;
-  border-color: #C9FFD8 !important;
+.recipe-card .stay-awake-control{flex:1 1 220px;min-width:0;}
+.recipe-card .stay-awake-main{display:flex;align-items:center;gap:12px;min-height:42px;}
+.recipe-card .stay-awake-label{font-size:15px;font-weight:600;line-height:1.3;}
+.recipe-card .stay-awake-help{margin:3px 0 0;font-size:12px;line-height:1.45;opacity:.76;}
+.recipe-card .recipe-action-icons{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex:0 0 auto;}
+.recipe-card .recipe-action-row .recipe-icon-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  flex:0 0 42px;width:42px;min-width:42px;max-width:42px;
+  height:42px;min-height:42px;margin:0;padding:9px;
+  border-radius:50%;background:var(--mint);border:1px solid var(--bg);color:var(--ink);
 }
-.recipe-card .cook-switch .cook-switch-knob {
-  background: #FFFFFF !important;
+.recipe-card .recipe-action-row .recipe-icon-btn svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.recipe-card .recipe-action-row #favRecipe[aria-pressed="true"] svg{fill:var(--ink);}
+.recipe-card .recipe-action-row .recipe-icon-btn:hover{border-color:var(--ink);}
+.recipe-card .cook-switch{flex:0 0 48px;width:48px;height:28px;min-width:48px;padding:3px;border-radius:999px;border:1px solid var(--ink);background:var(--bg);display:inline-flex;align-items:center;cursor:pointer;transition:background .2s;}
+.recipe-card .cook-switch-knob{width:20px;height:20px;background:var(--paper);border:1px solid var(--ink);border-radius:50%;transition:transform .2s;}
+.recipe-card .cook-switch[aria-checked="true"]{background:var(--mint);}
+.recipe-card .cook-switch[aria-checked="true"] .cook-switch-knob{transform:translateX(20px);background:var(--ink);}
+.recipe-card .cook-switch:focus-visible,.recipe-card .recipe-icon-btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px;}
+.recipe-card .ingredient-heading-row{display:flex;align-items:center;justify-content:flex-start;gap:12px;margin-top:34px;margin-bottom:18px;flex-wrap:wrap;}
+@media(max-width:520px){
+  .recipe-card .recipe-action-row{align-items:flex-start;gap:14px;}
+  .recipe-card .stay-awake-control{flex:1 1 100%;}
+  .recipe-card .recipe-action-icons{margin-left:auto;gap:8px;}
+  .recipe-card .recipe-action-row .recipe-icon-btn{flex-basis:40px;width:40px;min-width:40px;height:40px;min-height:40px;}
 }
-.recipe-card .cook-switch[aria-checked="false"] .cook-switch-knob {
-  transform: translateX(0) !important;
+
+
+/* Final state-specific colors for the Stay Awake switch.
+   This control uses aria-checked, not aria-pressed. */
+.recipe-card .recipe-action-row button#cookOpen.cook-switch[aria-checked="false"],
+.recipe-card .recipe-action-row button#cookOpen.cook-switch[aria-checked="false"]:hover,
+.recipe-card .recipe-action-row button#cookOpen.cook-switch[aria-checked="false"]:focus-visible{
+  background:#888888!important;
+  background-color:#888888!important;
+  border-color:#888888!important;
 }
-.recipe-card .cook-switch[aria-checked="true"] .cook-switch-knob {
-  transform: translateX(20px) !important;
-  background: #FFFFFF !important;
+.recipe-card .recipe-action-row button#cookOpen.cook-switch[aria-checked="true"],
+.recipe-card .recipe-action-row button#cookOpen.cook-switch[aria-checked="true"]:hover,
+.recipe-card .recipe-action-row button#cookOpen.cook-switch[aria-checked="true"]:focus-visible{
+  background:var(--mint)!important;
+  background-color:var(--mint)!important;
+  border-color:var(--mint)!important;
 }
