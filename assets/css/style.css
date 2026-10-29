@@ -1563,107 +1563,33 @@ body[data-page="home"] .category-card .photo-frame{
   border-color:var(--mint)!important;
 }
 
-/* MIDNIGHT RECIPES — Ingredient File readability */
-.recipe-card #ingredient-file-section .ingredient-file-group {
-  width: 100%;
-  max-width: none;
-  margin: 0 0 30px;
-  padding: 0 0 22px;
-  border-bottom: 1px solid rgba(21, 27, 31, 0.14);
-  scroll-margin-top: 96px;
-}
 
-.recipe-card #ingredient-file-section .ingredient-file-group:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: 0;
+/* Ingredient File — ingredient-first layout */
+.recipe-card #ingredient-file-section .ingredient-file{display:block;width:100%;}
+.recipe-card #ingredient-file-section .ingredient-file-group{
+  width:100%;max-width:72ch;margin:0 0 30px;padding:0 0 26px;
+  border-bottom:1px solid var(--line, rgba(120,120,120,.25));
+  scroll-margin-top:100px;
 }
-
-/* Ingredient names: clear, prominent headings */
-.recipe-card #ingredient-file-section .ingredient-file-group > .ingredient-file-name {
-  margin: 0 0 12px;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 1.4;
-  letter-spacing: 0;
+.recipe-card #ingredient-file-section .ingredient-file-group:last-child{margin-bottom:0;padding-bottom:0;border-bottom:0;}
+.recipe-card #ingredient-file-section .ingredient-file-name{
+  margin:0;font-size:clamp(18px,2vw,21px);font-weight:700;line-height:1.35;letter-spacing:.015em;
 }
-
-/* Supporting information */
-.recipe-card #ingredient-file-section .ingredient-file-details {
-  width: 100%;
-  max-width: none;
+.recipe-card #ingredient-file-section .ingredient-file-tag{
+  margin:5px 0 17px;font-size:11px;font-weight:700;line-height:1.5;
+  letter-spacing:.13em;text-transform:uppercase;color:var(--muted, #777);
 }
-
-.recipe-card #ingredient-file-section .ingredient-file-details p {
-  margin: 0 0 10px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.8;
-  overflow-wrap: break-word;
-  word-break: normal;
+.recipe-card #ingredient-file-section .ingredient-file-details{display:grid;gap:13px;width:100%;}
+.recipe-card #ingredient-file-section .ingredient-file-detail{display:grid;grid-template-columns:minmax(105px,155px) minmax(0,1fr);gap:14px;align-items:start;}
+.recipe-card #ingredient-file-section .ingredient-file-subtitle{margin:0;padding-top:1px;}
+.recipe-card #ingredient-file-section .ingredient-file-subtitle strong{
+  font-size:11px;font-weight:700;line-height:1.55;letter-spacing:.09em;text-transform:uppercase;color:var(--muted, #777);
 }
-
-.recipe-card #ingredient-file-section .ingredient-file-details p:last-child {
-  margin-bottom: 0;
+.recipe-card #ingredient-file-section .ingredient-file-details p{margin:0;max-width:none;width:100%;font-size:15px;line-height:1.75;overflow-wrap:break-word;}
+@media(max-width:600px){
+  .recipe-card #ingredient-file-section .ingredient-file-group{margin-bottom:25px;padding-bottom:22px;}
+  .recipe-card #ingredient-file-section .ingredient-file-tag{margin:4px 0 14px;}
+  .recipe-card #ingredient-file-section .ingredient-file-details{gap:12px;}
+  .recipe-card #ingredient-file-section .ingredient-file-detail{grid-template-columns:1fr;gap:3px;}
+  .recipe-card #ingredient-file-section .ingredient-file-details p{font-size:15px;line-height:1.75;}
 }
-
-/* Labels: visually secondary to the explanation */
-.recipe-card #ingredient-file-section .ingredient-file-details strong {
-  font-size: 0.76em;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-}
-
-/* Mobile refinement */
-@media (max-width: 720px) {
-  .recipe-card #ingredient-file-section .ingredient-file-group {
-    margin-bottom: 24px;
-    padding-bottom: 18px;
-  }
-
-  .recipe-card #ingredient-file-section .ingredient-file-group > .ingredient-file-name {
-    margin-bottom: 10px;
-    font-size: 19px;
-  }
-
-  .recipe-card #ingredient-file-section .ingredient-file-details p {
-    margin-bottom: 8px;
-    font-size: 15px;
-    line-height: 1.8;
-  }
-}
-
-/* Ingredient File readability: subtitles, descriptions, and subtle group separation */
-.recipe-card .ingredient-file-group{
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(21,27,31,.12);
-}
-.recipe-card .ingredient-file-group:last-child{
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-.recipe-card .ingredient-file-detail{
-  margin: 0 0 14px;
-}
-.recipe-card .ingredient-file-detail:last-child{
-  margin-bottom: 0;
-}
-.recipe-card .ingredient-file-subtitle{
-  margin: 0 0 3px;
-  line-height: 1.5;
-}
-.recipe-card .ingredient-file-details .ingredient-file-detail p{
-  margin: 0;
-  line-height: 1.7;
-}
-@media (max-width:720px){
-  .recipe-card .ingredient-file-group{
-    padding-bottom: 17px;
-    margin-bottom: 22px;
-  }
-  .recipe-card .ingredient-file-detail{
-    margin-bottom: 12px;
-  }
-}
-
