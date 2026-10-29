@@ -1564,32 +1564,48 @@ body[data-page="home"] .category-card .photo-frame{
 }
 
 
-/* Ingredient File — ingredient-first layout */
-.recipe-card #ingredient-file-section .ingredient-file{display:block;width:100%;}
+/* Ingredient File — full-width, tag-first, vertically stacked details */
+.recipe-card #ingredient-file-section{width:100%;max-width:none;box-sizing:border-box;}
+.recipe-card #ingredient-file-section .ingredient-file{display:block;width:100%;max-width:none;box-sizing:border-box;}
 .recipe-card #ingredient-file-section .ingredient-file-group{
-  width:100%;max-width:72ch;margin:0 0 30px;padding:0 0 26px;
+  display:block;width:100%;max-width:none;box-sizing:border-box;margin:0 0 30px;padding:0 0 26px;
   border-bottom:1px solid var(--line, rgba(120,120,120,.25));
   scroll-margin-top:100px;
 }
 .recipe-card #ingredient-file-section .ingredient-file-group:last-child{margin-bottom:0;padding-bottom:0;border-bottom:0;}
 .recipe-card #ingredient-file-section .ingredient-file-name{
-  margin:0;font-size:clamp(18px,2vw,21px);font-weight:700;line-height:1.35;letter-spacing:.015em;
+  margin:0 0 17px;font-size:clamp(18px,2vw,21px);font-weight:700;line-height:1.35;letter-spacing:.015em;
 }
 .recipe-card #ingredient-file-section .ingredient-file-tag{
-  margin:5px 0 17px;font-size:11px;font-weight:700;line-height:1.5;
+  margin:0 0 5px;font-size:11px;font-weight:700;line-height:1.5;
   letter-spacing:.13em;text-transform:uppercase;color:var(--muted, #777);
 }
-.recipe-card #ingredient-file-section .ingredient-file-details{display:grid;gap:13px;width:100%;}
-.recipe-card #ingredient-file-section .ingredient-file-detail{display:grid;grid-template-columns:minmax(105px,155px) minmax(0,1fr);gap:14px;align-items:start;}
+.recipe-card #ingredient-file-section .ingredient-file-details{display:grid;grid-template-columns:minmax(0,1fr);gap:15px;width:100%;max-width:none;}
+.recipe-card #ingredient-file-section .ingredient-file-detail{display:flex;flex-direction:column;align-items:stretch;gap:4px;width:100%;min-width:0;}
 .recipe-card #ingredient-file-section .ingredient-file-subtitle{margin:0;padding-top:1px;}
 .recipe-card #ingredient-file-section .ingredient-file-subtitle strong{
   font-size:11px;font-weight:700;line-height:1.55;letter-spacing:.09em;text-transform:uppercase;color:var(--muted, #777);
 }
-.recipe-card #ingredient-file-section .ingredient-file-details p{margin:0;max-width:none;width:100%;font-size:15px;line-height:1.75;overflow-wrap:break-word;}
+.recipe-card #ingredient-file-section .ingredient-file-details p{display:block;margin:0;max-width:none;width:100%;font-size:15px;line-height:1.75;overflow-wrap:anywhere;box-sizing:border-box;}
 @media(max-width:600px){
   .recipe-card #ingredient-file-section .ingredient-file-group{margin-bottom:25px;padding-bottom:22px;}
-  .recipe-card #ingredient-file-section .ingredient-file-tag{margin:4px 0 14px;}
+  .recipe-card #ingredient-file-section .ingredient-file-tag{margin:0 0 4px;}
   .recipe-card #ingredient-file-section .ingredient-file-details{gap:12px;}
-  .recipe-card #ingredient-file-section .ingredient-file-detail{grid-template-columns:1fr;gap:3px;}
+  .recipe-card #ingredient-file-section .ingredient-file-detail{display:flex;flex-direction:column;gap:3px;}
   .recipe-card #ingredient-file-section .ingredient-file-details p{font-size:15px;line-height:1.75;}
 }
+
+
+/* Ingredient File layout correction: occupy the full available column and stack label above copy. */
+.recipe-card #ingredient-file-section,
+.recipe-card #ingredient-file-section .ingredient-file,
+.recipe-card #ingredient-file-section .ingredient-file-group,
+.recipe-card #ingredient-file-section .ingredient-file-details,
+.recipe-card #ingredient-file-section .ingredient-file-detail{
+  width:100%;max-width:none;min-width:0;box-sizing:border-box;
+}
+.recipe-card #ingredient-file-section .ingredient-file-detail{
+  display:flex;flex-direction:column;align-items:stretch;gap:4px;
+}
+.recipe-card #ingredient-file-section .ingredient-file-tag{order:0;}
+.recipe-card #ingredient-file-section .ingredient-file-name{order:1;}
