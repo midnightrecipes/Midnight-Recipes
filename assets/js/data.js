@@ -25,13 +25,51 @@ window.MIDNIGHT_RECIPES = [
 It’s kind of funny, but the tired-er I am, the more I actually want to bake late at night. There’s just something so comforting about tuning everything out and focusing on simple things—whisking milk, watching chocolate slowly melt, and just letting the night quiet down. Tonight, this pie was exactly what I needed. Rich, super chocolatey, and pure comfort in every bite.
 
 The real secret here... Just use a dark chocolate that you’d happily eat straight out of the wrapper. It gives you this incredibly smooth, rich filling that isn't crazy sweet. Plus, it’s one of those desserts people always get excited about—seeing friends take that first bite and smile makes all the late-night whisking 100% worth it!`,
-    ingredientFile:[
-      {name:"GRAHAM CRACKERS",details:[["Origin","An American cracker made with graham flour, named after Sylvester Graham, a 19th-century food reformer."],["Flavor & Texture","Graham crackers make a lightly sweet, crisp crust that balances the rich chocolate filling."],["Baked vs. Unbaked","I recommend baking the crust if you want it to stay crisp, even after the pie chills overnight. An unbaked crust saves time, but it tends to be softer and more moist. If you’re making this pie ahead for the next day, baking the crust is worth the extra few minutes."],["Substitute","Digestive biscuits, chocolate wafers, Oreo-style cookies, or a store-bought pie crust."],["Midnight Fix","If using Oreo-style cookies, remove the filling first and adjust the butter as needed. The cookies already contain fat and sugar, so you may need less butter."]]},
-      {name:"DARK CHOCOLATE",details:[["Flavor","Chocolate is the heart of this pie, so choose one you genuinely enjoy eating on its own."],["Best Choice","60–70% dark chocolate gives the filling a deep chocolate flavor without making it too sweet."],["A Little Splurge","And yes, baking chocolate works perfectly well. But we work hard every day, so why not treat ourselves to something special? Toronto has some lovely local chocolate makers, including SOMA and ChocoSol. If you feel like a little splurge, this pie is a good excuse to use chocolate you really love."],["Substitute","Semi-sweet chocolate."],["Midnight Fix","If using sweeter chocolate, try reducing the sugar to 50–60 g. Taste the filling before chilling and adjust to your preference."]]},
-      {name:"ESPRESSO POWDER",details:[["Why Here","A little espresso powder can bring out the chocolate flavor without making the filling taste strongly of coffee. It adds depth while letting the chocolate remain the star."],["Substitute","Instant coffee powder. Start with a small amount, since the flavor and strength vary by brand."]]},
-      {name:"UNSWEETENED COCOA POWDER",details:[["Why Here","Cocoa powder adds a deeper chocolate flavor without adding much sweetness. Together with dark chocolate, it gives the filling a more layered chocolate taste."],["Best Choice","Dutch-process cocoa powder is a good fit for this creamy filling. It is less acidic than natural cocoa powder and usually has a darker color and a smoother, rounder flavor. Since this recipe does not rely on cocoa to activate baking soda, you can choose Dutch-process cocoa for its flavor and color without needing to consider that reaction."],["Substitute","Natural unsweetened cocoa powder also works, but the flavor may be a little sharper and the color lighter."],["Can’t Find Cocoa Powder?","You can try leaving it out and adding 20–30 g extra dark chocolate. This changes the balance of chocolate, fat, and starch, so the filling may set differently. Treat this as an adjustment to test rather than a guaranteed one-to-one replacement."]]},
-      {name:"WHOLE MILK",details:[["Why Here","Whole milk adds moisture and some fat, helping create a creamy chocolate filling."],["Substitute","2% milk can work, but the filling may be a little less rich."],["Midnight Fix","You could try adding 1 tbsp extra butter when using 2% milk for a richer mouthfeel. This is an adjustment to test rather than a guaranteed replacement."]]}
-    ],
+    ingredientFile: [
+  {
+    name: "GRAHAM CRACKERS",
+    tag: "THE CRUST FOUNDATION",
+    details: [["Why It Matters", "Creates a lightly sweet, crisp crust that balances the rich chocolate filling."],
+      ["Baked vs. Unbaked", "Baking helps the crust stay crisp, even after chilling overnight. An unbaked crust saves time but tends to be softer and more moist. If making the pie ahead, baking is worth the extra few minutes."],
+      ["Substitute", "Digestive biscuits, chocolate wafers, Oreo-style cookies, or a store-bought pie crust."],
+      ["Midnight Fix", "For Oreo-style cookies, remove the filling first and adjust the butter as needed. The cookies already contain fat and sugar, so you may need less butter."]
+    ]
+  },
+  {
+    name: "DARK CHOCOLATE",
+    tag: "THE STAR INGREDIENT",
+    details: [["Why It Matters", "The heart of the pie. Choose chocolate you genuinely enjoy eating on its own."],
+      ["Best Choice", "60–70% dark chocolate gives the filling deep chocolate flavor without making it too sweet."],
+      ["A Little Splurge", "Baking chocolate works perfectly well, but why not treat yourself to something special? Toronto has great local chocolate makers, including SOMA and ChocoSol. This pie is a good excuse to use chocolate you really love."],
+      ["Substitute", "Semi-sweet chocolate."],
+      ["Midnight Fix", "If using sweeter chocolate, try reducing the sugar to 50–60 g. Taste the filling before chilling and adjust to your preference."]
+    ]
+  },
+  {
+    name: "ESPRESSO POWDER",
+    tag: "THE FLAVOR BOOSTER",
+    details: [["Why It Matters", "Deepens the chocolate flavor without making the filling taste strongly of coffee."],
+      ["Substitute", "Instant coffee powder. Start with a small amount, since flavor and strength vary by brand."]
+    ]
+  },
+  {
+    name: "UNSWEETENED COCOA POWDER",
+    tag: "THE CHOCOLATE DEEPENER",
+    details: [["Why It Matters", "Adds a deeper, less sweet chocolate flavor that layers beautifully with dark chocolate."],
+      ["Best Choice", "Dutch-process cocoa is a good fit for this creamy filling. Its lower acidity, darker color, and smoother flavor complement the chocolate. Since this recipe does not rely on cocoa to activate baking soda, you can choose it for flavor and color."],
+      ["Substitute", "Natural unsweetened cocoa powder also works, though the flavor may be sharper and the color lighter."],
+      ["Can't Find Cocoa Powder?", "You can try leaving it out and adding 20–30 g extra dark chocolate. This changes the balance of chocolate, fat, and starch, so the filling may set differently. Treat this as an adjustment to test rather than a guaranteed one-to-one replacement."]
+    ]
+  },
+  {
+    name: "WHOLE MILK",
+    tag: "THE CREAMINESS BUILDER",
+    details: [["Why It Matters", "Adds moisture and fat to help create a creamy chocolate filling."],
+      ["Substitute", "2% milk can work, but the filling may be a little less rich."],
+      ["Midnight Fix", "Try adding 1 tbsp extra butter when using 2% milk for a richer mouthfeel. This is an adjustment to test rather than a guaranteed replacement."]
+    ]
+  }
+],
     ingredients:[
       {group:'Crust'},{amount:200,unit:'g',item:'Graham Crackers, Finely Crushed'},{amount:76,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Unsalted Butter, Melted'},
       {group:'Chocolate Filling'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark Chocolate, Chopped'},{amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Espresso Powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened Cocoa Powder'},{amount:4,unit:'',imperialAmount:4,imperialUnit:'',item:'Egg Yolks'},{amount:75,unit:'g',imperialAmount:6,imperialUnit:'tbsp',item:'Granulated Sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:480,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole Milk'},{amount:21,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Unsalted Butter'},
