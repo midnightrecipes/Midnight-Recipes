@@ -183,7 +183,7 @@ function categoryLink(type,value){const map={source:'pages/source.html',course:'
 function normalizeIngredientFile(value){
   if(!value)return {groups:[],name:'',items:[]};
   if(Array.isArray(value)&&value.some(x=>x&&typeof x==='object'&&!Array.isArray(x)&&('details' in x||'items' in x))){
-    const groups=value.map(g=>{const name=g?.name||g?.label||'';const details=g?.details||g?.items||[];const items=Array.isArray(details)?details.map(item=>{if(Array.isArray(item))return [String(item[0]||''),String(item[1]??'')];const label=item?.label||item?.name;const text=item?.text??item?.value??item?.description;return label&&text!=null?[String(label),String(text)]:null}).filter(Boolean).filter(([k])=>!/^\d+$/.test(k.trim())):[];return {name:String(name),items};}).filter(g=>g.name||g.items.length);
+    const groups=value.map(g=>{const name=g?.name||g?.label||'';const details=g?.details||g?.items||[];const items=Array.isArray(details)?details.map(item=>{if(Array.isArray(item))return [String(item[0]||''),String(item[1]??'')];const label=item?.label||item?.name;const text=item?.text??item?.value??item?.description;return label&&text!=null?[String(label),String(text)]:null}).filter(Boolean).filter(([k])=>!/^\d+$/.test(k.trim())):[];return {name:String(name),tag:String(g?.tag||g?.role||''),items};}).filter(g=>g.name||g.items.length||g.tag);
     return {groups,name:'',items:[]};
   }
   if(Array.isArray(value)){
@@ -412,7 +412,14 @@ function normalizeIngredientText(value){return String(value??'').toLowerCase().r
 function ingredientFileKey(value){const n=normalizeIngredientText(value);if(n.includes('graham cracker'))return 'graham crackers';if(n.includes('dark chocolate'))return 'dark chocolate';if(n.includes('espresso powder'))return 'espresso powder';if(n.includes('unsweetened cocoa powder')||n==='cocoa powder')return 'unsweetened cocoa powder';if(n.includes('3 25 milk')||n.includes('3.25 milk'))return '3.25% milk';if(n.includes('fatty ground pork')||n.includes('ground pork'))return 'ground pork';if(n.includes('fresh red chili'))return 'fresh red chili';if(n.includes('makrut lime leaf'))return 'makrut lime leaf';if(n==='garlic'||n.includes(' garlic'))return 'garlic';if(n.includes('doubanjiang'))return 'doubanjiang';if(n==='apple'||n==='apples')return 'apple';if(n==='whole milk')return 'whole milk';if(n.includes('35% whipping cream')||n.includes('whipping cream'))return '35% whipping cream';return n}
 function ingredientFileAnchorMap(r){const map={};normalizeIngredientFile(r.ingredientFile).groups.forEach(g=>{map[ingredientFileKey(g.name)]=g.name});return map}
 function ingredientInfoLink(r,item,enabled=true){if(!enabled)return '';const key=ingredientFileKey(item);if(!key)return '';const map=ingredientFileAnchorMap(r);const actual=map[key]||Object.entries(map).find(([k])=>key===k||key.includes(k)||k.includes(key))?.[1];if(!actual)return '';return ` <a class=\"ingredient-info\" href=\"#ingredient-file-${slugify(actual)}\" aria-label=\"Ingredient File: ${esc(actual)}\">ⓘ</a>`}
-function ingredientFileMarkup(r,ingredientFile){const groups=ingredientFile.groups;return groups.map(g=>`<div class="ingredient-file-group" id="ingredient-file-${slugify(g.name)}"><div class="ingredient-file-name">${esc(g.name)}</div><div class="ingredient-file-details">${g.items.filter(([k,v])=>hasMeaningfulValue(k)&&hasMeaningfulValue(v)).map(([k,v])=>`<div class="ingredient-file-detail"><div class="ingredient-file-subtitle"><strong>${esc(k)}</strong></div><p>${richText(v)}</p></div>`).join('')}</div></div>`).join('')}
+function ingredientFileMarkup(r,ingredientFile){
+  const groups=ingredientFile.groups;
+  return groups.map(g=>`<article class="ingredient-file-group" id="ingredient-file-${slugify(g.name)}">
+    <h3 class="ingredient-file-name">${esc(g.name)}</h3>
+    ${g.tag?`<p class="ingredient-file-tag">${esc(g.tag)}</p>`:''}
+    <div class="ingredient-file-details">${g.items.filter(([k,v])=>hasMeaningfulValue(k)&&hasMeaningfulValue(v)&&!/^origin$/i.test(k.trim())).map(([k,v])=>`<div class="ingredient-file-detail"><div class="ingredient-file-subtitle"><strong>${esc(k)}</strong></div><p>${richText(v)}</p></div>`).join('')}</div>
+  </article>`).join('')
+}
 function splitFooterValues(value){return String(value??'').split(/\s*(?:·|,|\/)\s*/).map(x=>x.trim()).filter(Boolean)}
 function footerFilterLink(type,value){
   if(!hasMeaningfulValue(value))return '';
