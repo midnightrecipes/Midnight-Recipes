@@ -415,8 +415,8 @@ function ingredientInfoLink(r,item,enabled=true){if(!enabled)return '';const key
 function ingredientFileMarkup(r,ingredientFile){
   const groups=ingredientFile.groups;
   return groups.map(g=>`<article class="ingredient-file-group" id="ingredient-file-${slugify(g.name)}">
-    <h3 class="ingredient-file-name">${esc(g.name)}</h3>
     ${g.tag?`<p class="ingredient-file-tag">${esc(g.tag)}</p>`:''}
+    <h3 class="ingredient-file-name">${esc(g.name)}</h3>
     <div class="ingredient-file-details">${g.items.filter(([k,v])=>hasMeaningfulValue(k)&&hasMeaningfulValue(v)&&!/^origin$/i.test(k.trim())).map(([k,v])=>`<div class="ingredient-file-detail"><div class="ingredient-file-subtitle"><strong>${esc(k)}</strong></div><p>${richText(v)}</p></div>`).join('')}</div>
   </article>`).join('')
 }
