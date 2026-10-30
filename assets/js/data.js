@@ -1041,10 +1041,17 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
     dateAdded:'2026-10-08',
     timeStamp:'10:15 PM',
     description:'Inspired by sweet chili sauce and crushed peanuts served with Thai fish cakes, this chicken brings together sweet, tangy, spicy, and nutty flavors in a quick homemade dish.',
-    story:`I first fell for the combination of sweet chili sauce and peanuts in Thailand, where sweet chili sauce and crushed peanuts were served alongside crispy Thai fish cakes (Tod Mun Pla).
-But actually, the sauce was the best part of the dish. That sweet, tangy, slightly spicy, nutty combination stayed with me long after the trip.
-Thailand isn't exactly a quick midnight trip from Toronto, so I decided to bring that memory home instead. I had some chicken in the fridge and wondered: what if I gave it that sauce?
-This isn't a traditional Thai dish. It's simply my midnight attempt to recreate a Thai-inspired flavor I couldn't forget.`,
+    story:`I first fell in love with the combination of sweet chili sauce and peanuts in Thailand. They were served alongside crispy Thai fish cakes (Tod Mun Pla), and honestly, I think I enjoyed the sauce just as much as the fish cakes, if not more.
+
+It was sweet, tangy, a little spicy, and had that nice crunch from the crushed peanuts. Such a simple combination, but I couldn't stop thinking about it even after I got back home.
+
+Thailand isn't exactly around the corner from Toronto, and going back just for that sauce wasn't really an option. So one night, with some chicken sitting in the fridge, I started wondering if I could bring those flavors into a dish of my own.
+
+I decided to give it a try.
+
+This isn't a traditional Thai dish, and I'm not trying to recreate the original fish cakes. I just wanted to bring back a flavor I really liked and see what I could make with it.
+
+And that's how this recipe came about. Sometimes, it's not the dish itself that stays with you, but a flavor you just can't forget.`,
     heroImage:'images/recipes/sweet-chili-peanut-chicken/hero.jpg',
     recipeImage:'images/recipes/sweet-chili-peanut-chicken/recipe.jpg',
     stepQuantityConversion:true,
