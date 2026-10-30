@@ -1609,3 +1609,15 @@ body[data-page="home"] .category-card .photo-frame{
 }
 .recipe-card #ingredient-file-section .ingredient-file-tag{order:0;}
 .recipe-card #ingredient-file-section .ingredient-file-name{order:1;}
+/* Ingredient File: match Story and main recipe body typography. */
+.recipe-card .ingredient-file-details p{
+  font-size:17px;
+  line-height:2;
+}
+
+@media (max-width:720px){
+  .recipe-card .ingredient-file-details p{
+    font-size:17px;
+    line-height:1.9;
+  }
+}
