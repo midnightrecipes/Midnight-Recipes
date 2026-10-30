@@ -148,56 +148,59 @@ What makes it so addictive isn't just the heat—it’s that intense, punchy wal
 
 Tonight, I’m taking that iconic flavor and making the ground pork the star, serving it over hot rice with a rich soft-boiled egg. As you break the egg, the creamy, runny yolk flows into the spicy mince, perfectly cutting through the fiery punch and rounding out all those sharp garlic notes. It’s dangerous, intensely savory, and so good it might just keep me up all night.`,
     ingredientFile:[
-      {
-        name:'FATTY GROUND PORK',
-        details:[
-          ['Why Fatty Pork','The fat is more than a texture choice—it carries much of the dish’s flavor. As the pork renders, its fat picks up chili aroma and the color and savory compounds released from doubanjiang, helping create a glossy coating that clings to the meat and rice.'],
-          ['Best Choice','Look for ground pork with roughly 20–30% fat, often sold as regular rather than lean ground pork. The exact ratio varies by product.'],
-          ['Substitute','Ground chicken made with dark meat or ground turkey can work, but both are leaner. Add a little extra sesame or neutral vegetable oil if needed; the result will still taste different from pork cooked in its own fat.'],
-          ['Midnight Fix','If the mince tastes dry because the pork is very lean, stir in a small splash of sesame or neutral oil at the end. Add a little at a time so the finished mince stays glossy rather than greasy.']
-        ]
-      },
-      {
-        name:'FRESH RED CHILI',
-        details:[
-          ['Origin','Fresh red chilies are used widely across East and Southeast Asian cuisines, with varieties ranging from bright and fruity to intensely hot.'],
-          ['Fresh vs. Dried','Dried chilies bring concentrated, rounded heat, while fresh red chilies can add a brighter, sharper, fruitier punch. In this rich pork mince, that fresh chili character helps balance the savory fat and fermented bean paste.'],
-          ['Pro Tip','Finely chop the chili so it disperses through the mince. The inner ribs and surrounding membrane contain much of a chili’s capsaicin, so keeping them increases the heat; remove some if you want a milder result. Seeds can carry heat on their surfaces, but they are not the main source of capsaicin.'],
-          ['Substitute','Thai bird’s-eye chilies give intense heat; Fresno or another mild red chili gives a gentler result. Red chili flakes can work in a pinch, although they will not provide the same fresh, fruity aroma.'],
-          ['Storage','Refrigerate fresh chilies in a breathable bag or loosely wrapped, and use them while they remain firm and unspoiled.']
-        ]
-      },
-      {
-        name:'GARLIC',
-        details:[
-          ['Why here','Garlic is one of the main aromatic foundations of this Misen-inspired mince. The generous amount gives the pork its punchy, unmistakable garlic aroma.'],
-          ['Technique','Start the minced garlic in the cold pan with the oil and chili, then bring the heat up gently. Slow heating lets the garlic flavor infuse the oil; keep it pale to golden rather than dark brown, which can taste bitter.If the garlic begins browning too quickly, lower the heat and add the next step once the aroma is fragrant. Burnt garlic can make the entire batch taste bitter.'],
-          ['Why Finely Minced','Finely minced garlic disperses throughout the meat and exposes more surface area to the oil, so its aroma reaches the whole pan instead of remaining in larger pieces.'],
-        ]
-      },
-      {
-        name:'DOUBANJIANG (四川豆瓣酱 / 豆板醤)',
-        details:[
-          ['Origin','Doubanjiang is a Chinese fermented bean-and-chili paste strongly associated with Sichuan cooking. Many varieties are made with broad beans, chili, salt, and sometimes wheat flour or other ingredients; check the label for the exact product.'],
-          ['Flavor Profile','Salty, fermented, savory, and spicy, with deep umami and a red chili aroma. Brands and styles vary in heat, saltiness, texture, and sweetness.'],
-          ['Why Fry It First','Frying doubanjiang briefly in the oil before adding the liquids helps release its chili color and aroma and softens its raw fermented edge. In this recipe, fry it for about 30–45 seconds while stirring so it becomes fragrant without scorching.'],
-          ['Substitute','Chili bean sauce is the closest practical substitute. Gochujang mixed with a small pinch of salt can work in a pinch, but it is generally sweeter and has a different fermented flavor. A little red chili paste plus dark miso can also approximate some of the savory depth, though the result will not be identical.'],
-          ['Salt Check','Doubanjiang is already salty, and this recipe also uses soy sauce, oyster sauce, and bouillon. Taste before adding any extra salt.']
-        ]
-      },
-      {
-        name:'GARLIC CHIVES (NIRA / 韮)',
-        details:[
-          ['Flavor','Garlic chives add a fresh, sharp, garlicky flavor, a little crunch, and a vivid green finish that lifts the rich pork mince.'],
-          ['Technique','Cut the chives into 3–4 cm pieces and add them near the end. Toss for about 30–45 seconds—just long enough to soften them slightly while keeping their color and fresh aroma.'],
-          ['Substitute','Green onions (scallions) cut into 3–4 cm pieces are an easy substitute. They are milder and less garlicky, so the finished flavor will be a little different.'],
-          ['Storage','Keep fresh garlic chives refrigerated and use them while the leaves are crisp and green.']
-        ]
-      }
-    ],
+  {
+    name:'REGULAR GROUND PORK',
+    tag:'THE FLAVOR FOUNDATION',
+    details:[
+      ['Why It Matters','The fat carries much of the dish’s flavor. As the pork renders, it absorbs the chili aroma and savory compounds from the doubanjiang, creating a glossy coating that clings to the meat and rice.'],
+      ['Best Choice','Look for ground pork with roughly 20–30% fat, often sold as regular rather than lean ground pork.'],
+      ['Substitute','Ground chicken made with dark meat or ground turkey can work, but both are leaner. The result will still differ from pork cooked in its own fat.'],
+      ['Midnight Fix','If the mince tastes dry because the pork is very lean, stir in a small splash of sesame or neutral oil at the end. Add a little at a time to keep the mince glossy rather than greasy.']
+    ]
+  },
+  {
+    name:'FRESH RED CHILI',
+    tag:'THE HEAT & BRIGHTNESS',
+    details:[
+      ['Fresh vs. Dried','Dried chilies bring concentrated, rounded heat, while fresh red chilies add a brighter, sharper, fruitier punch. Their fresh chili character helps balance the savory pork fat and fermented bean paste.'],
+      ['Spice Adjustment','Finely chop the chili so it disperses throughout the mince. The inner ribs and surrounding membrane contain much of a chili’s capsaicin, so keeping them increases the heat. Remove some for a milder result. Seeds can carry capsaicin on their surfaces, but they are not the main source of heat.'],
+      ['Substitute','Thai bird’s-eye chilies give intense heat, while Fresno or other mild red chilies provide a gentler result. Red chili flakes or chili paste can also work. Choose an unsweetened chili paste when possible, and adjust the amount to taste, as some varieties contain added salt, sugar, or other seasonings. These substitutes will not provide quite the same fresh, fruity aroma as fresh chili.'],
+      ['Storage','Refrigerate fresh chilies in a breathable bag or loosely wrapped. For longer storage, freeze whole or chopped chilies in an airtight freezer bag. They can be used straight from frozen in cooked dishes; thawing is not necessary. Frozen chilies will soften after thawing, so they are best used in stir-fries, sauces, and other cooked recipes.']
+]
+  },
+  {
+    name:'GARLIC',
+    tag:'THE ADDICTIVE CORE',
+    details:[
+      ['Why It Matters','Garlic is one of the main aromatic foundations of this Misen-inspired mince. The generous amount gives the pork its punchy, unmistakable garlic aroma.'],
+      ['Technique','Start the minced garlic in the cold pan with the oil and chili, then bring the heat up gently. Slow heating allows the garlic flavor to infuse the oil. Keep it pale to golden rather than dark brown, which can taste bitter. If it browns too quickly, lower the heat before continuing.'],
+      ['Why Finely Minced','Finely minced garlic disperses throughout the meat and exposes more surface area to the oil, allowing its aroma to reach the whole pan instead of remaining in larger pieces.']
+    ]
+  },
+  {
+    name:'DOUBANJIANG (四川豆瓣酱 / 豆板醤)',
+    tag:'THE UMAMI POWERHOUSE',
+    details:[
+      ['Flavor','Salty, fermented, savory, and spicy, with deep umami and a distinctive red chili aroma. Brands and styles vary in heat, saltiness, texture, and sweetness.'],
+      ['Why Fry It First','Frying doubanjiang briefly in the oil before adding the liquids helps release its chili color and aroma while softening its raw fermented edge. Fry for about 30–45 seconds, stirring constantly, until fragrant without scorching.'],
+      ['Substitute','Gochujang can work, but it is generally sweeter and has a different fermented flavor. A mixture of red chili paste and dark miso can also approximate some of doubanjiang’s savory depth, although the result will not be identical.'],
+  ['Midnight Fix','When using gochujang, start with the same amount as doubanjiang and add a small pinch of salt to balance its sweetness. For another alternative, mix 2 parts red chili paste with 1 part dark miso. Adjust the chili paste to your preferred heat level, and taste before adding extra salt.'],
+      ['Salt Check','Doubanjiang is already salty, and this recipe also uses soy sauce, oyster sauce, and bouillon. Taste before adding any extra salt.']
+    ]
+  },
+  {
+    name:'GARLIC CHIVES (NIRA / 韮)',
+    tag:'THE FRESH FINISH',
+    details:[
+      ['Flavor','Garlic chives add a fresh, sharp, garlicky flavor, a little crunch, and a vivid green finish that lifts the rich pork mince.'],
+      ['When to Add','Cut the chives into 3–4 cm pieces and add them near the end. Toss for about 30–45 seconds—just long enough to soften them slightly while keeping their color and fresh aroma.'],
+      ['Substitute','Green onions (scallions) cut into 3–4 cm pieces are an easy substitute. They are milder and less garlicky.'],
+    ]
+  }
+],
     ingredients:[
       {group:'Taiwan Mince'},
-      {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Fatty Ground Pork'},
+      {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Regular Ground Pork'},
       {amount:20,unit:'g',item:'Garlic, Finely Minced',imperialMinAmount:6,imperialMaxAmount:8,imperialMinUnit:'cloves',imperialMaxUnit:'cloves',instructionImperialMinUnit:'garlic cloves',instructionImperialMaxUnit:'garlic cloves',instructionMetricSuffix:' of garlic',compactRange:true},
       {minAmount:3,maxAmount:5,unit:'',item:'Fresh Red Chilies, Finely Minced, Seeds Included'},
       {amount:45,unit:'ml',item:'Sesame Oil'},
@@ -223,7 +226,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
         'Keep the garlic pale. You want the oil infused with garlic and chili, not burnt garlic.'
       ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-01-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-01-02.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-01-03.JPG']},
       {number:'02',title:'COOK THE PORK',clock:'11:17 PM',paragraphs:[
-        'Increase the heat to medium-high and add {{qty:fatty ground pork}} ground pork.',
+        'Increase the heat to medium-high and add {{qty:regular ground pork}} ground pork.',
         'Let the pork sit against the pan briefly so it develops some browned edges.',
         'Break it apart and continue cooking until deeply browned and the pork fat has rendered.',
         'Push the pork toward one side of the pan. Add {{qty:doubanjiang}} doubanjiang to the exposed oil.',
@@ -291,18 +294,25 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
 
 (And of course, don’t forget to crack the top before taking your first bite!)`,
     ingredientFile:[
-      {name: 'APPLE',details: [
-        ['Origin', 'Central Asia / cultivated worldwide'],
-        ['Flavor Profile', 'Sweet-tart, crisp, and floral.'],
-        ['Why Honeycrisp?', 'In Canada, Honeycrisp is the gold standard for baking. Unlike softer apples that turn into complete mush, Honeycrisp holds its structural integrity wonderfully while releasing just enough tart juices to balance the rich dairy.'],
-        ['Substitute', 'Pink Lady or Braeburn for a similar sweet-tart punch; or firm pears if you want a softer, more autumnal fruit base.'],
-        ['Cooking Secret', 'Sautéing the apples beforehand isn’t just about softening them—it evaporates excess moisture. If you put raw apples straight into the custard, they will bleed water and ruin the silky texture of the set cream.']
-      ]},
-    {name: 'WHOLE MILK + 35% WHIPPING CREAM',details: [
-        ['The 4:1 Ratio', 'While many classic French recipes lean exclusively on heavy whipping cream, this version uses a carefully balanced 4-to-1 ratio of 35% cream to whole milk.'],
-        ['Why Add Milk?', 'Because the spiced apples already bring moisture and fruit acidity, a 100% cream custard can feel overly heavy late at night. The splash of whole milk keeps the custard remarkably silky and light, letting the vanilla and apple flavors shine without weighing you down.']
-      ]}
-    ],
+  {
+    name:'APPLE',
+    tag:'THE FRUIT FOUNDATION',
+    details:[
+      ['Flavor','Sweet-tart, crisp, and floral.'],
+      ['Best cChoice','In Canada, Honeycrisp is a popular choice for baking. Unlike softer apples that can turn mushy, Honeycrisp holds its shape well while releasing just enough tart juices to balance the rich dairy.'],
+      ['Substitute','Pink Lady or Braeburn offer a similar sweet-tart balance. Firm pears are another option for a softer, more autumnal fruit base.'],
+      ['Cooking Secret','Sautéing the apples beforehand does more than soften them—it also evaporates excess moisture. Adding raw apples directly to the custard can release water during baking and interfere with the silky texture of the set cream.']
+    ]
+  },
+  {
+    name:'WHOLE MILK + 35% WHIPPING CREAM',
+    tag:'THE CREAMY BALANCE',
+    details:[
+      ['The 4:1 Ratio','While many classic French recipes rely exclusively on heavy cream, this version uses a carefully balanced 4:1 ratio of 35% whipping cream to whole milk.'],
+      ['Why Add Milk?','The spiced apples already contribute moisture and fruit acidity, so a custard made entirely with cream can feel overly heavy. Whole milk keeps the custard silky and lighter, allowing the vanilla and apple flavors to shine without weighing it down.']
+    ]
+  }
+],
     ingredients:[
       {group:'Apple mixture'},
       {amount:300,unit:'g',item:'Apples, Peeled, Cored, and Cut into 1 cm Cubes'},
@@ -398,18 +408,21 @@ Growing up in Japan, our summer tradition of welcoming ancestral spirits during 
 Tonight, I wanted to create something a little different from a standard pumpkin pie—a dessert warmly inspired by *Calabaza en Tacha*, taking a quiet moment late at night to remember the people I love. By transferring those traditional flavors into a pie format, using spice-infused cream and topping it with a glossy orange-molasses syrup, this pie comes together with a beautifully rounded flavor and a smooth, comforting texture.`,
     ingredientFile:[
     {name: 'PUMPKIN PURÉE',
+     tag:'THE VELVETY BASE',
       details: [
-        ['Flavor Profile', 'Earthy, naturally sweet, mellow, and velvety.'],
+        ['Flavor', 'Earthy, naturally sweet, mellow, and velvety.'],
         ['Canned vs. Fresh', 'While roasting a whole sugar pumpkin from scratch is lovely, canned pumpkin purée actually has a lower, more consistent water content. At midnight, using pure pumpkin purée guarantees a silky custard without risking a watery pie base.'],
-        ['Pro Tip', 'Look for 100% pure pumpkin purée on the label, not canned "pumpkin pie mix," which already contains added sugar and ground spices.']]
+        ['Best choice', 'Look for 100% pure pumpkin purée on the label, not canned "pumpkin pie mix," which already contains added sugar and ground spices.']]
     },
-    {name: 'DARK BROWN SUGAR + MOLASSES (THE PILONCILLO DUPLE)',
+    {name: 'DARK BROWN SUGAR + MOLASSES',
+     tag:'THE PILONCILLO DUPE',
       details: [
         ['What is Piloncillo?', 'Piloncillo (or Panela) is unrefined whole cane sugar traditional to Mexican cooking. It has an intense, smoky, dark-caramel flavor that standard white sugar cannot match.'],
         ['Why Molasses?', 'Combining dark brown sugar with a touch of dark molasses introduces that distinct, slightly bitter, mineral-rich complexity of authentic piloncillo, mimicking its cooked-down syrup flavor perfectly.']]
     },
     {name: 'THE WHOLE SPICE INFUSION (CINNAMON, STAR ANISE, CLOVE, ORANGE PEEL)',
-      details: [
+     tag:'THE AROMATIC HEART',
+     details: [
         ['Why Whole Spices Instead of Powder?', 'Standard pumpkin pies rely on ground cinnamon, nutmeg, and ginger, which can make the custard look muddy and feel slightly gritty on the tongue. By gently steeping whole spices in warm Half & Half, the fat absorbs their pure, aromatic essential oils.'],
         ['The Magic of Orange Peel', 'Steeping a strip of fresh orange peel introduces bright citrus oils to the dairy. It cuts through the heavy pumpkin and rich eggs, leaving a fresh, fragrant finish that defines Calabaza en Tacha. Just be careful not to over-steep, as it can turn bitter.']]
     }
@@ -470,11 +483,37 @@ To complement all that fruitiness, I crafted a custom spiced biscuit crust. The 
 
 Basically, this pie is my answer to one very simple, late-night question: 
 What if we just stopped treating the banana like an afterthought and made the banana the custard itself?`,
-    ingredientFile:[
-      {name:'BANANA',details:[['Origin','Global / Tropical'],['Flavor','Deep, caramel-like when roasted; fresh and aromatic when raw. The blacker, the better! When bananas develop heavy sugar spots and dark skins, their starches have fully converted into natural sugars, making them soft, fragrant, and ideal for baking.'],['Where to find','Your Kitchen Counter'],['Storage','Room temperature until fully ripe.'],['Why cook?','Cooking the bananas in a skillet drives off excess moisture and concentrates their natural sugars, creating a thick, jammy texture and deep banana flavor without adding extra sugar.']]},
-      {name:'PLAIN BISCUITS',details:[['Flavor', 'A crisp, spiced crumb crust featuring cinnamon, ginger, and nutmeg that beautifully balances the rich, sweet banana filling.'], ['Substitute', 'Biscoff cookies or graham crackers.'],['Midnight Fix','If using Biscoff, skip the cinnamon, ginger, and nutmeg. Simply combine the crumbs with melted butter.'],['Crust Technique', 'Baking the crust for 8–10 minutes locks in its structure, preventing it from getting soggy when the heavy custard and fresh bananas sit on top.']]},
-      {name:'WHOLE MILK',details:[['Why Whole Milk','The higher fat content gives the filling a richer, creamier mouthfeel.'],['Substitute','2% milk works too, but the filling will be slightly lighter.']]}
-    ],
+ingredientFile:[
+  {
+    name:'BANANA',
+    tag:'OUR HERO!',
+    details:[
+      ['Flavor','Deep and caramel-like when roasted, with a fresh, aromatic sweetness when raw.'],
+      ['Where to find','Your Kitchen Counter'],
+      ['Best Choice','Choose very ripe bananas with heavily spotted or almost completely black skins. The blacker, the better! As bananas develop dark skins and abundant brown spots, their starches convert into natural sugars, making them soft, fragrant, and ideal for baking.'],
+      ['Storage','Keep at room temperature until fully ripe. If your bananas are still green, place them in a paper bag with a ripe apple or banana to speed up ripening.'],
+      ['Why Cook?','Cooking the bananas in a skillet drives off excess moisture and concentrates their natural sugars, creating a thick, jammy texture and deep banana flavor without adding extra sugar.']
+    ]
+  },
+  {
+    name:'PLAIN BISCUITS',
+    tag:'THE CRUST FOUNDATION',
+    details:[
+      ['Flavor','A crisp, spiced crumb crust featuring cinnamon, ginger, and nutmeg that beautifully balances the rich, sweet banana filling.'],
+      ['Substitute','Biscoff cookies or graham crackers.'],
+      ['Midnight Fix','If using Biscoff, skip the cinnamon, ginger, and nutmeg. Simply combine the crumbs with melted butter.'],
+      ['Crust Technique','Baking the crust for 8–10 minutes helps set its structure, preventing it from becoming soggy under the rich custard and fresh bananas.']
+    ]
+  },
+  {
+    name:'WHOLE MILK',
+    tag:'THE CREAMY BALANCE',
+    details:[
+      ['Why Whole Milk?','Its fat content gives the filling a richer, creamier mouthfeel while keeping the custard lighter than one made entirely with cream.'],
+      ['Substitute','2% milk works too, but the filling will be slightly lighter.']
+    ]
+  }
+],
     stats:{prep:'20 mins',cook:'30 mins',chill:'3 hrs+',total:'3 hrs 50 mins+',serves:'6–8',pan:'9-inch / 23 cm pie plate',quiet:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
     ingredients:[
       {group:'Crust'},
@@ -559,10 +598,37 @@ Instead of simply swapping pumpkin for sweet potato in a classic pumpkin pie rec
 
 What you get is a silky, creamy pie filled with naturally sweet roasted sweet potato, a touch of cinnamon warmth, and that unmistakable, gentle kick of fresh ginger.`,
     ingredientFile:[
-      {name:'SWEET POTATOES',details:[['Origin','South America'],['Flavor','Naturally sweet, earthy, creamy, and comforting.'],['Roasting vs. Quick Cooking', 'Roasting whole sweet potatoes in their skins activates their natural enzymes, breaking down starches into sweet maltose while evaporating excess water. If you choose the midnight shortcut (microwaving or boiling), make sure to let the cooked sweet potato steam-dry thoroughly so your pie filling won’t turn watery.'],['Substitute','Japanese (Satsumaimo) or Korean sweet potato works for an even denser, sweeter interior, though you may need a splash more cream to thin out the paste.'],['Storage','Store whole sweet potatoes in a cool, dry place. Once cooked, refrigerate in an airtight container for up to 3 days.']]},
-      {name:'FRESH GINGER',details:[['Flavor','Warm, peppery, citrusy, spicy'],['Substitute','ground ginger'],['Midnight Fix','1½ g ground ginger can replace 6 g fresh ginger. While ground ginger offers a warm, subtle background spice, only finely grated fresh ginger delivers that authentic Sweet Potato Ginger Dessert Soup (番薯姜糖水) flavor—a bright, peppery, citrusy zing that pierces right through the heavy sweet potato.'],['Storage','Refrigerate for several weeks or freeze and grate directly from frozen.']]},
-      {name:'10% CREAM',details:[['Flavor','Light, creamy, milky'],['Why Here', 'Heavy 35% whipping cream can coat the palate and dull the fresh ginger oils. Using 10% cream provides just enough dairy fat to make the custard silky while keeping the overall dessert light and the ginger flavor sharp.'],['Substitute','Half-and-half works well. For a similar fat level, mix 70 g 2% milk + 30 g 35% cream for an exact fat-level equivalent.'],['Storage','Refrigerate after opening.']]}
-    ],
+  {
+    name:'SWEET POTATOES',
+    tag:'THE COMFORTING CORE',
+    details:[
+      ['Flavor','Naturally sweet, earthy, creamy, and comforting.'],
+      ['Roasting vs. Quick Cooking','Roasting whole sweet potatoes in their skins helps convert starches into maltose, developing deeper sweetness while evaporating excess moisture. If you choose the midnight shortcut (microwaving or boiling), let the cooked sweet potato steam-dry thoroughly before mashing so your pie filling won’t turn watery.'],
+      ['Substitute','Japanese (Satsumaimo) or Korean sweet potatoes work well for an even denser, sweeter interior. You may need a splash of extra cream to loosen the thicker purée.'],
+      ['Storage','Store whole sweet potatoes in a cool, dry, well-ventilated place. Once cooked, refrigerate in an airtight container for up to 3 days.']
+    ]
+  },
+  {
+    name:'FRESH GINGER',
+    tag:'THE AROMATIC KICK',
+    details:[
+      ['Flavor','Warm, peppery, citrusy, and pleasantly spicy.'],
+      ['Peeling Tip','Use the edge of a spoon to gently scrape away the skin. It follows ginger’s knobby shape and reaches into tight corners without removing too much flesh. If using organic ginger, you can also leave the skin on after washing and scrubbing it thoroughly.']
+      ['Substitute','Ground ginger can be used in place of fresh ginger, but it produces a warmer, more subtle flavor.'],
+      ['Midnight Fix','Use ¾ tsp (1½ g) ground ginger to replace 3/4 tsp (6 g) fresh ginger. Ground ginger provides gentle background warmth, while finely grated fresh ginger delivers the bright, peppery, citrusy zing that defines the flavor of Sweet Potato Ginger Dessert Soup (番薯姜糖水).'],
+      ['Storage','Submerge peeled ginger in a clean container of water, refrigerate, and change the water every 2–3 days. For longer storage, freeze whole and grate directly from frozen.']
+    ]
+  },
+  {
+    name:'10% CREAM',
+    tag:'ONLY 10%, BUT ESSENTIAL',
+    details:[
+      ['Flavor','Light, creamy, and milky.'],
+      ['Why Here','Heavy 35% whipping cream can coat the palate and dull the fresh ginger aroma. Using 10% cream provides just enough dairy fat to create a silky custard while keeping the dessert light and allowing the ginger flavor to shine.'],
+      ['Substitute','Half-and-half works well. For a similar fat content, mix mix 7 parts 2% milk with 3 parts 35% whipping cream (about ¼ cup (60ml) milk + 2 tbsp (30ml) cream for this recipe)'],
+    ]
+  }
+],
     stats:{prep:'30 mins',cook:'1 hr 45 mins',chill:'2 hrs+',total:'4 hrs 15 mins+',serves:'8',quiet:'⭐⭐⭐⭐☆'},
     ingredients:[
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
@@ -715,11 +781,51 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
     usCupFractions:true,
     forceCupUnits:true,
     ingredientFile:[
-      {name:'Sweetened Condensed Milk',details:[['Flavor','Rich, milky, caramel-like sweetness.'],['Best choice','Use standard full-fat sweetened condensed milk. The entire 300 ml can is used.'],['Why here','The citric acid from the lime juice naturally reacts with the milk proteins (casein), helping the filling thicken without needing starch or gelatin.'],['No Substitute','Evaporated milk is not a direct substitute because it is unsweetened and has a different consistency.'],['Storage','Refrigerate after opening.']]},
-      {name:'Persian/Tahiti Limes',details:[['Flavor','Bright, tart, fresh, and aromatic.'],['Best choice','Choose firm, heavy limes with fragrant skin. Since the zest is used, organic or unwaxed limes are best. If using waxed limes, scrub and rinse well before zesting.'],['Why here','Regular Persian/Tahiti limes are much easier to find in Toronto while still providing the bright acidity and fresh lime aroma needed for the pie.'],['Why Extra Zest?','Persian limes are slightly less floral and punchy than tiny Key limes. Adding a generous 6g of finely grated fresh zest bridges that flavor gap completely, bringing vivid lime aromatics to every single bite.'],['Substitute','Key limes can be used if you happen to find them! Use the same total amount of juice. Bottled Key lime juice can be used in a pinch, but fresh lime juice and zest are preferred for the brightest flavor.'],['Storage','Store whole limes at room temperature for short-term use or refrigerate for longer storage.'],['Juicing Tip','One average-sized lime yields about 2 tbsp (30 ml) of fresh lime juice. Roll each lime firmly against the counter before juicing to help release more juice. Cold limes are firmer, which can make the zest easier to grate cleanly. Because both the zest and juice are used, zest the limes before squeezing them.']]},
-      {name:'Sour Cream',details:[['Flavor','Creamy, slightly tangy, with a subtle fermented note.'],['Best choice','Use regular full-fat sour cream rather than a very low-fat version.'],['Why here','It adds body, creaminess, and extra tang to the filling without increasing the amount of condensed milk.'],['Substitute','Plain full-fat Greek yogurt can work, although the flavor will be slightly different.'],['Storage','Keep refrigerated.']]},
-      {name:'Cream of Tartar',details:[['Flavor','Mildly acidic, but the small amount used here does not noticeably affect the flavor.'],['Why here','Egg white proteins can over-expand and collapse easily. Cream of tartar strengthens the protein network, preventing the meringue from weeping (leaking liquid) or shrinking after baking.'],['Substitute','A small amount of lemon juice or white vinegar can help stabilize meringue, but cream of tartar is preferred here because it adds very little additional liquid.'],['Midnight Fix','If you don\'t have cream of tartar, the meringue can still be made without it. Make sure the bowl and beaters are completely clean and dry, and add the sugar gradually.']] }
-    ],
+  {
+    name:'SWEETENED CONDENSED MILK',
+    tag:'THE SWEET & MILKY MAGIC',
+    details:[
+      ['Flavor','Rich, milky, and intensely sweet, with a caramel-like note.'],
+      ['Best Choice','Use standard full-fat sweetened condensed milk. The entire 300 ml can is used in this recipe.'],
+      ['Why Here','The acidity in lime juice reacts with the milk proteins (casein), helping the filling thicken naturally without the need for starch or gelatin.'],
+      ['No Substitute','Evaporated milk is not a direct substitute. It is unsweetened and has a much thinner consistency.'],
+      ['Storage','Refrigerate any leftovers in an airtight container after opening.']
+    ]
+  },
+  {
+    name:'PERSIAN / TAHITI LIMES',
+    tag:'THE ACCESSIBLE STAR',
+    details:[
+      ['Flavor','Bright, tart, fresh, and aromatic.'],
+      ['Best Choice','Choose firm, heavy limes with fragrant skin. Since the zest is used, organic or unwaxed limes are ideal. If using waxed limes, scrub and rinse them thoroughly before zesting.'],
+      ['Why Here','Regular Persian (Tahiti) limes are much easier to find in Toronto while still providing the bright acidity and fresh lime aroma this pie needs.'],
+      ['Why Extra Zest?','Persian limes are generally less floral and intense than tiny Key limes. Adding a generous finely grated fresh zest helps bridge that flavor gap, bringing vivid lime aromatics to every bite.'],
+      ['Substitute','Key limes can be used if you are lucky enough to find them. Use the same total amount of juice. Bottled Key lime juice works in a pinch, but fresh juice and zest are preferred for the brightest flavor.'],
+      ['Storage','Store whole limes at room temperature for short-term use or refrigerate them for longer storage.'],
+      ['Juicing Tip','One average-sized lime yields about 2 tbsp (30 ml) of fresh juice. Roll each lime firmly against the counter before juicing to help release more juice. Make sure to zest the limes before squeezing.']
+    ]
+  },
+  {
+    name:'SOUR CREAM',
+    tag:'THE UNSUNG HERO',
+    details:[
+      ['Flavor','Creamy and slightly tangy, with a subtle fermented note.'],
+      ['Best Choice','Use regular full-fat sour cream rather than a very low-fat version.'],
+      ['Why Here','It adds body, creaminess, and extra tang to the filling without increasing the amount of condensed milk.'],
+      ['Substitute','Plain full-fat Greek yogurt can work, although the flavor will be slightly different.']
+    ]
+  },
+  {
+    name:'CREAM OF TARTAR',
+    tag:'THE MERINGUE BACKBONE',
+    details:[
+      ['Flavor','Mildly acidic, but the small amount used here does not noticeably affect the flavor.'],
+      ['Why Here','Egg white proteins can over-expand and collapse easily. Cream of tartar helps stabilize the protein network, reducing the risk of the meringue weeping (releasing liquid) or shrinking after baking.'],
+      ['Substitute','A small amount of lemon juice or white vinegar can help stabilize meringue, but cream of tartar is preferred here because it adds very little extra liquid.'],
+      ['Midnight Fix','If you don’t have cream of tartar, you can still make the meringue without it. Make sure the bowl and beaters are completely clean and dry, and add the sugar gradually.']
+    ]
+  }
+],
     ingredients:[
       {group:'Graham Cracker Crust'},
       {amount:200,unit:'g',item:'Graham Crackers, Finely Crushed'},
@@ -818,39 +924,51 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
     stepQuantityConversion:true,
     usCupFractions:true,
     ingredientFile:[
-       {name:'Coconut Milk',details:[
-        ['Origin','Southeast Asia, the Indian and Pcific Oceans'],
-        ['Flavor','Rich, tropical, nutty.'],
-        ['Best Choice', 'Full-fat coconut milk'],
-        ['Temperature Control', 'Never let coconut milk come to a hard, rolling boil! High heat breaks the fat-water emulsion, causing the broth to split and look oily or curdled. Keep the heat on low once the coconut milk is added.'],
-        ['Substitute','Lite coconut milk.'],
-        ['Midnight Fix','If using lite coconut milk, reduce the added water or chicken stock by about 60–80 ml. Lite coconut milk has a higher water content, so cutting back on the added liquid prevents your soup base from turning thin and watery.']
-      ]},
-      {name:'Galangal',details:[
-        ['Origin','Southeast Asia'],
-        ['Flavor','Woody, citrusy, piney, and distinctly peppery. It tastes entirely different from standard ginger.'],
-        ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, Chinatown markets and T&T are good places to look.'],
-        ['Substitute','Fresh ginger plus a little extra lemongrass. While ginger brings a sharp, biting heat, galangal brings a rounder, botanical aroma that defines authentic Tom Kha.'],
-        ['Storage','Wrap fresh galangal loosely and freeze. Dried galangal should be kept airtight in a cool, dark place.'],
-        ['Midnight Fix','Use frozen or dried galangal if fresh galangal is unavailable.']
-      ]},
-      {name:'Makrut Lime Leaves',details:[
-        ['Origin','Thailand / Southeast Asia'],
-        ['Flavor','Intensely citrusy, floral, sweet, aromatic'],
-        ['Best choice','Fresh makrut lime leaves.'],
-        ['Pro Technique', 'Tear or bruise the leaves with your hands before adding them to the pot to break the oil glands on the leaf surface and release their fragrance.'],
-        ['Where to Find','Toronto Asian grocery stores such as Best Fresh Foods, Nations, Chinatown markets and T&T are good places to look.'],
-        ['Substitute','Fresh lime zest can add some citrus aroma, but it cannot fully replace makrut lime leaf.'],
-        ['Storage','Keep a bag of fresh or dried leaves in your freezer.']
-      ]},
-      {name:'Lemongrass',details:[
-        ['Origin','Southeast Asia'],
-        ['Flavor','Bright, citrusy, grassy'],
-        ['Substitute','Frozen or pre-minced lemongrass'],
-        ['Storage','Fresh stalks can be refrigerated for about a week; frozen lemongrass keeps much longer.'],
-        ['Midnight Fix','Use 1½ tbsp finely minced lemongrass when whole stalks are inconvenient.'],
-      ]}
-    ],
+  {
+    name:'COCONUT MILK',
+    tag:'THE CREAMY SOUL',
+    details:[
+      ['Flavor','Rich, creamy, tropical, and subtly nutty.'],
+      ['Best Choice','Use full-fat coconut milk for a richer, creamier broth.'],
+      ['Temperature Control','Never let coconut milk come to a hard, rolling boil. High heat can destabilize the fat-and-water emulsion, causing the broth to separate and look oily or curdled. Keep the heat low once the coconut milk is added.'],
+      ['Substitute','Lite coconut milk can be used, but the broth will be less rich.'],
+      ['Midnight Fix','If using lite coconut milk, reduce the added water or chicken stock by about ¼ cup (60–80 ml). Lite coconut milk contains more water, so reducing the extra liquid helps prevent a thin, watery soup.']
+    ]
+  },
+  {
+    name:'GALANGAL',
+    tag:'THE SIGNATURE AROMATIC',
+    details:[
+      ['Flavor','Woody, citrusy, piney, and distinctly peppery. Its flavor is quite different from ordinary ginger.'],
+      ['Where to Find','Look in Toronto Asian grocery stores such as Best Fresh Foods, Nations, Chinatown markets, and T&T.'],
+      ['Substitute','Fresh ginger with a little extra lemongrass can approximate some of its aromatic qualities. Ginger brings a sharper, biting heat, while galangal has a rounder, more botanical aroma that defines Tom Kha.'],
+      ['Storage','Wrap fresh galangal loosely and freeze for longer storage. Keep dried galangal in an airtight container in a cool, dark place.'],
+      ['Midnight Fix','Frozen or dried galangal works when fresh is unavailable.']
+    ]
+  },
+  {
+    name:'MAKRUT LIME LEAVES',
+    tag:'THE CITRUS PERFUME',
+    details:[
+      ['Flavor','Intensely citrusy, floral, sweet, and aromatic.'],
+      ['Best Choice','Fresh makrut lime leaves offer the most vibrant fragrance.'],
+      ['Pro Technique','Tear or gently bruise the leaves with your hands before adding them to the pot. This helps release their aromatic oils and infuse the broth.'],
+      ['Where to Find','Look in Toronto Asian grocery stores such as Best Fresh Foods, Nations, Chinatown markets, and T&T.'],
+      ['Substitute','Fresh lime zest adds some citrus aroma, but cannot fully replace the distinctive fragrance of makrut lime leaves.'],
+      ['Storage','Freeze fresh leaves in an airtight bag so you can use them whenever needed. Dried leaves can also be stored in an airtight container.']
+    ]
+  },
+  {
+    name:'LEMONGRASS',
+    tag:'THE LEMON IMPERSONATOR',
+    details:[
+      ['Flavor','Bright, citrusy, grassy, and refreshing.'],
+      ['Substitute','Frozen or pre-minced lemongrass is convenient when fresh stalks are unavailable.'],
+      ['Storage','Refrigerate fresh stalks for about a week or freeze them for longer storage.'],
+      ['Midnight Fix','When whole stalks are inconvenient, use 1½ tbsp (about 8-10g) finely minced lemongrass instead.']
+    ]
+  }
+],
     ingredients:[
       {group:'Chicken & Coconut Base'},
       {amount:227,unit:'g',imperialAmount:0.5,imperialUnit:'lb',item:'Boneless, Skinless Chicken Thighs'},
