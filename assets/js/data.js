@@ -1050,28 +1050,38 @@ This isn't a traditional Thai dish. It's simply my midnight attempt to recreate 
     stepQuantityConversion:true,
     usCupFractions:true,
     ingredientFile:[
-      {name:'100% Peanut Butter',details:[
-        ['Flavor','Rich, nutty, roasted, creamy'],
-        ['Best choice','Smooth peanut butter made from 100% peanuts, with no added sugar'],
-        ['Why here','Adds concentrated roasted-peanut flavor and creates a creamy, glossy sauce without needing a separate peanut sauce.'],
-        ['Substitute','Other nut butter']
-      ]},
-      {name:'Sambal Oelek',details:[
-        ['Origin','Indonesia'],
-        ['Flavor','Fresh chili heat with a slightly tangy edge'],
-        ['Best choice','A simple chili paste with minimal added ingredients'],
-        ['Why here','Provides the chili element without making the sauce overwhelmingly spicy.'],
-        ['Substitute','Finely minced fresh red chili or a mild chili paste'],
-        ['Storage','Refrigerate after opening, following the product label.']
-      ]},
-      {name:'Rice Vinegar',details:[
-        ['Origin','East Asia'],
-        ['Flavor','Clean, mild acidity'],
-        ['Best choice','Plain, unseasoned rice vinegar'],
-        ['Why here','Balances the richness of peanut butter and the sweetness of sugar.'],
-        ['Substitute','White vinegar, using slightly less at first and adjusting to taste']
-      ]}
-    ],
+  {
+    name:'100% PEANUT BUTTER',
+    tag:'THE NUTTY HEART',
+    details:[
+      ['Flavor','Rich, nutty, roasted, and creamy.'],
+      ['Best Choice','Use smooth peanut butter made from 100% peanuts, with no added sugar.'],
+      ['Why Here','Adds concentrated roasted-peanut flavor and creates a creamy, glossy sauce without the need for a separate peanut sauce.'],
+      ['Substitute','Other smooth nut butters, such as almond or cashew butter, can work, although the flavor will be different.']
+    ]
+  },
+  {
+    name:'SAMBAL OELEK',
+    tag:'THE CONTROLLED HEAT',
+    details:[
+      ['Flavor','Fresh chili heat with a slightly tangy edge.'],
+      ['Best Choice','Choose a simple chili paste with minimal added ingredients.'],
+      ['Why Here','Provides a clean chili kick without making the peanut sauce overwhelmingly spicy.'],
+      ['Substitute','Finely minced fresh red chili or a mild chili paste. Adjust the amount to taste.'],
+
+    ]
+  },
+  {
+    name:'RICE VINEGAR',
+    tag:'THE FLAVOR BALANCER',
+    details:[
+      ['Flavor','Clean, mild acidity.'],
+      ['Best Choice','Use plain, unseasoned rice vinegar.'],
+      ['Why Here','Cuts through the richness of peanut butter and balances the sweetness of sugar, keeping the sauce from tasting too heavy.'],
+      ['Substitute','White vinegar can work. Start with slightly less, then adjust to taste.']
+    ]
+  }
+],
     ingredients:[
       {group:'Chicken'},
       {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Chicken Thighs, Cut Into Bite-Sized Pieces'},
