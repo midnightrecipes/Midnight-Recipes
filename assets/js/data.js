@@ -1141,7 +1141,6 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
       ],stepImages:[]}
     ],
     notes:[
-      ['The Flavor Memory','The starting point was the sweet chili sauce and crushed peanuts served with Thai fish cakes. The goal wasn\'t to recreate Tod Mun Pla itself, but to bring that sweet, tangy, spicy, nutty combination to crispy chicken.'],
       ['Building the Sweet Chili Base','Instead of using bottled Thai sweet chili sauce, this recipe builds a quick version from vinegar, sugar, chili, garlic, and seasonings. Peanut butter adds a creamy, nutty twist.'],
       ['Keeping It Mild','The sambal provides a gentle chili kick rather than dominating the sauce. Add a little more if you prefer a spicier finish.'],
       ['Crispy First, Sauce Second','Cook the chicken until golden before making the sauce. Coating it too early would prevent the chicken from developing its crisp exterior.'],
