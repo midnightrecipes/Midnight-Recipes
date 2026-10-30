@@ -1621,3 +1621,17 @@ body[data-page="home"] .category-card .photo-frame{
     line-height:1.9;
   }
 }
+/* MIDNIGHT RECIPES — Ingredient File typography override */
+.recipe-card .ingredient-file-details p,
+.recipe-card .ingredient-file-detail p {
+  font-size: 17px !important;
+  line-height: 2 !important;
+}
+
+@media (max-width: 720px) {
+  .recipe-card .ingredient-file-details p,
+  .recipe-card .ingredient-file-detail p {
+    font-size: 17px !important;
+    line-height: 1.9 !important;
+  }
+}
