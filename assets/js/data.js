@@ -1065,7 +1065,7 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
       ['Best Choice','Use smooth peanut butter made from 100% peanuts, with no added sugar.'],
       ['Why Here','Adds concentrated roasted-peanut flavor and creates a creamy, glossy sauce without the need for a separate peanut sauce.'],
       ['Substitute','Other smooth nut butters, such as almond or cashew butter, can work, although the flavor will be different.'],
-      ['Midnight Fix', 'Ig using classic peanut butter with added sugar (like Kraft, Skippy, or Jif), reduce the sugar in the recipe by half (or to taste), and cut the added salt. Since standard commercial spreads already contain sugar and oil, tasting the sauce as you whisk keeps it from becoming cloyingly sweet.']
+      ['Midnight Fix', 'If using classic peanut butter with added sugar (like Kraft, Skippy, or Jif), reduce the sugar in the recipe by half (or to taste), and cut the added salt. Since standard commercial spreads already contain sugar and oil, tasting the sauce as you whisk keeps it from becoming cloyingly sweet.']
     ]
   },
   {
