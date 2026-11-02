@@ -1159,115 +1159,171 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
     usualsCategory:''
   },
   {
-    slug:'moms-hamburg-steak',
-    title:'Mom’s Hamburg Steak', description:'A Japanese-style hamburg steak inspired by my mom’s cooking, served with a rich, sweet-tangy sauce that brings back the comforting taste of home.',
-    source:'Memory',
-    dish:'Japanese Hamburg Steak',
-    cuisine:'Japanese',
-    course:'Main Dishes',
-    courseDisplay:'Main Dishes',
-    categories:['Main Dishes'],
-    mainIngredients:['Ground Meat','Onion','Eggs','Breadcrumbs','Milk'],
-    dateAdded:'2026-10-08',
-    timeStamp:'1:15 AM',
-    story:`In Japan, hamburg steak is one of those dishes that feels like “*haha no aji*” (母の味) — literally, “the taste of mother.” It’s that familiar, nostalgic taste we associate with home and childhood.
+    slug: 'moms-hamburg-steak',
+    title: 'Mom’s Hamburg Steak',
+    description: 'A Japanese-style hamburg steak inspired by my mom’s cooking, served with a rich, sweet-tangy sauce that brings back the comforting taste of home.',
+    source: 'Memory',
+    dish: 'Japanese Hamburg Steak',
+    cuisine: 'Japanese',
+    course: 'Main Dishes',
+    courseDisplay: 'Main Dishes',
+    categories: ['Main Dishes'],
+    mainIngredients: ['Ground Beef', 'Ground Pork', 'Onion', 'Eggs', 'Breadcrumbs', 'Milk'],
+    dateAdded: '2026-10-08',
+    timeStamp: '1:15 AM',
+    story: `In Japan, hamburg steak is one of those dishes that feels like “*haha no aji*” (母の味) — literally, “the taste of mother.” It’s that familiar, nostalgic taste we associate with home and childhood.
 
 For me, hamburg steak is one of the dishes my mom used to make. When I was younger, I never really thought much about it. It was just hamburg steak — something that appeared on the dinner table.
 
-But looking back, it’s actually not the easiest dish to make. You have to chop the onion, knead the meat, shape each patty, cook them without drying them out, and then make the sauce. There’s definitely some work involved.
+But looking back, it’s actually not the easiest dish to make. You have to chop the onion, knead the meat, shape each patty, cook them without drying them out, and then make the sauce. There’s definitely some work involved. And yet, my mom made it.
 
-And yet, my mom made it.
+You might be more familiar with Salisbury steak, which is often served with a rich mushroom gravy. This Japanese hamburg steak is essentially its close cousin, but the biggest difference lies in the sauce: instead of mushroom gravy, it’s glazed in a sweet, savory, and tangy pan-sauce made from ketchup, Worcestershire sauce, and soy sauce.
 
-The sauce is part of what makes it feel like Japanese hamburg steak, too. Japanese-style *“demi-glace”* sauce is rich, sweet, tangy, and made with familiar pantry staples. It’s the kind of sauce that makes the whole dish feel complete.
+When you take a bite, the soft, bouncy patty yields effortlessly, releasing a rush of savory juices sealed beneath the golden crust. 
 
 Maybe that’s what *haha no aji* really means. Not that every mom made the same dish, but that somewhere along the way, an ordinary meal becomes a taste you remember. And the hamburg steak you make for your own family might just become their favorite — the one they remember most.`,
-    heroImage:'images/recipes/moms-hamburg-steak/hero.jpg',
-    recipeImage:'images/recipes/moms-hamburg-steak/recipe.jpg',
-    stepQuantityConversion:true,
-    usCupFractions:true,
-    ingredientFile:[
-      {name:'Ground Meat',details:[
-        ['Flavor','Rich, savory, meaty'],
-        ['Best choice','Ground beef, ground pork, or a combination of both'],
-        ['Substitute','Beef and pork can be used individually or combined, depending on preference.']
-      ]},
-      {name:'Onion',details:[
-        ['Flavor','Sweet, savory, aromatic'],
-        ['Best choice','Yellow onion'],
-        ['Why here','Adds moisture and sweetness to the patties.'],
-        ['Substitute','Shallot']
-      ]},
-      {name:'Worcestershire Sauce',details:[
-        ['Origin','England'],
-        ['Flavor','Tangy, savory, slightly sweet, spiced'],
-        ['Best choice','Standard Worcestershire sauce'],
-        ['Why here','Adds tangy, savory depth to the quick Japanese-style sauce.'],
-        ['Substitute','A little extra ketchup and soy sauce can work in a pinch.']
-      ]},
-      {name:'Ketchup',details:[
-        ['Flavor','Sweet, tangy, tomato-rich'],
-        ['Best choice','Regular tomato ketchup'],
-        ['Why here','Forms the sweet-tangy base of the quick sauce.']
-      ]},
-      {name:'Sake',details:[
-        ['Origin','Japan'],
-        ['Flavor','Mild, lightly sweet, rice-based'],
-        ['Best choice','Cooking sake or regular sake'],
-        ['Why here','Adds depth to the sauce.'],
-        ['Substitute','Dry white wine or Chinese Shaoxing wine'],
-      ]}
+    heroImage: 'images/recipes/moms-hamburg-steak/hero.jpg',
+    recipeImage: 'images/recipes/moms-hamburg-steak/recipe.jpg',
+    stepQuantityConversion: true,
+    usCupFractions: true,
+    ingredientFile: [
+      {
+        name: 'GROUND MEAT (BEEF & PORK MIX)',
+        tag: 'The Juicy Foundation',
+        details: [
+          ['WHY 6:4 RATIO?', 'Technically, you could use any ratio or combination of ground meat. However, a 6:4 ratio of ground beef to ground pork hits the sweet spot: beef brings deep, savory flavor, while pork adds essential fat and tenderness so the patties stay juicy.'],
+          ['SUBSTITUTE', 'The same amount of a 7:3 beef-to-pork mix, 100% regular ground beef, or 100% ground pork. Avoid extra lean ground beef if possible, as it lacks the fat needed to keep the patties from drying out.']
+        ]
+      },
+      {
+        name: 'BREADCRUMBS',
+        tag: 'The Stale Bread Secret',
+        details: [
+          ['WHY HERE', 'Breadcrumbs absorb the milk and trap the meat juices, keeping the patties soft and tender as they cook.'],
+          ['SUBSTITUTE', 'The same amount of panko, grated stale bread, or crushed saltine crackers.'],
+          ['MIDNIGHT FIX', 'If you have stale or hard bread sitting on the counter, grate or pulse it into crumbs—it works even better than store-bought. Out of bread and breadcrumbs entirely? Crushed saltines, oatmeal, or even leftover cooked white rice can work in a pinch to bind the mixture.']
+        ]
+      },
+      {
+        name: 'ONION',
+        tag: 'The Moisture & Texture Booster',
+        details: [
+          ['BEST CHOICE', 'Yellow onion.'],
+          ['WHY HERE', 'Adding finely chopped raw onion saves prep time at midnight. As the patty steams, the onion releases subtle sweetness inside while retaining a soft, pleasant texture.'],
+          ['SUBSTITUTE', 'The same amount of finely minced shallots or sweet yellow onions.']
+        ]
+      },
+      {
+        name: 'GROUND NUTMEG',
+        tag: 'The Flavor Elevator',
+        details: [
+          ['WHY HERE', 'Nutmeg cuts through the heavy gamey scent of meat, enhancing its natural savory richness and giving the patty that unmistakable, classic Japanese 洋食 (Yoshoku) flavor.'],
+          ['SUBSTITUTE', 'The same amount of ground allspice, or an extra pinch of ground black pepper if omitting nutmeg entirely.']
+        ]
+      },
+      {
+        name: 'WORCESTERSHIRE SAUCE',
+        tag: 'The Umami Depth',
+        details: [
+          ['WHY HERE', 'Adds a concentrated tangy, spiced depth that transforms ketchup and soy sauce into a quick Japanese-style demi-glace.'],
+          ['SUBSTITUTE', 'The same amount of Tonkatsu sauce or A1 steak sauce. Alternatively, use half the amount of extra soy sauce mixed with a pinch of sugar.']
+        ]
+      },
+      {
+        name: 'KETCHUP',
+        tag: 'The Sweet-Tangy Base',
+        details: [
+          ['WHY HERE', 'Forms the glossy, fruit-sweet body of the pan sauce.'],
+          ['SUBSTITUTE', 'Equal parts tomato paste and water mixed with a pinch of sugar to match the ketchup volume.']
+        ]
+      },
+      {
+        name: 'SAKE (JAPANESE RICE WINE)',
+        tag: 'The Pan Deglazer',
+        details: [
+          ['WHY HERE', 'Deglazes the pan, lifting up caramelized meat drips while rounding out the sharp acidity of ketchup and vinegar with mild rice sweetness and neutralizing meat odors.'],
+          ['SUBSTITUTE', 'The same amount of water, dry white wine, or Chinese Shaoxing wine. Using water creates a slightly lighter finish, but since the rich pan-sauce coats the steak anyway, it works completely fine!']
+        ]
+      }
     ],
-    ingredients:[
-      {group:'Hamburg Steak'},
-      {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Ground Meat'},
-      {amount:120,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Onion, Very Finely Chopped'},
-      {amount:1,unit:'large',imperialAmount:1,imperialUnit:'large',item:'Egg'},
-      {amount:50,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Breadcrumbs'},
-      {amount:60,unit:'ml',imperialAmount:0.25,imperialUnit:'cup',item:'Milk'},
-      {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Salt'},
-      {amount:0.5,unit:'g',imperialAmount:0.25,imperialUnit:'tsp',item:'Black Pepper'},
-      {amount:0.25,unit:'g',imperialAmount:0.125,imperialUnit:'tsp',item:'Ground Nutmeg'},
-      {unit:'',item:'Neutral Oil, for Cooking'},
-      {group:'Japanese-Style “Demi-Glace” Sauce'},
-      {amount:60,unit:'ml',imperialAmount:4,imperialUnit:'tbsp',item:'Sake or Dry White Wine'},
-      {amount:60,unit:'ml',imperialAmount:4,imperialUnit:'tbsp',item:'Ketchup'},
-      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Worcestershire Sauce'},
-      {amount:2,unit:'tbsp',imperialAmount:2,imperialUnit:'tbsp',item:'Granulated Sugar'},
-      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Soy Sauce'}
+    ingredients: [
+      { group: 'Hamburg Steak' },
+      { amount: 272, unit: 'g', imperialAmount: 0.6, imperialUnit: 'lb', item: 'Ground Beef (Regular or Lean)' },
+      { amount: 182, unit: 'g', imperialAmount: 0.4, imperialUnit: 'lb', item: 'Ground Pork' },
+      { amount: 120, unit: 'g', imperialAmount: 1, imperialUnit: 'cup', item: 'Onion, Very Finely Chopped' },
+      { amount: 1, unit: 'large', imperialAmount: 1, imperialUnit: 'large', item: 'Egg' },
+      { amount: 50, unit: 'g', imperialAmount: 0.5, imperialUnit: 'cup', item: 'Breadcrumbs' },
+      { amount: 60, unit: 'ml', imperialAmount: 0.25, imperialUnit: 'cup', item: 'Milk' },
+      { amount: 5, unit: 'g', imperialAmount: 1, imperialUnit: 'tsp', item: 'Salt' },
+      { amount: 0.5, unit: 'g', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Black Pepper' },
+      { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground Nutmeg' },
+      { unit: '', item: 'Neutral Oil, for Cooking' },
+      { group: 'Japanese-Style “Demi-Glace” Sauce' },
+      { amount: 60, unit: 'ml', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Sake' },
+      { amount: 60, unit: 'ml', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Ketchup' },
+      { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Worcestershire Sauce' },
+      { amount: 30, unit: 'g', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Granulated Sugar' },
+      { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Soy Sauce' }
     ],
-    stats:{prep:'15 mins',cook:'15 mins',total:'30 mins',serves:'4',quiet:'⭐⭐⭐☆☆'},
-    steps:[
-      {number:'01',title:'MIX',clock:'1:15 AM',paragraphs:[
-        'Place {{qty:Hamburg Steak::Ground Meat}} ground meat in a bowl. Add {{qty:Hamburg Steak::Salt}} salt and knead until sticky and cohesive.',
-        'Add {{qty:Hamburg Steak::Egg}} egg, {{qty:Hamburg Steak::Breadcrumbs}} breadcrumbs, {{qty:Hamburg Steak::Milk}} milk, {{qty:Hamburg Steak::Onion, Very Finely Chopped}} finely chopped onion, {{qty:Hamburg Steak::Black Pepper}} black pepper, and {{qty:Hamburg Steak::Ground Nutmeg}} ground nutmeg. Mix just until combined.'
-      ],stepImages:['images/recipes/moms-hamburg-steak/step-01-01.jpg','images/recipes/moms-hamburg-steak/step-01-02.jpg','images/recipes/moms-hamburg-steak/step-01-03.jpg','images/recipes/moms-hamburg-steak/step-01-04.jpg']},
-      {number:'02',title:'SHAPE & SEAR',clock:'1:23 AM',paragraphs:[
-        'Divide the mixture into 4 portions. Shape into oval patties about 2–2.5 cm thick and make a shallow indentation in the center of each.',
-        'Heat a little neutral oil in a frying pan over medium heat. Cook the patties for 2–3 minutes per side, until well browned.'
-      ],stepImages:['images/recipes/moms-hamburg-steak/step-02-01.jpg','images/recipes/moms-hamburg-steak/step-02-02.jpg']},
-      {number:'03',title:'STEAM',clock:'1:30 AM',paragraphs:[
-        'Add a little water to the pan and cover with a lid. Reduce the heat to medium-low and steam for 5–7 minutes, until cooked through.',
-        'Transfer the patties to a plate and rest for 3–5 minutes. Keep the pan for the sauce.'
-      ],stepImages:['images/recipes/moms-hamburg-steak/step-03-01.jpg']},
-      {number:'04',title:'MAKE THE “DEMI-GLACE” SAUCE',clock:'1:37 AM',paragraphs:[
-        'Add {{qty:Japanese-Style “Demi-Glace” Sauce::Sake or Dry White Wine}} sake or dry white wine, {{qty:Japanese-Style “Demi-Glace” Sauce::Ketchup}} ketchup, {{qty:Japanese-Style “Demi-Glace” Sauce::Worcestershire Sauce}} Worcestershire sauce, {{qty:Japanese-Style “Demi-Glace” Sauce::Granulated Sugar}} granulated sugar, and {{qty:Japanese-Style “Demi-Glace” Sauce::Soy Sauce}} soy sauce to the same pan.',
-        'Scrape up the browned bits and simmer for 1–2 minutes, until slightly thickened. Spoon the sauce over the hamburg steaks.'
-      ],stepImages:['images/recipes/moms-hamburg-steak/step-04-01.jpg']}
+    stats: { prep: '15 mins', cook: '15 mins', total: '30 mins', serves: '4', quiet: '⭐⭐⭐☆☆' },
+    steps: [
+      {
+        number: '01',
+        title: 'KNEAD & MIX',
+        clock: '1:15 AM',
+        paragraphs: [
+          'In a bowl, mix chilled {{qty:Hamburg Steak::Ground Beef (Regular or Lean)}} ground beef, chilled {{qty:Hamburg Steak::Ground Pork}} ground pork, and {{qty:Hamburg Steak::Salt}} salt thoroughly until sticky and cohesive.',
+          'Add {{qty:Hamburg Steak::Egg}} egg, {{qty:Hamburg Steak::Breadcrumbs}} breadcrumbs, {{qty:Hamburg Steak::Milk}} milk, {{qty:Hamburg Steak::Onion, Very Finely Chopped}} finely chopped onion, {{qty:Hamburg Steak::Black Pepper}} black pepper, and {{qty:Hamburg Steak::Ground Nutmeg}} ground nutmeg. Mix just until combined.'
+        ],
+        stepImages: ['images/recipes/moms-hamburg-steak/step-01-01.jpg', 'images/recipes/moms-hamburg-steak/step-01-02.jpg', 'images/recipes/moms-hamburg-steak/step-01-03.jpg', 'images/recipes/moms-hamburg-steak/step-01-04.jpg']
+      },
+      {
+        number: '02',
+        title: 'SHAPE & SEAR',
+        clock: '1:23 AM',
+        paragraphs: [
+          'Divide the mixture into 4 portions. Toss each patty back and forth in a gentle catch-ball motion between your hands to expel trapped air, shape into smooth ovals, and press a shallow dimple into the center.',
+          'Heat a little neutral oil in a skillet over medium heat. Sear the patties for 2–3 minutes per side until deep golden brown.'
+        ],
+        stepImages: ['images/recipes/moms-hamburg-steak/step-02-01.jpg', 'images/recipes/moms-hamburg-steak/step-02-02.jpg']
+      },
+      {
+        number: '03',
+        title: 'STEAM & REST',
+        clock: '1:30 AM',
+        paragraphs: [
+          'Pour a splash of water or sake into the skillet and cover immediately with a lid. Reduce heat to medium-low and steam gently for 5–7 minutes until cooked through to the center.',
+          'Transfer the patties to a warm plate and let rest for 3–5 minutes. Keep the skillet unwashed for the sauce.'
+        ],
+        stepImages: ['images/recipes/moms-hamburg-steak/step-03-01.jpg']
+      },
+      {
+        number: '04',
+        title: 'MAKE THE “DEMI-GLACE” SAUCE',
+        clock: '1:37 AM',
+        paragraphs: [
+          'In the same skillet, add {{qty:Japanese-Style “Demi-Glace” Sauce::Sake}} sake, {{qty:Japanese-Style “Demi-Glace” Sauce::Ketchup}} ketchup, {{qty:Japanese-Style “Demi-Glace” Sauce::Worcestershire Sauce}} Worcestershire sauce, {{qty:Japanese-Style “Demi-Glace” Sauce::Granulated Sugar}} granulated sugar, and {{qty:Japanese-Style “Demi-Glace” Sauce::Soy Sauce}} soy sauce.',
+          'Simmer for 1–2 minutes over medium-low heat while scraping up the browned pan drippings until thickened and glossy. Spoon generously over the warm hamburg steaks.'
+        ],
+        stepImages: ['images/recipes/moms-hamburg-steak/step-04-01.jpg']
+      }
     ],
-    notes:[
-      ['SALT FIRST','Kneading the meat with salt first helps bind the meat proteins together, giving the patties structure and helping them hold onto their juices.'],
-      ['RAW ONION','No need to sauté the onion first. Finely chop it and add it straight to the mixture. It cooks while the hamburg steak cooks.'],
-      ['SAME PAN','Don’t wash the pan after cooking the patties. Those browned bits add flavor to the sauce.']
+    notes: [
+      ['CHILLED MEAT & SALT FOR JUICINESS', 'Kneading cold meat with salt first draws out myosin (meat protein), creating a sticky network that locks the juices inside the patty during cooking.'],
+      ['CATCH-BALL MOTION TO PREVENT CRACKS', 'Tossing the meat mixture back and forth between your hands expels trapped air bubbles and smooths out surface cracks, preventing the patties from bursting or splitting in the hot pan.'],
+      ['STEAMING WITH WATER OR SAKE', 'Because hamburg patties are thick, searing alone will burn the outside before the center is done. Adding a splash of water or sake and covering with a lid steams the interior, keeping the meat incredibly juicy.'],
+      ['STALE BREADCRUMB HACK', 'If you have hard, stale bread on hand, grate it into crumbs—it creates a much better texture than store-bought. If you have neither bread nor crumbs, crushed crackers, oatmeal, or even leftover cooked white rice will bind the patties in a pinch.'],
+      ['SAVE THE PAN FOND', 'Don’t wash the skillet after searing! The caramelized meat juices left behind deglaze into the sauce, building an instant, rich demi-glace base.']
     ],
-    finePrint:{
-      'BEST EATEN':'Fresh, while warm.',
-      'MAKE AHEAD':'Shape the patties up to 1 day ahead. Cover and refrigerate.',
-      'STORAGE':'Refrigerate in an airtight container for up to 3 days.',
-      'FREEZER':'Freeze cooked patties in an airtight, freezer-safe container for up to 3 months for best quality. Cool promptly before freezing and thaw in the refrigerator before reheating.',
-      'REHEAT':'Reheat covered in a pan with a splash of water, or gently in the microwave.'
+    finePrint: {
+      'BEST EATEN': 'Fresh, while warm.',
+      'MAKE AHEAD': 'Shape the patties up to 1 day ahead. Cover and refrigerate.',
+      'STORAGE': 'Refrigerate in an airtight container for up to 3 days.',
+      'FREEZER': 'Freeze cooked patties in an airtight, freezer-safe container for up to 3 months for best quality. Cool promptly before freezing and thaw in the refrigerator before reheating.',
+      'REHEAT': 'Reheat covered in a pan with a splash of water, or gently in the microwave.'
     },
-    tags:['Memory','Japanese','Hamburg Steak','Ground Meat','Family Cooking','Demi-Glace Sauce'],
-    usualsCategory:''
+    tags: ['Memory', 'Japanese', 'Hamburg Steak', 'Ground Meat', 'Family Cooking', 'Demi-Glace Sauce'],
+    usualsCategory: ''
   }
 ,
   {
