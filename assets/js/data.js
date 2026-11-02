@@ -1609,7 +1609,6 @@ details: [
     notes: [
       ['BUILD YOUR OWN PUMPKIN PIE SPICE', 'The balance of spices makes a big difference in pumpkin pie. I personally like cinnamon to be the main flavor, with ginger adding a little warmth and nutmeg bringing depth. Go easy on the cloves, though. They have a surprisingly strong, sharp flavor and can easily take over the whole filling. It’s always easier to add a little more than to fix an overpowering spice blend.'],
       ['THE PERFECT WOBBLE', 'Don’t wait until the center looks completely firm before taking the pie out of the oven. The edges should be set, but the center should still have a slight wobble. It will continue to set as it cools and chills. Overbaking can make the filling less smooth, so a little patience goes a long way.']
-],
     ],
     finePrint: {
       'BEST EATEN': 'Tomorrow, after chilling thoroughly. The filling becomes smoother and more fully set after chilling.',
