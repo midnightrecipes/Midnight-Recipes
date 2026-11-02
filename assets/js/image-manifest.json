@@ -218,6 +218,36 @@
       ]
     }
   },
+  "khai-yat-sai": {
+    "hero": "images/recipes/khai-yat-sai/hero.JPG",
+    "recipe": "images/recipes/khai-yat-sai/recipe.jpg",
+    "steps": {
+      "01": [
+        "images/recipes/khai-yat-sai/step-01-01.jpg",
+        "images/recipes/khai-yat-sai/step-01-02.jpg",
+        "images/recipes/khai-yat-sai/step-01-03.jpg"
+      ],
+      "02": [
+        "images/recipes/khai-yat-sai/step-02-01.jpg",
+        "images/recipes/khai-yat-sai/step-02-02.jpg",
+        "images/recipes/khai-yat-sai/step-02-03.jpg"
+      ],
+      "03": [
+        "images/recipes/khai-yat-sai/step-03-01.jpg"
+      ],
+      "04": [
+        "images/recipes/khai-yat-sai/step-04-01.jpg",
+        "images/recipes/khai-yat-sai/step-04-02.JPG",
+        "images/recipes/khai-yat-sai/step-04-03.jpg"
+      ],
+      "05": [
+        "images/recipes/khai-yat-sai/step-05-01.jpg",
+        "images/recipes/khai-yat-sai/step-05-02.jpg",
+        "images/recipes/khai-yat-sai/step-05-03.jpg",
+        "images/recipes/khai-yat-sai/step-05-04.jpg"
+      ]
+    }
+  },
   "mexican-calabaza-en-tacha-pumpkin-pie": {
     "hero": "images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/hero.jpg",
     "recipe": "images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/recipe.jpg",
