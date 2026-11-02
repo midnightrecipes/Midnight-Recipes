@@ -41,8 +41,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
     details: [["Why It Matters", "The heart of the pie. Choose chocolate you genuinely enjoy eating on its own."],
       ["Best Choice", "60–70% dark chocolate gives the filling deep chocolate flavor without making it too sweet."],
       ["A Little Splurge", "Baking chocolate works perfectly well, but why not treat yourself to something special? Toronto has great local chocolate makers, including SOMA and ChocoSol. This pie is a good excuse to use chocolate you really love."],
-      ["Substitute", "Semi-sweet chocolate."],
-      ["Midnight Fix", "If using sweeter chocolate, try reducing the sugar to 50–60 g. Taste the filling before chilling and adjust to your preference."]
+      ["Substitute", "Semi-sweet chocolate works well. If using sweeter chocolate, reduce the sugar by 20–30% from the original amount. Taste the filling before chilling and adjust to your preference."]
     ]
   },
   {
@@ -57,8 +56,8 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
     tag: "THE CHOCOLATE DEEPENER",
     details: [["Why It Matters", "Adds a deeper, less sweet chocolate flavor that layers beautifully with dark chocolate."],
       ["Best Choice", "Dutch-process cocoa is a good fit for this creamy filling. Its lower acidity, darker color, and smoother flavor complement the chocolate. Since this recipe does not rely on cocoa to activate baking soda, you can choose it for flavor and color."],
-      ["Substitute", "Natural unsweetened cocoa powder also works, though the flavor may be sharper and the color lighter."],
-      ["Can't Find Cocoa Powder?", "You can try leaving it out and adding 20–30 g extra dark chocolate. This changes the balance of chocolate, fat, and starch, so the filling may set differently. Treat this as an adjustment to test rather than a guaranteed one-to-one replacement."]
+      ["Substitute", "The same amout of natural unsweetened cocoa powder also works, though the flavor may be sharper and the color lighter."],
+      ["Midnight Fix", "Out of cocoa powder? You can try leaving it out and adding 20–30 g extra dark chocolate. This changes the balance of chocolate, fat, and starch, so the filling may set differently. Treat this as an adjustment to test rather than a guaranteed one-to-one replacement."]
     ]
   },
   {
@@ -1249,7 +1248,7 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
     ingredients: [
       { group: 'Hamburg Steak' },
       { amount: 272, unit: 'g', imperialAmount: 0.6, imperialUnit: 'lb', item: 'Ground Beef (Regular or Lean)' },
-      { amount: 182, unit: 'g', imperialAmount: 0.4, imperialUnit: 'lb', item: 'Ground Pork' },
+      { amount: 182, unit: 'g', imperialAmount: 0.4, imperialUnit: 'lb', item: 'Ground Pork (Regular or Lean)' },
       { amount: 120, unit: 'g', imperialAmount: 1, imperialUnit: 'cup', item: 'Onion, Very Finely Chopped' },
       { amount: 1, unit: 'large', imperialAmount: 1, imperialUnit: 'large', item: 'Egg' },
       { amount: 50, unit: 'g', imperialAmount: 0.5, imperialUnit: 'cup', item: 'Breadcrumbs' },
