@@ -56,7 +56,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
     tag: "THE CHOCOLATE DEEPENER",
     details: [["Why It Matters", "Adds a deeper, less sweet chocolate flavor that layers beautifully with dark chocolate."],
       ["Best Choice", "Dutch-process cocoa is a good fit for this creamy filling. Its lower acidity, darker color, and smoother flavor complement the chocolate. Since this recipe does not rely on cocoa to activate baking soda, you can choose it for flavor and color."],
-      ["Substitute", "The same amout of natural unsweetened cocoa powder also works, though the flavor may be sharper and the color lighter."],
+      ["Substitute", "The same amount of natural unsweetened cocoa powder also works, though the flavor may be sharper and the color lighter."],
       ["Midnight Fix", "Out of cocoa powder? You can try leaving it out and adding 20–30 g extra dark chocolate. This changes the balance of chocolate, fat, and starch, so the filling may set differently. Treat this as an adjustment to test rather than a guaranteed one-to-one replacement."]
     ]
   },
@@ -507,7 +507,7 @@ ingredientFile:[
     tag:'THE CREAMY BALANCE',
     details:[
       ['Why Whole Milk?','Its fat content gives the filling a richer, creamier mouthfeel while keeping the custard lighter than one made entirely with cream.'],
-      ['Substitute','The same amout of 2% milk works too, but the filling will be slightly lighter.']
+      ['Substitute','The same amount of 2% milk works too, but the filling will be slightly lighter.']
     ]
   }
 ],
@@ -610,7 +610,7 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
     tag:'THE AROMATIC KICK',
     details:[
       ['Flavor','Warm, peppery, citrusy, and pleasantly spicy.'],
-      ['Peeling Tip','Use the edge of a spoon to gently scrape away the skin. It follows ginger’s knobby shape and reaches into tight corners without removing too much flesh. If using organic ginger, you can also leave the skin on after washing and scrubbing it thoroughly.']
+      ['Peeling Tip','Use the edge of a spoon to gently scrape away the skin. It follows ginger’s knobby shape and reaches into tight corners without removing too much flesh. If using organic ginger, you can also leave the skin on after washing and scrubbing it thoroughly.'],
       ['Substitute','Ground ginger can be used. Use ¾ tsp (1½ g) ground ginger to replace 3/4 tsp (6 g) fresh ginger. Ground ginger provides gentle background warmth, while finely grated fresh ginger delivers the bright, peppery, citrusy zing that defines the flavor of Sweet Potato Ginger Dessert Soup (番薯姜糖水).'],
       ['Storage','Submerge peeled ginger in a clean container of water, refrigerate, and change the water every 2–3 days. For longer storage, freeze whole and grate directly from frozen.']
     ]
@@ -621,7 +621,7 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
     details:[
       ['Flavor','Light, creamy, and milky.'],
       ['Why Here','Heavy 35% whipping cream can coat the palate and dull the fresh ginger aroma. Using 10% cream provides just enough dairy fat to create a silky custard while keeping the dessert light and allowing the ginger flavor to shine.'],
-      ['Substitute','For a similar fat content, mix mix 7 parts 2% milk with 3 parts 35% whipping cream (about ¼ cup (60ml) milk + 2 tbsp (30ml) cream for this recipe)'],
+      ['Substitute','For a similar fat content, mix 7 parts 2% milk with 3 parts 35% whipping cream (about ¼ cup (60ml) milk + 2 tbsp (30ml) cream for this recipe)'],
     ]
   }
 ],
@@ -808,7 +808,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
       ['Flavor','Creamy and slightly tangy, with a subtle fermented note.'],
       ['Best Choice','Use regular full-fat sour cream rather than a very low-fat version.'],
       ['Why Here','It adds body, creaminess, and extra tang to the filling without increasing the amount of condensed milk.'],
-      ['Substitute','The same amout of plain full-fat Greek yogurt can work, although the flavor will be slightly different.']
+      ['Substitute','The same amount of plain full-fat Greek yogurt can work, although the flavor will be slightly different.']
     ]
   },
   {
@@ -1350,7 +1350,7 @@ If you choose cheesecake, try this recipe tonight.`,
         ['Flavor','Creamy with a pleasant tang that balances the richness of the cheese and creates a lighter finish.'],
         ['Best Choice','Full-fat sour cream for a creamy texture and balanced tanginess.'],
         ['Why Here','Adds acidity to balance the richness of the cream cheese, creating a smooth texture that doesn\'t feel too heavy.'],
-        ['Substitute','The same amout of plain full-fat Greek yogurt can be used, although the cheesecake will taste slightly tangier and may have a somewhat lighter, less rich texture.'],
+        ['Substitute','The same amount of plain full-fat Greek yogurt can be used, although the cheesecake will taste slightly tangier and may have a somewhat lighter, less rich texture.'],
         ['Storage','Keep refrigerated. For this recipe, bring it close to room temperature before using.']
       ]},
       {name:'35% Whipping Cream',details:[
