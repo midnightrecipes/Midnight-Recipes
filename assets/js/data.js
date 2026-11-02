@@ -1487,7 +1487,7 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
     },
     tags: ['cheesecake', 'baked cheesecake', 'creamy cheesecake', 'silky texture', 'cream cheese', 'water bath', 'make ahead dessert', 'Haruki Murakami', 'Norwegian Wood'],
     usualsCategory: ''
-  }
+  },
   
   {
     slug:'classic-pumpkin-pie', title:'Classic Pumpkin Pie', description:'My take on a Canadian Thanksgiving classic, with silky pumpkin filling and a warm blend of cinnamon, cloves, and nutmeg—especially comforting on a quiet autumn night.', source:'Family & Tradition', dish:'Pumpkin Pie', cuisine:'Canadian', cuisineSecondary:'American',
