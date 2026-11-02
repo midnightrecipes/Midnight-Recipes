@@ -1150,273 +1150,195 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
     mainIngredients:['Chicken','Pantry','Herbs & Spices'],
     usualsCategory:''
   },
-  {
-    slug: 'moms-hamburg-steak',
-    title: 'Mom’s Hamburg Steak',
-    description: 'A Japanese-style hamburg steak inspired by my mom’s cooking, served with a rich, sweet-tangy sauce that brings back the comforting taste of home.',
-    source: 'Memory',
-    dish: 'Japanese Hamburg Steak',
-    cuisine: 'Japanese',
-    course: 'Main Dishes',
-    courseDisplay: 'Main Dishes',
-    categories: ['Main Dishes'],
-    mainIngredients: ['Ground Beef', 'Ground Pork', 'Onion', 'Eggs', 'Breadcrumbs', 'Milk'],
-    dateAdded: '2026-10-08',
-    timeStamp: '1:15 AM',
-    story: `In Japan, hamburg steak is one of those dishes that feels like “*haha no aji*” (母の味) — literally, “the taste of mother.” It’s that familiar, nostalgic taste we associate with home and childhood.
+{
+  slug: 'moms-hamburg-steak',
+  title: 'Mom’s Hamburg Steak',
+  description: 'A Japanese-style hamburg steak inspired by my mom’s cooking, served with a rich, sweet-tangy sauce that brings back the comforting taste of home.',
+  source: 'Memory',
+  dish: 'Japanese Hamburg Steak',
+  cuisine: 'Japanese',
+  course: 'Main Dishes',
+  courseDisplay: 'Main Dishes',
+  categories: ['Main Dishes'],
+  mainIngredients: ['Ground Beef', 'Ground Pork', 'Onion', 'Eggs', 'Breadcrumbs', 'Milk'],
+  dateAdded: '2026-10-08',
+  timeStamp: '1:15 AM',
+
+  story: `In Japan, hamburg steak is one of those dishes that feels like “haha no aji” (母の味) — literally, “the taste of mother.” It’s that familiar, nostalgic taste we associate with home and childhood.
 
 For me, hamburg steak is one of the dishes my mom used to make. When I was younger, I never really thought much about it. It was just hamburg steak — something that appeared on the dinner table.
-But looking back, it’s actually not the easiest dish to make. You have to chop the onion, knead the meat, shape each patty, cook them without drying them out, and then make the sauce. There’s definitely some work involved. And yet, my mom made it.
-Maybe that’s what *haha no aji* really means. Not that every mom made the same dish, but that somewhere along the way, an ordinary meal becomes a taste you remember. And the hamburg steak you make for your own family might just become their favorite, the one they remember most.
 
-You might be more familiar with Salisbury steak, which is often served with a rich mushroom gravy. This Japanese hamburg steak is essentially its close cousin, but the biggest difference lies in the sauce: instead of mushroom gravy, it’s glazed in a sweet, savory, and tangy pan-sauce made from ketchup, Worcestershire sauce, and soy sauce.
+But looking back, it’s actually not the easiest dish to make. You have to chop the onion, knead the meat, shape each patty, cook them without drying them out, and then make the sauce. There’s definitely some work involved. And yet, my mom made it.
+
+Maybe that’s what haha no aji really means. Not that every mom made the same dish, but that somewhere along the way, an ordinary meal becomes a taste you remember. And the hamburg steak you make for your own family might just become their favorite, the one they remember most.
+
+You might be more familiar with Salisbury steak, which is often served with a rich mushroom gravy. Japanese hamburg steak is a close cousin, but the biggest difference is the sauce: instead of mushroom gravy, it’s coated in a sweet, savory, and tangy Japanese-style demi-glace sauce made with ketchup, Worcestershire sauce, and soy sauce.
+
 The patty is soft and bouncy, with a golden crust on the outside and plenty of juicy, savory flavor in every bite!`,
-    heroImage: 'images/recipes/moms-hamburg-steak/hero.jpg',
-    recipeImage: 'images/recipes/moms-hamburg-steak/recipe.jpg',
-    stepQuantityConversion: true,
-    usCupFractions: true,
-    ingredientFile: [
-      {
-        name: 'GROUND MEAT (BEEF & PORK MIX)',
-        tag: 'The Juicy Foundation',
-        details: [
-          ['WHY 6:4 RATIO?', 'Technically, you could use any ratio or combination of ground meat. However, a 6:4 ratio of ground beef to ground pork hits the sweet spot: beef brings deep, savory flavor, while pork adds essential fat and tenderness so the patties stay juicy.'],
-          ['Substitute','You can use any ratio of ground beef and pork, or even 100% regular ground beef or pork. If using beef, avoid extra-lean ground beef, as it may make the patties dry.']
-        ]
-      },
-      {
-        name: 'BREADCRUMBS',
-        tag: 'The Stale Bread Secret',
-        details: [
-          ['WHY HERE', 'Breadcrumbs absorb the milk and trap the meat juices, keeping the patties soft and tender as they cook.'],
-          ['SUBSTITUTE', 'The same amount of panko, grated stale bread, crushed saltines, oatmeal, or even leftover cooked white rice can work in a pinch to bind the mixture.'],
-          ['MIDNIGHT FIX', 'If you have stale or hard bread sitting on the counter, grate or pulse it into crumbs—it works even better than store-bought.']
-        ]
-      },
-      {
-        name: 'ONION',
-        tag: 'The Moisture & Texture Booster',
-        details: [
-          ['BEST CHOICE', 'Yellow onion.'],
-          ['WHY HERE', 'Adding finely chopped raw onion saves prep time at midnight. As the patty steams, the onion releases subtle sweetness inside while retaining a soft, pleasant texture.'],
-          ['SUBSTITUTE', 'The same amount of finely minced shallots, white onions, or red onions.']
-        ]
-      },
-      {
-        name: 'GROUND NUTMEG',
-        tag: 'The Flavor Elevator',
-        details: [
-          ['WHY HERE', 'Nutmeg cuts through the heavy gamey scent of meat, enhancing its natural savory richness and giving the patty that unmistakable, classic Japanese 洋食 (Yoshoku) flavor.'],
-          ['SUBSTITUTE', 'The same amount of ground allspice, or an extra pinch of ground black pepper if omitting nutmeg entirely.']
-        ]
-      },
-      {
-        name: 'WORCESTERSHIRE SAUCE',
-        tag: 'The Umami Depth',
-        details: [
-          ['WHY HERE', 'Adds a concentrated tangy, spiced depth that transforms ketchup and soy sauce into a quick Japanese-style demi-glace.'],
-          ['SUBSTITUTE', 'The same amount of Tonkatsu sauce or A1 steak sauce. Alternatively, use half the amount of extra soy sauce mixed with a pinch of sugar.']
-        ]
-      },
-      {
-        name: 'KETCHUP',
-        tag: 'The Sweet-Tangy Base',
-        details: [
-          ['WHY HERE', 'Forms the glossy, fruit-sweet body of the pan sauce.'],
-          ['SUBSTITUTE', 'Mix 2 tbsp (30 ml) of tomato paste with 2 tbsp (30 ml) of water and a pinch of sugar to match the 4 tbsp（60 ml) volume of ketchup.']
-        ]
-      },
-      {
-        name: 'SAKE (JAPANESE RICE WINE)',
-        tag: 'The Pan Deglazer',
-        details: [
-          ['WHY HERE', 'Deglazes the pan, lifting up caramelized meat drips while rounding out the sharp acidity of ketchup and vinegar with mild rice sweetness and neutralizing meat odors.'],
-          ['SUBSTITUTE', 'The same amount of water, dry white wine, or Chinese Shaoxing wine. Using water creates a slightly lighter finish, but since the rich pan-sauce coats the steak anyway, it works completely fine!']
-        ]
-      }
-    ],
-    ingredients: [
-      { group: 'Hamburg Steak' },
-      { amount: 272, unit: 'g', imperialAmount: 0.6, imperialUnit: 'lb', item: 'Ground Beef (Regular or Lean)' },
-      { amount: 182, unit: 'g', imperialAmount: 0.4, imperialUnit: 'lb', item: 'Ground Pork (Regular or Lean)' },
-      { amount: 120, unit: 'g', imperialAmount: 1, imperialUnit: 'cup', item: 'Onion, Very Finely Chopped' },
-      { amount: 1, unit: 'large', imperialAmount: 1, imperialUnit: 'large', item: 'Egg' },
-      { amount: 50, unit: 'g', imperialAmount: 0.5, imperialUnit: 'cup', item: 'Breadcrumbs' },
-      { amount: 60, unit: 'ml', imperialAmount: 0.25, imperialUnit: 'cup', item: 'Milk' },
-      { amount: 5, unit: 'g', imperialAmount: 1, imperialUnit: 'tsp', item: 'Salt' },
-      { amount: 0.5, unit: 'g', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Black Pepper' },
-      { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground Nutmeg' },
-      { unit: '', item: 'Neutral Oil, for Cooking' },
-      { group: 'Japanese-Style “Demi-Glace” Sauce' },
-      { amount: 60, unit: 'ml', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Sake' },
-      { amount: 60, unit: 'ml', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Ketchup' },
-      { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Worcestershire Sauce' },
-      { amount: 30, unit: 'g', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Granulated Sugar' },
-      { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Soy Sauce' }
-    ],
-    stats: { prep: '15 mins', cook: '15 mins', total: '30 mins', serves: '4', quiet: '⭐⭐⭐☆☆' },
-    steps: [
-      {
-        number: '01',
-        title: 'KNEAD & MIX',
-        clock: '1:15 AM',
-        paragraphs: [
-          'In a bowl, mix chilled {{qty:Hamburg Steak::Ground Beef (Regular or Lean)}} ground beef, chilled {{qty:Hamburg Steak::Ground Pork}} ground pork, and {{qty:Hamburg Steak::Salt}} salt thoroughly until sticky and cohesive.',
-          'Add {{qty:Hamburg Steak::Egg}} egg, {{qty:Hamburg Steak::Breadcrumbs}} breadcrumbs, {{qty:Hamburg Steak::Milk}} milk, {{qty:Hamburg Steak::Onion, Very Finely Chopped}} finely chopped onion, {{qty:Hamburg Steak::Black Pepper}} black pepper, and {{qty:Hamburg Steak::Ground Nutmeg}} ground nutmeg. Mix just until combined.'
-        ],
-        stepImages: ['images/recipes/moms-hamburg-steak/step-01-01.jpg', 'images/recipes/moms-hamburg-steak/step-01-02.jpg', 'images/recipes/moms-hamburg-steak/step-01-03.jpg', 'images/recipes/moms-hamburg-steak/step-01-04.jpg']
-      },
-      {
-        number: '02',
-        title: 'SHAPE & SEAR',
-        clock: '1:23 AM',
-        paragraphs: [
-          'Divide the mixture into 4 portions. Toss each patty back and forth in a gentle catch-ball motion between your hands to expel trapped air, shape into smooth ovals, and press a shallow dimple into the center.',
-          'Heat a little neutral oil in a skillet over medium heat. Sear the patties for 2–3 minutes per side until deep golden brown.'
-        ],
-        stepImages: ['images/recipes/moms-hamburg-steak/step-02-01.jpg', 'images/recipes/moms-hamburg-steak/step-02-02.jpg']
-      },
-      {
-        number: '03',
-        title: 'STEAM & REST',
-        clock: '1:30 AM',
-        paragraphs: [
-          'Pour a splash of water or sake into the skillet and cover immediately with a lid. Reduce heat to medium-low and steam gently for 5–7 minutes until cooked through to the center.',
-          'Transfer the patties to a warm plate and let rest for 3–5 minutes. Keep the skillet unwashed for the sauce.'
-        ],
-        stepImages: ['images/recipes/moms-hamburg-steak/step-03-01.jpg']
-      },
-      {
-        number: '04',
-        title: 'MAKE THE “DEMI-GLACE” SAUCE',
-        clock: '1:37 AM',
-        paragraphs: [
-          'In the same skillet, add {{qty:Japanese-Style “Demi-Glace” Sauce::Sake}} sake, {{qty:Japanese-Style “Demi-Glace” Sauce::Ketchup}} ketchup, {{qty:Japanese-Style “Demi-Glace” Sauce::Worcestershire Sauce}} Worcestershire sauce, {{qty:Japanese-Style “Demi-Glace” Sauce::Granulated Sugar}} granulated sugar, and {{qty:Japanese-Style “Demi-Glace” Sauce::Soy Sauce}} soy sauce.',
-          'Simmer for 1–2 minutes over medium-low heat while scraping up the browned pan drippings until thickened and glossy. Spoon generously over the warm hamburg steaks.'
-        ],
-        stepImages: ['images/recipes/moms-hamburg-steak/step-04-01.jpg']
-      }
-    ],
-    notes: [
-      ['CHILLED MEAT & SALT FOR JUICINESS', 'Kneading cold meat with salt first draws out myosin (meat protein), creating a sticky network that locks the juices inside the patty during cooking.'],
-      ['CATCH-BALL MOTION TO PREVENT CRACKS', 'Tossing the meat mixture back and forth between your hands expels trapped air bubbles and smooths out surface cracks, preventing the patties from bursting or splitting in the hot pan.'],
-      ['STEAMING WITH WATER OR SAKE', 'Because hamburg patties are thick, searing alone will burn the outside before the center is done. Adding a splash of water or sake and covering with a lid steams the interior, keeping the meat incredibly juicy.'],
-      ['STALE BREADCRUMB HACK', 'If you have hard, stale bread on hand, grate it into crumbs—it creates a much better texture than store-bought. If you have neither bread nor crumbs, crushed crackers, oatmeal, or even leftover cooked white rice will bind the patties in a pinch.'],
-      ['SAVE THE PAN FOND', 'Don’t wash the skillet after searing! The caramelized meat juices left behind deglaze into the sauce, building an instant, rich demi-glace base.']
-    ],
-    finePrint: {
-      'BEST EATEN': 'Fresh, while warm.',
-      'MAKE AHEAD': 'Shape the patties up to 1 day ahead. Cover and refrigerate.',
-      'STORAGE': 'Refrigerate in an airtight container for up to 3 days.',
-      'FREEZER': 'Freeze cooked patties in an airtight, freezer-safe container for up to 3 months for best quality. Cool promptly before freezing and thaw in the refrigerator before reheating.',
-      'REHEAT': 'Reheat covered in a pan with a splash of water, or gently in the microwave.'
+
+  heroImage: 'images/recipes/moms-hamburg-steak/hero.jpg',
+  recipeImage: 'images/recipes/moms-hamburg-steak/recipe.jpg',
+  stepQuantityConversion: true,
+  usCupFractions: true,
+
+  ingredientFile: [
+    {
+      name: 'GROUND MEAT (BEEF & PORK MIX)',
+      tag: 'The Juicy Foundation',
+      details: [
+        ['WHY 6:4 RATIO?', 'A 6:4 ratio of ground beef to ground pork gives you a nice balance of flavor and juiciness. Beef brings a deep, savory flavor, while pork adds fat and tenderness to keep the patties moist.'],
+        ['SUBSTITUTE', 'You can use any ratio of ground beef and pork, or even 100% regular ground beef or 100% ground pork. If using beef, avoid extra-lean ground beef, as it may make the patties dry.']
+      ]
     },
-    tags: ['Memory', 'Japanese', 'Hamburg Steak', 'Ground Meat', 'Family Cooking', 'Demi-Glace Sauce'],
-    usualsCategory: ''
-  }
-,
-  {
-    slug:'silky-cheesecake',
-    title:'Silky Cheesecake', description:'Inspired by a memorable moment in Haruki Murakami’s Norwegian Wood, this silky cheesecake reflects on comfort, love, and the small things food can say.',
-    source:'Book',
-    original:'Norwegian Wood (1987) by Haruki Murakami',
-    dish:'Cheesecake',
-    cuisine:'American',
-    course:'Baking',
-    courseDisplay:'Baking, Desserts',
-    mainIngredients:['Cream Cheese','Sour Cream','Eggs','Whipping Cream','Lemon'],
-    categories:['Baking','Desserts'],
-    dateAdded:'2026-10-10',
-    timeStamp:'10:10 PM',
-    heroImage:'images/recipes/silky-cheesecake/hero.jpg', recipeImage:'images/recipes/silky-cheesecake/recipe.jpg',
-    story:`In Haruki Murakami's *Norwegian Wood*, Midori has an unusual idea of what it means to be loved.
-Imagine someone buying her a strawberry shortcake, only for her to throw it out of the window. Instead of getting angry, she wants him to ask, “Chocolate mousse or cheesecake?”
-It's a slightly unreasonable thing to ask of someone, isn't it? But I think that's what makes the scene so memorable. Midori isn't really talking about cake. She wants to know that even when she's difficult, even when she pushes someone away, they might still choose to stay.
-I don't completely agree with her, because I don't think love means putting up with everything someone does. We all have our limits, and loving someone doesn't mean ignoring your own feelings. But there's something comforting about being with someone who doesn't give up on you the moment things get difficult. Someone who is willing to ask again, rather than assuming the answer will always be no.
-For me, food has always been one of the ways we express love. Cooking for someone is a way of saying, "I thought of you. I want you to be happy. I care about what you need." Sometimes, love is simply remembering what someone likes to eat. And sometimes, it's being willing to ask one more time.
- *"To make it up to you, I'll go out and buy you something else. What would you like? Chocolate mousse? Cheesecake?"*
-If you choose cheesecake, try this recipe tonight.`,
-    ingredientFile:[
-      {name:'Cream Cheese',details:[
-        ['Flavor','Smooth, rich, milky, and slightly tangy, with a subtle salty note.'],
-        ['Best Choice','Full-fat cream cheese for a richer flavor and creamier texture.'],
-        ['Substitute','There is no substitute for the main character!'],
-        ['Storage','Keep refrigerated. For this recipe, soften at room temperature before using.']
-      ]},
-      {name:'Sour Cream',details:[
-        ['Flavor','Creamy with a pleasant tang that balances the richness of the cheese and creates a lighter finish.'],
-        ['Best Choice','Full-fat sour cream for a creamy texture and balanced tanginess.'],
-        ['Why Here','Adds acidity to balance the richness of the cream cheese, creating a smooth texture that doesn\'t feel too heavy.'],
-        ['Substitute','The same amount of plain full-fat Greek yogurt can be used, although the cheesecake will taste slightly tangier and may have a somewhat lighter, less rich texture.'],
-        ['Storage','Keep refrigerated. For this recipe, bring it close to room temperature before using.']
-      ]},
-      {name:'35% Whipping Cream',details:[
-        ['Flavor','Mild, milky, and creamy. It softens the tanginess of the sour cream and contributes to a smooth mouthfeel.'],
-        ['Best Choice','35% milk-fat whipping cream for a smooth, rich texture without making the cheesecake as dense as a New York-style cheesecake.'],
-        ['Why Here','Adds moisture and milk fat to create a cheesecake that feels silky and creamy without being overly heavy.'],
-        ['Substitute','Other creams may have different fat and water contents, so the final texture may vary.'],
-        ['Storage','Keep refrigerated until ready to use. For this recipe, bring it close to room temperature before using.'],
-        ['Midnight Fix','When using a substitute, consider its fat and water content, as these can affect the cheesecake\'s richness and texture.']
-      ]}
-    ],
-    ingredients:[
-      {amount:250,unit:'g',item:'Cream Cheese',imperialAmount:1,imperialUnit:'cup'},
-      {amount:85,unit:'g',item:'Granulated Sugar'},
-      {amount:170,unit:'g',item:'Sour Cream',imperialAmount:0.75,imperialUnit:'cup'},
-      {amount:125,unit:'ml',item:'35% Whipping Cream'},
-      {amount:2,unit:'',item:'Eggs'},
-      {amount:8,unit:'g',item:'Cornstarch'},
-      {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Lemon Juice'},
-      {amount:0.5,unit:'tsp',item:'Vanilla Extract'}
-    ],
-    stats:{prep:'20 mins',cook:'45–50 mins',chill:'8 hrs+',total:'9 hrs 5 mins+',serves:'6–8 slices',pan:'18 cm loaf pan',quiet:'⭐⭐⭐⭐⭐'},
-    showPan:true,
-    showChill:true,
-    stepQuantityConversion:true,
-    usCupFractions:true,
-    steps:[
-      {number:'01',title:'PREPARE THE INGREDIENTS',clock:'10:10 PM',paragraphs:[
-        'Bring the cream cheese, sour cream, and eggs close to room temperature.',
-        'Preheat your oven to 150°C / 300°F. Line an 18 cm loaf pan with parchment paper.',
-        'Beat the eggs in a separate bowl and set aside.'
-      ],stepImages:[]},
-      {number:'02',title:'BUILD THE CREAMY BASE',clock:'10:15 PM',paragraphs:[
-        'In a large bowl, mix the {{qty:Cream Cheese}} cream cheese until completely smooth and free of lumps.',
-        'Add the {{qty:Granulated Sugar}} granulated sugar, {{qty:Sour Cream}} sour cream, and {{qty:35% Whipping Cream}} whipping cream. Mix until evenly combined.'
-      ],stepImages:['images/recipes/silky-cheesecake/step-02-01.jpg','images/recipes/silky-cheesecake/step-02-02.jpg','images/recipes/silky-cheesecake/step-02-03.jpg']},
-      {number:'03',title:'FINISH WITH A SILKY BATTER',clock:'10:20 PM',paragraphs:[
-        'Gradually add {{qty:Eggs}} beaten eggs in two or three additions, mixing gently after each addition.',
-        'Sift in the {{qty:Cornstarch}} cornstarch, then add the {{qty:Lemon Juice}} lemon juice and {{qty:Vanilla Extract}} vanilla extract. Mix until the batter is smooth and uniform.',
-        'Pour the batter into the prepared loaf pan. Gently tap the pan against the counter to release large air bubbles.',
-        'For an extra-silky texture, strain the batter through a fine-mesh sieve before pouring it into the pan.'
-      ],stepNote:'**Midnight Shortcut:** Put all the batter ingredients into the food processor and blend until smooth. Avoid overmixing to prevent unnecessary air incorporation.',stepImages:['images/recipes/silky-cheesecake/step-03-01.jpg','images/recipes/silky-cheesecake/step-03-02.jpg','images/recipes/silky-cheesecake/step-03-03.jpg','images/recipes/silky-cheesecake/step-03-04.jpg']},
-      {number:'04',title:'LET THE WATER BATH DO THE WORK',clock:'10:30 PM',paragraphs:[
-        'Place the loaf pan inside a larger, deep oven-safe tray. Carefully pour hot water into the outer tray to create a water bath.',
-        'Bake at 150°C / 300°F for approximately 45–50 minutes, checking for doneness from around 45 minutes. The edges should be set while the center still jiggles slightly when the pan is gently moved.',
-        'While the cheesecake bakes, you can go take a shower. Let the oven do the work for a while.'
-      ],stepImages:['images/recipes/silky-cheesecake/step-04-01.jpg']},
-      {number:'05',title:'GIVE IT THE NIGHT',clock:'11:15 PM',paragraphs:[
-        'Remove the pan from the water bath and let the cheesecake cool in the pan until it reaches room temperature.',
-        'Refrigerate overnight for at least 8 hours to allow the texture to set completely.',
-        'Once thoroughly chilled, lift the cheesecake out of the pan.'
-      ],stepImages:['images/recipes/silky-cheesecake/step-05-01.jpg','images/recipes/silky-cheesecake/step-05-02.jpg']}
-    ],
-    notes:[
-      ['Not Quite New York, Not Quite Soufflé','This cheesecake sits somewhere between a dense New York-style cheesecake and a light Japanese soufflé cheesecake. It has a creamy, silky mouthfeel without feeling quite so heavy, while remaining rich enough to satisfy a cheesecake craving. The goal is a delicate texture that feels just right, even for a late-night slice.'],
-      ['Why Bake It in a Water Bath?','A water bath helps moderate the heat around the pan, encouraging the cheesecake to bake more gently and evenly. This is especially useful when aiming for a soft, creamy texture rather than a dry or overly firm one.'],
-      ['To Strain or Not to Strain?','Straining is optional, but I recommend it if you want the smoothest texture. A fine-mesh sieve catches small lumps of cream cheese and any undissolved bits that might otherwise affect the finished mouthfeel.'],
-      ['The Gentle Jiggle','The cheesecake should still have a slight wobble in the center when it comes out of the oven. It will continue to set as it cools and chills. Waiting until the center is completely firm in the oven may result in a drier texture.']
-    ],
-    finePrint:{
-      'BEST EATEN':'Tomorrow. Let the cheesecake sit at room temperature for 5–10 minutes before serving. This helps soften the texture and bring out its creamy, silky mouthfeel.',
-      'MAKE AHEAD':'Yes. Prepare the cheesecake the day before serving and refrigerate overnight to allow it to set completely.',
-      'STORAGE':'Cover and refrigerate for up to 4 days.',
-      'FREEZER':'Cheesecake can be frozen for longer storage. For the best texture, wrap individual slices tightly and place them in an airtight freezer-safe container. Use within 1 month for best quality. Thaw overnight in the refrigerator before serving. The texture may change slightly after freezing.',
-      'REHEAT':'Not applicable.'
+    {
+      name: 'BREADCRUMBS',
+      tag: 'The Stale Bread Secret',
+      details: [
+        ['WHY HERE', 'Breadcrumbs absorb the milk and help keep the meat juices in the patties, making them soft and tender.'],
+        ['SUBSTITUTE', 'You can use the same amount of panko, finely grated stale bread, crushed saltine crackers, or oatmeal. Leftover cooked white rice can also work as a binder, although it will give the patties a slightly different texture.'],
+        ['MIDNIGHT FIX', 'If you have stale or hard bread sitting around, grate or pulse it into crumbs. It works just as well as store-bought breadcrumbs.']
+      ]
     },
-    tags:['cheesecake','baked cheesecake','creamy cheesecake','silky texture','cream cheese','water bath','make ahead dessert','Haruki Murakami','Norwegian Wood'],
-    usualsCategory:''
+    {
+      name: 'ONION',
+      tag: 'The Moisture & Texture Booster',
+      details: [
+        ['BEST CHOICE', 'Yellow onion.'],
+        ['WHY HERE', 'Adding finely chopped raw onion saves prep time. As the patties cook, the onion softens and releases its natural sweetness, adding moisture and a pleasant texture.'],
+        ['SUBSTITUTE', 'Use the same amount of finely minced shallots, white onion, or red onion.']
+      ]
+    },
+    {
+      name: 'GROUND NUTMEG',
+      tag: 'The Flavor Elevator',
+      details: [
+        ['WHY HERE', 'Nutmeg adds warmth and a subtle aromatic depth that complements the meat and gives the patties a classic Japanese yoshoku flavor.'],
+        ['SUBSTITUTE', 'Use the same amount of ground allspice, or simply leave it out and add an extra pinch of black pepper if desired.']
+      ]
+    },
+    {
+      name: 'WORCESTERSHIRE SAUCE',
+      tag: 'The Umami Depth',
+      details: [
+        ['WHY HERE', 'Adds a concentrated tangy, spiced depth that brings the ketchup and soy sauce together into a rich Japanese-style demi-glace sauce.'],
+        ['SUBSTITUTE', 'Use the same amount of tonkatsu sauce or A.1. steak sauce. Alternatively, use half the amount of extra soy sauce with a pinch of sugar.']
+      ]
+    },
+    {
+      name: 'KETCHUP',
+      tag: 'The Sweet-Tangy Base',
+      details: [
+        ['WHY HERE', 'Forms the glossy, slightly sweet and tangy base of the pan sauce.'],
+        ['SUBSTITUTE', 'To replace 4 tbsp (60 ml) of ketchup, mix 2 tbsp (30 ml) tomato paste with 2 tbsp (30 ml) water and a pinch of sugar.']
+      ]
+    },
+    {
+      name: 'SAKE (JAPANESE RICE WINE)',
+      tag: 'The Pan Deglazer',
+      details: [
+        ['WHY HERE', 'Helps lift the browned bits from the pan while adding a mild sweetness that balances the acidity of the ketchup and Worcestershire sauce.'],
+        ['SUBSTITUTE', 'Use the same amount of water, dry white wine, or Chinese Shaoxing wine. Water gives a slightly lighter flavor, but it works perfectly well in this rich sauce.']
+      ]
+    }
+  ],
+
+  ingredients: [
+    { group: 'Hamburg Steak' },
+    { amount: 272, unit: 'g', imperialAmount: 0.625, imperialUnit: 'lb', item: 'Ground Beef (Regular or Lean)' },
+    { amount: 182, unit: 'g', imperialAmount: 0.375, imperialUnit: 'lb', item: 'Ground Pork (Regular or Lean)' },
+    { amount: 120, unit: 'g', imperialAmount: 1, imperialUnit: 'cup', item: 'Onion, Very Finely Chopped' },
+    { amount: 1, unit: 'large', imperialAmount: 1, imperialUnit: 'large', item: 'Egg' },
+    { amount: 50, unit: 'g', imperialAmount: 0.5, imperialUnit: 'cup', item: 'Breadcrumbs' },
+    { amount: 60, unit: 'ml', imperialAmount: 0.25, imperialUnit: 'cup', item: 'Milk' },
+    { amount: 5, unit: 'g', imperialAmount: 1, imperialUnit: 'tsp', item: 'Salt' },
+    { amount: 0.5, unit: 'g', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Black Pepper' },
+    { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground Nutmeg' },
+    { unit: '', item: 'Neutral Oil, for Cooking' },
+
+    { group: 'Japanese-Style “Demi-Glace” Sauce' },
+    { amount: 60, unit: 'ml', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Sake' },
+    { amount: 60, unit: 'ml', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Ketchup' },
+    { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Worcestershire Sauce' },
+    { amount: 30, unit: 'g', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Granulated Sugar' },
+    { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Soy Sauce' }
+  ],
+
+  stats: { prep: '15 mins', cook: '15 mins', total: '30 mins', serves: '4', quiet: '⭐⭐⭐☆☆' },
+
+  steps: [
+    {
+      number: '01',
+      title: 'KNEAD & MIX',
+      clock: '1:15 AM',
+      paragraphs: [
+        'In a bowl, mix chilled {{qty:Hamburg Steak::Ground Beef (Regular or Lean)}} ground beef, chilled {{qty:Hamburg Steak::Ground Pork}} ground pork, and {{qty:Hamburg Steak::Salt}} salt thoroughly until sticky and cohesive.',
+        'Add {{qty:Hamburg Steak::Egg}} egg, {{qty:Hamburg Steak::Breadcrumbs}} breadcrumbs, {{qty:Hamburg Steak::Milk}} milk, {{qty:Hamburg Steak::Onion, Very Finely Chopped}} finely chopped onion, {{qty:Hamburg Steak::Black Pepper}} black pepper, and {{qty:Hamburg Steak::Ground Nutmeg}} ground nutmeg. Mix just until combined.'
+      ],
+      stepImages: [
+        'images/recipes/moms-hamburg-steak/step-01-01.jpg',
+        'images/recipes/moms-hamburg-steak/step-01-02.jpg',
+        'images/recipes/moms-hamburg-steak/step-01-03.jpg',
+        'images/recipes/moms-hamburg-steak/step-01-04.jpg'
+      ]
+    },
+    {
+      number: '02',
+      title: 'SHAPE & SEAR',
+      clock: '1:23 AM',
+      paragraphs: [
+        'Divide the mixture into 4 equal portions. Toss each portion gently between your hands a few times to release trapped air, then shape into smooth ovals and press a shallow dimple into the center of each patty.',
+        'Heat a little neutral oil in a skillet over medium heat. Sear the patties for 2–3 minutes per side until deep golden brown.'
+      ],
+      stepImages: [
+        'images/recipes/moms-hamburg-steak/step-02-01.jpg',
+        'images/recipes/moms-hamburg-steak/step-02-02.jpg'
+      ]
+    },
+    {
+      number: '03',
+      title: 'STEAM & REST',
+      clock: '1:30 AM',
+      paragraphs: [
+        'Pour a splash of water or sake into the skillet and cover immediately with a lid. Reduce heat to medium-low and steam gently for 5–7 minutes until cooked through to the center.',
+        'Transfer the patties to a warm plate and let rest for 3–5 minutes. Keep the skillet unwashed for the sauce.'
+      ],
+      stepImages: [
+        'images/recipes/moms-hamburg-steak/step-03-01.jpg'
+      ]
+    },
+    {
+      number: '04',
+      title: 'MAKE THE “DEMI-GLACE” SAUCE',
+      clock: '1:37 AM',
+      paragraphs: [
+        'In the same skillet, add {{qty:Japanese-Style “Demi-Glace” Sauce::Sake}} sake, {{qty:Japanese-Style “Demi-Glace” Sauce::Ketchup}} ketchup, {{qty:Japanese-Style “Demi-Glace” Sauce::Worcestershire Sauce}} Worcestershire sauce, {{qty:Japanese-Style “Demi-Glace” Sauce::Granulated Sugar}} granulated sugar, and {{qty:Japanese-Style “Demi-Glace” Sauce::Soy Sauce}} soy sauce.',
+        'Simmer for 1–2 minutes over medium-low heat while scraping up the browned pan drippings until thickened and glossy. Spoon generously over the warm hamburg steaks.'
+      ],
+      stepImages: [
+        'images/recipes/moms-hamburg-steak/step-04-01.jpg'
+      ]
+    }
+  ],
+
+  notes: [
+    ['CHILLED MEAT & SALT FOR JUICINESS', 'Mixing cold meat with salt first helps develop myosin, a meat protein that makes the mixture sticky and helps the patties hold together.'],
+    ['CATCH-BALL MOTION TO PREVENT CRACKS', 'Gently tossing the mixture between your hands helps remove air pockets and create smoother patties, reducing the chance of cracks as they cook.'],
+    ['STEAMING WITH WATER OR SAKE', 'Hamburg patties are thick, so searing alone may brown the outside before the center is cooked. Adding a splash of water or sake and covering the skillet helps cook the inside gently.'],
+    ['STALE BREADCRUMB HACK', 'If you have hard, stale bread on hand, grate it into crumbs. Crushed crackers, oatmeal, or leftover cooked white rice can also help bind the patties when you are out of breadcrumbs.'],
+    ['SAVE THE PAN FOND', 'Don’t wash the skillet after searing! The browned bits left behind add flavor to the sauce when you scrape them up with the liquid.']
+  ],
+
+  finePrint: {
+    'BEST EATEN': 'Fresh, while warm.',
+    'MAKE AHEAD': 'Shape the patties up to 1 day ahead. Cover and refrigerate.',
+    'STORAGE': 'Refrigerate in an airtight container for up to 3 days.',
+    'FREEZER': 'Freeze cooked patties in an airtight, freezer-safe container for up to 3 months for best quality. Cool promptly before freezing and thaw in the refrigerator before reheating.',
+    'REHEAT': 'Reheat covered in a pan with a splash of water, or gently in the microwave.'
   },
+
+  tags: ['Memory', 'Japanese', 'Hamburg Steak', 'Ground Meat', 'Family Cooking', 'Demi-Glace Sauce'],
+  usualsCategory: ''
+ },
 
   {
     slug:'classic-pumpkin-pie', title:'Classic Pumpkin Pie', description:'My take on a Canadian Thanksgiving classic, with silky pumpkin filling and a warm blend of cinnamon, cloves, and nutmeg—especially comforting on a quiet autumn night.', source:'Family & Tradition', dish:'Pumpkin Pie', cuisine:'Canadian', cuisineSecondary:'American',
@@ -1470,6 +1392,7 @@ If you choose cheesecake, try this recipe tonight.`,
       'REHEAT':'Best chilled or at room temperature. For a warm slice, heat at 160°C / 325°F for 5–10 minutes.',
       'FREEZER':'Freeze tightly wrapped individual slices for up to 1 month.',
     },
+    
     tags:['Thanksgiving','Fall','Baking','Dessert','Pumpkin','Pie','Cinnamon','Make Ahead','Classic Pumpkin Pie'],
     mainIngredients:['Pumpkin','Pie','Eggs','Cream','Cinnamon'],
     footerCuisine:'Canadian · American', footerCourse:'Baking · Desserts', footerMainIngredients:['Pumpkin','Pie','Eggs','Cream','Cinnamon'], usualsCategory:''
