@@ -644,7 +644,8 @@ function formatUnitValue(n,u){
   if(unit==='tbsp')return `${formatFractionMin(v,4)} ${u}`;
   if(unit==='tsp')return `${formatFractionMin(v,8)} ${u}`;
   if(unit==='g'||unit==='ml'){if(v>0&&v<1)return `${formatFractionMin(v,8)} ${u}`;return `${Math.round(v)} ${u}`}
-  if(['lb','oz','fl oz','l','kg'].includes(unit))return `${formatFractionMin(v,4)} ${u}`;
+  if(unit==='lb')return `${formatFractionMin(v,8)} ${u}`;
+  if(['oz','fl oz','l','kg'].includes(unit))return `${formatFractionMin(v,4)} ${u}`;
   if(['cup','cups'].includes(unit))return formatCupValue(v,true);
   return `${formatFractionMin(v,4)} ${pluralUnit(u,v)}`;
 }
