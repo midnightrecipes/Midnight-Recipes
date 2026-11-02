@@ -1166,14 +1166,11 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
     story: `In Japan, hamburg steak is one of those dishes that feels like “*haha no aji*” (母の味) — literally, “the taste of mother.” It’s that familiar, nostalgic taste we associate with home and childhood.
 
 For me, hamburg steak is one of the dishes my mom used to make. When I was younger, I never really thought much about it. It was just hamburg steak — something that appeared on the dinner table.
-
 But looking back, it’s actually not the easiest dish to make. You have to chop the onion, knead the meat, shape each patty, cook them without drying them out, and then make the sauce. There’s definitely some work involved. And yet, my mom made it.
+Maybe that’s what *haha no aji* really means. Not that every mom made the same dish, but that somewhere along the way, an ordinary meal becomes a taste you remember. And the hamburg steak you make for your own family might just become their favorite, the one they remember most.
 
 You might be more familiar with Salisbury steak, which is often served with a rich mushroom gravy. This Japanese hamburg steak is essentially its close cousin, but the biggest difference lies in the sauce: instead of mushroom gravy, it’s glazed in a sweet, savory, and tangy pan-sauce made from ketchup, Worcestershire sauce, and soy sauce.
-
-When you take a bite, the soft, bouncy patty yields effortlessly, releasing a rush of savory juices sealed beneath the golden crust. 
-
-Maybe that’s what *haha no aji* really means. Not that every mom made the same dish, but that somewhere along the way, an ordinary meal becomes a taste you remember. And the hamburg steak you make for your own family might just become their favorite — the one they remember most.`,
+The patty is soft and bouncy, with a golden crust on the outside and plenty of juicy, savory flavor in every bite!`,
     heroImage: 'images/recipes/moms-hamburg-steak/hero.jpg',
     recipeImage: 'images/recipes/moms-hamburg-steak/recipe.jpg',
     stepQuantityConversion: true,
