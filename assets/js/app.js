@@ -409,7 +409,28 @@ function instructionBlock(paragraphs,r,scale,unit,context=''){
   }).join('');
 }
 function normalizeIngredientText(value){return String(value??'').toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9%.]+/g,' ').replace(/\bfinely crushed\b|\bfinely minced\b|\bchopped\b|\bminced\b|\bcut into 3 4 cm pieces\b|\bto taste\b|\bfor finishing\b|\bfor finish\b/g,'').replace(/\s+/g,' ').trim()}
-function ingredientFileKey(value){const n=normalizeIngredientText(value);if(n.includes('graham cracker'))return 'graham crackers';if(n.includes('dark chocolate'))return 'dark chocolate';if(n.includes('espresso powder'))return 'espresso powder';if(n.includes('unsweetened cocoa powder')||n==='cocoa powder')return 'unsweetened cocoa powder';if(n.includes('3 25 milk')||n.includes('3.25 milk'))return '3.25% milk';if(n.includes('ground beef'))return 'ground beef';if(n.includes('fatty ground pork')||n.includes('ground pork'))return 'ground pork';if(n.includes('fresh red chili'))return 'fresh red chili';if(n.includes('makrut lime leaf'))return 'makrut lime leaf';if(n==='garlic'||n.includes(' garlic'))return 'garlic';if(n.includes('doubanjiang'))return 'doubanjiang';if(n==='apple'||n==='apples')return 'apple';if(n==='whole milk')return 'whole milk';if(n.includes('35% whipping cream')||n.includes('whipping cream'))return '35% whipping cream';return n}
+function ingredientFileKey(value){
+  const n=normalizeIngredientText(value);
+
+  if(n.includes('graham cracker'))return 'graham crackers';
+  if(n.includes('dark chocolate'))return 'dark chocolate';
+  if(n.includes('espresso powder'))return 'espresso powder';
+  if(n.includes('unsweetened cocoa powder')||n==='cocoa powder')return 'unsweetened cocoa powder';
+  if(n.includes('3 25 milk')||n.includes('3.25 milk'))return '3.25% milk';
+  if(n.includes('fatty ground pork')||n.includes('ground pork'))return 'ground pork';
+  if(n.includes('fresh red chili'))return 'fresh red chili';
+  if(n.includes('makrut lime leaf'))return 'makrut lime leaf';
+  if(n==='garlic'||n.includes(' garlic'))return 'garlic';
+  if(n.includes('doubanjiang'))return 'doubanjiang';
+  if(n==='apple'||n==='apples')return 'apple';
+  if(n==='whole milk')return 'whole milk';
+  if(n.includes('35% whipping cream')||n.includes('whipping cream'))return '35% whipping cream';
+
+  // Pumpkin Pie Spice
+  if(['ground cinnamon','ground ginger','ground nutmeg','ground cloves'].includes(n))return 'pumpkin pie spice';
+
+  return n;
+}
 function ingredientFileAnchorMap(r){const map={};normalizeIngredientFile(r.ingredientFile).groups.forEach(g=>{map[ingredientFileKey(g.name)]=g.name});return map}
 function ingredientInfoLink(r,item,enabled=true){
   if(!enabled)return '';
