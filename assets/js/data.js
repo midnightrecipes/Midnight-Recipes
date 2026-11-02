@@ -64,8 +64,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
     name: "WHOLE MILK",
     tag: "THE CREAMINESS BUILDER",
     details: [["Why It Matters", "Adds moisture and fat to help create a creamy chocolate filling."],
-      ["Substitute", "2% milk can work, but the filling may be a little less rich."],
-      ["Midnight Fix", "Try adding 1 tbsp extra butter when using 2% milk for a richer mouthfeel. This is an adjustment to test rather than a guaranteed replacement."]
+      ["Substitute", "2% milk can work, but the filling may be a little less rich.Try adding 1 tbsp extra butter when using 2% milk for a richer mouthfeel. This is an adjustment to test rather than a guaranteed replacement."]
     ]
   }
 ],
@@ -163,7 +162,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
     details:[
       ['Fresh vs. Dried','Dried chilies bring concentrated, rounded heat, while fresh red chilies add a brighter, sharper, fruitier punch. Their fresh chili character helps balance the savory pork fat and fermented bean paste.'],
       ['Spice Adjustment','Finely chop the chili so it disperses throughout the mince. The inner ribs and surrounding membrane contain much of a chili’s capsaicin, so keeping them increases the heat. Remove some for a milder result. Seeds can carry capsaicin on their surfaces, but they are not the main source of heat.'],
-      ['Substitute','Thai bird’s-eye chilies give intense heat, while Fresno or other mild red chilies provide a gentler result. Red chili flakes or chili paste can also work. Choose an unsweetened chili paste when possible, and adjust the amount to taste, as some varieties contain added salt, sugar, or other seasonings. These substitutes will not provide quite the same fresh, fruity aroma as fresh chili.'],
+      ['Substitute','For each fresh red chili, use 1 Fresno or mild red chili for a similar level of heat. Thai bird’s-eye chilies are much hotter, so use only ¼–½ chili. If using dried red chili flakes, start with ¼ tsp. You can also use ½–1 tsp of chili paste. Adjust the amount to taste.'],
       ['Storage','Refrigerate fresh chilies in a breathable bag or loosely wrapped. For longer storage, freeze whole or chopped chilies in an airtight freezer bag. They can be used straight from frozen in cooked dishes; thawing is not necessary. Frozen chilies will soften after thawing, so they are best used in stir-fries, sauces, and other cooked recipes.']
 ]
   },
@@ -182,9 +181,8 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
     details:[
       ['Flavor','Salty, fermented, savory, and spicy, with deep umami and a distinctive red chili aroma. Brands and styles vary in heat, saltiness, texture, and sweetness.'],
       ['Why Fry It First','Frying doubanjiang briefly in the oil before adding the liquids helps release its chili color and aroma while softening its raw fermented edge. Fry for about 30–45 seconds, stirring constantly, until fragrant without scorching.'],
-      ['Substitute','Gochujang can work, but it is generally sweeter and has a different fermented flavor. A mixture of red chili paste and dark miso can also approximate some of doubanjiang’s savory depth, although the result will not be identical.'],
-  ['Midnight Fix','When using gochujang, start with the same amount as doubanjiang and add a small pinch of salt to balance its sweetness. For another alternative, mix 2 parts red chili paste with 1 part dark miso. Adjust the chili paste to your preferred heat level, and taste before adding extra salt.'],
-      ['Salt Check','Doubanjiang is already salty, and this recipe also uses soy sauce, oyster sauce, and bouillon. Taste before adding any extra salt.']
+      ['Substitute','Use the same amount of gochujang as doubanjiang, or mix 2 parts red chili paste with 1 part dark miso as an alternative.'],
+      ['Midnight Fix','Gochujang is sweeter than doubanjiang, so taste the dish and add a small pinch of salt if needed. If using the chili paste and miso mixture, adjust the amount of chili paste to your preferred heat level. Remember that soy sauce, oyster sauce, and bouillon also add salt, so taste before adding any extra.']
     ]
   },
   {
@@ -193,7 +191,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
     details:[
       ['Flavor','Garlic chives add a fresh, sharp, garlicky flavor, a little crunch, and a vivid green finish that lifts the rich pork mince.'],
       ['When to Add','Cut the chives into 3–4 cm pieces and add them near the end. Toss for about 30–45 seconds—just long enough to soften them slightly while keeping their color and fresh aroma.'],
-      ['Substitute','Green onions (scallions) cut into 3–4 cm pieces are an easy substitute. They are milder and less garlicky.'],
+      ['Substitute','Green onions (scallions) are an easy substitute. They are milder and less garlicky.'],
     ]
   }
 ],
@@ -430,7 +428,7 @@ Tonight, I wanted to create something a little different from a standard pumpkin
     ingredients:[
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
       {group:'CALABAZA FILLING'},
-      {amount:400,unit:'g',imperialAmount:5/3,imperialUnit:'cup',item:'Pumpkin Purée'}, {amount:2,unit:'large',imperialAmount:2,imperialUnit:'large',item:'Eggs'}, {amount:180,unit:'ml',imperialAmount:3/4,imperialUnit:'cup',item:'Half & Half / 10% Cream'},
+      {amount:400,unit:'g',imperialAmount:5/3,imperialUnit:'cup',item:'Pumpkin Purée'}, {amount:2,unit:'large',imperialAmount:2,imperialUnit:'large',item:'Eggs'}, {amount:180,unit:'ml',imperialAmount:3/4,imperialUnit:'cup',item:'10% Cream (Half & Half)'},
       {amount:55,unit:'g',imperialAmount:0.25,imperialUnit:'cup',item:'Dark Brown Sugar'}, {amount:10,unit:'g',imperialAmount:1/2,imperialUnit:'tbsp',item:'Molasses'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Orange Juice'}, {amount:0.25,unit:'tsp',imperialAmount:1/4,imperialUnit:'tsp',item:'Salt'},
       {group:'SPICE INFUSION'},
       {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Cinnamon Stick'}, {amount:2,unit:'',item:'Whole Cloves'}, {amount:1,unit:'',item:'Star Anise'}, {amount:1,unit:'strip',item:'Orange Peel, About 2–3 cm (1 Inch) Long'},
@@ -439,7 +437,7 @@ Tonight, I wanted to create something a little different from a standard pumpkin
     ],
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat your oven to 175°C / 350°F.','Start with one of our usual recipes - Building Block Pie Crust (OPTION B — PARTIAL BLIND-BAKE).'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
-      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the spice infusion and syrup.','Pour {{qty:CALABAZA FILLING::Half & Half / 10% Cream}} Half & Half into a small saucepan.','Add {{qty:SPICE INFUSION::Cinnamon Stick}} cinnamon stick, {{qty:SPICE INFUSION::Whole Cloves}} whole cloves, {{qty:SPICE INFUSION::Star Anise}} star anise, and {{qty:SPICE INFUSION::Orange Peel, About 2–3 cm (1 Inch) Long}} of orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, star anise, and orange peel. Prolonged steeping can make the peel bitter.','While the infused Half & Half is still warm, whisk in {{qty:CALABAZA FILLING::Dark Brown Sugar}} dark brown sugar and {{qty:CALABAZA FILLING::Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
+      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the spice infusion and syrup.','Pour {{qty:CALABAZA FILLING::10% Cream (Half & Half)}} 10% cream into a small saucepan.','Add {{qty:SPICE INFUSION::Cinnamon Stick}} cinnamon stick, {{qty:SPICE INFUSION::Whole Cloves}} whole cloves, {{qty:SPICE INFUSION::Star Anise}} star anise, and {{qty:SPICE INFUSION::Orange Peel, About 2–3 cm (1 Inch) Long}} of orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, star anise, and orange peel. Prolonged steeping can make the peel bitter.','While the infused Half & Half is still warm, whisk in {{qty:CALABAZA FILLING::Dark Brown Sugar}} dark brown sugar and {{qty:CALABAZA FILLING::Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
       {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:CALABAZA FILLING::Pumpkin Purée}} pumpkin purée, {{qty:CALABAZA FILLING::Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
       {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Pour the pumpkin filling into the crust.','Bake for 40–50 minutes.','The edges should be set while the center still has a slight wobble when the pie is gently shaken.','Remove from the oven.','Let the pie cool slightly until it is no longer hot, then refrigerate.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-04-01.JPG']},
       {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:THE PILONCILLO SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:THE PILONCILLO SYRUP::Molasses}} molasses, {{qty:THE PILONCILLO SYRUP::Orange Juice}} orange juice, {{qty:THE PILONCILLO SYRUP::Water}} water, {{qty:THE PILONCILLO SYRUP::Orange Peel, About 2–3 cm (1 Inch) Long}} of orange peel, and {{qty:THE PILONCILLO SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
@@ -509,7 +507,7 @@ ingredientFile:[
     tag:'THE CREAMY BALANCE',
     details:[
       ['Why Whole Milk?','Its fat content gives the filling a richer, creamier mouthfeel while keeping the custard lighter than one made entirely with cream.'],
-      ['Substitute','2% milk works too, but the filling will be slightly lighter.']
+      ['Substitute','The same amout of 2% milk works too, but the filling will be slightly lighter.']
     ]
   }
 ],
@@ -613,18 +611,17 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
     details:[
       ['Flavor','Warm, peppery, citrusy, and pleasantly spicy.'],
       ['Peeling Tip','Use the edge of a spoon to gently scrape away the skin. It follows ginger’s knobby shape and reaches into tight corners without removing too much flesh. If using organic ginger, you can also leave the skin on after washing and scrubbing it thoroughly.']
-      ['Substitute','Ground ginger can be used in place of fresh ginger, but it produces a warmer, more subtle flavor.'],
-      ['Midnight Fix','Use ¾ tsp (1½ g) ground ginger to replace 3/4 tsp (6 g) fresh ginger. Ground ginger provides gentle background warmth, while finely grated fresh ginger delivers the bright, peppery, citrusy zing that defines the flavor of Sweet Potato Ginger Dessert Soup (番薯姜糖水).'],
+      ['Substitute','Ground ginger can be used. Use ¾ tsp (1½ g) ground ginger to replace 3/4 tsp (6 g) fresh ginger. Ground ginger provides gentle background warmth, while finely grated fresh ginger delivers the bright, peppery, citrusy zing that defines the flavor of Sweet Potato Ginger Dessert Soup (番薯姜糖水).'],
       ['Storage','Submerge peeled ginger in a clean container of water, refrigerate, and change the water every 2–3 days. For longer storage, freeze whole and grate directly from frozen.']
     ]
   },
   {
-    name:'10% CREAM',
+    name:'10% CREAM (Half & Half)',
     tag:'ONLY 10%, BUT ESSENTIAL',
     details:[
       ['Flavor','Light, creamy, and milky.'],
       ['Why Here','Heavy 35% whipping cream can coat the palate and dull the fresh ginger aroma. Using 10% cream provides just enough dairy fat to create a silky custard while keeping the dessert light and allowing the ginger flavor to shine.'],
-      ['Substitute','Half-and-half works well. For a similar fat content, mix mix 7 parts 2% milk with 3 parts 35% whipping cream (about ¼ cup (60ml) milk + 2 tbsp (30ml) cream for this recipe)'],
+      ['Substitute','For a similar fat content, mix mix 7 parts 2% milk with 3 parts 35% whipping cream (about ¼ cup (60ml) milk + 2 tbsp (30ml) cream for this recipe)'],
     ]
   }
 ],
@@ -632,7 +629,7 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
     ingredients:[
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
       {group:'FILLING'},
-      {amount:400,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'Cooked Sweet Potato Flesh'}, {amount:90,unit:'ml',imperialAmount:6,imperialUnit:'tbsp',item:'10% Cream'}, {amount:70,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Granulated Sugar'}, {amount:2,unit:'',item:'Large Eggs'}, {amount:6,unit:'g',item:'Fresh Ginger, Finely Grated'}, {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'Ground Cinnamon'}, {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Kosher Salt'},
+      {amount:400,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'Cooked Sweet Potato Flesh'}, {amount:90,unit:'ml',imperialAmount:6,imperialUnit:'tbsp',item:'10% Cream (Half & Half)'}, {amount:70,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Granulated Sugar'}, {amount:2,unit:'',item:'Large Eggs'}, {amount:6,unit:'g',item:'Fresh Ginger, Finely Grated'}, {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'Ground Cinnamon'}, {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Kosher Salt'},
       {group:'For Finishing'},
       {unit:'',item:'Crystallized Ginger, Finely Chopped, for Finishing'}, {unit:'',item:'Ground Cinnamon, for Dusting'}
     ],
@@ -652,7 +649,7 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
       {number:'03',title:'BLEND THE FILLING',clock:'12:25 AM',paragraphs:[
         'Once the sweet potato is cooked and cool enough to handle, measure {{qty:Cooked Sweet Potato Flesh}}.',
         'Finely grate {{qty:Fresh Ginger, Finely Grated}} ginger.',
-        'Combine {{qty:Cooked Sweet Potato Flesh}} sweet potato, {{qty:10% Cream}} 10% cream, {{qty:FILLING::Granulated Sugar}} Granulated Sugar, {{qty:large eggs}} large eggs, {{qty:Fresh Ginger, Finely Grated}} fresh ginger, {{qty:Ground Cinnamon}} ground cinnamon, and {{qty:Kosher Salt}} kosher salt.',
+        'Combine {{qty:Cooked Sweet Potato Flesh}} sweet potato, {{qty:10% Cream (Half & Half)}} 10% cream, {{qty:FILLING::Granulated Sugar}} Granulated Sugar, {{qty:large eggs}} large eggs, {{qty:Fresh Ginger, Finely Grated}} fresh ginger, {{qty:Ground Cinnamon}} ground cinnamon, and {{qty:Kosher Salt}} kosher salt.',
         'Food Processor — Fastest',
         'Blend the sweet potato and all remaining filling ingredients and blend briefly until silky.',
         'Quiet Mode — Silent',
@@ -787,7 +784,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
       ['Flavor','Rich, milky, and intensely sweet, with a caramel-like note.'],
       ['Best Choice','Use standard full-fat sweetened condensed milk. The entire 300 ml can is used in this recipe.'],
       ['Why Here','The acidity in lime juice reacts with the milk proteins (casein), helping the filling thicken naturally without the need for starch or gelatin.'],
-      ['No Substitute','Evaporated milk is not a direct substitute. It is unsweetened and has a much thinner consistency.'],
+      ['No Substitute (unfortunately)','Evaporated milk is not a direct substitute. It is unsweetened and has a much thinner consistency.'],
       ['Storage','Refrigerate any leftovers in an airtight container after opening.']
     ]
   },
@@ -811,7 +808,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
       ['Flavor','Creamy and slightly tangy, with a subtle fermented note.'],
       ['Best Choice','Use regular full-fat sour cream rather than a very low-fat version.'],
       ['Why Here','It adds body, creaminess, and extra tang to the filling without increasing the amount of condensed milk.'],
-      ['Substitute','Plain full-fat Greek yogurt can work, although the flavor will be slightly different.']
+      ['Substitute','The same amout of plain full-fat Greek yogurt can work, although the flavor will be slightly different.']
     ]
   },
   {
@@ -930,8 +927,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
       ['Flavor','Rich, creamy, tropical, and subtly nutty.'],
       ['Best Choice','Use full-fat coconut milk for a richer, creamier broth.'],
       ['Temperature Control','Never let coconut milk come to a hard, rolling boil. High heat can destabilize the fat-and-water emulsion, causing the broth to separate and look oily or curdled. Keep the heat low once the coconut milk is added.'],
-      ['Substitute','Lite coconut milk can be used, but the broth will be less rich.'],
-      ['Midnight Fix','If using lite coconut milk, reduce the added water or chicken stock by about ¼ cup (60–80 ml). Lite coconut milk contains more water, so reducing the extra liquid helps prevent a thin, watery soup.']
+      ['Substitute','Lite coconut milk can be used instead of full-fat coconut milk, but the broth will be less rich. Since lite coconut milk contains more water, reduce the added water or chicken stock by about 25% of the amount of coconut milk used to help keep the soup from becoming too thin.']
     ]
   },
   {
@@ -941,8 +937,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
       ['Flavor','Woody, citrusy, piney, and distinctly peppery. Its flavor is quite different from ordinary ginger.'],
       ['Where to Find','Look in Toronto Asian grocery stores such as Best Fresh Foods, Nations, Chinatown markets, and T&T.'],
       ['Substitute','Fresh ginger with a little extra lemongrass can approximate some of its aromatic qualities. Ginger brings a sharper, biting heat, while galangal has a rounder, more botanical aroma that defines Tom Kha.'],
-      ['Storage','Wrap fresh galangal loosely and freeze for longer storage. Keep dried galangal in an airtight container in a cool, dark place.'],
-      ['Midnight Fix','Frozen or dried galangal works when fresh is unavailable.']
+      ['Storage','Wrap fresh galangal loosely and freeze for longer storage. Keep dried galangal in an airtight container in a cool, dark place.']
     ]
   },
   {
@@ -962,9 +957,8 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
     tag:'THE LEMON IMPERSONATOR',
     details:[
       ['Flavor','Bright, citrusy, grassy, and refreshing.'],
-      ['Substitute','Frozen or pre-minced lemongrass is convenient when fresh stalks are unavailable.'],
+      ['Substitute','Frozen or pre-minced lemongrass is a convenient alternative when fresh stalks are unavailable. Use about 1½ tbsp (8–10g) of finely minced lemongrass in place of 1 fresh stalk.'],
       ['Storage','Refrigerate fresh stalks for about a week or freeze them for longer storage.'],
-      ['Midnight Fix','When whole stalks are inconvenient, use 1½ tbsp (about 8-10g) finely minced lemongrass instead.']
     ]
   }
 ],
@@ -1074,8 +1068,7 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
       ['Flavor','Fresh chili heat with a slightly tangy edge.'],
       ['Best Choice','Choose a simple chili paste with minimal added ingredients.'],
       ['Why Here','Provides a clean chili kick without making the peanut sauce overwhelmingly spicy.'],
-      ['Substitute','Finely minced fresh red chili or a mild chili paste. Adjust the amount to taste.'],
-
+      ['Substitute','Use the same amount of mild chili paste. Finely minced fresh red chili can also be used in the same amount, although it will have a fresher flavor and a slightly different texture. Adjust the amount to taste.']
     ]
   },
   {
@@ -1191,7 +1184,7 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
         tag: 'The Juicy Foundation',
         details: [
           ['WHY 6:4 RATIO?', 'Technically, you could use any ratio or combination of ground meat. However, a 6:4 ratio of ground beef to ground pork hits the sweet spot: beef brings deep, savory flavor, while pork adds essential fat and tenderness so the patties stay juicy.'],
-          ['SUBSTITUTE', 'The same amount of a 7:3 beef-to-pork mix, 100% regular ground beef, or 100% ground pork. Avoid extra lean ground beef if possible, as it lacks the fat needed to keep the patties from drying out.']
+          ['Substitute','You can use any ratio of ground beef and pork, or even 100% regular ground beef or pork. If using beef, avoid extra-lean ground beef, as it may make the patties dry.']
         ]
       },
       {
@@ -1199,8 +1192,8 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
         tag: 'The Stale Bread Secret',
         details: [
           ['WHY HERE', 'Breadcrumbs absorb the milk and trap the meat juices, keeping the patties soft and tender as they cook.'],
-          ['SUBSTITUTE', 'The same amount of panko, grated stale bread, or crushed saltine crackers.'],
-          ['MIDNIGHT FIX', 'If you have stale or hard bread sitting on the counter, grate or pulse it into crumbs—it works even better than store-bought. Out of bread and breadcrumbs entirely? Crushed saltines, oatmeal, or even leftover cooked white rice can work in a pinch to bind the mixture.']
+          ['SUBSTITUTE', 'The same amount of panko, grated stale bread, crushed saltines, oatmeal, or even leftover cooked white rice can work in a pinch to bind the mixture.'],
+          ['MIDNIGHT FIX', 'If you have stale or hard bread sitting on the counter, grate or pulse it into crumbs—it works even better than store-bought.']
         ]
       },
       {
@@ -1209,7 +1202,7 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
         details: [
           ['BEST CHOICE', 'Yellow onion.'],
           ['WHY HERE', 'Adding finely chopped raw onion saves prep time at midnight. As the patty steams, the onion releases subtle sweetness inside while retaining a soft, pleasant texture.'],
-          ['SUBSTITUTE', 'The same amount of finely minced shallots or sweet yellow onions.']
+          ['SUBSTITUTE', 'The same amount of finely minced shallots, white onions, or red onions.']
         ]
       },
       {
@@ -1233,7 +1226,7 @@ Maybe that’s what *haha no aji* really means. Not that every mom made the same
         tag: 'The Sweet-Tangy Base',
         details: [
           ['WHY HERE', 'Forms the glossy, fruit-sweet body of the pan sauce.'],
-          ['SUBSTITUTE', 'Equal parts tomato paste and water mixed with a pinch of sugar to match the ketchup volume.']
+          ['SUBSTITUTE', 'Mix 2 tbsp (30 ml) of tomato paste with 2 tbsp (30 ml) of water and a pinch of sugar to match the 4 tbsp（60 ml) volume of ketchup.']
         ]
       },
       {
@@ -1357,9 +1350,8 @@ If you choose cheesecake, try this recipe tonight.`,
         ['Flavor','Creamy with a pleasant tang that balances the richness of the cheese and creates a lighter finish.'],
         ['Best Choice','Full-fat sour cream for a creamy texture and balanced tanginess.'],
         ['Why Here','Adds acidity to balance the richness of the cream cheese, creating a smooth texture that doesn\'t feel too heavy.'],
-        ['Substitute','Plain Greek yogurt can be used.'],
-        ['Storage','Keep refrigerated. For this recipe, bring it close to room temperature before using.'],
-        ['Midnight Fix','Replace sour cream with the same amount of plain Greek yogurt. The cheesecake will taste slightly tangier and may have a somewhat lighter, less rich texture. Choose full-fat Greek yogurt if possible for the creamiest result.']
+        ['Substitute','The same amout of plain full-fat Greek yogurt can be used, although the cheesecake will taste slightly tangier and may have a somewhat lighter, less rich texture.'],
+        ['Storage','Keep refrigerated. For this recipe, bring it close to room temperature before using.']
       ]},
       {name:'35% Whipping Cream',details:[
         ['Flavor','Mild, milky, and creamy. It softens the tanginess of the sour cream and contributes to a smooth mouthfeel.'],
