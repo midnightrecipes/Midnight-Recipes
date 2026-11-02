@@ -1511,7 +1511,10 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
     stepQuantityConversion: true,
     usCupFractions: true,
     fractionDenominator: 16,
-    story: `Pumpkin pie is *the* Canadian Thanksgiving classic, and I had my very first bite on Thanksgiving Monday back in October during my first year in Canada. Safe to say, I was completely hooked! The smooth, silky pumpkin filling and that warm punch of cinnamon, cloves, and nutmeg were unlike anything I knew back home with Japanese Kabocha. After that, I went a little crazy trying pumpkin pie everywhere I could get my hands on. Fast forward through endless pie runs and tweaking ingredients, I’ve finally nailed my dream spice mix. I make it all the time now. Especially, baking it in the middle of a quiet autumn night hits differently.`,
+    story: `Pumpkin pie is *the* Canadian Thanksgiving classic, and I had my very first bite on Thanksgiving Monday back in October during my first year in Canada.
+    Safe to say, I was completely hooked! The smooth, silky pumpkin filling and that warm punch of cinnamon, cloves, and nutmeg were unlike anything I knew back home with Japanese Kabocha.
+    
+    After that, I went a little crazy trying pumpkin pie everywhere I could get my hands on. Fast forward through endless pie runs and tweaking ingredients, I’ve finally nailed my dream spice mix. I make it all the time now. Especially, baking it in the middle of a quiet autumn night hits differently.`,
     ingredientFile: [
       {
         name: 'PUMPKIN PURÉE',
@@ -1561,7 +1564,7 @@ details: [
       { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground Cloves' },
       { amount: 0.25, unit: 'tsp', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Salt' }
     ],
-    stats: { prep: '20 mins', cook: '25–40 mins', chill: '2 hrs', total: '2 hrs 45 mins+', serves: '6–8', pan: '23 cm / 9-inch pie dish', quiet: '⭐⭐⭐⭐☆' },
+    stats: { prep: '20 mins', cook: '35–45 mins', chill: '2 hrs', total: '2 hrs 55 mins+', serves: '6–8', pan: '23 cm / 9-inch pie dish', quiet: '⭐⭐⭐⭐☆' },
     steps: [
       {
         number: '01',
@@ -1603,7 +1606,11 @@ details: [
         stepImages: ['images/recipes/classic-pumpkin-pie/step-04-01.jpg']
       }
     ],
-    notes: [],
+    notes: [
+      ['BUILD YOUR OWN PUMPKIN PIE SPICE', 'The balance of spices makes a big difference in pumpkin pie. I personally like cinnamon to be the main flavor, with ginger adding a little warmth and nutmeg bringing depth. Go easy on the cloves, though. They have a surprisingly strong, sharp flavor and can easily take over the whole filling. It’s always easier to add a little more than to fix an overpowering spice blend.'],
+      ['THE PERFECT WOBBLE', 'Don’t wait until the center looks completely firm before taking the pie out of the oven. The edges should be set, but the center should still have a slight wobble. It will continue to set as it cools and chills. Overbaking can make the filling less smooth, so a little patience goes a long way.']
+],
+    ],
     finePrint: {
       'BEST EATEN': 'Tomorrow, after chilling thoroughly. The filling becomes smoother and more fully set after chilling.',
       'MAKE AHEAD': 'Yes. Ideal to bake the night before.',
