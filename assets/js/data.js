@@ -1624,6 +1624,295 @@ details: [
     footerMainIngredients: ['Pumpkin', 'Pie', 'Eggs', 'Cream', 'Cinnamon'],
     usualsCategory: ''
   },
+  
+  {
+  slug: 'khai-yat-sai',
+  title: 'Khai Yat Sai (Thai Stuffed Omelette)',
+  description: 'A Thai home-style omelette filled with savoury minced pork, tomato and onion, wrapped in a thin egg sheet and finished with fresh cilantro.',
+  source: 'Family & Tradition',
+  dish: 'Khai Yat Sai/ไข่ยัดไส้ ',
+  cuisine: 'Thai',
+  course: 'Sides',
+  courseDisplay: 'Sides',
+  categories: ['Sides'],
+  dateAdded: '2026-11-02',
+
+  heroImage: 'images/recipes/khai-yat-sai/hero.JPG',
+  recipeImage: 'images/recipes/khai-yat-sai/recipe.jpg',
+
+  usesUsual: '',
+  showPan: false,
+  showChill: false,
+  hideRecipeTags: false,
+  stepQuantityConversion: true,
+  usCupFractions: true,
+  fractionDenominator: 16,
+
+  story: `Many food cultures have their own version of an egg-wrapped dish. Japan has omurice, China has dan jiao, and Italy has involtini di frittata. Thailand has Khai Yat Sai — a comforting, home-style stuffed omelette.
+  
+  For this version, I cook ground pork with garlic, onion and tomato, then season it with fish sauce and oyster sauce. The filling is wrapped in a thin, soft omelette and finished with fresh cilantro.
+  It's simple, satisfying, and a lovely reminder that a little creativity with everyday ingredients can make something special.`,
+
+  ingredientFile: [
+    {
+      name: 'FISH SAUCE',
+      tag: 'THE SALTY, SAVOURY ESSENTIAL',
+      details: [
+        ['FLAVOR', 'Salty, savoury and deeply umami, with a distinctive fermented aroma.'],
+        ['WHY HERE', 'Adds depth and savouriness to the pork filling.'],
+        ['SUBSTITUTE', 'The same amount of light soy sauce mixed with a pinch of sugar, or a 1:1 mix of light soy sauce and Worcestershire sauce. Since Worcestershire sauce contains anchovies, it adds a closer fermented depth than plain soy sauce.'],
+        ['STORAGE', 'Keep tightly sealed in a cool, dark place.']
+      ]
+    },
+    {
+      name: 'OYSTER SAUCE',
+      tag: 'RICHNESS IN A SPOONFUL',
+      details: [
+        ['FLAVOR', 'Rich, savoury and slightly sweet, with a mellow umami flavour.'],
+        ['WHY HERE', 'Adds body, colour and savoury depth to the filling.'],
+        ['SUBSTITUTE', 'The same amount of a 2:1 mix of soy sauce and sugar (or dark soy sauce with a pinch of sugar). For a closer match to oyster sauce’s thick consistency, mix equal parts soy sauce and sweet Hoisin sauce.'],
+        ['STORAGE', 'Refrigerate after opening.']
+        ['STORAGE', 'Refrigerate after opening.']
+      ]
+    }
+  ],
+
+  ingredients: [
+    {
+      group: 'PORK FILLING'
+    },
+    {
+      item: 'Ground pork',
+      amount: 454,
+      unit: 'g',
+      imperialAmount: 1,
+      imperialUnit: 'lb'
+    },
+    {
+      item: 'Onion, finely diced',
+      amount: 135,
+      unit: 'g',
+      imperialAmount: 1,
+      imperialUnit: 'medium'
+    },
+    {
+      item: 'Tomato, finely diced',
+      amount: 180,
+      unit: 'g',
+      imperialAmount: 1,
+      imperialUnit: 'medium'
+    },
+    {
+      item: 'Garlic, minced',
+      amount: 2,
+      unit: 'cloves'
+    },
+    {
+      item: 'Fish sauce',
+      amount: 3,
+      unit: 'tsp'
+    },
+    {
+      item: 'Oyster sauce',
+      amount: 3,
+      unit: 'tsp'
+    },
+    {
+      item: 'Sugar',
+      amount: 1.5,
+      unit: 'tsp'
+    },
+    {
+      item: 'Neutral oil',
+      amount: 1.5,
+      unit: 'tsp'
+    },
+    {
+      item: 'Salt and black pepper',
+      unit: 'to taste'
+    },
+
+    {
+      group: 'OMELETTE'
+    },
+    {
+      item: 'Large eggs',
+      amount: 6,
+      unit: ''
+    },
+    {
+      item: 'Neutral oil',
+      amount: 3,
+      unit: 'tsp'
+    },
+    {
+      item: 'Water (optional)',
+      amount: 1.5,
+      unit: 'tsp'
+    },
+
+    {
+      group: 'TO SERVE'
+    },
+    {
+      item: 'Fresh cilantro',
+      unit: 'for garnish'
+    }
+  ],
+
+  stats: {
+    prep: 15,
+    cook: 20,
+    total: 35,
+    serves: 3,
+    pan: '20 cm / 8-inch non-stick frying pan',
+    quiet: 5
+  },
+
+  steps: [
+    {
+      number: 1,
+      title: '01 — COOK THE FILLING',
+      time: '12:04 AM',
+      stepImages: [
+        'images/recipes/khai-yat-sai/step-01-1.jpg',
+        'images/recipes/khai-yat-sai/step-01-2.jpg',
+        'images/recipes/khai-yat-sai/step-01-3.jpg'
+      ],
+      paragraphs: [
+        'Heat the neutral oil in a frying pan over medium heat. Add the garlic and onion and cook for 2–3 minutes, until softened and fragrant.',
+        'Add the ground pork and break it up with a spatula. Cook until no longer pink.'
+      ]
+    },
+    {
+      number: 2,
+      title: '02 — SEASON AND REDUCE',
+      time: '12:08 AM',
+      stepImages: [
+        'images/recipes/khai-yat-sai/step-02-1.jpg',
+        'images/recipes/khai-yat-sai/step-02-2.jpg',
+        'images/recipes/khai-yat-sai/step-02-3.jpg'
+      ],
+      paragraphs: [
+        'Add the fish sauce, oyster sauce and sugar. Stir well to coat the pork.',
+        'Add the diced tomato and cook for another 3–5 minutes, until softened and most of the liquid has evaporated.',
+        'Taste and adjust with salt and black pepper if needed. Set aside to cool slightly.'
+      ]
+    },
+    {
+      number: 3,
+      title: '03 — MAKE THE OMELETTE',
+      time: '12:13 AM',
+      stepImages: [
+        'images/recipes/khai-yat-sai/step-03-1.jpg'
+      ],
+      paragraphs: [
+        'Beat 2 eggs in a bowl. Add ½ tsp water if you prefer a slightly softer texture.',
+        'Heat 1 tsp neutral oil in a 20 cm non-stick frying pan over medium-low heat. Pour in the eggs and gently swirl the pan to create a thin, even layer.',
+        'Cook until the bottom is set and the surface is just beginning to set but still soft. Turn off the heat. Avoid browning the egg.',
+        'Repeat with the remaining eggs to make three omelettes.'
+      ]
+    },
+    {
+      number: 4,
+      title: '04 — FILL AND FOLD',
+      time: '12:17 AM',
+      stepImages: [
+        'images/recipes/khai-yat-sai/step-04-1.jpg',
+        'images/recipes/khai-yat-sai/step-04-2.jpg',
+        'images/recipes/khai-yat-sai/step-04-3.jpg'
+      ],
+      paragraphs: [
+        'Divide the pork filling into three portions. Place one portion in the centre of each omelette, leaving approximately 3–4 cm around the edges.',
+        'Fold the top and bottom edges towards the centre, then fold in the left and right sides to create a neat square parcel.'
+      ]
+    },
+    {
+      number: 5,
+      title: '05 — FLIP AND REVEAL',
+      time: '12:18 AM',
+      stepImages: [
+        'images/recipes/khai-yat-sai/step-05-1.jpg',
+        'images/recipes/khai-yat-sai/step-05-2.jpg',
+        'images/recipes/khai-yat-sai/step-05-3.jpg',
+        'images/recipes/khai-yat-sai/step-05-4.jpg'
+      ],
+      paragraphs: [
+        'Place a serving plate upside down over the frying pan. Carefully flip the pan and plate together to turn the omelette onto the plate.',
+        'Using a sharp knife, cut an X in the centre of the omelette. Gently open the four flaps to reveal the filling.',
+        'Finish with fresh cilantro and serve warm.'
+      ]
+    }
+  ],
+
+  notes: [
+    {
+      title: 'KEEP THE FILLING DRY',
+      body: 'The tomato adds freshness and a little sweetness, but too much moisture can make the omelette soggy. Let the filling cook until most of the liquid has evaporated before assembling.'
+    },
+    {
+      title: 'MAKE IT YOUR OWN',
+      body: 'Ground chicken or beef can replace the pork. You can also add finely diced vegetables or use crumbled tofu for a different filling.'
+    },
+    {
+      title: 'THE FOLD',
+      body: 'The square parcel and the X-shaped cut are part of the presentation. You can open the omelette like flower petals, make a simple slit, or leave it folded for a neat finish.'
+    }
+  ],
+
+  finePrint: [
+    {
+      title: 'BEST ENJOYED',
+      body: 'Khai Yat Sai is best served freshly made while the omelette is soft and warm.'
+    },
+    {
+      title: 'MAKE AHEAD',
+      body: 'The pork filling can be prepared a day ahead. Make the omelette just before serving for the best texture.'
+    },
+    {
+      title: 'STORAGE',
+      body: 'Store leftover pork filling in an airtight container in the refrigerator for up to 3 days.'
+    },
+    {
+      title: 'REHEATING',
+      body: 'Reheat the filling in a pan or microwave until piping hot. Prepare a fresh omelette and assemble just before serving.'
+    },
+    {
+      title: 'FREEZING',
+      body: 'The cooked pork filling can be frozen in an airtight container for up to 1 month. Thaw overnight in the refrigerator and reheat thoroughly before serving.'
+    }
+  ],
+
+  tags: [
+    'Thai Food',
+    'Thai Home Cooking',
+    'Stuffed Omelette',
+    'Eggs',
+    'Ground Pork',
+    'Tomato',
+    'Family Meal',
+    'Easy Dinner',
+    'Comfort Food'
+  ],
+
+  mainIngredients: [
+    'Eggs',
+    'Ground Pork',
+    'Tomato',
+    'Onion'
+  ],
+
+  footerCuisine: 'Thai',
+  footerCourse: 'Main Dish',
+  footerMainIngredients: [
+    'Egg',
+    'Ground Pork',
+    'Tomato',
+    'Onion'
+  ],
+
+  usualsCategory: ''
+},
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
 window.MIDNIGHT_COURSES = ['Breakfast & Brunch','Appetizers','Snacks','Soups','Salads','Main Dishes','Sides','Baking','Desserts'];
