@@ -1713,7 +1713,7 @@ details: [
       unit: 'tbsp'
     },
     {
-      item: 'Glanulated Sugar',
+      item: 'Granulated Sugar',
       amount: 2,
       unit: 'tsp'
     },
@@ -1764,7 +1764,7 @@ details: [
         'images/recipes/khai-yat-sai/step-01-3.jpg'
       ],
       paragraphs: [
-        'Finely chop {{qty:PORK FILLING::Garlic}} garlic and {{qty:PORK FILLING:: Medium Onion}} onion. Dice {{qty:PORK FILLING::Medium Tomato}} tomato into small pieces.',
+        'Finely chop {{qty:PORK FILLING::Garlic}} garlic and {{qty:PORK FILLING::Medium Onion}} onion. Dice {{qty:PORK FILLING::Medium Tomato}} tomato into small pieces.',
         'Heat the oil in a frying pan over medium heat. Add the garlic and onion and cook for 2–3 minutes, until softened and fragrant.',
         'Add {{qty:PORK FILLING::Ground Pork}} ground pork and break it up with a spatula. Cook until no longer pink.'
       ]
@@ -1779,7 +1779,7 @@ details: [
         'images/recipes/khai-yat-sai/step-02-3.jpg'
       ],
       paragraphs: [
-        'Add {{qty:PORK FILLING::Fish Sauce}} the fish sauce, oyster sauce and sugar. Stir well to coat the pork.',
+        'Add {{qty:PORK FILLING::Fish Sauce}} fish sauce, {{qty:PORK FILLING::Oyster Sauce}} oyster sauce and {{qty:PORK FILLING::Granulated Sugar}} sugar. Stir well to coat the pork.',
         'Add the diced tomato and cook for another 3–5 minutes, until softened and most of the liquid has evaporated.',
         'Taste and adjust with salt and black pepper if needed. Set aside to cool slightly.'
       ]
@@ -1840,8 +1840,8 @@ finePrint:{
       'BEST EATEN':'Tonight. Khai Yat Sai is best served freshly made while the omelette is soft and warm.',
       'MAKE AHEAD':'Yes, but make the omelette just before serving for the best texture if possible.',
       'STORAGE':'Refrigerate, covered, for up to 3 days.',
-      'FREEZER':'Not applicable.',
-      'REHEAT':'The cooked pork filling can be frozen in an airtight container for up to 1 month. Thaw overnight in the refrigerator and reheat thoroughly before serving.'
+      'FREEZER':'The cooked pork filling can be frozen in an airtight container for up to 1 month. Thaw overnight in the refrigerator and reheat thoroughly before serving.',
+      'REHEAT':'Reheat the filling in a pan or microwave until piping hot. Prepare a fresh omelette and assemble just before serving.'
     },
 tags: [
     'Thai',
