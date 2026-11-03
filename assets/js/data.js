@@ -1650,7 +1650,8 @@ details: [
 
   story: `Many food cultures have their own version of an egg-wrapped dish. Japan has omurice, China has dan jiao, and Italy has involtini di frittata. Thailand has Khai Yat Sai — a comforting, home-style stuffed omelette.
   
-  For this version, I cook ground pork with garlic, onion and tomato, then season it with fish sauce and oyster sauce. The filling is wrapped in a thin, soft omelette and finished with fresh cilantro.
+  For this version, I cook ground pork with garlic, onion and tomato, then season it with fish sauce and oyster sauce. The filling is wrapped in a thin, soft omelette and finished with fresh cilantro and crushed peanuts.
+  When you cut into it, the thin, soft omelette yields to a fragrant, savory rush of ground pork and vegetables, all tied together by the umami punch of fish sauce and oyster sauce. It hits every note at once: savory, slightly sweet, tangy, and satisfyingly juicy!
   It's simple, satisfying, and a lovely reminder that a little creativity with everyday ingredients can make something special.`,
 
   ingredientFile: [
@@ -1681,7 +1682,7 @@ details: [
       group: 'PORK FILLING'
     },
     {
-      item: 'Ground Pork',
+      item: 'Regular Ground Pork',
       amount: 454,
       unit: 'g',
       imperialAmount: 1,
@@ -1746,6 +1747,9 @@ details: [
     },
     {
       item: 'Fresh Cilantro, for garnish',
+      },
+    {
+      item: 'Peanuts, crushed, for garnish',
       }
   ],
 
@@ -1766,7 +1770,7 @@ details: [
       paragraphs: [
         'Finely chop {{qty:PORK FILLING::Garlic}} garlic and {{qty:PORK FILLING::Medium Onion}} onion. Dice {{qty:PORK FILLING::Medium Tomato}} tomato into small pieces.',
         'Heat the oil in a frying pan over medium heat. Add the garlic and onion and cook for 2–3 minutes, until softened and fragrant.',
-        'Add {{qty:PORK FILLING::Ground Pork}} ground pork and break it up with a spatula. Cook until no longer pink.'
+        'Add {{qty:PORK FILLING::Regular Ground Pork}} ground pork and break it up with a spatula. Cook until no longer pink.'
       ]
     },
     {
@@ -1828,7 +1832,7 @@ details: [
       paragraphs: [
         'Place a serving plate upside down over the frying pan. Carefully flip the pan and plate together to turn the omelette onto the plate.',
         'Using a sharp knife, cut an X in the centre of the omelette. Gently open the four flaps to reveal the filling.',
-        'Finish with fresh cilantro and serve warm.'
+        'Finish with fresh cilantro and crushed peanuts, and serve warm.'
       ]
     }
   ],
