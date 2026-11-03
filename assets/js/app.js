@@ -141,10 +141,31 @@ function schemaIngredient(x){
 }
 function schemaStepText(t,r){
   if(t&&typeof t==='object'&&typeof t.text==='string')t=structuredInstructionText(t,r,1,'metric','');
-  return String(t||'').replace(/\{\{approx:([^}]+)\}\}/g,(m,key)=>{const ing=(r.ingredients||[]).find(i=>i&&String(i.item).toLowerCase()===String(key).toLowerCase());const g=ing&&String(ing.item).match(/approx\.\s*(\d+(?:\.\d+)?)\s*g\b/i);return g?`${g[1]} g`:'';}).replace(/\{\{qty:([^}]+)\}\}/g,(_,key)=>{
-    const match=instructionIngredientCandidates(r,key,'')[0];
-    return match?instructionQuantityFromIngredient(match,1,'metric',r):'';
-  }).replace(/\*+/g,'').replace(/\s+/g,' ').trim();
+
+  return String(t||'')
+    .replace(/\{\{approx:([^}]+)\}\}/g,(m,key)=>{
+      const ing=(r.ingredients||[]).find(i=>i&&String(i.item).toLowerCase()===String(key).toLowerCase());
+      const g=ing&&String(ing.item).match(/approx\.\s*(\d+(?:\.\d+)?)\s*g\b/i);
+      return g?`${g[1]} g`:'';
+    })
+    .replace(/\{\{divide:([^/}]+)\/(\d+(?:\.\d+)?)\}\}/g,(m,item,divisor)=>{
+      const candidate=instructionIngredientCandidates(r,item,'')[0];
+      if(!candidate)return '';
+
+      const amount=qtyNumber(candidate.amount);
+      const divisorValue=Number(divisor);
+
+      if(!Number.isFinite(amount)||!Number.isFinite(divisorValue)||divisorValue===0)return '';
+
+      return formatQuantity(amount/divisorValue,'');
+    })
+    .replace(/\{\{qty:([^}]+)\}\}/g,(_,key)=>{
+      const match=instructionIngredientCandidates(r,key,'')[0];
+      return match?instructionQuantityFromIngredient(match,1,'metric',r):'';
+    })
+    .replace(/\*+/g,'')
+    .replace(/\s+/g,' ')
+    .trim();
 }
 function addRecipeJsonLd(r){
   document.getElementById('recipe-jsonld')?.remove();
@@ -313,6 +334,20 @@ function scaleInstructionTextRaw(value,r,scale,unit,ingredientContext=''){
   if(r?.stepQuantityConversion){
     let usedQuantityTokens=false;
     text=text.replace(/\{\{approx:([^}]+)\}\}/g,(m,key)=>{const ing=(r.ingredients||[]).find(i=>i&&String(i.item).toLowerCase()===String(key).toLowerCase());const g=ing&&String(ing.item).match(/approx\.\s*(\d+(?:\.\d+)?)\s*g\b/i);if(!g)return m;usedQuantityTokens=true;return `${Math.round(Number(g[1])*scale)} g`;});
+    text=text.replace(/\{\{divide:([^/}]+)\/(\d+(?:\.\d+)?)\}\}/g,(m,item,divisor)=>{
+  const candidate=instructionIngredientCandidates(r,item,'',ingredientContext)[0];
+  if(!candidate)return m;
+
+  const amount=qtyNumber(candidate.amount);
+  const divisorValue=Number(divisor);
+
+  if(!Number.isFinite(amount)||!Number.isFinite(divisorValue)||divisorValue===0)return m;
+
+  const result=amount*scale/divisorValue;
+  usedQuantityTokens=true;
+
+  return formatQuantity(result,'');
+});
     text=text.replace(/\{\{qty:([^}]+)\}\}/g,(m,item)=>{
       const candidate=instructionIngredientCandidates(r,item,'',ingredientContext)[0];
       const synced=candidate?instructionQuantityFromIngredient(candidate,scale,unit,r):'';
