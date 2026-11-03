@@ -1739,7 +1739,7 @@ details: [
       unit: 'tbsp'
     },
     {
-      item: 'Neutral Oil, for greasing the pan'',
+      item: 'Neutral Oil, for greasing the pan',
     },
     {
       group: 'TO SERVE'
