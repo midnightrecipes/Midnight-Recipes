@@ -1798,7 +1798,7 @@ details: [
         'Pour in the eggs and gently swirl the pan to create a thin, even layer.',
         'Cook until the bottom is set and the surface is just beginning to set but still soft. Turn off the heat. Avoid browning the egg.',
         'Repeat with the remaining eggs to make the omelettes in the same way.',
-        '**Easy Pan Guide:**',
+        '**Easy Pan Guide˚‧︵‿☆**',
 '1 egg → 15–16 cm pan\n2 eggs → 20 cm / 8-inch pan\n3 eggs → 22 cm / 9-inch pan\n4 eggs → 24 cm / 9½-inch pan']
     },
     {
