@@ -1792,7 +1792,7 @@ details: [
         'images/recipes/khai-yat-sai/step-03-1.jpg'
       ],
       paragraphs: [
-        'This recipe makes {{qty:serves}} omelettes. Cook them one at a time, using 2 eggs and a 20 cm (8-inch) pan for each omelette.',
+        'This recipe makes {{divide:Omelette::Large Eggs/2}} omelettes. Cook them one at a time, using 2 eggs and a 20 cm (8-inch) pan for each omelette.',
         'Beat {{qty:Omelette::Large Eggs}} eggs in a bowl. Add {{qty:Omelette::Water (optional)}} water if you prefer a slightly softer texture.',
         'Lightly grease a 20 cm (8-inch) non-stick frying pan with oil. Heat over medium-low heat.',
         'Pour in the eggs and gently swirl the pan to create a thin, even layer.',
@@ -1811,7 +1811,7 @@ details: [
         'images/recipes/khai-yat-sai/step-04-3.jpg'
       ],
       paragraphs: [
-        'Divide the pork filling into {{qty:serves}} portions. Place one portion in the centre of each omelette, leaving approximately 3–4 cm around the edges.',
+        'Divide the pork filling into {{divide:Omelette::Large Eggs/2}} portions. Place one portion in the centre of each omelette, leaving approximately 3–4 cm around the edges.',
         'Fold the top and bottom edges towards the centre, then fold in the left and right sides to create a neat square parcel.'
       ]
     },
