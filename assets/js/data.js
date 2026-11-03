@@ -1687,38 +1687,34 @@ details: [
       imperialAmount: 1,
       imperialUnit: 'lb'
     },
+    {amount:150,unit:'g',imperialAmount:1,imperialUnit:'',item:'Medium Onion, finely diced'},
     {
-      item: 'Onion, finely diced',
-      amount: 135,
+      item: 'Medium Tomato, finely diced',
+      amount: 110,
       unit: 'g',
       imperialAmount: 1,
-      imperialUnit: 'medium'
+      imperialUnit: ''
     },
-    {
-      item: 'Tomato, finely diced',
-      amount: 180,
-      unit: 'g',
-      imperialAmount: 1,
-      imperialUnit: 'medium'
-    },
-    {
+        {
       item: 'Garlic, minced',
-      amount: 2,
-      unit: 'cloves'
+      amount: 10,
+      unit: 'g',
+      imperialAmount: 2,
+      imperialUnit: 'cloves'
     },
     {
       item: 'Fish Sauce',
-      amount: 3,
-      unit: 'tsp'
+      amount: 1,
+      unit: 'tbsp'
     },
     {
       item: 'Oyster Sauce',
-      amount: 3,
-      unit: 'tsp'
+      amount: 1,
+      unit: 'tbsp'
     },
     {
       item: 'Glanulated Sugar',
-      amount: 1.5,
+      amount: 2,
       unit: 'tsp'
     },
     {
@@ -1773,7 +1769,7 @@ details: [
         'images/recipes/khai-yat-sai/step-01-3.jpg'
       ],
       paragraphs: [
-        'Finely chop {{qty:PORK FILLING::Garlic}} garlic and {{qty:PORK FILLING::Onion}} onion. Dice {{qty:PORK FILLING::Tomato}} tomato into small pieces.',
+        'Finely chop {{qty:PORK FILLING::Garlic}} garlic and {{qty:PORK FILLING:: Medium Onion}} onion. Dice {{qty:PORK FILLING::Medium Tomato}} tomato into small pieces.',
         'Heat the oil in a frying pan over medium heat. Add the garlic and onion and cook for 2–3 minutes, until softened and fragrant.',
         'Add {{qty:PORK FILLING::Ground Pork}} ground pork and break it up with a spatula. Cook until no longer pink.'
       ]
