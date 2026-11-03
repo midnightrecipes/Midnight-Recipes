@@ -1721,8 +1721,8 @@ details: [
       item: 'Neutral Oil, for greasing the pan',
     },
     {
-      item: 'Salt and Black Pepper',
-      unit: 'to taste'
+      item: 'Salt and Black Pepper, to taste',
+      unit: ''
     },
 
     {
