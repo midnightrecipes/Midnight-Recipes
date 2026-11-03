@@ -1750,12 +1750,7 @@ details: [
   ],
 
   stats: {
-    prep: 15 mins,
-    cook: 20 mins,
-    total: 35 mins,
-    serves: 3,
-    pan: '20 cm / 8-inch non-stick frying pan',
-    quiet:'⭐⭐⭐⭐⭐'
+    prep:'15 mins',cook:'20 mins',total:'35 mins',serves:'3',pan:'20 cm / 8-inch non-stick frying pan',quiet:'⭐⭐⭐⭐⭐'
   },
 
   steps: [
@@ -1797,7 +1792,7 @@ details: [
         'images/recipes/khai-yat-sai/step-03-1.jpg'
       ],
       paragraphs: [
-        'This recipe makes {{qty:servs}} omelettes. Cook them one at a time, using 2 eggs and a 20 cm (8-inch) pan for each omelette.',
+        'This recipe makes {{qty:serves}} omelettes. Cook them one at a time, using 2 eggs and a 20 cm (8-inch) pan for each omelette.',
         'Beat {{qty:Omelette::Large Eggs}} eggs in a bowl. Add {{qty:Omelette::Water (optional)}} water if you prefer a slightly softer texture.',
         'Heat oil in a 20 cm non-stick frying pan over medium-low heat. Pour in the eggs and gently swirl the pan to create a thin, even layer.',
         'Cook until the bottom is set and the surface is just beginning to set but still soft. Turn off the heat. Avoid browning the egg.',
@@ -1818,7 +1813,7 @@ details: [
         'images/recipes/khai-yat-sai/step-04-3.jpg'
       ],
       paragraphs: [
-        'Divide the pork filling into {{qty:servs}} portions. Place one portion in the centre of each omelette, leaving approximately 3–4 cm around the edges.',
+        'Divide the pork filling into {{qty:serves}} portions. Place one portion in the centre of each omelette, leaving approximately 3–4 cm around the edges.',
         'Fold the top and bottom edges towards the centre, then fold in the left and right sides to create a neat square parcel.'
       ]
     },
