@@ -1682,7 +1682,7 @@ details: [
       group: 'PORK FILLING'
     },
     {
-      item: 'Regular Ground Pork',
+      item: 'Ground pork (regular)',
       amount: 454,
       unit: 'g',
       imperialAmount: 1,
@@ -1690,7 +1690,7 @@ details: [
     },
     {amount:150,unit:'g',imperialAmount:1,imperialUnit:'',item:'Medium Onion, finely diced'},
     {
-      item: 'Medium Tomato, finely diced',
+      item: 'medium Tomato, finely diced',
       amount: 110,
       unit: 'g',
       imperialAmount: 1,
@@ -1704,25 +1704,29 @@ details: [
       imperialUnit: 'cloves'
     },
     {
-      item: 'Fish Sauce',
+      item: 'Fish sauce',
       amount: 1,
       unit: 'tbsp'
     },
     {
-      item: 'Oyster Sauce',
+      item: 'Oyster sauce',
       amount: 1,
       unit: 'tbsp'
     },
     {
-      item: 'Granulated Sugar',
+      item: 'Granulated sugar',
       amount: 2,
       unit: 'tsp'
     },
     {
-      item: 'Neutral Oil, for greasing the pan',
+      item: 'Neutral oil, for greasing the pan',
     },
     {
-      item: 'Salt and Black Pepper, to taste',
+      item: 'Salt, to taste',
+      unit: ''
+    },
+    {
+      item: 'Black pepper, to taste',
       unit: ''
     },
 
@@ -1730,7 +1734,7 @@ details: [
       group: 'OMELETTE'
     },
     {
-      item: 'Large Eggs',
+      item: 'Large eggs',
       amount: 6,
       unit: ''
     },
@@ -1740,13 +1744,13 @@ details: [
       unit: 'tbsp'
     },
     {
-      item: 'Neutral Oil, for greasing the pan',
+      item: 'Neutral oil, for greasing the pan',
     },
     {
       group: 'TO SERVE'
     },
     {
-      item: 'Fresh Cilantro, for garnish',
+      item: 'Fresh cilantro, for garnish',
       },
     {
       item: 'Peanuts, crushed, for garnish',
@@ -1770,7 +1774,7 @@ details: [
       paragraphs: [
         'Finely chop {{qty:PORK FILLING::Garlic}} garlic and {{qty:PORK FILLING::Medium Onion}} onion. Dice {{qty:PORK FILLING::Medium Tomato}} tomato into small pieces.',
         'Heat the oil in a frying pan over medium heat. Add the garlic and onion and cook for 2–3 minutes, until softened and fragrant.',
-        'Add {{qty:PORK FILLING::Regular Ground Pork}} ground pork and break it up with a spatula. Cook until no longer pink.'
+        'Add {{qty:PORK FILLING::Ground pork (regular)}} ground pork and break it up with a spatula. Cook until no longer pink.'
       ]
     },
     {
