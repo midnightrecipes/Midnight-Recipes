@@ -187,7 +187,7 @@
     }
   },
   "cowboy-bbq-sauce": {
-    "hero": null,
+    "hero": "images/recipes/cowboy-bbq-sauce/hero.jpg",
     "recipe": "images/recipes/cowboy-bbq-sauce/recipe.jpg",
     "steps": {
       "01": [
