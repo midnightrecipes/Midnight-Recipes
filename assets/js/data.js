@@ -1880,7 +1880,7 @@ tags: [
 },
 {
   slug:'cowboy-bbq-sauce', title:'Cowboy BBQ Sauce', source:'The Usuals', cuisine:'American', course:'Sides', courseDisplay:'Sides', categories:['Sides'], dateAdded:'2026-11-04', timeStamp:'11:58 PM',
-  isUsuals:true, usualsCategory:'SAUCES & DRESSINGS', foundInIntro:'Recipes that use this sauce...', hideRecipeTags:true,
+  isUsuals:true,usualsCategory:'SAUCES & DRESSINGS', foundInIntro:'Recipes that use this sauce...', hideRecipeTags:true,stepQuantityConversion:true,
   description:'A smoky, tangy-sweet BBQ sauce we keep coming back to.',
   usualIntro:`A go-to BBQ sauce we keep coming back to whenever we need a quick batch. Apple cider vinegar brings a bright tang, while brown sugar and molasses add a gentle sweetness. Smoked paprika and cumin give it a warm, smoky depth.
   
