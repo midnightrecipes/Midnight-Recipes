@@ -71,7 +71,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
     ingredients:[
       {group:'CRUST'},{amount:200,unit:'g',item:'Graham crackers, finely crushed'},{amount:76,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Unsalted butter, melted'},
       {group:'CHOCOLATE FILLING'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark chocolate, chopped'},{amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened cocoa powder'},{amount:4,unit:'',imperialAmount:4,imperialUnit:'',item:'Egg yolks'},{amount:75,unit:'g',imperialAmount:6,imperialUnit:'tbsp',item:'Granulated sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:480,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole milk'},{amount:21,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Unsalted butter'},
-      {group:'TOPPING (optional)'},{amount:240,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'35% whipping cream'},{amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated sugar'},{unit:'',item:'Cocoa powder, cacao nibs, or flaky sea salt, to finish'}
+      {group:'TOPPING (optional)'},{amount:240,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'35% whipping cream'},{amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated sugar'},{unit:'',item:'Cocoa powder, cacao nibs, or flaky sea salt, for finishing'}
     ],
     stats:{prep:'15 mins',cook:'15 mins',chill:'4 hrs',total:'4 hrs 30 min',serves:'6–8',pan:'23 cm / 9 inch pie dish',quiet:'⭐⭐⭐☆☆'},
     steps:[
@@ -212,7 +212,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
       {amount:55,unit:'g',imperialAmount:1,imperialUnit:'small bunch',item:'Garlic chives or green onion, cut into 3–4 cm pieces'},
       {minAmount:3,maxAmount:5,unit:'ml',imperialMinAmount:0.5,imperialMaxAmount:1,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',compactRange:true,item:'Sesame oil, for finishing'},
       {group:'TO SERVE'},
-      {unit:'',item:'Hot steamed eice'},
+      {unit:'',item:'Steamed rice'},
       {unit:'',item:'Soft-boiled egg'}
     ],
     stats:{prep:'10 mins',cook:'20 mins',total:'30 mins',serves:'4',quiet:'⭐⭐⭐☆☆'},
@@ -312,7 +312,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
 ],
     ingredients:[
       {group:'APPLE MIXTURE'},
-      {amount:300,unit:'g',item:'Apples, peeled, cored, and cut into 1 cm Cubes'},
+      {amount:300,unit:'g',item:'Apples, peeled, cored, and cut into 1 cm cubes'},
       {amount:15,unit:'g',item:'Unsalted butter'},
       {amount:19,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Brown sugar'},
       {amount:15,unit:'ml',item:'Lemon juice'},
@@ -323,7 +323,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
       {amount:400,unit:'ml',item:'35% whipping cream'},
       {amount:5,unit:'',item:'Large egg yolks'},
       {amount:63,unit:'g',imperialAmount:5,imperialUnit:'tbsp',item:'Granulated sugar'},
-      {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla sxtract'},
+      {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla extract'},
       {amount:1,unit:'pinch',item:'Fine salt'},
       {group:'BRÛLÉE'},
       {unit:'',item:'Granulated sugar, for brûlée'}
@@ -390,7 +390,6 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'],
     dateAdded:'2026-09-27', timeStamp:'11:48 PM',
     usCupFractions:true, stepQuantityConversion:true,
-    tags:['Movie','Coco','Pie','Mexican','Pumpkin','DíaDeMuertos','Ofrenda','CalabazaenTacha','Baking','Dessert'],
     heroImage:'images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/hero.jpg',
     recipeTitle:'Calabaza en Tacha Pumpkin Pie', showPan:true,
     recipeImage:'images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/recipe.jpg', usesUsual:'building-block-pie-crust',
@@ -431,16 +430,16 @@ Tonight, I wanted to create something a little different from a standard pumpkin
       {amount:400,unit:'g',imperialAmount:5/3,imperialUnit:'cup',item:'Pumpkin purée'}, {amount:2,unit:'large',imperialAmount:2,imperialUnit:'large',item:'Eggs'}, {amount:180,unit:'ml',imperialAmount:3/4,imperialUnit:'cup',item:'10% cream (Half & Half)'},
       {amount:55,unit:'g',imperialAmount:0.25,imperialUnit:'cup',item:'Dark brown sugar'}, {amount:10,unit:'g',imperialAmount:1/2,imperialUnit:'tbsp',item:'Molasses'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Orange juice'}, {amount:0.25,unit:'tsp',imperialAmount:1/4,imperialUnit:'tsp',item:'Salt'},
       {group:'SPICE INFUSION'},
-      {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Cinnamon stick'}, {amount:2,unit:'',item:'Whole cloves'}, {amount:1,unit:'',item:'Star anise'}, {amount:1,unit:'strip',item:'Orange Peel, 2–3 cm (1 inch) long'},
+      {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Cinnamon stick'}, {amount:2,unit:'',item:'Whole cloves'}, {amount:1,unit:'',item:'Star anise'}, {amount:1,unit:'strip',item:'Orange peel, 2–3 cm (1 inch) long'},
       {group:'THE PILONCILLO SYRUP'},
-      {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Dark brown sugar'}, {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Molasses'}, {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Orange juice'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Water'}, {amount:1,unit:'strip',imperialAmount:1,imperialUnit:'strip',item:'Orange Peel, About 2–3 cm (1 Inch) Long'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'}
+      {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Dark brown sugar'}, {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Molasses'}, {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Orange juice'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Water'}, {amount:1,unit:'strip',imperialAmount:1,imperialUnit:'strip',item:'Orange peel, 2–3 cm (1 inch) long'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'}
     ],
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat your oven to 175°C / 350°F.','Start with one of our usual recipes - Building Block Pie Crust (OPTION B — PARTIAL BLIND-BAKE).'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
-      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the spice infusion and syrup.','Pour {{qty:CALABAZA FILLING::10% Cream (Half & Half)}} 10% cream into a small saucepan.','Add {{qty:SPICE INFUSION::Cinnamon Stick}} cinnamon stick, {{qty:SPICE INFUSION::Whole Cloves}} whole cloves, {{qty:SPICE INFUSION::Star Anise}} star anise, and {{qty:SPICE INFUSION::Orange Peel, About 2–3 cm (1 Inch) Long}} of orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, star anise, and orange peel. Prolonged steeping can make the peel bitter.','While the infused Half & Half is still warm, whisk in {{qty:CALABAZA FILLING::Dark Brown Sugar}} dark brown sugar and {{qty:CALABAZA FILLING::Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
+      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the spice infusion and syrup.','Pour {{qty:CALABAZA FILLING::10% Cream (Half & Half)}} 10% cream into a small saucepan.','Add {{qty:SPICE INFUSION::Cinnamon Stick}} cinnamon stick, {{qty:SPICE INFUSION::Whole Cloves}} whole cloves, {{qty:SPICE INFUSION::Star Anise}} star anise, and {{qty:SPICE INFUSION::Orange peel, 2–3 cm (1 inch) long}} of orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, star anise, and orange peel. Prolonged steeping can make the peel bitter.','While the infused Half & Half is still warm, whisk in {{qty:CALABAZA FILLING::Dark Brown Sugar}} dark brown sugar and {{qty:CALABAZA FILLING::Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
       {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:CALABAZA FILLING::Pumpkin Purée}} pumpkin purée, {{qty:CALABAZA FILLING::Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
       {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Pour the pumpkin filling into the crust.','Bake for 40–50 minutes.','The edges should be set while the center still has a slight wobble when the pie is gently shaken.','Remove from the oven.','Let the pie cool slightly until it is no longer hot, then refrigerate.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-04-01.JPG']},
-      {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:THE PILONCILLO SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:THE PILONCILLO SYRUP::Molasses}} molasses, {{qty:THE PILONCILLO SYRUP::Orange Juice}} orange juice, {{qty:THE PILONCILLO SYRUP::Water}} water, {{qty:THE PILONCILLO SYRUP::Orange Peel, About 2–3 cm (1 Inch) Long}} of orange peel, and {{qty:THE PILONCILLO SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
+      {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:THE PILONCILLO SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:THE PILONCILLO SYRUP::Molasses}} molasses, {{qty:THE PILONCILLO SYRUP::Orange Juice}} orange juice, {{qty:THE PILONCILLO SYRUP::Water}} water, {{qty:THE PILONCILLO SYRUP::Orange peel, 2–3 cm (1 inch) long}} of orange peel, and {{qty:THE PILONCILLO SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
       {number:'06',title:'FINISH',clock:'NEXT DAY',paragraphs:['Once the pie is no longer hot, refrigerate for at least 4 hours, preferably overnight.','Before serving, spoon a thin layer of the piloncillo syrup over the surface. For the glossiest finish, warm the syrup slightly and drizzle it over the pie just before serving.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-06-01.JPG']}
     ],
     notes:[
@@ -455,8 +454,8 @@ Tonight, I wanted to create something a little different from a standard pumpkin
       'FREEZER':'Freeze the fully cooled pie, wrapped tightly and placed in a freezer-safe container, for up to 1 month for best quality. Thaw overnight in the refrigerator before serving. The filling may be slightly softer after thawing.',
       'REHEAT':'Gently warm individual slices in a low oven if you prefer the pie warm.'
     },
-    tags:['Movie','Coco','Pie','Mexican','Pumpkin','DíaDeMuertos','Ofrenda','CalabazaenTacha','Baking','Dessert'], mainIngredients:['Pumpkin','Orange','Cinnamon','Molasses'],
-    footerInspiredBy:'Calabaza en Tacha', footerCuisine:'Mexican, Canadian, North American', footerCourse:'Baking · Desserts', footerMainIngredients:['Pumpkin','Orange','Cinnamon','Molasses']
+    tags:['Movie','Coco','Pie','Mexican','Pumpkin','DíaDeMuertos','Ofrenda','CalabazaenTacha','Baking','Dessert'], mainIngredients:['Pumpkin','Orange','Cinnamon','Molasses'], usualsCategory:''
+    
   },
   {
     slug:'banana-banana-cream-pie', title:'Banana Banana Cream Pie', description:'Made for seriously banana-y flavor, this cream pie uses very ripe bananas cooked down into a sweet, concentrated filling beneath a smooth custard.', source:'Midnight Experiment', dish:'Banana Cream Pie', cuisine:'American',
@@ -516,7 +515,7 @@ ingredientFile:[
       {group:'CRUST'},
       {amount:200,unit:'g',item:'Plain biscuits, Finely Crushed'}, {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground cinnamon'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Ground ginger'}, {amount:1,unit:'pinch',item:'Ground nutmeg'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'}, {amount:80,unit:'g',item:'Unsalted butter, melted'},
       {group:'FILLING'},
-      {amount:250,unit:'g',imperialAmount:3,imperialUnit:'',item:'VERY ripe bnanas, mashed'}, {amount:2,unit:'',item:'Firm ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',item:'Whole milk'}, {amount:3,unit:'large',item:'Egg yolks'}, {amount:35,unit:'g',item:'Granulated sugar'}, {amount:32,unit:'g',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla extract'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},
+      {amount:250,unit:'g',imperialAmount:3,imperialUnit:'',item:'VERY ripe bananas, mashed'}, {amount:2,unit:'',item:'Firm ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',item:'Whole milk'}, {amount:3,unit:'large',item:'Egg yolks'}, {amount:35,unit:'g',item:'Granulated sugar'}, {amount:32,unit:'g',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla extract'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},
       {group:'TOPPING (Optional)'},
       {amount:180,unit:'ml',item:'35% whipping cream'}, {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated sugar'}, {unit:'',item:'Cinnamon, for finishing',hideIngredientInfo:true}, {unit:'',item:'Sliced Banana, for finishing',hideIngredientInfo:true}
     ],
@@ -695,16 +694,16 @@ Don\'t over-sweeten it. The sweet potato provides natural sweetness, while cryst
     usCupFractions:true,
     ingredientFile:[],
     ingredients:[
-      {amount:360,unit:'g',imperialAmount:3,imperialUnit:'cup',item:'All-Purpose Flour'},
-      {amount:226,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Cold Unsalted Butter, Cubed'},
+      {amount:360,unit:'g',imperialAmount:3,imperialUnit:'cup',item:'All-purpose flour'},
+      {amount:226,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Cold unsalted Butter, cubed'},
       {amount:6,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Salt'},
-      {minAmount:80,maxAmount:100,unit:'ml',imperialMinAmount:5,imperialMaxAmount:7,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',item:'Cold Water'}
+      {minAmount:80,maxAmount:100,unit:'ml',imperialMinAmount:5,imperialMaxAmount:7,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',item:'Cold water'}
     ],
     stats:{prep:'20 mins',cook:'20–45 mins depending on finish',total:'40–65 mins depending on finish',serves:'Enough for one 23 cm / 9-inch double-crust pie, or two single-crust pies.',pan:'23 cm / 9-inch pie dish',quiet:'⭐⭐⭐⭐☆'},
     steps:[
       {number:'01',title:'MAKE THE DOUGH',clock:'',paragraphs:[
-        'Mix the flour and salt in a large bowl. Add the cold, cubed butter and work it into the flour until the mixture resembles coarse crumbs, with some small pieces of butter still visible.',
-        'Start with 80 ml ice-cold water, adding it gradually while mixing gently. Add more, a little at a time, only until the dough holds together when pressed. It should not feel wet or sticky.',
+        'Mix {{qty:All-purpose flour}} flour and {{qty:salt}} salt in a large bowl. Add {{qty:Cold unsalted Butter, cubed}} cold, cubed butter and work it into the flour until the mixture resembles coarse crumbs, with some small pieces of butter still visible.',
+        'Start with {{qty:Cold water}} cold water, adding it gradually while mixing gently. Add more, a little at a time, only until the dough holds together when pressed. It should not feel wet or sticky.',
         '**Midnight Shortcut — Food Processor:** Pulse the flour, salt, and cold butter until coarse crumbs form. Add the water gradually and pulse just until the dough begins to come together. Avoid overmixing.'
       ]},
       {number:'02',title:'DIVIDE & CHILL',clock:'',paragraphs:[
@@ -1099,7 +1098,7 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
       {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Garlic, Finely Grated'},
       {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Fresh Ginger, Finely Grated'},
       {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Sesame Oil'},
-      {amount:1,unit:'g',imperialAmount:0.125,imperialUnit:'tsp',item:'Salt, or to Taste'},
+      {amount:1.5,unit:'g',imperialAmount:0.125,imperialUnit:'tsp',item:'Salt, or to taste'},
       {group:'Garnish'},
       {unit:'',item:'Roasted Peanuts, Roughly Crushed'},
       {unit:'',item:'Fresh Cilantro, Chopped'},
@@ -1117,7 +1116,7 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
       {number:'02',title:'BUILD THE SAUCE',clock:'10:25 PM',paragraphs:[
         'Reduce the heat to medium-low.',
         'Add the {{qty:Sambal Oelek}} sambal oelek, {{qty:Garlic, Finely Grated}} garlic, and {{qty:Fresh Ginger, Finely Grated}} fresh ginger to the skillet. Sauté for 20–30 seconds, stirring gently. Do not let the garlic burn.',
-        'Add the {{qty:100% Peanut Butter}} peanut butter, {{qty:Water}} water, {{qty:Rice Vinegar}} rice vinegar, {{qty:Granulated Sugar}} granulated sugar, {{qty:Soy Sauce}} soy sauce, and {{qty:Sweet Chili Peanut Sauce::Salt, or to Taste}} salt.',
+        'Add the {{qty:100% Peanut Butter}} peanut butter, {{qty:Water}} water, {{qty:Rice Vinegar}} rice vinegar, {{qty:Granulated Sugar}} granulated sugar, {{qty:Soy Sauce}} soy sauce, and {{qty:Sweet Chili Peanut Sauce::Salt, or to taste}} salt.',
         'Stir for 1–2 minutes until the sauce becomes smooth and glossy.',
         'Stir in the {{qty:Sesame Oil}} sesame oil.',
         'Taste and adjust the seasoning. Add a little more salt only if needed. If the sauce is too thick, add water a teaspoon at a time.'
@@ -1243,24 +1242,25 @@ The patty is soft and bouncy, with a golden crust on the outside and plenty of j
   ],
 
   ingredients: [
-    { group: 'Hamburg Steak' },
-    { amount: 272, unit: 'g', imperialAmount: 0.625, imperialUnit: 'lb', item: 'Ground Beef (Regular or Lean)' },
-    { amount: 182, unit: 'g', imperialAmount: 0.375, imperialUnit: 'lb', item: 'Ground Pork (Regular or Lean)' },
-    { amount: 120, unit: 'g', imperialAmount: 1, imperialUnit: 'cup', item: 'Onion, Very Finely Chopped' },
+    { group: 'HAMBURG STEAK' },
+    { amount: 272, unit: 'g', imperialAmount: 0.625, imperialUnit: 'lb', item: 'Ground beef (regular or lean)' },
+    { amount: 182, unit: 'g', imperialAmount: 0.375, imperialUnit: 'lb', item: 'Ground pork (regular or lean)' },
+    { amount: 120, unit: 'g', imperialAmount: 1, imperialUnit: 'cup', item: 'onion, finely chopped' },
     { amount: 1, unit: 'large', imperialAmount: 1, imperialUnit: 'large', item: 'Egg' },
     { amount: 50, unit: 'g', imperialAmount: 0.5, imperialUnit: 'cup', item: 'Breadcrumbs' },
     { amount: 60, unit: 'ml', imperialAmount: 0.25, imperialUnit: 'cup', item: 'Milk' },
-    { amount: 5, unit: 'g', imperialAmount: 1, imperialUnit: 'tsp', item: 'Salt' },
-    { amount: 0.5, unit: 'g', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Black Pepper' },
-    { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground Nutmeg' },
-    { unit: '', item: 'Neutral Oil, for Cooking' },
+    { amount: 6, unit: 'g', imperialAmount: 1, imperialUnit: 'tsp', item: 'Salt' },
+    { amount: 0.5, unit: 'g', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Black pepper' },
+    { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground nutmeg' },
+    { unit: '', item: 'Neutral oil, for greasing' },
+    { unit: '', item: 'Sake or water, for steamimg' },
 
-    { group: 'Japanese-Style “Demi-Glace” Sauce' },
+    { group: 'JAPANESE-STYLE “DEMI-GLACE” SAUCE' },
     { amount: 60, unit: 'ml', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Sake' },
     { amount: 60, unit: 'ml', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Ketchup' },
-    { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Worcestershire Sauce' },
-    { amount: 30, unit: 'g', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Granulated Sugar' },
-    { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Soy Sauce' }
+    { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Worcestershire sauce' },
+    { amount: 25, unit: 'g', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Granulated sugar' },
+    { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Soy sauce' }
   ],
 
   stats: { prep: '15 mins', cook: '15 mins', total: '30 mins', serves: '4', quiet: '⭐⭐⭐☆☆' },
@@ -1271,8 +1271,8 @@ The patty is soft and bouncy, with a golden crust on the outside and plenty of j
       title: 'KNEAD & MIX',
       clock: '1:15 AM',
       paragraphs: [
-        'In a bowl, mix chilled {{qty:Hamburg Steak::Ground Beef (Regular or Lean)}} ground beef, chilled {{qty:Hamburg Steak::Ground Pork}} ground pork, and {{qty:Hamburg Steak::Salt}} salt thoroughly until sticky and cohesive.',
-        'Add {{qty:Hamburg Steak::Egg}} egg, {{qty:Hamburg Steak::Breadcrumbs}} breadcrumbs, {{qty:Hamburg Steak::Milk}} milk, {{qty:Hamburg Steak::Onion, Very Finely Chopped}} finely chopped onion, {{qty:Hamburg Steak::Black Pepper}} black pepper, and {{qty:Hamburg Steak::Ground Nutmeg}} ground nutmeg. Mix just until combined.'
+        'In a bowl, mix chilled {{qty:Hamburg Steak::Ground beef (regular or lean)}} ground beef, chilled {{qty:Hamburg Steak::Ground pork (regular or lean)}} ground pork, and {{qty:Hamburg Steak::Salt}} salt thoroughly until sticky and cohesive.',
+        'Add {{qty:Hamburg Steak::Egg}} egg, {{qty:Hamburg Steak::Breadcrumbs}} breadcrumbs, {{qty:Hamburg Steak::Milk}} milk, {{qty:Hamburg Steak::Onion, finely chopped}} finely chopped onion, {{qty:Hamburg Steak::Black pepper}} black pepper, and {{qty:Hamburg Steak::Ground nutmeg}} ground nutmeg. Mix just until combined.'
       ],
       stepImages: [
         'images/recipes/moms-hamburg-steak/step-01-01.jpg',
@@ -1299,7 +1299,7 @@ The patty is soft and bouncy, with a golden crust on the outside and plenty of j
       title: 'STEAM & REST',
       clock: '1:30 AM',
       paragraphs: [
-        'Pour a splash of water or sake into the skillet and cover immediately with a lid. Reduce heat to medium-low and steam gently for 5–7 minutes until cooked through to the center.',
+        'Pour a splash of sake or water into the skillet and cover immediately with a lid. Reduce heat to medium-low and steam gently for 5–7 minutes until cooked through to the center.',
         'Transfer the patties to a warm plate and let rest for 3–5 minutes. Keep the skillet unwashed for the sauce.'
       ],
       stepImages: [
@@ -1311,7 +1311,7 @@ The patty is soft and bouncy, with a golden crust on the outside and plenty of j
       title: 'MAKE THE “DEMI-GLACE” SAUCE',
       clock: '1:37 AM',
       paragraphs: [
-        'In the same skillet, add {{qty:Japanese-Style “Demi-Glace” Sauce::Sake}} sake, {{qty:Japanese-Style “Demi-Glace” Sauce::Ketchup}} ketchup, {{qty:Japanese-Style “Demi-Glace” Sauce::Worcestershire Sauce}} Worcestershire sauce, {{qty:Japanese-Style “Demi-Glace” Sauce::Granulated Sugar}} granulated sugar, and {{qty:Japanese-Style “Demi-Glace” Sauce::Soy Sauce}} soy sauce.',
+        'In the same skillet, add {{qty:Japanese-Style “Demi-Glace” Sauce::Sake}} sake, {{qty:Japanese-Style “Demi-Glace” Sauce::Ketchup}} ketchup, {{qty:Japanese-Style “Demi-Glace” Sauce::Worcestershire sauce}} Worcestershire sauce, {{qty:Japanese-Style “Demi-Glace” Sauce::Granulated sugar}} granulated sugar, and {{qty:Japanese-Style “Demi-Glace” Sauce::Soy sauce}} soy sauce.',
         'Simmer for 1–2 minutes over medium-low heat while scraping up the browned pan drippings until thickened and glossy. Spoon generously over the warm hamburg steaks.'
       ],
       stepImages: [
@@ -1877,6 +1877,115 @@ tags: [
   ],
 
   usualsCategory: ''
+},
+{
+  slug:'cowboy-bbq-sauce', title:'Cowboy BBQ Sauce', source:'The Usuals', cuisine:'American', course:'Sauces & Dressings', courseDisplay:'Sauces & Dressings', categories:['Sauces & Dressings'], dateAdded:'2026-11-04', timeStamp:'11:58 PM',
+  isUsuals:true, usualsCategory:'SAUCES & DRESSINGS', foundInIntro:'Recipes that use this sauce...', hideRecipeTags:true,
+  description:'A smoky, tangy-sweet BBQ sauce we keep coming back to.',
+  usualIntro:`A go-to BBQ sauce we keep coming back to whenever we need a quick batch. Apple cider vinegar brings a bright tang, while brown sugar and molasses add a gentle sweetness. Smoked paprika and cumin give it a warm, smoky depth.
+  
+It works beautifully with grilled meats, burgers, sandwiches, fries, and just about anything that could use a little BBQ goodness.
+Keep a jar in the fridge, and you're always ready.`,
+  heroImage:'images/recipes/cowboy-bbq-sauce/hero.jpg',
+  recipeImage:'images/recipes/cowboy-bbq-sauce/recipe.jpg',
+  ingredientFile:[],
+  ingredients:[
+    {
+      item:'Ketchup',amount:204,unit:'g',imperialAmount:0.75,imperialUnit:'cup'
+    },
+    {
+      item:'Apple cider Vinegar',amount:60,unit:'ml',imperialAmount:0.25,imperialUnit:'cup'
+    },
+    {
+      item:'Water',amount:60,unit:'ml',imperialAmount:0.25,imperialUnit:'cup'
+    },
+    {
+      item:'Brown sugar',amount:15,unit:'g',imperialAmount:1,imperialUnit:'tbsp'
+    },
+    {
+      item:'Molasses',amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp'
+    },
+    {
+      item:'Worcestershire sauce',amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp'
+    },
+    {
+      item:'Mustard powder',amount:2,unit:'g',imperialAmount:1,imperialUnit:'tsp'
+    },
+    {
+      item:'Ground Cumin',amount:1,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp'
+    },
+    {
+      item:'Garlic powder',
+      amount:1.5,unit:'g',imperialAmount:0.5,imperialUnit:'tsp'
+    },
+    {
+      item:'Onion powder',
+      amount:1.25,unit:'g',imperialAmount:0.5,imperialUnit:'tsp'
+    },
+    {
+      item:'Smoked paprika',amount:1.1,unit:'g',imperialAmount:0.5,imperialUnit:'tsp'
+    },
+    {
+      item:'Black pepper',amount:1.25,unit:'g',imperialAmount:0.5,imperialUnit:'tsp'
+    },
+    {
+      item:'Salt',amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp'
+    }
+  ],
+
+  stats:{prep:'5 mins',cook:'20 mins',total:'25 mins',serves:'About 1 cup',quiet:'⭐⭐⭐⭐☆'},
+
+  steps:[
+    {number:'01',title:'EVERYTHING IN!',clock:'',paragraphs:[
+        'Add {{qty:Ketchup}} ketchup, {{qty:Apple Cider Vinegar}} apple cider vinger, {{qty:Water}} water, {{qty:Brown sugar}} brown sugar, {{qty:Molasses}} molasses, {{qty:Worcestershire sauce}} Worcestershire sauce, {{qty:Mustard powder}} mustard powder, {{qty:Ground cumin}} ground cumin, {{qty:Garlic powder}} garlic powder, {{qty:Onion powder}} onion Powder, {{qty:Smoked paprika}} Smoked paprika, {{qty:Black pepper}} black pepper, and {{qty:Salt}} salt to a small saucepan.',
+        'Bring to a gentle simmer over low to medium-low heat.',
+        'Simmer for 15–20 minutes, stirring occasionally, until slightly thickened.',
+        'Let cool before using.'
+      ],
+      stepImages:[
+        'images/recipes/cowboy-bbq-sauce/step-01-01.jpg',
+        'images/recipes/cowboy-bbq-sauce/step-01-02.jpg'
+      ]
+    }
+  ],
+  notes:[
+    [
+      'The Balance',
+      'Apple cider vinegar brings the tang, while brown sugar and molasses round it out with a gentle sweetness.'
+    ],
+    [
+      'The Simmer',
+      'A gentle, slow simmer allows the spices to develop and the sauce to thicken without scorching.'
+    ],
+    [
+      'The Texture',
+      'The sauce thickens slightly as it cools. Avoid reducing it too aggressively.'
+    ]
+  ],
+
+  finePrint:{
+    'BEST EATEN': 'Freshly made or cooled.',
+    'MAKE AHEAD': 'Yes. Ideal to make in advance for grilling or glazing.',
+    'STORAGE': 'Store in an airtight jar in the refrigerator for up to 2 weeks.',
+    'FREEZER': 'Can be frozen for up to 2 months.',
+    'REHEAT': 'Warm gently on the stovetop or in the microwave.'
+  },
+
+  tags:[
+    'BBQ Sauce',
+    'Smoky',
+    'Tangy-Sweet',
+    'Ketchup',
+    'Molasses'
+  ],
+
+  mainIngredients:[
+    'Ketchup',
+    'Apple Cider Vinegar',
+    'Brown Sugar',
+    'Molasses',
+    'Smoked Paprika'
+  ]
 },
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
