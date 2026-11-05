@@ -1944,7 +1944,7 @@ Keep a jar in the fridge, and you're always ready.`,
       ],
       stepImages:[
         'images/recipes/cowboy-bbq-sauce/step-01-01.jpg',
-        'images/recipes/cowboy-bbq-sauce/step-01-02.jpg'
+        'images/recipes/cowboy-bbq-sauce/step-01-02.jpg',
         'images/recipes/cowboy-bbq-sauce/step-01-03.jpg'
       ]
     }
