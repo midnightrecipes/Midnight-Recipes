@@ -1627,7 +1627,7 @@ details: [
   
   {
   slug: 'khai-yat-sai',
-  title: 'Khai Yat Sai (Thai Stuffed Omelette)',
+  title: 'Khai Yat Sai (Stuffed Omelette)',
   description: 'A Thai home-style omelette filled with savoury minced pork, tomato and onion, wrapped in a thin egg sheet and finished with fresh cilantro.',
   source: 'Family & Tradition',
   dish: 'Khai Yat Sai/ไข่ยัดไส้ ',
