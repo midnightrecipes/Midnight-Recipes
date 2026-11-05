@@ -1912,7 +1912,7 @@ Keep a jar in the fridge, and you're always ready.`,
       item:'Mustard powder',amount:2,unit:'g',imperialAmount:1,imperialUnit:'tsp'
     },
     {
-      item:'Ground Cumin',amount:1,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp'
+      item:'Ground cumin',amount:1,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp'
     },
     {
       item:'Garlic powder',
