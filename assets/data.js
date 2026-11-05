@@ -22,7 +22,7 @@ window.MIDNIGHT_RECIPES = [
     storyQuote:'“You know what I like about cooking? I love that after a day when nothing is sure, and when I say nothing I mean nothing, you can come home and absolutely know that if you add egg yolks to chocolate and sugar and milk, it will get thick. It’s such a comfort.”',
     story:`*Reine de Saba* (chocolate cake with sliced almonds) might be the most famous dessert from *Julie & Julia*, but honestly, Julie’s whole emotional breakdown over making a chocolate cream pie is what totally spoke to me. No matter how messy or exhausting the day gets, the kitchen is always my favorite place to unwind.
 
-It’s kind of funny, but the tired-er I am, the more I actually want to bake late at night. There’s just something so comforting about tuning everything out and focusing on simple things—whisking milk, watching chocolate slowly melt, and just letting the night quiet down. Tonight, this pie was exactly what I needed. Rich, super chocolatey, and pure comfort in every bite.
+It’s kind of funny, but the more tire I am, the more I actually want to bake late at night. There’s just something so comforting about tuning everything out and focusing on simple things—whisking milk, watching chocolate slowly melt, and just letting the night quiet down. Tonight, this pie was exactly what I needed. Rich, super chocolatey, and pure comfort in every bite.
 
 The real secret here... Just use a dark chocolate that you’d happily eat straight out of the wrapper. It gives you this incredibly smooth, rich filling that isn't crazy sweet. Plus, it’s one of those desserts people always get excited about—seeing friends take that first bite and smile makes all the late-night whisking 100% worth it!`,
     ingredientFile: [
@@ -848,7 +848,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
         'Bake for 8–10 minutes. Let it cool.'
       ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/fun-key-lime-pie/step-01-01.jpg','images/recipes/fun-key-lime-pie/step-01-02.jpg','images/recipes/fun-key-lime-pie/step-01-03.jpg']},
       {number:'02',title:'MIX THE LIME FILLING',clock:'11:32 PM',paragraphs:[
-        'Finely grate the zest from the limes, then squeeze the limes to make {{qty:Lime Filling::Fresh Lime Juice}} of fresh lime juice.',
+        'Finely grate the zest from the limes, then squeeze enough limes to obtain {{qty:Lime Filling::Fresh Lime Juice}} fresh lime juice.',
         'Separate the eggs, placing the {{qty:Lime Filling::Egg Yolks}} egg yolks in a mixing bowl and reserving the {{qty:Meringue::Egg Whites}} egg whites for the meringue.',
         'Add the {{qty:Lime Filling::Sweetened Condensed Milk}} sweetened condensed milk, {{qty:Lime Filling::Sour Cream}} sour cream, {{qty:Lime Filling::Finely Grated Lime Zest}} lime zest, and {{qty:Lime Filling::Fresh Lime Juice}} lime juice to the egg yolks.',
         'Whisk everything together until completely smooth.'
@@ -1937,7 +1937,7 @@ Keep a jar in the fridge, and you're always ready.`,
 
   steps:[
     {number:'01',title:'EVERYTHING IN!',clock:'',paragraphs:[
-        'Add {{qty:Ketchup}} ketchup, {{qty:Apple Cider Vinegar}} apple cider vinger, {{qty:Water}} water, {{qty:Brown sugar}} brown sugar, {{qty:Molasses}} molasses, {{qty:Worcestershire sauce}} Worcestershire sauce, {{qty:Mustard powder}} mustard powder, {{qty:Ground cumin}} ground cumin, {{qty:Garlic powder}} garlic powder, {{qty:Onion powder}} onion Powder, {{qty:Smoked paprika}} Smoked paprika, {{qty:Black pepper}} black pepper, and {{qty:Salt}} salt to a small saucepan.',
+        'Add {{qty:Ketchup}} ketchup, {{qty:Apple Cider Vinegar}} apple cider vineger, {{qty:Water}} water, {{qty:Brown sugar}} brown sugar, {{qty:Molasses}} molasses, {{qty:Worcestershire sauce}} Worcestershire sauce, {{qty:Mustard powder}} mustard powder, {{qty:Ground cumin}} ground cumin, {{qty:Garlic powder}} garlic powder, {{qty:Onion powder}} onion powder, {{qty:Smoked paprika}} smoked paprika, {{qty:Black pepper}} black pepper, and {{qty:Salt}} salt to a small saucepan.',
         'Bring to a gentle simmer over low to medium-low heat.',
         'Simmer for 15–20 minutes, stirring occasionally, until slightly thickened.',
         'Let cool before using.'
