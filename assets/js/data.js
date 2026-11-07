@@ -437,7 +437,7 @@ Tonight, I wanted to create something a little different from a standard pumpkin
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat your oven to 175°C / 350°F.','Start with one of our usual recipes - Building Block Pie Crust (OPTION B — PARTIAL BLIND-BAKE).'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
       {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the spice infusion and syrup.','Pour {{qty:CALABAZA FILLING::10% Cream (Half & Half)}} 10% cream into a small saucepan.','Add {{qty:SPICE INFUSION::Cinnamon Stick}} cinnamon stick, {{qty:SPICE INFUSION::Whole Cloves}} whole cloves, {{qty:SPICE INFUSION::Star Anise}} star anise, and {{qty:SPICE INFUSION::Orange peel, 2–3 cm (1 inch) long}} of orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, star anise, and orange peel. Prolonged steeping can make the peel bitter.','While the infused Half & Half is still warm, whisk in {{qty:CALABAZA FILLING::Dark Brown Sugar}} dark brown sugar and {{qty:CALABAZA FILLING::Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
-      {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:CALABAZA FILLING::Pumpkin Purée}} pumpkin purée, {{qty:CALABAZA FILLING::Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
+      {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:CALABAZA FILLING::Pumpkin purée}} pumpkin purée, {{qty:CALABAZA FILLING::Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
       {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Pour the pumpkin filling into the crust.','Bake for 40–50 minutes.','The edges should be set while the center still has a slight wobble when the pie is gently shaken.','Remove from the oven.','Let the pie cool slightly until it is no longer hot, then refrigerate.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-04-01.JPG']},
       {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:THE PILONCILLO SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:THE PILONCILLO SYRUP::Molasses}} molasses, {{qty:THE PILONCILLO SYRUP::Orange Juice}} orange juice, {{qty:THE PILONCILLO SYRUP::Water}} water, {{qty:THE PILONCILLO SYRUP::Orange peel, 2–3 cm (1 inch) long}} of orange peel, and {{qty:THE PILONCILLO SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
       {number:'06',title:'FINISH',clock:'NEXT DAY',paragraphs:['Once the pie is no longer hot, refrigerate for at least 4 hours, preferably overnight.','Before serving, spoon a thin layer of the piloncillo syrup over the surface. For the glossiest finish, warm the syrup slightly and drizzle it over the pie just before serving.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-06-01.JPG']}
@@ -822,35 +822,35 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
   }
 ],
     ingredients:[
-      {group:'Graham Cracker Crust'},
-      {amount:200,unit:'g',item:'Graham Crackers, Finely Crushed'},
-      {amount:76,unit:'g',item:'Unsalted Butter, Melted'},
-      {group:'Lime Filling'},
-      {amount:300,unit:'ml',item:'Sweetened Condensed Milk'},
-      {amount:3,unit:'large',item:'Egg Yolks'},
-      {amount:58,unit:'g',imperialAmount:1/4,imperialUnit:'cup',item:'Sour Cream'},
-      {amount:120,unit:'ml',item:'Fresh Lime Juice'},
-      {amount:6,unit:'g',item:'Finely Grated Lime Zest'},
-      {group:'Meringue'},
-      {amount:3,unit:'large',item:'Egg Whites'},
-      {amount:50,unit:'g',item:'Granulated Sugar'},
-      {amount:0.5,unit:'g',item:'Cream of Tartar'}
+      {group:'GRAHAM CRACKER CRUST'},
+      {amount:200,unit:'g',item:'Graham crackers, finely crushed'},
+      {amount:76,unit:'g',item:'Unsalted butter, melted'},
+      {group:'LIME FILLING'},
+      {amount:300,unit:'ml',item:'Sweetened condensed milk'},
+      {amount:3,unit:'large',item:'Egg yolks'},
+      {amount:58,unit:'g',imperialAmount:1/4,imperialUnit:'cup',item:'Sour cream'},
+      {amount:120,unit:'ml',item:'Fresh lime juice'},
+      {amount:6,unit:'g',item:'Lime zest, finely grated'},
+      {group:'MERINGUE'},
+      {amount:3,unit:'large',item:'Egg whites'},
+      {amount:50,unit:'g',item:'Granulated sugar'},
+      {amount:0.5,unit:'g',item:'Cream of tartar'}
     ],
     stats:{prep:'20 mins',cook:'30 mins',chill:'4 hrs+',total:'4 hrs 50 mins +',serves:'6–8',pan:'23 cm / 9-inch pie dish',quiet:'⭐☆☆☆☆'},
     steps:[
       {number:'01',title:'CRUSH IT DOWN',clock:'11:20 PM',paragraphs:[
         'Preheat your oven to 175°C / 350°F.',
-        'Crush {{qty:Graham Cracker Crust::Graham Crackers, Finely Crushed}} graham crackers finely.',
+        'Crush {{qty:GRAHAM CRACKER CRUST::Graham crackers, finely crushed}} graham crackers finely.',
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
         '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
-        'Add {{qty:Graham Cracker Crust::Unsalted Butter, Melted}} melted butter to the crushed graham crackers and mix until the crumbs are evenly coated.',
+        'Add {{qty:GRAHAM CRACKER CRUST::Unsalted butter, melted}} melted butter to the crushed graham crackers and mix until the crumbs are evenly coated.',
         'Press the crumb mixture firmly into a 9-inch (23 cm) pie dish using the flat bottom of a cup.',
         'Bake for 8–10 minutes. Let it cool.'
       ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/fun-key-lime-pie/step-01-01.jpg','images/recipes/fun-key-lime-pie/step-01-02.jpg','images/recipes/fun-key-lime-pie/step-01-03.jpg']},
       {number:'02',title:'MIX THE LIME FILLING',clock:'11:32 PM',paragraphs:[
-        'Finely grate the zest from the limes, then squeeze enough limes to obtain {{qty:Lime Filling::Fresh Lime Juice}} fresh lime juice.',
-        'Separate the eggs, placing the {{qty:Lime Filling::Egg Yolks}} egg yolks in a mixing bowl and reserving the {{qty:Meringue::Egg Whites}} egg whites for the meringue.',
-        'Add the {{qty:Lime Filling::Sweetened Condensed Milk}} sweetened condensed milk, {{qty:Lime Filling::Sour Cream}} sour cream, {{qty:Lime Filling::Finely Grated Lime Zest}} lime zest, and {{qty:Lime Filling::Fresh Lime Juice}} lime juice to the egg yolks.',
+        'Finely grate {{qty:LIME FILLING::Lime zest, finely grated}} zest from the limes, then squeeze enough limes to obtain {{qty:LIME FILLING::Fresh lime juice}} fresh lime juice.',
+        'Separate the eggs, placing the {{qty:LIME FILLING::Egg yolks}} egg yolks in a mixing bowl and reserving the {{qty:MERINGUE::Egg whites}} egg whites for the meringue.',
+        'Add the {{qty:LIME FILLING::Sweetened condensed milk}} sweetened condensed milk, {{qty:Lime Filling::Sour Cream}} sour cream, lime zest, and lime juice to the egg yolks.',
         'Whisk everything together until completely smooth.'
       ],stepImages:['images/recipes/fun-key-lime-pie/step-02-01.jpg','images/recipes/fun-key-lime-pie/step-02-02.jpg','images/recipes/fun-key-lime-pie/step-02-03.jpg','images/recipes/fun-key-lime-pie/step-02-04.jpg']},
       {number:'03',title:'BAKE THE FILLING',clock:'11:40 PM',paragraphs:[
@@ -860,9 +860,9 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
         'Remove the pie from the oven and let it rest for 5–10 minutes while preparing the meringue.'
       ],stepNote:'**Midnight Shortcut:** You can make the meringue before this step and bake the filling and meringue together for about 10 minutes. Doing them separately is a little less risky and gives you more control.',stepImages:['images/recipes/fun-key-lime-pie/step-03-01.jpg','images/recipes/fun-key-lime-pie/step-03-02.jpg']},
       {number:'04',title:'WHIP THE MERINGUE',clock:'11:50 PM',paragraphs:[
-        'Place the {{qty:Meringue::Egg Whites}} egg whites in a completely clean and dry bowl. Beat until foamy.',
-        'Add {{qty:Meringue::Cream of Tartar}} cream of tartar.',
-        'Gradually add the {{qty:Meringue::Granulated Sugar}} granulated sugar, a little at a time, while continuing to beat.',
+        'Place the {{qty:MERINGUE::Egg whites}} egg whites in a completely clean and dry bowl. Beat until foamy.',
+        'Add {{qty:MERINGUE::Cream of tartar}} cream of tartar.',
+        'Gradually add the {{qty:Meringue::Granulated sugar}} granulated sugar, a little at a time, while continuing to beat.',
         'Continue beating until the meringue is glossy and holds stiff peaks.'
       ],stepImages:['images/recipes/fun-key-lime-pie/step-04-01.jpg','images/recipes/fun-key-lime-pie/step-04-02.jpg']},
       {number:'05',title:'MAKE THE PEAKS',clock:'11:55 PM',paragraphs:[
@@ -1400,14 +1400,14 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
       }
     ],
     ingredients: [
-      { amount: 250, unit: 'g', item: 'Cream Cheese', imperialAmount: 1, imperialUnit: 'cup' },
-      { amount: 85, unit: 'g', item: 'Granulated Sugar' },
-      { amount: 170, unit: 'g', item: 'Sour Cream', imperialAmount: 0.75, imperialUnit: 'cup' },
-      { amount: 125, unit: 'ml', item: '35% Whipping Cream' },
+      { amount: 250, unit: 'g', item: 'Cream cheese', imperialAmount: 1, imperialUnit: 'cup' },
+      { amount: 85, unit: 'g', item: 'Granulated sugar' },
+      { amount: 170, unit: 'g', item: 'Sour cream', imperialAmount: 0.75, imperialUnit: 'cup' },
+      { amount: 125, unit: 'ml', item: '35% whipping cream' },
       { amount: 2, unit: '', item: 'Eggs' },
       { amount: 8, unit: 'g', item: 'Cornstarch' },
-      { amount: 10, unit: 'ml', imperialAmount: 2, imperialUnit: 'tsp', item: 'Lemon Juice' },
-      { amount: 0.5, unit: 'tsp', item: 'Vanilla Extract' }
+      { amount: 10, unit: 'ml', imperialAmount: 2, imperialUnit: 'tsp', item: 'Lemon juice' },
+      { amount: 0.5, unit: 'tsp', item: 'Vanilla extract' }
     ],
     stats: { prep: '20 mins', cook: '45–50 mins', chill: '8 hrs+', total: '9 hrs 5 mins+', serves: '6–8 slices', pan: '18 cm loaf pan', quiet: '⭐⭐⭐⭐⭐' },
     showPan: true,
@@ -1420,7 +1420,7 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
         title: 'PREPARE THE INGREDIENTS',
         clock: '10:10 PM',
         paragraphs: [
-          'Bring the cream cheese, sour cream, and eggs close to room temperature.',
+          'Bring {{qty:Cream cheese}} cream cheese, {{qty:Sour Cream}} sour cream, and {{qty:Eggs}} eggs close to room temperature.',
           'Preheat your oven to 150°C / 300°F. Line an 18 cm loaf pan with parchment paper.',
           'Beat the eggs in a separate bowl and set aside.'
         ],
@@ -1431,8 +1431,8 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
         title: 'BUILD THE CREAMY BASE',
         clock: '10:15 PM',
         paragraphs: [
-          'In a large bowl, mix the {{qty:Cream Cheese}} cream cheese until completely smooth and free of lumps.',
-          'Add the {{qty:Granulated Sugar}} granulated sugar, {{qty:Sour Cream}} sour cream, and {{qty:35% Whipping Cream}} whipping cream. Mix until evenly combined.'
+          'In a large bowl, mix {{qty:Cream cheese}} cream cheese until completely smooth and free of lumps.',
+          'Add the {{qty:Granulated sugar}} granulated sugar, {{qty:Sour cream}} sour cream, and {{qty:35% whipping cream}} whipping cream. Mix until evenly combined.'
         ],
         stepImages: ['images/recipes/silky-cheesecake/step-02-01.jpg', 'images/recipes/silky-cheesecake/step-02-02.jpg', 'images/recipes/silky-cheesecake/step-02-03.jpg']
       },
@@ -1442,7 +1442,7 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
         clock: '10:20 PM',
         paragraphs: [
           'Gradually add {{qty:Eggs}} beaten eggs in two or three additions, mixing gently after each addition.',
-          'Sift in the {{qty:Cornstarch}} cornstarch, then add the {{qty:Lemon Juice}} lemon juice and {{qty:Vanilla Extract}} vanilla extract. Mix until the batter is smooth and uniform.',
+          'Sift in the {{qty:Cornstarch}} cornstarch, then add the {{qty:Lemon juice}} lemon juice and {{qty:Vanilla extract}} vanilla extract. Mix until the batter is smooth and uniform.',
           'Pour the batter into the prepared loaf pan. Gently tap the pan against the counter to release large air bubbles.',
           'For an extra-silky texture, strain the batter through a fine-mesh sieve before pouring it into the pan.'
         ],
@@ -1553,15 +1553,15 @@ details: [
     ingredients: [
       { group: 'PIE CRUST', usualSlug: 'building-block-pie-crust', usualLabel: 'Building Block Pie Crust' },
       { group: 'PUMPKIN FILLING' },
-      { amount: 400, unit: 'g', imperialAmount: 5 / 3, imperialUnit: 'cup', item: 'Pumpkin Purée' },
-      { amount: 70, unit: 'g', imperialAmount: 1 / 3, imperialUnit: 'cup', item: 'Brown Sugar' },
+      { amount: 400, unit: 'g', imperialAmount: 5 / 3, imperialUnit: 'cup', item: 'Pumpkin purée' },
+      { amount: 70, unit: 'g', imperialAmount: 1 / 3, imperialUnit: 'cup', item: 'Brown sugar' },
       { amount: 2, unit: 'large', imperialAmount: 2, imperialUnit: 'large', item: 'Eggs' },
-      { amount: 80, unit: 'ml', imperialAmount: 1 / 3, imperialUnit: 'cup', item: 'Whole Milk' },
-      { amount: 80, unit: 'ml', imperialAmount: 1 / 3, imperialUnit: 'cup', item: '35% Whipping Cream' },
-      { amount: 1, unit: 'tsp', imperialAmount: 1, imperialUnit: 'tsp', item: 'Ground Cinnamon' },
-      { amount: 0.5, unit: 'tsp', imperialAmount: 0.5, imperialUnit: 'tsp', item: 'Ground Ginger' },
-      { amount: 0.5, unit: 'g', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Ground Nutmeg' },
-      { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground Cloves' },
+      { amount: 80, unit: 'ml', imperialAmount: 1 / 3, imperialUnit: 'cup', item: 'Whole milk' },
+      { amount: 80, unit: 'ml', imperialAmount: 1 / 3, imperialUnit: 'cup', item: '35% whipping cream' },
+      { amount: 1, unit: 'tsp', imperialAmount: 1, imperialUnit: 'tsp', item: 'Ground cinnamon' },
+      { amount: 0.5, unit: 'tsp', imperialAmount: 0.5, imperialUnit: 'tsp', item: 'Ground ginger' },
+      { amount: 0.5, unit: 'g', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Ground nutmeg' },
+      { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground cloves' },
       { amount: 0.25, unit: 'tsp', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Salt' }
     ],
     stats: { prep: '20 mins', cook: '35–45 mins', chill: '2 hrs', total: '2 hrs 55 mins+', serves: '6–8', pan: '23 cm / 9-inch pie dish', quiet: '⭐⭐⭐⭐☆' },
@@ -1582,7 +1582,7 @@ details: [
         title: 'MAKE THE FILLING',
         clock: '12:35 AM',
         paragraphs: [
-          'Mix {{qty:PUMPKIN FILLING::Pumpkin Purée}} pumpkin purée, {{qty:PUMPKIN FILLING::Brown Sugar}} brown sugar, {{qty:PUMPKIN FILLING::Eggs}} eggs, {{qty:PUMPKIN FILLING::Whole Milk}} whole milk, {{qty:PUMPKIN FILLING::35% Whipping Cream}} whipping cream, {{qty:PUMPKIN FILLING::Ground Cinnamon}} ground cinnamon, {{qty:PUMPKIN FILLING::Ground Ginger}} ground ginger, {{qty:PUMPKIN FILLING::Ground Nutmeg}} ground nutmeg, {{qty:PUMPKIN FILLING::Ground Cloves}} ground cloves, and {{qty:PUMPKIN FILLING::Salt}} salt until smooth.'
+          'Mix {{qty:PUMPKIN FILLING::Pumpkin purée}} pumpkin purée, {{qty:PUMPKIN FILLING::Brown sugar}} brown sugar, {{qty:PUMPKIN FILLING::Eggs}} eggs, {{qty:PUMPKIN FILLING::Whole milk}} whole milk, {{qty:PUMPKIN FILLING::35% whipping cream}} whipping cream, {{qty:PUMPKIN FILLING::Ground cinnamon}} ground cinnamon, {{qty:PUMPKIN FILLING::Ground ginger}} ground ginger, {{qty:PUMPKIN FILLING::Ground nutmeg}} ground nutmeg, {{qty:PUMPKIN FILLING::Ground cloves}} ground cloves, and {{qty:PUMPKIN FILLING::Salt}} salt until smooth.'
         ],
         stepImages: ['images/recipes/classic-pumpkin-pie/step-02-01.jpg', 'images/recipes/classic-pumpkin-pie/step-02-02.jpg']
       },
@@ -1688,13 +1688,13 @@ details: [
       imperialAmount: 1,
       imperialUnit: 'lb'
     },
-    {amount:150,unit:'g',imperialAmount:1,imperialUnit:'',item:'Medium Onion, finely diced'},
+    {amount:150,unit:'g',imperialAmount:1,imperialUnit:'medium',item:'Onion, finely diced'},
     {
-      item: 'medium Tomato, finely diced',
+      item: 'Tomato, finely diced',
       amount: 110,
       unit: 'g',
       imperialAmount: 1,
-      imperialUnit: ''
+      imperialUnit: 'medium'
     },
         {
       item: 'Garlic, minced',
