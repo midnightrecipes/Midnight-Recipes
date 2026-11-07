@@ -73,7 +73,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
       {group:'CHOCOLATE FILLING'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark chocolate, chopped'},{amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened cocoa powder'},{amount:4,unit:'',imperialAmount:4,imperialUnit:'',item:'Egg yolks'},{amount:75,unit:'g',imperialAmount:6,imperialUnit:'tbsp',item:'Granulated sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:480,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole milk'},{amount:21,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Unsalted butter'},
       {group:'TOPPING (optional)'},{amount:240,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'35% whipping cream'},{amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated sugar'},{unit:'',item:'Cocoa powder, cacao nibs, or flaky sea salt, for finishing'}
     ],
-    stats:{prep:'15 mins',cook:'15 mins',chill:'4 hrs',total:'4 hrs 30 min',serves:'6–8',pan:'23 cm / 9 inch pie dish',quiet:'⭐⭐⭐☆☆'},
+    stats:{prep:'15 mins',cook:'15 mins',chill:'4 hrs',total:'4 hrs 30 min',serves:'6–8',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐☆☆'},
     steps:[
       {number:'01',title:'CRUSH IT DOWN',clock:'11:20 PM',paragraphs:[
         'Preheat your oven to 175°C / 350°F.',
@@ -81,7 +81,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
         '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
         'Add {{qty:CRUST::Unsalted butter, melted}} melted butter to the crushed graham crackers and mix until the crumbs are evenly coated.',
-        'Press the crumb mixture firmly into a 9-inch (23 cm) pie dish using the flat bottom of a cup.',
+        'Press the crumb mixture firmly into a 9 inch / 23 cm pie dish using the flat bottom of a cup.',
         'Bake for 8–10 minutes. Let it cool.'
       ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/chocolate-cream-comfort-pie/step-01-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-03.jpg']},
       {number:'02',title:'MAKE IT GLOSSY',clock:'12:20 AM',paragraphs:[
@@ -190,7 +190,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
     tag:'THE FRESH FINISH',
     details:[
       ['Flavor','Garlic chives add a fresh, sharp, garlicky flavor, a little crunch, and a vivid green finish that lifts the rich pork mince.'],
-      ['When to Add','Cut the chives into 3–4 cm pieces and add them near the end. Toss for about 30–45 seconds—just long enough to soften them slightly while keeping their color and fresh aroma.'],
+      ['When to Add','Cut the chives into 2 inch / 5 cm pieces and add them near the end. Toss for about 30–45 seconds—just long enough to soften them slightly while keeping their color and fresh aroma.'],
       ['Substitute','Green onions (scallions) are an easy substitute. They are milder and less garlicky.'],
     ]
   }
@@ -209,7 +209,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
       {amount:2,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Granulated sugar'},
       {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Chicken bouillon powder'},
       {amount:180,unit:'ml',imperialAmount:0.75,imperialUnit:'cup',item:'Water'},
-      {amount:55,unit:'g',imperialAmount:1,imperialUnit:'small bunch',item:'Garlic chives or green onion, cut into 3–4 cm pieces'},
+      {amount:55,unit:'g',imperialAmount:1,imperialUnit:'small bunch',item:'Garlic chives or green onion, cut into 2 inch / 5 cm pieces'},
       {minAmount:3,maxAmount:5,unit:'ml',imperialMinAmount:0.5,imperialMaxAmount:1,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',compactRange:true,item:'Sesame oil, for finishing'},
       {group:'TO SERVE'},
       {unit:'',item:'Steamed rice'},
@@ -312,7 +312,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
 ],
     ingredients:[
       {group:'APPLE MIXTURE'},
-      {amount:300,unit:'g',item:'Apples, peeled, cored, and cut into 1 cm cubes'},
+      {amount:300,unit:'g',item:'Apples, peeled, cored, and cut into 1/2 inch / 1 cm cubes'},
       {amount:15,unit:'g',item:'Unsalted butter'},
       {amount:19,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Brown sugar'},
       {amount:15,unit:'ml',item:'Lemon juice'},
@@ -423,23 +423,23 @@ Tonight, I wanted to create something a little different from a standard pumpkin
         ['The Magic of Orange Peel', 'Steeping a strip of fresh orange peel introduces bright citrus oils to the dairy. It cuts through the heavy pumpkin and rich eggs, leaving a fresh, fragrant finish that defines Calabaza en Tacha. Just be careful not to over-steep, as it can turn bitter.']]
     }
   ],
-    stats:{prep:'25 mins',cook:'55–65 mins',chill:'4 hrs+',total:'5 hrs 20 mins+',serves:'8',pan:'23 cm / 9-inch pie dish',quiet:'⭐⭐⭐⭐☆'},
+    stats:{prep:'25 mins',cook:'55–65 mins',chill:'4 hrs+',total:'5 hrs 20 mins+',serves:'6-8',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐⭐☆'},
     ingredients:[
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
       {group:'CALABAZA FILLING'},
       {amount:400,unit:'g',imperialAmount:5/3,imperialUnit:'cup',item:'Pumpkin purée'}, {amount:2,unit:'large',imperialAmount:2,imperialUnit:'large',item:'Eggs'}, {amount:180,unit:'ml',imperialAmount:3/4,imperialUnit:'cup',item:'10% cream (Half & Half)'},
       {amount:55,unit:'g',imperialAmount:0.25,imperialUnit:'cup',item:'Dark brown sugar'}, {amount:10,unit:'g',imperialAmount:1/2,imperialUnit:'tbsp',item:'Molasses'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Orange juice'}, {amount:0.25,unit:'tsp',imperialAmount:1/4,imperialUnit:'tsp',item:'Salt'},
       {group:'SPICE INFUSION'},
-      {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Cinnamon stick'}, {amount:2,unit:'',item:'Whole cloves'}, {amount:1,unit:'',item:'Star anise'}, {amount:1,unit:'strip',item:'Orange peel, 2–3 cm (1 inch) long'},
+      {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Cinnamon stick'}, {amount:2,unit:'',item:'Whole cloves'}, {amount:1,unit:'',item:'Star anise'}, {amount:1,unit:'strip',item:'Orange peel, 1 inch / 2-3 cm long'},
       {group:'THE PILONCILLO SYRUP'},
-      {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Dark brown sugar'}, {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Molasses'}, {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Orange juice'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Water'}, {amount:1,unit:'strip',imperialAmount:1,imperialUnit:'strip',item:'Orange peel, 2–3 cm (1 inch) long'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'}
+      {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Dark brown sugar'}, {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Molasses'}, {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Orange juice'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Water'}, {amount:1,unit:'strip',imperialAmount:1,imperialUnit:'strip',item:'Orange peel, 1 inch / 2–3 cm long'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'}
     ],
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat your oven to 175°C / 350°F.','Start with one of our usual recipes - Building Block Pie Crust (OPTION B — PARTIAL BLIND-BAKE).'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
-      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the spice infusion and syrup.','Pour {{qty:CALABAZA FILLING::10% Cream (Half & Half)}} 10% cream into a small saucepan.','Add {{qty:SPICE INFUSION::Cinnamon Stick}} cinnamon stick, {{qty:SPICE INFUSION::Whole Cloves}} whole cloves, {{qty:SPICE INFUSION::Star Anise}} star anise, and {{qty:SPICE INFUSION::Orange peel, 2–3 cm (1 inch) long}} of orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, star anise, and orange peel. Prolonged steeping can make the peel bitter.','While the infused Half & Half is still warm, whisk in {{qty:CALABAZA FILLING::Dark Brown Sugar}} dark brown sugar and {{qty:CALABAZA FILLING::Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
+      {number:'02',title:'INFUSE THE SPICES',clock:'12:05 AM',paragraphs:['Squeeze the orange juice and keep the orange peel strip aside for the spice infusion and syrup.','Pour {{qty:CALABAZA FILLING::10% Cream (Half & Half)}} 10% cream into a small saucepan.','Add {{qty:SPICE INFUSION::Cinnamon Stick}} cinnamon stick, {{qty:SPICE INFUSION::Whole Cloves}} whole cloves, {{qty:SPICE INFUSION::Star Anise}} star anise, and {{qty:SPICE INFUSION::Orange peel, 1 inch / 2-3 cm long}} of orange peel.','Warm gently over low heat for 10 minutes. Do not let the Half & Half boil.','Turn off the heat and let the spices steep for another 10 minutes.','Remove the cinnamon stick, cloves, star anise, and orange peel. Prolonged steeping can make the peel bitter.','While the infused Half & Half is still warm, whisk in {{qty:CALABAZA FILLING::Dark Brown Sugar}} dark brown sugar and {{qty:CALABAZA FILLING::Molasses}} molasses until completely dissolved.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-02.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-02-03.jpg']},
       {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:CALABAZA FILLING::Pumpkin purée}} pumpkin purée, {{qty:CALABAZA FILLING::Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
       {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Pour the pumpkin filling into the crust.','Bake for 40–50 minutes.','The edges should be set while the center still has a slight wobble when the pie is gently shaken.','Remove from the oven.','Let the pie cool slightly until it is no longer hot, then refrigerate.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-04-01.JPG']},
-      {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:THE PILONCILLO SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:THE PILONCILLO SYRUP::Molasses}} molasses, {{qty:THE PILONCILLO SYRUP::Orange Juice}} orange juice, {{qty:THE PILONCILLO SYRUP::Water}} water, {{qty:THE PILONCILLO SYRUP::Orange peel, 2–3 cm (1 inch) long}} of orange peel, and {{qty:THE PILONCILLO SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
+      {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:THE PILONCILLO SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:THE PILONCILLO SYRUP::Molasses}} molasses, {{qty:THE PILONCILLO SYRUP::Orange Juice}} orange juice, {{qty:THE PILONCILLO SYRUP::Water}} water, {{qty:THE PILONCILLO SYRUP::Orange peel, 1 inch / 2–3 cm long}} of orange peel, and {{qty:THE PILONCILLO SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
       {number:'06',title:'FINISH',clock:'NEXT DAY',paragraphs:['Once the pie is no longer hot, refrigerate for at least 4 hours, preferably overnight.','Before serving, spoon a thin layer of the piloncillo syrup over the surface. For the glossiest finish, warm the syrup slightly and drizzle it over the pie just before serving.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-06-01.JPG']}
     ],
     notes:[
@@ -510,7 +510,7 @@ ingredientFile:[
     ]
   }
 ],
-    stats:{prep:'20 mins',cook:'30 mins',chill:'3 hrs+',total:'3 hrs 50 mins+',serves:'6–8',pan:'9-inch / 23 cm pie plate',quiet:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
+    stats:{prep:'20 mins',cook:'30 mins',chill:'3 hrs+',total:'3 hrs 50 mins+',serves:'6–8',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
     ingredients:[
       {group:'CRUST'},
       {amount:200,unit:'g',item:'Plain biscuits, Finely Crushed'}, {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground cinnamon'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Ground ginger'}, {amount:1,unit:'pinch',item:'Ground nutmeg'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'}, {amount:80,unit:'g',item:'Unsalted butter, melted'},
@@ -531,7 +531,7 @@ ingredientFile:[
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
         '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
         'Mix with {{qty:Ground cinnamon}} cinnamon, {{qty:Ground ginger}} ginger, {{qty:Ground nutmeg}} nutmeg, {{qty:Salt}} salt, and {{qty:Unsalted butter, melted}} melted butter.',
-        'Press firmly into a 9-inch (23 cm) pie dish.',
+        'Press firmly into a 9 inch / 23 cm pie dish.',
         'Bake for 8–10 minutes, then let cool.'
       ],stepNote:'**Midnight Shortcut:** Skip the oven entirely! Just press the crust into the dish and freeze it while making the filling. It won\'t be quite as toasted, but it sets super fast.',stepImages:[]},
       {number:'03',title:'MAKE IT THICK',clock:'3:20 AM',paragraphs:[
@@ -699,7 +699,7 @@ Don\'t over-sweeten it. The sweet potato provides natural sweetness, while cryst
       {amount:6,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Salt'},
       {minAmount:80,maxAmount:100,unit:'ml',imperialMinAmount:5,imperialMaxAmount:7,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',item:'Cold water'}
     ],
-    stats:{prep:'20 mins',cook:'20–45 mins depending on finish',total:'40–65 mins depending on finish',serves:'Enough for one 23 cm / 9-inch double-crust pie, or two single-crust pies.',pan:'23 cm / 9-inch pie dish',quiet:'⭐⭐⭐⭐☆'},
+    stats:{prep:'20 mins',cook:'20–45 mins depending on finish',total:'40–65 mins depending on finish',serves:'Enough for one 9 inch / 23 cm double-crust pie, or two single-crust pies.',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐⭐☆'},
     steps:[
       {number:'01',title:'MAKE THE DOUGH',clock:'',paragraphs:[
         'Mix {{qty:All-purpose flour}} flour and {{qty:salt}} salt in a large bowl. Add {{qty:Cold unsalted Butter, cubed}} cold, cubed butter and work it into the flour until the mixture resembles coarse crumbs, with some small pieces of butter still visible.',
@@ -836,7 +836,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
       {amount:50,unit:'g',item:'Granulated sugar'},
       {amount:0.5,unit:'g',item:'Cream of tartar'}
     ],
-    stats:{prep:'20 mins',cook:'30 mins',chill:'4 hrs+',total:'4 hrs 50 mins +',serves:'6–8',pan:'23 cm / 9-inch pie dish',quiet:'⭐☆☆☆☆'},
+    stats:{prep:'20 mins',cook:'30 mins',chill:'4 hrs+',total:'4 hrs 50 mins +',serves:'6–8',pan:'9 inch / 23 cm pie dish',quiet:'⭐☆☆☆☆'},
     steps:[
       {number:'01',title:'CRUSH IT DOWN',clock:'11:20 PM',paragraphs:[
         'Preheat your oven to 175°C / 350°F.',
@@ -844,7 +844,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
         '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
         'Add {{qty:GRAHAM CRACKER CRUST::Unsalted butter, melted}} melted butter to the crushed graham crackers and mix until the crumbs are evenly coated.',
-        'Press the crumb mixture firmly into a 9-inch (23 cm) pie dish using the flat bottom of a cup.',
+        'Press the crumb mixture firmly into a 9 inch / 23 cm pie dish using the flat bottom of a cup.',
         'Bake for 8–10 minutes. Let it cool.'
       ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/fun-key-lime-pie/step-01-01.jpg','images/recipes/fun-key-lime-pie/step-01-02.jpg','images/recipes/fun-key-lime-pie/step-01-03.jpg']},
       {number:'02',title:'MIX THE LIME FILLING',clock:'11:32 PM',paragraphs:[
@@ -854,7 +854,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
         'Whisk everything together until completely smooth.'
       ],stepImages:['images/recipes/fun-key-lime-pie/step-02-01.jpg','images/recipes/fun-key-lime-pie/step-02-02.jpg','images/recipes/fun-key-lime-pie/step-02-03.jpg','images/recipes/fun-key-lime-pie/step-02-04.jpg']},
       {number:'03',title:'BAKE THE FILLING',clock:'11:40 PM',paragraphs:[
-        'Pour the lime filling into the cooled 23 cm / 9-inch graham cracker crust.',
+        'Pour the lime filling into the cooled graham cracker crust.',
         'Bake at 175°C / 350°F for 10 minutes.',
         'The edges should be beginning to set while the center still has a gentle jiggle.',
         'Remove the pie from the oven and let it rest for 5–10 minutes while preparing the meringue.'
@@ -1409,7 +1409,7 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
       { amount: 10, unit: 'ml', imperialAmount: 2, imperialUnit: 'tsp', item: 'Lemon juice' },
       { amount: 0.5, unit: 'tsp', item: 'Vanilla extract' }
     ],
-    stats: { prep: '20 mins', cook: '45–50 mins', chill: '8 hrs+', total: '9 hrs 5 mins+', serves: '6–8 slices', pan: '18 cm loaf pan', quiet: '⭐⭐⭐⭐⭐' },
+    stats: { prep: '20 mins', cook: '45–50 mins', chill: '8 hrs+', total: '9 hrs 5 mins+', serves: '6–8', pan: '7 inch / 18 cm loaf pan', quiet: '⭐⭐⭐⭐⭐' },
     showPan: true,
     showChill: true,
     stepQuantityConversion: true,
@@ -1421,7 +1421,7 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
         clock: '10:10 PM',
         paragraphs: [
           'Bring {{qty:Cream cheese}} cream cheese, {{qty:Sour Cream}} sour cream, and {{qty:Eggs}} eggs close to room temperature.',
-          'Preheat your oven to 150°C / 300°F. Line an 18 cm loaf pan with parchment paper.',
+          'Preheat your oven to 150°C / 300°F. Line a 7 inch / 18 cm loaf pan with parchment paper.',
           'Beat the eggs in a separate bowl and set aside.'
         ],
         stepImages: []
@@ -1564,7 +1564,7 @@ details: [
       { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground cloves' },
       { amount: 0.25, unit: 'tsp', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Salt' }
     ],
-    stats: { prep: '20 mins', cook: '35–45 mins', chill: '2 hrs', total: '2 hrs 55 mins+', serves: '6–8', pan: '23 cm / 9-inch pie dish', quiet: '⭐⭐⭐⭐☆' },
+    stats: { prep: '20 mins', cook: '35–45 mins', chill: '2 hrs', total: '2 hrs 55 mins+', serves: '6–8', pan: '9 inch / 23 cm pie dish', quiet: '⭐⭐⭐⭐☆' },
     steps: [
       {
         number: '01',
@@ -1758,7 +1758,7 @@ details: [
   ],
 
   stats: {
-    prep:'15 mins',cook:'20 mins',total:'35 mins',serves:'3',pan:'20 cm / 8-inch non-stick frying pan',quiet:'⭐⭐⭐⭐⭐'
+    prep:'15 mins',cook:'20 mins',total:'35 mins',serves:'3',pan:'8 inch / 23 cm frying pan',quiet:'⭐⭐⭐⭐⭐'
   },
 
   steps: [
@@ -1800,14 +1800,14 @@ details: [
         'images/recipes/khai-yat-sai/step-03-1.jpg'
       ],
       paragraphs: [
-        'This recipe makes {{divide:Omelette::Large Eggs/2}} omelettes. Cook them one at a time, using 2 eggs and a 20 cm (8-inch) pan for each omelette.',
+        'This recipe makes {{divide:Omelette::Large Eggs/2}} omelettes. Cook them one at a time, using 2 eggs and a 8 inch / 20 cm pan for each omelette.',
         'Beat {{qty:Omelette::Large Eggs}} eggs in a bowl. Add {{qty:Omelette::Water (optional)}} water if you prefer a slightly softer texture.',
-        'Lightly grease a 20 cm (8-inch) non-stick frying pan with oil. Heat over medium-low heat.',
+        'Lightly grease a 8 inch / 20 cm non-stick frying pan with oil. Heat over medium-low heat.',
         'Pour in the eggs and gently swirl the pan to create a thin, even layer.',
         'Cook until the bottom is set and the surface is just beginning to set but still soft. Turn off the heat. Avoid browning the egg.',
         'Repeat with the remaining eggs to make the omelettes in the same way.',
         '**Easy Pan Guide˚‧︵‿☆**',
-'1 egg → 15–16 cm pan\n2 eggs → 20 cm / 8-inch pan\n3 eggs → 22 cm / 9-inch pan\n4 eggs → 24 cm / 9½-inch pan']
+'1 egg → 6 inch / 15–16 cm pan\n2 eggs → 8 inch / 20 cm pan\n3 eggs → 9 inch / 23 cm pan\n4 eggs → 9½ inch / 24 cm pan']
     },
     {
       number: 4,
@@ -1819,7 +1819,7 @@ details: [
         'images/recipes/khai-yat-sai/step-04-3.jpg'
       ],
       paragraphs: [
-        'Divide the pork filling into {{divide:Omelette::Large Eggs/2}} portions. Place one portion in the centre of each omelette, leaving approximately 3–4 cm around the edges.',
+        'Divide the pork filling into {{divide:Omelette::Large Eggs/2}} portions. Place one portion in the centre of each omelette, leaving approximately 2 inches /5 cm around the edges.',
         'Fold the top and bottom edges towards the centre, then fold in the left and right sides to create a neat square parcel.'
       ]
     },
