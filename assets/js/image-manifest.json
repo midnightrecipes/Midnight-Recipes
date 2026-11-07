@@ -259,6 +259,34 @@
       ]
     }
   },
+  "lumberjack-cake": {
+    "hero": "images/recipes/lumberjack-cake/hero.jpg",
+    "recipe": "images/recipes/lumberjack-cake/recipe.jpg",
+    "steps": {
+      "02": [
+        "images/recipes/lumberjack-cake/step-02-01.JPG",
+        "images/recipes/lumberjack-cake/step-02-02.JPG"
+      ],
+      "03": [
+        "images/recipes/lumberjack-cake/step-03-01.JPG",
+        "images/recipes/lumberjack-cake/step-03-02.JPG",
+        "images/recipes/lumberjack-cake/step-03-03.JPG",
+        "images/recipes/lumberjack-cake/step-03-04.JPG"
+      ],
+      "04": [
+        "images/recipes/lumberjack-cake/step-04-01.JPG"
+      ],
+      "05": [
+        "images/recipes/lumberjack-cake/step-05-01.JPG",
+        "images/recipes/lumberjack-cake/step-05-02.JPG"
+      ],
+      "06": [
+        "images/recipes/lumberjack-cake/step-06-01.JPG",
+        "images/recipes/lumberjack-cake/step-06-02.JPG",
+        "images/recipes/lumberjack-cake/step-06-03.JPG"
+      ]
+    }
+  },
   "mexican-calabaza-en-tacha-pumpkin-pie": {
     "hero": "images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/hero.jpg",
     "recipe": "images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/recipe.jpg",
