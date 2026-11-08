@@ -628,7 +628,7 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
     ingredients:[
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
       {group:'FILLING'},
-      {amount:400,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'Cooked sweet potato flesh'}, {amount:90,unit:'ml',imperialAmount:6,imperialUnit:'tbsp',item:'10% cream (Half & Half)'}, {amount:70,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Granulated sugar'}, {amount:114,unit:'g',imperialAmount:2,imperialUnit:'large,item:'Eggs'}, {amount:6,unit:'g',item:'Fresh ginger, finely grated'}, {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'Ground cinnamon'}, {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
+      {amount:400,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'Cooked sweet potato flesh'}, {amount:90,unit:'ml',imperialAmount:6,imperialUnit:'tbsp',item:'10% cream (Half & Half)'}, {amount:70,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Granulated sugar'}, {amount:114,unit:'g',imperialAmount:2,imperialUnit:'large',item:'Eggs'}, {amount:6,unit:'g',item:'Fresh ginger, finely grated'}, {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'Ground cinnamon'}, {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
       {group:'TOPPING (optional)'},
       {unit:'',item:'Crystallized ginger, finely chopped, for finishing'}, {unit:'',item:'Ground cinnamon, for dusting'}
     ],
