@@ -962,24 +962,24 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
   }
 ],
     ingredients:[
-      {group:'Chicken & Coconut Base'},
-      {amount:227,unit:'g',imperialAmount:0.5,imperialUnit:'lb',item:'Boneless, Skinless Chicken Thighs'},
+      {group:'CHICKEN & COCONUT BASE'},
+      {amount:227,unit:'g',imperialAmount:0.5,imperialUnit:'lb',item:'Chicken thighs, boneless, skinless'},
       {amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Mushrooms'},
       {amount:400,unit:'ml',imperialAmount:5/3,imperialUnit:'cup',item:'Coconut Milk'},
       {amount:240,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'Water or Chicken Stock'},
-      {group:'Aromatics'},
+      {group:'AROMATICS'},
       {amount:30,unit:'g',imperialMinAmount:10,imperialMaxAmount:12,imperialMinUnit:'slices',imperialMaxUnit:'slices',item:'Galangal, Thinly Sliced',compactRange:true},
       {minAmount:1,maxAmount:2,unit:'stalks',imperialMinAmount:1,imperialMaxAmount:2,imperialMinUnit:'stalks',imperialMaxUnit:'stalks',item:'Lemongrass, Bruised and Cut Into Pieces',compactRange:true},
       {minAmount:4,maxAmount:5,unit:'leaves',imperialMinAmount:4,imperialMaxAmount:5,imperialMinUnit:'leaves',imperialMaxUnit:'leaves',item:'Makrut Lime Leaves, Rehydrated if Dried',compactRange:true},
       {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Onion, Sliced'},
       {amount:1,unit:'clove',imperialAmount:1,imperialUnit:'clove',item:'Garlic, Lightly Crushed'},
       {minAmount:2,maxAmount:4,unit:'',imperialMinAmount:2,imperialMaxAmount:4,imperialMinUnit:'',imperialMaxUnit:'',item:'Fresh Chilies, Lightly Crushed',compactRange:true},
-      {group:'Seasoning'},
+      {group:'SEASONING'},
       {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Fish Sauce'},
       {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Fresh Lime Juice'},
       {amount:4,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Palm Sugar or Granulated Sugar'},
       {minAmount:2,maxAmount:3,unit:'g',imperialMinAmount:0.25,imperialMaxAmount:0.5,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',item:'Salt',compactRange:true},
-      {group:'Garnish'},
+      {group:'TOPPING (optional)'},
       {unit:'',item:'Cilantro'}
     ],
     stats:{prep:'10 mins',cook:'20 mins',total:'30 mins',serves:'2–3',quiet:'⭐⭐⭐⭐☆'},
@@ -992,7 +992,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
         'Bring to a gentle simmer over medium heat and cook for 5–10 minutes, until the broth smells deeply aromatic.'
       ],stepImages:['images/recipes/tom-kha-gai/step-01-01.jpg','images/recipes/tom-kha-gai/step-01-02.jpg','images/recipes/tom-kha-gai/step-01-03.jpg']},
       {number:'02',title:'COOK THE CHICKEN & COCONUT',clock:'11:33 PM',paragraphs:[
-        'Cut {{qty:Boneless, Skinless Chicken Thighs}} boneless, skinless chicken thighs into bite-sized pieces.',
+        'Cut {{qty:Chicken thighs, boneless, skinless}} chicken thighs into bite-sized pieces.',
         'Add the chicken thighs to the aromatic broth and simmer until just cooked through.',
         'Add {{qty:Mushrooms}} mushrooms and cook for another 2–3 minutes.',
         'Pour in {{qty:Coconut Milk}} coconut milk. Reduce the heat to low and warm gently.',
