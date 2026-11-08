@@ -827,7 +827,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
       {amount:76,unit:'g',item:'Unsalted butter, melted'},
       {group:'LIME FILLING'},
       {amount:300,unit:'ml',item:'Sweetened condensed milk'},
-      {amount:54,unit:'g',,imperialAmount:3,imperialUnit:'large',item:'Egg yolks'},
+      {amount:54,unit:'g',imperialAmount:3,imperialUnit:'large',item:'Egg yolks'},
       {amount:58,unit:'g',imperialAmount:1/4,imperialUnit:'cup',item:'Sour cream'},
       {amount:120,unit:'ml',item:'Fresh lime juice'},
       {amount:6,unit:'g',item:'Lime zest, finely grated'},
