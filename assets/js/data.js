@@ -1635,8 +1635,8 @@ details: [
   course: 'Sides',
   courseDisplay: 'Sides',
   categories: ['Sides'],
-  dateAdded: '2026-11-02',
-
+  dateAdded: '2026-11-02', timeStamp:'11:20 PM',
+  description:'A Thai home-style dish of ground pork and vegetables wrapped in a thin omelette that balances savory, sweet, and tangy flavors in every bite.',
   heroImage: 'images/recipes/khai-yat-sai/hero.JPG',
   recipeImage: 'images/recipes/khai-yat-sai/recipe.jpg',
 
