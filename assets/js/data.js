@@ -70,7 +70,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
 ],
     ingredients:[
       {group:'CRUST'},{amount:200,unit:'g',item:'Graham crackers, finely crushed'},{amount:76,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Unsalted butter, melted'},
-      {group:'CHOCOLATE FILLING'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark chocolate, chopped'},{amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened cocoa powder'},{amount:4,unit:'',imperialAmount:4,imperialUnit:'',item:'Egg yolks'},{amount:75,unit:'g',imperialAmount:6,imperialUnit:'tbsp',item:'Granulated sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:480,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole milk'},{amount:21,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Unsalted butter'},
+      {group:'CHOCOLATE FILLING'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark chocolate, chopped'},{amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened cocoa powder'},{amount:72,unit:'g',imperialAmount:4,imperialUnit:'large',item:'Egg yolks'},{amount:75,unit:'g',imperialAmount:6,imperialUnit:'tbsp',item:'Granulated sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:480,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole milk'},{amount:21,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Unsalted butter'},
       {group:'TOPPING (optional)'},{amount:240,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'35% whipping cream'},{amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated sugar'},{unit:'',item:'Cocoa powder, cacao nibs, or flaky sea salt, for finishing'}
     ],
     stats:{prep:'15 mins',cook:'15 mins',chill:'4 hrs',total:'4 hrs 30 min',serves:'6–8',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐☆☆'},
@@ -91,7 +91,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
         'Remove the pan from the heat.'
       ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-02-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-02-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-02-03.jpg','images/recipes/chocolate-cream-comfort-pie/step-02-04.jpg']},
       {number:'03',title:'MAKE IT SILKY',clock:'12:28 AM',paragraphs:[
-        'In a separate bowl, whisk {{qty:Egg Yolks}} egg yolks.',
+        'In a separate bowl, whisk {{qty:Egg yolks}} egg yolks.',
         'Slowly whisk half of the hot chocolate cream into the yolks to warm them up, then pour the yolk mixture back into the pan.',
         'Return to low heat for 1 minute, whisking constantly until thick and glossy.',
         'Remove from heat, then stir in {{qty:CHOCOLATE FILLING::Dark chocolate, chopped}} chopped dark chocolate and {{qty:CHOCOLATE FILLING::Unsalted butter}} butter until fully melted and smooth.'
@@ -147,7 +147,7 @@ What makes it so addictive isn't just the heat—it’s that intense, punchy wal
 Tonight, I’m taking that iconic flavor and making the ground pork the star, serving it over hot rice with a rich soft-boiled egg. As you break the egg, the creamy, runny yolk flows into the spicy mince, perfectly cutting through the fiery punch and rounding out all those sharp garlic notes. It’s dangerous, intensely savory, and so good it might just keep me up all night.`,
     ingredientFile:[
   {
-    name:'REGULAR GROUND PORK',
+    name:'GROUND PORK (REGULAR)',
     tag:'THE FLAVOR FOUNDATION',
     details:[
       ['Why It Matters','The fat carries much of the dish’s flavor. As the pork renders, it absorbs the chili aroma and savory compounds from the doubanjiang, creating a glossy coating that clings to the meat and rice.'],
@@ -197,7 +197,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
 ],
     ingredients:[
       {group:'TAIWAN MINCE'},
-      {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Regular ground pork'},
+      {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Ground pork (regular)'},
       {amount:20,unit:'g',item:'Garlic, finely minced',imperialMinAmount:6,imperialMaxAmount:8,imperialMinUnit:'cloves',imperialMaxUnit:'cloves',instructionImperialMinUnit:'garlic cloves',instructionImperialMaxUnit:'garlic cloves',instructionMetricSuffix:' of garlic',compactRange:true},
       {minAmount:3,maxAmount:5,unit:'',item:'Fresh red chilies, finely minced, seeds included'},
       {amount:45,unit:'ml',item:'Sesame oil'},
@@ -223,7 +223,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
         'Keep the garlic pale. You want the oil infused with garlic and chili, not burnt garlic.'
       ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-01-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-01-02.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-01-03.JPG']},
       {number:'02',title:'COOK THE PORK',clock:'11:17 PM',paragraphs:[
-        'Increase the heat to medium-high and add {{qty:regular ground pork}} ground pork.',
+        'Increase the heat to medium-high and add {{qty:ground pork (regular)}} ground pork.',
         'Let the pork sit against the pan briefly so it develops some browned edges.',
         'Break it apart and continue cooking until deeply browned and the pork fat has rendered.',
         'Push the pork toward one side of the pan. Add {{qty:doubanjiang}} doubanjiang to the exposed oil.',
@@ -321,7 +321,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
       {group:'CUSTARD'},
       {amount:100,unit:'ml',imperialAmount:7,imperialUnit:'tbsp',item:'Whole milk'},
       {amount:400,unit:'ml',item:'35% whipping cream'},
-      {amount:5,unit:'',item:'Large egg yolks'},
+      {amount:90,unit:'g',imperialAmount:5,imperialUnit:'large',item:'Egg yolks'},
       {amount:63,unit:'g',imperialAmount:5,imperialUnit:'tbsp',item:'Granulated sugar'},
       {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla extract'},
       {amount:1,unit:'pinch',item:'Fine salt'},
@@ -340,7 +340,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
       ],stepImages:['images/recipes/apple-creme-brulee/step-01-01.jpg','images/recipes/apple-creme-brulee/step-01-02.jpg','images/recipes/apple-creme-brulee/step-01-03.jpg','images/recipes/apple-creme-brulee/step-01-04.jpg']},
       {number:'02',title:'MAKE THE CUSTARD',clock:'11:32 PM',paragraphs:[
         'Heat {{qty:whole milk}} whole milk and {{qty:35% whipping cream}} 35% whipping cream over medium-low heat until hot and steaming, but do not boil.',
-        'Whisk {{qty:Large Egg Yolks}} egg yolks, {{qty:Granulated sugar}} sugar, and a pinch of salt gently. Avoid creating too much foam.',
+        'Whisk {{qty:Egg yolks}} egg yolks, {{qty:Granulated sugar}} sugar, and a pinch of salt gently. Avoid creating too much foam.',
         'Slowly add the hot dairy while whisking.',
         'Stir in {{qty:vanilla extract}} vanilla extract.',
         'Strain through a fine-mesh sieve.',
@@ -513,9 +513,9 @@ ingredientFile:[
     stats:{prep:'20 mins',cook:'30 mins',chill:'3 hrs+',total:'3 hrs 50 mins+',serves:'6–8',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
     ingredients:[
       {group:'CRUST'},
-      {amount:200,unit:'g',item:'Plain biscuits, Finely Crushed'}, {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground cinnamon'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Ground ginger'}, {amount:1,unit:'pinch',item:'Ground nutmeg'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'}, {amount:80,unit:'g',item:'Unsalted butter, melted'},
+      {amount:200,unit:'g',item:'Plain biscuits, finely crushed'}, {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground cinnamon'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Ground ginger'}, {amount:1,unit:'pinch',item:'Ground nutmeg'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'}, {amount:80,unit:'g',item:'Unsalted butter, melted'},
       {group:'FILLING'},
-      {amount:250,unit:'g',imperialAmount:3,imperialUnit:'',item:'VERY ripe bananas, mashed'}, {amount:2,unit:'',item:'Firm ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',item:'Whole milk'}, {amount:3,unit:'large',item:'Egg yolks'}, {amount:35,unit:'g',item:'Granulated sugar'}, {amount:32,unit:'g',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla extract'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},
+      {amount:250,unit:'g',imperialAmount:3,imperialUnit:'',item:'VERY ripe bananas, mashed'}, {amount:2,unit:'',item:'Firm ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',item:'Whole milk'}, {amount:54,unit:'g',imperialAmount:3,imperialUnit:'large',item:'Egg yolks'}, {amount:35,unit:'g',item:'Granulated sugar'}, {amount:32,unit:'g',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla extract'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},
       {group:'TOPPING (Optional)'},
       {amount:180,unit:'ml',item:'35% whipping cream'}, {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated sugar'}, {unit:'',item:'Cinnamon, for finishing',hideIngredientInfo:true}, {unit:'',item:'Sliced Banana, for finishing',hideIngredientInfo:true}
     ],
@@ -628,9 +628,9 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
     ingredients:[
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
       {group:'FILLING'},
-      {amount:400,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'Cooked Sweet Potato Flesh'}, {amount:90,unit:'ml',imperialAmount:6,imperialUnit:'tbsp',item:'10% Cream (Half & Half)'}, {amount:70,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Granulated Sugar'}, {amount:2,unit:'',item:'Large Eggs'}, {amount:6,unit:'g',item:'Fresh Ginger, Finely Grated'}, {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'Ground Cinnamon'}, {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Kosher Salt'},
+      {amount:400,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'Cooked sweet potato flesh'}, {amount:90,unit:'ml',imperialAmount:6,imperialUnit:'tbsp',item:'10% cream (Half & Half)'}, {amount:70,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Granulated sugar'}, {amount:114,unit:'g',imperialAmount:2,imperialUnit:'large,item:'Eggs'}, {amount:6,unit:'g',item:'Fresh ginger, finely grated'}, {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'Ground cinnamon'}, {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
       {group:'TOPPING (optional)'},
-      {unit:'',item:'Crystallized Ginger, Finely Chopped, for Finishing'}, {unit:'',item:'Ground Cinnamon, for Dusting'}
+      {unit:'',item:'Crystallized ginger, finely chopped, for finishing'}, {unit:'',item:'Ground cinnamon, for dusting'}
     ],
     steps:[
       {number:'01',title:'COOK THE SWEET POTATO',clock:'11:35 PM',paragraphs:[
@@ -648,7 +648,7 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
       {number:'03',title:'BLEND THE FILLING',clock:'12:25 AM',paragraphs:[
         'Once the sweet potato is cooked and cool enough to handle, measure {{qty:Cooked Sweet Potato Flesh}}.',
         'Finely grate {{qty:Fresh Ginger, Finely Grated}} ginger.',
-        'Combine {{qty:Cooked Sweet Potato Flesh}} sweet potato, {{qty:10% Cream (Half & Half)}} 10% cream, {{qty:FILLING::Granulated Sugar}} Granulated Sugar, {{qty:large eggs}} large eggs, {{qty:Fresh Ginger, Finely Grated}} fresh ginger, {{qty:Ground Cinnamon}} ground cinnamon, and {{qty:Kosher Salt}} kosher salt.',
+        'Combine {{qty:Cooked Sweet Potato Flesh}} sweet potato, {{qty:10% Cream (Half & Half)}} 10% cream, {{qty:FILLING::Granulated Sugar}} Granulated Sugar, {{qty:eggs}} eggs, {{qty:Fresh Ginger, Finely Grated}} fresh ginger, {{qty:Ground Cinnamon}} ground cinnamon, and {{qty:Salt}} salt.',
         'Food Processor — Fastest',
         'Blend the sweet potato and all remaining filling ingredients and blend briefly until silky.',
         'Quiet Mode — Silent',
@@ -827,7 +827,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
       {amount:76,unit:'g',item:'Unsalted butter, melted'},
       {group:'LIME FILLING'},
       {amount:300,unit:'ml',item:'Sweetened condensed milk'},
-      {amount:3,unit:'large',item:'Egg yolks'},
+      {amount:54,unit:'g',,imperialAmount:3,imperialUnit:'large',item:'Egg yolks'},
       {amount:58,unit:'g',imperialAmount:1/4,imperialUnit:'cup',item:'Sour cream'},
       {amount:120,unit:'ml',item:'Fresh lime juice'},
       {amount:6,unit:'g',item:'Lime zest, finely grated'},
