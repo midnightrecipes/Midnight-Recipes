@@ -1635,7 +1635,7 @@ details: [
   course: 'Sides',
   courseDisplay: 'Sides',
   categories: ['Sides'],
-  dateAdded: '2026-11-02', timeStamp:'11:20 PM',
+  dateAdded: '2026-11-02', timeStamp:'12:04 PM',
   description:'A Thai home-style dish of ground pork and vegetables wrapped in a thin omelette that balances savory, sweet, and tangy flavors in every bite.',
   heroImage: 'images/recipes/khai-yat-sai/hero.JPG',
   recipeImage: 'images/recipes/khai-yat-sai/recipe.jpg',
@@ -1765,7 +1765,7 @@ details: [
     {
       number: 1,
       title: 'COOK THE FILLING',
-      time: '12:04 AM',
+      clock: '12:04 AM',
       stepImages: [
         'images/recipes/khai-yat-sai/step-01-1.jpg',
         'images/recipes/khai-yat-sai/step-01-2.jpg',
@@ -1780,7 +1780,7 @@ details: [
     {
       number: 2,
       title: 'SEASON AND REDUCE',
-      time: '12:08 AM',
+      clock: '12:08 AM',
       stepImages: [
         'images/recipes/khai-yat-sai/step-02-1.jpg',
         'images/recipes/khai-yat-sai/step-02-2.jpg',
@@ -1795,7 +1795,7 @@ details: [
     {
       number: 3,
       title: 'MAKE THE OMELETTE',
-      time: '12:13 AM',
+      clock: '12:13 AM',
       stepImages: [
         'images/recipes/khai-yat-sai/step-03-1.jpg'
       ],
@@ -1812,7 +1812,7 @@ details: [
     {
       number: 4,
       title: 'FILL AND FOLD',
-      time: '12:17 AM',
+      clock: '12:17 AM',
       stepImages: [
         'images/recipes/khai-yat-sai/step-04-1.jpg',
         'images/recipes/khai-yat-sai/step-04-2.jpg',
@@ -1826,7 +1826,7 @@ details: [
     {
       number: 5,
       title: 'FLIP AND REVEAL',
-      time: '12:18 AM',
+      clock: '12:18 AM',
       stepImages: [
         'images/recipes/khai-yat-sai/step-05-1.jpg',
         'images/recipes/khai-yat-sai/step-05-2.jpg',
