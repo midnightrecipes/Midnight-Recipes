@@ -695,14 +695,14 @@ Don\'t over-sweeten it. The sweet potato provides natural sweetness, while cryst
     ingredientFile:[],
     ingredients:[
       {amount:360,unit:'g',imperialAmount:3,imperialUnit:'cup',item:'All-purpose flour'},
-      {amount:226,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Cold unsalted Butter, cubed'},
+      {amount:226,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Cold unsalted butter, cubed'},
       {amount:6,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Salt'},
       {minAmount:80,maxAmount:100,unit:'ml',imperialMinAmount:5,imperialMaxAmount:7,imperialMinUnit:'tbsp',imperialMaxUnit:'tbsp',item:'Cold water'}
     ],
     stats:{prep:'20 mins',cook:'20–45 mins depending on finish',total:'40–65 mins depending on finish',serves:'Enough for one 9 inch / 23 cm double-crust pie, or two single-crust pies.',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐⭐☆'},
     steps:[
       {number:'01',title:'MAKE THE DOUGH',clock:'',paragraphs:[
-        'Mix {{qty:All-purpose flour}} flour and {{qty:salt}} salt in a large bowl. Add {{qty:Cold unsalted Butter, cubed}} cold, cubed butter and work it into the flour until the mixture resembles coarse crumbs, with some small pieces of butter still visible.',
+        'Mix {{qty:All-purpose flour}} flour and {{qty:salt}} salt in a large bowl. Add {{qty:Cold unsalted butter, cubed}} cold, cubed butter and work it into the flour until the mixture resembles coarse crumbs, with some small pieces of butter still visible.',
         'Start with {{qty:Cold water}} cold water, adding it gradually while mixing gently. Add more, a little at a time, only until the dough holds together when pressed. It should not feel wet or sticky.',
         '**Midnight Shortcut — Food Processor:** Pulse the flour, salt, and cold butter until coarse crumbs form. Add the water gradually and pulse just until the dough begins to come together. Avoid overmixing.'
       ]},
@@ -1245,7 +1245,7 @@ The patty is soft and bouncy, with a golden crust on the outside and plenty of j
     { group: 'HAMBURG STEAK' },
     { amount: 272, unit: 'g', imperialAmount: 0.625, imperialUnit: 'lb', item: 'Ground beef (regular or lean)' },
     { amount: 182, unit: 'g', imperialAmount: 0.375, imperialUnit: 'lb', item: 'Ground pork (regular or lean)' },
-    { amount: 120, unit: 'g', imperialAmount: 1, imperialUnit: 'cup', item: 'onion, finely chopped' },
+    { amount: 120, unit: 'g', imperialAmount: 1, imperialUnit: 'cup', item: 'Onion, finely chopped' },
     { amount: 1, unit: 'large', imperialAmount: 1, imperialUnit: 'large', item: 'Egg' },
     { amount: 50, unit: 'g', imperialAmount: 0.5, imperialUnit: 'cup', item: 'Breadcrumbs' },
     { amount: 60, unit: 'ml', imperialAmount: 0.25, imperialUnit: 'cup', item: 'Milk' },
