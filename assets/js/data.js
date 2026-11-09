@@ -11,7 +11,7 @@ window.MIDNIGHT_SITE = {
 window.MIDNIGHT_RECIPES = [
   {
     slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE AND JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-26', timeStamp:'11:20 PM',
-    description:'A late-night chocolate cream pie inspired by Julie & Julia (2009).',
+    description:'This homemade chocolate cream pie features a silky dark chocolate custard filling made with real chocolate, cocoa powder and espresso, nestled in a crisp graham cracker crust.',
     heroImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg', recipeImage:'images/recipes/chocolate-cream-comfort-pie/recipe.jpg',
     unitOverrides:{imperial:{'unsalted butter':'tbsp','unsalted butter melted':'tbsp'}},
     integerUnits:{metric:['unsweetened cocoa powder']},
