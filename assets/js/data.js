@@ -1627,8 +1627,8 @@ details: [
   
   {
   slug: 'khai-yat-sai',
-  title: 'Khai Yat Sai (Stuffed Omelette)',
-  description: 'A Thai home-style omelette filled with savoury minced pork, tomato and onion, wrapped in a thin egg sheet and finished with fresh cilantro.',
+  title: 'Khai Yat Sai (Thai Stuffed Omelette)',
+  description: 'Discover Khai Yat Sai, a Thai stuffed omelette filled with savoury ground pork, tomato and onion, wrapped in a thin, soft egg sheet and finished with fresh cilantro and crushed peanuts.',
   source: 'Family & Tradition',
   dish: 'Khai Yat Sai/ไข่ยัดไส้ ',
   cuisine: 'Thai',
@@ -1636,7 +1636,6 @@ details: [
   courseDisplay: 'Sides',
   categories: ['Sides'],
   dateAdded: '2026-11-02', timeStamp:'12:04 PM',
-  description:'A Thai home-style dish of ground pork and vegetables wrapped in a thin omelette that balances savory, sweet, and tangy flavors in every bite.',
   heroImage: 'images/recipes/khai-yat-sai/hero.JPG',
   recipeImage: 'images/recipes/khai-yat-sai/recipe.jpg',
 
@@ -1647,13 +1646,13 @@ details: [
   stepQuantityConversion: true,
   usCupFractions: true,
   fractionDenominator: 16,
+  story: `Many food cultures have their own version of an egg-wrapped dish. Japan has omurice, China has dan jiao, and Italy has involtini di frittata. Thailand has Khai Yat Sai (ไข่ยัดไส้), a traditional Thai stuffed omelette filled with savoury ground pork and vegetables.
 
-  story: `Many food cultures have their own version of an egg-wrapped dish. Japan has omurice, China has dan jiao, and Italy has involtini di frittata. Thailand has Khai Yat Sai — a comforting, home-style stuffed omelette.
-  
-  For this version, I cook ground pork with garlic, onion and tomato, then season it with fish sauce and oyster sauce. The filling is wrapped in a thin, soft omelette and finished with fresh cilantro and crushed peanuts.
-  When you cut into it, the thin, soft omelette yields to a fragrant, savory rush of ground pork and vegetables, all tied together by the umami punch of fish sauce and oyster sauce. It hits every note at once: savory, slightly sweet, tangy, and satisfyingly juicy!
-  It's simple, satisfying, and a lovely reminder that a little creativity with everyday ingredients can make something special.`,
+For this version, I cook ground pork with garlic, onion and tomato, then season it with fish sauce and oyster sauce. The savoury filling is wrapped in a thin, soft omelette and finished with fresh cilantro and crushed peanuts.
 
+When you cut into it, the thin omelette yields to a fragrant, savoury filling of ground pork and vegetables, all tied together by the umami of fish sauce and oyster sauce. It hits every note at once: savoury, slightly sweet, tangy and satisfyingly juicy!
+
+It's simple, satisfying, and a lovely reminder that a little creativity with everyday ingredients can make something special.`,
   ingredientFile: [
     {
       name: 'FISH SAUCE',
@@ -1688,7 +1687,7 @@ details: [
       imperialAmount: 1,
       imperialUnit: 'lb'
     },
-    {amount:150,unit:'g',imperialAmount:1,imperialUnit:'medium',item:'Onion, finely diced'},
+    {amount:110-150,unit:'g',imperialAmount:1,imperialUnit:'medium',item:'Onion, finely diced'},
     {
       item: 'Tomato, finely diced',
       amount: 110,
@@ -1735,7 +1734,7 @@ details: [
     },
     {
       item: 'Large eggs',
-      amount: 6,
+      amount: 8,
       unit: ''
     },
     {
@@ -1758,7 +1757,7 @@ details: [
   ],
 
   stats: {
-    prep:'15 mins',cook:'20 mins',total:'35 mins',serves:'3',pan:'8 inch / 23 cm frying pan',quiet:'⭐⭐⭐⭐⭐'
+    prep:'15 mins',cook:'20 mins',total:'35 mins',serves:'4',pan:'8 inch / 20 cm frying pan',quiet:'⭐⭐⭐⭐⭐'
   },
 
   steps: [
@@ -1800,9 +1799,9 @@ details: [
         'images/recipes/khai-yat-sai/step-03-1.jpg'
       ],
       paragraphs: [
-        'This recipe makes {{divide:Omelette::Large Eggs/2}} omelettes. Cook them one at a time, using 2 eggs and a 8 inch / 20 cm pan for each omelette.',
+        'This recipe makes {{divide:Omelette::Large Eggs/2}} individual omelettes. Cook them one at a time, using 2 eggs for each omelette in an 8 inch / 20 cm frying pane.',
         'Beat {{qty:Omelette::Large Eggs}} eggs in a bowl. Add {{qty:Omelette::Water (optional)}} water if you prefer a slightly softer texture.',
-        'Lightly grease a 8 inch / 20 cm non-stick frying pan with oil. Heat over medium-low heat.',
+        'Lightly grease an 8 inch / 20 cm non-stick frying pan with oil. Heat over medium-low heat.',
         'Pour in the eggs and gently swirl the pan to create a thin, even layer.',
         'Cook until the bottom is set and the surface is just beginning to set but still soft. Turn off the heat. Avoid browning the egg.',
         'Repeat with the remaining eggs to make the omelettes in the same way.',
@@ -1819,7 +1818,7 @@ details: [
         'images/recipes/khai-yat-sai/step-04-3.jpg'
       ],
       paragraphs: [
-        'Divide the pork filling into {{divide:Omelette::Large Eggs/2}} portions. Place one portion in the centre of each omelette, leaving approximately 2 inches /5 cm around the edges.',
+        'Divide the pork filling into {{divide:Omelette::Large Eggs/2}} equal portions. Place one portion in the centre of each omelette, leaving approximately 2 inches / 5 cm of space around the edges.',
         'Fold the top and bottom edges towards the centre, then fold in the left and right sides to create a neat square parcel.'
       ]
     },
