@@ -125,8 +125,8 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
   },
 
   {
-    slug:'addictive-spicy-taiwan-ground-pork',
-    title:'Addictive Spicy Taiwan Ground Pork',
+    slug:'spicy-taiwan-ground-pork',
+    title:'Spicy Taiwan Ground Pork',
     source:'Restaurant',
     original:'Misen 味仙, Nagoya, Japan',
     dish:'Taiwan Ramen — Taiwan Mince',
@@ -386,8 +386,8 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
 
 
   {
-    slug:'mexican-calabaza-en-tacha-pumpkin-pie',
-    title:'Mexican (Calabaza en Tacha) Pumpkin Pie', description:'Inspired by Coco, this Mexican-style pumpkin pie reimagines calabaza en tacha with whole-spice infused cream and a rich piloncillo-style glaze.',
+    slug:'calabaza-en-tacha-inspired-mexican-pumpkin-pie',
+    title:'Calabaza en Tacha-Inspired Mexican Pumpkin Pie', description:'Inspired by Coco, this Mexican-style pumpkin pie reimagines calabaza en tacha with whole-spice infused cream and a rich piloncillo-style glaze.',
     source:'Movie & TV', sourceSecondary:'Family & Tradition', original:'Coco (2017)', dish:'Calabaza en Tacha-inspired Pumpkin Pie', cuisine:'Mexican',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'],
     dateAdded:'2026-09-27', timeStamp:'11:48 PM',
@@ -1167,7 +1167,7 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
   },
 {
   slug: 'moms-hamburg-steak',
-  title: 'Mom’s Hamburg Steak',
+  title: 'Mom’s Hamburg Steak (Hambāgu)',
   description: 'Japanese-style yoshoku comfort food. Juicy beef and pork patties coated in a rich, sweet-tangy homemade demi-glace sauce.',
   source: 'Memory',
   dish: 'Japanese Hamburg Steak',
