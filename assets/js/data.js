@@ -11,7 +11,7 @@ window.MIDNIGHT_SITE = {
 window.MIDNIGHT_RECIPES = [
   {
     slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE AND JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-26', timeStamp:'11:20 PM',
-    description:'This homemade chocolate cream pie features a silky dark chocolate custard filling made with real chocolate, cocoa powder and espresso, nestled in a crisp graham cracker crust.',
+    description: 'Inspired by Julie & Julia, this silky dark chocolate cream pie features a rich espresso-kissed custard in a crisp graham cracker crust—pure midnight comfort.',
     heroImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg', recipeImage:'images/recipes/chocolate-cream-comfort-pie/recipe.jpg',
     unitOverrides:{imperial:{'unsalted butter':'tbsp','unsalted butter melted':'tbsp'}},
     integerUnits:{metric:['unsweetened cocoa powder']},
@@ -87,7 +87,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
         'Bake for 8–10 minutes. Let it cool.'
       ],stepNote:'**Midnight Shortcut:** Skip baking and freeze the crust while you make the filling.',stepImages:['images/recipes/chocolate-cream-comfort-pie/step-01-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-01-03.jpg']},
       {number:'02',title:'MAKE IT GLOSSY',clock:'12:20 AM',paragraphs:[
-        'In a saucepan, whisk {{qty:CHOCOLATE FILLING::Granulated Sugar}} sugar, {{qty:CHOCOLATE FILLING::Cornstarch}} cornstarch, {{qty:CHOCOLATE FILLING::Unsweetened cocoa powder}} cocoa powder, {{qty:CHOCOLATE FILLING::Espresso powder}} espresso powder, and {{qty:CHOCOLATE FILLING::Salt}} salt.',
+        'In a saucepan, whisk {{qty:CHOCOLATE FILLING::Granulated sugar}} sugar, {{qty:CHOCOLATE FILLING::Cornstarch}} cornstarch, {{qty:CHOCOLATE FILLING::Unsweetened cocoa powder}} cocoa powder, {{qty:CHOCOLATE FILLING::Espresso powder}} espresso powder, and {{qty:CHOCOLATE FILLING::Salt}} salt.',
         'Slowly pour in {{qty:CHOCOLATE FILLING::Whole milk}} whole milk, whisking thoroughly until completely smooth before turning on the heat.',
         'Cook over medium heat, whisking constantly until the mixture bubbles and thickens into a pudding-like consistency.',
         'Remove the pan from the heat.'
@@ -694,7 +694,21 @@ Don\'t over-sweeten it. The sweet potato provides natural sweetness, while cryst
     densityOverrides:{'all purpose flour|cup':120,'cold unsalted butter cubed|cup':113},
     stepQuantityConversion:true,
     usCupFractions:true,
-    ingredientFile:[],
+    ingredientFile: [
+  { name: 'ALL-PURPOSE FLOUR',
+    tag: 'THE PASTRY FOUNDATION',
+    details: [['FLAVOR', 'Neutral, versatile, and forms the structural network of the flaky layers.'],
+      ['WHY HERE', 'Provides the ideal balance of protein to build a tender yet sturdy crust.'],
+      ['SUBSTITUTE', 'The same amount of pastry flour for a more tender crumb, though all-purpose flour is the most reliable for holding shapes like pie edges.']]
+  },
+  {
+    name: 'COLD UNSALTED BUTTER',
+    tag: 'THE FLAKY MAGIC',
+    details: [['FLAVOR', 'Rich, buttery, and aromatic.'],
+      ['WHY HERE', 'As cold butter melts in the oven, water evaporates to create steam pockets, resulting in those classic flaky layers.'],
+      ['TIPS', 'Always keep your butter cold. If it gets too warm during mixing, chill the dough before rolling.']]
+  }
+],
     ingredients:[
       {amount:360,unit:'g',imperialAmount:3,imperialUnit:'cup',item:'All-purpose flour'},
       {amount:226,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Cold unsalted butter, cubed'},
@@ -1893,7 +1907,20 @@ It works beautifully with grilled meats, burgers, sandwiches, fries, and just ab
 Keep a jar in the fridge, and you're always ready.`,
   heroImage:'images/recipes/cowboy-bbq-sauce/hero.jpg',
   recipeImage:'images/recipes/cowboy-bbq-sauce/recipe.jpg',
-  ingredientFile:[],
+  ingredientFile: [
+  { name: 'APPLE CIDER VINEGAR',
+    tag: 'THE TANGY KICK',
+    details: [['FLAVOR', 'Bright, sharp, and fruity.'],
+      ['WHY HERE', 'Cuts through the rich sweetness of ketchup and brown sugar, giving the BBQ sauce its signature tang.'],
+      ['SUBSTITUTE', 'White wine vinegar or regular distilled white vinegar, though the flavor will be slightly less fruity.']]
+  },
+  { name: 'MOLASSES',
+    tag: 'THE SMOKY DEPTH',
+    details: [['FLAVOR', 'Deep, dark, bittersweet, and rich.'],
+      ['WHY HERE', 'Works alongside brown sugar to mimic authentic, slow-simmered BBQ depth and dark caramel notes.'],
+      ['SUBSTITUTE', 'The same amount of dark corn syrup or brown sugar, though you will lose that distinct molasses richness.']]
+  }
+],
   ingredients:[
     {
       item:'Ketchup',amount:204,unit:'g',imperialAmount:0.75,imperialUnit:'cup'
