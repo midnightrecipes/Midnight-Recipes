@@ -20,9 +20,11 @@ window.MIDNIGHT_RECIPES = [
     scaleMinimums:{'salt|pinch':1},
     fixedStepPhotoCells:true,
     storyQuote:'“You know what I like about cooking? I love that after a day when nothing is sure, and when I say nothing I mean nothing, you can come home and absolutely know that if you add egg yolks to chocolate and sugar and milk, it will get thick. It’s such a comfort.”',
-    story:`*Reine de Saba* (chocolate cake with sliced almonds) might be the most famous dessert from *Julie & Julia*, but honestly, Julie’s whole emotional breakdown over making a chocolate cream pie is what totally spoke to me. No matter how messy or exhausting the day gets, the kitchen is always my favorite place to unwind.
+    story:`This homemade chocolate cream pie features a rich, silky dark chocolate custard filling made with real chocolate, cocoa powder, and a hint of espresso, all nestled in a crisp graham cracker crust.
 
-It’s kind of funny, but the more tire I am, the more I actually want to bake late at night. There’s just something so comforting about tuning everything out and focusing on simple things—whisking milk, watching chocolate slowly melt, and just letting the night quiet down. Tonight, this pie was exactly what I needed. Rich, super chocolatey, and pure comfort in every bite.
+Inspired by *Julie & Julia*, this pie is more than just a dessert. *Reine de Saba* (chocolate cake with sliced almonds) might be the most famous dessert from the film, but honestly, Julie’s whole emotional breakdown over making a chocolate cream pie is what totally spoke to me. No matter how messy or exhausting the day gets, the kitchen is always my favorite place to unwind.
+
+It’s kind of funny, but the more tired I am, the more I actually want to bake late at night. There’s just something so comforting about tuning everything out and focusing on simple things—whisking milk, watching chocolate slowly melt, and just letting the night quiet down. Tonight, this pie was exactly what I needed. Rich, super chocolatey, and pure comfort in every bite.
 
 The real secret here... Just use a dark chocolate that you’d happily eat straight out of the wrapper. It gives you this incredibly smooth, rich filling that isn't crazy sweet. Plus, it’s one of those desserts people always get excited about—seeing friends take that first bite and smile makes all the late-night whisking 100% worth it!`,
     ingredientFile: [
