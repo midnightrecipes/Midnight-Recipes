@@ -135,7 +135,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
     categories:['Main Dishes'],
     dateAdded:'2026-09-27',
     timeStamp:'11:14 PM',
-    description:'A fiery Nagoya-inspired Taiwan mince served over rice with a soft-boiled egg.',
+    description:'Recreating Nagoya’s famous Misen Taiwan Ramen mince at home. Fiery, garlic-packed ground pork over hot rice with a runny soft-boiled egg.',
     heroImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg', recipeImage:'images/recipes/addictive-spicy-taiwan-ground-pork/recipe.jpg',
     unitOverrides:{imperial:{'sesame oil':'tbsp','soy sauce':'tbsp','Shaoxing wine':'tbsp','doubanjiang':'tbsp','sugar':'tsp'}},
     stepQuantityConversion:true,
@@ -276,7 +276,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
     categories:['Desserts'],
     dateAdded:'2026-09-27',
     timeStamp:'11:20 PM',
-    description:'Apple crème brûlée inspired by Amélie (2001), with soft tart apples beneath silky custard and brittle caramel.',
+    description:'An Amélie-inspired French crème brûlée hiding tender cinnamon apples beneath a silky custard and brittle caramelized sugar top.',
     heroImage:'images/recipes/apple-creme-brulee/hero.jpg', recipeImage:'images/recipes/apple-creme-brulee/recipe.jpg',
     unitOverrides:{metric:{'apples':'g','unsalted butter':'g','brown sugar':'g','lemon juice':'ml','ground cinnamon':'g','whole milk':'ml','35% whipping cream':'ml','granulated sugar':'g','granulated sugar, for brûlée':'g','vanilla extract':'ml'},imperial:{'apples':'cup','unsalted butter':'tbsp','brown sugar':'tbsp','lemon juice':'tbsp','granulated sugar':'tbsp','ground cinnamon':'tsp','vanilla extract':'tsp'}},
     integerUnits:{metric:['apples','unsalted butter','brown sugar','lemon juice','ground cinnamon','whole milk','35% whipping cream','granulated sugar','vanilla extract','granulated sugar, for brûlée','granulated sugar for br l e']},
@@ -387,7 +387,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
 
   {
     slug:'mexican-calabaza-en-tacha-pumpkin-pie',
-    title:'Mexican (Calabaza en Tacha) Pumpkin Pie', description:'Inspired by Coco and Día de Muertos, this pumpkin pie reimagines calabaza en tacha with warm spices and the comforting flavors of a traditional Mexican seasonal sweet.',
+    title:'Mexican (Calabaza en Tacha) Pumpkin Pie', description:'Inspired by Coco, this Mexican-style pumpkin pie reimagines calabaza en tacha with whole-spice infused cream and a rich piloncillo-style glaze.',
     source:'Movie & TV', sourceSecondary:'Family & Tradition', original:'Coco (2017)', dish:'Calabaza en Tacha-inspired Pumpkin Pie', cuisine:'Mexican',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'],
     dateAdded:'2026-09-27', timeStamp:'11:48 PM',
@@ -460,7 +460,7 @@ Tonight, I wanted to create something a little different from a standard pumpkin
     
   },
   {
-    slug:'banana-banana-cream-pie', title:'Banana Banana Cream Pie', description:'Made for seriously banana-y flavor, this cream pie uses very ripe bananas cooked down into a sweet, concentrated filling beneath a smooth custard.', source:'Midnight Experiment', dish:'Banana Cream Pie', cuisine:'American',
+    slug:'banana-banana-cream-pie', title:'Banana Banana Cream Pie', description:'Unapologetically banana-y! Overripe bananas cooked down into a rich, caramel-like custard inside a custom spiced biscuit crust.', source:'Midnight Experiment', dish:'Banana Cream Pie', cuisine:'American',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-27', timeStamp:'2:55 AM',
     tags:['Dessert','Baking','Banana','Pie'], heroImage:'images/recipes/banana-banana-cream-pie/hero.jpg', recipeImage:'images/recipes/banana-banana-cream-pie/recipe.jpg',
     unitOverrides:{imperial:{'plain biscuits, finely crushed':'cup','unsalted butter, melted':'cup','whole milk':'cup','granulated sugar':'tbsp','cornstarch':'tbsp','35% Whipping Cream':'cup','Granulated Sugar, To Taste':'tbsp'}},
@@ -583,7 +583,7 @@ ingredientFile:[
     mainIngredients:['Banana','Milk','Egg Yolks','Biscuits'], footerInspiredBy:'Midnight Experiment', footerCuisine:'American', footerCourse:'Baking, Desserts', footerMainIngredients:['Banana','Milk','Egg Yolks','Biscuits']
   },
   {
-    slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', description:'Inspired by Chinese sweet potato ginger dessert soup, this silky pie pairs earthy sweet potato with fresh ginger, cinnamon, and a gentle warming spice.', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese', cuisineSecondary:'American',
+    slug:'sweet-potato-ginger-pie', title:'Sweet Potato Ginger Pie', description:'Inspired by Chinese sweet potato ginger soup, this silky pie pairs earthy sweet potato with the bright, warming kick of fresh ginger.', source:'Midnight Experiment', original:'N/A', cuisine:'Chinese', cuisineSecondary:'American',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-27', timeStamp:'11:35 PM',
     tags:['Midnight Experiment','Dessert','Baking','Chinese','American','Sweet Potato','Ginger','Pie'], heroImage:'images/recipes/sweet-potato-ginger-pie/hero.jpg', recipeImage:'images/recipes/sweet-potato-ginger-pie/recipe.jpg', usesUsual:'building-block-pie-crust', usCupFractions:true, forceCupUnits:true, stepQuantityConversion:true,
     story:`This pie is inspired by a traditional Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水), a simple, soothing sweet soup made by simmering sweet potatoes with fresh ginger and sugar in water.
@@ -687,7 +687,7 @@ Don\'t over-sweeten it. The sweet potato provides natural sweetness, while cryst
   {
     slug:'building-block-pie-crust', title:'Building Block Pie Crust', source:'The Usuals', cuisine:'American', course:'Baking', courseDisplay:'Baking', categories:['Baking'], dateAdded:'2026-09-27', timeStamp:'',
     isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...', hideRecipeTags:true,
-    description:'The crust we make when a pie calls for a crust.',
+    description:'Our reliable, buttery go-to pie crust with three flexible baking methods: no pre-bake, partial, and full blind-bake for any pie.',
     usualIntro:`This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust. Nothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.\n\nAt Midnight Recipes, our pies take three different routes: some go into the oven with an unbaked crust (No Pre-Baking), some need a little head start (Partial Blind-Baking), and others need the crust fully baked before the filling goes in (Full Blind-Baking).\n\n**No Pre-Baking** is for pies like Sweet Cherry Pie, where the filling and crust bake together. For a double-crust pie, the second portion of dough becomes the top crust.\n\n**Partial Blind-Baking** gives the crust a head start before the filling goes in. We use this method for pies like [Classic Pumpkin Pie](recipes/recipe.html?slug=classic-pumpkin-pie) and [Sweet Potato Ginger Pie](recipes/recipe.html?slug=sweet-potato-ginger-pie), where the crust needs extra time to bake without overcooking the filling.\n\n**Full Blind-Baking** takes the crust all the way to golden and crisp before the filling is added. This is useful for pies with fillings that are already cooked or don't need to be baked.\n\nThree methods, one dependable crust. Choose the route that suits your pie.\n\nThis recipe makes enough for one double-crust pie, or two single-crust pies. If you only need a bottom crust, use half and freeze the rest. Or make the full batch anyway. Future-you might be grateful when the midnight urge to bake strikes.`,
     heroImage:'images/recipes/building-block-pie-crust/hero.jpg', recipeImage:'images/recipes/building-block-pie-crust/recipe.jpg',
     unitOverrides:{imperial:{'all-purpose flour':'cup','cold unsalted butter, cubed':'cup','salt':'tsp'},metric:{'cold water':'ml'}},
@@ -772,7 +772,7 @@ Don\'t over-sweeten it. The sweet potato provides natural sweetness, while cryst
   {
     slug:'fun-key-lime-pie', title:'Fun(Key) Lime Pie', source:'Grocery Store Find', original:'', dish:'Lime Pie', cuisine:'American', dateAdded:'2026-10-08',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], timeStamp:'11:20 PM',
-    description:'A Key Lime Pie-inspired pie made with the limes you can actually find.',
+    description:'A brilliant (Key) Lime Pie alternative made with easy-to-find Persian limes, extra zest, sour cream, and a fluffy toasted meringue.',
     story:`Key Lime Pie is everywhere in Toronto. I kept seeing it in grocery store freezer sections and bakery display cases, almost as if it were just another everyday dessert.
 
 One night, I decided to make one myself and went looking for actual Key limes. 
@@ -920,7 +920,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
     categories:['Soups'], mainIngredients:['Chicken','Coconut Milk','Galangal','Lemongrass','Mushrooms'],
     dateAdded:'2026-10-08',
     timeStamp:'11:21 PM',
-    description:'A Thai coconut chicken soup with galangal (kha), lemongrass, makrut lime leaves, fresh lime, and gentle chili heat—my late-night attempt to see if it deserved its reputation.',
+    description:'TasteAtlas’s top chicken soup tested! A velvety Thai coconut broth infused with galangal, lemongrass, makrut lime, and gentle chili heat.',
     story:`TasteAtlas had ranked Tom Kha Gai #1 on its list of the world’s best chicken soups. I was already familiar with Tom Yum, but somehow Tom Kha Gai had always stayed in the background for me.
 
 It sounded like a dream combination: creamy coconut milk, the bright citrus of makrut lime leaf and lemongrass, fresh lime acidity, and the gentle heat and peppery bite of chilies and galangal.
@@ -1048,7 +1048,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
     categories:['Main Dishes'],
     dateAdded:'2026-10-08',
     timeStamp:'10:15 PM',
-    description:'Inspired by sweet chili sauce and crushed peanuts served with Thai fish cakes, this chicken brings together sweet, tangy, spicy, and nutty flavors in a quick homemade dish.',
+    description:'Crisp chicken thighs tossed in a homemade sweet chili, peanut butter, and garlic sauce inspired by street food in Thailand.',
     story:`I first fell in love with the combination of sweet chili sauce and peanuts in Thailand. They were served alongside crispy Thai fish cakes (Tod Mun Pla), and honestly, I think I enjoyed the sauce just as much as the fish cakes, if not more.
 
 It was sweet, tangy, a little spicy, and had that nice crunch from the crushed peanuts. Such a simple combination, but I couldn't stop thinking about it even after I got back home.
@@ -1168,7 +1168,7 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
 {
   slug: 'moms-hamburg-steak',
   title: 'Mom’s Hamburg Steak',
-  description: 'A Japanese-style hamburg steak inspired by my mom’s cooking, served with a rich, sweet-tangy sauce that brings back the comforting taste of home.',
+  description: 'Japanese-style yoshoku comfort food. Juicy beef and pork patties coated in a rich, sweet-tangy homemade demi-glace sauce.',
   source: 'Memory',
   dish: 'Japanese Hamburg Steak',
   cuisine: 'Japanese',
@@ -1358,7 +1358,7 @@ The patty is soft and bouncy, with a golden crust on the outside and plenty of j
   {
     slug: 'silky-cheesecake',
     title: 'Silky Cheesecake',
-    description: 'Inspired by a memorable moment in Haruki Murakami’s Norwegian Wood, this silky cheesecake reflects on comfort, love, and the small things food can say.',
+    description: 'Inspired by Haruki Murakami’s Norwegian Wood, this smooth, custard-like cheesecake balances rich cream cheese with a gentle sour cream tang.',
     source: 'Book',
     original: 'Norwegian Wood (1987) by Haruki Murakami',
     dish: 'Cheesecake',
@@ -1508,7 +1508,7 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
   {
     slug: 'classic-pumpkin-pie',
     title: 'Classic Pumpkin Pie',
-    description: 'My take on a Canadian Thanksgiving classic, with silky pumpkin filling and a warm blend of cinnamon, cloves, and nutmeg—especially comforting on a quiet autumn night.',
+    description: 'A Canadian Thanksgiving classic featuring a silky pumpkin filling and a custom warm autumn spice blend baked in a flaky butter crust.',
     source: 'Family & Tradition',
     dish: 'Pumpkin Pie',
     cuisine: 'Canadian',
@@ -1644,7 +1644,7 @@ details: [
   {
   slug: 'khai-yat-sai',
   title: 'Khai Yat Sai (Thai Stuffed Omelette)',
-  description: 'Discover Khai Yat Sai, a Thai stuffed omelette filled with savoury ground pork, tomato and onion, wrapped in a thin, soft egg sheet and finished with fresh cilantro and crushed peanuts.',
+  description: 'A traditional Thai stuffed omelette wrapping savoury ground pork, tomato, and onion in a soft egg sheet with crushed peanuts.',
   source: 'Family & Tradition',
   dish: 'Khai Yat Sai/ไข่ยัดไส้ ',
   cuisine: 'Thai',
@@ -1900,7 +1900,7 @@ tags: [
 {
   slug:'cowboy-bbq-sauce', title:'Cowboy BBQ Sauce', source:'The Usuals', cuisine:'American', course:'Sides', courseDisplay:'Sides', categories:['Sides'], dateAdded:'2026-11-04', timeStamp:'11:58 PM',
   isUsuals:true,usualsCategory:'SAUCES & DRESSINGS', foundInIntro:'Recipes that use this sauce...', hideRecipeTags:true,stepQuantityConversion:true,
-  description:'A smoky, tangy-sweet BBQ sauce we keep coming back to.',
+  description:'A quick, smoky, and tangy-sweet homemade BBQ sauce powered by apple cider vinegar, brown sugar, molasses, and smoked paprika.',
   usualIntro:`A go-to BBQ sauce we keep coming back to whenever we need a quick batch. Apple cider vinegar brings a bright tang, while brown sugar and molasses add a gentle sweetness. Smoked paprika and cumin give it a warm, smoky depth.
   
 It works beautifully with grilled meats, burgers, sandwiches, fries, and just about anything that could use a little BBQ goodness.
