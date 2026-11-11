@@ -387,8 +387,8 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
 
   {
     slug:'calabaza-en-tacha-inspired-mexican-pumpkin-pie',
-    title:'Mexican Pumpkin Pie', description:'Inspired by Coco, this Mexican-style pumpkin pie reimagines calabaza en tacha with whole-spice infused cream and a rich piloncillo-style glaze.',
-    source:'Movie & TV', sourceSecondary:'Family & Tradition', original:'Coco (2017)', dish:'Calabaza en Tacha-inspired Pumpkin Pie', cuisine:'Mexican',
+    title:'Calabaza en Tacha Inspired Mexican Pumpkin Pie', description:'Inspired by Coco, this Mexican-style pumpkin pie reimagines calabaza en tacha with whole-spice infused cream and a rich piloncillo-style glaze.',
+    source:'Movie & TV', sourceSecondary:'Family & Tradition', original:'Coco (2017)', dish:'Mexican Pumpkin Pie', cuisine:'Mexican',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'],
     dateAdded:'2026-09-27', timeStamp:'11:48 PM',
     usCupFractions:true, stepQuantityConversion:true,
@@ -981,22 +981,22 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
       {group:'CHICKEN & COCONUT BASE'},
       {amount:227,unit:'g',imperialAmount:0.5,imperialUnit:'lb',item:'Chicken thighs, boneless, skinless'},
       {amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Mushrooms'},
-      {amount:400,unit:'ml',imperialAmount:5/3,imperialUnit:'cup',item:'Coconut Milk'},
-      {amount:240,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'Water or Chicken Stock'},
+      {amount:400,unit:'ml',imperialAmount:5/3,imperialUnit:'cup',item:'Coconut milk'},
+      {amount:240,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'Water or chicken stock'},
       {group:'AROMATICS'},
-      {amount:30,unit:'g',imperialMinAmount:10,imperialMaxAmount:12,imperialMinUnit:'slices',imperialMaxUnit:'slices',item:'Galangal, Thinly Sliced',compactRange:true},
-      {minAmount:1,maxAmount:2,unit:'stalks',imperialMinAmount:1,imperialMaxAmount:2,imperialMinUnit:'stalks',imperialMaxUnit:'stalks',item:'Lemongrass, Bruised and Cut Into Pieces',compactRange:true},
-      {minAmount:4,maxAmount:5,unit:'leaves',imperialMinAmount:4,imperialMaxAmount:5,imperialMinUnit:'leaves',imperialMaxUnit:'leaves',item:'Makrut Lime Leaves, Rehydrated if Dried',compactRange:true},
-      {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Onion, Sliced'},
-      {amount:1,unit:'clove',imperialAmount:1,imperialUnit:'clove',item:'Garlic, Lightly Crushed'},
-      {minAmount:2,maxAmount:4,unit:'',imperialMinAmount:2,imperialMaxAmount:4,imperialMinUnit:'',imperialMaxUnit:'',item:'Fresh Chilies, Lightly Crushed',compactRange:true},
+      {amount:30,unit:'g',imperialMinAmount:10,imperialMaxAmount:12,imperialMinUnit:'slices',imperialMaxUnit:'slices',item:'Galangal, thinly sliced',compactRange:true},
+      {minAmount:1,maxAmount:2,unit:'stalks',imperialMinAmount:1,imperialMaxAmount:2,imperialMinUnit:'stalks',imperialMaxUnit:'stalks',item:'Lemongrass, bruised and cut into pieces',compactRange:true},
+      {minAmount:4,maxAmount:5,unit:'leaves',imperialMinAmount:4,imperialMaxAmount:5,imperialMinUnit:'leaves',imperialMaxUnit:'leaves',item:'Makrut lime leaves, rehydrated if dried',compactRange:true},
+      {amount:,unit:'55-85g',imperialAmount:0.5,imperialUnit:'medium',item:'Onion, sliced'},
+      {amount:5,unit:'g',imperialAmount:1,imperialUnit:'clove',item:'Garlic, lightly crushed'},
+      {minAmount:2,maxAmount:4,unit:'',imperialMinAmount:2,imperialMaxAmount:4,imperialMinUnit:'',imperialMaxUnit:'',item:'Fresh chilies, lightly crushed',compactRange:true},
       {group:'SEASONING'},
-      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Fish Sauce'},
-      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Fresh Lime Juice'},
-      {amount:4,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Palm Sugar or Granulated Sugar'},
+      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Fish sauce'},
+      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Fresh lime juice'},
+      {amount:4,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Palm sugar or granulated sugar'},
       {minAmount:2,maxAmount:3,unit:'g',imperialMinAmount:0.25,imperialMaxAmount:0.5,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',item:'Salt',compactRange:true},
       {group:'TOPPING (optional)'},
-      {unit:'',item:'Cilantro'}
+      {unit:'',item:'Fresh cilantro'}
     ],
     stats:{prep:'10 mins',cook:'20 mins',total:'30 mins',serves:'2–3',quiet:'⭐⭐⭐⭐☆'},
     steps:[
@@ -1698,40 +1698,31 @@ It's simple, satisfying, and a lovely reminder that a little creativity with eve
     },
     {
       item: 'Ground pork (regular)',
-      amount: 454,
-      unit: 'g',
-      imperialAmount: 1,
-      imperialUnit: 'lb'
+      amount: 454,unit: 'g',
+      imperialAmount: 1,imperialUnit: 'lb'
     },
-    {amount:110-150,unit:'g',imperialAmount:1,imperialUnit:'medium',item:'Onion, finely diced'},
+    {amount:110 - 150,unit:'g',imperialAmount:1,imperialUnit:'medium',item:'Onion, finely diced'},
     {
       item: 'Tomato, finely diced',
-      amount: 110,
-      unit: 'g',
-      imperialAmount: 1,
-      imperialUnit: 'medium'
+      amount: 110,unit: 'g',
+      imperialAmount: 1,imperialUnit: 'medium'
     },
         {
       item: 'Garlic, minced',
-      amount: 10,
-      unit: 'g',
-      imperialAmount: 2,
-      imperialUnit: 'cloves'
+      amount: 10,unit: 'g',
+      imperialAmount: 2,imperialUnit: 'cloves'
     },
     {
       item: 'Fish sauce',
-      amount: 1,
-      unit: 'tbsp'
+      amount: 1,unit: 'tbsp'
     },
     {
       item: 'Oyster sauce',
-      amount: 1,
-      unit: 'tbsp'
+      amount: 1,unit: 'tbsp'
     },
     {
       item: 'Granulated sugar',
-      amount: 2,
-      unit: 'tsp'
+      amount: 2,unit: 'tsp'
     },
     {
       item: 'Neutral oil, for greasing the pan',
@@ -1749,14 +1740,12 @@ It's simple, satisfying, and a lovely reminder that a little creativity with eve
       group: 'OMELETTE'
     },
     {
-      item: 'Large eggs',
-      amount: 8,
-      unit: ''
+      item: 'Eggs',
+      amount:400,unit: 'g',imperialAmount: 8,imperialUnit: 'large'
     },
     {
       item: 'Water (optional)',
-      amount: 1,
-      unit: 'tbsp'
+      amount: 1,unit: 'tbsp'
     },
     {
       item: 'Neutral oil, for greasing the pan',
@@ -1816,7 +1805,7 @@ It's simple, satisfying, and a lovely reminder that a little creativity with eve
       ],
       paragraphs: [
         'This recipe makes {{divide:Omelette::Large Eggs/2}} individual omelettes. Cook them one at a time, using 2 eggs for each omelette in an 8 inch / 20 cm frying pane.',
-        'Beat {{qty:Omelette::Large Eggs}} eggs in a bowl. Add {{qty:Omelette::Water (optional)}} water if you prefer a slightly softer texture.',
+        'Beat {{qty:Omelette::Eggs}} eggs in a bowl. Add {{qty:Omelette::Water (optional)}} water if you prefer a slightly softer texture.',
         'Lightly grease an 8 inch / 20 cm non-stick frying pan with oil. Heat over medium-low heat.',
         'Pour in the eggs and gently swirl the pan to create a thin, even layer.',
         'Cook until the bottom is set and the surface is just beginning to set but still soft. Turn off the heat. Avoid browning the egg.',
