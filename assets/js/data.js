@@ -987,7 +987,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
       {amount:30,unit:'g',imperialMinAmount:10,imperialMaxAmount:12,imperialMinUnit:'slices',imperialMaxUnit:'slices',item:'Galangal, thinly sliced',compactRange:true},
       {minAmount:1,maxAmount:2,unit:'stalks',imperialMinAmount:1,imperialMaxAmount:2,imperialMinUnit:'stalks',imperialMaxUnit:'stalks',item:'Lemongrass, bruised and cut into pieces',compactRange:true},
       {minAmount:4,maxAmount:5,unit:'leaves',imperialMinAmount:4,imperialMaxAmount:5,imperialMinUnit:'leaves',imperialMaxUnit:'leaves',item:'Makrut lime leaves, rehydrated if dried',compactRange:true},
-      {amount:,unit:'55-85g',imperialAmount:0.5,imperialUnit:'medium',item:'Onion, sliced'},
+      {amount:55 - 85,unit:'g',imperialAmount:0.5,imperialUnit:'medium',item:'Onion, sliced'},
       {amount:5,unit:'g',imperialAmount:1,imperialUnit:'clove',item:'Garlic, lightly crushed'},
       {minAmount:2,maxAmount:4,unit:'',imperialMinAmount:2,imperialMaxAmount:4,imperialMinUnit:'',imperialMaxUnit:'',item:'Fresh chilies, lightly crushed',compactRange:true},
       {group:'SEASONING'},
