@@ -14,39 +14,4 @@
 })();
 </script>
 </head>
-<body data-depth="1" data-page="recipe"><script src="../assets/js/shell.js"></script><main class="page" id="app"></main><script>
-(function(){
-  var app=document.getElementById('app');
-  if(!app)return;
-
-  function watchFooter(){
-    var footer=document.querySelector('.site-footer');
-    if(!footer)return false;
-
-    footer.style.visibility='hidden';
-
-    function reveal(){
-      if(!app.firstElementChild)return false;
-      footer.style.visibility='visible';
-      return true;
-    }
-
-    if(reveal())return true;
-
-    var appObserver=new MutationObserver(function(){
-      if(reveal())appObserver.disconnect();
-    });
-
-    appObserver.observe(app,{childList:true});
-    return true;
-  }
-
-  if(watchFooter())return;
-
-  var footerObserver=new MutationObserver(function(){
-    if(watchFooter())footerObserver.disconnect();
-  });
-
-  footerObserver.observe(document.body,{childList:true,subtree:true});
-})();
-</script><script src="../assets/js/data.js"></script><script src="../assets/js/app.js"></script></body></html>
+<body data-depth="1" data-page="recipe"><script src="../assets/js/shell.js"></script><main class="page" id="app"></main><script src="../assets/js/data.js"></script><script src="../assets/js/app.js"></script></body></html>
