@@ -2204,6 +2204,9 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
           'Remove the cake from the oven and allow it to cool in the pan.',
           'Once completely cooled, carefully remove it from the pan.',
           'Slice with a sharp knife and serve.'
+        ],
+         stepImages:[
+          'images/recipes/lumberjack-cake/step-07-01.jpg'
         ]
       }
     ],
