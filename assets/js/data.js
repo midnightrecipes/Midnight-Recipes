@@ -2124,7 +2124,7 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
         title:'GET STARTED',
         clock:'10:20 PM',
         paragraphs:[
-          'Preheat your oven to 350°F/175°C. Line an 8 inch/20 cm square baking pan with parchment paper.',
+          'Preheat your oven to 350°F / 175°C. Line an 8 inch / 20 cm square baking pan with parchment paper.',
           'Peel and core {{qty:Apples, Peeled and Cored}} apples, then cut them into small 5–8 mm cubes.',
           'Finely chop {{qty:Pitted Dates, Chopped}} pitted dates.'
         ]
@@ -2163,7 +2163,7 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
         clock:'10:40 PM',
         paragraphs:[
           'Pour the batter into the prepared cake pan and smooth the surface.',
-          'Bake at 350°F/175°C for approximately 35–45 minutes, until the surface is set enough to support the topping.',
+          'Bake at 350°F / 175°C for approximately 35–45 minutes, until the surface is set enough to support the topping.',
           'The cake should not necessarily be fully baked at this stage.'
         ],
         stepImages:['images/recipes/lumberjack-cake/step-04-01.jpg']
