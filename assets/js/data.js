@@ -2049,70 +2049,48 @@ And perhaps this is where a comforting cake comes in!
 
 With its soft, buttery crumb, sweet apples and dates, and golden caramelized coconut topping, Lumberjack Cake is just the kind of treat to enjoy when you finally give yourself some time to slow down.
 So, why not put that axe down for a little while, head into the kitchen, and make yourself something delicious tonight?`,
-   ingredientFile: [
-    {
-      name: 'APPLES',
-      tag: 'THE FRUIT FOUNDATION',
-      details: [
-        ['FLAVOR', 'Sweet-tart and fruity, adding freshness and moisture to the cake.'],
-        ['BEST CHOICE', 'Firm apples that hold their shape during baking, such as Honeycrisp, Gala, or Granny Smith.'],
-        [
-          'WHY HERE',
-          'Apples add moisture and a gentle fruity flavor, balancing the sweetness of the dates and rich coconut topping.'
-        ],
-        [
-          'PREPARATION & SIZE TIP',
-          'Peel, core, and cut into small, even 5–8 mm cubes. Avoid chopping them too finely; if the pieces are cut too small, they tend to melt down into the batter and you lose that pleasant apple texture in every bite.'
-        ],
-        [
-          'SUBSTITUTE',
-          'Pears can be used for a softer, milder flavor. Choose firm pears and cut them into similar-sized pieces.'
+    ingredientFile: [
+      {
+        name: 'APPLES',
+        tag: 'THE FRUIT FOUNDATION',
+        details: [
+          ['FLAVOR', 'Sweet-tart and fruity, adding freshness and moisture to the cake.'],
+          ['BEST CHOICE', 'Firm apples that hold their shape during baking, such as Honeycrisp, Gala, or Granny Smith.'],
+          ['WHY HERE', 'Apples add moisture and a gentle fruity flavor, balancing the sweetness of the dates and rich coconut topping.'],
+          ['PREPARATION & SIZE TIP', 'Peel, core, and cut into small, even 5–8 mm cubes. Avoid chopping them too finely; if the pieces are cut too small, they tend to melt down into the batter and you lose that pleasant apple texture in every bite.'],
+          ['SUBSTITUTE', 'Pears can be used for a softer, milder flavor. Choose firm pears and cut them into similar-sized pieces.']
         ]
-      ]
-    },
-    {
-      name: 'PITTED DATES',
-      tag: 'THE CHEWY SWEETNESS',
-      details: [
-        ['FLAVOR', 'Naturally sweet, rich, and slightly caramel-like, with a soft, chewy texture.'],
-        ['BEST CHOICE', 'Soft, moist, pitted dates such as Medjool or Deglet Noor.'],
-        [
-          'WHY HERE',
-          'Dates add natural sweetness and moisture to the cake, creating a rich, soft texture that pairs beautifully with apples.'
-        ],
-        ['SUBSTITUTE', 'Chopped prunes or dried/semi-dried figs can be used, although the flavor will be slightly different.']
-      ]
-    },
-    {
-      name: 'UNSWEETENED SHREDDED COCONUT',
-      tag: 'THE EDIBLE WOODEN CRISP',
-      details: [
-        ['FLAVOR', 'Mildly sweet, nutty, and tropical, becoming toasted and aromatic when baked.'],
-        [
-          'BEST CHOICE',
-          'Fine, unsweetened dried shredded coconut. Avoid large coconut flakes, which may create a looser, less cohesive topping.'
-        ],
-        [
-          'WHY HERE',
-          'Coconut forms the golden, caramelized topping that gives Lumberjack Cake its signature texture and contrast.'
-        ],
-        [
-          'SUBSTITUTE',
-          'Sweetened shredded coconut can be used, but reduce the added brown sugar slightly. Desiccated coconut may also work, although its finer texture can absorb more liquid.'
+      },
+      {
+        name: 'PITTED DATES',
+        tag: 'THE CHEWY SWEETNESS',
+        details: [
+          ['FLAVOR', 'Naturally sweet, rich, and slightly caramel-like, with a soft, chewy texture.'],
+          ['BEST CHOICE', 'Soft, moist, pitted dates such as Medjool or Deglet Noor.'],
+          ['WHY HERE', 'Dates add natural sweetness and moisture to the cake, creating a rich, soft texture that pairs beautifully with apples.'],
+          ['SUBSTITUTE', 'Chopped prunes or dried/semi-dried figs can be used, although the flavor will be slightly different.']
         ]
-      ]
-    },
-    {
-      name: 'MILK (2% OR WHOLE)',
-      tag: 'THE MOISTURE BUILDER',
-      details: [
-        ['FLAVOR', 'Clean, mild, and milky.'],
-        ['BEST CHOICE', 'Either 2% or whole milk works well. I tested both across multiple batches and did not notice any major performance differences in the crumb structure.'],
-        ['WHY HERE', 'Provides the necessary liquid hydration to bloom the dry ingredients and hydrate the dates without adding unwanted heaviness.'],
-        ['SUBSTITUTE', 'Plant-based milks like unsweetened oat milk or almond milk can work in a pinch, though dairy milk provides the most reliable traditional crumb.']
-      ]
-    }
-  ]
+      },
+      {
+        name: 'UNSWEETENED SHREDDED COCONUT',
+        tag: 'THE EDIBLE WOODEN CRISP',
+        details: [
+          ['FLAVOR', 'Mildly sweet, nutty, and tropical, becoming toasted and aromatic when baked.'],
+          ['BEST CHOICE', 'Fine, unsweetened dried shredded coconut. Avoid large coconut flakes, which may create a looser, less cohesive topping.'],
+          ['WHY HERE', 'Coconut forms the golden, caramelized topping that gives Lumberjack Cake its signature texture and contrast.'],
+          ['SUBSTITUTE', 'Sweetened shredded coconut can be used, but reduce the added brown sugar slightly. Desiccated coconut may also work, although its finer texture can absorb more liquid.']
+        ]
+      },
+      {
+        name: 'MILK (2% OR WHOLE)',
+        tag: 'THE MOISTURE BUILDER',
+        details: [
+          ['FLAVOR', 'Clean, mild, and milky.'],
+          ['BEST CHOICE', 'Either 2% or whole milk works well. I tested both across multiple batches and did not notice any major performance differences in the crumb structure.'],
+          ['WHY HERE', 'Provides the necessary liquid hydration to bloom the dry ingredients and hydrate the dates without adding unwanted heaviness.'],
+          ['SUBSTITUTE', 'Plant-based milks like unsweetened oat milk or almond milk can work in a pinch, though dairy milk provides the most reliable traditional crumb.']
+        ]
+      }
     ],
     ingredients:[
       {amount:200,unit:'g',imperialAmount:5/3,imperialUnit:'cup',item:'All-purpose flour'},
@@ -2245,24 +2223,14 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
       'MAKE AHEAD':'Yes. Bake a day ahead if desired. Allow the cake to cool completely before storing.',
       'STORAGE':'Store in an airtight container at room temperature for up to 2 days, or refrigerate for up to 5 days.',
       'FREEZER':'Freeze individual slices in an airtight container for up to 2 months. Thaw overnight in the refrigerator.',
-      'REHEAT':'Warm individual slices in a 300°F/150°C oven for 5–8 minutes or microwave briefly until warmed through. Avoid overheating to keep the coconut topping from becoming too dry.'
+      'REHEAT':'Warm individual slices in a 300°F/150°C oven for 5–8 minutes or microwave briefly until warmed through. Overheating can dry out the coconut topping.'
     },
     tags:[
-      'Australian',
-      'New Zealand',
-      'Kiwi',
-      'Cake',
-      'Apple',
-      'Dates',
-      'Coconut',
-      'Brown Sugar',
-      'Baking',
-      'Dessert',
-      'Afternoon Tea'
+      'Australian', 'New Zealand', 'Kiwi', 'Cake', 'Apple', 'Dates', 'Coconut', 'Brown Sugar', 'Baking', 'Dessert', 'Afternoon Tea'
     ],
     mainIngredients:['Apples','Dates','Coconut','Brown Sugar','Butter'],
     usualsCategory:''
-  },
+  }
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
 window.MIDNIGHT_COURSES = ['Breakfast & Brunch','Appetizers','Snacks','Soups','Salads','Main Dishes','Sides','Baking','Desserts'];
