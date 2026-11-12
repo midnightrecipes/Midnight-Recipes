@@ -736,7 +736,7 @@ Don\'t over-sweeten it. The sweet potato provides natural sweetness, while cryst
       ]},
       {number:'',title:'OPTION B — PARTIAL BLIND-BAKE',clock:'',paragraphs:[
         '**For pies that need a head start**, such as Classic Pumpkin Pie and Sweet Potato Ginger Pie.',
-        'Preheat the oven to 175°C / 350°F, unless the individual pie recipe specifies otherwise.',
+        'Preheat your oven to 175°C / 350°F, unless the individual pie recipe specifies otherwise.',
         'Line the chilled crust with parchment paper, pressing it gently into the base and sides. Fill with pie weights or dried beans, distributing them evenly to support the sides as well as the base.',
         'Bake for about 15–20 minutes, until the edges are set and the pastry no longer looks raw. Carefully remove the parchment and weights.',
         'Prick the base several times with a fork, then return the crust to the oven for another 5–10 minutes. The base should look dry and set, but it does not need to be fully browned.',
@@ -745,7 +745,7 @@ Don\'t over-sweeten it. The sweet potato provides natural sweetness, while cryst
       ]},
       {number:'',title:'OPTION C — FULL BLIND-BAKE',clock:'',paragraphs:[
         '**For pies with cooked or no-bake fillings** that will not go back into the oven.',
-        'Preheat the oven to 175°C / 350°F, unless the filling recipe specifies otherwise.',
+        'Preheat your oven to 175°C / 350°F, unless the filling recipe specifies otherwise.',
         'Line the chilled crust with parchment paper and fill with pie weights or dried beans. Bake for about 15–20 minutes, until the edges are set and the pastry no longer looks raw.',
         'Carefully remove the parchment and weights. Prick the base several times with a fork, then return the crust to the oven for another 15–25 minutes, checking regularly, until the base is dry and the pastry is evenly golden.',
         'The total baking time will vary depending on your oven and pie dish, so look for the finished texture and colour rather than relying on the clock alone. Cool completely before adding the filling.'
@@ -2124,7 +2124,7 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
         title:'GET STARTED',
         clock:'10:20 PM',
         paragraphs:[
-          'Preheat the oven to 350°F/175°C. Line an 8 inch/20 cm square baking pan with parchment paper.',
+          'Preheat your oven to 350°F/175°C. Line an 8 inch/20 cm square baking pan with parchment paper.',
           'Peel and core {{qty:Apples, Peeled and Cored}} apples, then cut them into small 5–8 mm cubes.',
           'Finely chop {{qty:Pitted Dates, Chopped}} pitted dates.'
         ]
