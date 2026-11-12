@@ -2013,7 +2013,7 @@ Keep a jar in the fridge, and you're always ready.`,
     slug:'lumberjack-cake',
     title:'Lumberjack Cake',
     source:'Book',
-    original:'The 7 Habits of Highly Effective People (1989) by Stephen Richards Covey',
+    original:'The 7 Habits of Highly Effective People', '(1989) by Stephen Richards Covey',
     originalUrl:'https://www.franklincovey.com/courses/the-7-habits/',
     cuisine:'Australian',
     cuisineSecondary:'New Zealand',
@@ -2115,24 +2115,24 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
       cook:'55–75 mins',
       chill:'1 hrs+',
       total:'2 hr 20 mins+',
-      serves:'8',
+      serves:'8-16',
       pan:'8 inch / 20 cm square baking pan',
       quiet:'⭐⭐⭐⭐☆'
     },
     steps:[
       {
         number:'01',
-        title:'Prepare the Ingredients',
+        title:'GET STARTED',
         clock:'10:20 PM',
         paragraphs:[
-          'Preheat the oven to 350°F /175°C. Line an 8 inch (20 cm) square baking pan with parchment paper.',
+          'Preheat the oven to 350°F/175°C. Line an 8 inch/20 cm square baking pan with parchment paper.',
           'Peel and core {{qty:Apples, Peeled and Cored}} apples, then cut them into small 5–8 mm cubes.',
           'Finely chop {{qty:Pitted Dates, Chopped}} pitted dates.'
         ]
       },
       {
         number:'02',
-        title:'Soften the Dates',
+        title:'SOAK THE LOGS',
         clock:'10:25 PM',
         paragraphs:[
           'Place the chopped dates and the diced apples in a heatproof bowl and sprinkle with {{qty:Baking Soda}} baking soda.',
@@ -2143,10 +2143,10 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
       },
       {
         number:'03',
-        title:'Make the Batter',
+        title:'BUILD THE CAMP',
         clock:'10:30 PM',
         paragraphs:[
-          'In a large bowl, cream the softened butter and granulated sugar until light and fluffy.',
+          'In a large bowl, cream {{qty:Unsalted butter}} softened butter and {{qty:Granulated sugar}} granulated sugar until light and fluffy.',
           'Add {{qty:Egg}} egg and {{qty:Vanilla Extract}} vanilla extract. Mix until combined.',
           'Stir in the warm date and apple mixture.',
           'Add {{qty:All-Purpose Flour}} flour and {{qty:Salt}} salt. Fold gently until no dry flour remains.'
@@ -2160,7 +2160,7 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
       },
       {
         number:'04',
-        title:'Partially Bake the Cake',
+        title:'SHARPEN THE SAW',
         clock:'10:40 PM',
         paragraphs:[
           'Pour the batter into the prepared cake pan and smooth the surface.',
@@ -2171,7 +2171,7 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
       },
       {
         number:'05',
-        title:'Prepare the Wood Shavings',
+        title:'GATHER THE  WOOD SHAVIGS',
         clock:'10:45 PM',
         paragraphs:[
           'Combine {{qty:WOOD SHAVINGS TOPPING::Unsalted Butter}} butter, {{qty:WOOD SHAVINGS TOPPING::Brown Sugar}} brown sugar, {{qty:WOOD SHAVINGS TOPPING::Milk (2% or whole)}} milk, {{qty:WOOD SHAVINGS TOPPING::Unsweetened Shredded Coconut}} shredded coconut and {{qty:WOOD SHAVINGS TOPPING::Salt}} salt in a small saucepan or a microwave-safe bowl.',
@@ -2182,7 +2182,7 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
       },
       {
         number:'06',
-        title:'Add the Topping and Bake',
+        title:'CROWN THE FOREST FLOOR',
         clock:'11:15 PM',
         paragraphs:[
           'Carefully remove the partially baked cake from the oven.',
@@ -2199,7 +2199,7 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
       },
       {
         number:'07',
-        title:'Cool and Serve',
+        title:'REST BY THE FIRE',
         clock:'11:35 PM',
         paragraphs:[
           'Remove the cake from the oven and allow it to cool in the pan.',
