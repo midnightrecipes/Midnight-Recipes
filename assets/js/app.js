@@ -967,8 +967,11 @@ function updateRecipeRating(r){
 }
 
 async function showReviews(r,initial=false){
-  const box=document.getElementById('reviewList');if(!box)return;
+  const box=document.getElementById('reviewList');
+  if(!box)return;
+
   const status=document.getElementById('reviewStatus');
+
   try{
     const arr=await fetchSharedReviews(r.slug);
     const ratings=arr.map(x=>Number(x.rating)).filter(x=>Number.isInteger(x)&&x>=1&&x<=5);
@@ -991,28 +994,6 @@ async function showReviews(r,initial=false){
     if(initial)status.textContent='Unable to load shared reviews. Please try again later.';
     else throw e;
   }
-}
-  {
-  const box=document.getElementById('reviewList');if(!box)return;
-  const status=document.getElementById('reviewStatus');
-  try{
-    const arr=await fetchSharedReviews(r.slug);
-const ratings=arr.map(x=>Number(x.rating)).filter(x=>Number.isInteger(x)&&x>=1&&x<=5);
-
-reviewStatsCache.set(r.slug,{
-  avg:ratings.length?ratings.reduce((a,b)=>a+b,0)/ratings.length:0,
-  count:ratings.length
-});
-
-updateRecipeRating(r);
-
-box.innerHTML=arr.length?arr.map(x=>{
-  const n=Number(x.rating);
-  if(!Number.isInteger(n)||n<1||n>5)return '';
-  return `<div class="review-item"><div class="review-stars">${'★'.repeat(n)}${'☆'.repeat(5-n)}</div>${x.reviewer_name?`<b>${esc(x.reviewer_name)}</b>`:''}${x.comment?`<p>${esc(x.comment)}</p>`:''}</div>`;
-}).join(''):'<p>No reviews yet. Be the first to rate this recipe!</p>';
-    if(initial)status.textContent='';
-  }catch(e){if(initial)status.textContent='Unable to load shared reviews. Please try again later.';else throw e}
 }
 let wakeLock=null;async function setWakeLock(on){if(!on){if(wakeLock){try{await wakeLock.release()}catch(e){}wakeLock=null}return}if(!('wakeLock' in navigator))return;try{wakeLock=await navigator.wakeLock.request('screen')}catch(e){wakeLock=null}}
 
