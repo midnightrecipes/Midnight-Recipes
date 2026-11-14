@@ -2110,10 +2110,10 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
       {amount:1,unit:'pinch',item:'Salt'}
     ],
     stats:{
-      prep:'25',
+      prep:'25 mins',
       cook:'55–75 mins',
-      chill:'1 hrs+',
-      total:'2 hr 20 mins+',
+      chill:'1 hr+',
+      total:'2 hrs 20 mins+',
       serves:'8-16',
       pan:'8 inch / 20 cm square baking pan',
       quiet:'⭐⭐⭐⭐☆'
