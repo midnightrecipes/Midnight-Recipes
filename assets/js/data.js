@@ -41,24 +41,24 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
     name: "DARK CHOCOLATE",
     tag: "THE STAR INGREDIENT",
     details: [["Why It Matters", "The heart of the pie. Choose chocolate you genuinely enjoy eating on its own."],
-      ["Best Choice", "60–70% dark chocolate gives the filling deep chocolate flavor without making it too sweet."],
+      ["Best Choice", "60–70% dark chocolate gives the filling deep chocolate flavour without making it too sweet."],
       ["A Little Splurge", "Baking chocolate works perfectly well, but why not treat yourself to something special? Toronto has great local chocolate makers, including SOMA and ChocoSol. This pie is a good excuse to use chocolate you really love."],
       ["Substitute", "Semi-sweet chocolate works well. If using sweeter chocolate, reduce the sugar by 20–30% from the original amount. Taste the filling before chilling and adjust to your preference."]
     ]
   },
   {
     name: "ESPRESSO POWDER",
-    tag: "THE FLAVOR BOOSTER",
-    details: [["Why It Matters", "Deepens the chocolate flavor without making the filling taste strongly of coffee."],
-      ["Substitute", "Instant coffee powder. Start with a small amount, since flavor and strength vary by brand."]
+    tag: "THE FLAVOUR BOOSTER",
+    details: [["Why It Matters", "Deepens the chocolate flavour without making the filling taste strongly of coffee."],
+      ["Substitute", "Instant coffee powder. Start with a small amount, since flavour and strength vary by brand."]
     ]
   },
   {
     name: "UNSWEETENED COCOA POWDER",
     tag: "THE CHOCOLATE DEEPENER",
-    details: [["Why It Matters", "Adds a deeper, less sweet chocolate flavor that layers beautifully with dark chocolate."],
-      ["Best Choice", "Dutch-process cocoa is a good fit for this creamy filling. Its lower acidity, darker color, and smoother flavor complement the chocolate. Since this recipe does not rely on cocoa to activate baking soda, you can choose it for flavor and color."],
-      ["Substitute", "The same amount of natural unsweetened cocoa powder also works, though the flavor may be sharper and the color lighter."],
+    details: [["Why It Matters", "Adds a deeper, less sweet chocolate flavour that layers beautifully with dark chocolate."],
+      ["Best Choice", "Dutch-process cocoa is a good fit for this creamy filling. Its lower acidity, darker color, and smoother flavour complement the chocolate. Since this recipe does not rely on cocoa to activate baking soda, you can choose it for flavour and color."],
+      ["Substitute", "The same amount of natural unsweetened cocoa powder also works, though the flavour may be sharper and the color lighter."],
       ["Midnight Fix", "Out of cocoa powder? You can try leaving it out and adding 20–30 g extra dark chocolate. This changes the balance of chocolate, fat, and starch, so the filling may set differently. Treat this as an adjustment to test rather than a guaranteed one-to-one replacement."]
     ]
   },
@@ -66,7 +66,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
     name: "WHOLE MILK",
     tag: "THE CREAMINESS BUILDER",
     details: [["Why It Matters", "Adds moisture and fat to help create a creamy chocolate filling."],
-      ["Substitute", "2% milk can work, but the filling may be a little less rich.Try adding 1 tbsp extra butter when using 2% milk for a richer mouthfeel. This is an adjustment to test rather than a guaranteed replacement."]
+      ["Substitute", "2% milk can work, but the filling may be a little less rich. Try adding 1 tbsp extra butter when using 2% milk for a richer mouthfeel. This is an adjustment to test rather than a guaranteed replacement."]
     ]
   }
 ],
@@ -75,7 +75,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
       {group:'CHOCOLATE FILLING'},{amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark chocolate, chopped'},{amount:1,unit:'tsp',imperialAmount:1,imperialUnit:'tsp',item:'Espresso powder'},{amount:3,unit:'Tbsp',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened cocoa powder'},{amount:72,unit:'g',imperialAmount:4,imperialUnit:'large',item:'Egg yolks'},{amount:75,unit:'g',imperialAmount:6,imperialUnit:'tbsp',item:'Granulated sugar'},{amount:4,unit:'Tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},{amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},{amount:480,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole milk'},{amount:21,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Unsalted butter'},
       {group:'TOPPING (optional)'},{amount:240,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'35% whipping cream'},{amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated sugar'},{unit:'',item:'Cocoa powder, cacao nibs, or flaky sea salt, for finishing'}
     ],
-    stats:{prep:'15 mins',cook:'15 mins',chill:'4 hrs',total:'4 hrs 30 min',serves:'6–8',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐☆☆'},
+    stats:{prep:'15 mins',cook:'15 mins',chill:'4 hrs',total:'4 hrs 30 min',serves:'6-8',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐☆☆'},
     steps:[
       {number:'01',title:'CRUSH IT DOWN',clock:'11:20 PM',paragraphs:[
         'Preheat your oven to 175°C / 350°F.',
@@ -110,12 +110,12 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
       ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-05-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-05-02.jpg']}
     ],
     notes:[
-      ['Recreating the Flavor','I use dark chocolate together with cocoa powder and a hint of espresso powder to take the filling beyond a simple cocoa base, creating a deeper and more layered chocolate flavor.'],
+      ['Recreating the Flavour','I use dark chocolate together with cocoa powder and a hint of espresso powder to take the filling beyond a simple cocoa base, creating a deeper and more layered chocolate flavour.'],
       ['Why I Temper the Egg Yolks','There are several ways to make custard. An experienced cook may be comfortable combining everything in the saucepan from the beginning, but I prefer to temper the egg yolks by gradually whisking in some of the hot chocolate mixture. It adds a step, but it gives me more control over how quickly the yolks warm up. I find it easier to take my time than to rush and risk ending up with bits of cooked egg in the filling.'],
       ["Don't Forget the Corners",'Keep whisking and scrape the bottom and corners of the saucepan as the custard thickens. Mixture can collect in these spots and cook faster than the rest. I like using a silicone spatula to reach the corners, especially when the filling starts to get thick.']
     ],
     finePrint:{
-      'BEST EATEN':'Tomorrow, after chilling thoroughly. The filling becomes firmer and the flavors settle overnight.',
+      'BEST EATEN':'Tomorrow, after chilling thoroughly. The filling becomes firmer and the flavours settle overnight.',
       'MAKE AHEAD':'Yes. Prepare up to 1 day ahead. Add the whipped cream just before serving.',
       'STORAGE':'Refrigerate, covered, for up to 3 days.',
       'FREEZER':'Not applicable.',
@@ -142,17 +142,17 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
     usCupFractions:true,
     integerUnits:{metric:['sesame oil','sugar']},
     richTextNotes:true,
-    story:`*Taiwan Ramen* (台湾ラーメン) at Misen (味仙) is absolute comfort food in my hometown, Nagoya, Japan. Despite the name, this fiery dish isn’t actually from Taiwan—the founder named it after his own Taiwanese heritage. It’s a true Nagoya original that evolved entirely in Japan, and the flavor is something you never really forget. Every time I go back home, I find myself drawn straight back to Misen, sitting at a noisy table surrounded by people happily sweating their way through a bowl.
+    story:`*Taiwan Ramen* (台湾ラーメン) at Misen (味仙) is absolute comfort food in my hometown, Nagoya, Japan. Despite the name, this fiery dish isn’t actually from Taiwan—the founder named it after his own Taiwanese heritage. It’s a true Nagoya original that evolved entirely in Japan, and the flavour is something you never really forget. Every time I go back home, I find myself drawn straight back to Misen, sitting at a noisy table surrounded by people happily sweating their way through a bowl.
 
 What makes it so addictive isn't just the heat—it’s that intense, punchy wallop of fresh chili and minced garlic seamlessly blended into rich, savory pork fat. It’s crazy spicy, but there’s this deep, craveable umami underneath that keeps you reaching for the next bite before the last one even settles. 
 
-Tonight, I’m taking that iconic flavor and making the ground pork the star, serving it over hot rice with a rich soft-boiled egg. As you break the egg, the creamy, runny yolk flows into the spicy mince, perfectly cutting through the fiery punch and rounding out all those sharp garlic notes. It’s dangerous, intensely savory, and so good it might just keep me up all night.`,
+Tonight, I’m taking that iconic flavour and making the ground pork the star, serving it over hot rice with a rich soft-boiled egg. As you break the egg, the creamy, runny yolk flows into the spicy mince, perfectly cutting through the fiery punch and rounding out all those sharp garlic notes. It’s dangerous, intensely savory, and so good it might just keep me up all night.`,
     ingredientFile:[
   {
     name:'GROUND PORK (REGULAR)',
-    tag:'THE FLAVOR FOUNDATION',
+    tag:'THE FLAVOUR FOUNDATION',
     details:[
-      ['Why It Matters','The fat carries much of the dish’s flavor. As the pork renders, it absorbs the chili aroma and savory compounds from the doubanjiang, creating a glossy coating that clings to the meat and rice.'],
+      ['Why It Matters','The fat carries much of the dish’s flavour. As the pork renders, it absorbs the chili aroma and savory compounds from the doubanjiang, creating a glossy coating that clings to the meat and rice.'],
       ['Best Choice','Look for ground pork with roughly 20–30% fat, often sold as regular rather than lean ground pork.'],
       ['Substitute','Ground chicken made with dark meat or ground turkey can work, but both are leaner. The result will still differ from pork cooked in its own fat.'],
       ['Midnight Fix','If the mince tastes dry because the pork is very lean, stir in a small splash of sesame or neutral oil at the end. Add a little at a time to keep the mince glossy rather than greasy.']
@@ -173,7 +173,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
     tag:'THE ADDICTIVE CORE',
     details:[
       ['Why It Matters','Garlic is one of the main aromatic foundations of this Misen-inspired mince. The generous amount gives the pork its punchy, unmistakable garlic aroma.'],
-      ['Technique','Start the minced garlic in the cold pan with the oil and chili, then bring the heat up gently. Slow heating allows the garlic flavor to infuse the oil. Keep it pale to golden rather than dark brown, which can taste bitter. If it browns too quickly, lower the heat before continuing.'],
+      ['Technique','Start the minced garlic in the cold pan with the oil and chili, then bring the heat up gently. Slow heating allows the garlic flavour to infuse the oil. Keep it pale to golden rather than dark brown, which can taste bitter. If it browns too quickly, lower the heat before continuing.'],
       ['Why Finely Minced','Finely minced garlic disperses throughout the meat and exposes more surface area to the oil, allowing its aroma to reach the whole pan instead of remaining in larger pieces.']
     ]
   },
@@ -181,7 +181,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
     name:'DOUBANJIANG (四川豆瓣酱 / 豆板醤)',
     tag:'THE UMAMI POWERHOUSE',
     details:[
-      ['Flavor','Salty, fermented, savory, and spicy, with deep umami and a distinctive red chili aroma. Brands and styles vary in heat, saltiness, texture, and sweetness.'],
+      ['Flavour','Salty, fermented, savory, and spicy, with deep umami and a distinctive red chili aroma. Brands and styles vary in heat, saltiness, texture, and sweetness.'],
       ['Why Fry It First','Frying doubanjiang briefly in the oil before adding the liquids helps release its chili color and aroma while softening its raw fermented edge. Fry for about 30–45 seconds, stirring constantly, until fragrant without scorching.'],
       ['Substitute','Use the same amount of gochujang as doubanjiang, or mix 2 parts red chili paste with 1 part dark miso as an alternative.'],
       ['Midnight Fix','Gochujang is sweeter than doubanjiang, so taste the dish and add a small pinch of salt if needed. If using the chili paste and miso mixture, adjust the amount of chili paste to your preferred heat level. Remember that soy sauce, oyster sauce, and bouillon also add salt, so taste before adding any extra.']
@@ -191,7 +191,7 @@ Tonight, I’m taking that iconic flavor and making the ground pork the star, se
     name:'GARLIC CHIVES (NIRA / 韮)',
     tag:'THE FRESH FINISH',
     details:[
-      ['Flavor','Garlic chives add a fresh, sharp, garlicky flavor, a little crunch, and a vivid green finish that lifts the rich pork mince.'],
+      ['Flavour','Garlic chives add a fresh, sharp, garlicky flavour, a little crunch, and a vivid green finish that lifts the rich pork mince.'],
       ['When to Add','Cut the chives into 2 inch / 5 cm pieces and add them near the end. Toss for about 30–45 seconds—just long enough to soften them slightly while keeping their color and fresh aroma.'],
       ['Substitute','Green onions (scallions) are an easy substitute. They are milder and less garlicky.'],
     ]
@@ -297,8 +297,8 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
     name:'APPLE',
     tag:'THE FRUIT FOUNDATION',
     details:[
-      ['Flavor','Sweet-tart, crisp, and floral.'],
-      ['Best cChoice','In Canada, Honeycrisp is a popular choice for baking. Unlike softer apples that can turn mushy, Honeycrisp holds its shape well while releasing just enough tart juices to balance the rich dairy.'],
+      ['Flavour','Sweet-tart, crisp, and floral.'],
+      ['Best Choice','In Canada, Honeycrisp is a popular choice for baking. Unlike softer apples that can turn mushy, Honeycrisp holds its shape well while releasing just enough tart juices to balance the rich dairy.'],
       ['Substitute','Pink Lady or Braeburn offer a similar sweet-tart balance. Firm pears are another option for a softer, more autumnal fruit base.'],
       ['Cooking Secret','Sautéing the apples beforehand does more than soften them—it also evaporates excess moisture. Adding raw apples directly to the custard can release water during baking and interfere with the silky texture of the set cream.']
     ]
@@ -308,7 +308,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
     tag:'THE CREAMY BALANCE',
     details:[
       ['The 4:1 Ratio','While many classic French recipes rely exclusively on heavy cream, this version uses a carefully balanced 4:1 ratio of 35% whipping cream to whole milk.'],
-      ['Why Add Milk?','The spiced apples already contribute moisture and fruit acidity, so a custard made entirely with cream can feel overly heavy. Whole milk keeps the custard silky and lighter, allowing the vanilla and apple flavors to shine without weighing it down.']
+      ['Why Add Milk?','The spiced apples already contribute moisture and fruit acidity, so a custard made entirely with cream can feel overly heavy. Whole milk keeps the custard silky and lighter, allowing the vanilla and apple flavours to shine without weighing it down.']
     ]
   }
 ],
@@ -368,7 +368,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
       ],stepImages:['images/recipes/apple-creme-brulee/step-05-01.jpg','images/recipes/apple-creme-brulee/step-05-02.jpg']}
     ],
     notes:[
-      ['Keeping the Apples Distinct','Cooking the apples separately concentrates their flavor and removes excess moisture before they meet the custard. Just be careful not to overcook them—keeping a slight crispness gives the best contrast in texture.'],
+      ['Keeping the Apples Distinct','Cooking the apples separately concentrates their flavour and removes excess moisture before they meet the custard. Just be careful not to overcook them—keeping a slight crispness gives the best contrast in texture.'],
       ['A Smooth Surface','Gentle mixing, straining, resting, and skimming off any foam help keep the custard surface glass-smooth. Baking in a water bath is equally crucial, as it gently cooks the eggs and prevents your silky custard from turning into scrambled eggs.'],
       ["Don't Overbake",'The center should still wobble gently when it comes out of the oven. It will continue to set as it cools in its ramekin.']
     ],
@@ -403,20 +403,20 @@ Growing up in Japan, our summer tradition of welcoming ancestral spirits during 
 
 *Calabaza en Tacha* is a traditional Mexican seasonal pumpkin sweet often placed on these ofrendas. Traditionally, pieces of hard-shelled pumpkin are slowly simmered in a dark piloncillo (panela) syrup infused with whole cinnamon, cloves, star anise, and fresh orange until perfectly tender and glazed.
 
-Tonight, I wanted to create something a little different from a standard pumpkin pie—a dessert warmly inspired by *Calabaza en Tacha*, taking a quiet moment late at night to remember the people I love. By transferring those traditional flavors into a pie format, using spice-infused cream and topping it with a glossy orange-molasses syrup, this pie comes together with a beautifully rounded flavor and a smooth, comforting texture.`,
+Tonight, I wanted to create something a little different from a standard pumpkin pie—a dessert warmly inspired by *Calabaza en Tacha*, taking a quiet moment late at night to remember the people I love. By transferring those traditional flavours into a pie format, using spice-infused cream and topping it with a glossy orange-molasses syrup, this pie comes together with a beautifully rounded flavour and a smooth, comforting texture.`,
     ingredientFile:[
     {name: 'PUMPKIN PURÉE',
      tag:'THE VELVETY BASE',
       details: [
-        ['Flavor', 'Earthy, naturally sweet, mellow, and velvety.'],
+        ['Flavour', 'Earthy, naturally sweet, mellow, and velvety.'],
         ['Canned vs. Fresh', 'While roasting a whole sugar pumpkin from scratch is lovely, canned pumpkin purée actually has a lower, more consistent water content. At midnight, using pure pumpkin purée guarantees a silky custard without risking a watery pie base.'],
         ['Best choice', 'Look for 100% pure pumpkin purée on the label, not canned "pumpkin pie mix," which already contains added sugar and ground spices.']]
     },
     {name: 'DARK BROWN SUGAR + MOLASSES',
      tag:'THE PILONCILLO DUPE',
       details: [
-        ['What is Piloncillo?', 'Piloncillo (or Panela) is unrefined whole cane sugar traditional to Mexican cooking. It has an intense, smoky, dark-caramel flavor that standard white sugar cannot match.'],
-        ['Why Molasses?', 'Combining dark brown sugar with a touch of dark molasses introduces that distinct, slightly bitter, mineral-rich complexity of authentic piloncillo, mimicking its cooked-down syrup flavor perfectly.']]
+        ['What is Piloncillo?', 'Piloncillo (or Panela) is unrefined whole cane sugar traditional to Mexican cooking. It has an intense, smoky, dark-caramel flavour that standard white sugar cannot match.'],
+        ['Why Molasses?', 'Combining dark brown sugar with a touch of dark molasses introduces that distinct, slightly bitter, mineral-rich complexity of authentic piloncillo, mimicking its cooked-down syrup flavour perfectly.']]
     },
     {name: 'THE WHOLE SPICE INFUSION (CINNAMON, STAR ANISE, CLOVE, ORANGE PEEL)',
      tag:'THE AROMATIC HEART',
@@ -442,15 +442,15 @@ Tonight, I wanted to create something a little different from a standard pumpkin
       {number:'03',title:'MAKE THE FILLING',clock:'12:18 AM',paragraphs:['In a large bowl, whisk together {{qty:CALABAZA FILLING::Pumpkin purée}} pumpkin purée, {{qty:CALABAZA FILLING::Eggs}} eggs, {{qty:CALABAZA FILLING::Orange Juice}} orange juice, and {{qty:CALABAZA FILLING::Salt}} salt.','Slowly pour in the warm spiced Half & Half mixture.','Whisk gently until everything is smooth and evenly combined.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-01.JPG','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-03-02.JPG']},
       {number:'04',title:'BAKE',clock:'12:22 AM',paragraphs:['Pour the pumpkin filling into the crust.','Bake for 40–50 minutes.','The edges should be set while the center still has a slight wobble when the pie is gently shaken.','Remove from the oven.','Let the pie cool slightly until it is no longer hot, then refrigerate.','Don\'t worry if the center looks slightly soft when it first comes out. The custard will continue to set as it cools.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-04-01.JPG']},
       {number:'05',title:'FAKE THE PILONCILLO SYRUP',clock:'12:45 AM',paragraphs:['Add {{qty:THE PILONCILLO SYRUP::Dark Brown Sugar}} dark brown sugar, {{qty:THE PILONCILLO SYRUP::Molasses}} molasses, {{qty:THE PILONCILLO SYRUP::Orange Juice}} orange juice, {{qty:THE PILONCILLO SYRUP::Water}} water, {{qty:THE PILONCILLO SYRUP::Orange peel, 1 inch / 2–3 cm long}} of orange peel, and {{qty:THE PILONCILLO SYRUP::Salt}} salt to a small saucepan.','Bring to a gentle simmer over medium-low heat.','Cook for 3–5 minutes, stirring occasionally, until the sugar has dissolved and the syrup has thickened slightly.','Remove the orange peel. Let the syrup cool slightly.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-05-01.JPG']},
-      {number:'06',title:'FINISH',clock:'NEXT DAY',paragraphs:['Once the pie is no longer hot, refrigerate for at least 4 hours, preferably overnight.','Before serving, spoon a thin layer of the piloncillo syrup over the surface. For the glossiest finish, warm the syrup slightly and drizzle it over the pie just before serving.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-06-01.JPG']}
+      {number:'06',title:'FINISH',clock:'NEXT DAY',paragraphs:['Once the pie is no longer hot, refrigerate for at least 4 hours, preferably overnight.','Before serving, spoon a thin layer of the piloncillo syrup over the surface. For the glossiest finish, warm the syrup slightly and drizzle it over the pie just before serving.'],stepImages:['images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-06-01.jpg','images/recipes/mexican-calabaza-en-tacha-pumpkin-pie/step-06-02.jpg']}
     ],
     notes:[
-      ['The Art of Steeping (Why Whole Spices Matter)','Instead of dumping ground "pumpkin pie spice" into the bowl, I steep whole cinnamon, star anise, cloves, and orange peel in warm Half & Half over low heat. Fat is an incredible flavor carrier. By letting the spices sit in the warm dairy for 20 minutes, you get a clean, silky custard infused with a soft, rounded botanical aroma without any grittiness.'],
+      ['The Art of Steeping (Why Whole Spices Matter)','Instead of dumping ground "pumpkin pie spice" into the bowl, I steep whole cinnamon, star anise, cloves, and orange peel in warm Half & Half over low heat. Fat is an incredible flavour carrier. By letting the spices sit in the warm dairy for 20 minutes, you get a clean, silky custard infused with a soft, rounded botanical aroma without any grittiness.'],
       ['Recreating Piloncillo without Piloncillo',"Authentic Calabaza en Tacha relies on piloncillo cones. Since it's not always in my pantry late at night, combining dark brown sugar with a splash of molasses mimics that deep, unrefined caramel profile effortlessly."],
       ['Why the Glaze Goes on Last (And How to Apply It)','Traditional Calabaza en Tacha pumpkin is coated in a sticky, glossy reduction. Drizzling our warm orange-molasses syrup over the chilled custard just before serving gives each slice a gorgeous sheen and an instant hit of bright citrus-caramel sweetness on your first bite. Do not drizzle the syrup the night before, as the custard will gradually absorb it, leaving the top surface looking dull and matte. Also, I recommend gently pouring or spooning the syrup straight over the pie instead of brushing it on—a pastry brush can leave unsightly streak marks on the delicate custard surface.']
     ],
     finePrint:{
-      'BEST EATEN':'Tomorrow, after chilling thoroughly. The orange and spices develop a rounder flavor overnight. For the cleanest slices, refrigerate for several hours before serving. Serve cold or at room temperature.',
+      'BEST EATEN':'Tomorrow, after chilling thoroughly. The orange and spices develop a rounder flavour overnight. For the cleanest slices, refrigerate for several hours before serving. Serve cold or at room temperature.',
       'MAKE AHEAD':'Yes. Make the pie the day before serving so it can chill overnight.',
       'STORAGE':'Cover and refrigerate for up to 3 days. Store the orange-molasses syrup separately in a covered container in the refrigerator for up to 5 days.',
       'FREEZER':'Freeze the fully cooled pie, wrapped tightly and placed in a freezer-safe container, for up to 1 month for best quality. Thaw overnight in the refrigerator before serving. The filling may be slightly softer after thawing.',
@@ -473,11 +473,11 @@ Tonight, I wanted to create something a little different from a standard pumpkin
 
 I started looking through traditional banana cream pie recipes and noticed that most of them rely on a few slices of fresh banana hiding underneath a mountain of standard vanilla custard. 
 
-I wanted a pie that was seriously, unapologetically banana-y. Not vanilla pudding with a vague hint of banana flavor, but a rich, velvety banana custard made from real fruit.
+I wanted a pie that was seriously, unapologetically banana-y. Not vanilla pudding with a vague hint of banana flavour, but a rich, velvety banana custard made from real fruit.
 
 So I took those overripe bananas, cooked them down in a skillet until they were thick, dark, and sweet, and blended them right into the custard. Then, I tucked fresh banana halves underneath for a little bite and that beautiful, clean cross-section when you slice into it.
 
-To complement all that fruitiness, I crafted a custom spiced biscuit crust. The warm, exotic notes of cinnamon, ginger, and nutmeg cut through the rich sweetness of the banana, creating a beautiful depth of flavor. 
+To complement all that fruitiness, I crafted a custom spiced biscuit crust. The warm, exotic notes of cinnamon, ginger, and nutmeg cut through the rich sweetness of the banana, creating a beautiful depth of flavour. 
 
 Basically, this pie is my answer to one very simple, late-night question: 
 What if we just stopped treating the banana like an afterthought and made the banana the custard itself?`,
@@ -486,18 +486,18 @@ ingredientFile:[
     name:'BANANA',
     tag:'OUR HERO!',
     details:[
-      ['Flavor','Deep and caramel-like when roasted, with a fresh, aromatic sweetness when raw.'],
+      ['Flavour','Deep and caramel-like when roasted, with a fresh, aromatic sweetness when raw.'],
       ['Where to find','Your Kitchen Counter'],
       ['Best Choice','Choose very ripe bananas with heavily spotted or almost completely black skins. The blacker, the better! As bananas develop dark skins and abundant brown spots, their starches convert into natural sugars, making them soft, fragrant, and ideal for baking.'],
       ['Storage','Keep at room temperature until fully ripe. If your bananas are still green, place them in a paper bag with a ripe apple or banana to speed up ripening.'],
-      ['Why Cook?','Cooking the bananas in a skillet drives off excess moisture and concentrates their natural sugars, creating a thick, jammy texture and deep banana flavor without adding extra sugar.']
+      ['Why Cook?','Cooking the bananas in a skillet drives off excess moisture and concentrates their natural sugars, creating a thick, jammy texture and deep banana flavour without adding extra sugar.']
     ]
   },
   {
     name:'PLAIN BISCUITS',
     tag:'THE CRUST FOUNDATION',
     details:[
-      ['Flavor','A crisp, spiced crumb crust featuring cinnamon, ginger, and nutmeg that beautifully balances the rich, sweet banana filling.'],
+      ['Flavour','A crisp, spiced crumb crust featuring cinnamon, ginger, and nutmeg that beautifully balances the rich, sweet banana filling.'],
       ['Substitute','Biscoff cookies or graham crackers.'],
       ['Midnight Fix','If using Biscoff, skip the cinnamon, ginger, and nutmeg. Simply combine the crumbs with melted butter.'],
       ['Crust Technique','Baking the crust for 8–10 minutes helps set its structure, preventing it from becoming soggy under the rich custard and fresh bananas.']
@@ -512,7 +512,7 @@ ingredientFile:[
     ]
   }
 ],
-    stats:{prep:'20 mins',cook:'30 mins',chill:'3 hrs+',total:'3 hrs 50 mins+',serves:'6–8',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
+    stats:{prep:'20 mins',cook:'30 mins',chill:'3 hrs+',total:'3 hrs 50 mins+',serves:'6-8',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
     ingredients:[
       {group:'CRUST'},
       {amount:200,unit:'g',item:'Plain biscuits, finely crushed'}, {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground cinnamon'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Ground ginger'}, {amount:1,unit:'pinch',item:'Ground nutmeg'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'}, {amount:80,unit:'g',item:'Unsalted butter, melted'},
@@ -569,7 +569,7 @@ ingredientFile:[
     notes:[
       ['Midnight (Non)Compromises','Even in the middle of the night, concentrating the bananas is a non-negotiable.\n\nThose nearly black bananas are already packed with natural sweetness, so instead of adding more sugar, I cook them down in a skillet until their moisture evaporates and their natural sugars become concentrated.'],
       ['Experiment 1: The Banana Shape','Putting whole round banana slices in the pie made the banana presence too overwhelming.\n\nThe slices took over each bite and made the texture feel repetitive.\n\nCutting the fresh bananas **in half lengthwise** solved that problem.\n\nThe larger pieces create a clean cross-section while giving the pie a firm, juicy banana texture that contrasts with the smooth filling.'],
-      ['Experiment 2: Concentrating the Banana','Simply mashing overripe bananas into the custard didn\'t give the banana flavor enough intensity.\n\nCooking the banana in a skillet first changed everything.\n\nThe excess moisture cooks away, the natural sugars become concentrated, and the banana develops a deeper, almost caramel-like flavor.'],
+      ['Experiment 2: Concentrating the Banana','Simply mashing overripe bananas into the custard didn\'t give the banana flavour enough intensity.\n\nCooking the banana in a skillet first changed everything.\n\nThe excess moisture cooks away, the natural sugars become concentrated, and the banana develops a deeper, almost caramel-like flavour.'],
       ['Experiment 3: Blend it All Together',"I originally considered keeping the banana and vanilla custards separate, but that meant making two different layers and adding extra steps.\n\nInstead, I decided to blend the concentrated banana directly into the finished custard.\n\nThe food processor turns everything into a completely smooth, silky banana cream while keeping the process simple. (If you prefer a little rustic texture or don't want to wake up the house by running a food processor late at night—you can simply whisk or mash the cooked banana paste into the custard by hand.)\n\nThe result is a filling that tastes intensely of banana from the first bite to the last."],
       ['The Result','The final pie has a simple but satisfying contrast.\n\nThe fresh banana gives it texture, the concentrated banana brings depth, and the whipped cream adds a light finish.\n\nMost importantly, the banana isn\'t just sitting somewhere underneath the custard.\n\n**The banana is the custard!**']
     ],
@@ -600,7 +600,7 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
     name:'SWEET POTATOES',
     tag:'THE COMFORTING CORE',
     details:[
-      ['Flavor','Naturally sweet, earthy, creamy, and comforting.'],
+      ['Flavour','Naturally sweet, earthy, creamy, and comforting.'],
       ['Roasting vs. Quick Cooking','Roasting whole sweet potatoes in their skins helps convert starches into maltose, developing deeper sweetness while evaporating excess moisture. If you choose the midnight shortcut (microwaving or boiling), let the cooked sweet potato steam-dry thoroughly before mashing so your pie filling won’t turn watery.'],
       ['Substitute','Japanese (Satsumaimo) or Korean sweet potatoes work well for an even denser, sweeter interior. You may need a splash of extra cream to loosen the thicker purée.'],
       ['Storage','Store whole sweet potatoes in a cool, dry, well-ventilated place. Once cooked, refrigerate in an airtight container for up to 3 days.']
@@ -610,9 +610,9 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
     name:'FRESH GINGER',
     tag:'THE AROMATIC KICK',
     details:[
-      ['Flavor','Warm, peppery, citrusy, and pleasantly spicy.'],
+      ['Flavour','Warm, peppery, citrusy, and pleasantly spicy.'],
       ['Peeling Tip','Use the edge of a spoon to gently scrape away the skin. It follows ginger’s knobby shape and reaches into tight corners without removing too much flesh. If using organic ginger, you can also leave the skin on after washing and scrubbing it thoroughly.'],
-      ['Substitute','Ground ginger can be used. Use ¾ tsp (1½ g) ground ginger to replace 3/4 tsp (6 g) fresh ginger. Ground ginger provides gentle background warmth, while finely grated fresh ginger delivers the bright, peppery, citrusy zing that defines the flavor of Sweet Potato Ginger Dessert Soup (番薯姜糖水).'],
+      ['Substitute','Ground ginger can be used. Use ¾ tsp (1½ g) ground ginger to replace 3/4 tsp (6 g) fresh ginger. Ground ginger provides gentle background warmth, while finely grated fresh ginger delivers the bright, peppery, citrusy zing that defines the flavour of Sweet Potato Ginger Dessert Soup (番薯姜糖水).'],
       ['Storage','Submerge peeled ginger in a clean container of water, refrigerate, and change the water every 2–3 days. For longer storage, freeze whole and grate directly from frozen.']
     ]
   },
@@ -620,8 +620,8 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
     name:'10% CREAM (Half & Half)',
     tag:'ONLY 10%, BUT ESSENTIAL',
     details:[
-      ['Flavor','Light, creamy, and milky.'],
-      ['Why Here','Heavy 35% whipping cream can coat the palate and dull the fresh ginger aroma. Using 10% cream provides just enough dairy fat to create a silky custard while keeping the dessert light and allowing the ginger flavor to shine.'],
+      ['Flavour','Light, creamy, and milky.'],
+      ['Why Here','Heavy 35% whipping cream can coat the palate and dull the fresh ginger aroma. Using 10% cream provides just enough dairy fat to create a silky custard while keeping the dessert light and allowing the ginger flavour to shine.'],
       ['Substitute','For a similar fat content, mix 7 parts 2% milk with 3 parts 35% whipping cream (about ¼ cup (60ml) milk + 2 tbsp (30ml) cream for this recipe)'],
     ]
   }
@@ -636,7 +636,7 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
     ],
     steps:[
       {number:'01',title:'COOK THE SWEET POTATO',clock:'11:35 PM',paragraphs:[
-        'For the best flavor, roast whole sweet potatoes at 175°C / 350°F for 45–60 minutes, until completely soft.',
+        'For the best flavour, roast whole sweet potatoes at 175°C / 350°F for 45–60 minutes, until completely soft.',
         'Midnight Shortcut — Microwave',
         'Peel and cut the sweet potato into chunks. Place in a microwave-safe bowl with a small splash of water and cover.',
         'Midnight Shortcut — Boil',
@@ -670,13 +670,13 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
       ],stepImages:[]}
     ],
     notes:[
-      ['Recreating the Soup Flavor',`Fresh ginger is the signature. It gives the pie the warm, peppery character that defines Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水).
+      ['Recreating the Soup Flavour',`Fresh ginger is the signature. It gives the pie the warm, peppery character that defines Chinese Sweet Potato Ginger Dessert Soup (番薯姜糖水).
 Keep the spices simple. There is no nutmeg, cloves, cardamom, or vanilla. Cinnamon supports the ginger instead of turning this into a classic pumpkin-spice pie.
 Don\'t over-sweeten it. The sweet potato provides natural sweetness, while crystallized ginger adds a little sweetness and a pleasant spicy bite.`],
       ['Moisture Control (This is CRUCIAL!)',`No time to roast? If you take the midnight shortcut and boil your sweet potato chunks, spread them out on a plate for 5 minutes after draining to let the steam escape. Excess trapped water will weaken the custard structure and lead to a soggy pie base.`]
     ],
     finePrint:{
-      'BEST EATEN':'Tomorrow, after chilling thoroughly, when the sweet potato, ginger, and cinnamon flavors have had time to come together.',
+      'BEST EATEN':'Tomorrow, after chilling thoroughly, when the sweet potato, ginger, and cinnamon flavours have had time to come together.',
       'MAKE AHEAD':'Yes. Make the pie the day before serving and refrigerate overnight.',
       'STORAGE':'Cover and refrigerate for up to 4 days.',
       'FREEZER':'Freeze the fully cooled pie, wrapped tightly and placed in a freezer-safe container, for up to 1 month for best quality. Thaw overnight in the refrigerator. The filling may soften slightly after thawing.',
@@ -697,14 +697,14 @@ Don\'t over-sweeten it. The sweet potato provides natural sweetness, while cryst
     ingredientFile: [
   { name: 'ALL-PURPOSE FLOUR',
     tag: 'THE PASTRY FOUNDATION',
-    details: [['FLAVOR', 'Neutral, versatile, and forms the structural network of the flaky layers.'],
+    details: [['FLAVOUR', 'Neutral, versatile, and forms the structural network of the flaky layers.'],
       ['WHY HERE', 'Provides the ideal balance of protein to build a tender yet sturdy crust.'],
       ['SUBSTITUTE', 'The same amount of pastry flour for a more tender crumb, though all-purpose flour is the most reliable for holding shapes like pie edges.']]
   },
   {
     name: 'COLD UNSALTED BUTTER',
     tag: 'THE FLAKY MAGIC',
-    details: [['FLAVOR', 'Rich, buttery, and aromatic.'],
+    details: [['FLAVOUR', 'Rich, buttery, and aromatic.'],
       ['WHY HERE', 'As cold butter melts in the oven, water evaporates to create steam pockets, resulting in those classic flaky layers.'],
       ['TIPS', 'Always keep your butter cold. If it gets too warm during mixing, chill the dough before rolling.']]
   }
@@ -782,7 +782,7 @@ The pie was easy to find. The Key limes were not.
 
 So I stopped hunting for the elusive Key lime and worked with what I could actually buy: standard Persian limes. 
 
-A traditional Key Lime Pie is a clash of extremes—intensely sharp lime sourness meeting heavy, syrup-sweet condensed milk. The first time I ever tried an authentic slice, my immediate thought was, *“Wow, everything about this is SO strong... this is THE classic American flavor!”*
+A traditional Key Lime Pie is a clash of extremes—intensely sharp lime sourness meeting heavy, syrup-sweet condensed milk. The first time I ever tried an authentic slice, my immediate thought was, *“Wow, everything about this is SO strong... this is THE classic American flavour!”*
 
 To make it a little milder and more refined for my late-night palate, I brought in sour cream for extra body and a soft, smooth tang. 
 
@@ -796,7 +796,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
     name:'SWEETENED CONDENSED MILK',
     tag:'THE SWEET & MILKY MAGIC',
     details:[
-      ['Flavor','Rich, milky, and intensely sweet, with a caramel-like note.'],
+      ['Flavour','Rich, milky, and intensely sweet, with a caramel-like note.'],
       ['Best Choice','Use standard full-fat sweetened condensed milk. The entire 300 ml can is used in this recipe.'],
       ['Why Here','The acidity in lime juice reacts with the milk proteins (casein), helping the filling thicken naturally without the need for starch or gelatin.'],
       ['No Substitute (unfortunately)','Evaporated milk is not a direct substitute. It is unsweetened and has a much thinner consistency.'],
@@ -807,11 +807,11 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
     name:'PERSIAN / TAHITI LIMES',
     tag:'THE ACCESSIBLE STAR',
     details:[
-      ['Flavor','Bright, tart, fresh, and aromatic.'],
+      ['Flavour','Bright, tart, fresh, and aromatic.'],
       ['Best Choice','Choose firm, heavy limes with fragrant skin. Since the zest is used, organic or unwaxed limes are ideal. If using waxed limes, scrub and rinse them thoroughly before zesting.'],
       ['Why Here','Regular Persian (Tahiti) limes are much easier to find in Toronto while still providing the bright acidity and fresh lime aroma this pie needs.'],
-      ['Why Extra Zest?','Persian limes are generally less floral and intense than tiny Key limes. Adding a generous finely grated fresh zest helps bridge that flavor gap, bringing vivid lime aromatics to every bite.'],
-      ['Substitute','Key limes can be used if you are lucky enough to find them. Use the same total amount of juice. Bottled Key lime juice works in a pinch, but fresh juice and zest are preferred for the brightest flavor.'],
+      ['Why Extra Zest?','Persian limes are generally less floral and intense than tiny Key limes. Adding a generous finely grated fresh zest helps bridge that flavour gap, bringing vivid lime aromatics to every bite.'],
+      ['Substitute','Key limes can be used if you are lucky enough to find them. Use the same total amount of juice. Bottled Key lime juice works in a pinch, but fresh juice and zest are preferred for the brightest flavour.'],
       ['Storage','Store whole limes at room temperature for short-term use or refrigerate them for longer storage.'],
       ['Juicing Tip','One average-sized lime yields about 2 tbsp (30 ml) of fresh juice. Roll each lime firmly against the counter before juicing to help release more juice. Make sure to zest the limes before squeezing.']
     ]
@@ -820,17 +820,17 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
     name:'SOUR CREAM',
     tag:'THE UNSUNG HERO',
     details:[
-      ['Flavor','Creamy and slightly tangy, with a subtle fermented note.'],
+      ['Flavour','Creamy and slightly tangy, with a subtle fermented note.'],
       ['Best Choice','Use regular full-fat sour cream rather than a very low-fat version.'],
       ['Why Here','It adds body, creaminess, and extra tang to the filling without increasing the amount of condensed milk.'],
-      ['Substitute','The same amount of plain full-fat Greek yogurt can work, although the flavor will be slightly different.']
+      ['Substitute','The same amount of plain full-fat Greek yogurt can work, although the flavour will be slightly different.']
     ]
   },
   {
     name:'CREAM OF TARTAR',
     tag:'THE MERINGUE BACKBONE',
     details:[
-      ['Flavor','Mildly acidic, but the small amount used here does not noticeably affect the flavor.'],
+      ['Flavour','Mildly acidic, but the small amount used here does not noticeably affect the flavour.'],
       ['Why Here','Egg white proteins can over-expand and collapse easily. Cream of tartar helps stabilize the protein network, reducing the risk of the meringue weeping (releasing liquid) or shrinking after baking.'],
       ['Substitute','A small amount of lemon juice or white vinegar can help stabilize meringue, but cream of tartar is preferred here because it adds very little extra liquid.'],
       ['Midnight Fix','If you don’t have cream of tartar, you can still make the meringue without it. Make sure the bowl and beaters are completely clean and dry, and add the sugar gradually.']
@@ -852,7 +852,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
       {amount:50,unit:'g',item:'Granulated sugar'},
       {amount:0.5,unit:'g',item:'Cream of tartar'}
     ],
-    stats:{prep:'20 mins',cook:'30 mins',chill:'4 hrs+',total:'4 hrs 50 mins +',serves:'6–8',pan:'9 inch / 23 cm pie dish',quiet:'⭐☆☆☆☆'},
+    stats:{prep:'20 mins',cook:'30 mins',chill:'4 hrs+',total:'4 hrs 50 mins+',serves:'6-8',pan:'9 inch / 23 cm pie dish',quiet:'⭐☆☆☆☆'},
     steps:[
       {number:'01',title:'CRUSH IT DOWN',clock:'11:20 PM',paragraphs:[
         'Preheat your oven to 175°C / 350°F.',
@@ -939,7 +939,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
     name:'COCONUT MILK',
     tag:'THE CREAMY SOUL',
     details:[
-      ['Flavor','Rich, creamy, tropical, and subtly nutty.'],
+      ['Flavour','Rich, creamy, tropical, and subtly nutty.'],
       ['Best Choice','Use full-fat coconut milk for a richer, creamier broth.'],
       ['Temperature Control','Never let coconut milk come to a hard, rolling boil. High heat can destabilize the fat-and-water emulsion, causing the broth to separate and look oily or curdled. Keep the heat low once the coconut milk is added.'],
       ['Substitute','Lite coconut milk can be used instead of full-fat coconut milk, but the broth will be less rich. Since lite coconut milk contains more water, reduce the added water or chicken stock by about 25% of the amount of coconut milk used to help keep the soup from becoming too thin.']
@@ -949,7 +949,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
     name:'GALANGAL',
     tag:'THE SIGNATURE AROMATIC',
     details:[
-      ['Flavor','Woody, citrusy, piney, and distinctly peppery. Its flavor is quite different from ordinary ginger.'],
+      ['Flavour','Woody, citrusy, piney, and distinctly peppery. Its flavour is quite different from ordinary ginger.'],
       ['Where to Find','Look in Toronto Asian grocery stores such as Best Fresh Foods, Nations, Chinatown markets, and T&T.'],
       ['Substitute','Fresh ginger with a little extra lemongrass can approximate some of its aromatic qualities. Ginger brings a sharper, biting heat, while galangal has a rounder, more botanical aroma that defines Tom Kha.'],
       ['Storage','Wrap fresh galangal loosely and freeze for longer storage. Keep dried galangal in an airtight container in a cool, dark place.']
@@ -959,7 +959,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
     name:'MAKRUT LIME LEAVES',
     tag:'THE CITRUS PERFUME',
     details:[
-      ['Flavor','Intensely citrusy, floral, sweet, and aromatic.'],
+      ['Flavour','Intensely citrusy, floral, sweet, and aromatic.'],
       ['Best Choice','Fresh makrut lime leaves offer the most vibrant fragrance.'],
       ['Pro Technique','Tear or gently bruise the leaves with your hands before adding them to the pot. This helps release their aromatic oils and infuse the broth.'],
       ['Where to Find','Look in Toronto Asian grocery stores such as Best Fresh Foods, Nations, Chinatown markets, and T&T.'],
@@ -971,7 +971,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
     name:'LEMONGRASS',
     tag:'THE LEMON IMPERSONATOR',
     details:[
-      ['Flavor','Bright, citrusy, grassy, and refreshing.'],
+      ['Flavour','Bright, citrusy, grassy, and refreshing.'],
       ['Substitute','Frozen or pre-minced lemongrass is a convenient alternative when fresh stalks are unavailable. Use about 1½ tbsp (8–10g) of finely minced lemongrass in place of 1 fresh stalk.'],
       ['Storage','Refrigerate fresh stalks for about a week or freeze them for longer storage.'],
     ]
@@ -1006,7 +1006,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
         'If using minced lemongrass instead, measure 1½ tbsp.',
         'Add {{qty:Water or Chicken Stock}} water or chicken stock, galangal, lemongrass, makrut lime leaves, {{qty:Onion, Sliced}} onion, {{qty:Garlic, Lightly Crushed}} garlic, and {{qty:Fresh Chilies, Lightly Crushed}} fresh chilies to a saucepan.',
         'Bring to a gentle simmer over medium heat and cook for 5–10 minutes, until the broth smells deeply aromatic.'
-      ],stepImages:['images/recipes/tom-kha-gai/step-01-01.jpg','images/recipes/tom-kha-gai/step-01-02.jpg','images/recipes/tom-kha-gai/step-01-03.jpg']},
+      ],stepImages:['images/recipes/tom-kha-gai/step-01-01.jpg','images/recipes/tom-kha-gai/step-01-02.jpg']},
       {number:'02',title:'COOK THE CHICKEN & COCONUT',clock:'11:33 PM',paragraphs:[
         'Cut {{qty:Chicken thighs, boneless, skinless}} chicken thighs into bite-sized pieces.',
         'Add the chicken thighs to the aromatic broth and simmer until just cooked through.',
@@ -1017,18 +1017,18 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
       {number:'03',title:'SEASON & FINISH',clock:'11:41 PM',paragraphs:[
         'Stir in {{qty:Fish Sauce}} fish sauce and {{qty:Palm Sugar or Granulated Sugar}} palm sugar or granulated sugar. Turn off the heat.',
         'Add {{qty:Fresh Lime Juice}} fresh lime juice.',
-        'Taste and adjust with a little more fish sauce for saltiness, lime juice for acidity, or sugar if the flavors feel too sharp.',
+        'Taste and adjust with a little more fish sauce for saltiness, lime juice for acidity, or sugar if the flavours feel too sharp.',
         'Finish with fresh cilantro.'
       ],stepImages:['images/recipes/tom-kha-gai/step-03-01.jpg','images/recipes/tom-kha-gai/step-03-02.jpg']}
     ],
     notes:[
       ['The Lime Trick','Makrut Lime Leaf gives the soup its floral citrus aroma, while Fresh Lime Juice brings the sharp acidity. Add the juice after turning off the heat to keep that fresh citrus character.'],
-      ['Galangal Matters','Ginger is an acceptable emergency substitute, but fresh Galangal gives a distinctly peppery, floral flavor that makes the soup taste much more like Tom Kha.'],
+      ['Galangal Matters','Ginger is an acceptable emergency substitute, but fresh Galangal gives a distinctly peppery, floral flavour that makes the soup taste much more like Tom Kha.'],
       ['Toronto Pantry Reality','Fresh Galangal and Lemongrass are easy to find at Toronto Asian grocery stores, while dried Makrut Lime Leaves are useful when you want to make this on a random midnight without another grocery run. If you buy fresh galangal or lime leaves and have extra, freeze them immediately!'],
       ['Do you Eat the Herbs?', 'Just like bay leaves in Western cooking, lemongrass, galangal, and makrut lime leaves are used to infuse the broth. They are generally left in the bowl for rustic presentation, but you do not eat the tough stalks or thick galangal pieces.']
     ],
     finePrint:{
-      'BEST EATEN':'Fresh, while the aromatics are fragrant and the lime flavor is bright.',
+      'BEST EATEN':'Fresh, while the aromatics are fragrant and the lime flavour is bright.',
       'MAKE AHEAD':'Yes. If possible, add the fresh lime juice just before serving rather than before storing.',
       'STORAGE':'Refrigerate in an airtight container for up to 3 days.',
       'FREEZER':'Freezing may cause the coconut broth to separate and the mushrooms to soften. Stir well after reheating.',
@@ -1053,13 +1053,13 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
 
 It was sweet, tangy, a little spicy, and had that nice crunch from the crushed peanuts. Such a simple combination, but I couldn't stop thinking about it even after I got back home.
 
-Thailand isn't exactly around the corner from Toronto, and going back just for that sauce wasn't really an option. So one night, with some chicken sitting in the fridge, I started wondering if I could bring those flavors into a dish of my own.
+Thailand isn't exactly around the corner from Toronto, and going back just for that sauce wasn't really an option. So one night, with some chicken sitting in the fridge, I started wondering if I could bring those flavours into a dish of my own.
 
 I decided to give it a try.
 
-This isn't a traditional Thai dish, and I'm not trying to recreate the original fish cakes. I just wanted to bring back a flavor I really liked and see what I could make with it.
+This isn't a traditional Thai dish, and I'm not trying to recreate the original fish cakes. I just wanted to bring back a flavour I really liked and see what I could make with it.
 
-And that's how this recipe came about. Sometimes, it's not the dish itself that stays with you, but a flavor you just can't forget.`,
+And that's how this recipe came about. Sometimes, it's not the dish itself that stays with you, but a flavour you just can't forget.`,
     heroImage:'images/recipes/sweet-chili-peanut-chicken/hero.jpg',
     recipeImage:'images/recipes/sweet-chili-peanut-chicken/recipe.jpg',
     stepQuantityConversion:true,
@@ -1069,10 +1069,10 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
     name:'100% PEANUT BUTTER',
     tag:'THE NUTTY HEART',
     details:[
-      ['Flavor','Rich, nutty, roasted, and creamy.'],
+      ['Flavour','Rich, nutty, roasted, and creamy.'],
       ['Best Choice','Use smooth peanut butter made from 100% peanuts, with no added sugar.'],
-      ['Why Here','Adds concentrated roasted-peanut flavor and creates a creamy, glossy sauce without the need for a separate peanut sauce.'],
-      ['Substitute','Other smooth nut butters, such as almond or cashew butter, can work, although the flavor will be different.'],
+      ['Why Here','Adds concentrated roasted-peanut flavour and creates a creamy, glossy sauce without the need for a separate peanut sauce.'],
+      ['Substitute','Other smooth nut butters, such as almond or cashew butter, can work, although the flavour will be different.'],
       ['Midnight Fix', 'If using classic peanut butter with added sugar (like Kraft, Skippy, or Jif), reduce the sugar in the recipe by half (or to taste), and cut the added salt. Since standard commercial spreads already contain sugar and oil, tasting the sauce as you whisk keeps it from becoming cloyingly sweet.']
     ]
   },
@@ -1080,17 +1080,17 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
     name:'SAMBAL OELEK',
     tag:'THE CONTROLLED HEAT',
     details:[
-      ['Flavor','Fresh chili heat with a slightly tangy edge.'],
+      ['Flavour','Fresh chili heat with a slightly tangy edge.'],
       ['Best Choice','Choose a simple chili paste with minimal added ingredients.'],
       ['Why Here','Provides a clean chili kick without making the peanut sauce overwhelmingly spicy.'],
-      ['Substitute','Use the same amount of mild chili paste. Finely minced fresh red chili can also be used in the same amount, although it will have a fresher flavor and a slightly different texture. Adjust the amount to taste.']
+      ['Substitute','Use the same amount of mild chili paste. Finely minced fresh red chili can also be used in the same amount, although it will have a fresher flavour and a slightly different texture. Adjust the amount to taste.']
     ]
   },
   {
     name:'RICE VINEGAR',
-    tag:'THE FLAVOR BALANCER',
+    tag:'THE FLAVOUR BALANCER',
     details:[
-      ['Flavor','Clean, mild acidity.'],
+      ['Flavour','Clean, mild acidity.'],
       ['Best Choice','Use plain, unseasoned rice vinegar.'],
       ['Why Here','Cuts through the richness of peanut butter and balances the sweetness of sugar, keeping the sauce from tasting too heavy.'],
       ['Substitute','White vinegar can work. Start with slightly less, then adjust to taste.']
@@ -1189,7 +1189,7 @@ Maybe that’s what haha no aji really means. Not that every mom made the same d
 
 You might be more familiar with Salisbury steak, which is often served with a rich mushroom gravy. Japanese hamburg steak is a close cousin, but the biggest difference is the sauce: instead of mushroom gravy, it’s coated in a sweet, savory, and tangy Japanese-style demi-glace sauce made with ketchup, Worcestershire sauce, and soy sauce.
 
-The patty is soft and bouncy, with a golden crust on the outside and plenty of juicy, savory flavor in every bite!`,
+The patty is soft and bouncy, with a golden crust on the outside and plenty of juicy, savory flavour in every bite!`,
 
   heroImage: 'images/recipes/moms-hamburg-steak/hero.jpg',
   recipeImage: 'images/recipes/moms-hamburg-steak/recipe.jpg',
@@ -1201,7 +1201,7 @@ The patty is soft and bouncy, with a golden crust on the outside and plenty of j
       name: 'GROUND MEAT (BEEF & PORK MIX)',
       tag: 'The Juicy Foundation',
       details: [
-        ['WHY 6:4 RATIO?', 'A 6:4 ratio of ground beef to ground pork gives you a nice balance of flavor and juiciness. Beef brings a deep, savory flavor, while pork adds fat and tenderness to keep the patties moist.'],
+        ['WHY 6:4 RATIO?', 'A 6:4 ratio of ground beef to ground pork gives you a nice balance of flavour and juiciness. Beef brings a deep, savory flavour, while pork adds fat and tenderness to keep the patties moist.'],
         ['SUBSTITUTE', 'You can use any ratio of ground beef and pork, or even 100% regular ground beef or 100% ground pork. If using beef, avoid extra-lean ground beef, as it may make the patties dry.']
       ]
     },
@@ -1225,9 +1225,9 @@ The patty is soft and bouncy, with a golden crust on the outside and plenty of j
     },
     {
       name: 'GROUND NUTMEG',
-      tag: 'The Flavor Elevator',
+      tag: 'The Flavour Elevator',
       details: [
-        ['WHY HERE', 'Nutmeg adds warmth and a subtle aromatic depth that complements the meat and gives the patties a classic Japanese yoshoku flavor.'],
+        ['WHY HERE', 'Nutmeg adds warmth and a subtle aromatic depth that complements the meat and gives the patties a classic Japanese yoshoku flavour.'],
         ['SUBSTITUTE', 'Use the same amount of ground allspice, or simply leave it out and add an extra pinch of black pepper if desired.']
       ]
     },
@@ -1252,7 +1252,7 @@ The patty is soft and bouncy, with a golden crust on the outside and plenty of j
       tag: 'The Pan Deglazer',
       details: [
         ['WHY HERE', 'Helps lift the browned bits from the pan while adding a mild sweetness that balances the acidity of the ketchup and Worcestershire sauce.'],
-        ['SUBSTITUTE', 'Use the same amount of water, dry white wine, or Chinese Shaoxing wine. Water gives a slightly lighter flavor, but it works perfectly well in this rich sauce.']
+        ['SUBSTITUTE', 'Use the same amount of water, dry white wine, or Chinese Shaoxing wine. Water gives a slightly lighter flavour, but it works perfectly well in this rich sauce.']
       ]
     }
   ],
@@ -1269,7 +1269,7 @@ The patty is soft and bouncy, with a golden crust on the outside and plenty of j
     { amount: 0.5, unit: 'g', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Black pepper' },
     { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground nutmeg' },
     { unit: '', item: 'Neutral oil, for greasing' },
-    { unit: '', item: 'Sake or water, for steamimg' },
+    { unit: '', item: 'Sake or water, for steaming' },
 
     { group: 'JAPANESE-STYLE “DEMI-GLACE” SAUCE' },
     { amount: 60, unit: 'ml', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Sake' },
@@ -1341,7 +1341,7 @@ The patty is soft and bouncy, with a golden crust on the outside and plenty of j
     ['CATCH-BALL MOTION TO PREVENT CRACKS', 'Gently tossing the mixture between your hands helps remove air pockets and create smoother patties, reducing the chance of cracks as they cook.'],
     ['STEAMING WITH WATER OR SAKE', 'Hamburg patties are thick, so searing alone may brown the outside before the center is cooked. Adding a splash of water or sake and covering the skillet helps cook the inside gently.'],
     ['STALE BREADCRUMB HACK', 'If you have hard, stale bread on hand, grate it into crumbs. Crushed crackers, oatmeal, or leftover cooked white rice can also help bind the patties when you are out of breadcrumbs.'],
-    ['SAVE THE PAN FOND', 'Don’t wash the skillet after searing! The browned bits left behind add flavor to the sauce when you scrape them up with the liquid.']
+    ['SAVE THE PAN FOND', 'Don’t wash the skillet after searing! The browned bits left behind add flavour to the sauce when you scrape them up with the liquid.']
   ],
 
   finePrint: {
@@ -1386,8 +1386,8 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
         name: 'CREAM CHEESE',
         tag: 'THE UNQUESTIONABLE STAR',
         details: [
-          ['FLAVOR', 'Smooth, rich, milky, and slightly tangy, with a subtle salty note.'],
-          ['BEST CHOICE', 'Full-fat cream cheese for a richer flavor and creamier texture.'],
+          ['FLAVOUR', 'Smooth, rich, milky, and slightly tangy, with a subtle salty note.'],
+          ['BEST CHOICE', 'Full-fat cream cheese for a richer flavour and creamier texture.'],
           ['No Substitute (unfortunately)', 'There is no substitute for the main character!'],
           ['STORAGE', 'Keep refrigerated. For this recipe, bring it to room temperature before using to prevent lumps.']
         ]
@@ -1396,7 +1396,7 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
         name: 'SOUR CREAM',
         tag: 'THE REFINING TANG',
         details: [
-          ['FLAVOR', 'Creamy with a pleasant tang that balances the richness of the cheese and creates a lighter finish.'],
+          ['FLAVOUR', 'Creamy with a pleasant tang that balances the richness of the cheese and creates a lighter finish.'],
           ['BEST CHOICE', 'Full-fat sour cream for a creamy texture and balanced tanginess.'],
           ['WHY HERE', 'Adds pleasant acidity to cut through the heavy milk fat of cream cheese, preventing the cake from feeling cloying.'],
           ['SUBSTITUTE', 'The same amount of plain Greek yogurt. Choose full-fat Greek yogurt if possible for the creamiest result. The cheesecake will taste slightly tangier with a somewhat lighter, less rich mouthfeel.'],
@@ -1407,7 +1407,7 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
         name: '35% WHIPPING CREAM',
         tag: 'THE SILKY LIQUID',
         details: [
-          ['FLAVOR', 'Mild, milky, and creamy. It softens the sharpness of sour cream and contributes to a smooth, velvety mouthfeel.'],
+          ['FLAVOUR', 'Mild, milky, and creamy. It softens the sharpness of sour cream and contributes to a smooth, velvety mouthfeel.'],
           ['BEST CHOICE', '35% milk-fat whipping cream for a rich texture without making the cheesecake as heavy as a traditional New York-style cake.'],
           ['WHY HERE', 'Adds fluid milk fat to create a batter that bakes into a silky, custard-like texture.'],
           ['SUBSTITUTE', 'Other creams with lower fat contents can be used in the same amount, though the final cake may set slightly looser or taste less rich.'],
@@ -1425,7 +1425,7 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
       { amount: 10, unit: 'ml', imperialAmount: 2, imperialUnit: 'tsp', item: 'Lemon juice' },
       { amount: 0.5, unit: 'tsp', item: 'Vanilla extract' }
     ],
-    stats: { prep: '20 mins', cook: '45–50 mins', chill: '8 hrs+', total: '9 hrs 5 mins+', serves: '6–8', pan: '7 inch / 18 cm loaf pan', quiet: '⭐⭐⭐⭐⭐' },
+    stats: { prep: '20 mins', cook: '45–50 mins', chill: '8 hrs+', total: '9 hrs 5 mins+', serves: '6-8', pan: '7 inch / 18 cm loaf pan', quiet: '⭐⭐⭐⭐⭐' },
     showPan: true,
     showChill: true,
     stepQuantityConversion: true,
@@ -1536,7 +1536,7 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
         name: 'PUMPKIN PURÉE',
         tag: 'THE VELVETY BASE',
         details: [
-          ['FLAVOR', 'Earthy, mellow, and mildly sweet; it gives the filling its signature pumpkin flavor and creamy body.'],
+          ['FLAVOUR', 'Earthy, mellow, and mildly sweet; it gives the filling its signature pumpkin flavour and creamy body.'],
           ['BEST CHOICE', 'In Toronto/Canada, you’ll mostly find E.D. Smith “100% Pure Pumpkin” (make sure it says Pure, not Pumpkin Pie Mix!).'],
           ['SUBSTITUTE', 'The same amount of steamed and puréed Kabocha squash or sweet potatoes. Avoid butternut squash, as its higher water content can make the filling too loose.'],
           ['STORAGE', 'Freeze extra purée in airtight containers or Ziploc bags for up to 3 months.'],
@@ -1547,9 +1547,9 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
   name: 'PUMPKIN PIE SPICE',
 tag: 'THE WARM AUTUMN MIDNIGHT BLEND',
 details: [
-  ['FLAVOR', 'A warm, aromatic blend of cinnamon, ginger, nutmeg, and cloves. Cinnamon brings sweetness and warmth, ginger adds a little brightness, while nutmeg and cloves give the blend its deeper, earthy aroma.'],
-  ['WHY HERE', 'This homemade spice blend gives the pumpkin filling its signature autumn flavor. I like this particular balance because cinnamon leads, while the other spices add depth without overpowering the pumpkin.'],
-  ['BEST CHOICE', 'Freshly ground spices give the blend a more fragrant flavor, but good-quality pre-ground spices work perfectly well too. Be especially careful with cloves, as their strong, sharp flavor can easily overpower the other spices. A little goes a long way!'],
+  ['FLAVOUR', 'A warm, aromatic blend of cinnamon, ginger, nutmeg, and cloves. Cinnamon brings sweetness and warmth, ginger adds a little brightness, while nutmeg and cloves give the blend its deeper, earthy aroma.'],
+  ['WHY HERE', 'This homemade spice blend gives the pumpkin filling its signature autumn flavour. I like this particular balance because cinnamon leads, while the other spices add depth without overpowering the pumpkin.'],
+  ['BEST CHOICE', 'Freshly ground spices give the blend a more fragrant flavour, but good-quality pre-ground spices work perfectly well too. Be especially careful with cloves, as their strong, sharp flavour can easily overpower the other spices. A little goes a long way!'],
   ['SUBSTITUTE', 'Use store-bought pumpkin pie spice in place of the individual spices. Adjust the amount to taste, as commercial blends can vary.'],
   ['MIDNIGHT FIX', 'Make a little extra and keep it ready for your next pumpkin pie, pancakes, oatmeal, or a cozy autumn latte!']
   ]
@@ -1558,10 +1558,10 @@ details: [
         name: 'BROWN SUGAR',
         tag: 'THE CARAMEL SWEETNESS',
         details: [
-          ['FLAVOR', 'Warm, caramel-like, molasses-rich.'],
+          ['FLAVOUR', 'Warm, caramel-like, molasses-rich.'],
           ['ROLE', 'Adds sweetness and moisture while balancing the earthy pumpkin and warm spices.'],
-          ['BEST CHOICE', 'Light brown sugar gives a balanced flavor; dark brown sugar adds a deeper molasses note. Either can be used.'],
-          ['SUBSTITUTE', 'The same amount of white sugar, although the flavor will be slightly lighter.'],
+          ['BEST CHOICE', 'Light brown sugar gives a balanced flavour; dark brown sugar adds a deeper molasses note. Either can be used.'],
+          ['SUBSTITUTE', 'The same amount of white sugar, although the flavour will be slightly lighter.'],
           ['STORAGE', 'Keep in an airtight container at room temperature to help prevent it from drying out and hardening.']
         ]
       }
@@ -1580,7 +1580,7 @@ details: [
       { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground cloves' },
       { amount: 0.25, unit: 'tsp', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Salt' }
     ],
-    stats: { prep: '20 mins', cook: '35–45 mins', chill: '2 hrs', total: '2 hrs 55 mins+', serves: '6–8', pan: '9 inch / 23 cm pie dish', quiet: '⭐⭐⭐⭐☆' },
+    stats: { prep: '20 mins', cook: '35–45 mins', chill: '2 hrs', total: '2 hrs 55 mins+', serves: '6-8', pan: '9 inch / 23 cm pie dish', quiet: '⭐⭐⭐⭐☆' },
     steps: [
       {
         number: '01',
@@ -1623,7 +1623,7 @@ details: [
       }
     ],
     notes: [
-      ['BUILD YOUR OWN PUMPKIN PIE SPICE', 'The balance of spices makes a big difference in pumpkin pie. I personally like cinnamon to be the main flavor, with ginger adding a little warmth and nutmeg bringing depth. Go easy on the cloves, though. They have a surprisingly strong, sharp flavor and can easily take over the whole filling. It’s always easier to add a little more than to fix an overpowering spice blend.'],
+      ['BUILD YOUR OWN PUMPKIN PIE SPICE', 'The balance of spices makes a big difference in pumpkin pie. I personally like cinnamon to be the main flavour, with ginger adding a little warmth and nutmeg bringing depth. Go easy on the cloves, though. They have a surprisingly strong, sharp flavour and can easily take over the whole filling. It’s always easier to add a little more than to fix an overpowering spice blend.'],
       ['THE PERFECT WOBBLE', 'Don’t wait until the center looks completely firm before taking the pie out of the oven. The edges should be set, but the center should still have a slight wobble. It will continue to set as it cools and chills. Overbaking can make the filling less smooth, so a little patience goes a long way.']
     ],
     finePrint: {
@@ -1651,7 +1651,7 @@ details: [
   course: 'Sides',
   courseDisplay: 'Sides',
   categories: ['Sides'],
-  dateAdded: '2026-11-02', timeStamp:'12:04 PM',
+  dateAdded: '2026-11-02', timeStamp:'12:04 AM',
   heroImage: 'images/recipes/khai-yat-sai/hero.JPG',
   recipeImage: 'images/recipes/khai-yat-sai/recipe.jpg',
 
@@ -1674,7 +1674,7 @@ It's simple, satisfying, and a lovely reminder that a little creativity with eve
       name: 'FISH SAUCE',
       tag: 'THE SALTY, SAVOURY ESSENTIAL',
       details: [
-        ['FLAVOR', 'Salty, savoury and deeply umami, with a distinctive fermented aroma.'],
+        ['FLAVOUR', 'Salty, savoury and deeply umami, with a distinctive fermented aroma.'],
         ['WHY HERE', 'Adds depth and savouriness to the pork filling.'],
         ['SUBSTITUTE', 'The same amount of light soy sauce mixed with a pinch of sugar, or a 1:1 mix of light soy sauce and Worcestershire sauce. Since Worcestershire sauce contains anchovies, it adds a closer fermented depth than plain soy sauce.'],
         ['STORAGE', 'Keep tightly sealed in a cool, dark place.']
@@ -1684,7 +1684,7 @@ It's simple, satisfying, and a lovely reminder that a little creativity with eve
       name: 'OYSTER SAUCE',
       tag: 'RICHNESS IN A SPOONFUL',
       details: [
-        ['FLAVOR', 'Rich, savoury and slightly sweet, with a mellow umami flavour.'],
+        ['FLAVOUR', 'Rich, savoury and slightly sweet, with a mellow umami flavour.'],
         ['WHY HERE', 'Adds body, colour and savoury depth to the filling.'],
         ['SUBSTITUTE', 'The same amount of a 2:1 mix of soy sauce and sugar (or dark soy sauce with a pinch of sugar). For a closer match to oyster sauce’s thick consistency, mix equal parts soy sauce and sweet Hoisin sauce.'],
         ['STORAGE', 'Refrigerate after opening.']
@@ -1771,9 +1771,9 @@ It's simple, satisfying, and a lovely reminder that a little creativity with eve
       title: 'COOK THE FILLING',
       clock: '12:04 AM',
       stepImages: [
-        'images/recipes/khai-yat-sai/step-01-1.jpg',
-        'images/recipes/khai-yat-sai/step-01-2.jpg',
-        'images/recipes/khai-yat-sai/step-01-3.jpg'
+        'images/recipes/khai-yat-sai/step-01-01.jpg',
+        'images/recipes/khai-yat-sai/step-01-02.jpg',
+        'images/recipes/khai-yat-sai/step-01-03.jpg'
       ],
       paragraphs: [
         'Finely chop {{qty:PORK FILLING::Garlic}} garlic and {{qty:PORK FILLING::Onion}} onion. Dice {{qty:PORK FILLING::Tomato}} tomato into small pieces.',
@@ -1786,9 +1786,9 @@ It's simple, satisfying, and a lovely reminder that a little creativity with eve
       title: 'SEASON AND REDUCE',
       clock: '12:08 AM',
       stepImages: [
-        'images/recipes/khai-yat-sai/step-02-1.jpg',
-        'images/recipes/khai-yat-sai/step-02-2.jpg',
-        'images/recipes/khai-yat-sai/step-02-3.jpg'
+        'images/recipes/khai-yat-sai/step-02-01.jpg',
+        'images/recipes/khai-yat-sai/step-02-02.jpg',
+        'images/recipes/khai-yat-sai/step-02-03.jpg'
       ],
       paragraphs: [
         'Add {{qty:PORK FILLING::Fish Sauce}} fish sauce, {{qty:PORK FILLING::Oyster Sauce}} oyster sauce and {{qty:PORK FILLING::Granulated Sugar}} sugar. Stir well to coat the pork.',
@@ -1801,7 +1801,7 @@ It's simple, satisfying, and a lovely reminder that a little creativity with eve
       title: 'MAKE THE OMELETTE',
       clock: '12:13 AM',
       stepImages: [
-        'images/recipes/khai-yat-sai/step-03-1.jpg'
+        'images/recipes/khai-yat-sai/step-03-01.jpg'
       ],
       paragraphs: [
         'This recipe makes {{divide:Omelette::Large Eggs/2}} individual omelettes. Cook them one at a time, using 2 eggs for each omelette in an 8 inch / 20 cm frying pane.',
@@ -1818,9 +1818,9 @@ It's simple, satisfying, and a lovely reminder that a little creativity with eve
       title: 'FILL AND FOLD',
       clock: '12:17 AM',
       stepImages: [
-        'images/recipes/khai-yat-sai/step-04-1.jpg',
-        'images/recipes/khai-yat-sai/step-04-2.jpg',
-        'images/recipes/khai-yat-sai/step-04-3.jpg'
+        'images/recipes/khai-yat-sai/step-04-01.jpg',
+        'images/recipes/khai-yat-sai/step-04-02.jpg',
+        'images/recipes/khai-yat-sai/step-04-03.jpg'
       ],
       paragraphs: [
         'Divide the pork filling into {{divide:Omelette::Large Eggs/2}} equal portions. Place one portion in the centre of each omelette, leaving approximately 2 inches / 5 cm of space around the edges.',
@@ -1832,10 +1832,10 @@ It's simple, satisfying, and a lovely reminder that a little creativity with eve
       title: 'FLIP AND REVEAL',
       clock: '12:18 AM',
       stepImages: [
-        'images/recipes/khai-yat-sai/step-05-1.jpg',
-        'images/recipes/khai-yat-sai/step-05-2.jpg',
-        'images/recipes/khai-yat-sai/step-05-3.jpg',
-        'images/recipes/khai-yat-sai/step-05-4.jpg'
+        'images/recipes/khai-yat-sai/step-05-01.jpg',
+        'images/recipes/khai-yat-sai/step-05-02.jpg',
+        'images/recipes/khai-yat-sai/step-05-03.jpg',
+        'images/recipes/khai-yat-sai/step-05-04.jpg'
       ],
       paragraphs: [
         'Place a serving plate upside down over the frying pan. Carefully flip the pan and plate together to turn the omelette onto the plate.',
@@ -1899,13 +1899,13 @@ Keep a jar in the fridge, and you're always ready.`,
   ingredientFile: [
   { name: 'APPLE CIDER VINEGAR',
     tag: 'THE TANGY KICK',
-    details: [['FLAVOR', 'Bright, sharp, and fruity.'],
+    details: [['FLAVOUR', 'Bright, sharp, and fruity.'],
       ['WHY HERE', 'Cuts through the rich sweetness of ketchup and brown sugar, giving the BBQ sauce its signature tang.'],
-      ['SUBSTITUTE', 'White wine vinegar or regular distilled white vinegar, though the flavor will be slightly less fruity.']]
+      ['SUBSTITUTE', 'White wine vinegar or regular distilled white vinegar, though the flavour will be slightly less fruity.']]
   },
   { name: 'MOLASSES',
     tag: 'THE SMOKY DEPTH',
-    details: [['FLAVOR', 'Deep, dark, bittersweet, and rich.'],
+    details: [['FLAVOUR', 'Deep, dark, bittersweet, and rich.'],
       ['WHY HERE', 'Works alongside brown sugar to mimic authentic, slow-simmered BBQ depth and dark caramel notes.'],
       ['SUBSTITUTE', 'The same amount of dark corn syrup or brown sugar, though you will lose that distinct molasses richness.']]
   }
@@ -1958,7 +1958,7 @@ Keep a jar in the fridge, and you're always ready.`,
 
   steps:[
     {number:'01',title:'EVERYTHING IN!',clock:'',paragraphs:[
-        'Add {{qty:Ketchup}} ketchup, {{qty:Apple Cider Vinegar}} apple cider vineger, {{qty:Water}} water, {{qty:Brown sugar}} brown sugar, {{qty:Molasses}} molasses, {{qty:Worcestershire sauce}} Worcestershire sauce, {{qty:Mustard powder}} mustard powder, {{qty:Ground cumin}} ground cumin, {{qty:Garlic powder}} garlic powder, {{qty:Onion powder}} onion powder, {{qty:Smoked paprika}} smoked paprika, {{qty:Black pepper}} black pepper, and {{qty:Salt}} salt to a small saucepan.',
+        'Add {{qty:Ketchup}} ketchup, {{qty:Apple Cider Vinegar}} apple cider vinegar, {{qty:Water}} water, {{qty:Brown sugar}} brown sugar, {{qty:Molasses}} molasses, {{qty:Worcestershire sauce}} Worcestershire sauce, {{qty:Mustard powder}} mustard powder, {{qty:Ground cumin}} ground cumin, {{qty:Garlic powder}} garlic powder, {{qty:Onion powder}} onion powder, {{qty:Smoked paprika}} smoked paprika, {{qty:Black pepper}} black pepper, and {{qty:Salt}} salt to a small saucepan.',
         'Bring to a gentle simmer over low to medium-low heat.',
         'Simmer for 15–20 minutes, stirring occasionally, until slightly thickened.',
         'Let cool before using.'
@@ -2021,7 +2021,7 @@ Keep a jar in the fridge, and you're always ready.`,
     categories:['Baking','Desserts'],
     dateAdded:'2026-11-04',
     timeStamp:'10:20 PM',
-    description:'A soft apple and date cake topped with a golden, caramelized coconut crust. Rich, moist, and full of warm brown sugar flavor.',
+    description:'A soft apple and date cake topped with a golden, caramelized coconut crust. Rich, moist, and full of warm brown sugar flavour.',
     heroImage:'images/recipes/lumberjack-cake/hero.jpg',
     recipeImage:'images/recipes/lumberjack-cake/recipe.jpg',
     usCupFractions:true,
@@ -2053,28 +2053,28 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
         name: 'APPLES',
         tag: 'THE FRUIT FOUNDATION',
         details: [
-          ['FLAVOR', 'Sweet-tart and fruity, adding freshness and moisture to the cake.'],
+          ['FLAVOUR', 'Sweet-tart and fruity, adding freshness and moisture to the cake.'],
           ['BEST CHOICE', 'Firm apples that hold their shape during baking, such as Honeycrisp, Gala, or Granny Smith.'],
-          ['WHY HERE', 'Apples add moisture and a gentle fruity flavor, balancing the sweetness of the dates and rich coconut topping.'],
+          ['WHY HERE', 'Apples add moisture and a gentle fruity flavour, balancing the sweetness of the dates and rich coconut topping.'],
           ['PREPARATION & SIZE TIP', 'Peel, core, and cut into small, even 5–8 mm cubes. Avoid chopping them too finely; if the pieces are cut too small, they tend to melt down into the batter and you lose that pleasant apple texture in every bite.'],
-          ['SUBSTITUTE', 'Pears can be used for a softer, milder flavor. Choose firm pears and cut them into similar-sized pieces.']
+          ['SUBSTITUTE', 'Pears can be used for a softer, milder flavour. Choose firm pears and cut them into similar-sized pieces.']
         ]
       },
       {
         name: 'PITTED DATES',
         tag: 'THE CHEWY SWEETNESS',
         details: [
-          ['FLAVOR', 'Naturally sweet, rich, and slightly caramel-like, with a soft, chewy texture.'],
+          ['FLAVOUR', 'Naturally sweet, rich, and slightly caramel-like, with a soft, chewy texture.'],
           ['BEST CHOICE', 'Soft, moist, pitted dates such as Medjool or Deglet Noor.'],
           ['WHY HERE', 'Dates add natural sweetness and moisture to the cake, creating a rich, soft texture that pairs beautifully with apples.'],
-          ['SUBSTITUTE', 'Chopped prunes or dried/semi-dried figs can be used, although the flavor will be slightly different.']
+          ['SUBSTITUTE', 'Chopped prunes or dried/semi-dried figs can be used, although the flavour will be slightly different.']
         ]
       },
       {
         name: 'UNSWEETENED SHREDDED COCONUT',
         tag: 'THE EDIBLE WOODEN CRISP',
         details: [
-          ['FLAVOR', 'Mildly sweet, nutty, and tropical, becoming toasted and aromatic when baked.'],
+          ['FLAVOUR', 'Mildly sweet, nutty, and tropical, becoming toasted and aromatic when baked.'],
           ['BEST CHOICE', 'Fine, unsweetened dried shredded coconut. Avoid large coconut flakes, which may create a looser, less cohesive topping.'],
           ['WHY HERE', 'Coconut forms the golden, caramelized topping that gives Lumberjack Cake its signature texture and contrast.'],
           ['SUBSTITUTE', 'Sweetened shredded coconut can be used, but reduce the added brown sugar slightly. Desiccated coconut may also work, although its finer texture can absorb more liquid.']
@@ -2084,7 +2084,7 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
         name: 'MILK (2% OR WHOLE)',
         tag: 'THE MOISTURE BUILDER',
         details: [
-          ['FLAVOR', 'Clean, mild, and milky.'],
+          ['FLAVOUR', 'Clean, mild, and milky.'],
           ['BEST CHOICE', 'Either 2% or whole milk works well. I tested both across multiple batches and did not notice any major performance differences in the crumb structure.'],
           ['WHY HERE', 'Provides the necessary liquid hydration to bloom the dry ingredients and hydrate the dates without adding unwanted heaviness.'],
           ['SUBSTITUTE', 'Plant-based milks like unsweetened oat milk or almond milk can work in a pinch, though dairy milk provides the most reliable traditional crumb.']
@@ -2170,7 +2170,7 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
       },
       {
         number:'05',
-        title:'GATHER THE  WOOD SHAVIGS',
+        title:'GATHER THE WOOD SHAVINGS',
         clock:'10:45 PM',
         paragraphs:[
           'Combine {{qty:WOOD SHAVINGS TOPPING::Unsalted Butter}} butter, {{qty:WOOD SHAVINGS TOPPING::Brown Sugar}} brown sugar, {{qty:WOOD SHAVINGS TOPPING::Milk (2% or whole)}} milk, {{qty:WOOD SHAVINGS TOPPING::Unsweetened Shredded Coconut}} shredded coconut and {{qty:WOOD SHAVINGS TOPPING::Salt}} salt in a small saucepan or a microwave-safe bowl.',
@@ -2212,12 +2212,12 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
     ],
     notes:[
       [
-        'Recreating the Flavor',
+        'Recreating the Flavour',
         'The cake should be moist and tender, with soft pieces of apple and dates throughout. It\'s delicious both warm and chilled, with a soft, moist texture either way. If you want neat, clean slices, let the cake cool completely before cutting.'
       ],
       [
         'Topping',
-        'In my first attempt, the coconut topping developed a golden crust, but the finely shredded coconut was too dry and fell apart when sliced. For the next version, I kept the generous amount of coconut and increased the brown sugar to create a richer, more cohesive caramel coating. Make sure every strand is evenly coated with the butter and brown sugar mixture before baking. A golden, caramelized surface gives the best flavor and texture.'
+        'In my first attempt, the coconut topping developed a golden crust, but the finely shredded coconut was too dry and fell apart when sliced. For the next version, I kept the generous amount of coconut and increased the brown sugar to create a richer, more cohesive caramel coating. Make sure every strand is evenly coated with the butter and brown sugar mixture before baking. A golden, caramelized surface gives the best flavour and texture.'
       ]
     ],
     finePrint:{
