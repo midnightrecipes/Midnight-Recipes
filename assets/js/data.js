@@ -125,7 +125,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
   },
 
   {
-    slug:'spicy-taiwan-ground-pork',
+    slug:'addictive-spicy-taiwan-ground-pork',
     title:'Spicy Taiwan Ground Pork',
     source:'Restaurant',
     original:'Misen 味仙, Nagoya, Japan',
@@ -136,7 +136,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
     dateAdded:'2026-09-27',
     timeStamp:'11:14 PM',
     description:'Recreating Nagoya’s famous Misen Taiwan Ramen mince at home. Fiery, garlic-packed ground pork over hot rice with a runny soft-boiled egg.',
-    heroImage:'images/recipes/spicy-taiwan-ground-por/hero.jpg', recipeImage:'images/recipes/spicy-taiwan-ground-por/recipe.jpg',
+    heroImage:'images/recipes/addictive-spicy-taiwan-ground-pork/hero.jpg', recipeImage:'images/recipes/addictive-spicy-taiwan-ground-pork/recipe.jpg',
     unitOverrides:{imperial:{'sesame oil':'tbsp','soy sauce':'tbsp','Shaoxing wine':'tbsp','doubanjiang':'tbsp','sugar':'tsp'}},
     stepQuantityConversion:true,
     usCupFractions:true,
@@ -223,31 +223,31 @@ Tonight, I’m taking that iconic flavour and making the ground pork the star, s
         'Add {{qty:sesame oil}} sesame oil, minced {{qty:garlic}}, and {{qty:fresh red chilies}} finely minced fresh red chilies to a cold frying pan.',
         'Turn the heat to low and gently cook for 1–2 minutes.',
         'Keep the garlic pale. You want the oil infused with garlic and chili, not burnt garlic.'
-      ],stepImages:['images/recipes/spicy-taiwan-ground-por/step-01-01.JPG','images/recipes/spicy-taiwan-ground-por/step-01-02.JPG','images/recipes/spicy-taiwan-ground-por/step-01-03.JPG']},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-01-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-01-02.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-01-03.JPG']},
       {number:'02',title:'COOK THE PORK',clock:'11:17 PM',paragraphs:[
         'Increase the heat to medium-high and add {{qty:ground pork (regular)}} ground pork.',
         'Let the pork sit against the pan briefly so it develops some browned edges.',
         'Break it apart and continue cooking until deeply browned and the pork fat has rendered.',
         'Push the pork toward one side of the pan. Add {{qty:doubanjiang}} doubanjiang to the exposed oil.',
         'Fry the doubanjiang for 30–45 seconds, then mix it thoroughly into the pork.',
-      ],stepImages:['images/recipes/spicy-taiwan-ground-por/step-02-01.JPG','images/recipes/spicy-taiwan-ground-por/step-02-02.JPG']},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-02-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-02-02.JPG']},
       {number:'03',title:'BRAISE & REDUCE',clock:'11:22 PM',paragraphs:[
         'Add {{qty:Shaoxing wine}} Shaoxing wine and let it bubble for about 30 seconds.',
         'Add {{qty:soy sauce}} soy sauce, {{qty:oyster sauce}} oyster sauce, {{qty:gochujang}} gochujang, {{qty:Granulated Sugar}} sugar, {{qty:chicken bouillon powder}} chicken bouillon powder, and {{qty:water}} water.',
         'Stir everything together and bring to a simmer. Reduce the heat to low and simmer uncovered for 10–15 minutes.',
         'Do not completely dry out the mince.',
         'The finished meat should be deeply colored, glossy and intensely savory, with a small amount of concentrated sauce and pork fat still coating the pan.'
-      ],stepImages:['images/recipes/spicy-taiwan-ground-por/step-03-01.JPG','images/recipes/spicy-taiwan-ground-por/step-03-02.JPG']},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-03-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-03-02.JPG']},
       {number:'04',title:'FINISH WITH GARLIC CHIVES',clock:'11:34 PM',paragraphs:[
         'Add {{qty:garlic chives or green onion}} garlic chives.',
         'Toss over medium heat for 30–45 seconds.',
         'Turn off the heat. Add {{qty:sesame oil, for finishing}} sesame oil.',
-      ],stepImages:['images/recipes/spicy-taiwan-ground-por/step-04-01.JPG','images/recipes/spicy-taiwan-ground-por/step-04-02.JPG']},
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-04-01.JPG','images/recipes/addictive-spicy-taiwan-ground-pork/step-04-02.JPG']},
       {number:'05',title:'BRING IT HOME',clock:'11:37 PM',paragraphs:[
         'Spoon hot steamed white rice into a shallow bowl.',
         'Pile the Taiwan mince generously over the rice. Make sure some of the concentrated sauce drips down into the rice.',
         'Top with a soft-boiled egg with a runny yolk.'
-      ],stepImages:['images/recipes/spicy-taiwan-ground-por/step-05-01.jpg']}
+      ],stepImages:['images/recipes/addictive-spicy-taiwan-ground-pork/step-05-01.jpg']}
     ],
     notes:[
       ['The Fresh Chili Trick','Fresh red chili replaces the dried chili traditionally used in many versions of Taiwan mince. Finely chopping the chili with the seeds and membrane distributes the heat throughout the meat rather than giving you occasional bites of whole chili.'],
