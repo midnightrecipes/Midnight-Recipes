@@ -386,7 +386,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
 
 
   {
-    slug:'calabaza-en-tacha-inspired-mexican-pumpkin-pie',
+    slug:'mexican-calabaza-en-tacha-pumpkin-pie',
     title:'Calabaza en Tacha Inspired Mexican Pumpkin Pie', description:'Inspired by Coco, this Mexican-style pumpkin pie reimagines calabaza en tacha with whole-spice infused cream and a rich piloncillo-style glaze.',
     source:'Movie & TV', sourceSecondary:'Family & Tradition', original:'Coco (2017)', dish:'Mexican Pumpkin Pie', cuisine:'Mexican',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'],
