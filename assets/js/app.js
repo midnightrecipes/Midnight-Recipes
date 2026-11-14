@@ -531,7 +531,7 @@ function recipeHtml(r){
   const foundIn=foundTitles.map(title=>{const found=recipes.find(x=>x.title===title&&!x.isUsuals);return found?`<a href="${href('recipes/recipe.html',{slug:found.slug})}">${esc(title)}</a>`:`<span>${esc(title)}</span>`;}).join('<br>');
   const intro=isUsual&&hasMeaningfulValue(r.usualIntro)?`<section class="usual-intro">${String(r.usualIntro).split(/\n\s*\n/).filter(Boolean).map(x=>`<p class="body-copy">${richText(x)}</p>`).join('')}</section>`:'';
   const statsPan=(isUsual||r.showPan)&&r.stats?.pan?`<br><b>Pan</b>: ${esc(r.stats.pan)}`:'';const statsChill=r.stats?.chill?` <b>Chill</b>: ${esc(r.stats.chill)}`:'';
-  return `<div class="recipe-card${r.fixedStepPhotoCells?' fixed-step-photo-cells':''}"><div class="rtop"><div><h1 class="rtitle">${esc(cutieText(r.title))}</h1><div class="meta-line"><span>${r.timeStamp?`📍 ${esc(r.timeStamp)}${r.dateAdded?` · ${esc(new Date(r.dateAdded+'T00:00:00').toLocaleDateString('en-CA',{month:'short',day:'numeric',year:'numeric'}).toUpperCase())}`:''}<span> · TORONTO</span>`:'The Usuals'}</span></div><div class="recipe-meta-divider"></div><p class="facts">${isUsual?`<b>The Usuals</b>: <a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:`<b>Source</b>: <a href="${categoryLink('source',r.source)}">${esc(r.source)}</a>${r.sourceSecondary?` / <a href="${categoryLink('source',r.sourceSecondary)}">${esc(r.sourceSecondary)}</a>`:''}${hasMeaningfulValue(r.original) ? `<br><b>Inspired by</b>: ${
+  return `<div class="recipe-card${r.fixedStepPhotoCells?' fixed-step-photo-cells':''}"><div class="rtop"><div><h1 class="rtitle">${esc(cutieText(r.title))}</h1><div id="recipeRating" class="recipe-rating" aria-live="polite"></div><div class="meta-line"><span>${r.timeStamp?`📍 ${esc(r.timeStamp)}${r.dateAdded?` · ${esc(new Date(r.dateAdded+'T00:00:00').toLocaleDateString('en-CA',{month:'short',day:'numeric',year:'numeric'}).toUpperCase())}`:''}<span> · TORONTO</span>`:'The Usuals'}</span></div><div class="recipe-meta-divider"></div><p class="facts">${isUsual?`<b>The Usuals</b>: <a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:`<b>Source</b>: <a href="${categoryLink('source',r.source)}">${esc(r.source)}</a>${r.sourceSecondary?` / <a href="${categoryLink('source',r.sourceSecondary)}">${esc(r.sourceSecondary)}</a>`:''}${hasMeaningfulValue(r.original) ? `<br><b>Inspired by</b>: ${
   /<[a-z][\s\S]*>/i.test(r.original) 
     ? r.original 
     : (r.originalUrl 
@@ -886,14 +886,26 @@ function renderIngredients(r,scale=1,unit='metric'){
 }
 function renderInstructionSteps(r,scale,unit){document.querySelectorAll('.step').forEach((stepEl,i)=>{const s=r.steps?.[i];if(!s)return;const paragraphs=Array.isArray(s.paragraphs)?s.paragraphs:(s.text||'').split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean);const copy=stepEl.querySelector('.step-copy');if(copy)copy.innerHTML=instructionBlock(paragraphs,r,scale,unit,s.title||'')+(s.stepNote?instructionParagraph(s.stepNote,true,r,scale,unit,false,s.title||''):'');});}
 function bindRecipe(r){let scale=1,unit=store.get('mr-unit')==='metric'?'metric':'imperial';window.__recipeScale=scale;window.__recipeUnit=unit;document.querySelectorAll('#unitToggle button').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.unit===unit)));renderIngredients(r,scale,unit);renderInstructionSteps(r,scale,unit);document.querySelectorAll('#unitToggle button').forEach(b=>b.onclick=()=>{unit=b.dataset.unit;window.__recipeUnit=unit;store.set('mr-unit',unit);document.querySelectorAll('#unitToggle button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));renderIngredients(r,scale,unit);renderInstructionSteps(r,scale,unit)});const scaleInput=document.getElementById('recipeScale');const updateScale=()=>{const value=Number(scaleInput.value);if(!Number.isFinite(value)||value<0.5||Math.abs(value*2-Math.round(value*2))>1e-9)return;scale=value;window.__recipeScale=scale;renderIngredients(r,scale,unit);renderInstructionSteps(r,scale,unit)};scaleInput?.addEventListener('input',updateScale);document.querySelectorAll('[data-scale-step]').forEach(b=>b.addEventListener('click',()=>{const current=Number(scaleInput.value);const base=Number.isFinite(current)&&current>0?current:1;const next=Math.max(0.5,Number((base+(b.dataset.scaleStep==='up'?0.5:-0.5)).toFixed(2)));scaleInput.value=String(next);updateScale();}));document.querySelector('[data-jump]')?.addEventListener('click',()=>document.getElementById('the-recipe')?.scrollIntoView({behavior:'smooth'}));document.getElementById('shareRecipe')?.addEventListener('click',async()=>{const data={title:r.title,url:location.href};try{if(navigator.share)await navigator.share(data);else{await navigator.clipboard.writeText(location.href);alert('Recipe link copied.')}}catch(e){}});document.getElementById('printRecipe')?.addEventListener('click',async()=>{const isIOS=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);const isChromeIOS=/CriOS/i.test(navigator.userAgent);if(isIOS&&isChromeIOS){try{if(navigator.share){await navigator.share({title:r.title,url:location.href});return;}}catch(e){if(e?.name==='AbortError')return;}alert('To print on iPhone: tap Chrome’s Share button, then choose Print. If Print is not available, open this recipe in Safari and select Share → Print.');return;}try{window.print();}catch(e){alert('Printing is not available in this browser. Open this recipe in Safari and choose Share → Print.');}});bindReviews(r);bindCook();}
+
 function bindReviews(r){
   let rating=0,turnstileWidget=null,turnstileToken='';
   const status=document.getElementById('reviewStatus');
   const submit=document.getElementById('submitReview');
   const resetStars=()=>document.querySelectorAll('[data-star]').forEach(x=>{x.setAttribute('aria-pressed','false');x.textContent='☆'});
-  document.querySelectorAll('[data-star]').forEach(b=>b.onclick=()=>{rating=Number(b.dataset.star);document.querySelectorAll('[data-star]').forEach(x=>{const on=Number(x.dataset.star)<=rating;x.setAttribute('aria-pressed',String(on));x.textContent=on?'★':'☆'})});
+
+  document.querySelectorAll('[data-star]').forEach(b=>b.onclick=()=>{
+    rating=Number(b.dataset.star);
+    document.querySelectorAll('[data-star]').forEach(x=>{
+      const on=Number(x.dataset.star)<=rating;
+      x.setAttribute('aria-pressed',String(on));
+      x.textContent=on?'★':'☆';
+    });
+  });
+
   (()=>{const fb=document.getElementById('favRecipe');if(fb){const paint=()=>{const on=getFavs().includes(r.slug);fb.setAttribute('aria-pressed',String(on));fb.setAttribute('aria-label',on?'Remove from favorites':'Add to favorites');fb.title=on?'Remove from favorites':'Add to favorites';document.getElementById('favBtn')?.classList.toggle('has-favs',getFavs().length>0)};paint();fb.addEventListener('click',()=>{const f=getFavs();setFavs(f.includes(r.slug)?f.filter(x=>x!==r.slug):f.concat(r.slug));paint()})}})();
+
   if(!reviewsEnabled)return;
+
   ensureTurnstile().then(()=>{
     const holder=document.getElementById('reviewTurnstile');
     if(!holder)return;
@@ -904,6 +916,7 @@ function bindReviews(r){
       'error-callback':()=>{turnstileToken='';status.textContent='Verification failed. Please try again.'}
     });
   }).catch(()=>{status.textContent='Verification could not load. Please refresh the page.'});
+
   submit?.addEventListener('click',async()=>{
     if(!rating){status.textContent='Please choose a star rating.';return}
     if(!turnstileToken){status.textContent='Please complete the verification before submitting.';return}
@@ -929,16 +942,75 @@ function bindReviews(r){
       if(window.turnstile&&turnstileWidget!==null)window.turnstile.reset(turnstileWidget);
     }
   });
+
   showReviews(r,true);
 }
+
+function updateRecipeRating(r){
+  const el=document.getElementById('recipeRating');
+  if(!el)return;
+
+  const {avg,count}=reviewStats(r);
+
+  if(!count){
+    el.innerHTML='';
+    return;
+  }
+
+  const rounded=Math.round(avg*10)/10;
+  const full=Math.floor(rounded);
+  const half=rounded-full>=0.5?1:0;
+  const empty=5-full-half;
+  const stars='★'.repeat(full)+(half?'½':'')+'☆'.repeat(empty);
+
+  el.innerHTML=`<span class="rating-stars" aria-label="${rounded} out of 5 stars">${stars}</span><span class="rating-number">${rounded.toFixed(1)} / 5</span><span class="rating-count">(${count} ${count===1?'review':'reviews'})</span>`;
+}
+
 async function showReviews(r,initial=false){
   const box=document.getElementById('reviewList');if(!box)return;
   const status=document.getElementById('reviewStatus');
   try{
     const arr=await fetchSharedReviews(r.slug);
     const ratings=arr.map(x=>Number(x.rating)).filter(x=>Number.isInteger(x)&&x>=1&&x<=5);
-    reviewStatsCache.set(r.slug,{avg:ratings.length?ratings.reduce((a,b)=>a+b,0)/ratings.length:0,count:ratings.length});
-    box.innerHTML=arr.length?arr.map(x=>{const n=Number(x.rating);if(!Number.isInteger(n)||n<1||n>5)return '';return `<div class="review-item"><div class="review-stars">${'★'.repeat(n)}${'☆'.repeat(5-n)}</div>${x.reviewer_name?`<b>${esc(x.reviewer_name)}</b>`:''}${x.comment?`<p>${esc(x.comment)}</p>`:''}</div>`}).join(''):'<p>No reviews yet. Be the first to rate this recipe!</p>';
+
+    reviewStatsCache.set(r.slug,{
+      avg:ratings.length?ratings.reduce((a,b)=>a+b,0)/ratings.length:0,
+      count:ratings.length
+    });
+
+    updateRecipeRating(r);
+
+    box.innerHTML=arr.length?arr.map(x=>{
+      const n=Number(x.rating);
+      if(!Number.isInteger(n)||n<1||n>5)return '';
+      return `<div class="review-item"><div class="review-stars">${'★'.repeat(n)}${'☆'.repeat(5-n)}</div>${x.reviewer_name?`<b>${esc(x.reviewer_name)}</b>`:''}${x.comment?`<p>${esc(x.comment)}</p>`:''}</div>`;
+    }).join(''):'<p>No reviews yet. Be the first to rate this recipe!</p>';
+
+    if(initial)status.textContent='';
+  }catch(e){
+    if(initial)status.textContent='Unable to load shared reviews. Please try again later.';
+    else throw e;
+  }
+}
+  {
+  const box=document.getElementById('reviewList');if(!box)return;
+  const status=document.getElementById('reviewStatus');
+  try{
+    const arr=await fetchSharedReviews(r.slug);
+const ratings=arr.map(x=>Number(x.rating)).filter(x=>Number.isInteger(x)&&x>=1&&x<=5);
+
+reviewStatsCache.set(r.slug,{
+  avg:ratings.length?ratings.reduce((a,b)=>a+b,0)/ratings.length:0,
+  count:ratings.length
+});
+
+updateRecipeRating(r);
+
+box.innerHTML=arr.length?arr.map(x=>{
+  const n=Number(x.rating);
+  if(!Number.isInteger(n)||n<1||n>5)return '';
+  return `<div class="review-item"><div class="review-stars">${'★'.repeat(n)}${'☆'.repeat(5-n)}</div>${x.reviewer_name?`<b>${esc(x.reviewer_name)}</b>`:''}${x.comment?`<p>${esc(x.comment)}</p>`:''}</div>`;
+}).join(''):'<p>No reviews yet. Be the first to rate this recipe!</p>';
     if(initial)status.textContent='';
   }catch(e){if(initial)status.textContent='Unable to load shared reviews. Please try again later.';else throw e}
 }
