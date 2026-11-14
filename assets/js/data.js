@@ -1,6 +1,6 @@
 /* MIDNIGHT RECIPES — single source of truth for all recipe pages */
 window.MIDNIGHT_SITE = {
-  // Reviews are only stored in the visitor's own browser, so the form is hidden until a shared backend exists.
+  // Reviews are stored in Supabase and displayed publicly on the website.
   reviewsEnabled: true,
   aboutImages: {
     aboutMe: 'images/about/about-me.jpg',
