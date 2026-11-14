@@ -1635,3 +1635,19 @@ body[data-page="home"] .category-card .photo-frame{
     line-height: 1.9 !important;
   }
 }
+.recipe-rating{
+  display:flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:7px;
+  margin:8px 0 10px;
+  font-size:13px;
+}
+.recipe-rating:empty{display:none}
+.recipe-rating .rating-stars{
+  color:#B18A4A;
+  letter-spacing:1px;
+  font-size:16px;
+}
+.recipe-rating .rating-number{font-weight:600}
+.recipe-rating .rating-count{color:var(--muted)}
