@@ -121,14 +121,21 @@ function top(){const latest=sorted().slice(0,4);app.innerHTML=`<div class="wrap"
 function listPage(title,list,sub=''){setMeta(title,`${title}: ${list.length} recipe${list.length===1?'':'s'} from ${SITE_NAME}.`);setCanonicalFromLocation();const sort=listSortValue();const usualsContext=list.length>0&&list.every(r=>r.isUsuals);app.innerHTML=`<div class="wrap"><section class="section"><h1 class="h2">${star()}${esc(title)}</h1>${sub?`<p class="filter-subtitle">${esc(sub)}</p>`:''}${sortControl(sort)}${cards(sortRecipes(list,sort),usualsContext)}</section></div>`;bindListSort()}
 function notFound(msg){setMeta('Page not found');const m=document.createElement('meta');m.name='robots';m.content='noindex';document.head.appendChild(m);app.innerHTML=`<div class="wrap"><section class="section"><h1 class="h2">${star()}Page not found</h1><p class="body-copy">${esc(msg)}</p><p class="body-copy"><a href="${href('recipes/index.html')}">View all recipes</a> · <a href="${href('index.html')}">Home</a></p></section></div>`}
 // Structured data only: keep recipe-page presentation unchanged.
+
 function isoDuration(t){
-  const value=String(t||'').toLowerCase().replace(/[–—]/g,'-');
-  // ISO 8601 cannot express an open-ended duration or a range. Use its stated minimum.
-  const h=value.match(/(\d+(?:\.\d+)?)\s*(?:hrs?|hours?|h)\b/);
-  const m=value.match(/(\d+(?:\.\d+)?)\s*(?:mins?|minutes?|m)\b/);
+  const value=String(t||'').toLowerCase().replace(/[–—]/g,'-').trim();
+
+  // For a range, use the stated minimum. Ignore a trailing "+".
+  const h=value.match(/(\d+(?:\.\d+)?)(?:\s*-\s*\d+(?:\.\d+)?)?\s*(?:hrs?|hours?|h)\b/);
+  const m=value.match(/(\d+(?:\.\d+)?)(?:\s*-\s*\d+(?:\.\d+)?)?\s*(?:mins?|minutes?|m)\b/);
+
   if(!h&&!m)return '';
+
   const minutes=Math.round((h?Number(h[1])*60:0)+(m?Number(m[1]):0));
-  return minutes>0?'PT'+(Math.floor(minutes/60)?Math.floor(minutes/60)+'H':'')+(minutes%60?minutes%60+'M':''):'';
+
+  return minutes>0
+    ?'PT'+(Math.floor(minutes/60)?Math.floor(minutes/60)+'H':'')+(minutes%60?minutes%60+'M':'')
+    :'';
 }
 function schemaIngredient(x){
   if(!x||!x.item||x.hideFromIngredients)return '';
