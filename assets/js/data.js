@@ -2096,7 +2096,7 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
       {amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Pitted dates, chopped'},
       {amount:115,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Unsalted butter, softened'},
       {amount:100,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Granulated sugar'},
-      {amount:57,unit:'g',imperialAmount:1,imperialUnit:'large'item:'Egg'},
+      {amount:57,unit:'g',imperialAmount:1,imperialUnit:'large',item:'Egg'},
       {amount:180,unit:'ml',imperialAmount:0.75,imperialUnit:'cup',item:'Boiling water'},
       {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Baking soda'},
       {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
