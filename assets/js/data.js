@@ -2046,8 +2046,7 @@ Maybe instead of constantly trying to do more, we should make time to look after
 
 And perhaps this is where a comforting cake comes in!
 
-With its soft, buttery crumb, sweet apples and dates, and golden caramelized coconut topping, Lumberjack Cake is just the kind of treat to enjoy when you finally give yourself some time to slow down.
-So, why not put that axe down for a little while, head into the kitchen, and make yourself something delicious tonight?`,
+With its soft, buttery crumb, sweet apples and dates, and golden caramelized coconut topping, Lumberjack Cake is just the kind of treat to enjoy when you finally give yourself some time to slow down!`,
     ingredientFile: [
       {
         name: 'APPLES',
@@ -2097,7 +2096,7 @@ So, why not put that axe down for a little while, head into the kitchen, and mak
       {amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Pitted dates, chopped'},
       {amount:115,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Unsalted butter, softened'},
       {amount:100,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Granulated sugar'},
-      {amount:57,unit:'g',item:'Egg'},
+      {amount:57,unit:'g',imperialAmount:1,imperialUnit:'large'item:'Egg'},
       {amount:180,unit:'ml',imperialAmount:0.75,imperialUnit:'cup',item:'Boiling water'},
       {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Baking soda'},
       {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
