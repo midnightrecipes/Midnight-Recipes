@@ -6,7 +6,7 @@ function cutieText(value){return String(value??'').replace(/&/g,' and ').replace
 const courses=window.MIDNIGHT_COURSES||[];
 const cuisineGroups=window.MIDNIGHT_CUISINES||{};
 const usualsCategories=window.MIDNIGHT_USUALS_CATEGORIES||[];
-const depth=Number(document.body.dataset.depth||0), root=depth?'../':'./';
+const depth=Number(document.body.dataset.depth||0), root=depth?'../'.repeat(depth):'./';
 let imageManifest={};
 function imageData(r){const slug=String(r?.slug||'').toLowerCase();const auto=imageManifest[slug]||{};const base=slug?`images/recipes/${slug}/`:'';return {heroImage:auto.hero||r.heroImage||(base?base+'hero.jpg':''),recipeImage:auto.recipe||r.recipeImage||(base?base+'recipe.jpg':''),steps:auto.steps||{}}}
 function resolvedStepImages(s,r,index){const stepNo=String(s?.number||index+1).replace(/\D/g,'')||String(index+1);const auto=imageData(r).steps?.[stepNo.padStart(2,'0')];if(Array.isArray(auto)&&auto.length)return auto.filter(Boolean);return Array.isArray(s?.stepImages)?s.stepImages.filter(Boolean):(Array.isArray(s?.stepPhotos)?s.stepPhotos.filter(Boolean):[])}
@@ -46,7 +46,7 @@ const getFavs=()=>{try{const a=JSON.parse(store.get('mr-favorites')||'[]');retur
 const setFavs=a=>store.set('mr-favorites',JSON.stringify(a));
 function setMeta(title,desc){const full=title?`${title} | ${SITE_NAME}`:SITE_NAME;const d=desc||defaultDesc;document.title=full;document.querySelector('meta[name="description"]')?.setAttribute('content',d);document.querySelector('meta[property="og:title"]')?.setAttribute('content',full);document.querySelector('meta[property="og:description"]')?.setAttribute('content',d)}
 function setCanonical(url){let link=document.querySelector('link[rel="canonical"]');if(!link){link=document.createElement('link');link.rel='canonical';document.head.appendChild(link)}link.href=url;let og=document.querySelector('meta[property="og:url"]');if(!og){og=document.createElement('meta');og.setAttribute('property','og:url');document.head.appendChild(og)}og.setAttribute('content',url)}
-const CANONICAL_PARAMS={'pages/source.html':['value'],'pages/cuisine.html':['value'],'pages/meal.html':['value'],'pages/usuals.html':['category'],'recipes/recipe.html':['slug']};
+const CANONICAL_PARAMS={'pages/source.html':['value'],'pages/cuisine.html':['value'],'pages/meal.html':['value'],'pages/usuals.html':['category']};
 function setCanonicalFromLocation(){const m=location.pathname.match(/((?:pages|recipes)\/[^/]*)$/);const path=m?m[1]:'';const q=new URLSearchParams();(CANONICAL_PARAMS[path]||[]).forEach(k=>{const v=new URLSearchParams(location.search).get(k);if(v)q.set(k,v)});const qs=q.toString();setCanonical(SITE_URL+'/'+path+(qs?'?'+qs:''))}
 function setShareImage(url,portrait=false){const put=(attr,key,val)=>{let m=document.querySelector(`meta[${attr}="${key}"]`);if(!m){m=document.createElement('meta');m.setAttribute(attr,key);document.head.appendChild(m)}m.setAttribute('content',val)};put('property','og:image',url);put('name','twitter:image',url);put('name','twitter:card',portrait?'summary':'summary_large_image')}
 function setNoindex(){if(document.querySelector('meta[name="robots"]'))return;const m=document.createElement('meta');m.name='robots';m.content='noindex';document.head.appendChild(m)}
@@ -94,7 +94,7 @@ function card(r,usualsContext=false,eager=false){
     ? listPhoto(r,eager,r.title)
     : cardPhoto(r,eager,r.title);
 
-  return `<article class="category-card card"><a href="${href('recipes/recipe.html',{slug:r.slug})}">${media}<h3 class="name">${esc(r.title)}</h3></a></article>`;
+  return `<article class="category-card card"><a href="${(root+'recipes/'+encodeURIComponent(r.slug)+'/')}">${media}<h3 class="name">${esc(r.title)}</h3></a></article>`;
 }
 
 function cards(list,usualsContext=false,eagerFirst=false){
@@ -117,7 +117,7 @@ function filterRecipes(type,value){const v=String(value||'').trim().toLowerCase(
 function listSortValue(){const value=new URLSearchParams(location.search).get('sort')||'latest';return ['popular','latest','oldest','az','za'].includes(value)?value:'latest'}
 function bindListSort(){const select=document.querySelector('[data-sort]');if(!select)return;select.addEventListener('change',()=>{const p=new URLSearchParams(location.search);p.set('sort',select.value);location.href=location.pathname+'?'+p.toString()})}
 function sortControl(sort){return `<div class="sort-control" style="display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:0 0 18px;font-size:15px"><label for="recipeSort">Sort:</label><select id="recipeSort" data-sort aria-label="Sort recipes" style="font:inherit;background:transparent;border:1px solid var(--line);padding:6px 9px"><option value="popular"${sort==='popular'?' selected':''}>Popular</option><option value="latest"${sort==='latest'?' selected':''}>Latest</option><option value="oldest"${sort==='oldest'?' selected':''}>Oldest</option><option value="az"${sort==='az'?' selected':''}>A–Z</option><option value="za"${sort==='za'?' selected':''}>Z–A</option></select></div>`}
-function top(){const latest=sorted().slice(0,4);app.innerHTML=`<div class="wrap"><h1 class="visually-hidden">MIDNIGHT RECIPES</h1><div class="home-tagline"><p>Food we find. Recipes we recreate.</p><p>Stories from our midnight kitchen.</p></div><section class="section"><h2 class="h2">${star()}Midnight Dispatches</h2>${cards(latest,true,true)}<p class="viewall"><a href="${href('recipes/index.html')}">View all</a></p></section><section class="section"><h2 class="h2">${star()}Where did the idea come from?</h2><p class="filter-subtitle">Browse recipes by what inspired them.</p><div class="sources">${sources.map(s=>{const r=sorted().find(x=>x.source===s||x.sourceSecondary===s||(Array.isArray(x.sources)&&x.sources.includes(s)));return `<div class="tile"><a href="${href('pages/source.html',{value:s})}">${r&&imageData(r).heroImage?`<div class="photo-frame"><img class="photo" loading="lazy" decoding="async" src="${esc(root+imageData(r).heroImage)}" alt="${esc(r.title)}" onerror="${imageErrorHandler('sm')}"></div>`:'<div class="ph sm"></div>'}<p class="source-name">${esc(cutieText(s))}</p></a>${r?`<p class="source-latest"><a href="${href('recipes/recipe.html',{slug:r.slug})}">${esc(r.title)}</a></p>`:'<p class="source-empty">No recipes here yet</p>'}</div>`}).join('')}</div></section><section class="section"><h2 class="h2">${star()}About</h2><div class="about"><div class="about-photo home-about-photo">${window.MIDNIGHT_SITE?.aboutImages?.aboutRecipes?`<img class="photo" loading="lazy" decoding="async" src="${esc(root+window.MIDNIGHT_SITE.aboutImages.aboutRecipes)}" alt="MIDNIGHT KITCHEN">`:''}</div><div><p>Hi, my name is Mitsuka. I cook after dark. This is a collection of recipes inspired by restaurants, travels, memories, traditions, and whatever catches my curiosity late at night.</p><p class="more"><a href="${href('pages/about.html')}">Learn more</a></p></div></div></section></div>`}
+function top(){const latest=sorted().slice(0,4);app.innerHTML=`<div class="wrap"><h1 class="visually-hidden">MIDNIGHT RECIPES</h1><div class="home-tagline"><p>Food we find. Recipes we recreate.</p><p>Stories from our midnight kitchen.</p></div><section class="section"><h2 class="h2">${star()}Midnight Dispatches</h2>${cards(latest,true,true)}<p class="viewall"><a href="${href('recipes/index.html')}">View all</a></p></section><section class="section"><h2 class="h2">${star()}Where did the idea come from?</h2><p class="filter-subtitle">Browse recipes by what inspired them.</p><div class="sources">${sources.map(s=>{const r=sorted().find(x=>x.source===s||x.sourceSecondary===s||(Array.isArray(x.sources)&&x.sources.includes(s)));return `<div class="tile"><a href="${href('pages/source.html',{value:s})}">${r&&imageData(r).heroImage?`<div class="photo-frame"><img class="photo" loading="lazy" decoding="async" src="${esc(root+imageData(r).heroImage)}" alt="${esc(r.title)}" onerror="${imageErrorHandler('sm')}"></div>`:'<div class="ph sm"></div>'}<p class="source-name">${esc(cutieText(s))}</p></a>${r?`<p class="source-latest"><a href="${(root+'recipes/'+encodeURIComponent(r.slug)+'/')}">${esc(r.title)}</a></p>`:'<p class="source-empty">No recipes here yet</p>'}</div>`}).join('')}</div></section><section class="section"><h2 class="h2">${star()}About</h2><div class="about"><div class="about-photo home-about-photo">${window.MIDNIGHT_SITE?.aboutImages?.aboutRecipes?`<img class="photo" loading="lazy" decoding="async" src="${esc(root+window.MIDNIGHT_SITE.aboutImages.aboutRecipes)}" alt="MIDNIGHT KITCHEN">`:''}</div><div><p>Hi, my name is Mitsuka. I cook after dark. This is a collection of recipes inspired by restaurants, travels, memories, traditions, and whatever catches my curiosity late at night.</p><p class="more"><a href="${href('pages/about.html')}">Learn more</a></p></div></div></section></div>`}
 function listPage(title,list,sub=''){setMeta(title,`${title}: ${list.length} recipe${list.length===1?'':'s'} from ${SITE_NAME}.`);setCanonicalFromLocation();const sort=listSortValue();const usualsContext=list.length>0&&list.every(r=>r.isUsuals);app.innerHTML=`<div class="wrap"><section class="section"><h1 class="h2">${star()}${esc(title)}</h1>${sub?`<p class="filter-subtitle">${esc(sub)}</p>`:''}${sortControl(sort)}${cards(sortRecipes(list,sort),usualsContext)}</section></div>`;bindListSort()}
 function notFound(msg){setMeta('Page not found');const m=document.createElement('meta');m.name='robots';m.content='noindex';document.head.appendChild(m);app.innerHTML=`<div class="wrap"><section class="section"><h1 class="h2">${star()}Page not found</h1><p class="body-copy">${esc(msg)}</p><p class="body-copy"><a href="${href('recipes/index.html')}">View all recipes</a> · <a href="${href('index.html')}">Home</a></p></section></div>`}
 // Structured data only: keep recipe-page presentation unchanged.
@@ -174,6 +174,15 @@ function schemaStepText(t,r){
     .replace(/\s+/g,' ')
     .trim();
 }
+function schemaDate(value){
+  const s=String(value||'').trim();
+  if(/^\d{4}-\d{2}-\d{2}$/.test(s))return s;
+  const match=s.match(/·\s*([A-Z]{3})\s+(\d{1,2}),\s+(\d{4})\s*·/i);
+  if(!match)return undefined;
+  const months={JAN:'01',FEB:'02',MAR:'03',APR:'04',MAY:'05',JUN:'06',JUL:'07',AUG:'08',SEP:'09',OCT:'10',NOV:'11',DEC:'12'};
+  const month=months[match[1].toUpperCase()];
+  return month?`${match[3]}-${month}-${match[2].padStart(2,'0')}`:undefined;
+}
 function addRecipeJsonLd(r){
   document.getElementById('recipe-jsonld')?.remove();
   const abs=p=>p?`${SITE_URL}/${p}`:undefined;
@@ -184,13 +193,13 @@ function addRecipeJsonLd(r){
   }).filter(Boolean);
   if(!ing.length||!steps.length)return;
   const st=r.stats||{};
-  const data={'@context':'https://schema.org','@type':'Recipe',name:r.title,description:r.description||undefined,url:`${SITE_URL}/recipes/recipe.html?slug=${encodeURIComponent(r.slug)}`,image:[abs(imageData(r).recipeImage),abs(imageData(r).heroImage)].filter(Boolean),datePublished:schemaDate(r.dateAdded),author:{'@type':'Person',name:'Mitsuka',url:`${SITE_URL}/pages/about.html`},recipeCategory:r.course||undefined,recipeCuisine:r.cuisine||undefined,prepTime:isoDuration(st.prep)||undefined,cookTime:isoDuration(st.cook)||undefined,totalTime:isoDuration(st.total)||undefined,recipeYield:st.serves!==undefined?String(st.serves):undefined,recipeIngredient:ing,recipeInstructions:steps};
+  const data={'@context':'https://schema.org','@type':'Recipe',name:r.title,description:r.description||undefined,url:`${SITE_URL}/recipes/${encodeURIComponent(r.slug)}/`,image:[abs((imageManifest[String(r.slug||'').toLowerCase()]||{}).recipe||r.recipeImage),abs(imageData(r).heroImage)].filter(Boolean),datePublished:schemaDate(r.dateAdded),author:{'@type':'Person',name:'Mitsuka',url:`${SITE_URL}/pages/about.html`},recipeCategory:r.course||undefined,recipeCuisine:r.cuisine||undefined,prepTime:isoDuration(st.prep)||undefined,cookTime:isoDuration(st.cook)||undefined,totalTime:isoDuration(st.total)||undefined,recipeYield:st.serves!==undefined?String(st.serves):undefined,recipeIngredient:ing,recipeInstructions:steps};
   const rating=reviewStats(r);
 if(rating.count>0){data.aggregateRating={'@type':'AggregateRating',ratingValue:Number(rating.avg.toFixed(1)),ratingCount:rating.count};}
   const el=document.createElement('script');el.type='application/ld+json';el.id='recipe-jsonld';el.textContent=JSON.stringify(data);document.head.appendChild(el);
 }
 function relatedRecipes(r){if(r.isUsuals)return [];const lc=v=>String(v).toLowerCase();const cu=new Set(cuisineValues(r).map(lc)),co=new Set(courseValues(r).map(lc)),ic=new Set((r.mainIngredients||[]).map(lc));return recipes.filter(x=>x!==r&&!x.isUsuals).map(x=>{let n=0;if(cuisineValues(x).some(v=>cu.has(lc(v))))n+=2;if(courseValues(x).some(v=>co.has(lc(v))))n+=1;if((x.mainIngredients||[]).some(v=>ic.has(lc(v))))n+=1;if(x.source&&x.source===r.source)n+=1;return {x,n}}).filter(o=>o.n>0).sort((a,b)=>b.n-a.n||String(b.x.dateAdded||'').localeCompare(String(a.x.dateAdded||''))).slice(0,3).map(o=>o.x)}
-function recipe(){const slug=(new URLSearchParams(location.search).get('slug')||'').trim();const r=slug?recipes.find(x=>String(x.slug||'').toLowerCase()===slug.toLowerCase()):null;if(!r){notFound(slug?'We could not find that recipe. It may have been moved or renamed.':'No recipe was selected.');return}setMeta(r.title,r.description);setCanonical(`${SITE_URL}/recipes/recipe.html?slug=${encodeURIComponent(r.slug)}`);{const heroPath=imageData(r).heroImage;setShareImage(heroPath?`${SITE_URL}/${heroPath}`:DEFAULT_SHARE_IMAGE,!!heroPath)}app.innerHTML=recipeHtml(r);bindRecipe(r);addRecipeJsonLd(r)}
+function recipe(){const slug=(document.body.dataset.slug||new URLSearchParams(location.search).get('slug')||'').trim();const r=slug?recipes.find(x=>String(x.slug||'').toLowerCase()===slug.toLowerCase()):null;if(!r){notFound(slug?'We could not find that recipe. It may have been moved or renamed.':'No recipe was selected.');return}setMeta(r.title,r.description);setCanonical(`${SITE_URL}/recipes/${encodeURIComponent(r.slug)}/`);{const heroPath=imageData(r).heroImage;setShareImage(heroPath?`${SITE_URL}/${heroPath}`:DEFAULT_SHARE_IMAGE,!!heroPath)}app.innerHTML=recipeHtml(r);bindRecipe(r);addRecipeJsonLd(r)}
 function favorites(){setMeta('Favorites','Recipes you have saved on this device.');setNoindex();const favs=getFavs();const list=sorted().filter(r=>favs.includes(r.slug));if(!list.length){app.innerHTML=`<div class="wrap"><section class="section"><h1 class="h2">${star()}Favorites</h1><p class="body-copy">No favorites yet. Tap “Favorite” on a recipe to keep it here.</p><p class="body-copy"><a href="${href('recipes/index.html')}">Browse all recipes</a></p></section></div>`;return}listPage('Favorites',list,'Saved on this device only.')}
 function photo(src,alt,cls='',optional=false,eager=false){
   if(!src)return '';
@@ -439,7 +448,7 @@ function instructionParagraph(value,isNote=false,r=null,scale=1,unit='metric',mo
   let rendered=richText(text);
   if(!isNote&&r?.usesUsual){
     const u=recipes.find(x=>x.slug===r.usesUsual);
-    if(u?.title){const link=href('recipes/recipe.html',{slug:u.slug});rendered=rendered.split(esc(u.title)).join(`<a href="${link}"><u>${esc(u.title)}</u></a>`);}
+    if(u?.title){const link=(root+'recipes/'+encodeURIComponent(u.slug)+'/');rendered=rendered.split(esc(u.title)).join(`<a href="${link}"><u>${esc(u.title)}</u></a>`);}
   }
   return `<p class="${isNote?'step-note':''}${mode?' instruction-mode-body':''}">${rendered}</p>`;
 }
@@ -530,7 +539,7 @@ function recipeHtml(r){
   const fileGroups=ingredientFile.groups;
   const isUsual=!!r.isUsuals;
   const foundTitles=recipes.filter(x=>!x.isUsuals&&x.usesUsual===r.slug).map(x=>x.title);
-  const foundIn=foundTitles.map(title=>{const found=recipes.find(x=>x.title===title&&!x.isUsuals);return found?`<a href="${href('recipes/recipe.html',{slug:found.slug})}">${esc(title)}</a>`:`<span>${esc(title)}</span>`;}).join('<br>');
+  const foundIn=foundTitles.map(title=>{const found=recipes.find(x=>x.title===title&&!x.isUsuals);return found?`<a href="${(root+'recipes/'+encodeURIComponent(found.slug)+'/')}">${esc(title)}</a>`:`<span>${esc(title)}</span>`;}).join('<br>');
   const intro=isUsual&&hasMeaningfulValue(r.usualIntro)?`<section class="usual-intro">${String(r.usualIntro).split(/\n\s*\n/).filter(Boolean).map(x=>`<p class="body-copy">${richText(x)}</p>`).join('')}</section>`:'';
   const statsPan=(isUsual||r.showPan)&&r.stats?.pan?`<br><b>Pan</b>: ${esc(r.stats.pan)}`:'';const statsChill=r.stats?.chill?` <b>Chill</b>: ${esc(r.stats.chill)}`:'';
   return `<div class="recipe-card${r.fixedStepPhotoCells?' fixed-step-photo-cells':''}"><div class="rtop"><div><h1 class="rtitle">${esc(cutieText(r.title))}</h1><div id="recipeRating" class="recipe-rating" aria-live="polite"></div><div class="meta-line"><span>${r.timeStamp?`📍 ${esc(r.timeStamp)}${r.dateAdded?` · ${esc(new Date(r.dateAdded+'T00:00:00').toLocaleDateString('en-CA',{month:'short',day:'numeric',year:'numeric'}).toUpperCase())}`:''}<span> · TORONTO</span>`:'The Usuals'}</span></div><div class="recipe-meta-divider"></div><p class="facts">${isUsual?`<b>The Usuals</b>: <a href="${href('pages/usuals.html',{category:r.usualsCategory})}">${esc(r.usualsCategory)}</a>`:`<b>Source</b>: <a href="${categoryLink('source',r.source)}">${esc(r.source)}</a>${r.sourceSecondary?` / <a href="${categoryLink('source',r.sourceSecondary)}">${esc(r.sourceSecondary)}</a>`:''}${hasMeaningfulValue(r.original) ? `<br><b>Inspired by</b>: ${
@@ -849,7 +858,7 @@ function renderIngredients(r,scale=1,unit='metric'){
   list.innerHTML=(r.ingredients||[]).map(x=>{
     if(x&&typeof x==='object'&&x.hideFromIngredients)return '';
     if(typeof x==='string')return `<li><label class="ingredient-check"><input type="checkbox"><span>${esc(x)}</span></label></li>`;
-    if(x.group){currentGroup=String(x.group);return `<li><span class="group"><b>${esc(x.group)}</b>${x.usualSlug?`<span class="usual-reference">One of our usuals: <a href="${href('recipes/recipe.html',{slug:x.usualSlug})}">${esc(x.usualLabel||x.usualSlug)}</a></span>`:''}</span></li>`;}
+    if(x.group){currentGroup=String(x.group);return `<li><span class="group"><b>${esc(x.group)}</b>${x.usualSlug?`<span class="usual-reference">One of our usuals: <a href="${(root+'recipes/'+encodeURIComponent(x.usualSlug)+'/')}">${esc(x.usualLabel||x.usualSlug)}</a></span>`:''}</span></li>`;}
     const item=String(x.item??'').trim();
     const hasRange=x.minAmount!==undefined&&x.maxAmount!==undefined;
     const hasAmount=x.amount!==undefined&&x.amount!==null&&x.amount!=='';
@@ -982,20 +991,6 @@ async function showReviews(r,initial=false){
       avg:ratings.length?ratings.reduce((a,b)=>a+b,0)/ratings.length:0,
       count:ratings.length
     });
-    function schemaDate(value){
-  const match=String(value||'').match(
-    /·\s*([A-Z]{3})\s+(\d{1,2}),\s+(\d{4})\s*·/i
-  );
-  if(!match)return undefined;
-  const months={
-    JAN:'01',FEB:'02',MAR:'03',APR:'04',
-    MAY:'05',JUN:'06',JUL:'07',AUG:'08',
-    SEP:'09',OCT:'10',NOV:'11',DEC:'12'
-  };
-  const month=months[match[1].toUpperCase()];
-  if(!month)return undefined;
-  return `${match[3]}-${month}-${match[2].padStart(2,'0')}`;
-}
     addRecipeJsonLd(r);
     updateRecipeRating(r);
 
@@ -1038,7 +1033,7 @@ function activeCuisineTree(){const out={};Object.entries(cuisineGroups).forEach(
 function setupMenu(){const src=document.getElementById('src'),cui=document.getElementById('cui'),course=document.getElementById('course');if(src)src.innerHTML=sources.map(v=>`<a href="${href('pages/source.html',{value:v})}">${esc(v)}</a>`).join('');if(course)course.innerHTML=courses.map(v=>`<a href="${href('pages/meal.html',{value:v})}">${esc(v)}</a>`).join('');if(cui)cui.innerHTML=Object.entries(activeCuisineTree()).map(([group,vals])=>`<div class="menu-group"><button class="menu-group-title acc" data-acc="cuisine-${esc(group).replace(/[^a-z0-9]+/gi,'-')}">${esc(group)}</button><div class="sub menu-group-sub" id="cuisine-${esc(group).replace(/[^a-z0-9]+/gi,'-')}">${vals.map(v=>`<a href="${href('pages/cuisine.html',{value:v})}">${esc(v)}</a>`).join('')}</div></div>`).join('');document.querySelectorAll('[data-acc]').forEach(b=>b.onclick=()=>{const s=document.getElementById(b.dataset.acc);if(!s)return;const open=s.classList.toggle('open');b.setAttribute('aria-expanded',String(open))});document.querySelectorAll('[data-go="all"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();location.href=href('recipes/index.html')}));document.querySelector('[data-recipes-toggle]')?.addEventListener('click',e=>{const s=document.getElementById('recipesSub');const open=s.classList.toggle('open');e.currentTarget.setAttribute('aria-expanded',String(open))})}
 function setupOverlay(){const menu=document.getElementById('menuOverlay'),search=document.getElementById('searchOverlay');document.getElementById('menuBtn').onclick=()=>{menu.dataset.open='true'};document.getElementById('searchBtn').onclick=()=>{const open=search.dataset.open==='true';search.dataset.open=String(!open);const btn=document.getElementById('searchBtn');btn.setAttribute('aria-label',open?'Open search':'Close search');if(!open)document.getElementById('searchInput').focus()};[menu,search].forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.dataset.open='false'}));document.addEventListener('keydown',e=>{if(e.key==='Escape'){menu.dataset.open='false';search.dataset.open='false'}});document.querySelectorAll('[data-go]').forEach(a=>a.addEventListener('click',e=>{const g=a.dataset.go;if(!['home','all','usuals','about','contact'].includes(g))return;e.preventDefault();const target={home:'index.html',all:'recipes/index.html',usuals:'pages/usuals.html',about:'pages/about.html',contact:'pages/contact.html'}[g];location.href=href(target)}));document.getElementById('searchInput').addEventListener('input',e=>{const q=e.target.value.trim().toLowerCase();const hits=q?recipes.filter(r=>searchMatches(r,q)):[];document.getElementById('searchResults').innerHTML=q?cards(hits):''})}
 function category(){const p=new URLSearchParams(location.search),v=p.get('value')||'';if(page==='source')listPage(cutieText(v)||'By Source',filterRecipes('source',v));if(page==='cuisine')listPage(cutieText(v)||'By Cuisine',filterRecipes('cuisine',v));if(page==='meal')listPage(cutieText(v)||'By Course',filterRecipes('course',v))}
-function all(){const q=new URLSearchParams(location.search).get('q')||'';listPage(q?`Recipes: ${q}`:'View All',q?filterRecipes('search',q):recipes.filter(r=>!r.isUsuals))}
+function all(){const q=new URLSearchParams(location.search).get('q')||'';listPage(q?`Recipes: ${q}`:'View All',q?filterRecipes('search',q):recipes.filter(r=>!r.isUsuals));if(!q)setMeta('All Recipes','Every recipe from MIDNIGHT RECIPES: pies and bakes, Thai and Japanese comfort food, and late-night cooking stories, newest first.')}
 async function init(){setupMenu();setupOverlay();try{const res=await fetch(root+'assets/js/image-manifest.json',{cache:'no-store'});if(res.ok)imageManifest=await res.json();}catch(e){imageManifest={}}if(page==='home')top();else if(page==='all')all();else if(page==='latest')listPage('Latest Recipes',recipes.filter(r=>!r.isUsuals));else if(page==='recipe')recipe();else if(['source','cuisine','meal'].includes(page))category();else if(page==='about')about();else if(page==='contact')contact();else if(page==='favorites')favorites();else if(page==='usuals')usuals();else if(page==='usual')usual()}
 init();
 })();

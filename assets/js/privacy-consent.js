@@ -21,7 +21,7 @@ function showDialog(){
  closeDialog();
  var el=document.createElement('section');el.id='mr-cookie-consent';
  el.className='mr-cookie-consent';el.setAttribute('aria-label','Cookie preferences');
- el.innerHTML='<p><strong>Cookies & privacy</strong></p><p>We use optional Google Analytics cookies to understand how readers use MIDNIGHT RECIPES. You can accept or reject analytics cookies. <a href="'+(document.body.dataset.depth==='1'?'../':'')+'pages/privacy.html">Read our Privacy Policy</a>.</p><div class="mr-cookie-actions"><button type="button" data-consent="rejected">Reject optional cookies</button><button type="button" data-consent="accepted">Accept analytics cookies</button></div>';
+ el.innerHTML='<p><strong>Cookies & privacy</strong></p><p>We use optional Google Analytics cookies to understand how readers use MIDNIGHT RECIPES. You can accept or reject analytics cookies. <a href="'+'../'.repeat(Number(document.body.dataset.depth||0))+'pages/privacy.html">Read our Privacy Policy</a>.</p><div class="mr-cookie-actions"><button type="button" data-consent="rejected">Reject optional cookies</button><button type="button" data-consent="accepted">Accept analytics cookies</button></div>';
  document.body.appendChild(el);
  el.querySelectorAll('[data-consent]').forEach(function(btn){btn.addEventListener('click',function(){var choice=btn.getAttribute('data-consent');saveChoice(choice);closeDialog();if(choice==='accepted')loadAnalytics();});});
 }

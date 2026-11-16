@@ -347,7 +347,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
         'Stir in {{qty:vanilla extract}} vanilla extract.',
         'Strain through a fine-mesh sieve.',
         'Let the custard rest for 5–10 minutes, then skim off any foam.'
-      ],stepImages:['images/recipes/apple-creme-brulee/step-02-01.jpg','images/recipes/apple-creme-brulee/step-02-02.JPG','images/recipes/apple-creme-brulee/step-02-03.JPG','images/recipes/apple-creme-brulee/step-02-04.JPG']},
+      ],stepImages:['images/recipes/apple-creme-brulee/step-02-01.jpg','images/recipes/apple-creme-brulee/step-02-02.JPG','images/recipes/apple-creme-brulee/step-02-03.jpg','images/recipes/apple-creme-brulee/step-02-04.jpg']},
       {number:'03',title:'FILL',clock:'11:42 PM',paragraphs:[
         'Divide the apples among mini cocottes.',
         'Pour the custard over the apples, almost to the top.'
@@ -386,7 +386,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
 
 
   {
-    slug:'calabaza-en-tacha-inspired-mexican-pumpkin-pie',
+    slug:'mexican-calabaza-en-tacha-pumpkin-pie',
     title:'Calabaza en Tacha Inspired Mexican Pumpkin Pie', description:'Inspired by Coco, this Mexican-style pumpkin pie reimagines calabaza en tacha with whole-spice infused cream and a rich piloncillo-style glaze.',
     source:'Movie & TV', sourceSecondary:'Family & Tradition', original:'Coco (2017)', dish:'Mexican Pumpkin Pie', cuisine:'Mexican',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'],
@@ -689,7 +689,7 @@ Don\'t over-sweeten it. The sweet potato provides natural sweetness, while cryst
     isUsuals:true, usualsCategory:'BASES & CRUSTS', foundInIntro:'Recipes that use this crust...', hideRecipeTags:true,
     description:'Our reliable, buttery go-to pie crust with three flexible baking methods: no pre-bake, partial, and full blind-bake for any pie.',
     usualIntro:`This is our go-to pie crust — the one we come back to whenever a recipe needs a buttery, tender crust. Nothing fancy. Just a reliable crust that works.\n\nWe use it for sweet pies, savoury pies, and pretty much anything in between.\n\nAt Midnight Recipes, our pies take three different routes: some go into the oven with an unbaked crust (No Pre-Baking), some need a little head start (Partial Blind-Baking), and others need the crust fully baked before the filling goes in (Full Blind-Baking).\n\n**No Pre-Baking** is for pies like Sweet Cherry Pie, where the filling and crust bake together. For a double-crust pie, the second portion of dough becomes the top crust.\n\n**Partial Blind-Baking** gives the crust a head start before the filling goes in. We use this method for pies like [Classic Pumpkin Pie](recipes/recipe.html?slug=classic-pumpkin-pie) and [Sweet Potato Ginger Pie](recipes/recipe.html?slug=sweet-potato-ginger-pie), where the crust needs extra time to bake without overcooking the filling.\n\n**Full Blind-Baking** takes the crust all the way to golden and crisp before the filling is added. This is useful for pies with fillings that are already cooked or don't need to be baked.\n\nThree methods, one dependable crust. Choose the route that suits your pie.\n\nThis recipe makes enough for one double-crust pie, or two single-crust pies. If you only need a bottom crust, use half and freeze the rest. Or make the full batch anyway. Future-you might be grateful when the midnight urge to bake strikes.`,
-    heroImage:'images/recipes/building-block-pie-crust/hero.jpg', recipeImage:'images/recipes/building-block-pie-crust/recipe.jpg',
+    heroImage:'images/recipes/building-block-pie-crust/hero.jpg',
     unitOverrides:{imperial:{'all-purpose flour':'cup','cold unsalted butter, cubed':'cup','salt':'tsp'},metric:{'cold water':'ml'}},
     densityOverrides:{'all purpose flour|cup':120,'cold unsalted butter cubed|cup':113},
     stepQuantityConversion:true,
@@ -868,7 +868,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
         'Separate the eggs, placing the {{qty:LIME FILLING::Egg yolks}} egg yolks in a mixing bowl and reserving the {{qty:MERINGUE::Egg whites}} egg whites for the meringue.',
         'Add the {{qty:LIME FILLING::Sweetened condensed milk}} sweetened condensed milk, {{qty:Lime Filling::Sour Cream}} sour cream, lime zest, and lime juice to the egg yolks.',
         'Whisk everything together until completely smooth.'
-      ],stepImages:['images/recipes/fun-key-lime-pie/step-02-01.jpg','images/recipes/fun-key-lime-pie/step-02-02.jpg','images/recipes/fun-key-lime-pie/step-02-03.jpg','images/recipes/fun-key-lime-pie/step-02-04.jpg']},
+      ],stepImages:['images/recipes/fun-key-lime-pie/step-02-01.JPG','images/recipes/fun-key-lime-pie/step-02-02.jpg','images/recipes/fun-key-lime-pie/step-02-03.jpg','images/recipes/fun-key-lime-pie/step-02-04.jpg']},
       {number:'03',title:'BAKE THE FILLING',clock:'11:40 PM',paragraphs:[
         'Pour the lime filling into the cooled graham cracker crust.',
         'Bake at 175°C / 350°F for 10 minutes.',
@@ -929,7 +929,7 @@ The biggest challenge was simply finding all the ingredients. The actual cooking
 
 When I took my first sip, I instantly understood why it earned that top spot. It’s an incredible balance of contrasts: the soothing, rich coconut milk hits you first, followed by the sharp citrus of makrut lime and lemongrass, the woody-peppery warmth of fresh galangal, and finally a clean, bright sour kick from fresh lime juice. It’s rich, velvety, sour, and mildly spicy all in one spoon.
 
-If the internet was calling it the world’s best chicken soup, I just had to find out for myself even at midnight..!`,
+If the internet was calling it the world’s best chicken soup, I just had to find out for myself even at midnight…!`,
     heroImage:'images/recipes/tom-kha-gai/hero.jpg',
     recipeImage:'images/recipes/tom-kha-gai/recipe.jpg',
     stepQuantityConversion:true,
@@ -1895,7 +1895,6 @@ tags: [
 It works beautifully with grilled meats, burgers, sandwiches, fries, and just about anything that could use a little BBQ goodness.
 Keep a jar in the fridge, and you're always ready.`,
   heroImage:'images/recipes/cowboy-bbq-sauce/hero.jpg',
-  recipeImage:'images/recipes/cowboy-bbq-sauce/recipe.jpg',
   ingredientFile: [
   { name: 'APPLE CIDER VINEGAR',
     tag: 'THE TANGY KICK',
@@ -2137,7 +2136,7 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
           'Pour over {{qty:Boiling Water}} boiling water and let stand for about 10 minutes.',
           'Allow the mixture to cool slightly until warm.'
         ],
-        stepImages:['images/recipes/lumberjack-cake/step-02-01.jpg','images/recipes/lumberjack-cake/step-02-02.jpg']
+        stepImages:['images/recipes/lumberjack-cake/step-02-01.JPG','images/recipes/lumberjack-cake/step-02-02.JPG']
       },
       {
         number:'03',
@@ -2150,10 +2149,10 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
           'Add {{qty:All-Purpose Flour}} flour and {{qty:Salt}} salt. Fold gently until no dry flour remains.'
         ],
         stepImages:[
-          'images/recipes/lumberjack-cake/step-03-01.jpg',
-          'images/recipes/lumberjack-cake/step-03-02.jpg',
-          'images/recipes/lumberjack-cake/step-03-03.jpg',
-          'images/recipes/lumberjack-cake/step-03-04.jpg'
+          'images/recipes/lumberjack-cake/step-03-01.JPG',
+          'images/recipes/lumberjack-cake/step-03-02.JPG',
+          'images/recipes/lumberjack-cake/step-03-03.JPG',
+          'images/recipes/lumberjack-cake/step-03-04.JPG'
         ]
       },
       {
@@ -2165,7 +2164,7 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
           'Bake at 350°F / 175°C for approximately 35–45 minutes, until the surface is set enough to support the topping.',
           'The cake should not necessarily be fully baked at this stage.'
         ],
-        stepImages:['images/recipes/lumberjack-cake/step-04-01.jpg']
+        stepImages:['images/recipes/lumberjack-cake/step-04-01.JPG']
       },
       {
         number:'05',
@@ -2176,7 +2175,7 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
           'Heat gently over low heat on the stovetop, or microwave in short 15–20 second intervals, stirring between each interval, until the butter melts and the sugar dissolves into a smooth syrup.',
           'Remove from the heat. Do not reduce the mixture too much.'
         ],
-        stepImages:['images/recipes/lumberjack-cake/step-05-01.jpg','images/recipes/lumberjack-cake/step-05-02.jpg']
+        stepImages:['images/recipes/lumberjack-cake/step-05-01.JPG','images/recipes/lumberjack-cake/step-05-02.JPG']
       },
       {
         number:'06',
@@ -2190,9 +2189,9 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
           'Check the center with a skewer. It should come out without wet batter.'
         ],
         stepImages:[
-          'images/recipes/lumberjack-cake/step-06-01.jpg',
-          'images/recipes/lumberjack-cake/step-06-02.jpg',
-          'images/recipes/lumberjack-cake/step-06-03.jpg'
+          'images/recipes/lumberjack-cake/step-06-01.JPG',
+          'images/recipes/lumberjack-cake/step-06-02.JPG',
+          'images/recipes/lumberjack-cake/step-06-03.JPG'
         ]
       },
       {
