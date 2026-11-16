@@ -184,7 +184,9 @@ function addRecipeJsonLd(r){
   }).filter(Boolean);
   if(!ing.length||!steps.length)return;
   const st=r.stats||{};
-  const data={'@context':'https://schema.org','@type':'Recipe',name:r.title,description:r.description||undefined,url:`${SITE_URL}/recipes/recipe.html?slug=${encodeURIComponent(r.slug)}`,image:abs(imageData(r).heroImage)||DEFAULT_SHARE_IMAGE,datePublished:r.dateAdded||undefined,author:{'@type':'Organization',name:SITE_NAME},recipeCategory:r.course||undefined,recipeCuisine:r.cuisine||undefined,prepTime:isoDuration(st.prep)||undefined,cookTime:isoDuration(st.cook)||undefined,totalTime:isoDuration(st.total)||undefined,recipeYield:st.serves!==undefined?String(st.serves):undefined,recipeIngredient:ing,recipeInstructions:steps};
+  const data={'@context':'https://schema.org','@type':'Recipe',name:r.title,description:r.description||undefined,url:`${SITE_URL}/recipes/recipe.html?slug=${encodeURIComponent(r.slug)}`,image:[abs(imageData(r).recipeImage),abs(imageData(r).heroImage)].filter(Boolean),datePublished:schemaDate(r.dateAdded),author:{'@type':'Person',name:'Mitsuka',url:`${SITE_URL}/pages/about.html`},recipeCategory:r.course||undefined,recipeCuisine:r.cuisine||undefined,prepTime:isoDuration(st.prep)||undefined,cookTime:isoDuration(st.cook)||undefined,totalTime:isoDuration(st.total)||undefined,recipeYield:st.serves!==undefined?String(st.serves):undefined,recipeIngredient:ing,recipeInstructions:steps};
+  const rating=reviewStats(r);
+if(rating.count>0){data.aggregateRating={'@type':'AggregateRating',ratingValue:Number(rating.avg.toFixed(1)),ratingCount:rating.count};}
   const el=document.createElement('script');el.type='application/ld+json';el.id='recipe-jsonld';el.textContent=JSON.stringify(data);document.head.appendChild(el);
 }
 function relatedRecipes(r){if(r.isUsuals)return [];const lc=v=>String(v).toLowerCase();const cu=new Set(cuisineValues(r).map(lc)),co=new Set(courseValues(r).map(lc)),ic=new Set((r.mainIngredients||[]).map(lc));return recipes.filter(x=>x!==r&&!x.isUsuals).map(x=>{let n=0;if(cuisineValues(x).some(v=>cu.has(lc(v))))n+=2;if(courseValues(x).some(v=>co.has(lc(v))))n+=1;if((x.mainIngredients||[]).some(v=>ic.has(lc(v))))n+=1;if(x.source&&x.source===r.source)n+=1;return {x,n}}).filter(o=>o.n>0).sort((a,b)=>b.n-a.n||String(b.x.dateAdded||'').localeCompare(String(a.x.dateAdded||''))).slice(0,3).map(o=>o.x)}
@@ -980,7 +982,21 @@ async function showReviews(r,initial=false){
       avg:ratings.length?ratings.reduce((a,b)=>a+b,0)/ratings.length:0,
       count:ratings.length
     });
-
+    function schemaDate(value){
+  const match=String(value||'').match(
+    /·\s*([A-Z]{3})\s+(\d{1,2}),\s+(\d{4})\s*·/i
+  );
+  if(!match)return undefined;
+  const months={
+    JAN:'01',FEB:'02',MAR:'03',APR:'04',
+    MAY:'05',JUN:'06',JUL:'07',AUG:'08',
+    SEP:'09',OCT:'10',NOV:'11',DEC:'12'
+  };
+  const month=months[match[1].toUpperCase()];
+  if(!month)return undefined;
+  return `${match[3]}-${month}-${match[2].padStart(2,'0')}`;
+}
+    addRecipeJsonLd(r);
     updateRecipeRating(r);
 
     box.innerHTML=arr.length?arr.map(x=>{
