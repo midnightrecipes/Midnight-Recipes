@@ -1140,7 +1140,7 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
       {number:'03',title:'COAT THE CHICKEN',clock:'10:29 PM',paragraphs:[
         'Return the crispy chicken to the skillet.',
         'Toss gently for 1–2 minutes until the pieces are evenly coated.',
-        'If the sauce is too thick, add 5–10 ml water and toss again. This is extra adjustment water, separate from the sauce water listed in the ingredients.',
+        'If the sauce is too thick, add 1-2 tsp / 5–10 ml water and toss again. This is extra adjustment water, separate from the sauce water listed in the ingredients.',
         'Remove from the heat once the chicken is coated in the glossy sauce.'
       ],stepImages:['images/recipes/sweet-chili-peanut-chicken/step-03-01.jpg','images/recipes/sweet-chili-peanut-chicken/step-03-02.jpg']},
       {number:'04',title:'GARNISH AND SERVE',clock:'Optional',paragraphs:[
@@ -1162,7 +1162,7 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
       'REHEAT':'Reheat in the oven or air fryer to restore some crispness. The microwave is convenient but will soften the coating.'
     },
     tags:['Chicken','Peanut Butter','Sweet Chili','One-Pan','Weeknight Dinner'],
-    mainIngredients:['Chicken','Pantry','Herbs & Spices'],
+    mainIngredients:['Chicken','Peanuts','Chili'],
     usualsCategory:''
   },
 {
