@@ -1701,7 +1701,7 @@ It's simple, satisfying, and a lovely reminder that a little creativity with eve
       amount: 454,unit: 'g',
       imperialAmount: 1,imperialUnit: 'lb'
     },
-    {amount:110 - 150,unit:'g',imperialAmount:1,imperialUnit:'medium',item:'Onion, finely diced'},
+    {amount:130,unit:'g',imperialAmount:1,imperialUnit:'medium',item:'Onion, finely diced'},
     {
       item: 'Tomato, finely diced',
       amount: 110,unit: 'g',
