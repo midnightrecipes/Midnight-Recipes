@@ -2,8 +2,7 @@
 window.MIDNIGHT_SITE = {
   // Reviews are stored in Supabase and displayed publicly on the website.
   reviewsEnabled: true,
-  aboutImages: {
-    aboutMe: 'images/about/about-me.jpg',
+  aboutImages: {aboutMe: 'images/about/about-me.jpg',
     aboutRecipes: 'images/about/about-midnight-recipes.jpg'
   }
 };
