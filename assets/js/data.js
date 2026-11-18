@@ -327,7 +327,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
     ingredients:[
       {group:'APPLE MIXTURE'},
       {amount:300,unit:'g',item:'Apples, peeled, cored, and cut into 1/2 inch / 1 cm cubes'},
-      {amount:14,unit:'g',,imperialAmount:1,imperialUnit:'tbsp',item:'Unsalted butter'},
+      {amount:14,unit:'g',imperialAmount:1,imperialUnit:'tbsp',item:'Unsalted butter'},
       {amount:20,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Brown sugar'},
       {amount:15,unit:'ml',item:'Lemon juice'},
       {amount:2,unit:'g',item:'Ground cinnamon'},
