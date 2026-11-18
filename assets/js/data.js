@@ -2230,7 +2230,244 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
     ],
     mainIngredients:['Apples','Dates','Coconut','Brown Sugar','Butter'],
     usualsCategory:''
-  }
+  },
+  {
+    slug:'beef-chili',
+    title:'Beef Chili',
+    source:'Restaurant',
+    original:'Wendy’s',
+    originalUrl:'https://www.wendys.com/blog/wendys-chili-101',
+    dish:'Chili',
+    cuisine:'American',
+    course:'Main Dishes',
+    courseDisplay:'Main Dishes',
+    categories:['Main Dishes'],
+    dateAdded:'2026-11-17',
+    timeStamp:'10:45 PM',
+    description:'Inspired by Wendy’s beloved chili, this comforting classic gets a midnight twist with cocoa, coffee, and a bold blend of spices for a deeper, smokier flavor.',
+    heroImage:'images/recipes/beef-chili/hero.jpg',
+    recipeImage:'images/recipes/beef-chili/recipe.jpg',
+    usCupFractions:true,
+    stepQuantityConversion:true,
+    story:`These days, food trends change so quickly that sometimes, it feels a little overwhelming—and honestly, a little easy to feel left behind.
+
+Then there’s chili.
+
+Dave Thomas opened the first Wendy’s in Columbus, Ohio, in 1969, and chili was already on the original menu. More than 50 years later, it’s still a fan favorite.
+
+I love the idea of a comfort food that doesn’t need to chase every new trend to stay relevant. Maybe the best food doesn’t need to follow a trend. It just needs to be good enough to be passed down.
+
+And maybe that’s one of the best things about chili: there is no one right way to eat it.
+
+Have it with rice, bread, or crackers. Top it with cheddar, sour cream, green onions, or cilantro. And somehow, it can be even better the next day—turned into a baked potato, chili cheese toast, nachos, or chili cheese fries.
+
+I’m not going to claim that my chili can beat Wendy’s. But ours has its own kind of deliciousness.
+
+For my version, I wanted a deeper, darker flavor, so I added a tiny amount of cocoa and coffee to the seasoning. Then I gave it a little more punch with extra chili powder, cayenne, and black pepper.
+
+A familiar classic, made for a midnight kitchen.`,
+    ingredientFile:[
+  {
+  name:'OUR OWN CHILI SEASONING',
+  tag:'THIS IS EVERYTHING!',
+  details:[
+    ['Chili powder','The backbone of the chili — warmth, heat, and classic chili flavor.'],
+    ['Ground cumin','Earthy, warm, and aromatic, giving the beef a deeper savory character.'],
+    ['Smoked paprika','Adds gentle smokiness and a roasted, almost grilled quality.'],
+    ['Dried oregano','Herbal and slightly peppery, balancing the richness of the beef and tomatoes.'],
+    ['Unsweetened cocoa powder','Adds subtle bitterness and depth. It should disappear into the background rather than make the chili taste like chocolate.'],
+    ['Instant coffee powder','A tiny amount boosts the savory depth of the beef and tomatoes without making the chili taste like coffee.'],
+    ['Cayenne pepper','Clean, direct heat that gives the chili its extra punch.'],
+    ['Freshly ground black pepper','Adds a sharper peppery bite and a lively finish.'],
+    ['Salt','Enhances the overall flavor and balances the spices, beef, and tomatoes.']
+  ]
+}
+    ],
+    ingredients:[
+      {group:'THE CHILI'},
+      {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Ground beef'},
+      {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Neutral oil'},
+      {unit:'',item:'Yellow onion, diced'},
+      {unit:'',item:'Celery, finely diced'},
+      {unit:'',item:'Red bell pepper, diced'},
+      {unit:'',item:'Garlic, minced'},
+      {amount:540,unit:'ml',item:'Kidney beans, drained and rinsed'},
+      {amount:796,unit:'ml',item:'Crushed tomatoes'},
+      {amount:32,unit:'g',imperialAmount:2,imperialUnit:'tbsp',item:'Tomato paste'},
+      {amount:150,unit:'ml',imperialAmount:2/3,imperialUnit:'cup',item:'Beef broth'},
+      {amount:180,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Corn, fresh or frozen'},
+      {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Worcestershire sauce'},
+      {group:'OUR OWN CHILI SEASONING'},
+      {amount:16,unit:'g',imperialAmount:2,imperialUnit:'tbsp',item:'Chili powder'},
+      {amount:4,unit:'g',imperialAmount:2,imperialUnit:'tsp',item:'Ground cumin'},
+      {amount:3,unit:'g',imperialAmount:1.5,imperialUnit:'tsp',item:'Smoked paprika'},
+      {amount:2,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Dried oregano'},
+      {amount:1,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Unsweetened cocoa powder'},
+      {amount:1,unit:'g',imperialAmount:0.25,imperialUnit:'tsp',item:'Instant coffee powder'},
+      {amount:1,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Cayenne pepper'},
+      {amount:1,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground black pepper'},
+      {amount:8,unit:'g',imperialAmount:1.25,imperialUnit:'tsp',item:'Salt'},
+      {group:'TO FINISH'},
+      {
+        minAmount:5,
+        maxAmount:10,
+        compactRange:true,
+        unit:'ml',
+        imperialMinAmount:1,
+        imperialMaxAmount:2,
+        imperialMinUnit:'tsp',
+        imperialMaxUnit:'tsp',
+        item:'Fresh lime juice'
+      },
+      {group:'FOR SERVING'},
+      {unit:'',item:'Shredded cheddar cheese'},
+      {unit:'',item:'Sour cream'},
+      {unit:'',item:'Green onions, sliced'},
+      {unit:'',item:'Fresh cilantro'},
+      {unit:'',item:'Jalapeño'},
+      {unit:'',item:'Tortilla chips, crackers, bread, or rice'}
+    ],
+    stats:{prep:'15',cook:'50',total:'65',serves:'5-6',quiet:'⭐⭐⭐⭐⭐'},
+    steps:[
+      {
+        number:'01',
+        title:'PREP THE VEGETABLES',
+        clock:'10:45 PM',
+        paragraphs:[
+          'Dice {{qty:THE CHILI::Yellow onion, diced}} yellow onion, {{qty:THE CHILI::Celery, finely diced}} celery, and {{qty:THE CHILI::Red bell pepper, diced}} red bell pepper.',
+          'Mince {{qty:THE CHILI::Garlic, minced}} garlic and set aside.',
+          'Drain and rinse {{qty:THE CHILI::Kidney beans, drained and rinsed}} kidney beans.',
+          'Measure out the remaining ingredients and prepare the seasoning blend: {{qty:OUR OWN CHILI SEASONING::Chili powder}} chili powder, {{qty:OUR OWN CHILI SEASONING::Ground cumin}} ground cumin, {{qty:OUR OWN CHILI SEASONING::Smoked paprika}} smoked paprika, {{qty:OUR OWN CHILI SEASONING::Dried oregano}} dried oregano, {{qty:OUR OWN CHILI SEASONING::Unsweetened cocoa powder}} unsweetened cocoa powder, {{qty:OUR OWN CHILI SEASONING::Instant coffee powder}} instant coffee powder, {{qty:OUR OWN CHILI SEASONING::Cayenne pepper}} cayenne pepper, {{qty:OUR OWN CHILI SEASONING::Ground black pepper}} black pepper, and {{qty:OUR OWN CHILI SEASONING::Salt}} salt.'
+        ],
+        stepImages:['images/recipes/beef-chili/step-01-01.jpg','images/recipes/beef-chili/step-01-02.jpg']
+      },
+      {
+        number:'02',
+        title:'BROWN THE BEEF',
+        clock:'10:55 PM',
+        paragraphs:[
+          'Heat a large heavy-bottomed pot over medium-high heat.',
+          'Add {{qty:THE CHILI::Neutral oil}} oil, then add {{qty:THE CHILI::Ground beef}} ground beef.',
+          'Leave the beef mostly undisturbed for 2–3 minutes so it can develop a deep brown crust. Break it apart with a wooden spoon and continue cooking for another 5–7 minutes, until well browned and no longer pink.',
+          'Add {{qty:THE CHILI::Yellow onion, diced}} onion, {{qty:THE CHILI::Celery, finely diced}} celery, and {{qty:THE CHILI::Red bell pepper, diced}} red bell pepper.',
+          'Cook for 5–7 minutes, stirring occasionally, until the vegetables begin to soften.',
+          'Add {{qty:THE CHILI::Garlic, minced}} garlic and cook for about 30 seconds.'
+        ],
+        stepImages:['images/recipes/beef-chili/step-02-01.jpg','images/recipes/beef-chili/step-02-02.jpg']
+      },
+      {
+        number:'03',
+        title:'BUILD THE FLAVOR',
+        clock:'10:58 PM',
+        paragraphs:[
+          'Add the entire chili seasoning.',
+          'Stir constantly for 30–60 seconds, allowing the spices to bloom in the fat.',
+          'Add {{qty:THE CHILI::Tomato paste}} tomato paste and cook for another 1–2 minutes, stirring frequently, until it darkens slightly.',
+          'Pour in {{qty:THE CHILI::Crushed tomatoes}} crushed tomatoes, {{qty:THE CHILI::Beef broth}} beef broth, and {{qty:THE CHILI::Worcestershire sauce}} Worcestershire sauce.',
+          'Scrape the bottom of the pot to release the browned bits.',
+          'Add {{qty:THE CHILI::Kidney beans, drained and rinsed}} kidney beans.',
+          'Stir well and bring everything to a gentle simmer.'
+        ],
+        stepImages:['images/recipes/beef-chili/step-03-01.jpg','images/recipes/beef-chili/step-03-02.jpg']
+      },
+      {
+        number:'04',
+        title:'SIMMER & MAKE IT YOURS',
+        clock:'11:08 PM',
+        paragraphs:[
+          'Simmer gently for 30 minutes, stirring occasionally.',
+          'Add {{qty:THE CHILI::Corn, fresh or frozen}} corn during the final 10–15 minutes of cooking. Adding it later keeps some of its natural sweetness and texture.',
+          'If the chili is still too loose, remove the lid and simmer for another 5–10 minutes, until thick and spoonable.',
+          'Taste and adjust if needed. Add more salt for seasoning, more cayenne for extra heat, more black pepper for a sharper finish, or more smoked paprika for extra smokiness.',
+          'Turn off the heat and stir in {{qty:TO FINISH::Fresh lime juice}} fresh lime juice. The lime shouldn\'t make the chili taste sour. It simply wakes up all the flavors.'
+        ],
+        stepImages:['images/recipes/beef-chili/step-04-01.jpg','images/recipes/beef-chili/step-04-02.jpg']
+      },
+      {
+        number:'05',
+        title:'FINISH & SERVE',
+        clock:'11:45 PM',
+        paragraphs:[
+          'Ladle the chili into bowls.',
+          'Top with shredded cheddar cheese, sour cream, green onions, fresh cilantro, and jalapeño, or any combination of your choice !',
+          'Serve with tortilla chips, crackers, bread, or rice.'
+        ]
+      }
+    ],
+    notes:[
+      [
+        'Recreating the Flavor',
+        'Wendy\'s was the starting point, not a recipe to copy. I kept the comforting idea of ground beef, beans, tomatoes, peppers, and vegetables, then built my own seasoning around it. The goal wasn\'t to make the chili more complicated. It was to make a familiar chili taste a little deeper, smokier, and more satisfying at midnight.'
+      ],
+      [
+        'The Cocoa Trick',
+        'It adds a subtle bitterness and depth to the tomato and beef. You shouldn\'t be able to identify chocolate in the finished chili.'
+      ],
+      [
+        'The Coffee Trick',
+        'It works quietly in the background, adding another layer of savory depth without making the chili taste like coffee.'
+      ],
+      [
+        'Where the Punch Comes From',
+        'The original seasoning was deliberately rich and rounded, but it needed a little more energy. So I increased the chili powder and added cayenne and black pepper. Cayenne brings direct heat. Black pepper gives the finish a sharper bite. The result is still comforting rather than aggressively spicy.'
+      ],
+      [
+        'Why the Corn Goes in Late',
+        'Corn adds sweetness and texture. Adding it during the last 10–15 minutes keeps the kernels juicy and lets them remain distinct from the thick chili.'
+      ],
+      [
+        'One-Pot Rule',
+        'The beef never leaves the pot. Brown it properly, build the vegetables and spices around it, then let everything simmer together. Less washing up. More midnight eating.'
+      ],
+      [
+        'The Next-Day Upgrade',
+        'Don\'t stop at a bowl of chili. Try the leftovers on a baked potato with cheddar and sour cream, chili cheese toast, nachos, or chili cheese fries. Or simply serve it over rice, with bread, or alongside crackers. That\'s the beauty of chili.'
+      ]
+    ],
+    finePrint:{
+      'BEST EATEN':'Tonight, but arguably even better the next day.',
+      'MAKE AHEAD':'Yes.',
+      'STORAGE':'Store in an airtight container in the refrigerator for up to 3–4 days.',
+      'FREEZER':'Freeze in an airtight container for up to 3 months. Thaw overnight in the refrigerator before reheating.',
+      'REHEAT':'Stovetop over medium-low heat or microwave until hot throughout. Add a splash of water or beef broth if the chili has thickened too much.'
+    },
+    tags:[
+      'Wendy's',
+      'Beef Chili',
+      'Comfort Food',
+      'One-Pot',
+      'Ground Beef',
+      'Kidney Beans',
+      'Smoky',
+      'Spicy',
+      'Make Ahead',
+      'Leftovers'
+    ],
+    mainIngredients:['Ground Beef','Kidney Beans','Tomatoes','Corn','Celery','Red Bell Pepper'],
+    usualsCategory:''
+  },
+
+ name:'OUR OWN CHILI SEASONING',に材料一覧のスパイスが全部リンクされるようにするにはどうしたらいい？
+        tag:'THIS IS EVERYTHING!',
+        details:[
+          ['Chili Powder','The backbone of the chili — warmth, heat, and classic chili flavor.'],
+          ['Cumin','Earthy, warm, and aromatic, giving the beef a deeper savory character.'],
+          ['Smoked Paprika','Adds gentle smokiness and a roasted, almost grilled quality.'],
+          ['Paprika','Mild and slightly sweet, rounding out the stronger spices.'],
+          ['Oregano','Herbal and slightly peppery, balancing the richness of the beef and tomatoes.'],
+          [
+            'Unsweetened Cocoa Powder',
+            'Adds subtle bitterness and depth. It should disappear into the background rather than make the chili taste like chocolate.'
+          ],
+          [
+            'Instant Coffee',
+            'A tiny amount boosts the savory depth of the beef and tomatoes without making the chili taste like coffee.'
+          ],
+          ['Cayenne Pepper','Clean, direct heat that gives the chili its extra punch.'],
+          ['Black Pepper','Adds a sharper peppery bite and a lively finish.']
+        ]
+      }
+    ],
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
 window.MIDNIGHT_COURSES = ['Breakfast & Brunch','Appetizers','Snacks','Soups','Salads','Main Dishes','Sides','Baking','Desserts'];
