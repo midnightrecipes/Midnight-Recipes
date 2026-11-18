@@ -6,6 +6,7 @@ on:
     paths:
       - 'images/recipes/**'
       - 'assets/js/data.js'
+      - 'assets/js/app.js'
       - 'CNAME'
       - '.github/scripts/**'
       - '.github/workflows/generate-image-manifest.yml'
@@ -34,7 +35,7 @@ jobs:
       - name: Install image optimizer
         run: python -m pip install Pillow
 
-      - name: Generate card WebP images
+      - name: Generate list-card WebP images (hero-list.webp)
         run: python .github/scripts/generate-card-webp.py
 
       - name: Generate image manifest
@@ -43,9 +44,12 @@ jobs:
       - name: Generate sitemap and robots.txt
         run: node .github/scripts/generate-sitemap.js
 
+      - name: Prerender recipe pages
+        run: node .github/scripts/prerender-recipes.js
+
       - name: Commit generated files
         run: |
-          FILES="assets/js/image-manifest.json sitemap.xml robots.txt images/recipes"
+          FILES="assets/js/image-manifest.json sitemap.xml robots.txt images/recipes recipes"
           if [ -z "$(git status --porcelain -- $FILES)" ]; then
             echo "Generated files are already up to date."
             exit 0
@@ -65,3 +69,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh api --method POST "repos/${{ github.repository }}/pages/builds" || echo "Pages rebuild request skipped"
+
+      - name: Check every recipe works on the live site
+        if: always()
+        run: node tools/check-site.cjs
