@@ -2,6 +2,10 @@
 <script>
 /* GitHub Pages serves this file for any missing URL, at any depth, so work out the site root from the address. */
 (function(){var p=location.pathname.split('/');var base=/\.github\.io$/.test(location.hostname)?'/'+p[1]+'/':'/';window.__base=base;
+/* A recipe page that has not been generated yet (or failed to build) must never be a dead end: open the live version. */
+var rest=location.pathname.slice(base.length).replace(/^\/+/,'');var rm=rest.match(/^recipes\/([a-z0-9-]+)\/?$/);
+if(rm&&rm[1]!=='index'&&rm[1]!=='recipe'){location.replace(base+'recipes/recipe.html?slug='+rm[1]+'&live=1');return;}
+
 var l=document.createElement('link');l.rel='stylesheet';l.href=base+'assets/css/style.css';document.head.appendChild(l);
 var i=document.createElement('link');i.rel='icon';i.type='image/jpeg';i.href='/favicon.jpg';document.head.appendChild(i);})();
 </script></head><body><main class="page"><div class="wrap"><section class="section"><h2 class="h2">Page not found</h2>

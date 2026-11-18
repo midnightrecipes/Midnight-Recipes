@@ -103,3 +103,13 @@ When you rename a recipe `slug`, also rename `images/recipes/<slug>/` and add th
 ## Image size
 
 Run `python3 tools/optimize-images.py` (needs Pillow) before committing large new photos. It shrinks step/recipe photos to 1600 px at about 80% JPEG quality in place. `hero-list.webp` for recipe cards is generated automatically by Actions.
+
+## Adding or changing a recipe (checklist)
+
+1. Photos: create `images/recipes/<slug>/` (the folder name must equal the recipe `slug`; slug = a-z, 0-9 and `-` only). Name files `hero.jpg`, `recipe.jpg`, `step-01-01.jpg`, `step-01-02.jpg`, ... (two digits, hyphens, lower-case). Run `python3 tools/optimize-images.py` first.
+2. Add the recipe to `assets/js/data.js`. Times need units: `'15 mins'`, `'1 hr 5 mins'`, not `'15'`.
+3. Push to `main`. Wait for the **Actions** tab to turn green (about 1-2 minutes). It creates `recipes/<slug>/index.html`, the sitemap, the image manifest and `hero-list.webp`.
+4. If the Action is red, open it: the last step ("Check every recipe works") lists exactly what to fix, in plain words. You can run the same check on your computer: `node tools/check-site.cjs`.
+5. Never edit files inside `recipes/<slug>/` by hand; they are overwritten.
+
+Safety net: if a recipe page has not been generated yet, `404.html` opens the live version (`recipes/recipe.html?slug=<slug>&live=1`) instead of showing "Page not found".
