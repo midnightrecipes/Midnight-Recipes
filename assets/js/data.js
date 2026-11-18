@@ -2432,7 +2432,7 @@ A familiar classic, made for a midnight kitchen.`,
       'REHEAT':'Stovetop over medium-low heat or microwave until hot throughout. Add a splash of water or beef broth if the chili has thickened too much.'
     },
     tags:[
-      'Wendy's',
+      'Wendy\'s ',
       'Beef Chili',
       'Comfort Food',
       'One-Pot',
