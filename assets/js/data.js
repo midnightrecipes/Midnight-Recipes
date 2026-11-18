@@ -334,7 +334,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
       {amount:1,unit:'pinch',item:'Fine salt'},
       {group:'CUSTARD'},
       {amount:100,unit:'ml',imperialAmount:7,imperialUnit:'tbsp',item:'Whole milk'},
-      {amount:400,unit:'ml',imperialAmount:1 1/2,imperialUnit:'cup',item:'35% whipping cream'},
+      {amount:400,unit:'ml',imperialAmount:1.5,imperialUnit:'cup',item:'35% whipping cream'},
       {amount:90,unit:'g',imperialAmount:5,imperialUnit:'large',item:'Egg yolks'},
       {amount:63,unit:'g',imperialAmount:5,imperialUnit:'tbsp',item:'Granulated sugar'},
       {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla extract'},
