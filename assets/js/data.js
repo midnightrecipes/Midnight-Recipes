@@ -2326,7 +2326,7 @@ A familiar classic, made for a midnight kitchen.`,
       {unit:'',item:'Jalapeño'},
       {unit:'',item:'Tortilla chips, crackers, bread, or rice'}
     ],
-    stats:{prep:'15',cook:'50',total:'65',serves:'5-6',quiet:'⭐⭐⭐⭐⭐'},
+    stats:{prep:'15 mins',cook:'50 mins',total:'1 hr 5 mins',serves:'5-6',quiet:'⭐⭐⭐⭐⭐'},
     steps:[
       {
         number:'01',

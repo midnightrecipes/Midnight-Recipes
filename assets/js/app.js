@@ -123,7 +123,8 @@ function notFound(msg){setMeta('Page not found');const m=document.createElement(
 // Structured data only: keep recipe-page presentation unchanged.
 
 function isoDuration(t){
-  const value=String(t||'').toLowerCase().replace(/[–—]/g,'-').trim();
+  let value=String(t||'').toLowerCase().replace(/[–—]/g,'-').trim();
+  if(/^\d+(?:\.\d+)?$/.test(value))value+=' mins';
 
   // For a range, use the stated minimum. Ignore a trailing "+".
   const h=value.match(/(\d+(?:\.\d+)?)(?:\s*-\s*\d+(?:\.\d+)?)?\s*(?:hrs?|hours?|h)\b/);
