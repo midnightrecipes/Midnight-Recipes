@@ -19,7 +19,7 @@ window.MIDNIGHT_RECIPES = [
     usCupFractions:true,
     scaleMinimums:{'salt|pinch':1},
     fixedStepPhotoCells:true,
-    storyQuote:'“You know what I like about cooking? I love that after a day when nothing is sure, and when I say nothing I mean nothing, you can come home and absolutely know that if you add egg yolks to chocolate and sugar and milk, it will get thick. It’s such a comfort.”',
+    storyQuote: '“I love that after a day when nothing is sure, you can come home and absolutely know that if you add egg yolks to chocolate and sugar and milk, it will get thick. It’s such a comfort.” — Julie & Julia (2009)',
     story:`This homemade chocolate cream pie features a rich, silky dark chocolate custard filling made with real chocolate, cocoa powder, and a hint of espresso, all nestled in a crisp graham cracker crust.
 
 Inspired by *Julie & Julia*, this pie is more than just a dessert. *Reine de Saba* (chocolate cake with sliced almonds) might be the most famous dessert from the film, but honestly, Julie’s whole emotional breakdown over making a chocolate cream pie is what totally spoke to me. No matter how messy or exhausting the day gets, the kitchen is always my favorite place to unwind.
