@@ -69,16 +69,16 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
     ]
   }
 ],
-    ingredients:[
-      {group:'CRUST'},{amount:200,unit:'g',item:'Graham crackers, finely crushed'},
-      {amount:76,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Unsalted butter, melted'},
+   ingredients:[
+      {group:'CRUST'},{amount:200,unit:'g',imperialAmount:1.6,imperialUnit:'cup',item:'Graham crackers, finely crushed'},
+      {amount:76,unit:'g',imperialAmount:0.33,imperialUnit:'cup',item:'Unsalted butter, melted'},
       {group:'CHOCOLATE FILLING'},
       {amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Dark chocolate, chopped'},
       {amount:2,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Espresso powder'},
       {amount:24,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Unsweetened cocoa powder'},
       {amount:72,unit:'g',imperialAmount:4,imperialUnit:'large',item:'Egg yolks'},
       {amount:75,unit:'g',imperialAmount:6,imperialUnit:'tbsp',item:'Granulated sugar'},
-      {amount:4,unit:'tbsp',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},
+      {amount:32,unit:'g',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'},
       {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},
       {amount:500,unit:'ml',imperialAmount:2,imperialUnit:'cup',item:'Whole milk'},
       {amount:21,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Unsalted butter'},
@@ -209,15 +209,15 @@ Tonight, I’m taking that iconic flavour and making the ground pork the star, s
     ]
   }
 ],
-    ingredients:[
+ingredients:[
       {group:'TAIWAN MINCE'},
       {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Ground pork (regular)'},
       {amount:20,unit:'g',imperialAmount:4,imperialUnit:'cloves',item:'Garlic, finely minced'},
       {minAmount:3,maxAmount:5,unit:'',item:'Fresh red chilies, finely minced, seeds included'},
-      {amount:45,unit:'ml',item:'Sesame oil'},
-      {amount:30,unit:'ml',item:'Soy sauce'},
-      {amount:30,unit:'ml',item:'Shaoxing wine'},
-      {amount:15,unit:'ml',item:'Doubanjiang'},
+      {amount:45,unit:'ml',imperialAmount:3,imperialUnit:'tbsp',item:'Sesame oil'},
+      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Soy sauce'},
+      {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Shaoxing wine'},
+      {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Doubanjiang'},
       {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Oyster sauce'},
       {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Gochujang'},
       {amount:4,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Granulated sugar'},
@@ -326,21 +326,21 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
 ],
     ingredients:[
       {group:'APPLE MIXTURE'},
-      {amount:300,unit:'g',item:'Apples, peeled, cored, and cut into 1/2 inch / 1 cm cubes'},
+      {amount:300,unit:'g',imperialAmount:1.5,imperialUnit:'cup',item:'Apples, peeled, cored, and cut into 1/2 inch / 1 cm cubes'},
       {amount:14,unit:'g',imperialAmount:1,imperialUnit:'tbsp',item:'Unsalted butter'},
       {amount:20,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Brown sugar'},
-      {amount:15,unit:'ml',item:'Lemon juice'},
-      {amount:2,unit:'g',item:'Ground cinnamon'},
-      {amount:1,unit:'pinch',item:'Fine salt'},
+      {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Lemon juice'},
+      {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'Ground cinnamon'},
+      {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Fine salt'},
       {group:'CUSTARD'},
-      {amount:100,unit:'ml',imperialAmount:7,imperialUnit:'tbsp',item:'Whole milk'},
-      {amount:400,unit:'ml',imperialAmount:1.5,imperialUnit:'cup',item:'35% whipping cream'},
+      {amount:100,unit:'ml',imperialAmount:0.4,imperialUnit:'cup',item:'Whole milk'},
+      {amount:400,unit:'ml',imperialAmount:1.6,imperialUnit:'cup',item:'35% whipping cream'},
       {amount:90,unit:'g',imperialAmount:5,imperialUnit:'large',item:'Egg yolks'},
       {amount:63,unit:'g',imperialAmount:5,imperialUnit:'tbsp',item:'Granulated sugar'},
       {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla extract'},
-      {amount:1,unit:'pinch',item:'Fine salt'},
+      {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Fine salt'},
       {group:'BRÛLÉE'},
-      {amount:50,unit:'g',imperialAmount:1/4,imperialUnit:'cup',item:'Granulated sugar, for brûlée'}
+      {amount:50,unit:'g',imperialAmount:0.25,imperialUnit:'cup',item:'Granulated sugar, for brûlée'}
     ],
     stats:{prep:'20 mins',cook:'35 mins',chill:'2 hrs+',total:'2 hrs 55 mins+',serves:'6',quiet:'⭐⭐⭐⭐⭐'},
     steps:[
@@ -438,15 +438,15 @@ Tonight, I wanted to create something a little different from a standard pumpkin
     }
   ],
     stats:{prep:'25 mins',cook:'55–65 mins',chill:'4 hrs+',total:'5 hrs 20 mins+',serves:'6-8',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐⭐☆'},
-    ingredients:[
+   ingredients:[
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
       {group:'CALABAZA FILLING'},
-      {amount:400,unit:'g',imperialAmount:5/3,imperialUnit:'cup',item:'Pumpkin purée'}, {amount:2,unit:'large',imperialAmount:2,imperialUnit:'large',item:'Eggs'}, {amount:180,unit:'ml',imperialAmount:3/4,imperialUnit:'cup',item:'10% cream (Half & Half)'},
-      {amount:55,unit:'g',imperialAmount:0.25,imperialUnit:'cup',item:'Dark brown sugar'}, {amount:10,unit:'g',imperialAmount:1/2,imperialUnit:'tbsp',item:'Molasses'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Orange juice'}, {amount:0.25,unit:'tsp',imperialAmount:1/4,imperialUnit:'tsp',item:'Salt'},
+      {amount:400,unit:'g',imperialAmount:1.6,imperialUnit:'cup',item:'Pumpkin purée'}, {amount:2,unit:'large',imperialAmount:2,imperialUnit:'large',item:'Eggs'}, {amount:180,unit:'ml',imperialAmount:0.75,imperialUnit:'cup',item:'10% cream (Half & Half)'},
+      {amount:55,unit:'g',imperialAmount:0.25,imperialUnit:'cup',item:'Dark brown sugar'}, {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Molasses'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Orange juice'}, {amount:1.5,unit:'g',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'},
       {group:'SPICE INFUSION'},
-      {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Cinnamon stick'}, {amount:2,unit:'',item:'Whole cloves'}, {amount:1,unit:'',item:'Star anise'}, {amount:1,unit:'strip',item:'Orange peel, 1 inch / 2-3 cm long'},
+      {amount:0.5,unit:'',imperialAmount:0.5,imperialUnit:'',item:'Cinnamon stick'}, {amount:2,unit:'',imperialAmount:2,imperialUnit:'',item:'Whole cloves'}, {amount:1,unit:'',imperialAmount:1,imperialUnit:'',item:'Star anise'}, {amount:1,unit:'strip',imperialAmount:1,imperialUnit:'strip',item:'Orange peel, 1 inch / 2-3 cm long'},
       {group:'THE PILONCILLO SYRUP'},
-      {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Dark brown sugar'}, {amount:5,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Molasses'}, {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Orange juice'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Water'}, {amount:1,unit:'strip',imperialAmount:1,imperialUnit:'strip',item:'Orange peel, 1 inch / 2–3 cm long'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'}
+      {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Dark brown sugar'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Molasses'}, {amount:30,unit:'ml',imperialAmount:2,imperialUnit:'tbsp',item:'Orange juice'}, {amount:15,unit:'ml',imperialAmount:1,imperialUnit:'tbsp',item:'Water'}, {amount:1,unit:'strip',imperialAmount:1,imperialUnit:'strip',item:'Orange peel, 1 inch / 2–3 cm long'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'}
     ],
     steps:[
       {number:'01',title:'MAKE THE CRUST',clock:'11:48 PM',paragraphs:['Preheat your oven to 175°C / 350°F.','Start with one of our usual recipes - Building Block Pie Crust (OPTION B — PARTIAL BLIND-BAKE).'],stepNote:'**Midnight Shortcut:** Use a good-quality store-bought pie crust. Tonight is about the filling.'},
@@ -527,11 +527,11 @@ ingredientFile:[
     stats:{prep:'20 mins',cook:'30 mins',chill:'3 hrs+',total:'3 hrs 50 mins+',serves:'6-8',pan:'9 inch / 23 cm pie dish',quiet:'⭐⭐⭐☆☆'}, showPan:true, showChill:true,
     ingredients:[
       {group:'CRUST'},
-      {amount:200,unit:'g',item:'Plain biscuits, finely crushed'}, {amount:0.5,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground cinnamon'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Ground ginger'}, {amount:1,unit:'pinch',item:'Ground nutmeg'}, {amount:0.25,unit:'tsp',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'}, {amount:80,unit:'g',item:'Unsalted butter, melted'},
+      {amount:200,unit:'g',imperialAmount:1.6,imperialUnit:'cup',item:'Plain biscuits, finely crushed'}, {amount:2,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground cinnamon'}, {amount:1,unit:'g',imperialAmount:0.25,imperialUnit:'tsp',item:'Ground ginger'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Ground nutmeg'}, {amount:1.5,unit:'g',imperialAmount:0.25,imperialUnit:'tsp',item:'Salt'}, {amount:80,unit:'g',imperialAmount:0.35,imperialUnit:'cup',item:'Unsalted butter, melted'},
       {group:'FILLING'},
-      {amount:250,unit:'g',imperialAmount:3,imperialUnit:'',item:'VERY ripe bananas, mashed'}, {amount:2,unit:'',item:'Firm ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',item:'Whole milk'}, {amount:54,unit:'g',imperialAmount:3,imperialUnit:'large',item:'Egg yolks'}, {amount:35,unit:'g',item:'Granulated sugar'}, {amount:32,unit:'g',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla extract'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},
+      {amount:250,unit:'g',imperialAmount:3,imperialUnit:'',item:'VERY ripe bananas, mashed'}, {amount:2,unit:'',imperialAmount:2,imperialUnit:'',item:'Firm ripe bananas, cut in half lengthwise'}, {amount:400,unit:'ml',imperialAmount:1.6,imperialUnit:'cup',item:'Whole milk'}, {amount:54,unit:'g',imperialAmount:3,imperialUnit:'large',item:'Egg yolks'}, {amount:35,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated sugar'}, {amount:32,unit:'g',imperialAmount:4,imperialUnit:'tbsp',item:'Cornstarch'}, {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla extract'}, {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'},
       {group:'TOPPING (Optional)'},
-      {amount:180,unit:'ml',item:'35% whipping cream'}, {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated sugar'}, {unit:'',item:'Cinnamon, for finishing',hideIngredientInfo:true}, {unit:'',item:'Sliced Banana, for finishing',hideIngredientInfo:true}
+      {amount:180,unit:'ml',imperialAmount:0.75,imperialUnit:'cup',item:'35% whipping cream'}, {amount:38,unit:'g',imperialAmount:3,imperialUnit:'tbsp',item:'Granulated sugar'}, {unit:'',item:'Cinnamon, for finishing',hideIngredientInfo:true}, {unit:'',item:'Sliced Banana, for finishing',hideIngredientInfo:true}
     ],
     steps:[
       {number:'01',title:'TURN IT UP & MAKE IT JAMMY',clock:'2:55 AM',paragraphs:[
@@ -642,7 +642,7 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
     ingredients:[
       {group:'PIE CRUST',usualSlug:'building-block-pie-crust',usualLabel:'Building Block Pie Crust'},
       {group:'FILLING'},
-      {amount:400,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'Cooked sweet potato flesh'}, {amount:90,unit:'ml',imperialAmount:6,imperialUnit:'tbsp',item:'10% cream (Half & Half)'}, {amount:70,unit:'g',imperialAmount:1/3,imperialUnit:'cup',item:'Granulated sugar'}, {amount:114,unit:'g',imperialAmount:2,imperialUnit:'large',item:'Eggs'}, {amount:6,unit:'g',item:'Fresh ginger, finely grated'}, {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'Ground cinnamon'}, {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
+      {amount:400,unit:'g',imperialAmount:1.6,imperialUnit:'cup',item:'Cooked sweet potato flesh'}, {amount:90,unit:'ml',imperialAmount:6,imperialUnit:'tbsp',item:'10% cream (Half & Half)'}, {amount:70,unit:'g',imperialAmount:0.33,imperialUnit:'cup',item:'Granulated sugar'}, {amount:114,unit:'g',imperialAmount:2,imperialUnit:'large',item:'Eggs'}, {amount:6,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Fresh ginger, finely grated'}, {amount:2,unit:'g',imperialAmount:0.75,imperialUnit:'tsp',item:'Ground cinnamon'}, {amount:3,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Salt'},
       {group:'TOPPING (optional)'},
       {unit:'',item:'Crystallized ginger, finely chopped, for finishing'}, {unit:'',item:'Ground cinnamon, for dusting'}
     ],
@@ -851,18 +851,18 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
 ],
     ingredients:[
       {group:'GRAHAM CRACKER CRUST'},
-      {amount:200,unit:'g',item:'Graham crackers, finely crushed'},
-      {amount:76,unit:'g',item:'Unsalted butter, melted'},
+      {amount:200,unit:'g',imperialAmount:1.6,imperialUnit:'cup',item:'Graham crackers, finely crushed'},
+      {amount:76,unit:'g',imperialAmount:0.33,imperialUnit:'cup',item:'Unsalted butter, melted'},
       {group:'LIME FILLING'},
-      {amount:300,unit:'ml',item:'Sweetened condensed milk'},
+      {amount:300,unit:'ml',imperialAmount:1.2,imperialUnit:'cup',item:'Sweetened condensed milk'},
       {amount:54,unit:'g',imperialAmount:3,imperialUnit:'large',item:'Egg yolks'},
-      {amount:58,unit:'g',imperialAmount:1/4,imperialUnit:'cup',item:'Sour cream'},
-      {amount:120,unit:'ml',item:'Fresh lime juice'},
-      {amount:6,unit:'g',item:'Lime zest, finely grated'},
+      {amount:58,unit:'g',imperialAmount:0.25,imperialUnit:'cup',item:'Sour cream'},
+      {amount:120,unit:'ml',imperialAmount:0.5,imperialUnit:'cup',item:'Fresh lime juice'},
+      {amount:6,unit:'g',imperialAmount:1.5,imperialUnit:'tsp',item:'Lime zest, finely grated'},
       {group:'MERINGUE'},
-      {amount:3,unit:'large',item:'Egg whites'},
-      {amount:50,unit:'g',item:'Granulated sugar'},
-      {amount:0.5,unit:'g',item:'Cream of tartar'}
+      {amount:90,unit:'g',imperialAmount:3,imperialUnit:'large',item:'Egg whites'},
+      {amount:50,unit:'g',imperialAmount:0.25,imperialUnit:'cup',item:'Granulated sugar'},
+      {amount:0.5,unit:'g',imperialAmount:0.125,imperialUnit:'tsp',item:'Cream of tartar'}
     ],
     stats:{prep:'20 mins',cook:'30 mins',chill:'4 hrs+',total:'4 hrs 50 mins+',serves:'6-8',pan:'9 inch / 23 cm pie dish',quiet:'⭐☆☆☆☆'},
     steps:[
@@ -993,7 +993,7 @@ If the internet was calling it the world’s best chicken soup, I just had to fi
       {group:'CHICKEN & COCONUT BASE'},
       {amount:227,unit:'g',imperialAmount:0.5,imperialUnit:'lb',item:'Chicken thighs, boneless, skinless'},
       {amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Mushrooms'},
-      {amount:400,unit:'ml',imperialAmount:5/3,imperialUnit:'cup',item:'Coconut milk'},
+      {amount:400,unit:'ml',imperialAmount:1.6,imperialUnit:'cup',item:'Coconut milk'},
       {amount:240,unit:'ml',imperialAmount:1,imperialUnit:'cup',item:'Water or chicken stock'},
       {group:'AROMATICS'},
       {amount:30,unit:'g',imperialMinAmount:10,imperialMaxAmount:12,imperialMinUnit:'slices',imperialMaxUnit:'slices',item:'Galangal, thinly sliced',compactRange:true},
@@ -1274,18 +1274,18 @@ The patty is soft and bouncy, with a golden crust on the outside and plenty of j
     { amount: 272, unit: 'g', imperialAmount: 0.625, imperialUnit: 'lb', item: 'Ground beef (regular or lean)' },
     { amount: 182, unit: 'g', imperialAmount: 0.375, imperialUnit: 'lb', item: 'Ground pork (regular or lean)' },
     { amount: 120, unit: 'g', imperialAmount: 1, imperialUnit: 'cup', item: 'Onion, finely chopped' },
-    { amount: 1, unit: 'large', imperialAmount: 1, imperialUnit: 'large', item: 'Egg' },
-    { amount: 50, unit: 'g', imperialAmount: 0.5, imperialUnit: 'cup', item: 'Breadcrumbs' },
+    { amount: 57, unit: 'g', imperialAmount: 1, imperialUnit: 'large', item: 'Egg' },
+    { amount: 50, unit: 'g', imperialAmount: 0.4, imperialUnit: 'cup', item: 'Breadcrumbs' },
     { amount: 60, unit: 'ml', imperialAmount: 0.25, imperialUnit: 'cup', item: 'Milk' },
     { amount: 6, unit: 'g', imperialAmount: 1, imperialUnit: 'tsp', item: 'Salt' },
-    { amount: 0.5, unit: 'g', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Black pepper' },
-    { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground nutmeg' },
+    { amount: 1, unit: 'g', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Black pepper' },
+    { amount: 0.5, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground nutmeg' },
     { unit: '', item: 'Neutral oil, for greasing' },
     { unit: '', item: 'Sake or water, for steaming' },
 
     { group: 'JAPANESE-STYLE “DEMI-GLACE” SAUCE' },
-    { amount: 60, unit: 'ml', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Sake' },
-    { amount: 60, unit: 'ml', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Ketchup' },
+    { amount: 60, unit: 'ml', imperialAmount: 0.25, imperialUnit: 'cup', item: 'Sake' },
+    { amount: 60, unit: 'ml', imperialAmount: 0.25, imperialUnit: 'cup', item: 'Ketchup' },
     { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Worcestershire sauce' },
     { amount: 25, unit: 'g', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Granulated sugar' },
     { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Soy sauce' }
@@ -1429,13 +1429,13 @@ I may not know whether Midori would have chosen this one, but if cheesecake is y
     ],
     ingredients: [
       { amount: 250, unit: 'g', item: 'Cream cheese', imperialAmount: 1, imperialUnit: 'cup' },
-      { amount: 85, unit: 'g', item: 'Granulated sugar' },
+      { amount: 85, unit: 'g', item: 'Granulated sugar', imperialAmount: 0.35, imperialUnit: 'cup' },
       { amount: 170, unit: 'g', item: 'Sour cream', imperialAmount: 0.75, imperialUnit: 'cup' },
-      { amount: 125, unit: 'ml', item: '35% whipping cream' },
-      { amount: 2, unit: '', item: 'Eggs' },
-      { amount: 8, unit: 'g', item: 'Cornstarch' },
+      { amount: 125, unit: 'ml', item: '35% whipping cream', imperialAmount: 0.5, imperialUnit: 'cup' },
+      { amount: 114, unit: 'g', item: 'Eggs', imperialAmount: 2, imperialUnit: 'large' },
+      { amount: 8, unit: 'g', item: 'Cornstarch', imperialAmount: 1, imperialUnit: 'tbsp' },
       { amount: 10, unit: 'ml', imperialAmount: 2, imperialUnit: 'tsp', item: 'Lemon juice' },
-      { amount: 0.5, unit: 'tsp', item: 'Vanilla extract' }
+      { amount: 2.5, unit: 'g', imperialAmount: 0.5, imperialUnit: 'tsp', item: 'Vanilla extract' }
     ],
     stats: { prep: '20 mins', cook: '45–50 mins', chill: '8 hrs+', total: '9 hrs 5 mins+', serves: '6-8', pan: '7 inch / 18 cm loaf pan', quiet: '⭐⭐⭐⭐⭐' },
     showPan: true,
@@ -1581,16 +1581,16 @@ details: [
     ingredients: [
       { group: 'PIE CRUST', usualSlug: 'building-block-pie-crust', usualLabel: 'Building Block Pie Crust' },
       { group: 'PUMPKIN FILLING' },
-      { amount: 400, unit: 'g', imperialAmount: 5 / 3, imperialUnit: 'cup', item: 'Pumpkin purée' },
-      { amount: 70, unit: 'g', imperialAmount: 1 / 3, imperialUnit: 'cup', item: 'Brown sugar' },
-      { amount: 2, unit: 'large', imperialAmount: 2, imperialUnit: 'large', item: 'Eggs' },
-      { amount: 80, unit: 'ml', imperialAmount: 1 / 3, imperialUnit: 'cup', item: 'Whole milk' },
-      { amount: 80, unit: 'ml', imperialAmount: 1 / 3, imperialUnit: 'cup', item: '35% whipping cream' },
-      { amount: 1, unit: 'tsp', imperialAmount: 1, imperialUnit: 'tsp', item: 'Ground cinnamon' },
-      { amount: 0.5, unit: 'tsp', imperialAmount: 0.5, imperialUnit: 'tsp', item: 'Ground ginger' },
+      { amount: 400, unit: 'g', imperialAmount: 1.6, imperialUnit: 'cup', item: 'Pumpkin purée' },
+      { amount: 70, unit: 'g', imperialAmount: 0.33, imperialUnit: 'cup', item: 'Brown sugar' },
+      { amount: 114, unit: 'g', imperialAmount: 2, imperialUnit: 'large', item: 'Eggs' },
+      { amount: 80, unit: 'ml', imperialAmount: 0.33, imperialUnit: 'cup', item: 'Whole milk' },
+      { amount: 80, unit: 'ml', imperialAmount: 0.33, imperialUnit: 'cup', item: '35% whipping cream' },
+      { amount: 2, unit: 'g', imperialAmount: 1, imperialUnit: 'tsp', item: 'Ground cinnamon' },
+      { amount: 1, unit: 'g', imperialAmount: 0.5, imperialUnit: 'tsp', item: 'Ground ginger' },
       { amount: 0.5, unit: 'g', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Ground nutmeg' },
-      { amount: 0.25, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground cloves' },
-      { amount: 0.25, unit: 'tsp', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Salt' }
+      { amount: 0.5, unit: 'g', imperialAmount: 0.125, imperialUnit: 'tsp', item: 'Ground cloves' },
+      { amount: 1.5, unit: 'g', imperialAmount: 0.25, imperialUnit: 'tsp', item: 'Salt' }
     ],
     stats: { prep: '20 mins', cook: '35–45 mins', chill: '2 hrs', total: '2 hrs 55 mins+', serves: '6-8', pan: '9 inch / 23 cm pie dish', quiet: '⭐⭐⭐⭐☆' },
     steps: [
@@ -1703,76 +1703,26 @@ It's simple, satisfying, and a lovely reminder that a little creativity with eve
       ]
     }
   ],
-
-  ingredients: [
-    {
-      group: 'PORK FILLING'
-    },
-    {
-      item: 'Ground pork (regular)',
-      amount: 454,unit: 'g',
-      imperialAmount: 1,imperialUnit: 'lb'
-    },
+ingredients: [
+    {group: 'PORK FILLING'},
+    {item: 'Ground pork (regular)',amount: 454,unit: 'g',imperialAmount: 1,imperialUnit: 'lb'},
     {amount:140,unit:'g',imperialAmount:1,imperialUnit:'medium',item:'Onion, finely diced'},
-    {
-      item: 'Tomato, finely diced',
-      amount: 110,unit: 'g',
-      imperialAmount: 1,imperialUnit: 'medium'
-    },
-        {
-      item: 'Garlic, minced',
-      amount: 10,unit: 'g',
-      imperialAmount: 2,imperialUnit: 'cloves'
-    },
-    {
-      item: 'Fish sauce',
-      amount: 1,unit: 'tbsp'
-    },
-    {
-      item: 'Oyster sauce',
-      amount: 1,unit: 'tbsp'
-    },
-    {
-      item: 'Granulated sugar',
-      amount: 2,unit: 'tsp'
-    },
-    {
-      item: 'Neutral oil, for greasing the pan',
-    },
-    {
-      item: 'Salt, to taste',
-      unit: ''
-    },
-    {
-      item: 'Black pepper, to taste',
-      unit: ''
-    },
-
-    {
-      group: 'OMELETTE'
-    },
-    {
-      item: 'Eggs',
-      amount:400,unit: 'g',imperialAmount: 8,imperialUnit: 'large'
-    },
-    {
-      item: 'Water (optional)',
-      amount: 1,unit: 'tbsp'
-    },
-    {
-      item: 'Neutral oil, for greasing the pan',
-    },
-    {
-      group: 'TO SERVE'
-    },
-    {
-      item: 'Fresh cilantro, for garnish',
-      },
-    {
-      item: 'Peanuts, crushed, for garnish',
-      }
+    {item: 'Tomato, finely diced',amount: 110,unit: 'g',imperialAmount: 1,imperialUnit: 'medium'},
+    {item: 'Garlic, minced',amount: 10,unit: 'g',imperialAmount: 2,imperialUnit: 'cloves'},
+    {item: 'Fish sauce',amount: 15,unit: 'ml',imperialAmount: 1, imperialUnit: 'tbsp'},
+    {item: 'Oyster sauce',amount: 15,unit: 'ml',imperialAmount: 1, imperialUnit: 'tbsp'},
+    {item: 'Granulated sugar',amount: 8,unit: 'g',imperialAmount: 2, imperialUnit: 'tsp'},
+    {item: 'Neutral oil, for greasing the pan',},
+    {item: 'Salt, to taste',unit: ''},
+    {item: 'Black pepper, to taste',unit: ''},
+    {group: 'OMELETTE'},
+    {item: 'Eggs',amount:456,unit: 'g',imperialAmount: 8,imperialUnit: 'large'},
+    {item: 'Water (optional)',amount: 15,unit: 'ml',imperialAmount: 1, imperialUnit: 'tbsp'},
+    {item: 'Neutral oil, for greasing the pan',},
+    {group: 'TO SERVE'},
+    {item: 'Fresh cilantro, for garnish',},
+    {item: 'Peanuts, crushed, for garnish',}
   ],
-
   stats: {
     prep:'15 mins',cook:'20 mins',total:'35 mins',serves:'4',pan:'8 inch / 20 cm frying pan',quiet:'⭐⭐⭐⭐⭐'
   },
@@ -1944,7 +1894,7 @@ Keep a jar in the fridge, and you're always ready.`,
       item:'Mustard powder',amount:2,unit:'g',imperialAmount:1,imperialUnit:'tsp'
     },
     {
-      item:'Ground cumin',amount:1,unit:'tsp',imperialAmount:0.5,imperialUnit:'tsp'
+      item:'Ground cumin',amount:2,unit:'g',imperialAmount:0.5,imperialUnit:'tsp'
     },
     {
       item:'Garlic powder',
@@ -2103,7 +2053,7 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
     ],
     ingredients:[
        {group:'THE CAKE'},
-      {amount:200,unit:'g',imperialAmount:5/3,imperialUnit:'cup',item:'All-purpose flour'},
+      {amount:200,unit:'g',imperialAmount:1.6,imperialUnit:'cup',item:'All-purpose flour'},
       {amount:300,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'Apples, peeled and cored'},
       {amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Pitted dates, chopped'},
       {amount:115,unit:'g',imperialAmount:0.5,imperialUnit:'cup',item:'Unsalted butter, softened'},
@@ -2115,8 +2065,8 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
       {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla extract'},
       {group:'WOOD SHAVINGS TOPPING'},
       {amount:60,unit:'g',imperialAmount:0.25,imperialUnit:'cup',item:'Unsalted butter'},
-      {amount:70,unit:'g',item:'Brown sugar'},
-      {amount:60,unit:'ml',item:'Milk (2% or whole)'},
+      {amount:70,unit:'g',imperialAmount:0.33,imperialUnit:'cup',item:'Brown sugar'},
+      {amount:60,unit:'ml',imperialAmount:0.25,imperialUnit:'cup',item:'Milk (2% or whole)'},
       {amount:80,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Unsweetened shredded coconut'},
       {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'}
     ],
@@ -2307,7 +2257,7 @@ A familiar classic, made for a midnight kitchen.`,
       {amount:400,unit:'ml',imperialAmount:1,imperialUnit:'can (19 oz)',item:'Kidney beans, drained and rinsed'},
       {amount:796,unit:'ml',imperialAmount:1,imperialUnit:'can (28 fl oz)',item:'Crushed tomatoes'},
       {amount:32,unit:'g',imperialAmount:2,imperialUnit:'tbsp',item:'Tomato paste'},
-      {amount:150,unit:'ml',imperialAmount:2/3,imperialUnit:'cup',item:'Beef broth'},
+      {amount:150,unit:'ml',imperialAmount:0.6,imperialUnit:'cup',item:'Beef broth'},
       {amount:180,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Corn, fresh or frozen'},
       {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Worcestershire sauce'},
       {group:'OUR OWN CHILI SEASONING'},
@@ -2321,8 +2271,7 @@ A familiar classic, made for a midnight kitchen.`,
       {amount:1,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Ground black pepper'},
       {amount:8,unit:'g',imperialAmount:1.25,imperialUnit:'tsp',item:'Salt'},
       {group:'TO FINISH'},
-      {
-        minAmount:5,
+      {minAmount:5,
         maxAmount:10,
         compactRange:true,
         unit:'ml',
@@ -2330,8 +2279,7 @@ A familiar classic, made for a midnight kitchen.`,
         imperialMaxAmount:2,
         imperialMinUnit:'tsp',
         imperialMaxUnit:'tsp',
-        item:'Fresh lime juice'
-      },
+        item:'Fresh lime juice'},
       {group:'FOR SERVING'},
       {unit:'',item:'Shredded cheddar cheese'},
       {unit:'',item:'Sour cream'},
