@@ -2089,6 +2089,7 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
       }
     ],
     ingredients:[
+       {group:'THE CAKE'},
       {amount:200,unit:'g',imperialAmount:5/3,imperialUnit:'cup',item:'All-purpose flour'},
       {amount:300,unit:'g',imperialAmount:2,imperialUnit:'cup',item:'Apples, peeled and cored'},
       {amount:150,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Pitted dates, chopped'},
@@ -2103,8 +2104,8 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
       {amount:60,unit:'g',imperialAmount:0.25,imperialUnit:'cup',item:'Unsalted butter'},
       {amount:70,unit:'g',item:'Brown sugar'},
       {amount:60,unit:'ml',item:'Milk (2% or whole)'},
-      {amount:80,unit:'g',item:'Unsweetened shredded coconut'},
-      {amount:1,unit:'pinch',item:'Salt'}
+      {amount:80,unit:'g',imperialAmount:1,imperialUnit:'cup',item:'Unsweetened shredded coconut'},
+      {amount:1,unit:'pinch',imperialAmount:1,imperialUnit:'pinch',item:'Salt'}
     ],
     stats:{
       prep:'25 mins',
@@ -2142,10 +2143,10 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
         title:'BUILD THE CAMP',
         clock:'10:30 PM',
         paragraphs:[
-          'In a large bowl, cream {{qty:Unsalted butter}} softened butter and {{qty:Granulated sugar}} granulated sugar until light and fluffy.',
+          'In a large bowl, cream {{qty:THE CAKE::Unsalted butter}} softened butter and {{qty:Granulated sugar}} granulated sugar until light and fluffy.',
           'Add {{qty:Egg}} egg and {{qty:Vanilla Extract}} vanilla extract. Mix until combined.',
           'Stir in the warm date and apple mixture.',
-          'Add {{qty:All-Purpose Flour}} flour and {{qty:Salt}} salt. Fold gently until no dry flour remains.'
+          'Add {{qty:All-Purpose Flour}} flour and {{qty:THE CAKE::Salt}} salt. Fold gently until no dry flour remains.'
         ],
         stepImages:[
           'images/recipes/lumberjack-cake/step-03-01.JPG',
