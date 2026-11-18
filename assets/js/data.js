@@ -2446,27 +2446,21 @@ A familiar classic, made for a midnight kitchen.`,
     mainIngredients:['Ground Beef','Kidney Beans','Tomatoes','Corn','Celery','Red Bell Pepper'],
     usualsCategory:''
   },
-
- name:'OUR OWN CHILI SEASONING',に材料一覧のスパイスが全部リンクされるようにするにはどうしたらいい？
-        tag:'THIS IS EVERYTHING!',
-        details:[
-          ['Chili Powder','The backbone of the chili — warmth, heat, and classic chili flavor.'],
-          ['Cumin','Earthy, warm, and aromatic, giving the beef a deeper savory character.'],
-          ['Smoked Paprika','Adds gentle smokiness and a roasted, almost grilled quality.'],
-          ['Paprika','Mild and slightly sweet, rounding out the stronger spices.'],
-          ['Oregano','Herbal and slightly peppery, balancing the richness of the beef and tomatoes.'],
-          [
-            'Unsweetened Cocoa Powder',
-            'Adds subtle bitterness and depth. It should disappear into the background rather than make the chili taste like chocolate.'
-          ],
-          [
-            'Instant Coffee',
-            'A tiny amount boosts the savory depth of the beef and tomatoes without making the chili taste like coffee.'
-          ],
-          ['Cayenne Pepper','Clean, direct heat that gives the chili its extra punch.'],
-          ['Black Pepper','Adds a sharper peppery bite and a lively finish.']
-        ]
-      }
+{
+  name:'OUR OWN CHILI SEASONING',
+  tag:'THIS IS EVERYTHING!',
+  details:[
+    ['Chili powder','The backbone of the chili — warmth, heat, and classic chili flavor.'],
+    ['Ground cumin','Earthy, warm, and aromatic, giving the beef a deeper savory character.'],
+    ['Smoked paprika','Adds gentle smokiness and a roasted, almost grilled quality.'],
+    ['Dried oregano','Herbal and slightly peppery, balancing the richness of the beef and tomatoes.'],
+    ['Unsweetened cocoa powder','Adds subtle bitterness and depth. It should disappear into the background rather than make the chili taste like chocolate.'],
+    ['Instant coffee powder','A tiny amount boosts the savory depth of the beef and tomatoes without making the chili taste like coffee.'],
+    ['Cayenne pepper','Clean, direct heat that gives the chili its extra punch.'],
+    ['Freshly ground black pepper','Adds a sharper peppery bite and a lively finish.'],
+    ['Salt','Enhances the overall flavor and balances the spices, beef, and tomatoes.']
+  ]
+}
     ],
 ];
 window.MIDNIGHT_SOURCES = ['Restaurant','Grocery Store Find','Movie & TV','Book','Travel','Family & Tradition','Memory','Internet Find','Midnight Experiment'];
