@@ -212,7 +212,7 @@ Tonight, I’m taking that iconic flavour and making the ground pork the star, s
     ingredients:[
       {group:'TAIWAN MINCE'},
       {amount:454,unit:'g',imperialAmount:1,imperialUnit:'lb',item:'Ground pork (regular)'},
-      {amount:20,unit:'g',item:'Garlic, finely minced',imperialMinAmount:6,imperialMaxAmount:8,imperialMinUnit:'cloves',imperialMaxUnit:'cloves',instructionImperialMinUnit:'garlic cloves',instructionImperialMaxUnit:'garlic cloves',instructionMetricSuffix:' of garlic',compactRange:true},
+      {amount:20,unit:'g',imperialAmount:4,imperialUnit:'cloves',item:'Garlic, finely minced'},
       {minAmount:3,maxAmount:5,unit:'',item:'Fresh red chilies, finely minced, seeds included'},
       {amount:45,unit:'ml',item:'Sesame oil'},
       {amount:30,unit:'ml',item:'Soy sauce'},
@@ -220,11 +220,11 @@ Tonight, I’m taking that iconic flavour and making the ground pork the star, s
       {amount:15,unit:'ml',item:'Doubanjiang'},
       {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Oyster sauce'},
       {amount:10,unit:'ml',imperialAmount:2,imperialUnit:'tsp',item:'Gochujang'},
-      {amount:2,unit:'g',imperialAmount:0.5,imperialUnit:'tsp',item:'Granulated sugar'},
+      {amount:4,unit:'g',imperialAmount:1,imperialUnit:'tsp',item:'Granulated sugar'},
       {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Chicken bouillon powder'},
       {amount:180,unit:'ml',imperialAmount:0.75,imperialUnit:'cup',item:'Water'},
       {amount:55,unit:'g',imperialAmount:1,imperialUnit:'small bunch',item:'Garlic chives or green onion, cut into 2 inch / 5 cm pieces'},
-      {minAmount:3,maxAmount:5,unit:'ml',imperialMinAmount:0.5,imperialMaxAmount:1,imperialMinUnit:'tsp',imperialMaxUnit:'tsp',compactRange:true,item:'Sesame oil, for finishing'},
+      {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Sesame oil, for finishing'},
       {group:'TO SERVE'},
       {unit:'',item:'Steamed rice'},
       {unit:'',item:'Soft-boiled egg'}
@@ -327,20 +327,20 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
     ingredients:[
       {group:'APPLE MIXTURE'},
       {amount:300,unit:'g',item:'Apples, peeled, cored, and cut into 1/2 inch / 1 cm cubes'},
-      {amount:15,unit:'g',item:'Unsalted butter'},
-      {amount:19,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Brown sugar'},
+      {amount:14,unit:'g',,imperialAmount:1,imperialUnit:'tbsp',item:'Unsalted butter'},
+      {amount:20,unit:'g',imperialAmount:1.5,imperialUnit:'tbsp',item:'Brown sugar'},
       {amount:15,unit:'ml',item:'Lemon juice'},
       {amount:2,unit:'g',item:'Ground cinnamon'},
       {amount:1,unit:'pinch',item:'Fine salt'},
       {group:'CUSTARD'},
       {amount:100,unit:'ml',imperialAmount:7,imperialUnit:'tbsp',item:'Whole milk'},
-      {amount:400,unit:'ml',item:'35% whipping cream'},
+      {amount:400,unit:'ml',,imperialAmount:1 1/2,imperialUnit:'cups',item:'35% whipping cream'},
       {amount:90,unit:'g',imperialAmount:5,imperialUnit:'large',item:'Egg yolks'},
       {amount:63,unit:'g',imperialAmount:5,imperialUnit:'tbsp',item:'Granulated sugar'},
       {amount:5,unit:'ml',imperialAmount:1,imperialUnit:'tsp',item:'Vanilla extract'},
       {amount:1,unit:'pinch',item:'Fine salt'},
       {group:'BRÛLÉE'},
-      {unit:'',item:'Granulated sugar, for brûlée'}
+      {amount:50,unit:'g',imperialAmount:1/4,imperialUnit:'cup',item:'Granulated sugar, for brûlée'}
     ],
     stats:{prep:'20 mins',cook:'35 mins',chill:'2 hrs+',total:'2 hrs 55 mins+',serves:'6',quiet:'⭐⭐⭐⭐⭐'},
     steps:[
@@ -354,7 +354,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
       ],stepImages:['images/recipes/apple-creme-brulee/step-01-01.jpg','images/recipes/apple-creme-brulee/step-01-02.jpg','images/recipes/apple-creme-brulee/step-01-03.jpg','images/recipes/apple-creme-brulee/step-01-04.jpg']},
       {number:'02',title:'MAKE THE CUSTARD',clock:'11:32 PM',paragraphs:[
         'Heat {{qty:whole milk}} whole milk and {{qty:35% whipping cream}} 35% whipping cream over medium-low heat until hot and steaming, but do not boil.',
-        'Whisk {{qty:Egg yolks}} egg yolks, {{qty:Granulated sugar}} sugar, and a pinch of salt gently. Avoid creating too much foam.',
+        'Whisk {{qty:Egg yolks}} egg yolks, {{qty:APPLE MIXTURE::Granulated sugar}} sugar, and a pinch of salt gently. Avoid creating too much foam.',
         'Slowly add the hot dairy while whisking.',
         'Stir in {{qty:vanilla extract}} vanilla extract.',
         'Strain through a fine-mesh sieve.',
@@ -374,7 +374,7 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
       ],stepImages:['images/recipes/apple-creme-brulee/step-04-01.jpg']},
       {number:'05',title:'CRACK THE TOP',clock:'DAY',paragraphs:[
         'Blot any moisture from the surface.',
-        'Sprinkle sugar evenly over the six custards in a thin layer.',
+        'Sprinkle {{qty:BRÛLÉE::Granulated sugar}} sugar evenly (approx. 2 tsp for each cocotte) over the six custards in a thin layer.',
         'Torch until deeply golden and glassy. Let stand for 2–3 minutes.',
         'Crack the caramelized top with the back of a spoon, like *Amélie*.'
       ],stepImages:['images/recipes/apple-creme-brulee/step-05-01.jpg','images/recipes/apple-creme-brulee/step-05-02.jpg']}
