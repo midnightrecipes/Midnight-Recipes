@@ -997,7 +997,7 @@ async function showReviews(r,initial=false){
     box.innerHTML=arr.length?arr.map(x=>{
       const n=Number(x.rating);
       if(!Number.isInteger(n)||n<1||n>5)return '';
-      return `<div class="review-item"><div class="review-stars">${'★'.repeat(n)}${'☆'.repeat(5-n)}</div>${x.reviewer_name?`<b>${esc(x.reviewer_name)}</b>`:''}${x.comment?`<p>${esc(x.comment)}</p>`:''}${x.admin_reply?`<div class="review-admin-reply"><div class="review-admin-reply-label">MIDNIGHT RECIPES</div><p>${esc(x.admin_reply)}</p></div>`:''}</div>`;
+      return `<div class="review-item"><div class="review-stars">${'★'.repeat(n)}${'☆'.repeat(5-n)}</div>${x.reviewer_name?`<b>${esc(x.reviewer_name)}</b>`:''}${x.comment?`<p>${esc(x.comment)}</p>`:''}${x.admin_reply?`<div class="review-admin-reply"><div class="review-admin-reply-label">mitsuka</div><p>${esc(x.admin_reply)}</p></div>`:''}</div>`;
     }).join(''):'<p>No reviews yet. Be the first to rate this recipe!</p>';
 
     if(initial)status.textContent='';
