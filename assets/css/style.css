@@ -1641,3 +1641,21 @@ body[data-page="home"] .category-card .photo-frame{
 }
 .recipe-rating .rating-number{font-weight:600}
 .recipe-rating .rating-count{color:var(--muted)}
+
+/* Admin reply — keep the existing review design */
+.review-admin-reply{
+  margin:12px 0 0 18px;
+  padding:10px 14px;
+  border-left:2px solid var(--line);
+  font-size:15px;
+  line-height:1.75;
+}
+.review-admin-reply-label{
+  margin:0 0 4px;
+  font-weight:700;
+  font-size:14px;
+}
+.review-admin-reply p{
+  margin:0;
+  line-height:1.75;
+}
