@@ -21,8 +21,7 @@ const SUPABASE_PUBLISHABLE_KEY='sb_publishable_4mZYNelWFm_RWqSyeHO_wA_14wWRSfd';
 const TURNSTILE_SITE_KEY='0x4AAAAAAFZACCseCGSSHBOl';
 const reviewStatsCache=new Map();
 async function fetchSharedReviews(slug){
-  const url=SUPABASE_URL+'/rest/v1/recipe_reviews?select=id,rating,reviewer_name,comment,created_at&recipe_slug=eq.'+encodeURIComponent(slug)+'&is_visible=eq.true&order=created_at.desc&limit=100';
-  const response=await fetch(url,{headers:{apikey:SUPABASE_PUBLISHABLE_KEY,Authorization:'Bearer '+SUPABASE_PUBLISHABLE_KEY}});
+  const url=SUPABASE_URL+'/rest/v1/recipe_reviews?select=id,rating,reviewer_name,comment,created_at,admin_reply,admin_reply_at&recipe_slug=eq.'+encodeURIComponent(slug)+'&is_visible=eq.true&order=created_at.desc&limit=100';  const response=await fetch(url,{headers:{apikey:SUPABASE_PUBLISHABLE_KEY,Authorization:'Bearer '+SUPABASE_PUBLISHABLE_KEY}});
   if(!response.ok)throw new Error('Unable to load reviews ('+response.status+').');
   return await response.json();
 }
@@ -998,7 +997,7 @@ async function showReviews(r,initial=false){
     box.innerHTML=arr.length?arr.map(x=>{
       const n=Number(x.rating);
       if(!Number.isInteger(n)||n<1||n>5)return '';
-      return `<div class="review-item"><div class="review-stars">${'★'.repeat(n)}${'☆'.repeat(5-n)}</div>${x.reviewer_name?`<b>${esc(x.reviewer_name)}</b>`:''}${x.comment?`<p>${esc(x.comment)}</p>`:''}</div>`;
+      return `<div class="review-item"><div class="review-stars">${'★'.repeat(n)}${'☆'.repeat(5-n)}</div>${x.reviewer_name?`<b>${esc(x.reviewer_name)}</b>`:''}${x.comment?`<p>${esc(x.comment)}</p>`:''}${x.admin_reply?`<div class="review-admin-reply"><div class="review-admin-reply-label">MIDNIGHT RECIPES</div><p>${esc(x.admin_reply)}</p></div>`:''}</div>`;
     }).join(''):'<p>No reviews yet. Be the first to rate this recipe!</p>';
 
     if(initial)status.textContent='';
