@@ -2411,7 +2411,7 @@ A familiar classic, made for a midnight kitchen.`,
     slug: 'syrniki-farmers-cheese-pancakes',
     title: 'Syrniki (Farmer\'s Cheese Pancakes)',
     source: 'Internet Find',
-    dish: 'Syrniki/Syrnyky/tvorozhniki',
+    dish: 'Syrniki / Syrnyky / Tvorozhniki',
     cuisine: 'Eastern European', cuisineSecondary:'Russian',
     course: 'Breakfast & Brunch',
     courseDisplay: 'Breakfast & Brunch, Snacks',
@@ -2452,7 +2452,7 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
       { amount: 127, unit: 'g', imperialAmount: 2, imperialUnit: 'large', item: 'Eggs' },
       { amount: 62, unit: 'g', imperialAmount: 1/2, imperialUnit: 'cup', item: 'All-purpose flour' },
       { amount: 50, unit: 'g', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Granulated sugar' },
-      { amount: 1.7, unit: 'g', imperialAmount: 1/3, imperialUnit: 'tsp', item: 'Salt' },
+      { amount: 2, unit: 'g', imperialAmount: 1/3, imperialUnit: 'tsp', item: 'Salt' },
       { amount: 2.8, unit: 'g', imperialAmount: 1/2, imperialUnit: 'tsp', item: 'Vanilla extract' },
       { item: 'All-purpose flour, for shaping' },
       { item: 'Butter, for pan-frying' }
@@ -2480,7 +2480,7 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
         paragraphs: [
           'Refrigerate the mixture for 20–30 minutes so the flour absorbs moisture and makes shaping easier.'
         ],
-        stepNote: 'Midnight Fix: If the batter still feels too soft to shape after chilling or if you\'re in a rush to get to bed, mix in extra flour 1 tbsp (about 8–10 g) at a time.',
+        stepNote: '**Midnight Shortcut:** If the batter still feels too soft to shape after chilling or if you\'re in a rush to get to bed, mix in extra flour 1 tbsp (about 8–10 g) at a time.',
         stepImages: ['images/recipes/syrniki-farmers-cheese-pancakes/step-02-01.jpg']
       },
       {
@@ -2488,8 +2488,8 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
         title: 'SHAPE AND PAN-FRY',
         clock: '11:56 PM',
         paragraphs: [
-          'Lightly flour your hands and work surface with {{qty:All-purpose flour, for shaping}} flour, divide into about 8 portions, and shape into rounds roughly 6–7 cm wide and 1–2 cm thick.',
-          'Melt {{qty:Butter, for pan-frying}} butter in a non-stick skillet over medium-low heat and cook for about 3–4 minutes per side until golden brown and cooked through.'
+          'Lightly flour your hands and work surface with flour, divide into about 8 portions, and shape into rounds roughly 6–7 cm wide and 1–2 cm thick.',
+          'Melt butter in a non-stick skillet over medium-low heat and cook for about 3–4 minutes per side until golden brown and cooked through.'
         ],
         stepImages: [
           'images/recipes/syrniki-farmers-cheese-pancakes/step-03-01.jpg',
@@ -2501,7 +2501,7 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
         title: 'SERVE AND ENJOY!',
         clock: '12:06 AM',
         paragraphs: [
-          'Serve warm with sour cream, berries, jam, or honey, or pair with garlic and dill mayonnaise.\''
+          'Serve warm with sour cream, berries, jam, or honey, or pair with garlic and dill mayonnaise.'
         ],
         stepImages: ['images/recipes/syrniki-farmers-cheese-pancakes/step-04-01.jpg']
       }
@@ -2509,7 +2509,8 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
     notes: [
       [
         'Easy Shaping & Best Texture',
-        'No matter which cheese you use, drain any excess liquid thoroughly before mixing so the batter stays workable without needing extra flour. Chilling the batter for 20–30 minutes lets the flour hydrate and firm up, and generously dusting your hands and work surface with flour keeps the soft rounds from sticking while you shape them.'
+        'No matter which cheese you use, drain any excess liquid thoroughly before mixing so the batter stays workable without needing extra flour.
+        Chilling the batter for 20–30 minutes lets the flour hydrate and firm up, and generously dusting your hands and work surface with flour keeps the soft rounds from sticking while you shape them.'
       ]
     ],
     finePrint: {
