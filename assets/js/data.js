@@ -2545,7 +2545,7 @@ window.MIDNIGHT_CUISINES = {
   'Southeast Asia':['Thai','Vietnamese','Filipino','Indonesian','Malaysian'],
   'South Asia':['Indian','Sri Lankan','Pakistani'],
   'Europe':['Italian','French','Spanish','Greek','Portuguese','British','German','Scandinavian'],
-  'Eastern Europe & The Balkans':['Georgian','Ukrainian','Polish','Romanian','Hungarian','Serbian','Croatian','Bulgarian'],
+  'Eastern Europe & The Balkans':['Eastern European','Georgian','Ukrainian','Polish','Romanian','Hungarian','Russian','Croatian','Bulgarian'],
   'Middle East':['Lebanese','Turkish','Persian/Iranian','Israel','Palestinian'],
   'Africa':['Egyptian','Moroccan','Ethiopian'],
   'North America':['Canadian','American','Hawaiian','Mexican'],
