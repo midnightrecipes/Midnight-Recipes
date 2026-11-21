@@ -419,6 +419,27 @@
       ]
     }
   },
+  "syrniki-farmers-cheese-pancakes": {
+    "hero": "images/recipes/syrniki-farmers-cheese-pancakes/hero.jpg",
+    "recipe": "images/recipes/syrniki-farmers-cheese-pancakes/recipe.jpg",
+    "steps": {
+      "01": [
+        "images/recipes/syrniki-farmers-cheese-pancakes/step-01-01.jpg",
+        "images/recipes/syrniki-farmers-cheese-pancakes/step-01-02.jpg",
+        "images/recipes/syrniki-farmers-cheese-pancakes/step-01-03.jpg"
+      ],
+      "02": [
+        "images/recipes/syrniki-farmers-cheese-pancakes/step-02-01.jpg"
+      ],
+      "03": [
+        "images/recipes/syrniki-farmers-cheese-pancakes/step-03-01.jpg",
+        "images/recipes/syrniki-farmers-cheese-pancakes/step-03-02.jpg"
+      ],
+      "04": [
+        "images/recipes/syrniki-farmers-cheese-pancakes/step-04-01.jpg"
+      ]
+    }
+  },
   "tom-kha-gai": {
     "hero": "images/recipes/tom-kha-gai/hero.jpg",
     "recipe": "images/recipes/tom-kha-gai/recipe.jpg",
