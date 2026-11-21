@@ -2406,6 +2406,135 @@ A familiar classic, made for a midnight kitchen.`,
     ],
     mainIngredients:['Ground Beef','Kidney Beans','Tomatoes','Corn','Celery','Red Bell Pepper'],
     usualsCategory:''
+  },
+  {
+    slug: 'syrniki-farmers-cheese-pancakes',
+    title: 'Syrniki (Farmer\'s Cheese Pancakes)',
+    source: 'Internet Find',
+    dish: 'Syrniki/Syrnyky/tvorozhniki',
+    cuisine: 'Eastern European', cuisineSecondary:'Russian',
+    course: 'Breakfast & Brunch',
+    courseDisplay: 'Breakfast & Brunch, Snacks',
+    categories: ['Breakfast & Brunch', 'Snacks'],
+    dateAdded: '2026-11-21',
+    timeStamp: '11:26 PM',
+    description: 'Creamy, tender Eastern European cheese pancakes made with pressed cottage cheese (Twarog/Tvorog).',
+    heroImage: 'images/recipes/syrniki-farmers-cheese-pancakes/hero.jpg',
+    recipeImage: 'images/recipes/syrniki-farmers-cheese-pancakes/recipe.jpg',
+    usCupFractions: true,
+    stepQuantityConversion: true,
+    story: `Cottage cheese has been gaining attention among health-conscious food lovers as a versatile, protein-rich ingredient. Across the internet, I came across countless creative ways to use it, from pancakes and baked goods to creamy desserts.
+
+Among those discoveries, I found Syrniki, traditional Eastern European cheese pancakes.
+
+To my surprise, I discovered that the farmer’s cheese traditionally used to make Syrniki is actually quite easy to find at regular grocery stores here in Canada. Apparently, I had walked past it thousands of times without ever noticing it!
+
+That’s one of the things I love about trying new recipes: you often discover ingredients that have been right in front of you all along.
+
+For my version, I wanted to keep the pancakes rich in cheese flavor and extra creamy, so I used less flour. The result is a wonderfully moist, tender center that pairs beautifully with both sweet and savory toppings.
+
+Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go savory with garlic and dill mayonnaise. They are going well with anything you like!`,
+    ingredientFile: [
+      {
+        name: 'PRESSED COTTAGE CHEESE (TWAROG / TVOROG)',
+        tag: 'THE FARMER’S CHEESE FOUNDATION',
+        details: [
+          ['FLAVOUR', 'Mild, clean, and gently tangy with a rich milky finish and dense, dry curds.'],
+          ['BEST CHOICE', 'MC Dairy Pressed Cottage Cheese (Twarog), widely available at Canadian grocery stores such as No Frills, Loblaws, Walmart, and Metro.'],
+          ['WHY HERE', 'Because it is pressed and low in excess moisture, it holds together with minimal flour—keeping the Syrniki creamy and tender inside rather than dense or bready.'],
+          ['FAT CONTENT & TEXTURE', 'MC Dairy Twarog contains about 0.8% milk fat. Moisture content and protein structure affect shaping far more than fat percentage: higher-fat varieties create a richer mouthfeel, while any excess liquid will make the batter too soft to hold its shape.'],
+          ['SUBSTITUTE', 'Regular cottage cheese (around 1% milk fat or fat-free for a similar profile, though higher-fat works too) or ricotta cheese. Both must be drained thoroughly before mixing, and may yield a slightly softer, grainier texture.']
+        ]
+      }
+    ],
+    ingredients: [
+      { amount: 500, unit: 'g', imperialAmount: 2+1/4, imperialUnit: 'cup', item: 'Pressed cottage cheese (Twarog/Tvorog)' },
+      { amount: 127, unit: 'g', imperialAmount: 2, imperialUnit: 'large', item: 'Eggs' },
+      { amount: 62, unit: 'g', imperialAmount: 1/2, imperialUnit: 'cup', item: 'All-purpose flour' },
+      { amount: 50, unit: 'g', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Granulated sugar' },
+      { amount: 1.7, unit: 'g', imperialAmount: 1/3, imperialUnit: 'tsp', item: 'Salt' },
+      { amount: 2.8, unit: 'g', imperialAmount: 1/2, imperialUnit: 'tsp', item: 'Vanilla extract' },
+      { item: 'All-purpose flour, for shaping' },
+      { item: 'Butter, for pan-frying' }
+    ],
+    stats: { prep: '10 mins', cook: '10 mins', chill: '20 mins', total: '40 mins', serves: '4-5', quiet: '⭐⭐⭐⭐⭐' },
+    steps: [
+      {
+        number: '01',
+        title: 'MIX THE BATTER',
+        clock: '11:26 PM',
+        paragraphs: [
+          'Break up {{qty:Pressed cottage cheese (Twarog/Tvorog)}} cheese gently with a fork. Add {{qty:Eggs}} eggs, {{qty:Granulated sugar}} sugar, {{qty:Salt}} salt, and {{qty:Vanilla extract}} vanilla extract, and mix until combined while leaving a little texture.',
+          'Add {{qty:All-purpose flour}} flour and mix just until incorporated. Avoid overmixing.'
+        ],
+        stepImages: [
+          'images/recipes/syrniki-farmers-cheese-pancakes/step-01-01.jpg',
+          'images/recipes/syrniki-farmers-cheese-pancakes/step-01-02.jpg',
+          'images/recipes/syrniki-farmers-cheese-pancakes/step-01-03.jpg'
+        ]
+      },
+      {
+        number: '02',
+        title: 'REST THE BATTER',
+        clock: '11:36 PM',
+        paragraphs: [
+          'Refrigerate the mixture for 20–30 minutes so the flour absorbs moisture and makes shaping easier.'
+        ],
+        stepNote: 'Midnight Fix: If the batter still feels too soft to shape after chilling or if you\'re in a rush to get to bed, mix in extra flour 1 tbsp (about 8–10 g) at a time.',
+        stepImages: ['images/recipes/syrniki-farmers-cheese-pancakes/step-02-01.jpg']
+      },
+      {
+        number: '03',
+        title: 'SHAPE AND PAN-FRY',
+        clock: '11:56 PM',
+        paragraphs: [
+          'Lightly flour your hands and work surface with {{qty:All-purpose flour, for shaping}} flour, divide into about 8 portions, and shape into rounds roughly 6–7 cm wide and 1–2 cm thick.',
+          'Melt {{qty:Butter, for pan-frying}} butter in a non-stick skillet over medium-low heat and cook for about 3–4 minutes per side until golden brown and cooked through.'
+        ],
+        stepImages: [
+          'images/recipes/syrniki-farmers-cheese-pancakes/step-03-01.jpg',
+          'images/recipes/syrniki-farmers-cheese-pancakes/step-03-02.jpg'
+        ]
+      },
+      {
+        number: '04',
+        title: 'SERVE AND ENJOY!',
+        clock: '12:06 AM',
+        paragraphs: [
+          'Serve warm with sour cream, berries, jam, or honey, or pair with garlic and dill mayonnaise.\''
+        ],
+        stepImages: ['images/recipes/syrniki-farmers-cheese-pancakes/step-04-01.jpg']
+      }
+    ],
+    notes: [
+      [
+        'Easy Shaping & Best Texture',
+        'No matter which cheese you use, drain any excess liquid thoroughly before mixing so the batter stays workable without needing extra flour. Chilling the batter for 20–30 minutes lets the flour hydrate and firm up, and generously dusting your hands and work surface with flour keeps the soft rounds from sticking while you shape them.'
+      ]
+    ],
+    finePrint: {
+      'BEST EATEN': 'Tonight. Warm, right after pan-frying.',
+      'MAKE AHEAD': 'Yes. Chill the mixed batter for up to 24 hours before shaping and frying.',
+      STORAGE: 'Store leftovers in an airtight container in the fridge for up to 3 days.',
+      FREEZER: 'Freeze cooked and cooled Syrniki in a single layer, then transfer to a zip-top bag for up to 2 months.',
+      REHEAT: 'Reheat in a skillet over low heat or in an air fryer until warmed through and lightly crisp.'
+    },
+    tags: [
+      'twarog',
+      'tvorog',
+      'farmer\'s cheese',
+      'cottage cheese',
+      'pancakes',
+      'breakfast',
+      'brunch',
+      'snacks',
+      'eastern european',
+      'russian',
+      'ukrainian',
+      'belarusian'
+    ],
+    mainIngredients: ['cottage cheese', 'twarog', 'tvorog', 'eggs', 'all-purpose flour'],
+    usualsCategory: ''
   }
 ];
 
