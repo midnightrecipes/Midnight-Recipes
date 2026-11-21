@@ -2509,8 +2509,7 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
     notes: [
       [
         'Easy Shaping & Best Texture',
-        'No matter which cheese you use, drain any excess liquid thoroughly before mixing so the batter stays workable without needing extra flour.
-        Chilling the batter for 20–30 minutes lets the flour hydrate and firm up, and generously dusting your hands and work surface with flour keeps the soft rounds from sticking while you shape them.'
+        'No matter which cheese you use, drain any excess liquid thoroughly before mixing so the batter stays workable without needing extra flour. Chilling the batter for 20–30 minutes lets the flour hydrate and firm up, and generously dusting your hands and work surface with flour keeps the soft rounds from sticking while you shape them.'
       ]
     ],
     finePrint: {
