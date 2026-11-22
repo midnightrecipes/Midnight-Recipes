@@ -2213,22 +2213,18 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
     usCupFractions:true,
     stepQuantityConversion:true,
     story:`These days, food trends change so quickly that sometimes, it feels a little overwhelming—and honestly, a little easy to feel left behind.
+That’s why it’s kind of nice when a dish just stays the same.
 
-Then there’s chili.
-
-Dave Thomas opened the first Wendy’s in Columbus, Ohio, in 1969, and chili was already on the original menu. More than 50 years later, it’s still a fan favorite.
+Take Wendy’s chili, for example. When Dave Thomas opened the first restaurant in Columbus, Ohio, in 1969, chili was already on the original menu. More than 50 years later, it’s still a fan favorite, pretty much just as it’s always been.
 
 I love the idea of a comfort food that doesn’t need to chase every new trend to stay relevant. Maybe the best food doesn’t need to follow a trend. It just needs to be good enough to be passed down.
-
 And maybe that’s one of the best things about chili: there is no one right way to eat it.
 
 Have it with rice, bread, or crackers. Top it with cheddar, sour cream, green onions, or cilantro. And somehow, it can be even better the next day—turned into a baked potato, chili cheese toast, nachos, or chili cheese fries.
 
-I’m not going to claim that my chili can beat Wendy’s. But ours has its own kind of deliciousness.
-
-For my version, I wanted a deeper, darker flavor, so I added a tiny amount of cocoa and coffee to the seasoning. Then I gave it a little more punch with extra chili powder, cayenne, and black pepper.
-
-A familiar classic, made for a midnight kitchen.`,
+I’m not going to claim that my chili can beat Wendy’s. But it has its own kind of deliciousness.
+I wanted a deeper, darker flavor, so I added a tiny amount of cocoa and coffee to the seasoning. Then I gave it a little more punch with extra chili powder, cayenne, and black pepper.
+A familiar classic, made for a midnight kitchen...☆彡`,
     ingredientFile:[
   {
   name:'OUR OWN CHILI SEASONING',
