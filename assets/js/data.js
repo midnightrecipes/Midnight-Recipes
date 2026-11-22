@@ -2213,22 +2213,18 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
     usCupFractions:true,
     stepQuantityConversion:true,
     story:`These days, food trends change so quickly that sometimes, it feels a little overwhelming—and honestly, a little easy to feel left behind.
+That’s why it’s kind of nice when a dish just stays the same.
 
-Then there’s chili.
-
-Dave Thomas opened the first Wendy’s in Columbus, Ohio, in 1969, and chili was already on the original menu. More than 50 years later, it’s still a fan favorite.
+Take Wendy’s chili, for example. When Dave Thomas opened the first restaurant in Columbus, Ohio, in 1969, chili was already on the original menu. More than 50 years later, it’s still a fan favorite, pretty much just as it’s always been.
 
 I love the idea of a comfort food that doesn’t need to chase every new trend to stay relevant. Maybe the best food doesn’t need to follow a trend. It just needs to be good enough to be passed down.
-
 And maybe that’s one of the best things about chili: there is no one right way to eat it.
 
 Have it with rice, bread, or crackers. Top it with cheddar, sour cream, green onions, or cilantro. And somehow, it can be even better the next day—turned into a baked potato, chili cheese toast, nachos, or chili cheese fries.
 
-I’m not going to claim that my chili can beat Wendy’s. But ours has its own kind of deliciousness.
-
-For my version, I wanted a deeper, darker flavor, so I added a tiny amount of cocoa and coffee to the seasoning. Then I gave it a little more punch with extra chili powder, cayenne, and black pepper.
-
-A familiar classic, made for a midnight kitchen.`,
+I’m not going to claim that my chili can beat Wendy’s. But it has its own kind of deliciousness.
+I wanted a deeper, darker flavor, so I added a tiny amount of cocoa and coffee to the seasoning. Then I gave it a little more punch with extra chili powder, cayenne, and black pepper.
+A familiar classic, made for a midnight kitchen...☆彡`,
     ingredientFile:[
   {
   name:'OUR OWN CHILI SEASONING',
@@ -2411,7 +2407,7 @@ A familiar classic, made for a midnight kitchen.`,
     slug: 'syrniki-farmers-cheese-pancakes',
     title: 'Syrniki (Farmer\'s Cheese Pancakes)',
     source: 'Internet Find',
-    dish: 'Syrniki/Syrnyky/tvorozhniki',
+    dish: 'Syrniki / Syrnyky / Tvorozhniki',
     cuisine: 'Eastern European', cuisineSecondary:'Russian',
     course: 'Breakfast & Brunch',
     courseDisplay: 'Breakfast & Brunch, Snacks',
@@ -2452,7 +2448,7 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
       { amount: 127, unit: 'g', imperialAmount: 2, imperialUnit: 'large', item: 'Eggs' },
       { amount: 62, unit: 'g', imperialAmount: 1/2, imperialUnit: 'cup', item: 'All-purpose flour' },
       { amount: 50, unit: 'g', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Granulated sugar' },
-      { amount: 1.7, unit: 'g', imperialAmount: 1/3, imperialUnit: 'tsp', item: 'Salt' },
+      { amount: 2, unit: 'g', imperialAmount: 1/3, imperialUnit: 'tsp', item: 'Salt' },
       { amount: 2.8, unit: 'g', imperialAmount: 1/2, imperialUnit: 'tsp', item: 'Vanilla extract' },
       { item: 'All-purpose flour, for shaping' },
       { item: 'Butter, for pan-frying' }
@@ -2480,7 +2476,7 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
         paragraphs: [
           'Refrigerate the mixture for 20–30 minutes so the flour absorbs moisture and makes shaping easier.'
         ],
-        stepNote: 'Midnight Fix: If the batter still feels too soft to shape after chilling or if you\'re in a rush to get to bed, mix in extra flour 1 tbsp (about 8–10 g) at a time.',
+        stepNote: '**Midnight Shortcut:** If the batter still feels too soft to shape after chilling or if you\'re in a rush to get to bed, mix in extra flour 1 tbsp (about 8–10 g) at a time.',
         stepImages: ['images/recipes/syrniki-farmers-cheese-pancakes/step-02-01.jpg']
       },
       {
@@ -2488,8 +2484,8 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
         title: 'SHAPE AND PAN-FRY',
         clock: '11:56 PM',
         paragraphs: [
-          'Lightly flour your hands and work surface with {{qty:All-purpose flour, for shaping}} flour, divide into about 8 portions, and shape into rounds roughly 6–7 cm wide and 1–2 cm thick.',
-          'Melt {{qty:Butter, for pan-frying}} butter in a non-stick skillet over medium-low heat and cook for about 3–4 minutes per side until golden brown and cooked through.'
+          'Lightly flour your hands and work surface with flour, divide into about 8 portions, and shape into rounds roughly 6–7 cm wide and 1–2 cm thick.',
+          'Melt butter in a non-stick skillet over medium-low heat and cook for about 3–4 minutes per side until golden brown and cooked through.'
         ],
         stepImages: [
           'images/recipes/syrniki-farmers-cheese-pancakes/step-03-01.jpg',
@@ -2501,7 +2497,7 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
         title: 'SERVE AND ENJOY!',
         clock: '12:06 AM',
         paragraphs: [
-          'Serve warm with sour cream, berries, jam, or honey, or pair with garlic and dill mayonnaise.\''
+          'Serve warm with sour cream, berries, jam, or honey, or pair with garlic and dill mayonnaise.'
         ],
         stepImages: ['images/recipes/syrniki-farmers-cheese-pancakes/step-04-01.jpg']
       }
@@ -2545,7 +2541,7 @@ window.MIDNIGHT_CUISINES = {
   'Southeast Asia':['Thai','Vietnamese','Filipino','Indonesian','Malaysian'],
   'South Asia':['Indian','Sri Lankan','Pakistani'],
   'Europe':['Italian','French','Spanish','Greek','Portuguese','British','German','Scandinavian'],
-  'Eastern Europe & The Balkans':['Georgian','Ukrainian','Polish','Romanian','Hungarian','Serbian','Croatian','Bulgarian'],
+  'Eastern Europe & The Balkans':['Eastern European','Georgian','Ukrainian','Polish','Romanian','Hungarian','Russian','Croatian','Bulgarian'],
   'Middle East':['Lebanese','Turkish','Persian/Iranian','Israel','Palestinian'],
   'Africa':['Egyptian','Moroccan','Ethiopian'],
   'North America':['Canadian','American','Hawaiian','Mexican'],
