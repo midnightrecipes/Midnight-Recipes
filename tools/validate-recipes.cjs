@@ -46,7 +46,7 @@ R.forEach(r=>{const id=r.slug||'(no slug)';
   if(r.ingredientCategories)add('W',id,'ingredientCategories is no longer used — remove it');
   if(!r.isUsuals&&!SOURCES.includes(r.source))add('E',id,`source "${r.source}" is not in MIDNIGHT_SOURCES`);
   if(r.sourceSecondary&&!SOURCES.includes(r.sourceSecondary))add('E',id,`sourceSecondary "${r.sourceSecondary}" is not in MIDNIGHT_SOURCES`);
-  [r.cuisine,r.cuisineSecondary].filter(Boolean).forEach(c=>{if(!CUISINES.includes(c))add('E',id,`cuisine "${c}" is not in MIDNIGHT_CUISINES (it will not appear in the menu)`)});
+  [r.cuisine,r.cuisineSecondary,r.cuisineTertiary].filter(Boolean).forEach(c=>{if(!CUISINES.includes(c))add('E',id,`cuisine "${c}" is not in MIDNIGHT_CUISINES (it will not appear in the menu)`)});
   (r.categories||[]).forEach(c=>{if(!COURSES.includes(c))add('E',id,`category "${c}" is not in MIDNIGHT_COURSES`)});
   if(r.isUsuals&&!USUALS.includes(r.usualsCategory))add('E',id,`usualsCategory "${r.usualsCategory}" is not in MIDNIGHT_USUALS_CATEGORIES`);
   if(r.usesUsual&&!slugs.has(r.usesUsual))add('E',id,`usesUsual "${r.usesUsual}" does not exist`);
