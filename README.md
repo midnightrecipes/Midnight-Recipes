@@ -104,12 +104,14 @@ When you rename a recipe `slug`, also rename `images/recipes/<slug>/` and add th
 
 Run `python3 tools/optimize-images.py` (needs Pillow) before committing large new photos. It shrinks step/recipe photos to 1600 px at about 80% JPEG quality in place. `hero-list.webp` for recipe cards is generated automatically by Actions.
 
-## Adding or changing a recipe (checklist)
+## Adding a recipe (use the Recipe Builder)
 
-1. Photos: create `images/recipes/<slug>/` (the folder name must equal the recipe `slug`; slug = a-z, 0-9 and `-` only). Name files `hero.jpg`, `recipe.jpg`, `step-01-01.jpg`, `step-01-02.jpg`, ... (two digits, hyphens, lower-case). Run `python3 tools/optimize-images.py` first.
-2. Add the recipe to `assets/js/data.js`. Times need units: `'15 mins'`, `'1 hr 5 mins'`, not `'15'`.
-3. Push to `main`. Wait for the **Actions** tab to turn green (about 1-2 minutes). It creates `recipes/<slug>/index.html`, the sitemap, the image manifest and `hero-list.webp`.
-4. If the Action is red, open it: the last step ("Check every recipe works") lists exactly what to fix, in plain words. You can run the same check on your computer: `node tools/check-site.cjs`.
-5. Never edit files inside `recipes/<slug>/` by hand; they are overwritten.
+1. Open `tools/recipe-builder.html` in Chrome (double-click). It reads the current `assets/js/data.js`, so the source / cuisine / course lists are always the live ones. If the lists are empty, use the file picker at the top to choose your current `data.js`.
+2. Fill in the form and add the photos. The builder shrinks photos to web size, names them correctly (`hero.jpg`, `recipe.jpg`, `step-01-01.jpg` ...) and checks everything the site needs. Fix every red ✖ (the ✖ count reaches 0).
+3. Click **アップロード用ZIP**, unzip it, and upload the `images` and `assets` folders to GitHub (they merge with the existing ones).
+4. Wait for the **Actions** tab to turn green (1-2 minutes), then open `https://midnightrecipes.com/recipes/<slug>/`.
+5. If the Action is red, its last step ("Check every recipe works") says exactly what to fix. The same check runs on your computer with `node tools/check-site.cjs`.
+
+Never edit files inside `recipes/<slug>/` by hand; they are overwritten. The builder covers ingredient cards (`ingredientFile`), a 2nd source and up to 3 cuisines. It does not cover ranges such as `minAmount`/`maxAmount`, `usesUsual` or "The Usuals" pages: add those to the recipe in `data.js` by hand afterwards.
 
 Safety net: if a recipe page has not been generated yet, `404.html` opens the live version (`recipes/recipe.html?slug=<slug>&live=1`) instead of showing "Page not found".
