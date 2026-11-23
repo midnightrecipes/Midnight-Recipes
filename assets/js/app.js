@@ -57,10 +57,10 @@ const star=()=>'<svg class="mrstar" aria-hidden="true"><use href="#mrstar"></use
 const canonicalCourse=r=>r.course||'';
 const courseValues=r=>Array.isArray(r.categories)?r.categories.filter(Boolean):[canonicalCourse(r)].filter(Boolean);
 const courseFilterValue=value=>courses.find(c=>String(c).toLowerCase()===String(value).toLowerCase()||String(c).toLowerCase().replace(/s$/,'')===String(value).toLowerCase().replace(/s$/,''))||value;
-const cuisineValues=r=>[r.cuisine,r.cuisineSecondary,...(Array.isArray(r.cuisines)?r.cuisines:[]),...splitFooterValues(r.footerCuisine)].filter(Boolean);
+const cuisineValues=r=>[r.cuisine,r.cuisineSecondary,r.cuisineTertiary,...(Array.isArray(r.cuisines)?r.cuisines:[]),...splitFooterValues(r.footerCuisine)].filter(Boolean);
 const courseDisplay=r=>r.courseDisplay||courseValues(r).join(', ');
 const searchText=r=>[
-  r.title,r.slug,r.source,r.sourceSecondary,r.original,r.dish,r.cuisine,r.cuisineSecondary,...(Array.isArray(r.cuisines)?r.cuisines:[]),
+  r.title,r.slug,r.source,r.sourceSecondary,r.original,r.dish,r.cuisine,r.cuisineSecondary,r.cuisineTertiary,...(Array.isArray(r.cuisines)?r.cuisines:[]),
   canonicalCourse(r),r.footerInspiredBy,r.footerCuisine,r.footerCourse,
   ...(r.categories||[]),...(r.tags||[]),r.description,
   ...(r.ingredients||[]).map(x=>x.item||''),
