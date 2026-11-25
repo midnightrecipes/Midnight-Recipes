@@ -2654,7 +2654,7 @@ No poison this time. Just a dangerously good late-night dinner. I hope it won't 
       { amount: 5, unit: '', imperialAmount: 5, imperialUnit: '', item: 'Fresh red chilies, lightly crushed' },
       { amount: 10, unit: 'g', imperialAmount: 2, imperialUnit: 'clove', item: 'Garlic, minced' },
       { amount: 10, unit: 'g', imperialAmount: 1, imperialUnit: 'tbsp', item: 'Fresh Ginger, minced' },
-      { amount: 1, unit: '', imperialAmount: 1, imperialUnit: '', item: 'Scallion, cut into 1–2 cm pieces' },
+      { amount: 15, unit: 'g', imperialAmount: 1, imperialUnit: 'stalk', item: 'Scallion, cut into 1–2 cm pieces' },
       { amount: 60, unit: 'g', imperialAmount: 1/2, imperialUnit: 'cup', item: 'Roasted peanuts, chopped' },
       { item: 'Neutral oil, for pan-frying' },
       { group: 'KUNG PAO SAUCE' },
@@ -2700,7 +2700,7 @@ No poison this time. Just a dangerously good late-night dinner. I hope it won't 
           'Return the chicken to the skillet and increase the heat to medium-high.',
           'Give the Kung Pao sauce a quick stir to redistribute the cornstarch, then pour it into the pan.',
           'Toss everything together for 1–2 minutes, until the sauce thickens and coats the chicken in a glossy layer.',
-          'Add the roasted peanuts and scallions. Toss for another 10–20 seconds, then remove from the heat immediately.'
+          'Add {{qty:AROMATICS & SPICES::Roasted peanuts}} roasted peanuts and {{qty:AROMATICS & SPICES::Scallion}}scallion. Toss for another 10–20 seconds, then remove from the heat immediately.'
         ]
       }
     ],
