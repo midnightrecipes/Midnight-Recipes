@@ -2531,6 +2531,207 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
     ],
     mainIngredients: ['cottage cheese', 'twarog', 'tvorog', 'eggs', 'all-purpose flour'],
     usualsCategory: ''
+  },
+  {
+    slug: 'sichuan-kung-pao-chicken',
+    title: 'Sichuan Kung Pao Chicken',
+    source: 'Movie & TV',
+    dish: 'Kung Pao Chicken / 宫保鸡丁',
+    cuisine: 'Chinese',
+    course: 'Main Dishes',
+    courseDisplay: 'Main Dishes',
+    categories: ['Main Dishes'],
+    dateAdded: '2026-11-29',
+    timeStamp: '12:32 AM',
+    description: 'From a childhood murder mystery to a late-night craving: making dangerously good Kung Pao Chicken loaded with numbing huajiao, red chilies, and peanuts.',
+    heroImage: 'images/recipes/sichuan-kung-pao-chicken/hero.jpg',
+    recipeImage: 'images/recipes/sichuan-kung-pao-chicken/recipe.jpg',
+    usCupFractions: true,
+    stepQuantityConversion: true,
+    story: `The word huajiao always takes me right back to a random detective show I watched as a child with my grandpa.
+
+In one episode, the killer used an insane amount of numbing Sichuan pepper to numb the victim's tongue, hiding the bitter taste of poison so so the victim would finish the meal. I don't remember the actual plot anymore, but the idea that a spice could be that powerful stuck with me.
+
+Years later, and it turns out a little bit of that numbing sensation isn't lethal at all. It's just incredibly addictive.
+
+Tonight, I'm leaning into that craving and making Kung Pao Chicken with plenty of Sichuan peppercorns (huajiao), fresh red chilies, and crunchy roasted peanuts.　
+
+No poison this time. Just a dangerously good late-night dinner. I hope it won't kill you..`,
+    ingredientFile: [
+      {
+        name: 'SICHUAN PEPPERCORNS (HUAJIAO)',
+        tag: 'THE NUMBING SPICE',
+        details: [
+          [
+            'Flavour',
+            'Citrusy, woody, slightly floral, with a distinctive tingling and numbing sensation known as má.'
+          ],
+          [
+            'Best Choice',
+            'Use whole Sichuan peppercorns. Lightly crush them before cooking to release their aromatic oils.'
+          ],
+          [
+            'Why Here',
+            'Sichuan peppercorns are essential to the characteristic málà flavour of Sichuan-style Kung Pao Chicken. They bring the distinctive numbing sensation that balances the chili heat.'
+          ],
+          [
+            'Substitute',
+            'There is no true substitute for the numbing effect (sorry !). Black pepper with a little citrus zest can provide some of the peppery and aromatic notes, but will not recreate the characteristic má sensation.'
+          ],
+          [
+            'When to Add',
+            'Add the peppercorns after searing the chicken, together with the garlic and ginger. Briefly frying them in the chicken-infused oil releases their fragrance without requiring a separate flavoured oil.'
+          ]
+        ]
+      },
+      {
+        name: 'FRESH RED CHILIES',
+        tag: 'THE FRESH HEAT',
+        details: [
+          ['Flavour', 'Fresh, bright chili heat with a slightly fruity aroma.'],
+          [
+            'Best Choice',
+            'Use fresh red chilies, lightly crushed or sliced. Remove the seeds if you prefer a milder result.'
+          ],
+          [
+            'Why Here',
+            'Fresh red chilies provide the heat and aromatic contrast that complements the numbing sensation of Sichuan peppercorns.'
+          ],
+          [
+            'Substitute',
+            'Dried chili flakes can be used instead. Start with ½ teaspoon and adjust to taste, as the heat level varies between brands.'
+          ],
+          [
+            'Midnight Fix',
+            'Remove the seeds for a milder result, or leave them in for extra heat. Briefly stir-fry the chilies with the aromatics to release their fragrance without burning them.'
+          ]
+        ]
+      },
+      {
+        name: 'CHINESE BLACK VINEGAR',
+        tag: 'THE SOUR BALANCER',
+        details: [
+          ['Flavour', 'Mellow, tangy, slightly malty, with a subtle sweetness.'],
+          ['Best Choice', 'Chinkiang vinegar (镇江香醋), a popular variety of Chinese black vinegar.'],
+          [
+            'Why Here',
+            'Its rounded acidity cuts through the richness of the chicken and peanuts while balancing the soy sauce and sugar.'
+          ],
+          [
+            'Substitute',
+            'Unseasoned rice vinegar can work, although it has a cleaner and lighter acidity.'
+          ],
+          [
+            'Midnight Fix For the sour tooth',
+            'I personally enjoy a little extra tang. Start with 1 tablespoon and add up to another teaspoon if you prefer a sharper, more pronounced acidity. Taste as you go to keep the sauce balanced.'
+          ]
+        ]
+      },
+      {
+        name: 'ROASTED PEANUTS',
+        tag: 'THE CRUNCHY FINISH',
+        details: [
+          ['Flavour', 'Toasty, earthy, rich, and naturally sweet.'],
+          [
+            'Best Choice',
+            'Use roasted peanuts, either salted or unsalted. Unsalted peanuts give you better control over the seasoning.'
+          ],
+          [
+            'Why Here',
+            'Peanuts are a traditional ingredient in Kung Pao Chicken, adding texture and a nutty contrast to the savoury sauce.'
+          ],
+          ['Substitute', 'Cashews can be used, but peanuts give the dish its more characteristic flavour.']
+        ]
+      }
+    ],
+    ingredients: [
+      { group: 'THE CHICKEN' },
+      { amount: 454, unit: 'g', imperialAmount: 1, imperialUnit: 'lb', item: 'Chicken thighs, cut Into 2–3 cm pieces' },
+      { amount: 5, unit: 'ml', imperialAmount: 1, imperialUnit: 'tsp', item: 'Soy sauce' },
+      { amount: 10, unit: 'ml', imperialAmount: 2, imperialUnit: 'tsp', item: 'Shaoxing wine' },
+      { group: 'AROMATICS & SPICES' },
+      { amount: 2, unit: 'g', imperialAmount: 1, imperialUnit: 'tsp', item: 'Sichuan peppercorns (huajiao), lightly crushed' },
+      { amount: 5, unit: '', imperialAmount: 5, imperialUnit: '', item: 'Fresh red chilies, lightly crushed' },
+      { amount: 10, unit: 'g', imperialAmount: 2, imperialUnit: 'clove', item: 'Garlic, minced' },
+      { amount: 10, unit: 'g', imperialAmount: 1, imperialUnit: 'tbsp', item: 'Fresh Ginger, minced' },
+      { amount: 1, unit: '', imperialAmount: 1, imperialUnit: '', item: 'Scallion, cut into 1–2 cm pieces' },
+      { amount: 60, unit: 'g', imperialAmount: 1/2, imperialUnit: 'cup', item: 'Roasted peanuts, chopped' },
+      { item: 'Neutral oil, for pan-frying' },
+      { group: 'KUNG PAO SAUCE' },
+      { amount: 15, unit: 'ml', imperialAmount: 1, imperialUnit: 'tbsp', item: 'Soy Sauce' },
+      { amount: 15, unit: 'ml', imperialAmount: 1, imperialUnit: 'tbsp', item: 'Shaoxing wine' },
+      { amount: 15, unit: 'ml', imperialUnit: 'tbsp', item: 'Chinese Black Vinegar' },
+      { amount: 4, unit: 'g', imperialAmount: 1, imperialUnit: 'tsp', item: 'Granulated Sugar' },
+      { amount: 5, unit: 'g', imperialAmount: 2, imperialUnit: 'tsp', item: 'Cornstarch' },
+      { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Water' }
+    ],
+    stats: { prep: '15 mins', cook: '10 mins', total: '25 mins', serves: '2-3', quiet: '⭐⭐⭐⭐⭐' },
+    steps: [
+      {
+        number: '01',
+        title: 'MARINATE & PREP',
+        clock: '12:32 AM',
+        paragraphs: [
+          'Place {{qty:THE CHICKEN::Chicken thighs, cut Into 2–3 cm pieces}}  diced chicken in a bowl. Add {{qty:THE CHICKEN::Soy sauce}}  soy sauce and {{qty:THE CHICKEN::Shaoxing wine}} Shaoxing wine, massaging until evenly coated.',
+          'Set aside for 10–15 minutes.',
+          'Meanwhile, lightly crush {{qty:AROMATICS & SPICES::Sichuan peppercorns (Huajiao), lightly crushed}} Sichuan peppercorns and {{qty:AROMATICS & SPICES::Fresh red chilies, lightly crushed}} fresh red chilies. Remove the chili seeds if you prefer less heat.',
+          'Mince {{qty:AROMATICS & SPICES::Garlic, minced}}  garlic and {{qty:AROMATICS & SPICES::Fresh Ginger, minced}} ginger, and cut {{qty:AROMATICS & SPICES::Scallion, cut into 1–2 cm pieces}}  scallion into 1–2 cm pieces.',
+          'In a separate bowl, whisk together the {{qty:KUNG PAO SAUCE::Soy Sauce}}  soy sauce, {{qty:KUNG PAO SAUCE::Shaoxing wine}}  Shaoxing wine, {{qty:KUNG PAO SAUCE::Chinese Black Vinegar}}  Chinese black vinegar, {{qty:KUNG PAO SAUCE::Granulated Sugar}}  sugar, {{qty:KUNG PAO SAUCE::Water}}  water, and {{qty:KUNG PAO SAUCE::Cornstarch}}  cornstarch until smooth.',
+          'Set the sauce aside.'
+        ]
+      },
+      {
+        number: '02',
+        title: 'SEAR THE CHICKEN & BLOOM THE SPICES',
+        clock: '12:47 AM',
+        paragraphs: [
+          'Heat oil in a wok or large skillet over medium-high heat.',
+          'Add the marinated chicken in a single layer. Sear for 3–4 minutes, turning occasionally, until golden brown on the outside. Transfer to a plate.',
+          'Reduce the heat to medium-low. Add {{qty:AROMATICS & SPICES::Sichuan peppercorns (Huajiao), lightly crushed}}  crushed Sichuan peppercorns, {{qty:AROMATICS & SPICES::Garlic, minced}} garlic, and {{qty:AROMATICS & SPICES::Fresh Ginger, minced}} ginger to the remaining oil.',
+          'Stir-fry for 20–30 seconds until fragrant.',
+          'Add the fresh red chilies and cook for another 15–20 seconds, allowing their aroma to infuse the oil without burning.'
+        ]
+      },
+      {
+        number: '03',
+        title: 'TOSS & FINISH',
+        clock: '12:57 AM',
+        paragraphs: [
+          'Return the chicken to the skillet and increase the heat to medium-high.',
+          'Give the Kung Pao sauce a quick stir to redistribute the cornstarch, then pour it into the pan.',
+          'Toss everything together for 1–2 minutes, until the sauce thickens and coats the chicken in a glossy layer.',
+          'Add the roasted peanuts and scallions. Toss for another 10–20 seconds, then remove from the heat immediately.'
+        ]
+      }
+    ],
+    notes: [
+      [
+        'The Huajiao Moment',
+        'Sichuan peppercorns don\'t need to be toasted separately. Adding them after searing the chicken, together with garlic and ginger, lets their citrusy, numbing aroma bloom in the chicken-infused oil.'
+      ],
+      [
+        'Fresh Chili, Gentle Heat',
+        'Fresh red chilies bring a brighter, fresher aroma than dried chili flakes. Remove the seeds and inner membranes for a milder result, or leave them in for more heat. The Sichuan peppercorns provide the distinctive numbing sensation that makes this dish special.'
+      ],
+      [
+        'Crispy Peanuts, Not Soggy Ones',
+        'Add roasted peanuts right at the end. This keeps their crunch intact and gives the dish a better contrast of textures.'
+      ],
+      [
+        'The One-Pan Midnight Rule',
+        'No deep-frying, no separate flavoured oil, and no unnecessary extra pans. Sear the chicken, bloom the spices, and finish everything in the same skillet!'
+      ]
+    ],
+    finePrint: {
+      'BEST EATEN': 'Immediately after cooking, while the peanuts are crunchy and the Sichuan peppercorn aroma is at its freshest.',
+      'MAKE AHEAD': 'Yes. Marinate the chicken and prepare the sauce up to a day ahead. Store them separately in the refrigerator. Cook just before serving, and add the peanuts at the very end to preserve their crunch.',
+      STORAGE: 'Refrigerate leftovers in an airtight container for up to 2 days.',
+      FREEZER: 'Freezing is possible, although the peanuts will lose their crunch and the sauce may change texture.',
+      REHEAT: 'Reheat in a skillet over medium heat with a small splash of water to loosen the sauce. Add a few fresh roasted peanuts after reheating.'
+    },
+    tags: ['Movie&TV', 'Memory', 'MainCourse', 'Chinese', 'Sichuan', 'SichuanPepper', 'Chicken', 'Thighs', 'Peanuts'],
+    mainIngredients: ['Chicken', 'Chicken Thighs', 'Sichuan Peppercorns', 'Fresh Red Chilies', 'Peanuts'],
+    usualsCategory: ''
   }
 ];
 
