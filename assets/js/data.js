@@ -2535,7 +2535,7 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
   {
     slug: 'sichuan-kung-pao-chicken',
     title: 'Sichuan Kung Pao Chicken',
-    source: 'Movie & TV',
+    source: 'Movie & TV',sourceSecondary:'Memory',
     dish: 'Kung Pao Chicken / 宫保鸡丁',
     cuisine: 'Chinese',
     course: 'Main Dishes',
