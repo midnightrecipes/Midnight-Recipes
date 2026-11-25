@@ -1,0 +1,172 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Recipe Builder | MIDNIGHT RECIPES</title>
+<style>body{font:15px/1.5 system-ui,sans-serif;max-width:860px;margin:0 auto;padding:12px 14px 120px;background:#BCC8CC;color:#151B1F}
+fieldset{background:#fff8;border:1px solid #0003;border-radius:8px;margin:12px 0;padding:10px 14px}legend{font-weight:700;padding:0 6px}
+label{display:block;margin:6px 0 2px;font-size:13px}input,select,textarea{width:100%;box-sizing:border-box;font:inherit;padding:5px 7px;border:1px solid #0004;border-radius:5px;background:#fff}
+textarea{min-height:70px}.row{display:flex;gap:6px;flex-wrap:wrap;align-items:end}.row>*{flex:1 1 90px}.row .w{flex:3 1 200px}button{font:inherit;padding:6px 12px;border-radius:6px;border:1px solid #151B1F;background:#C9FFD8;cursor:pointer}button:disabled{opacity:.4;cursor:not-allowed}
+.card{border:1px solid #0003;border-radius:6px;padding:8px;margin:8px 0;background:#fff9}small{color:#345}.E{color:#b00020}.W{color:#8a5a00}ul{margin:4px 0;padding-left:20px}
+#bar{position:fixed;left:0;right:0;bottom:0;background:#151B1F;color:#fff;padding:8px 14px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}#bar span{flex:1 1 200px;font-size:13px}.chk label{display:inline-block;margin:2px 10px 2px 0}.chk input{width:auto}</style>
+<script src="../assets/js/data.js"></script></head><body>
+<h1>Recipe Builder</h1><p><small>手順: ① data.js を読み込む → ② 入力と写真 → ③ 赤い✖がゼロになったら「アップロード用ZIP」→ 展開して GitHub に上書きアップロード。</small></p>
+<fieldset><legend>① 現在の data.js</legend><input type="file" id="f_data" accept=".js"><small id="dstat"></small></fieldset>
+<fieldset><legend>② 基本情報</legend><div class="row"><div class="w"><label>タイトル (title)</label><input id="title"></div><div class="w"><label>スラッグ (slug / 半角英数とハイフン。写真フォルダ名にもなる)</label><input id="slug"></div></div>
+<div class="row"><div><label>きっかけ (source)</label><select id="source"></select></div><div><label>2つ目のきっかけ (任意)</label><select id="sourceSecondary"></select></div><div><label>元ネタ (original)</label><input id="original" placeholder="Wendy’s"></div><div><label>元ネタURL (任意)</label><input id="originalUrl"></div><div><label>料理名 (dish)</label><input id="dish"></div></div>
+<div class="row"><div><label>料理の国 (cuisine)</label><select id="cuisine"></select></div><div><label>2つ目の国 (任意)</label><select id="cuisineSecondary"></select></div><div><label>3つ目の国 (任意)</label><select id="cuisineTertiary"></select></div><div><label>追加日</label><input type="date" id="dateAdded"></div><div><label>投稿時刻 (最初の手順の時刻)</label><input type="time" id="ts"></div></div>
+<label>コース (categories / 最初のものが course)</label><div class="chk" id="cats"></div>
+<label>説明 (description / 検索結果に出る1〜2文)</label><textarea id="description"></textarea>
+<label>ストーリー (story / 空行で段落、*斜体*)</label><textarea id="story" style="min-height:140px"></textarea>
+<div class="row"><div><label>準備 prep</label><input id="prep" placeholder="15 mins"></div><div><label>調理 cook</label><input id="cook" placeholder="50 mins"></div><div><label>寝かせ chill (任意)</label><input id="chill" placeholder="2 hrs"></div><div><label>合計 total</label><input id="total" placeholder="1 hr 5 mins"></div><div><label>人数 serves</label><input id="serves" placeholder="5-6"></div><div><label>型 pan (任意)</label><input id="pan"></div><div><label>静かさ ⭐</label><select id="quiet"><option>5<option>4<option>3<option>2<option>1</select></div></div></fieldset>
+<fieldset><legend>③ 材料</legend><small>手順の中の分量は「分量を挿入」で入れるので、材料名(item)は手順に出る名前そのままに。分数は 1/3、1 1/2 のように書けます。メートル法・US の両方を入れてください。</small><div id="ings"></div><button data-add="g">＋ グループ見出し</button> <button data-add="i">＋ 材料</button></fieldset>
+<fieldset><legend>③b 材料の解説カード (ingredient file / 任意)</legend><small>材料の横の ⓘ から開くカードです。カード名は材料名と同じか、材料名に含まれる名前に(例: GRAHAM CRACKERS)。各行は「ラベル | 本文」の形で、1行に1項目。</small><div id="spot"></div><button data-add="c">＋ カード</button><datalist id="dl"></datalist></fieldset>
+<fieldset><legend>④ 手順と手順写真 (1手順あたり写真は最大4枚)</legend><div id="steps"></div><button data-add="s">＋ 手順</button></fieldset>
+<fieldset><legend>⑤ メモ・保存方法・タグ</legend><div id="notes"></div><button data-add="n">＋ メモ (タイトル＋本文)</button>
+<label>FINE PRINT (5項目すべて必須)</label><div id="fine"></div><label>タグ (カンマ区切り)</label><input id="tags"><label>主な材料 mainIngredients (カンマ区切り。検索と関連レシピに使われる)</label><input id="main"></fieldset>
+<fieldset><legend>⑥ メイン写真</legend><div class="row"><div><label>hero (縦長 2:3 が理想。カード用)</label><input type="file" id="p_hero" accept="image/*"><small id="s_hero"></small></div><div><label>recipe (正方形に近いもの)</label><input type="file" id="p_recipe" accept="image/*"><small id="s_recipe"></small></div></div></fieldset>
+<fieldset><legend>チェック結果</legend><div id="out"></div></fieldset>
+<div id="bar"><span id="sum"></span><button id="b_snip">コードをコピー</button><button id="b_data">data.js をダウンロード</button><button id="b_zip">アップロード用ZIP</button><button id="b_clear">新規</button></div>
+<script id="core">
+const q=s=>"'"+String(s).replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/\n/g,'\\n')+"'";
+const bt=s=>'`'+String(s).replace(/\\/g,'\\\\').replace(/`/g,'\\`').replace(/\$\{/g,'\\${')+'`';
+const isP=v=>v===null||typeof v!=='object'||v.raw!==undefined;
+function ser(v,ind,key){const p=' '.repeat(ind),p2=p+'  ';
+ if(v&&v.raw!==undefined)return String(v.raw);
+ if(typeof v==='string')return key==='story'?bt(v):q(v);
+ if(!v||typeof v!=='object')return String(v);
+ if(Array.isArray(v)){if(!v.length)return '[]';
+  if(v.every(isP)&&v.map(x=>String(x.raw!==undefined?x.raw:x)).join('').length<90)return '['+v.map(x=>ser(x,0)).join(', ')+']';
+  return '[\n'+v.map(x=>p2+ser(x,ind+2)).join(',\n')+'\n'+p+']'}
+ const ks=Object.keys(v),k2=k=>/^[A-Za-z_$][\w$]*$/.test(k)?k:q(k);
+ if(ks.every(k=>isP(v[k]))&&ks.length<9&&ks.map(k=>String(v[k])).join('').length<160)return '{ '+ks.map(k=>k2(k)+': '+ser(v[k],0,k)).join(', ')+' }';
+ return '{\n'+ks.map(k=>p2+k2(k)+': '+ser(v[k],ind+2,k)).join(',\n')+'\n'+p+'}'}
+const slugify=s=>String(s).toLowerCase().replace(/[’']/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+function amt(s){s=String(s||'').trim();if(!s)return null;
+ if(/^\d+(\.\d+)?$/.test(s))return{raw:s};if(/^\d+\/\d+$/.test(s))return{raw:s};
+ const m=s.match(/^(\d+)\s+(\d+\/\d+)$/);return m?{raw:m[1]+'+'+m[2]}:undefined}
+function t12(v){const m=String(v||'').match(/^(\d{1,2}):(\d{2})$/);if(!m)return '';const h=+m[1];return((h%12)||12)+':'+m[2]+' '+(h<12?'AM':'PM')}
+const FINE=['BEST EATEN','MAKE AHEAD','STORAGE','FREEZER','REHEAT'];
+function build(S){const ings=[];S.ings.forEach(i=>{if(i.g!==undefined){if(i.g.trim())ings.push({group:i.g.trim()});return}
+  if(!i.item.trim())return;const o={},a=amt(i.ma),b=amt(i.ia);
+  if(a){o.amount=a;o.unit=i.mu||''}else if(i.mu)o.unit=i.mu;if(b){o.imperialAmount=b;o.imperialUnit=i.iu||''}else if(i.iu)o.imperialUnit=i.iu;
+  o.item=i.item.trim();ings.push(o)});
+ const dir='images/recipes/'+S.slug,steps=S.steps.map((s,k)=>{const n=String(k+1).padStart(2,'0'),o={number:n,title:(s.title||'').toUpperCase(),clock:s.clock||'',
+  paragraphs:s.text.split('\n').map(x=>x.trim()).filter(Boolean)};if(s.note&&s.note.trim())o.stepNote=s.note.trim();
+  if(s.n)o.stepImages=Array.from({length:s.n},(_,j)=>dir+'/step-'+n+'-'+String(j+1).padStart(2,'0')+'.jpg');return o});
+ const st={prep:S.prep,cook:S.cook};if(S.chill)st.chill=S.chill;st.total=S.total;st.serves=S.serves;if(S.pan)st.pan=S.pan;st.quiet='⭐'.repeat(+S.quiet||5);
+ const cats=S.cats,r={slug:S.slug,title:S.title,source:S.source};if(S.sourceSecondary)r.sourceSecondary=S.sourceSecondary;
+ if(S.original)r.original=S.original;if(S.originalUrl)r.originalUrl=S.originalUrl;if(S.dish)r.dish=S.dish;r.cuisine=S.cuisine;if(S.cuisineSecondary)r.cuisineSecondary=S.cuisineSecondary;if(S.cuisineTertiary)r.cuisineTertiary=S.cuisineTertiary;
+ r.course=cats[0]||'';r.courseDisplay=cats.join(', ');r.categories=cats;r.dateAdded=S.dateAdded;r.timeStamp=t12(S.ts);r.description=S.description.trim();
+ r.heroImage=dir+'/hero.jpg';r.recipeImage=dir+'/recipe.jpg';r.usCupFractions=true;r.stepQuantityConversion=true;r.story=S.story.trim();
+ r.ingredientFile=(S.spot||[]).filter(c=>c.name.trim()).map(c=>({name:c.name.trim().toUpperCase(),tag:(c.tag||'').trim().toUpperCase(),details:String(c.d||'').split('\n').map(l=>{const i=l.indexOf('|');return i<0?null:[l.slice(0,i).trim(),l.slice(i+1).trim()]}).filter(x=>x&&(x[0]||x[1]))}));r.ingredients=ings;r.stats=st;r.steps=steps;r.notes=S.notes.filter(n=>n[0].trim()||n[1].trim()).map(n=>[n[0].trim(),n[1].trim()]);
+ r.finePrint={};FINE.forEach(k=>r.finePrint[k]=(S.fine[k]||'').trim());
+ const L=x=>String(x||'').split(',').map(s=>s.trim()).filter(Boolean);r.tags=L(S.tags);r.mainIngredients=L(S.main);r.usualsCategory='';return r}
+const dur=s=>{s=String(s||'').toLowerCase().replace(/(\d+)\s*(?:–|—|-|to)\s*\d+/g,'$1');const h=s.match(/(\d+)\s*(?:hrs?|hours?)/),m=s.match(/(\d+)\s*(?:mins?|minutes?)/);return(h?60*h[1]:0)+(m?+m[1]:0)};
+function check(S,ctx){const E=[],W=[],e=m=>E.push(m),w=m=>W.push(m),r=build(S);
+ if(!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(S.slug))e('スラッグは半角小文字・数字・ハイフンのみ(大文字・スペース・_は不可)');
+ if((ctx.slugs||[]).includes(S.slug))e('このスラッグは既に使われています: '+S.slug);
+ [['title','タイトル'],['cuisine','料理の国'],['dateAdded','追加日'],['description','説明'],['story','ストーリー']].forEach(([k,n])=>{if(!String(S[k]||'').trim())e(n+'が未入力')});
+ if(!S.cats.length)e('コース(categories)を1つ以上選んでください');
+ if(ctx.sources&&!ctx.sources.includes(S.source))e('きっかけ(source)を選んでください');
+ if(ctx.cuisines&&S.cuisine&&!ctx.cuisines.includes(S.cuisine))e('cuisine がメニューにありません: '+S.cuisine);
+ if(!r.mainIngredients.length)e('mainIngredients が空(検索・関連レシピに使われます)');
+ const items=r.ingredients.filter(i=>i.item);if(!items.length)e('材料がありません');
+ items.forEach(i=>{if(i.amount===undefined&&i.imperialAmount===undefined)w('「'+i.item+'」に分量がありません');
+  S.ings.forEach(x=>{if(x.item===i.item&&((x.ma&&amt(x.ma)===undefined)||(x.ia&&amt(x.ia)===undefined)))e('「'+i.item+'」の分量の書き方が不正(数字、1/3、1 1/2 のみ)')})});
+
+ if(S.sourceSecondary){if(ctx.sources&&!ctx.sources.includes(S.sourceSecondary))e('2つ目のきっかけがリストにありません');if(S.sourceSecondary===S.source)e('2つ目のきっかけが1つ目と同じです')}
+ if(S.cuisineSecondary&&S.cuisineSecondary===S.cuisine)e('2つ目の国が1つ目と同じです');
+ if(S.cuisineTertiary){if(!S.cuisineSecondary)e('3つ目の国を選ぶ場合は、先に2つ目の国を選んでください');if(ctx.cuisines&&!ctx.cuisines.includes(S.cuisineTertiary))e('3つ目の国がメニューにありません');if([S.cuisine,S.cuisineSecondary].includes(S.cuisineTertiary))e('3つ目の国が重複しています')}
+ if(ctx.cuisines&&S.cuisineSecondary&&!ctx.cuisines.includes(S.cuisineSecondary))e('2つ目の国がメニューにありません');
+ const nz=x=>String(x).toLowerCase().replace(/[^a-z0-9% ]/g,' ').replace(/\s+/g,' ').trim();
+ (S.spot||[]).forEach(c=>{const n=c.name.trim();if(!n){if(String(c.d||'').trim())e('名前のない解説カードがあります');return}
+  String(c.d||'').split('\n').filter(l=>l.trim()&&l.indexOf('|')<0).forEach(l=>e('解説カード「'+n+'」: 「ラベル | 本文」の形になっていない行があります: '+l.slice(0,30)));
+  if(!r.ingredientFile.find(x=>x.name===n.toUpperCase()).details.length)w('解説カード「'+n+'」に内容がありません');
+  if(!items.some(i=>{const a=nz(i.item),w=nz(n).split(' ').filter(Boolean).map(x=>x.replace(/s$/,''));return w.length&&w.every(x=>a.includes(x))}))w('解説カード「'+n+'」に対応する材料が見つかりません(ⓘリンクが付かない可能性があります)')});
+ if(!r.steps.length)e('手順がありません');
+ ['prep','cook','total','serves'].forEach(k=>{if(!String(S[k]||'').trim())e('stats.'+k+'が未入力')});
+ ['prep','cook','chill','total'].forEach(k=>{if(S[k]&&!/(min|hr|hour)/i.test(S[k]))e(k+' に単位が必要です(例: 15 mins / 1 hr 5 mins)。単位がないとGoogleに時間が伝わりません')});
+ const sum=dur(S.prep)+dur(S.cook)+dur(S.chill),tot=dur(S.total);if(sum&&tot&&Math.abs(sum-tot)>5)w('時間: prep+cook+chill ≈ '+sum+'分 ですが total は '+tot+'分');
+ if(!r.timeStamp)e('投稿時刻を入れてください');
+ const groups=new Set(r.ingredients.filter(i=>i.group).map(i=>i.group.toLowerCase())),names=new Set(items.map(i=>i.item.toLowerCase()));
+ r.steps.forEach(s=>{if(s.clock&&!/^(\d{1,2}:\d{2} (AM|PM)|optional|next day|day)$/i.test(s.clock))w('手順'+s.number+': 時刻の形式 "'+s.clock+'"(例 10:45 PM / Optional)');
+  if(!s.paragraphs.length)e('手順'+s.number+'が空です');
+  const t=s.paragraphs.concat(s.stepNote||'').join('\n');for(const m of t.matchAll(/\{\{qty:([^}]+)\}\}/g)){const ref=m[1].split('::'),nm=ref.pop().toLowerCase(),g=ref[0]&&ref[0].toLowerCase();
+   if(g&&!groups.has(g))e('手順'+s.number+': グループ "'+ref[0]+'" が材料にありません');if(!names.has(nm))e('手順'+s.number+': 材料 "'+m[1].split('::').pop()+'" が材料にありません')}
+  const bare=t.replace(/\{\{[^}]*\}\}/g,'').match(/\b\d+(?:[.\/]\d+)?\s*(?:g|kg|ml|tbsp|tsp|cups?|oz|lb)\b/gi);if(bare)w('手順'+s.number+': 直接書いた分量 "'+bare.join(', ')+'" はMetric/US切替に連動しません → 「分量を挿入」を使う')});
+ FINE.forEach(k=>{if(!String(S.fine[k]||'').trim())e('FINE PRINT「'+k+'」が未入力')});
+ if(!ctx.hero)e('hero写真がありません(カードに灰色のプレースホルダーが出ます)');else if(Math.abs(ctx.hero[0]/ctx.hero[1]-2/3)>.12)w('hero写真の比率が縦長2:3から離れています('+ctx.hero.join('×')+')。カードで切り取られます');
+ if(!ctx.recipe)w('recipe写真がありません');return{E,W,r}}
+function insertRecipe(txt,snip){const a=txt.indexOf('window.MIDNIGHT_RECIPES');if(a<0)throw Error('data.js に window.MIDNIGHT_RECIPES が見つかりません');
+ let b=txt.indexOf('window.MIDNIGHT_SOURCES',a);b=b<0?txt.indexOf('];',a):txt.lastIndexOf('];',b);if(b<0)throw Error('配列の終わり ]; が見つかりません');
+ let head=txt.slice(0,b).replace(/\s+$/,'');if(!/[,\[]$/.test(head))head+=',';return head+'\n  '+snip+'\n'+txt.slice(b)}
+const CT=(()=>{const t=[];for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0}return t})();
+const crc=u=>{let c=~0;for(const x of u)c=CT[(c^x)&255]^(c>>>8);return(~c)>>>0};
+function zip(files){const E=new TextEncoder(),parts=[],cd=[];let off=0;const w16=n=>[n&255,n>>8&255],w32=n=>[n&255,n>>8&255,n>>16&255,n>>24&255];
+ files.forEach(f=>{const nm=E.encode(f.name),d=f.data,c=crc(d),h=Uint8Array.from([0x50,0x4b,3,4,20,0,0,8,0,0,0,0,0,0,...w32(c),...w32(d.length),...w32(d.length),...w16(nm.length),0,0]);
+  parts.push(h,nm,d);cd.push(Uint8Array.from([0x50,0x4b,1,2,20,0,20,0,0,8,0,0,0,0,0,0,...w32(c),...w32(d.length),...w32(d.length),...w16(nm.length),0,0,0,0,0,0,0,0,0,0,0,0,...w32(off)]),nm);off+=h.length+nm.length+d.length});
+ const cs=cd.reduce((a,b)=>a+b.length,0);parts.push(...cd,Uint8Array.from([0x50,0x4b,5,6,0,0,0,0,...w16(files.length),...w16(files.length),...w32(cs),...w32(off),0,0]));return new Blob(parts,{type:'application/zip'})}
+if(typeof module!=='undefined')module.exports={ser,build,check,insertRecipe,zip,amt,t12,slugify};
+</script>
+<script>
+const $=id=>document.getElementById(id),W=window,DKEY='mrb-draft';
+const blank=()=>({title:'',slug:'',source:'',sourceSecondary:'',original:'',originalUrl:'',dish:'',cuisine:'',cuisineSecondary:'',cuisineTertiary:'',dateAdded:new Date().toISOString().slice(0,10),ts:'',cats:[],description:'',story:'',prep:'',cook:'',chill:'',total:'',serves:'',pan:'',quiet:'5',
+ ings:[{g:'THE RECIPE'},{item:'',ma:'',mu:'g',ia:'',iu:'cup'}],steps:[{title:'',clock:'',text:'',note:'',n:0}],notes:[['','']],spot:[],fine:{},tags:'',main:''});
+let S,res,ph={hero:null,recipe:null,steps:[]},dataText='',ctx={slugs:[],sources:null,cuisines:null};
+try{S=Object.assign(blank(),JSON.parse(localStorage.getItem(DKEY)||'{}'))}catch(e){S=blank()}
+const save=()=>{try{localStorage.setItem(DKEY,JSON.stringify(S))}catch(e){}};
+function topLabels(L){const c={};(L.MIDNIGHT_RECIPES||[]).forEach(r=>(r.ingredientFile||[]).forEach(k=>(k.details||[]).forEach(d=>c[d[0]]=(c[d[0]]||0)+1)));return Object.entries(c).sort((a,b)=>b[1]-a[1]).slice(0,8).map(x=>x[0])}
+function lists(L){ctx.slugs=(L.MIDNIGHT_RECIPES||[]).map(r=>r.slug);ctx.sources=L.MIDNIGHT_SOURCES||[];ctx.cuisines=Object.values(L.MIDNIGHT_CUISINES||{}).flat();ctx.courses=L.MIDNIGHT_COURSES||[];ctx.groups=L.MIDNIGHT_CUISINES||{};
+ const fill=(id,arr,blankOpt)=>{const s=$(id);s.innerHTML=(blankOpt?'<option value="">—':'')+arr.map(x=>'<option>'+x+'</option>').join('');s.value=S[id]||(blankOpt?'':arr[0])};
+ fill('source',ctx.sources);S.source=$('source').value;$('sourceSecondary').innerHTML='<option value="">—'+ctx.sources.map(x=>'<option>'+x+'</option>').join('');$('sourceSecondary').value=S.sourceSecondary;ctx.labels=topLabels(L);const cu=$('cuisine');cu.innerHTML='<option value="">—'+Object.entries(ctx.groups).map(([g,a])=>'<optgroup label="'+g+'">'+a.map(x=>'<option>'+x+'</option>').join('')+'</optgroup>').join('');cu.value=S.cuisine;
+ $('cuisineSecondary').innerHTML=cu.innerHTML;$('cuisineSecondary').value=S.cuisineSecondary;$('cuisineTertiary').innerHTML=cu.innerHTML;$('cuisineTertiary').value=S.cuisineTertiary;
+ $('cats').innerHTML=ctx.courses.map(c=>'<label><input type="checkbox" value="'+c+'"'+(S.cats.includes(c)?' checked':'')+'> '+c+'</label>').join('');
+ $('dstat').textContent=' '+ctx.slugs.length+'件のレシピを確認済み';run()}
+if(W.MIDNIGHT_RECIPES)lists(W);else $('dstat').textContent=' ← ここで data.js を選んでください(tools/ フォルダ内で開くと自動で読み込まれます)';
+$('f_data').onchange=async e=>{const f=e.target.files[0];if(!f)return;dataText=await f.text();const L={};try{new Function('window',dataText)(L)}catch(x){$('dstat').textContent=' 読み込みエラー: '+x.message;return}lists(L)};
+['title','slug','original','originalUrl','dish','dateAdded','ts','description','story','prep','cook','chill','total','serves','pan','quiet','tags','main'].forEach(k=>{const el=$(k);el.value=S[k];el.oninput=()=>{S[k]=el.value;if(k==='title'&&!S._slugTouched){S.slug=slugify(S.title);$('slug').value=S.slug}if(k==='slug')S._slugTouched=1;if(k==='ts')S.steps[0]&&!S.steps[0].clock&&(S.steps[0].clock=t12(S.ts),draw());run()}});
+['source','sourceSecondary','cuisine','cuisineSecondary','cuisineTertiary'].forEach(k=>$(k).onchange=e=>{S[k]=e.target.value;run()});
+$('cats').onchange=()=>{S.cats=[...document.querySelectorAll('#cats input:checked')].map(x=>x.value);run()};
+const UN=['g','ml','tsp','tbsp','pinch','','large'],IU=['cup','tbsp','tsp','lb','oz','large','medium','small','clove','pinch',''];
+const esc=s=>String(s).replace(/"/g,'&quot;').replace(/</g,'&lt;');
+function inp(v,ph_,cls){return '<input class="'+(cls||'')+'" value="'+esc(v)+'" placeholder="'+(ph_||'')+'">'}
+function sel(v,a){return '<select>'+a.map(x=>'<option'+(x===v?' selected':'')+' value="'+x+'">'+(x||'(なし)')+'</option>').join('')+'</select>'}
+function draw(){
+ $('ings').innerHTML=S.ings.map((i,k)=>i.g!==undefined?'<div class="card row" data-k="'+k+'"><div class="w"><label>グループ見出し (例 THE FILLING)</label>'+inp(i.g,'','g')+'</div><button data-del="'+k+'">削除</button></div>'
+  :'<div class="card row" data-k="'+k+'"><div class="w"><label>材料名 (item)</label>'+inp(i.item,'Ground beef','item')+'</div><div><label>量(メートル)</label>'+inp(i.ma,'454','ma')+'</div><div><label>単位</label>'+sel(i.mu,UN).replace('<select','<select class="mu"')+'</div><div><label>量(US)</label>'+inp(i.ia,'1','ia')+'</div><div><label>単位</label>'+sel(i.iu,IU).replace('<select','<select class="iu"')+'</div><button data-del="'+k+'">削除</button></div>').join('');
+ $('steps').innerHTML=S.steps.map((s,k)=>'<div class="card" data-s="'+k+'"><b>手順 '+String(k+1).padStart(2,'0')+'</b> <button data-del="'+k+'">削除</button><div class="row"><div class="w"><label>見出し (大文字になります)</label>'+inp(s.title,'PREP THE VEGETABLES','title')+'</div><div><label>時刻</label>'+inp(s.clock,'10:45 PM','clock')+'</div></div><label>本文 (1行=1段落)</label><textarea class="text">'+esc(s.text)+'</textarea>'
+  +'<div class="row"><div class="w"><select class="ins"><option value="">＋ 分量を挿入…</select></div><div class="w"><label>写真 (最大4枚。順番に step-'+String(k+1).padStart(2,'0')+'-01.jpg…)</label><input type="file" class="ph" accept="image/*" multiple><small>'+(s.n?s.n+'枚 追加済み':'')+'</small></div></div><label>補足 (任意)</label>'+inp(s.note,'','note')+'</div>').join('');
+ $('spot').innerHTML=S.spot.map((c,k)=>'<div class="card" data-c="'+k+'"><div class="row"><div class="w"><label>カード名 (材料名)</label>'+inp(c.name,'GRAHAM CRACKERS','cn').replace('<input','<input list="dl"')+'</div><div class="w"><label>ひとこと (tag)</label>'+inp(c.tag,'THE CRUST FOUNDATION','ct')+'</div></div><label>内容 (1行=1項目「ラベル | 本文」)</label><textarea class="cd" placeholder="Why It Matters | ...\nSubstitute | ...">'+esc(c.d)+'</textarea><div class="row"><div class="w"><select class="lab"><option value="">＋ よく使うラベルを挿入…</select></div><button data-del="'+k+'">カードを削除</button></div></div>').join('');
+ $('notes').innerHTML=S.notes.map((n,k)=>'<div class="card" data-n="'+k+'"><label>メモのタイトル</label>'+inp(n[0],'','nt')+'<label>本文</label><textarea class="nx">'+esc(n[1])+'</textarea><button data-del="'+k+'">削除</button></div>').join('');
+ $('fine').innerHTML=FINE.map(k=>'<label>'+k+'</label>'+inp(S.fine[k]||'','','fp" data-k="'+k)).join('')}
+document.body.addEventListener('input',e=>{const t=e.target,c=t.closest('[data-k]'),sc=t.closest('[data-s]'),nc=t.closest('[data-n]'),cc=t.closest('[data-c]');
+ if(cc){const c=S.spot[cc.dataset.c];if(t.classList.contains('cn'))c.name=t.value;if(t.classList.contains('ct'))c.tag=t.value;if(t.classList.contains('cd'))c.d=t.value}
+ else if(t.classList.contains('fp')){S.fine[t.dataset.k]=t.value}
+ else if(c&&c.closest('#ings')){const i=S.ings[c.dataset.k],m={g:'g',item:'item',ma:'ma',ia:'ia'};for(const cl in m)if(t.classList.contains(cl))i[m[cl]]=t.value;if(t.classList.contains('mu'))i.mu=t.value;if(t.classList.contains('iu'))i.iu=t.value}
+ else if(sc){const s=S.steps[sc.dataset.s];for(const cl of['title','clock','text','note'])if(t.classList.contains(cl))s[cl]=t.value}
+ else if(nc){const n=S.notes[nc.dataset.n];if(t.classList.contains('nt'))n[0]=t.value;if(t.classList.contains('nx'))n[1]=t.value}else return;run()});
+document.body.addEventListener('change',e=>{const t=e.target,sc=t.closest('[data-s]');if(t.classList.contains('mu')||t.classList.contains('iu'))document.body.dispatchEvent(new Event('input'));
+ if(t.classList.contains('ins')&&sc&&t.value){const ta=sc.querySelector('.text'),p=ta.selectionStart||ta.value.length;ta.value=ta.value.slice(0,p)+t.value+' '+ta.value.slice(p);S.steps[sc.dataset.s].text=ta.value;t.value='';run()}
+ const cc=t.closest('[data-c]');if(t.classList.contains('lab')&&cc&&t.value){const ta=cc.querySelector('.cd');ta.value+=(ta.value&&!ta.value.endsWith('\n')?'\n':'')+t.value+' | ';S.spot[cc.dataset.c].d=ta.value;t.value='';run()}
+ if(t.classList.contains('ph')&&sc){const k=+sc.dataset.s;Promise.all([...t.files].slice(0,4).map(f=>shrink(f,1600))).then(a=>{ph.steps[k]=a;S.steps[k].n=a.length;draw();run()})}});
+document.body.addEventListener('focusin',e=>{const t=e.target;if(t.classList.contains('cn'))$('dl').innerHTML=S.ings.filter(i=>i.item&&i.item.trim()).map(i=>'<option value="'+esc(i.item.trim().toUpperCase())+'">').join('');if(t.classList.contains('lab'))t.innerHTML='<option value="">＋ よく使うラベルを挿入…</option>'+(ctx.labels||[]).map(x=>'<option>'+esc(x)+'</option>').join('');if(!t.classList.contains('ins'))return;let g='';t.innerHTML='<option value="">＋ 分量を挿入…</option>'+S.ings.map(i=>{if(i.g!==undefined){g=i.g.trim();return''}if(!i.item.trim())return'';const tok='{{qty:'+(g?g+'::':'')+i.item.trim()+'}}';return'<option value="'+esc(tok)+'">'+esc((g?g+' › ':'')+i.item)+'</option>'}).join('')});
+document.body.addEventListener('click',e=>{const t=e.target,a=t.dataset.add,d=t.dataset.del;if(a==='g')S.ings.push({g:''});if(a==='i')S.ings.push({item:'',ma:'',mu:'g',ia:'',iu:'cup'});if(a==='s')S.steps.push({title:'',clock:'',text:'',note:'',n:0});if(a==='n')S.notes.push(['','']);if(a==='c')S.spot.push({name:'',tag:'',d:''});
+ if(d!==undefined){const c=t.closest('[data-k],[data-s],[data-n],[data-c]');if(c.closest('#spot'))S.spot.splice(d,1);else if(c.closest('#ings'))S.ings.splice(d,1);else if(c.closest('#steps')){S.steps.splice(d,1);ph.steps.splice(d,1)}else S.notes.splice(d,1)}if(a||d!==undefined){draw();run()}});
+async function shrink(file,max){const b=await createImageBitmap(file,{imageOrientation:'from-image'}),k=Math.min(1,max/Math.max(b.width,b.height)),c=document.createElement('canvas');c.width=Math.round(b.width*k);c.height=Math.round(b.height*k);c.getContext('2d').drawImage(b,0,0,c.width,c.height);
+ const blob=await new Promise(r=>c.toBlob(r,'image/jpeg',.82));return{blob,w:c.width,h:c.height}}
+['hero','recipe'].forEach(k=>$('p_'+k).onchange=async e=>{const f=e.target.files[0];if(!f)return;ph[k]=await shrink(f,k==='hero'?1400:1200);$('s_'+k).textContent=ph[k].w+'×'+ph[k].h+' / '+Math.round(ph[k].blob.size/1024)+' KB';run()});
+function run(){S.quiet=$('quiet').value;save();res=check(S,Object.assign({},ctx,{hero:ph.hero&&[ph.hero.w,ph.hero.h],recipe:ph.recipe}));
+ S.steps.forEach((s,k)=>{if(s.n>(ph.steps[k]||[]).length)res.W.push('手順'+(k+1)+'の写真は再選択が必要です(画面を開き直すと写真は消えます)')});
+ $('out').innerHTML=(res.E.length?'<ul class="E">'+res.E.map(x=>'<li>✖ '+x+'</li>').join('')+'</ul>':'')+(res.W.length?'<ul class="W">'+res.W.map(x=>'<li>• '+x+'</li>').join('')+'</ul>':'')+(!res.E.length&&!res.W.length?'✔ 問題なし':'');
+ $('sum').textContent=res.E.length?'✖ 要修正 '+res.E.length+' 件':'✔ 公開できます'+(res.W.length?'(注意 '+res.W.length+' 件)':'');['b_snip','b_data','b_zip'].forEach(id=>$(id).disabled=!!res.E.length||(id==='b_data'&&!dataText))}
+const snip=()=>ser(res.r,2);
+const dl=(blob,name)=>{const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click()};
+$('b_snip').onclick=async()=>{await navigator.clipboard.writeText(snip());alert('コピーしました。data.js の最後のレシピの } の後に , を付けて、]; の直前に貼り付けてください。')};
+$('b_data').onclick=()=>{try{const t=insertRecipe(dataText,snip());new Function('window',t)({});dl(new Blob([t],{type:'text/javascript'}),'data.js')}catch(e){alert('作成できませんでした: '+e.message)}};
+$('b_zip').onclick=async()=>{const E=new TextEncoder(),f=[],d='images/recipes/'+S.slug+'/',buf=async b=>new Uint8Array(await b.arrayBuffer());
+ if(ph.hero)f.push({name:d+'hero.jpg',data:await buf(ph.hero.blob)});if(ph.recipe)f.push({name:d+'recipe.jpg',data:await buf(ph.recipe.blob)});
+ for(let k=0;k<S.steps.length;k++)for(let j=0;j<(ph.steps[k]||[]).length;j++)f.push({name:d+'step-'+String(k+1).padStart(2,'0')+'-'+String(j+1).padStart(2,'0')+'.jpg',data:await buf(ph.steps[k][j].blob)});
+ let tx;try{tx=dataText?insertRecipe(dataText,snip()):null}catch(e){}
+ f.push(tx?{name:'assets/js/data.js',data:E.encode(tx)}:{name:'new-recipe.js',data:E.encode(snip())});
+ f.push({name:'UPLOAD-STEPS.txt',data:E.encode('1. この ZIP を展開\n2. images フォルダ'+(tx?' と assets フォルダ':'')+' を GitHub のリポジトリへ上書きアップロード'+(tx?'':'\n   new-recipe.js の中身は data.js の最後のレシピの } の後に , を付けて ]; の直前へ貼り付け')+'\n3. GitHub の Actions タブが緑になるまで待つ(1〜2分)\n4. https://midnightrecipes.com/recipes/'+S.slug+'/ を開いて確認\n')});
+ dl(zip(f),S.slug+'-upload.zip')};
+$('b_clear').onclick=()=>{if(confirm('入力内容を消して新規にしますか?')){localStorage.removeItem(DKEY);location.reload()}};
+draw();run();
+</script></body></html>
