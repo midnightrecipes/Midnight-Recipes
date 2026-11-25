@@ -2660,7 +2660,7 @@ No poison this time. Just a dangerously good late-night dinner. I hope it won't 
       { group: 'KUNG PAO SAUCE' },
       { amount: 15, unit: 'ml', imperialAmount: 1, imperialUnit: 'tbsp', item: 'Soy Sauce' },
       { amount: 15, unit: 'ml', imperialAmount: 1, imperialUnit: 'tbsp', item: 'Shaoxing wine' },
-      { amount: 15, unit: 'ml', imperialUnit: 'tbsp', item: 'Chinese Black Vinegar' },
+      {minAmount:15,maxAmount:25,unit:'ml',imperialMinAmount:1,imperialMaxAmount:1.666,imperialMinUnit:'tbsp', item: 'Chinese Black Vinegar' },
       { amount: 4, unit: 'g', imperialAmount: 1, imperialUnit: 'tsp', item: 'Granulated Sugar' },
       { amount: 5, unit: 'g', imperialAmount: 2, imperialUnit: 'tsp', item: 'Cornstarch' },
       { amount: 30, unit: 'ml', imperialAmount: 2, imperialUnit: 'tbsp', item: 'Water' }
