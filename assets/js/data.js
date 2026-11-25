@@ -2541,7 +2541,7 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
     course: 'Main Dishes',
     courseDisplay: 'Main Dishes',
     categories: ['Main Dishes'],
-    dateAdded: '2026-11-29',
+    dateAdded: '2026-11-23',
     timeStamp: '12:32 AM',
     description: 'From a childhood murder mystery to a late-night craving: making dangerously good Kung Pao Chicken loaded with numbing huajiao, red chilies, and peanuts.',
     heroImage: 'images/recipes/sichuan-kung-pao-chicken/hero.jpg',
