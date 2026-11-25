@@ -2649,6 +2649,7 @@ No poison this time. Just a dangerously good late-night dinner. I hope it won't 
       { amount: 454, unit: 'g', imperialAmount: 1, imperialUnit: 'lb', item: 'Chicken thighs, cut Into 2–3 cm pieces' },
       { amount: 5, unit: 'ml', imperialAmount: 1, imperialUnit: 'tsp', item: 'Soy sauce' },
       { amount: 10, unit: 'ml', imperialAmount: 2, imperialUnit: 'tsp', item: 'Shaoxing wine' },
+      { amount: 5, unit: 'ml', imperialAmount: 1, imperialUnit: 'tsp', item: 'Cornstarch' },
       { group: 'AROMATICS & SPICES' },
       { amount: 2, unit: 'g', imperialAmount: 1, imperialUnit: 'tsp', item: 'Sichuan peppercorns (huajiao), lightly crushed' },
       { amount: 5, unit: '', imperialAmount: 5, imperialUnit: '', item: 'Fresh red chilies, lightly crushed' },
@@ -2672,8 +2673,7 @@ No poison this time. Just a dangerously good late-night dinner. I hope it won't 
         title: 'MARINATE & PREP',
         clock: '12:32 AM',
         paragraphs: [
-          'Place {{qty:THE CHICKEN::Chicken thighs, cut Into 2–3 cm pieces}}  diced chicken in a bowl. Add {{qty:THE CHICKEN::Soy sauce}}  soy sauce and {{qty:THE CHICKEN::Shaoxing wine}} Shaoxing wine, massaging until evenly coated.',
-          'Set aside for 10–15 minutes.',
+          'Place {{qty:THE CHICKEN::Chicken thighs, cut Into 2–3 cm pieces}}  diced chicken in a bowl. Add {{qty:THE CHICKEN::Soy sauce}} soy sauce, {{qty:THE CHICKEN::Shaoxing wine}} Shaoxing wine, and {{qty:THE CHICKEN::Cornstarch}} cornstarch in a bowl. Mix well until every piece is lightly coated. Let it marinate for 10 minutes.',
           'Meanwhile, lightly crush {{qty:AROMATICS & SPICES::Sichuan peppercorns (Huajiao), lightly crushed}} Sichuan peppercorns and {{qty:AROMATICS & SPICES::Fresh red chilies, lightly crushed}} fresh red chilies. Remove the chili seeds if you prefer less heat.',
           'Mince {{qty:AROMATICS & SPICES::Garlic, minced}}  garlic and {{qty:AROMATICS & SPICES::Fresh Ginger, minced}} ginger, and cut {{qty:AROMATICS & SPICES::Scallion, cut into 1–2 cm pieces}}  scallion into 1–2 cm pieces.',
           'In a separate bowl, whisk together the {{qty:KUNG PAO SAUCE::Soy Sauce}}  soy sauce, {{qty:KUNG PAO SAUCE::Shaoxing wine}}  Shaoxing wine, {{qty:KUNG PAO SAUCE::Chinese Black Vinegar}}  Chinese black vinegar, {{qty:KUNG PAO SAUCE::Granulated Sugar}}  sugar, {{qty:KUNG PAO SAUCE::Water}}  water, and {{qty:KUNG PAO SAUCE::Cornstarch}}  cornstarch until smooth.',
