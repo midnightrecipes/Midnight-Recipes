@@ -399,8 +399,8 @@ I also used a blend of whole milk and whipping cream, even though a traditional 
 
   {
     slug:'mexican-calabaza-en-tacha-pumpkin-pie',
-    title:'Calabaza en Tacha Inspired Mexican Pumpkin Pie', description:'Inspired by Coco, this Mexican-style pumpkin pie reimagines calabaza en tacha with whole-spice infused cream and a rich piloncillo-style glaze.',
-    source:'Movie & TV', sourceSecondary:'Family & Tradition', original:'Coco (2017)', dish:'Mexican Pumpkin Pie', cuisine:'Mexican',
+    title:'Mexican Pumpkin Pie', description:'Inspired by Coco, this Mexican-style pumpkin pie reimagines calabaza en tacha with whole-spice infused cream and a rich piloncillo-style glaze.',
+    source:'Movie & TV', sourceSecondary:'Family & Tradition', original:'Coco (2017)', dish:'Calabaza en Tacha Inspired Pumpkin Pie', cuisine:'Mexican',
     course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'],
     dateAdded:'2026-09-27', timeStamp:'11:48 PM',
     usCupFractions:true, stepQuantityConversion:true,
@@ -921,7 +921,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
 
   {
     slug:'tom-kha-gai',
-    title:'Tom Kha Gai (Coconut Chicken Soup)',
+    title:'Coconut Chicken Soup (Tom Kha Gai)',
     source:'Internet Find',
     original:'TasteAtlas',
     originalUrl:'https://www.tasteatlas.com/',
@@ -1655,7 +1655,7 @@ details: [
   
   {
   slug: 'khai-yat-sai',
-  title: 'Khai Yat Sai (Thai Stuffed Omelette)',
+  title: 'Thai Stuffed Omelette (Khai Yat Sai)',
   description: 'A traditional Thai stuffed omelette wrapping savoury ground pork, tomato, and onion in a soft egg sheet with crushed peanuts.',
   source: 'Family & Tradition',
   dish: 'Khai Yat Sai/ไข่ยัดไส้ ',
@@ -2405,7 +2405,7 @@ A familiar classic, made for a midnight kitchen...☆彡`,
   },
   {
     slug: 'syrniki-farmers-cheese-pancakes',
-    title: 'Syrniki (Farmer\'s Cheese Pancakes)',
+    title: 'Farmer\'s Cheese Pancakes (Syrniki)',
     source: 'Internet Find',
     dish: 'Syrniki / Syrnyky / Tvorozhniki',
     cuisine: 'Eastern European', cuisineSecondary:'Russian', cuisines: ['Ukraine'],
