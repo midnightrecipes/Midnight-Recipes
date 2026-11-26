@@ -146,6 +146,26 @@
       ]
     }
   },
+  "carlota-de-limon": {
+    "hero": "images/recipes/carlota-de-limon/hero.jpg",
+    "recipe": "images/recipes/carlota-de-limon/recipe.jpg",
+    "steps": {
+      "01": [
+        "images/recipes/carlota-de-limon/step-01-01.jpg",
+        "images/recipes/carlota-de-limon/step-01-02.jpg",
+        "images/recipes/carlota-de-limon/step-01-03.jpg"
+      ],
+      "02": [
+        "images/recipes/carlota-de-limon/step-02-01.jpg",
+        "images/recipes/carlota-de-limon/step-02-02.jpg",
+        "images/recipes/carlota-de-limon/step-02-03.jpg",
+        "images/recipes/carlota-de-limon/step-02-04.jpg"
+      ],
+      "04": [
+        "images/recipes/carlota-de-limon/step-04-01.jpg"
+      ]
+    }
+  },
   "chocolate-cream-comfort-pie": {
     "hero": "images/recipes/chocolate-cream-comfort-pie/hero.jpg",
     "recipe": "images/recipes/chocolate-cream-comfort-pie/recipe.jpg",
