@@ -93,7 +93,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
         'Preheat your oven to 175°C / 350°F.',
         'Crush {{qty:CRUST::Graham crackers, finely crushed}} graham crackers finely.',
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
-        '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
+        '**Quiet Mode:** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
         'Add {{qty:CRUST::Unsalted butter, melted}} melted butter to the crushed graham crackers and mix until the crumbs are evenly coated.',
         'Press the crumb mixture firmly into a 9 inch / 23 cm pie dish using the flat bottom of a cup.',
         'Bake for 8–10 minutes. Let it cool.'
@@ -543,7 +543,7 @@ ingredientFile:[
       {number:'02',title:'FAKE THE BISCOFF',clock:'3:08 AM',paragraphs:[
         'Crush {{qty:Plain biscuits, finely crushed}} plain biscuits finely.',
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
-        '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
+        '**Quiet Mode:** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
         'Mix with {{qty:Ground cinnamon}} cinnamon, {{qty:Ground ginger}} ginger, {{qty:Ground nutmeg}} nutmeg, {{qty:Salt}} salt, and {{qty:Unsalted butter, melted}} melted butter.',
         'Press firmly into a 9 inch / 23 cm pie dish.',
         'Bake for 8–10 minutes, then let cool.'
@@ -565,7 +565,7 @@ ingredientFile:[
       {number:'05',title:'BLEND THE BANANA IN',clock:'3:30 AM',paragraphs:[
         'Add the concentrated banana and {{qty:vanilla extract}} vanilla extract to the warm custard.',
         'Blend until completely smooth and silky.',
-        '**Quiet Mode (Silent):** Want a little texture? Skip the food processor and stir it in by hand.'
+        '**Quiet Mode:** Want a little texture? Skip the food processor and stir it in by hand.'
       ],stepImages:[]},
       {number:'06',title:'HIDE THE BANANAS & NOW WE WAIT',clock:'3:35 AM',paragraphs:[
         'Peel {{qty:firm ripe bananas, cut in half lengthwise}} firm-ripe bananas and cut each one in half lengthwise.',
@@ -649,24 +649,19 @@ What you get is a silky, creamy pie filled with naturally sweet roasted sweet po
     steps:[
       {number:'01',title:'COOK THE SWEET POTATO',clock:'11:35 PM',paragraphs:[
         'For the best flavour, roast whole sweet potatoes at 175°C / 350°F for 45–60 minutes, until completely soft.',
-        'Midnight Shortcut — Microwave',
-        'Peel and cut the sweet potato into chunks. Place in a microwave-safe bowl with a small splash of water and cover.',
-        'Midnight Shortcut — Boil',
-        'Peel and cut the sweet potato into chunks. Simmer in water for 15–20 minutes, until fork-tender.'
+        'Midnight Shortcut — Microwave','Peel and cut the sweet potato into chunks. Place in a microwave-safe bowl with a small splash of water and cover.',
+        'Midnight Shortcut — Boil','Peel and cut the sweet potato into chunks. Simmer in water for 15–20 minutes, until fork-tender.'
       ],stepImages:[]},
       {number:'02',title:'MAKE THE CRUST',clock:'11:45 PM',paragraphs:[
         'While the sweet potatoes are roasting… start making Building Block Pie Crust (OPTION B — PARTIAL BLIND-BAKE).',
-        'Midnight Shortcut',
-        'Use a good-quality store-bought pie crust. Tonight is about the filling.'
+        'Midnight Shortcut','Use a good-quality store-bought pie crust. Tonight is about the filling.'
       ],stepImages:[]},
       {number:'03',title:'BLEND THE FILLING',clock:'12:25 AM',paragraphs:[
         'Once the sweet potato is cooked and cool enough to handle, measure {{qty:Cooked Sweet Potato Flesh}}.',
         'Finely grate {{qty:Fresh Ginger, Finely Grated}} ginger.',
         'Combine {{qty:Cooked Sweet Potato Flesh}} sweet potato, {{qty:10% Cream (Half & Half)}} 10% cream, {{qty:FILLING::Granulated Sugar}} Granulated Sugar, {{qty:eggs}} eggs, {{qty:Fresh Ginger, Finely Grated}} fresh ginger, {{qty:Ground Cinnamon}} ground cinnamon, and {{qty:Salt}} salt.',
-        'Food Processor — Fastest',
-        'Blend the sweet potato and all remaining filling ingredients and blend briefly until silky.',
-        'Quiet Mode — Silent',
-        'Mash the sweet potato thoroughly, add all remaining filling ingredients, and blend directly in the bowl with a hand blender until completely smooth.'
+        '**Food Processor (Fastest):** Blend the sweet potato and all remaining filling ingredients and blend briefly until silky.',
+        '**Quiet Mode:** Mash the sweet potato thoroughly, add all remaining filling ingredients, and blend directly in the bowl with a hand blender until completely smooth.'
       ],stepImages:[]},
       {number:'04',title:'BAKE',clock:'12:30 AM',paragraphs:[
         'Pour the filling into the crust.',
@@ -732,7 +727,7 @@ Don\'t over-sweeten it. The sweet potato provides natural sweetness, while cryst
       {number:'01',title:'MAKE THE DOUGH',clock:'',paragraphs:[
         'Mix {{qty:All-purpose flour}} flour and {{qty:salt}} salt in a large bowl. Add {{qty:Cold unsalted butter, cubed}} cold, cubed butter and work it into the flour until the mixture resembles coarse crumbs, with some small pieces of butter still visible.',
         'Start with {{qty:Cold water}} cold water, adding it gradually while mixing gently. Add more, a little at a time, only until the dough holds together when pressed. It should not feel wet or sticky.',
-        '**Midnight Shortcut — Food Processor:** Pulse the flour, salt, and cold butter until coarse crumbs form. Add the water gradually and pulse just until the dough begins to come together. Avoid overmixing.'
+        '**Midnight Shortcut:** Use a food processor. Pulse the flour, salt, and cold butter until coarse crumbs form. Add the water gradually and pulse just until the dough begins to come together. Avoid overmixing.'
       ]},
       {number:'02',title:'DIVIDE & CHILL',clock:'',paragraphs:[
         'Divide the dough into two equal portions. Shape each portion into a flat disc, wrap tightly, and refrigerate for at least 30 minutes, or until firm but still pliable.',
@@ -870,7 +865,7 @@ It isn't a traditional Key Lime Pie, but it delivers all the creamy, tart, and s
         'Preheat your oven to 175°C / 350°F.',
         'Crush {{qty:GRAHAM CRACKER CRUST::Graham crackers, finely crushed}} graham crackers finely.',
         '**Food Processor (Fastest):** Pulse for about 30 seconds.',
-        '**Quiet Mode (Silent):** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
+        '**Quiet Mode:** Seal in a zip-top bag and roll with a rolling pin—perfect for late-night baking.',
         'Add {{qty:GRAHAM CRACKER CRUST::Unsalted butter, melted}} melted butter to the crushed graham crackers and mix until the crumbs are evenly coated.',
         'Press the crumb mixture firmly into a 9 inch / 23 cm pie dish using the flat bottom of a cup.',
         'Bake for 8–10 minutes. Let it cool.'
@@ -2879,7 +2874,7 @@ If you're planning a Christmas party but don't have much time to prepare an elab
         title: 'GARNISH AND SERVE',
         clock: 'NEXT DAY',
         paragraphs: ['Unmold and dust with ground cinnamon and sprinkle with shredded coconut before serving.'],
-        stepNote: 'For a metal muffin pan, gently run a thin knife around the edges of each pudding. Briefly dip the bottom of the pan in warm water for a few seconds to help release them.  If using a silicone mold, gently push up from the bottom to release each pudding.  Turn out onto individual serving plates.',
+        stepNote: '**Midnight Tips:** **For a metal muffin pan**, gently run a thin knife around the edges of each pudding. Briefly dip the bottom of the pan in warm water for a few seconds to help release them. **For a silicone mold,** gently push up from the bottom to release each pudding. Turn out onto individual serving plates.',
         stepImages: ['images/recipes/tembleque/step-05-01.jpg']
       }
     ],
