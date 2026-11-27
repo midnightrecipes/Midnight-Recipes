@@ -2207,7 +2207,7 @@ With its soft, buttery crumb, sweet apples and dates, and golden caramelized coc
     categories:['Main Dishes'],
     dateAdded:'2026-11-17',
     timeStamp:'10:45 PM',
-    description:'Inspired by Wendy’s beloved chili, this comforting classic gets a midnight twist with cocoa, coffee, and a bold blend of spices for a deeper, smokier flavor.',
+    description:'Inspired by Wendy’s beloved chili, this comforting classic gets a midnight twist with cocoa, coffee, and a bold blend of spices for a deeper, smokier flavour.',
     heroImage:'images/recipes/beef-chili/hero.jpg',
     recipeImage:'images/recipes/beef-chili/recipe.jpg',
     usCupFractions:true,
@@ -2223,14 +2223,14 @@ And maybe that’s one of the best things about chili: there is no one right way
 Have it with rice, bread, or crackers. Top it with cheddar, sour cream, green onions, or cilantro. And somehow, it can be even better the next day—turned into a baked potato, chili cheese toast, nachos, or chili cheese fries.
 
 I’m not going to claim that my chili can beat Wendy’s. But it has its own kind of deliciousness.
-I wanted a deeper, darker flavor, so I added a tiny amount of cocoa and coffee to the seasoning. Then I gave it a little more punch with extra chili powder, cayenne, and black pepper.
+I wanted a deeper, darker flavour, so I added a tiny amount of cocoa and coffee to the seasoning. Then I gave it a little more punch with extra chili powder, cayenne, and black pepper.
 A familiar classic, made for a midnight kitchen...☆彡`,
     ingredientFile:[
   {
   name:'OUR OWN CHILI SEASONING',
   tag:'THIS IS EVERYTHING!',
   details:[
-    ['Chili powder','The backbone of the chili — warmth, heat, and classic chili flavor.'],
+    ['Chili powder','The backbone of the chili — warmth, heat, and classic chili flavour.'],
     ['Ground cumin','Earthy, warm, and aromatic, giving the beef a deeper savory character.'],
     ['Smoked paprika','Adds gentle smokiness and a roasted, almost grilled quality.'],
     ['Dried oregano','Herbal and slightly peppery, balancing the richness of the beef and tomatoes.'],
@@ -2238,7 +2238,7 @@ A familiar classic, made for a midnight kitchen...☆彡`,
     ['Instant coffee powder','A tiny amount boosts the savory depth of the beef and tomatoes without making the chili taste like coffee.'],
     ['Cayenne pepper','Clean, direct heat that gives the chili its extra punch.'],
     ['Freshly ground black pepper','Adds a sharper peppery bite and a lively finish.'],
-    ['Salt','Enhances the overall flavor and balances the spices, beef, and tomatoes.']
+    ['Salt','Enhances the overall flavour and balances the spices, beef, and tomatoes.']
   ]
 }
     ],
@@ -2314,7 +2314,7 @@ A familiar classic, made for a midnight kitchen...☆彡`,
       },
       {
         number:'03',
-        title:'BUILD THE FLAVOR',
+        title:'BUILD THE FLAVOUR',
         clock:'10:58 PM',
         paragraphs:[
           'Add the entire chili seasoning.',
@@ -2336,7 +2336,7 @@ A familiar classic, made for a midnight kitchen...☆彡`,
           'Add {{qty:THE CHILI::Corn, fresh or frozen}} corn during the final 10–15 minutes of cooking. Adding it later keeps some of its natural sweetness and texture.',
           'If the chili is still too loose, remove the lid and simmer for another 5–10 minutes, until thick and spoonable.',
           'Taste and adjust if needed. Add more salt for seasoning, more cayenne for extra heat, more black pepper for a sharper finish, or more smoked paprika for extra smokiness.',
-          'Turn off the heat and stir in {{qty:TO FINISH::Fresh lime juice}} fresh lime juice. The lime shouldn\'t make the chili taste sour. It simply wakes up all the flavors.'
+          'Turn off the heat and stir in {{qty:TO FINISH::Fresh lime juice}} fresh lime juice. The lime shouldn\'t make the chili taste sour. It simply wakes up all the flavours.'
         ],
         stepImages:['images/recipes/beef-chili/step-04-01.jpg','images/recipes/beef-chili/step-04-02.jpg']
       },
@@ -2353,7 +2353,7 @@ A familiar classic, made for a midnight kitchen...☆彡`,
     ],
     notes:[
       [
-        'Recreating the Flavor',
+        'Recreating the Flavour',
         'Wendy\'s was the starting point, not a recipe to copy. I kept the comforting idea of ground beef, beans, tomatoes, peppers, and vegetables, then built my own seasoning around it. The goal wasn\'t to make the chili more complicated. It was to make a familiar chili taste a little deeper, smokier, and more satisfying at midnight.'
       ],
       [
@@ -2427,7 +2427,7 @@ To my surprise, I discovered that the farmer’s cheese traditionally used to ma
 
 That’s one of the things I love about trying new recipes: you often discover ingredients that have been right in front of you all along.
 
-For my version, I wanted to keep the pancakes rich in cheese flavor and extra creamy, so I used less flour. The result is a wonderfully moist, tender center that pairs beautifully with both sweet and savory toppings.
+For my version, I wanted to keep the pancakes rich in cheese flavour and extra creamy, so I used less flour. The result is a wonderfully moist, tender center that pairs beautifully with both sweet and savory toppings.
 
 Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go savory with garlic and dill mayonnaise. They are going well with anything you like!`,
     ingredientFile: [
@@ -2744,20 +2744,20 @@ No poison this time. Just a dangerously good late-night dinner. I hope it won't 
     categories: ['Desserts'],
     dateAdded: '2026-11-26',
     timeStamp: '10:09 PM',
-    description: 'An easy vegan Puerto Rican coconut pudding, traditionally enjoyed during Christmas and New Year\'s celebrations. This creamy dessert has a rich coconut flavor and a soft, wobbly texture.',
+    description: 'An easy vegan Puerto Rican coconut pudding, traditionally enjoyed during Christmas and New Year\'s celebrations. This creamy dessert has a rich coconut flavour and a soft, wobbly texture.',
     heroImage: 'images/recipes/tembleque/hero.jpg',
     recipeImage: 'images/recipes/tembleque/recipe.jpg',
     usCupFractions: true,
     stepQuantityConversion: true,
     story: `It's the holiday season!
 
-Tembleque is one of Puerto Rico's beloved traditional holiday desserts, especially enjoyed during Christmas and New Year's celebrations. Puerto Rico is a Caribbean island in the northeastern Caribbean Sea and part of the Greater Antilles.
+Tembleque is one of Puerto Rico's beloved traditional holiday desserts, especially enjoyed during Christmas and New Year's celebrations. Puerto Rico is a vibrant island in the northeastern Caribbean, part of the Greater Antilles.
 
 The name "tembleque" comes from the Spanish verb "temblar," meaning "to tremble" or "to shake." Once chilled and unmolded, this coconut pudding gently wobbles when you move the plate. That's exactly what makes it so special!
 
 Interestingly, tembleque has a long history as a holiday treat. It was already mentioned in an 18th-century account of Puerto Rican Christmas celebrations, where it appeared among the foods served during festive visits between families.
 
-What I love about this dessert is how simple it is to make. Just mix the ingredients, cook until thickened, pour into molds, and let the refrigerator do the rest! Its creamy coconut flavor and delicate, jiggly texture make it a wonderful addition to any holiday table.
+What I love about this dessert is how simple it is to make. Just mix the ingredients, cook until thickened, pour into molds, and let the refrigerator do the rest! Its creamy coconut flavour and delicate, jiggly texture make it a wonderful addition to any holiday table.
 
 If you're planning a Christmas party but don't have much time to prepare an elaborate dessert, this easy make-ahead recipe is perfect. You can make it the day before and simply unmold and garnish it when you're ready to serve!`,
     ingredientFile: [
@@ -2768,11 +2768,11 @@ If you're planning a Christmas party but don't have much time to prepare an elab
           ['Flavour', 'Rich, creamy, and naturally sweet with a distinctive coconut aroma.'],
           [
             'Best Choice',
-            'Use full-fat canned coconut milk for the richest flavor and creamiest texture. Shake the can well before measuring.'
+            'Use full-fat canned coconut milk for the richest flavour and creamiest texture. Shake the can well before measuring.'
           ],
           [
             'Why Here',
-            'Coconut milk is the star of tembleque, providing its signature coconut flavor and creamy base.'
+            'Coconut milk is the star of the dish, giving tembleque its signature tropical richness and velvety base.'
           ],
           ['Substitute', 'Light coconut milk can be used, but the pudding will be less rich and creamy.']
         ]
@@ -2837,7 +2837,7 @@ If you're planning a Christmas party but don't have much time to prepare an elab
         title: 'MAKE THE MIXTURE',
         clock: '10:09 PM',
         paragraphs: [
-          'Set aside about 100 ml out of {{qty:Coconut milk, full-fat}} coconut milk. Add {{qty:Cornstarch}} cornstarch and whisk until completely smooth with no lumps.',
+          'Set aside about 1/3 cup / 100 ml out of {{qty:Coconut milk, full-fat}} coconut milk. Add {{qty:Cornstarch}} cornstarch and whisk until completely smooth with no lumps.',
           'Add {{qty:Granulated Sugar}} sugar and {{qty:Salt}} salt to the cornstarch mixture and stir to combine. Pour in the remaining coconut milk and add {{qty:Cinnamon stick}}  cinnamon stick.'
         ],
         stepImages: [
@@ -2886,15 +2886,15 @@ If you're planning a Christmas party but don't have much time to prepare an elab
     notes: [
       [
         'Quick filling',
-        'Quick Filling\n\nThe mixture starts to set surprisingly quickly, so pour it into the molds as soon as you take it off the heat. This is the secret to getting a smooth surface. You can also cover it with plastic wrap and gently smooth the tops through the wrap.\n\n(But honestly, since the bottom becomes the top when you unmold it, a little messiness is no big deal. No one will see it anyway!)'
+        'The mixture starts to set surprisingly quickly, so pour it into the molds as soon as you take it off the heat. This is the secret to getting a smooth surface. You can also cover it with plastic wrap and gently smooth the tops through the wrap.\n\n(But honestly, since the bottom becomes the top when you unmold it, a little messiness is no big deal. No one will see it anyway..!)'
       ],
       [
-        'Cinnamon & Cinnamon !',
-        'Infusing the coconut milk with a whole cinnamon stick gives the pudding a gentle, warm aroma without making the spice flavor too strong. Finish with a light dusting of ground cinnamon for an extra hint of warmth.'
+        'Cinnamon & Cinnamon!',
+        'Infusing the coconut milk with a whole cinnamon stick gives the pudding a gentle, warm aroma without making the spice flavour too strong. Finish with a light dusting of ground cinnamon for an extra hint of warmth.'
       ]
     ],
     finePrint: {
-      'BEST EATEN': 'Tomorrow, after thoughtfully chilled.',
+      'BEST EATEN': 'Tomorrow, once thoroughly chilled.',
       'MAKE AHEAD': 'Yes. This is a wonderful make-ahead dessert. Prepare the pudding the night before your gathering and keep it refrigerated until ready to serve.',
       STORAGE: 'Keep covered in an airtight container in the refrigerator for up to 3–4 days.',
       FREEZER: 'Freezing is not recommended. The cornstarch pudding may become watery or grainy after thawing.',
