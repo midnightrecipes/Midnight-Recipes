@@ -2732,6 +2732,190 @@ No poison this time. Just a dangerously good late-night dinner. I hope it won't 
     tags: ['Movie&TV', 'Memory', 'MainCourse', 'Chinese', 'Sichuan', 'SichuanPepper', 'Chicken', 'Thighs', 'Peanuts'],
     mainIngredients: ['Chicken', 'Chicken Thighs', 'Sichuan Peppercorns', 'Fresh Red Chilies', 'Peanuts'],
     usualsCategory: ''
+  },
+  {
+    slug: 'tembleque',
+    title: 'Puerto Rican Coconut Pudding (Tembleque)',
+    source: 'Family & Tradition',
+    dish: 'Tembleque',
+    cuisine: 'Puerto Rico',
+    course: 'Desserts',
+    courseDisplay: 'Desserts',
+    categories: ['Desserts'],
+    dateAdded: '2026-11-26',
+    timeStamp: '10:09 PM',
+    description: 'An easy vegan Puerto Rican coconut pudding, traditionally enjoyed during Christmas and New Year\'s celebrations. This creamy dessert has a rich coconut flavor and a soft, wobbly texture.',
+    heroImage: 'images/recipes/tembleque/hero.jpg',
+    recipeImage: 'images/recipes/tembleque/recipe.jpg',
+    usCupFractions: true,
+    stepQuantityConversion: true,
+    story: `It's the holiday season!
+
+Tembleque is one of Puerto Rico's beloved traditional holiday desserts, especially enjoyed during Christmas and New Year's celebrations. Puerto Rico is a Caribbean island in the northeastern Caribbean Sea and part of the Greater Antilles.
+
+The name "tembleque" comes from the Spanish verb "temblar," meaning "to tremble" or "to shake." Once chilled and unmolded, this coconut pudding gently wobbles when you move the plate. That's exactly what makes it so special!
+
+Interestingly, tembleque has a long history as a holiday treat. It was already mentioned in an 18th-century account of Puerto Rican Christmas celebrations, where it appeared among the foods served during festive visits between families.
+
+What I love about this dessert is how simple it is to make. Just mix the ingredients, cook until thickened, pour into molds, and let the refrigerator do the rest! Its creamy coconut flavor and delicate, jiggly texture make it a wonderful addition to any holiday table.
+
+If you're planning a Christmas party but don't have much time to prepare an elaborate dessert, this easy make-ahead recipe is perfect. You can make it the day before and simply unmold and garnish it when you're ready to serve!`,
+    ingredientFile: [
+      {
+        name: 'COCONUT MILK',
+        tag: 'THE CREAMY BASE',
+        details: [
+          ['Flavour', 'Rich, creamy, and naturally sweet with a distinctive coconut aroma.'],
+          [
+            'Best Choice',
+            'Use full-fat canned coconut milk for the richest flavor and creamiest texture. Shake the can well before measuring.'
+          ],
+          [
+            'Why Here',
+            'Coconut milk is the star of tembleque, providing its signature coconut flavor and creamy base.'
+          ],
+          ['Substitute', 'Light coconut milk can be used, but the pudding will be less rich and creamy.']
+        ]
+      },
+      {
+        name: 'CORNSTARCH',
+        tag: 'THE SECRET TO THE JIGGLE',
+        details: [
+          ['Best Choice', 'Regular cornstarch is ideal for a smooth, delicate pudding.'],
+          ['Why Here', 'Thickens the coconut milk and helps the pudding hold its shape when unmolded.'],
+          [
+            'Substitute',
+            'Tapioca starch can be used in the same amount by weight. It creates a glossier, slightly more elastic and chewy texture.'
+          ]
+        ]
+      },
+      {
+        name: 'CINNAMON STICK',
+        tag: 'THE HOLIDAY SPICE',
+        details: [
+          ['Flavour', 'Warm, woody, and gently sweet.'],
+          ['Best Choice', 'Use one whole cinnamon stick to slowly infuse the coconut milk.'],
+          [
+            'Why Here',
+            'Adds a subtle cinnamon aroma that complements the coconut and gives the pudding a festive touch.'
+          ],
+          [
+            'Substitute',
+            'A small pinch of ground cinnamon can be used, although it may leave visible specks in the pudding.'
+          ]
+        ]
+      },
+      {
+        name: 'GROUND CINNAMON',
+        tag: 'THE TRADITIONAL FINISH',
+        details: [
+          ['Flavour', 'Warm, sweet, and slightly spicy.'],
+          ['Best Choice', 'Finely ground cinnamon for an even dusting.'],
+          [
+            'Why Here',
+            'A classic finishing touch that adds aroma and contrast to the white coconut pudding.'
+          ],
+          ['Substitute', 'Freshly grated cinnamon can also be used.']
+        ]
+      }
+    ],
+    ingredients: [
+      { amount: 500, unit: 'ml', imperialAmount: 2, imperialUnit: 'cup', item: 'Coconut milk, full-fat' },
+      { amount: 65, unit: 'g', imperialAmount: 0.325, imperialUnit: 'cup', item: 'Granulated Sugar' },
+      { amount: 32, unit: 'g', imperialAmount: 4, imperialUnit: 'tbsp', item: 'Cornstarch' },
+      { amount: 1, unit: 'pinch', imperialAmount: 1, imperialUnit: 'pinch', item: 'Salt' },
+      { amount: 1, unit: '', imperialAmount: 1, imperialUnit: '', item: 'Cinnamon stick' },
+      { amount: 5, unit: 'ml', imperialAmount: 1, imperialUnit: 'tsp', item: 'Vanilla extract' },
+      { group: 'TOPPING (optional)' },
+      { item: 'Ground cinnamon' },
+      { item: 'Shredded coconut, unsweetened' }
+    ],
+    stats: { prep: '5 mins', cook: '10 mins', chill: '4 hrs+', total: '4 hrs 15 mins+', serves: '6', pan: '6-cup muffin mold', quiet: '⭐⭐⭐⭐⭐' },
+    steps: [
+      {
+        number: '01',
+        title: 'MAKE THE MIXTURE',
+        clock: '10:09 PM',
+        paragraphs: [
+          'Set aside about 100 ml out of {{qty:Coconut milk, full-fat}} coconut milk. Add {{qty:Cornstarch}} cornstarch and whisk until completely smooth with no lumps.',
+          'Add {{qty:Granulated Sugar}} sugar and {{qty:Salt}} salt to the cornstarch mixture and stir to combine. Pour in the remaining coconut milk and add {{qty:Cinnamon stick}}  cinnamon stick.'
+        ],
+        stepImages: [
+          'images/recipes/tembleque/step-01-01.jpg',
+          'images/recipes/tembleque/step-01-02.jpg',
+          'images/recipes/tembleque/step-01-03.jpg',
+          'images/recipes/tembleque/step-01-04.jpg'
+        ]
+      },
+      {
+        number: '02',
+        title: ' COOK UNTIL THICKENED',
+        clock: '10:14 PM',
+        paragraphs: [
+          'Place the saucepan over medium heat and cook, stirring constantly with a whisk. Continue stirring until the mixture becomes thick and smooth. Once thickened, cook for another minute to make sure the cornstarch is fully cooked.'
+        ],
+        stepImages: ['images/recipes/tembleque/step-02-01.jpg', 'images/recipes/tembleque/step-02-02.jpg']
+      },
+      {
+        number: '03',
+        title: 'ADD THE VANILLA AND FILL THE MOLD',
+        clock: '10:19 PM',
+        paragraphs: [
+          'Remove the cinnamon stick and stir in {{qty:Vanilla extract}} vanilla extract.',
+          'Quickly divide the warm mixture among the muffin molds, as it sets quickly. Cover with plastic wrap and gently smooth the tops.'
+        ],
+        stepImages: ['images/recipes/tembleque/step-03-01.jpg', 'images/recipes/tembleque/step-03-02.jpg']
+      },
+      {
+        number: '04',
+        title: 'CHILL UNTIL SET',
+        clock: '10:23 PM',
+        paragraphs: [
+          'Let the pudding cool to room temperature, then refrigerate for at least 4 hours, preferably overnight, until completely set.'
+        ]
+      },
+      {
+        number: '05',
+        title: 'GARNISH AND SERVE',
+        clock: 'NEXT DAY',
+        paragraphs: ['Unmold and dust with ground cinnamon and sprinkle with shredded coconut before serving.'],
+        stepNote: 'For a metal muffin pan, gently run a thin knife around the edges of each pudding. Briefly dip the bottom of the pan in warm water for a few seconds to help release them.  If using a silicone mold, gently push up from the bottom to release each pudding.  Turn out onto individual serving plates.',
+        stepImages: ['images/recipes/tembleque/step-05-01.jpg']
+      }
+    ],
+    notes: [
+      [
+        'Quick filling',
+        'Quick Filling\n\nThe mixture starts to set surprisingly quickly, so pour it into the molds as soon as you take it off the heat. This is the secret to getting a smooth surface. You can also cover it with plastic wrap and gently smooth the tops through the wrap.\n\n(But honestly, since the bottom becomes the top when you unmold it, a little messiness is no big deal. No one will see it anyway!)'
+      ],
+      [
+        'Cinnamon & Cinnamon !',
+        'Infusing the coconut milk with a whole cinnamon stick gives the pudding a gentle, warm aroma without making the spice flavor too strong. Finish with a light dusting of ground cinnamon for an extra hint of warmth.'
+      ]
+    ],
+    finePrint: {
+      'BEST EATEN': 'Tomorrow, after thoughtfully chilled.',
+      'MAKE AHEAD': 'Yes. This is a wonderful make-ahead dessert. Prepare the pudding the night before your gathering and keep it refrigerated until ready to serve.',
+      STORAGE: 'Keep covered in an airtight container in the refrigerator for up to 3–4 days.',
+      FREEZER: 'Freezing is not recommended. The cornstarch pudding may become watery or grainy after thawing.',
+      REHEAT: 'Not recommended. Tembleque is traditionally served cold.'
+    },
+    tags: [
+      'Puerto Rico',
+      'Caribbean',
+      'Christmas',
+      'New Year',
+      'Holiday Dessert',
+      'Vegan',
+      'Dairy Free',
+      'Gluten Free',
+      'Coconut Pudding',
+      'Traditional Dessert',
+      'Make Ahead',
+      'Holiday Staples'
+    ],
+    mainIngredients: ['Coconut Milk', 'Cornstarch', 'Sugar', 'Cinnamon', 'Shredded Coconut'],
+    usualsCategory: ''
   }
 ];
 
