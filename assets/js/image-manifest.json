@@ -475,6 +475,29 @@
       ]
     }
   },
+  "tembleque": {
+    "hero": "images/recipes/tembleque/hero.jpg",
+    "recipe": "images/recipes/tembleque/recipe.jpg",
+    "steps": {
+      "01": [
+        "images/recipes/tembleque/step-01-01.jpg",
+        "images/recipes/tembleque/step-01-02.jpg",
+        "images/recipes/tembleque/step-01-03.jpg",
+        "images/recipes/tembleque/step-01-04.jpg"
+      ],
+      "02": [
+        "images/recipes/tembleque/step-02-01.jpg",
+        "images/recipes/tembleque/step-02-02.jpg"
+      ],
+      "03": [
+        "images/recipes/tembleque/step-03-01.jpg",
+        "images/recipes/tembleque/step-03-02.jpg"
+      ],
+      "05": [
+        "images/recipes/tembleque/step-05-01.jpg"
+      ]
+    }
+  },
   "tom-kha-gai": {
     "hero": "images/recipes/tom-kha-gai/hero.jpg",
     "recipe": "images/recipes/tom-kha-gai/recipe.jpg",
