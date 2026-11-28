@@ -9,7 +9,7 @@ window.MIDNIGHT_SITE = {
 
 window.MIDNIGHT_RECIPES = [
   {
-    slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE AND JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-26', timeStamp:'11:20 PM',
+    slug:'chocolate-cream-comfort-pie', title:'Chocolate Cream Comfort Pie', source:'Movie & TV', original:'JULIE & JULIA (2009)', dish:'Chocolate Cream Pie', cuisine:'American', course:'Baking', courseDisplay:'Baking, Desserts', categories:['Baking','Desserts'], dateAdded:'2026-09-26', timeStamp:'11:20 PM',
     description: 'Inspired by Julie & Julia, this silky dark chocolate cream pie features a rich espresso-kissed custard in a crisp graham cracker crust—pure midnight comfort.',
     heroImage:'images/recipes/chocolate-cream-comfort-pie/hero.jpg', recipeImage:'images/recipes/chocolate-cream-comfort-pie/recipe.jpg',
     unitOverrides:{imperial:{'unsalted butter':'tbsp','unsalted butter melted':'tbsp'}},
@@ -110,7 +110,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
         'Return to low heat for 1 minute, whisking constantly until thick and glossy.',
         'Remove from heat, then stir in {{qty:CHOCOLATE FILLING::Dark chocolate, chopped}} chopped dark chocolate and {{qty:CHOCOLATE FILLING::Unsalted butter}} butter until fully melted and smooth.'
       ],stepImages:['images/recipes/chocolate-cream-comfort-pie/step-03-01.jpg','images/recipes/chocolate-cream-comfort-pie/step-03-02.jpg','images/recipes/chocolate-cream-comfort-pie/step-03-03.jpg','images/recipes/chocolate-cream-comfort-pie/step-03-04.jpg']},
-      {number:'04',title:'POUR AND WAIT',clock:'12:35 AM',paragraphs:[
+      {number:'04',title:'POUR & WAIT',clock:'12:35 AM',paragraphs:[
         'Pour the warm chocolate filling into your chilled pie crust.',
         'Tap the pie dish gently on the counter 2–3 times to level the surface and release trapped air bubbles.',
         'Refrigerate for at least 4 hours. Overnight works best.'
@@ -1150,7 +1150,7 @@ And that's how this recipe came about. Sometimes, it's not the dish itself that 
         'If the sauce is too thick, add 1-2 tsp / 5–10 ml water and toss again. This is extra adjustment water, separate from the sauce water listed in the ingredients.',
         'Remove from the heat once the chicken is coated in the glossy sauce.'
       ],stepImages:['images/recipes/sweet-chili-peanut-chicken/step-03-01.jpg','images/recipes/sweet-chili-peanut-chicken/step-03-02.jpg']},
-      {number:'04',title:'GARNISH AND SERVE',clock:'Optional',paragraphs:[
+      {number:'04',title:'GARNISH & SERVE',clock:'Optional',paragraphs:[
         'Sprinkle with roughly crushed roasted peanuts and chopped cilantro.',
         'Serve with lime wedges for squeezing over the chicken just before eating.'
       ],stepImages:[]}
@@ -1740,7 +1740,7 @@ ingredients: [
     },
     {
       number: 2,
-      title: 'SEASON AND REDUCE',
+      title: 'SEASON & REDUCE',
       clock: '12:08 AM',
       stepImages: [
         'images/recipes/khai-yat-sai/step-02-01.jpg',
@@ -1772,7 +1772,7 @@ ingredients: [
     },
     {
       number: 4,
-      title: 'FILL AND FOLD',
+      title: 'FILL & FOLD',
       clock: '12:17 AM',
       stepImages: [
         'images/recipes/khai-yat-sai/step-04-01.jpg',
@@ -1786,7 +1786,7 @@ ingredients: [
     },
     {
       number: 5,
-      title: 'FLIP AND REVEAL',
+      title: 'FLIP & REVEAL',
       clock: '12:18 AM',
       stepImages: [
         'images/recipes/khai-yat-sai/step-05-01.jpg',
@@ -2476,7 +2476,7 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
       },
       {
         number: '03',
-        title: 'SHAPE AND PAN-FRY',
+        title: 'SHAPE & PAN-FRY',
         clock: '11:56 PM',
         paragraphs: [
           'Lightly flour your hands and work surface with flour, divide into about 8 portions, and shape into rounds roughly 6–7 cm wide and 1–2 cm thick.',
@@ -2489,7 +2489,7 @@ Try them with berries, jam, or honey and sour cream for a sweet breakfast, or go
       },
       {
         number: '04',
-        title: 'SERVE AND ENJOY!',
+        title: 'SERVE & ENJOY!',
         clock: '12:06 AM',
         paragraphs: [
           'Serve warm with sour cream, berries, jam, or honey, or pair with garlic and dill mayonnaise.'
@@ -2853,7 +2853,7 @@ If you're planning a Christmas party but don't have much time to prepare an elab
       },
       {
         number: '03',
-        title: 'ADD THE VANILLA AND FILL THE MOLD',
+        title: 'ADD THE VANILLA & FILL THE MOLD',
         clock: '10:19 PM',
         paragraphs: [
           'Remove the cinnamon stick and stir in {{qty:Vanilla extract}} vanilla extract.',
@@ -2871,7 +2871,7 @@ If you're planning a Christmas party but don't have much time to prepare an elab
       },
       {
         number: '05',
-        title: 'GARNISH AND SERVE',
+        title: 'GARNISH & SERVE',
         clock: 'NEXT DAY',
         paragraphs: ['Unmold and dust with ground cinnamon and sprinkle with shredded coconut before serving.'],
         stepNote: '**Midnight Tips:** **For a metal muffin pan**, gently run a thin knife around the edges of each pudding. Briefly dip the bottom of the pan in warm water for a few seconds to help release them. **For a silicone mold,** gently push up from the bottom to release each pudding. Turn out onto individual serving plates.',
