@@ -133,7 +133,7 @@ The real secret here... Just use a dark chocolate that you’d happily eat strai
       'FREEZER':'Not applicable.',
       'REHEAT':'Not applicable.'
     },
-    tags:['Movie & TV','Baking','Desserts','American','Chocolate','Pie'], mainIngredients:['Chocolate','Pie'], usualsCategory:''
+    tags:['Movie & TV','Baking','Desserts','American','Chocolate','Pie', 'Holiday Staples'], mainIngredients:['Chocolate','eggs','milk','cornstarch'], usualsCategory:''
   },
 
   {
