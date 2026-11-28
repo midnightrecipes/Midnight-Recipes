@@ -2923,7 +2923,7 @@ window.MIDNIGHT_CUISINES = {
   'Europe':['Italian','French','Spanish','Greek','Portuguese','British','German','Scandinavian'],
   'Eastern Europe & The Balkans':['Eastern European','Georgian','Ukrainian','Polish','Romanian','Hungarian','Russian','Croatian','Bulgarian'],
   'Middle East':['Lebanese','Turkish','Persian/Iranian','Israel','Palestinian'],
-  'Africa':['Egyptian','Moroccan','Ethiopian'],
+  'Africa':['South African','Moroccan','Ethiopian'],
   'North America':['Canadian','American','Hawaiian','Mexican','Puerto Rico'],
   'Central & South America':['Brazilian','Peruvian','Colombian','Argentinian'],
   'Oceania':['Australian','New Zealand']
